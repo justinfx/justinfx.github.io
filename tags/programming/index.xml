@@ -3,7 +3,7 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/programming/</link>
+    <link>http://justinfx.github.io/tags/programming/</link>
     <language>en-us</language>
     <author>Justin Israel</author>
     <copyright>2011 Justin Israel</copyright>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Go language for python programmers</title>
-      <link>http://justinfx.com/2011/07/28/go-language-for-python-programmers/</link>
+      <link>http://justinfx.github.io/2011/07/28/go-language-for-python-programmers/</link>
       <pubDate>Thu, 28 Jul 2011 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2011/07/28/go-language-for-python-programmers/</guid>
+      <guid>http://justinfx.github.io/2011/07/28/go-language-for-python-programmers/</guid>
       <description>
 
 &lt;h3 id=&#34;img-class-alignleft-src-https-blog-golang-org-gopher-gopher-png-alt-width-116-height-142-http-golang-org-preface:7abf409e83c714d77ef3bb580cbebbaf&#34;&gt;&lt;a href=&#34;http://golang.org&#34;&gt;&lt;img class=&#34;alignleft&#34; src=&#34;https://blog.golang.org/gopher/gopher.png&#34; alt=&#34;&#34; width=&#34;116&#34; height=&#34;142&#34; /&gt;&lt;/a&gt; Preface&lt;/h3&gt;

@@ -3,7 +3,7 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/cmivfx/</link>
+    <link>http://justinfx.github.io/tags/cmivfx/</link>
     <language>en-us</language>
     <author>Justin Israel</author>
     <copyright>2011 Justin Israel</copyright>
@@ -12,13 +12,13 @@
     
     <item>
       <title>Intro to Python for Maya Artists – Tutorial</title>
-      <link>http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/</link>
+      <link>http://justinfx.github.io/2011/10/08/intro-to-python-for-maya-artists-tutorial/</link>
       <pubDate>Sat, 08 Oct 2011 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/</guid>
+      <guid>http://justinfx.github.io/2011/10/08/intro-to-python-for-maya-artists-tutorial/</guid>
       <description>
 
-&lt;p&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;&lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;http://justinfx.com/wp-content/uploads/2011/10/1318089294_Python_Background_master.jpg&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;&lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;http://justinfx.github.io/wp-content/uploads/2011/10/1318089294_Python_Background_master.jpg&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Just released my first online video tutorial, through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;&lt;/p&gt;
 
@@ -42,11 +42,11 @@
     
     <item>
       <title>AtomSplitter v1.6 update</title>
-      <link>http://justinfx.com/2010/08/31/208/</link>
+      <link>http://justinfx.github.io/2010/08/31/208/</link>
       <pubDate>Tue, 31 Aug 2010 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2010/08/31/208/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2009/12/chan2fbx.jpg&#34;&gt;&lt;/p&gt;
+      <guid>http://justinfx.github.io/2010/08/31/208/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://justinfx.github.io/wp-content/uploads/2009/12/chan2fbx.jpg&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;AtomSplitter has been updated to v1.6, available through cmivfx.com&lt;/p&gt;
 
@@ -58,7 +58,7 @@
 &lt;li&gt;Exports Terragen .tgd scene file format&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx&#34;&gt;See the original post.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://justinfx.github.io/2009/12/06/chantofbx-tool-released-through-cmivfx&#34;&gt;See the original post.&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;COMMAND LINE HELP
 
@@ -105,10 +105,10 @@ Options:
     
     <item>
       <title>AtomSplitter v1.5 update</title>
-      <link>http://justinfx.com/2010/05/26/atomsplitter-v1-5-update/</link>
+      <link>http://justinfx.github.io/2010/05/26/atomsplitter-v1-5-update/</link>
       <pubDate>Wed, 26 May 2010 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2010/05/26/atomsplitter-v1-5-update/</guid>
+      <guid>http://justinfx.github.io/2010/05/26/atomsplitter-v1-5-update/</guid>
       <description>&lt;p&gt;AtomSplitter has been updated to v1.5, available through cmivfx.com&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.5&#34;&gt;AtomSplitter 1.5 &amp;#8211; cmiVFX.com&lt;/a&gt;&lt;/p&gt;
@@ -123,7 +123,7 @@ Options:
     &lt;/li&gt;
   &lt;/ul&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/&#34;&gt;See the original post.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://justinfx.github.io/2009/12/06/chantofbx-tool-released-through-cmivfx/&#34;&gt;See the original post.&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -131,10 +131,10 @@ Options:
     
     <item>
       <title>AtomSplitter v1.2 update</title>
-      <link>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</link>
+      <link>http://justinfx.github.io/2010/05/11/atomsplitter-v1-2-update/</link>
       <pubDate>Tue, 11 May 2010 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</guid>
+      <guid>http://justinfx.github.io/2010/05/11/atomsplitter-v1-2-update/</guid>
       <description>&lt;p&gt;AtomSplitter (chanToFbx) has been updated to v1.2, available through cmivfx.com&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.2&#34;&gt;&lt;span style=&#34;color: #00ccff;&#34;&gt;AtomSplitter 1.2 &amp;#8211; cmiVFX.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
@@ -149,7 +149,7 @@ Options:
 
 &lt;p&gt;If you haven&amp;#8217;t visited &lt;a href=&#34;http://cmiVFX.com&#34; target=&#34;_blank&#34;&gt;cmiVFX.com&lt;/a&gt; before, PLEASE check them out. Chris Maynard does an amazing job rounding up top talent in the industry to create these outstanding visual fx tutorials. The information is always cutting edge.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/&#34;&gt;&lt;span style=&#34;color: #993366;&#34;&gt;See the original post.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://justinfx.github.io/2009/12/06/chantofbx-tool-released-through-cmivfx/&#34;&gt;&lt;span style=&#34;color: #993366;&#34;&gt;See the original post.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -157,11 +157,11 @@ Options:
     
     <item>
       <title>chanToFbx tool released through cmiVFX</title>
-      <link>http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/</link>
+      <link>http://justinfx.github.io/2009/12/06/chantofbx-tool-released-through-cmivfx/</link>
       <pubDate>Mon, 07 Dec 2009 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/</guid>
-      <description>&lt;p&gt;&lt;img class=&#34;alignnone size-full wp-image-39&#34; title=&#34;chan2fbx&#34; src=&#34;http://justinfx.com/wp-content/uploads/2009/12/chan2fbx.jpg&#34; alt=&#34;chan2fbx&#34; width=&#34;201&#34; height=&#34;104&#34; /&gt;&lt;/p&gt;
+      <guid>http://justinfx.github.io/2009/12/06/chantofbx-tool-released-through-cmivfx/</guid>
+      <description>&lt;p&gt;&lt;img class=&#34;alignnone size-full wp-image-39&#34; title=&#34;chan2fbx&#34; src=&#34;http://justinfx.github.io/wp-content/uploads/2009/12/chan2fbx.jpg&#34; alt=&#34;chan2fbx&#34; width=&#34;201&#34; height=&#34;104&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I had received a mailing list email from cmiVFX, where Chris Maynard was challenging the community to write a tool that could convert a nuke camera .chan file to a functional FBX format. This was apparently meant to compliment the new 3d camera tracker in NukeX. So I decided to take on the challenge.&lt;/p&gt;
 
@@ -178,7 +178,7 @@ Options:
 &lt;p&gt;Currently there is a version for both OSX and Windows. I have been having some issues packaging the code under Linux, but I just need to really sit down and figure it out. The build is kinda larger than I hoped, but thats what I get for distributing PyQt &lt;img src=&#34;http://justinfx.com/wp-includes/images/smilies/simple-smile.png&#34; alt=&#34;:-)&#34; class=&#34;wp-smiley&#34; style=&#34;height: 1em; max-height: 1em;&#34; /&gt;&lt;/p&gt;
 
 &lt;div id=&#34;attachment_41&#34; style=&#34;width: 590px&#34; class=&#34;wp-caption alignnone&#34;&gt;
-  &lt;img class=&#34;size-full wp-image-41&#34; title=&#34;chan2FBX_screen&#34; src=&#34;http://justinfx.com/wp-content/uploads/2009/12/chan2FBX_screen.jpg&#34; alt=&#34;.chan To FBX GUI (osx)&#34; width=&#34;580&#34; height=&#34;428&#34; /&gt;
+  &lt;img class=&#34;size-full wp-image-41&#34; title=&#34;chan2FBX_screen&#34; src=&#34;http://justinfx.github.io/wp-content/uploads/2009/12/chan2FBX_screen.jpg&#34; alt=&#34;.chan To FBX GUI (osx)&#34; width=&#34;580&#34; height=&#34;428&#34; /&gt;
   
   &lt;p class=&#34;wp-caption-text&#34;&gt;
     .chan To FBX GUI (osx)

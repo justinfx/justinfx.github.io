@@ -3,7 +3,7 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/benchmark/</link>
+    <link>http://justinfx.github.io/tags/benchmark/</link>
     <language>en-us</language>
     <author>Justin Israel</author>
     <copyright>2015 Justin Israel</copyright>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Comparing performance of Qt smart pointer options</title>
-      <link>http://justinfx.com/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</link>
+      <link>http://justinfx.github.io/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</link>
       <pubDate>Sun, 07 Jun 2015 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</guid>
+      <guid>http://justinfx.github.io/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</guid>
       <description>
 
 &lt;p&gt;There are a number of sources of information on the usage and behavioral differences of the many &amp;#8220;smart pointer&amp;#8221; options offered by Qt. But one thing I couldn&amp;#8217;t find enough information on were the performance characteristics.&lt;/p&gt;
@@ -102,13 +102,13 @@ test_qpointer:              5599 ms   2832 ms
 test_boost_sharedptr:       1370 ms   1350 ms 
 test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt4_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
-	&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt4_pointers-300x157.png&#34; title alt&gt;
+&lt;p&gt;&lt;a href=&#34;http://justinfx.github.io/wp-content/uploads/2015/06/qt4_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
+	&lt;img src=&#34;http://justinfx.github.io/wp-content/uploads/2015/06/qt4_pointers-300x157.png&#34; title alt&gt;
 &lt;/a&gt;
 &lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt5_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
-	&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt5_pointers-300x154.png&#34; title alt&gt;
+&lt;p&gt;&lt;a href=&#34;http://justinfx.github.io/wp-content/uploads/2015/06/qt5_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
+	&lt;img src=&#34;http://justinfx.github.io/wp-content/uploads/2015/06/qt5_pointers-300x154.png&#34; title alt&gt;
 &lt;/a&gt;
 &lt;/p&gt;
 
@@ -128,10 +128,10 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
     
     <item>
       <title>Python 2.7.2 serializer speed comparisons</title>
-      <link>http://justinfx.com/2012/07/25/python-2-7-3-serializer-speed-comparisons/</link>
+      <link>http://justinfx.github.io/2012/07/25/python-2-7-3-serializer-speed-comparisons/</link>
       <pubDate>Wed, 25 Jul 2012 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2012/07/25/python-2-7-3-serializer-speed-comparisons/</guid>
+      <guid>http://justinfx.github.io/2012/07/25/python-2-7-3-serializer-speed-comparisons/</guid>
       <description>&lt;p&gt;In a recent python project where I was sending multiple messages per second of data over a basic socket, I had initially just grabbed the cPickle module to get the prototype proof-of-concept functioning properly. cPickle is awesome for easily serializing more complex python objects like custom classes, even though in my case I am only sending basic types.&lt;/p&gt;
 
 &lt;p&gt;My messages were dicts with some nested dicts, lists, floats, and string values. Roughly 500-1000 bytes. cPickle was doing just fine, but there came a point where I wanted to investigate the areas that could be tightened up. The first thing I realized was that I had forgotten to encode cPickle in the binary format (the default is ascii). That saved me quite a bit of time. But then I casually searched online to see if any json options might be better since my data is pretty primitive anyways.&lt;/p&gt;

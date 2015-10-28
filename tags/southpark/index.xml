@@ -3,7 +3,7 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/southpark/</link>
+    <link>http://justinfx.github.io/tags/southpark/</link>
     <language>en-us</language>
     <author>Justin Israel</author>
     <copyright>2012 Justin Israel</copyright>
@@ -12,10 +12,10 @@
     
     <item>
       <title>South Park “going-away” book gift</title>
-      <link>http://justinfx.com/2012/12/19/south-park-going-away-book-gift/</link>
+      <link>http://justinfx.github.io/2012/12/19/south-park-going-away-book-gift/</link>
       <pubDate>Wed, 19 Dec 2012 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2012/12/19/south-park-going-away-book-gift/</guid>
+      <guid>http://justinfx.github.io/2012/12/19/south-park-going-away-book-gift/</guid>
       <description>&lt;p&gt;On my last day of work at South Park Studios, my co-worker Tory gave me a present. It&amp;#8217;s a book that collects together a history of doodles and graphics, capturing significant moments during my 4 year run with the team.&lt;/p&gt;
 
 &lt;p&gt;Tory tends to represent our team as dog characters. I can be identified usually by the pierced chin. Much of this content refers to inside jokes, but I feel it also has a number of generally hilarious imagery.&lt;/p&gt;
@@ -33,10 +33,10 @@
     
     <item>
       <title>SouthPark: A crazy little interface. The TaskMonster.</title>
-      <link>http://justinfx.com/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</link>
+      <link>http://justinfx.github.io/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</link>
       <pubDate>Tue, 16 Mar 2010 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</guid>
+      <guid>http://justinfx.github.io/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</guid>
       <description>&lt;p&gt;I get to do a lot of interesting applications at SouthPark. This one in particular was the most challenging use of PyQt that I have experienced to date.&lt;/p&gt;
 
 &lt;p&gt;The backstory&amp;#8230;.&lt;/p&gt;
@@ -57,7 +57,7 @@
 
 &lt;p&gt;What I came up with&amp;#8230;  &lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2010/03/taskMonster2.jpg&#34; rel=&#34;lightbox[71]&#34;&gt;&lt;img class=&#34;alignnone size-large wp-image-72&#34; title=&#34;taskMonster2&#34; src=&#34;http://justinfx.com/wp-content/uploads/2010/03/taskMonster2-1024x724.jpg&#34; alt=&#34;&#34; width=&#34;663&#34; height=&#34;469&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://justinfx.github.io/wp-content/uploads/2010/03/taskMonster2.jpg&#34; rel=&#34;lightbox[71]&#34;&gt;&lt;img class=&#34;alignnone size-large wp-image-72&#34; title=&#34;taskMonster2&#34; src=&#34;http://justinfx.github.io/wp-content/uploads/2010/03/taskMonster2-1024x724.jpg&#34; alt=&#34;&#34; width=&#34;663&#34; height=&#34;469&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;iframe src=&#34;https://player.vimeo.com/video/143717524?byline=0&#34; 
         width=&#34;640&#34; 

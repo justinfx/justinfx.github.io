@@ -3,7 +3,7 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/pyqt4/</link>
+    <link>http://justinfx.github.io/tags/pyqt4/</link>
     <language>en-us</language>
     <author>Justin Israel</author>
     <copyright>2012 Justin Israel</copyright>
@@ -12,13 +12,13 @@
     
     <item>
       <title>Tutorial: PyQt4 UI Development for Maya</title>
-      <link>http://justinfx.com/2012/10/12/pyqt4-for-maya/</link>
+      <link>http://justinfx.github.io/2012/10/12/pyqt4-for-maya/</link>
       <pubDate>Fri, 12 Oct 2012 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2012/10/12/pyqt4-for-maya/</guid>
+      <guid>http://justinfx.github.io/2012/10/12/pyqt4-for-maya/</guid>
       <description>
 
-&lt;h2 id=&#34;img-class-alignnone-size-full-wp-image-525-title-pyqt4-for-maya-src-wp-content-uploads-2012-10-1350054625-master-jpeg-alt-width-800-height-450-http-www-cmivfx-com-tutorials-view-498-pyqt4-ui-development-for-maya:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.com/wp-content/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;img-class-alignnone-size-full-wp-image-525-title-pyqt4-for-maya-src-wp-content-uploads-2012-10-1350054625-master-jpeg-alt-width-800-height-450-http-www-cmivfx-com-tutorials-view-498-pyqt4-ui-development-for-maya:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.github.io/wp-content/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h1 id=&#34;pyqt4-ui-development-for-maya:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;PyQt4 UI Development for Maya&lt;/h1&gt;
 
@@ -210,11 +210,11 @@
     
     <item>
       <title>Installing PyQt4 for Maya 2012&#43; (osx)</title>
-      <link>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
+      <link>http://justinfx.github.io/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
       <pubDate>Thu, 10 Nov 2011 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
-      <description>&lt;p&gt;This is a follow up post to my previous one on &lt;a href=&#34;http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/&#34;&gt;Installing PyQt4 for Maya 2011&lt;/a&gt;&lt;/p&gt;
+      <guid>http://justinfx.github.io/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
+      <description>&lt;p&gt;This is a follow up post to my previous one on &lt;a href=&#34;http://justinfx.github.io/2011/01/07/installing-pyqt-for-maya-2011-osx/&#34;&gt;Installing PyQt4 for Maya 2011&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Recently while putting together my next video tutorial for Python for Maya, I came to a section where I wanted to demo PyQt4 in Maya2012. But I was concerned that viewers would have to go through the complicated steps of building PyQt4. I noticed that other people have made available precompiled PyQt installers for windows (&lt;a href=&#34;http://blarg.robertkist.com/?p=51&#34; target=&#34;_blank&#34; class=&#34;broken_link&#34;&gt;here&lt;/a&gt;) but I could not find any for OSX or linux. So I decided to put together a build.&lt;/p&gt;
 
@@ -262,10 +262,10 @@
     
     <item>
       <title>AtomSplitter v1.2 update</title>
-      <link>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</link>
+      <link>http://justinfx.github.io/2010/05/11/atomsplitter-v1-2-update/</link>
       <pubDate>Tue, 11 May 2010 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</guid>
+      <guid>http://justinfx.github.io/2010/05/11/atomsplitter-v1-2-update/</guid>
       <description>&lt;p&gt;AtomSplitter (chanToFbx) has been updated to v1.2, available through cmivfx.com&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.2&#34;&gt;&lt;span style=&#34;color: #00ccff;&#34;&gt;AtomSplitter 1.2 &amp;#8211; cmiVFX.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
@@ -280,7 +280,7 @@
 
 &lt;p&gt;If you haven&amp;#8217;t visited &lt;a href=&#34;http://cmiVFX.com&#34; target=&#34;_blank&#34;&gt;cmiVFX.com&lt;/a&gt; before, PLEASE check them out. Chris Maynard does an amazing job rounding up top talent in the industry to create these outstanding visual fx tutorials. The information is always cutting edge.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/&#34;&gt;&lt;span style=&#34;color: #993366;&#34;&gt;See the original post.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://justinfx.github.io/2009/12/06/chantofbx-tool-released-through-cmivfx/&#34;&gt;&lt;span style=&#34;color: #993366;&#34;&gt;See the original post.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -288,10 +288,10 @@
     
     <item>
       <title>PyQt4: phonon… and on… and on</title>
-      <link>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</link>
+      <link>http://justinfx.github.io/2010/03/18/pyqt4-phonon-and-on-and-on/</link>
       <pubDate>Fri, 19 Mar 2010 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</guid>
+      <guid>http://justinfx.github.io/2010/03/18/pyqt4-phonon-and-on-and-on/</guid>
       <description>&lt;p&gt;&amp;#8220;App&amp;#8217;ing up&amp;#8221; PyQt&amp;#8230; ugh.&lt;/p&gt;
 
 &lt;p&gt;One of biggest problems with PyQt is distributing it in a stand-alone package. Even worse&amp;#8230; wanting to make your Qt plugins still function (Phonon, jpeg, etc). At work I constantly had this battle, along with my co-worker Tory. She actually has a long-standing issue with this, and had to resort to workarounds or half fixes. &lt;a href=&#34;http://www.toryhoke.com/2009/03/03/pyqt4-i-hate-you/&#34;&gt;&lt;span style=&#34;color: #3366ff;&#34;&gt;Here is Tory&amp;#8217;s original post regarding the issue&lt;/span&gt;&lt;/a&gt; .&lt;/p&gt;

@@ -3,7 +3,7 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/plugin/</link>
+    <link>http://justinfx.github.io/tags/plugin/</link>
     <language>en-us</language>
     <author>Justin Israel</author>
     <copyright>2010 Justin Israel</copyright>
@@ -12,10 +12,10 @@
     
     <item>
       <title>PyQt4: phonon… and on… and on</title>
-      <link>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</link>
+      <link>http://justinfx.github.io/2010/03/18/pyqt4-phonon-and-on-and-on/</link>
       <pubDate>Fri, 19 Mar 2010 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</guid>
+      <guid>http://justinfx.github.io/2010/03/18/pyqt4-phonon-and-on-and-on/</guid>
       <description>&lt;p&gt;&amp;#8220;App&amp;#8217;ing up&amp;#8221; PyQt&amp;#8230; ugh.&lt;/p&gt;
 
 &lt;p&gt;One of biggest problems with PyQt is distributing it in a stand-alone package. Even worse&amp;#8230; wanting to make your Qt plugins still function (Phonon, jpeg, etc). At work I constantly had this battle, along with my co-worker Tory. She actually has a long-standing issue with this, and had to resort to workarounds or half fixes. &lt;a href=&#34;http://www.toryhoke.com/2009/03/03/pyqt4-i-hate-you/&#34;&gt;&lt;span style=&#34;color: #3366ff;&#34;&gt;Here is Tory&amp;#8217;s original post regarding the issue&lt;/span&gt;&lt;/a&gt; .&lt;/p&gt;

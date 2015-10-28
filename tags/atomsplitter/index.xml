@@ -3,7 +3,7 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/atomsplitter/</link>
+    <link>http://justinfx.github.io/tags/atomsplitter/</link>
     <language>en-us</language>
     <author>Justin Israel</author>
     <copyright>2010 Justin Israel</copyright>
@@ -12,10 +12,10 @@
     
     <item>
       <title>AtomSplitter source code released</title>
-      <link>http://justinfx.com/2010/10/08/atomsplitter-source-code-released/</link>
+      <link>http://justinfx.github.io/2010/10/08/atomsplitter-source-code-released/</link>
       <pubDate>Fri, 08 Oct 2010 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2010/10/08/atomsplitter-source-code-released/</guid>
+      <guid>http://justinfx.github.io/2010/10/08/atomsplitter-source-code-released/</guid>
       <description>
 
 &lt;p&gt;We finally decided to release the source code for AtomSplitter, since we were getting some feedback that the application builds weren&amp;#8217;t 100% working on every possible system.&lt;/p&gt;

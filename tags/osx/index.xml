@@ -3,7 +3,7 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/osx/</link>
+    <link>http://justinfx.github.io/tags/osx/</link>
     <language>en-us</language>
     <author>Justin Israel</author>
     <copyright>2012 Justin Israel</copyright>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Getting started with XBOX 360 Kinect on OSX</title>
-      <link>http://justinfx.com/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</link>
+      <link>http://justinfx.github.io/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</link>
       <pubDate>Thu, 21 Jun 2012 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</guid>
+      <guid>http://justinfx.github.io/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</guid>
       <description>
 
 &lt;p&gt;A recent project of mine involves research and development with an XBOX 360 Kinect Sensor. Being a python guy, I started searching for python bindings to some OSX-supported framework. When you just get started looking into this area it can be a little confusing. There are a number of layers to the software stack to enable one to accomplish anything meaningful. This is just a short and general blog post outlining the basics of what I have discovered thus far, to help anyone else that might also be getting started.&lt;/p&gt;
@@ -181,13 +181,13 @@ make
     
     <item>
       <title>Apple Macbooks and Unexplainable LCD Screen Flicker</title>
-      <link>http://justinfx.com/2011/12/05/apple-macbooks-and-unexplainable-lcd-flicker/</link>
+      <link>http://justinfx.github.io/2011/12/05/apple-macbooks-and-unexplainable-lcd-flicker/</link>
       <pubDate>Mon, 05 Dec 2011 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2011/12/05/apple-macbooks-and-unexplainable-lcd-flicker/</guid>
+      <guid>http://justinfx.github.io/2011/12/05/apple-macbooks-and-unexplainable-lcd-flicker/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2011/12/bmacbook_flicker.png&#34; alt=&#34;&#34; title=&#34;Macbook Pro flicker&#34; width=&#34;490&#34; height=&#34;268&#34; class=&#34;alignnone size-full wp-image-395&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://justinfx.github.io/wp-content/uploads/2011/12/bmacbook_flicker.png&#34; alt=&#34;&#34; title=&#34;Macbook Pro flicker&#34; width=&#34;490&#34; height=&#34;268&#34; class=&#34;alignnone size-full wp-image-395&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I had just received my &lt;a href=&#34;http://www.bhphotovideo.com/c/product/756789-REG/Apple_MC721LL_A_15_4_MacBook_Pro_Notebook.html&#34;&gt;brand new MacBook Pro&lt;/a&gt; a few days ago. Amazing machine. Probably the best laptop I have ever laid my hands upon. It was the early Feb 2011 model so I got a crazy good deal. But something caught my eye that I just had to investigate&amp;#8230;&lt;/p&gt;
 
@@ -295,11 +295,11 @@ make
     
     <item>
       <title>Installing PyQt4 for Maya 2012&#43; (osx)</title>
-      <link>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
+      <link>http://justinfx.github.io/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
       <pubDate>Thu, 10 Nov 2011 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
-      <description>&lt;p&gt;This is a follow up post to my previous one on &lt;a href=&#34;http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/&#34;&gt;Installing PyQt4 for Maya 2011&lt;/a&gt;&lt;/p&gt;
+      <guid>http://justinfx.github.io/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
+      <description>&lt;p&gt;This is a follow up post to my previous one on &lt;a href=&#34;http://justinfx.github.io/2011/01/07/installing-pyqt-for-maya-2011-osx/&#34;&gt;Installing PyQt4 for Maya 2011&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Recently while putting together my next video tutorial for Python for Maya, I came to a section where I wanted to demo PyQt4 in Maya2012. But I was concerned that viewers would have to go through the complicated steps of building PyQt4. I noticed that other people have made available precompiled PyQt installers for windows (&lt;a href=&#34;http://blarg.robertkist.com/?p=51&#34; target=&#34;_blank&#34; class=&#34;broken_link&#34;&gt;here&lt;/a&gt;) but I could not find any for OSX or linux. So I decided to put together a build.&lt;/p&gt;
 
@@ -347,15 +347,15 @@ make
     
     <item>
       <title>Installing PyQt for maya 2011 (OSX)</title>
-      <link>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</link>
+      <link>http://justinfx.github.io/2011/01/07/installing-pyqt-for-maya-2011-osx/</link>
       <pubDate>Sat, 08 Jan 2011 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</guid>
+      <guid>http://justinfx.github.io/2011/01/07/installing-pyqt-for-maya-2011-osx/</guid>
       <description>
 
 &lt;h4 id=&#34;update:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;Update:&lt;/h4&gt;
 
-&lt;p&gt;I am now hosting a built package for Maya2011: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.7.4-maya2011-x64-osx-10.6.pkg&#34;&gt;MyQt4.7.4-maya2011-x64-osx-10.6.pkg&lt;/a&gt; And for Maya 2012+, see: &lt;a href=&#34;http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/&#34;&gt;Installing pyqt4 for maya2012&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I am now hosting a built package for Maya2011: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.7.4-maya2011-x64-osx-10.6.pkg&#34;&gt;MyQt4.7.4-maya2011-x64-osx-10.6.pkg&lt;/a&gt; And for Maya 2012+, see: &lt;a href=&#34;http://justinfx.github.io/2011/11/09/installing-pyqt4-for-maya-2012-osx/&#34;&gt;Installing pyqt4 for maya2012&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -375,7 +375,7 @@ make
 
 &lt;ul&gt;
 &lt;li&gt;Autodesk modified &lt;a href=&#34;http://images.autodesk.com/adsk/files/Qt-4.7.1-Modified_for_Maya.zip&#34;&gt;qt 4.7.1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2011/01/sip-4.12.4.tar.gz&#34;&gt;sip 4.12.4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://justinfx.github.io/wp-content/uploads/2011/01/sip-4.12.4.tar.gz&#34;&gt;sip 4.12.4&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/src/PyQt-mac-gpl-4.8.6.tar.gz&#34;&gt;pyqt 4.8.6&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -406,7 +406,7 @@ sudo make install
 &lt;h6 id=&#34;sip-the-maya-docs-recommend-sip-version-4-10:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;SIP: The maya docs recommend sip version 4.10&lt;/h6&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Download this specific SIP:   &lt;a href=&#34;http://justinfx.com/wp-content/uploads/2011/01/sip-4.10.tar.gz&#34;&gt;sip-4.10.tar.gz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Download this specific SIP:   &lt;a href=&#34;http://justinfx.github.io/wp-content/uploads/2011/01/sip-4.10.tar.gz&#34;&gt;sip-4.10.tar.gz&lt;/a&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Extract: &lt;pre class=&#34;theme:twilight top-margin:20 bottom-margin:20 toolbar-overlay:false striped:false nums:false lang:sh decode:true&#34;&gt;tar zxvf sip-4.10.tar.gz
 cd sip-4.10&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;

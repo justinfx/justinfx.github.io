@@ -3,7 +3,7 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/categories/code/</link>
+    <link>http://justinfx.github.io/categories/code/</link>
     <language>en-us</language>
     <author>Justin Israel</author>
     <copyright>2015 Justin Israel</copyright>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Comparing performance of Qt smart pointer options</title>
-      <link>http://justinfx.com/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</link>
+      <link>http://justinfx.github.io/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</link>
       <pubDate>Sun, 07 Jun 2015 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</guid>
+      <guid>http://justinfx.github.io/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</guid>
       <description>
 
 &lt;p&gt;There are a number of sources of information on the usage and behavioral differences of the many &amp;#8220;smart pointer&amp;#8221; options offered by Qt. But one thing I couldn&amp;#8217;t find enough information on were the performance characteristics.&lt;/p&gt;
@@ -102,13 +102,13 @@ test_qpointer:              5599 ms   2832 ms
 test_boost_sharedptr:       1370 ms   1350 ms 
 test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt4_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
-	&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt4_pointers-300x157.png&#34; title alt&gt;
+&lt;p&gt;&lt;a href=&#34;http://justinfx.github.io/wp-content/uploads/2015/06/qt4_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
+	&lt;img src=&#34;http://justinfx.github.io/wp-content/uploads/2015/06/qt4_pointers-300x157.png&#34; title alt&gt;
 &lt;/a&gt;
 &lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt5_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
-	&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt5_pointers-300x154.png&#34; title alt&gt;
+&lt;p&gt;&lt;a href=&#34;http://justinfx.github.io/wp-content/uploads/2015/06/qt5_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
+	&lt;img src=&#34;http://justinfx.github.io/wp-content/uploads/2015/06/qt5_pointers-300x154.png&#34; title alt&gt;
 &lt;/a&gt;
 &lt;/p&gt;
 
@@ -128,13 +128,13 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
     
     <item>
       <title>Tutorial: PyQt4 UI Development for Maya</title>
-      <link>http://justinfx.com/2012/10/12/pyqt4-for-maya/</link>
+      <link>http://justinfx.github.io/2012/10/12/pyqt4-for-maya/</link>
       <pubDate>Fri, 12 Oct 2012 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2012/10/12/pyqt4-for-maya/</guid>
+      <guid>http://justinfx.github.io/2012/10/12/pyqt4-for-maya/</guid>
       <description>
 
-&lt;h2 id=&#34;img-class-alignnone-size-full-wp-image-525-title-pyqt4-for-maya-src-wp-content-uploads-2012-10-1350054625-master-jpeg-alt-width-800-height-450-http-www-cmivfx-com-tutorials-view-498-pyqt4-ui-development-for-maya:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.com/wp-content/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;img-class-alignnone-size-full-wp-image-525-title-pyqt4-for-maya-src-wp-content-uploads-2012-10-1350054625-master-jpeg-alt-width-800-height-450-http-www-cmivfx-com-tutorials-view-498-pyqt4-ui-development-for-maya:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.github.io/wp-content/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h1 id=&#34;pyqt4-ui-development-for-maya:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;PyQt4 UI Development for Maya&lt;/h1&gt;
 
@@ -326,10 +326,10 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
     
     <item>
       <title>Python 2.7.2 serializer speed comparisons</title>
-      <link>http://justinfx.com/2012/07/25/python-2-7-3-serializer-speed-comparisons/</link>
+      <link>http://justinfx.github.io/2012/07/25/python-2-7-3-serializer-speed-comparisons/</link>
       <pubDate>Wed, 25 Jul 2012 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2012/07/25/python-2-7-3-serializer-speed-comparisons/</guid>
+      <guid>http://justinfx.github.io/2012/07/25/python-2-7-3-serializer-speed-comparisons/</guid>
       <description>&lt;p&gt;In a recent python project where I was sending multiple messages per second of data over a basic socket, I had initially just grabbed the cPickle module to get the prototype proof-of-concept functioning properly. cPickle is awesome for easily serializing more complex python objects like custom classes, even though in my case I am only sending basic types.&lt;/p&gt;
 
 &lt;p&gt;My messages were dicts with some nested dicts, lists, floats, and string values. Roughly 500-1000 bytes. cPickle was doing just fine, but there came a point where I wanted to investigate the areas that could be tightened up. The first thing I realized was that I had forgotten to encode cPickle in the binary format (the default is ascii). That saved me quite a bit of time. But then I casually searched online to see if any json options might be better since my data is pretty primitive anyways.&lt;/p&gt;
@@ -494,10 +494,10 @@ pickle (ascii)        17.8767
     
     <item>
       <title>Getting started with XBOX 360 Kinect on OSX</title>
-      <link>http://justinfx.com/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</link>
+      <link>http://justinfx.github.io/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</link>
       <pubDate>Thu, 21 Jun 2012 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</guid>
+      <guid>http://justinfx.github.io/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</guid>
       <description>
 
 &lt;p&gt;A recent project of mine involves research and development with an XBOX 360 Kinect Sensor. Being a python guy, I started searching for python bindings to some OSX-supported framework. When you just get started looking into this area it can be a little confusing. There are a number of layers to the software stack to enable one to accomplish anything meaningful. This is just a short and general blog post outlining the basics of what I have discovered thus far, to help anyone else that might also be getting started.&lt;/p&gt;
@@ -663,10 +663,10 @@ make
     
     <item>
       <title>Write My Code For Me</title>
-      <link>http://justinfx.com/2012/04/14/write-my-code-for-me/</link>
+      <link>http://justinfx.github.io/2012/04/14/write-my-code-for-me/</link>
       <pubDate>Sat, 14 Apr 2012 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2012/04/14/write-my-code-for-me/</guid>
+      <guid>http://justinfx.github.io/2012/04/14/write-my-code-for-me/</guid>
       <description>
 
 &lt;p&gt;Permalink &amp;#8211; writemycode.net&lt;/p&gt;
@@ -740,10 +740,10 @@ make
     
     <item>
       <title>Mixing PyQt4 widgets and Maya UI objects</title>
-      <link>http://justinfx.com/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</link>
+      <link>http://justinfx.github.io/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</link>
       <pubDate>Mon, 21 Nov 2011 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</guid>
+      <guid>http://justinfx.github.io/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</guid>
       <description>&lt;p&gt;A question came up in the &lt;a href=&#34;http://groups.google.com/group/python_inside_maya&#34;&gt;Maya-Python mailing list&lt;/a&gt; that I thought was a really good topic, and should be reposted.&lt;/p&gt;
 
 &lt;p&gt;Someone asked how you can create maya UI objects and embed them within your main PyQt application. Specifically he wanted to create a modelPanel and embed it so that he would have a camera view within his own PyQt window.&lt;/p&gt;
@@ -833,13 +833,13 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
     
     <item>
       <title>Python for Maya Artists – Volume 2</title>
-      <link>http://justinfx.com/2011/11/15/python-for-maya-artists-volume-2/</link>
+      <link>http://justinfx.github.io/2011/11/15/python-for-maya-artists-volume-2/</link>
       <pubDate>Tue, 15 Nov 2011 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2011/11/15/python-for-maya-artists-volume-2/</guid>
+      <guid>http://justinfx.github.io/2011/11/15/python-for-maya-artists-volume-2/</guid>
       <description>
 
-&lt;p&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;&lt;img class=&#34;alignnone&#34; src=&#34;http://justinfx.com/wp-content/uploads/2011/11/maya_python_vol2.jpg&#34; alt=&#34;&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;&lt;img class=&#34;alignnone&#34; src=&#34;http://justinfx.github.io/wp-content/uploads/2011/11/maya_python_vol2.jpg&#34; alt=&#34;&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Second video in the python for maya series, just released through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;!&lt;/p&gt;
 
@@ -857,7 +857,7 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
 
 &lt;p&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;https://cmivfx.com/store/328-python-for-maya-vol-02&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;First video can be &lt;a href=&#34;http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/&#34;&gt;found here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;First video can be &lt;a href=&#34;http://justinfx.github.io/2011/10/08/intro-to-python-for-maya-artists-tutorial/&#34;&gt;found here&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -865,11 +865,11 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
     
     <item>
       <title>Installing PyQt4 for Maya 2012&#43; (osx)</title>
-      <link>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
+      <link>http://justinfx.github.io/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
       <pubDate>Thu, 10 Nov 2011 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
-      <description>&lt;p&gt;This is a follow up post to my previous one on &lt;a href=&#34;http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/&#34;&gt;Installing PyQt4 for Maya 2011&lt;/a&gt;&lt;/p&gt;
+      <guid>http://justinfx.github.io/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
+      <description>&lt;p&gt;This is a follow up post to my previous one on &lt;a href=&#34;http://justinfx.github.io/2011/01/07/installing-pyqt-for-maya-2011-osx/&#34;&gt;Installing PyQt4 for Maya 2011&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Recently while putting together my next video tutorial for Python for Maya, I came to a section where I wanted to demo PyQt4 in Maya2012. But I was concerned that viewers would have to go through the complicated steps of building PyQt4. I noticed that other people have made available precompiled PyQt installers for windows (&lt;a href=&#34;http://blarg.robertkist.com/?p=51&#34; target=&#34;_blank&#34; class=&#34;broken_link&#34;&gt;here&lt;/a&gt;) but I could not find any for OSX or linux. So I decided to put together a build.&lt;/p&gt;
 
@@ -917,13 +917,13 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
     
     <item>
       <title>Intro to Python for Maya Artists – Tutorial</title>
-      <link>http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/</link>
+      <link>http://justinfx.github.io/2011/10/08/intro-to-python-for-maya-artists-tutorial/</link>
       <pubDate>Sat, 08 Oct 2011 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/</guid>
+      <guid>http://justinfx.github.io/2011/10/08/intro-to-python-for-maya-artists-tutorial/</guid>
       <description>
 
-&lt;p&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;&lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;http://justinfx.com/wp-content/uploads/2011/10/1318089294_Python_Background_master.jpg&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;&lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;http://justinfx.github.io/wp-content/uploads/2011/10/1318089294_Python_Background_master.jpg&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Just released my first online video tutorial, through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;&lt;/p&gt;
 
@@ -947,10 +947,10 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
     
     <item>
       <title>Go language for python programmers</title>
-      <link>http://justinfx.com/2011/07/28/go-language-for-python-programmers/</link>
+      <link>http://justinfx.github.io/2011/07/28/go-language-for-python-programmers/</link>
       <pubDate>Thu, 28 Jul 2011 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2011/07/28/go-language-for-python-programmers/</guid>
+      <guid>http://justinfx.github.io/2011/07/28/go-language-for-python-programmers/</guid>
       <description>
 
 &lt;h3 id=&#34;img-class-alignleft-src-https-blog-golang-org-gopher-gopher-png-alt-width-116-height-142-http-golang-org-preface:7abf409e83c714d77ef3bb580cbebbaf&#34;&gt;&lt;a href=&#34;http://golang.org&#34;&gt;&lt;img class=&#34;alignleft&#34; src=&#34;https://blog.golang.org/gopher/gopher.png&#34; alt=&#34;&#34; width=&#34;116&#34; height=&#34;142&#34; /&gt;&lt;/a&gt; Preface&lt;/h3&gt;
@@ -1079,15 +1079,15 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
     
     <item>
       <title>Installing PyQt for maya 2011 (OSX)</title>
-      <link>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</link>
+      <link>http://justinfx.github.io/2011/01/07/installing-pyqt-for-maya-2011-osx/</link>
       <pubDate>Sat, 08 Jan 2011 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</guid>
+      <guid>http://justinfx.github.io/2011/01/07/installing-pyqt-for-maya-2011-osx/</guid>
       <description>
 
 &lt;h4 id=&#34;update:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;Update:&lt;/h4&gt;
 
-&lt;p&gt;I am now hosting a built package for Maya2011: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.7.4-maya2011-x64-osx-10.6.pkg&#34;&gt;MyQt4.7.4-maya2011-x64-osx-10.6.pkg&lt;/a&gt; And for Maya 2012+, see: &lt;a href=&#34;http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/&#34;&gt;Installing pyqt4 for maya2012&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I am now hosting a built package for Maya2011: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.7.4-maya2011-x64-osx-10.6.pkg&#34;&gt;MyQt4.7.4-maya2011-x64-osx-10.6.pkg&lt;/a&gt; And for Maya 2012+, see: &lt;a href=&#34;http://justinfx.github.io/2011/11/09/installing-pyqt4-for-maya-2012-osx/&#34;&gt;Installing pyqt4 for maya2012&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1107,7 +1107,7 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
 
 &lt;ul&gt;
 &lt;li&gt;Autodesk modified &lt;a href=&#34;http://images.autodesk.com/adsk/files/Qt-4.7.1-Modified_for_Maya.zip&#34;&gt;qt 4.7.1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2011/01/sip-4.12.4.tar.gz&#34;&gt;sip 4.12.4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://justinfx.github.io/wp-content/uploads/2011/01/sip-4.12.4.tar.gz&#34;&gt;sip 4.12.4&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/src/PyQt-mac-gpl-4.8.6.tar.gz&#34;&gt;pyqt 4.8.6&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1138,7 +1138,7 @@ sudo make install
 &lt;h6 id=&#34;sip-the-maya-docs-recommend-sip-version-4-10:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;SIP: The maya docs recommend sip version 4.10&lt;/h6&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Download this specific SIP:   &lt;a href=&#34;http://justinfx.com/wp-content/uploads/2011/01/sip-4.10.tar.gz&#34;&gt;sip-4.10.tar.gz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Download this specific SIP:   &lt;a href=&#34;http://justinfx.github.io/wp-content/uploads/2011/01/sip-4.10.tar.gz&#34;&gt;sip-4.10.tar.gz&lt;/a&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Extract: &lt;pre class=&#34;theme:twilight top-margin:20 bottom-margin:20 toolbar-overlay:false striped:false nums:false lang:sh decode:true&#34;&gt;tar zxvf sip-4.10.tar.gz
 cd sip-4.10&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1246,10 +1246,10 @@ sudo install_name_tool -change libQtCore.4.dylib @executable_path/QtCore
     
     <item>
       <title>AtomSplitter source code released</title>
-      <link>http://justinfx.com/2010/10/08/atomsplitter-source-code-released/</link>
+      <link>http://justinfx.github.io/2010/10/08/atomsplitter-source-code-released/</link>
       <pubDate>Fri, 08 Oct 2010 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2010/10/08/atomsplitter-source-code-released/</guid>
+      <guid>http://justinfx.github.io/2010/10/08/atomsplitter-source-code-released/</guid>
       <description>
 
 &lt;p&gt;We finally decided to release the source code for AtomSplitter, since we were getting some feedback that the application builds weren&amp;#8217;t 100% working on every possible system.&lt;/p&gt;
@@ -1274,10 +1274,10 @@ sudo install_name_tool -change libQtCore.4.dylib @executable_path/QtCore
     
     <item>
       <title>Maya, and self-intersecting nurbsCurves</title>
-      <link>http://justinfx.com/2010/08/09/maya-and-self-intersecting-nurbscurves/</link>
+      <link>http://justinfx.github.io/2010/08/09/maya-and-self-intersecting-nurbscurves/</link>
       <pubDate>Mon, 09 Aug 2010 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2010/08/09/maya-and-self-intersecting-nurbscurves/</guid>
+      <guid>http://justinfx.github.io/2010/08/09/maya-and-self-intersecting-nurbscurves/</guid>
       <description>
 
 &lt;p&gt;This is a story about my journey in solving a problem at work involving curves. The solution seemed really simple at first, but because of a stupid Maya issue, this turned into me having to rewrite the tool 3 times before I discovered a surprising solution.&lt;/p&gt;
@@ -1289,7 +1289,7 @@ sudo install_name_tool -change libQtCore.4.dylib @executable_path/QtCore
 &lt;p&gt;We needed a way to detect self-intersecting nurbsCurves, so that we could fix them before working with them as nurbsSurfaces.&lt;/p&gt;
 
 &lt;div id=&#34;attachment_169&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignleft&#34;&gt;
-  &lt;a href=&#34;http://justinfx.com/wp-content/uploads/2010/08/curvesExample.png&#34; rel=&#34;lightbox[163]&#34;&gt;&lt;img class=&#34;size-medium wp-image-169  &#34; style=&#34;background-color: white;&#34; title=&#34;nurbsCurve Example&#34; src=&#34;http://justinfx.com/wp-content/uploads/2010/08/curvesExample-300x213.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;213&#34; /&gt;&lt;/a&gt;
+  &lt;a href=&#34;http://justinfx.github.io/wp-content/uploads/2010/08/curvesExample.png&#34; rel=&#34;lightbox[163]&#34;&gt;&lt;img class=&#34;size-medium wp-image-169  &#34; style=&#34;background-color: white;&#34; title=&#34;nurbsCurve Example&#34; src=&#34;http://justinfx.github.io/wp-content/uploads/2010/08/curvesExample-300x213.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;213&#34; /&gt;&lt;/a&gt;
   
   &lt;p class=&#34;wp-caption-text&#34;&gt;
     Loop Curves (self-intersection)
@@ -1321,7 +1321,7 @@ sudo install_name_tool -change libQtCore.4.dylib @executable_path/QtCore
 &lt;p&gt;At this point I had accepted the solution for detecting self-intersection, and moved on to writing a maya UI for the tool. It would detect loops and optionally even report back the best estimate to the point where it actually occurred. But once I started writing another bigger tool that would use this script, I just knew it could be done faster with the power of math and without the poop of maya script command calls.&lt;/p&gt;
 
 &lt;div id=&#34;attachment_170&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignleft&#34;&gt;
-  &lt;a href=&#34;http://www.tsplines.com/technology/edu/CurveIntersection.pdf&#34;&gt;&lt;img class=&#34;size-medium wp-image-170&#34; title=&#34;Bezier Clipping&#34; src=&#34;http://justinfx.com/wp-content/uploads/2010/08/clipping-300x141.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;141&#34; /&gt;&lt;/a&gt;
+  &lt;a href=&#34;http://www.tsplines.com/technology/edu/CurveIntersection.pdf&#34;&gt;&lt;img class=&#34;size-medium wp-image-170&#34; title=&#34;Bezier Clipping&#34; src=&#34;http://justinfx.github.io/wp-content/uploads/2010/08/clipping-300x141.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;141&#34; /&gt;&lt;/a&gt;
   
   &lt;p class=&#34;wp-caption-text&#34;&gt;
     Bezier Clipping Method
@@ -1352,10 +1352,10 @@ sudo install_name_tool -change libQtCore.4.dylib @executable_path/QtCore
     
     <item>
       <title>PyQt4: phonon… and on… and on</title>
-      <link>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</link>
+      <link>http://justinfx.github.io/2010/03/18/pyqt4-phonon-and-on-and-on/</link>
       <pubDate>Fri, 19 Mar 2010 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</guid>
+      <guid>http://justinfx.github.io/2010/03/18/pyqt4-phonon-and-on-and-on/</guid>
       <description>&lt;p&gt;&amp;#8220;App&amp;#8217;ing up&amp;#8221; PyQt&amp;#8230; ugh.&lt;/p&gt;
 
 &lt;p&gt;One of biggest problems with PyQt is distributing it in a stand-alone package. Even worse&amp;#8230; wanting to make your Qt plugins still function (Phonon, jpeg, etc). At work I constantly had this battle, along with my co-worker Tory. She actually has a long-standing issue with this, and had to resort to workarounds or half fixes. &lt;a href=&#34;http://www.toryhoke.com/2009/03/03/pyqt4-i-hate-you/&#34;&gt;&lt;span style=&#34;color: #3366ff;&#34;&gt;Here is Tory&amp;#8217;s original post regarding the issue&lt;/span&gt;&lt;/a&gt; .&lt;/p&gt;
@@ -1398,10 +1398,10 @@ sudo install_name_tool -change libQtCore.4.dylib @executable_path/QtCore
     
     <item>
       <title>SouthPark: A crazy little interface. The TaskMonster.</title>
-      <link>http://justinfx.com/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</link>
+      <link>http://justinfx.github.io/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</link>
       <pubDate>Tue, 16 Mar 2010 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</guid>
+      <guid>http://justinfx.github.io/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</guid>
       <description>&lt;p&gt;I get to do a lot of interesting applications at SouthPark. This one in particular was the most challenging use of PyQt that I have experienced to date.&lt;/p&gt;
 
 &lt;p&gt;The backstory&amp;#8230;.&lt;/p&gt;
@@ -1422,7 +1422,7 @@ sudo install_name_tool -change libQtCore.4.dylib @executable_path/QtCore
 
 &lt;p&gt;What I came up with&amp;#8230;  &lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2010/03/taskMonster2.jpg&#34; rel=&#34;lightbox[71]&#34;&gt;&lt;img class=&#34;alignnone size-large wp-image-72&#34; title=&#34;taskMonster2&#34; src=&#34;http://justinfx.com/wp-content/uploads/2010/03/taskMonster2-1024x724.jpg&#34; alt=&#34;&#34; width=&#34;663&#34; height=&#34;469&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://justinfx.github.io/wp-content/uploads/2010/03/taskMonster2.jpg&#34; rel=&#34;lightbox[71]&#34;&gt;&lt;img class=&#34;alignnone size-large wp-image-72&#34; title=&#34;taskMonster2&#34; src=&#34;http://justinfx.github.io/wp-content/uploads/2010/03/taskMonster2-1024x724.jpg&#34; alt=&#34;&#34; width=&#34;663&#34; height=&#34;469&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;iframe src=&#34;https://player.vimeo.com/video/143717524?byline=0&#34; 
         width=&#34;640&#34; 

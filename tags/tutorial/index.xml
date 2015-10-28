@@ -3,7 +3,7 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/tutorial/</link>
+    <link>http://justinfx.github.io/tags/tutorial/</link>
     <language>en-us</language>
     <author>Justin Israel</author>
     <copyright>2012 Justin Israel</copyright>
@@ -12,13 +12,13 @@
     
     <item>
       <title>Tutorial: PyQt4 UI Development for Maya</title>
-      <link>http://justinfx.com/2012/10/12/pyqt4-for-maya/</link>
+      <link>http://justinfx.github.io/2012/10/12/pyqt4-for-maya/</link>
       <pubDate>Fri, 12 Oct 2012 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2012/10/12/pyqt4-for-maya/</guid>
+      <guid>http://justinfx.github.io/2012/10/12/pyqt4-for-maya/</guid>
       <description>
 
-&lt;h2 id=&#34;img-class-alignnone-size-full-wp-image-525-title-pyqt4-for-maya-src-wp-content-uploads-2012-10-1350054625-master-jpeg-alt-width-800-height-450-http-www-cmivfx-com-tutorials-view-498-pyqt4-ui-development-for-maya:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.com/wp-content/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;img-class-alignnone-size-full-wp-image-525-title-pyqt4-for-maya-src-wp-content-uploads-2012-10-1350054625-master-jpeg-alt-width-800-height-450-http-www-cmivfx-com-tutorials-view-498-pyqt4-ui-development-for-maya:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.github.io/wp-content/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h1 id=&#34;pyqt4-ui-development-for-maya:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;PyQt4 UI Development for Maya&lt;/h1&gt;
 
@@ -210,13 +210,13 @@
     
     <item>
       <title>Python for Maya Artists – Volume 2</title>
-      <link>http://justinfx.com/2011/11/15/python-for-maya-artists-volume-2/</link>
+      <link>http://justinfx.github.io/2011/11/15/python-for-maya-artists-volume-2/</link>
       <pubDate>Tue, 15 Nov 2011 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2011/11/15/python-for-maya-artists-volume-2/</guid>
+      <guid>http://justinfx.github.io/2011/11/15/python-for-maya-artists-volume-2/</guid>
       <description>
 
-&lt;p&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;&lt;img class=&#34;alignnone&#34; src=&#34;http://justinfx.com/wp-content/uploads/2011/11/maya_python_vol2.jpg&#34; alt=&#34;&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;&lt;img class=&#34;alignnone&#34; src=&#34;http://justinfx.github.io/wp-content/uploads/2011/11/maya_python_vol2.jpg&#34; alt=&#34;&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Second video in the python for maya series, just released through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;!&lt;/p&gt;
 
@@ -234,7 +234,7 @@
 
 &lt;p&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;https://cmivfx.com/store/328-python-for-maya-vol-02&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;First video can be &lt;a href=&#34;http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/&#34;&gt;found here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;First video can be &lt;a href=&#34;http://justinfx.github.io/2011/10/08/intro-to-python-for-maya-artists-tutorial/&#34;&gt;found here&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -242,13 +242,13 @@
     
     <item>
       <title>Intro to Python for Maya Artists – Tutorial</title>
-      <link>http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/</link>
+      <link>http://justinfx.github.io/2011/10/08/intro-to-python-for-maya-artists-tutorial/</link>
       <pubDate>Sat, 08 Oct 2011 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/</guid>
+      <guid>http://justinfx.github.io/2011/10/08/intro-to-python-for-maya-artists-tutorial/</guid>
       <description>
 
-&lt;p&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;&lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;http://justinfx.com/wp-content/uploads/2011/10/1318089294_Python_Background_master.jpg&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;&lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;http://justinfx.github.io/wp-content/uploads/2011/10/1318089294_Python_Background_master.jpg&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Just released my first online video tutorial, through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;&lt;/p&gt;
 

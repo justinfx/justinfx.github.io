@@ -3,7 +3,7 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/ui/</link>
+    <link>http://justinfx.github.io/tags/ui/</link>
     <language>en-us</language>
     <author>Justin Israel</author>
     <copyright>2011 Justin Israel</copyright>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Mixing PyQt4 widgets and Maya UI objects</title>
-      <link>http://justinfx.com/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</link>
+      <link>http://justinfx.github.io/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</link>
       <pubDate>Mon, 21 Nov 2011 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.com/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</guid>
+      <guid>http://justinfx.github.io/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</guid>
       <description>&lt;p&gt;A question came up in the &lt;a href=&#34;http://groups.google.com/group/python_inside_maya&#34;&gt;Maya-Python mailing list&lt;/a&gt; that I thought was a really good topic, and should be reposted.&lt;/p&gt;
 
 &lt;p&gt;Someone asked how you can create maya UI objects and embed them within your main PyQt application. Specifically he wanted to create a modelPanel and embed it so that he would have a camera view within his own PyQt window.&lt;/p&gt;
