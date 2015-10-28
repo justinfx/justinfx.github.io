@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>JustinFX.com</title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://justinfx.com/tags/flash/</link>
+    <language>en-us</language>
+    <author>Justin Israel</author>
+    <copyright>2010 Justin Israel</copyright>
+    <updated>Fri, 15 Jan 2010 00:00:00 UTC</updated>
+    
+    
+    <item>
+      <title>Python API for XML/SWF Charts (Flash Graphing)</title>
+      <link>http://justinfx.com/2010/01/15/python-api-for-xmlswf-charts-flash-graphing/</link>
+      <pubDate>Fri, 15 Jan 2010 00:00:00 UTC</pubDate>
+      <author>Justin Israel</author>
+      <guid>http://justinfx.com/2010/01/15/python-api-for-xmlswf-charts-flash-graphing/</guid>
+      <description>
+
+&lt;p&gt;I had a project where I was designing a statistics reporting site, to track production stats. I wanted to have really nice graphs that pulled from the database and were somewhat live and interactive. XML/SWF Charts is this awesome flash-based app that lets you embed graphs in your pages which receive their data from XML. There are tons of graph types and ways to customize the look.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.maani.us/xml_charts/index.php&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-59&#34; title=&#34;graphs_example&#34; src=&#34;http://justinfx.com/wp-content/uploads/2010/01/graphs_example.jpg&#34; alt=&#34;&#34; width=&#34;754&#34; height=&#34;112&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.maani.us/xml_charts/index.php&#34;&gt;http://www.maani.us/xml_charts/index.php&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So, the thing is&amp;#8230; I wanted to use Django for the site. I decided to write a python module that wraps around the API for SWF charts, so that the XML could easily be generated for me after just setting all my parameters. Thought I might post this here for any python fans wanting nice looking graphs in their site.&lt;/p&gt;
+
+&lt;p&gt;Really, this doesn&amp;#8217;t just apply to django. You could just call out from anything to python code that will generate your XML for you.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;chart &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; SwfChart()
+
+&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# the data&lt;/span&gt;
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addRow( &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Person A&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;5.5&lt;/span&gt; )
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addRow( &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Person B&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;6&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;4.45&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;8&lt;/span&gt; )
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addColumnLabel( &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Day1&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Day2&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Day3&amp;#39;&lt;/span&gt; )
+
+&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Extra graph settings&lt;/span&gt;
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addFilter(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;shadow&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;low&amp;#39;&lt;/span&gt;, distance&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;2&lt;/span&gt;, angle&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;45&lt;/span&gt;, alpha&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;35&lt;/span&gt;, blurX&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;5&lt;/span&gt;, blurY&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;5&lt;/span&gt;)
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addFilter(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;shadow&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;high&amp;#39;&lt;/span&gt;, distance&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;3&lt;/span&gt;, angle&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;45&lt;/span&gt;, alpha&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;35&lt;/span&gt;, blurX&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;10&lt;/span&gt;, blurY&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;10&lt;/span&gt;)
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addFilter(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;bevel&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;bevel1&amp;#39;&lt;/span&gt;, strength&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;10&lt;/span&gt;, quality&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;3&lt;/span&gt;, distance&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;2&lt;/span&gt;)
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setChartBorder(top&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;1&lt;/span&gt;, bottom&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;2&lt;/span&gt;, left&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;, right&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;, color&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;000000&amp;#39;&lt;/span&gt;)
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setChartLabel(color&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;000000&amp;#39;&lt;/span&gt;, alpha&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;80&lt;/span&gt;, size&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;8&lt;/span&gt;, position&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;outside&amp;#39;&lt;/span&gt;, hide_zero&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;True&lt;/span&gt;)
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setChartTransition(&lt;span style=&#34;color: #007020&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;scale&amp;#39;&lt;/span&gt;, delay&lt;span style=&#34;color: #666666&#34;&gt;=.&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;5&lt;/span&gt;, duration&lt;span style=&#34;color: #666666&#34;&gt;=.&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;5&lt;/span&gt;, order&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;series&amp;#39;&lt;/span&gt;)
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setChartRect(shadow&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;high&amp;#39;&lt;/span&gt;)
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setLegend(size&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;12&lt;/span&gt;, alpha&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;90&lt;/span&gt;, fill_alpha&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;30&lt;/span&gt;)
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setAxisTicks(category_ticks&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;True&lt;/span&gt;, value_ticks&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;True&lt;/span&gt;, minor_count&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;3&lt;/span&gt;)
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setContextMenu(about&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;False&lt;/span&gt;)
+
+&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# if you have the licensed version&lt;/span&gt;
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setLicense(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;license string&amp;#39;&lt;/span&gt;)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Now at this point, the object can be treated like a string to get the xml, or just call getXML() :&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; chart
+
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;getXML()   &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# same thing&lt;/span&gt;
+
+xml &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #007020&#34;&gt;str&lt;/span&gt;(chart)   &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# or assign the XML string somewhere&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;You can download the swfcharts.py module and use it freely. If you find it helpful, post a comment or shoot me an email.&lt;/p&gt;
+
+&lt;h4 id=&#34;download-swfcharts-py-wp-content-uploads-2010-01-swfcharts-py-zip:49cac3fa1a8c2fa6889e2e792973fcce&#34;&gt;Download &lt;a href=&#34;http://justinfx.com/wp-content/uploads/2010/01/swfcharts.py_.zip&#34;&gt;swfcharts.py&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Pydoc located here for convenience:&lt;span style=&#34;color: #ffcc00;&#34;&gt;&lt;br /&gt; &lt;a href=&#39;http://justinfx.com/wp-content/uploads/2010/01/swfcharts.html&#39;&gt;swfcharts python documentation&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    
+  </channel>
+</rss>

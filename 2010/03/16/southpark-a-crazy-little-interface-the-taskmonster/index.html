@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+
+  <title> SouthPark: A crazy little interface. The TaskMonster.  &middot; JustinFX.com </title>
+
+  
+  <link rel="stylesheet" href="http://justinfx.com/css/poole.css">
+  <link rel="stylesheet" href="http://justinfx.com/css/syntax.css">
+  <link rel="stylesheet" href="http://justinfx.com/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="http://justinfx.com/css/fluidbox.min.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="JustinFX.com" />
+
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+
+  <script src="http://justinfx.com/js/jquery.min.js"></script>
+  <script src="http://justinfx.com/js/jquery.ba-throttle-debounce.min.js"></script>
+  <script src="http://justinfx.com/js/imagesloaded.pkgd.min.js"></script>
+  <script src="http://justinfx.com/js/jquery.fluidbox.min.js"></script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Raleway']
+      }
+    });
+
+    $(function () {
+      $('a').fluidbox();
+    })
+  </script>
+
+</head>
+
+<body>
+
+  <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1><a href="http://justinfx.com">JustinFX.com</a></h1>
+      <p class="lead">
+       Coding, FX, And Just Random Stuff 
+      </p>
+    </div>
+
+
+
+    <ul class="sidebar-nav">
+      <li><a href="http://justinfx.com/blog">Posts</a></li>
+      
+        <li><a href="/about/">About </a></li>
+      
+        <li><a href="/developer-resume/">Developer Resume </a></li>
+      
+        <li><a href="/vfx-resume/">VFX Resume </a></li>
+      
+        <li><a href="/visual-fx-demo/">Visual FX Demo </a></li>
+      
+        <li><a href="/short-films/">Short Films </a></li>
+      
+      <br/>
+      
+    </ul>
+      <a href="mailto:justinisrael@gmail.com"><i class="fa fa-envelope-o"></i></a>&nbsp;
+      <a href="https://www.google.com/&#43;JustinIsrael"><i class="fa fa-google-plus"></i></a>&nbsp;
+      
+      <a href="http://www.linkedin.com/in/justinisrael"><i class="fa fa-linkedin-square"></i></a>&nbsp;
+      <a href="https://github.com/justinfx"><i class="fa fa-github-square"></i></a>&nbsp;
+      <a href="http://stackoverflow.com/users/496445/jdi"><i class="fa fa-stack-overflow"></i></a>&nbsp;
+      <a href="https://www.facebook.com/justinisrael"><i class="fa fa-facebook-square"></i></a>&nbsp;
+      <a href="http://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
+
+    <p class="footnote">powered by <a href="http://hugo.spf13.com">Hugo</a> <br/>
+    &copy; 2015 Justin Israel. All rights reserved.</p>
+    
+  </div>
+</div>
+
+
+  <div class="content container">
+    <div class="post">
+    <h1 class="post-title">SouthPark: A crazy little interface. The TaskMonster.</h1>
+    <span class="post-date">Mar 16, 2010</span>
+    
+    <p>I get to do a lot of interesting applications at SouthPark. This one in particular was the most challenging use of PyQt that I have experienced to date.</p>
+
+<p>The backstory&#8230;.</p>
+
+<p>The art department wanted a tool to help them track assigned tasks, the progress, and to share media and notes associated with the tasks. Furthermore, they wanted to be able to skin the interface with custom graphics to make it their own.</p>
+
+<p>Progress&#8230;</p>
+
+<p>During the winter break (about a month) I was able to come up with version 1.0 of TaskMonster. It was written in python, using PyQt for the UI, sqlalchemy to talk to the database, and twisted for the client/server communication. Each client app sends messages to a small server daemon which in turn tells the rest of the clients about the updates.</p>
+
+<p>Version 2.0 Alpha&#8230;</p>
+
+<p>Tony Postma, from the art department, put together a design in Corel which I could hopefully implement in the UI.  It called for the users to be represented as little pods in a circle around the supervisor, Adrien Beard. And each user pod could be clicked and rotated into place, in order to view that persons tasks.</p>
+
+<p>After a bunch of testing I was able to design a rotating widget that could dynamically lay out N widgets around it in a circle, track their position, and jump to any other widget. I was also able to break down the corel-&gt;illustrator file, into a combination of SVG and PNG images, and skin the UI via CSS stylesheets.</p>
+
+<p>Its currently an alpha release. I guess I need to really learn how to control the widget painting, to make it faster. Never had to do this much before.</p>
+
+<p>What I came up with&#8230;  </p>
+
+<p><a href="/wp-content/uploads/2010/03/taskMonster2.jpg" rel="lightbox[71]"><img class="alignnone size-large wp-image-72" title="taskMonster2" src="/wp-content/uploads/2010/03/taskMonster2-1024x724.jpg" alt="" width="663" height="469" /></a></p>
+
+<p><iframe src="https://player.vimeo.com/video/143717524?byline=0" 
+        width="640" 
+        height="360" 
+        frameborder="0" 
+        webkitallowfullscreen 
+        mozallowfullscreen 
+        allowfullscreen >
+</iframe></p>
+
+    
+
+     
+	
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost") 
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'justinfx';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments powered by <a href="http://disqus.com/?ref_noscript">Disqus.</a></noscript>
+</div>
+</div> 
+
+</body>w
+</html>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>JustinFX.com</title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://justinfx.com/tags/plugin/</link>
+    <language>en-us</language>
+    <author>Justin Israel</author>
+    <copyright>2010 Justin Israel</copyright>
+    <updated>Fri, 19 Mar 2010 00:00:00 UTC</updated>
+    
+    
+    <item>
+      <title>PyQt4: phonon… and on… and on</title>
+      <link>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</link>
+      <pubDate>Fri, 19 Mar 2010 00:00:00 UTC</pubDate>
+      <author>Justin Israel</author>
+      <guid>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</guid>
+      <description>&lt;p&gt;&amp;#8220;App&amp;#8217;ing up&amp;#8221; PyQt&amp;#8230; ugh.&lt;/p&gt;
+
+&lt;p&gt;One of biggest problems with PyQt is distributing it in a stand-alone package. Even worse&amp;#8230; wanting to make your Qt plugins still function (Phonon, jpeg, etc). At work I constantly had this battle, along with my co-worker Tory. She actually has a long-standing issue with this, and had to resort to workarounds or half fixes. &lt;a href=&#34;http://www.toryhoke.com/2009/03/03/pyqt4-i-hate-you/&#34;&gt;&lt;span style=&#34;color: #3366ff;&#34;&gt;Here is Tory&amp;#8217;s original post regarding the issue&lt;/span&gt;&lt;/a&gt; .&lt;/p&gt;
+
+&lt;p&gt;I would see an error similar to this when trying to package up and run an app using the Phonon module.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;WARNING: bool Phonon::FactoryPrivate::createBackend() phonon backend plugin could not be loaded
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Running &lt;code&gt;macdeployqt myAppName.app&lt;/code&gt; does add things like the jpeg plugin, but never seemed to fix the Phonon issue. I finally decided to randomly look online for a solution, again, last week. What I found was a partial solution, followed by me trying one more thing and bam&amp;#8230;it worked! Video playback from my .app standalone package.&lt;/p&gt;
+
+&lt;p&gt;Here is what I did &amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;(btw you might have to modify the location of the plugin, since I happen to be using OSX)&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;In your setup.py file, which is used for py2app, py2exe, or similar&amp;#8230; add this to the DATA_FILES list, so that it looks as such:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;    DATA_FILES &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; [(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;phonon_backend&amp;#39;&lt;/span&gt;, [
+      &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;/Developer/Applications/Qt/plugins/phonon_backend/libphonon_qt7.dylib&amp;#39;&lt;/span&gt;
+    ])]
+    
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;This will put the phonon backend plugin into the RESOURCES folder in the app.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Package up your application via py2app / py2exe / etc.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If you are on OSX, use macdeployqt on the app: &lt;code&gt;&amp;gt;&amp;gt;&amp;gt; macdeployqt myApp.app&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Go into the app that was created (show package contents if you are on a mac), and move the phonon_backend directory FROM the Resources directory TO the PlugIns directory (which should be at the same level as Resources).&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That should be it!&lt;/p&gt;
+</description>
+    </item>
+    
+    
+  </channel>
+</rss>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+
+  <title> PyQt: Overloading/Ignoring events on widgets  &middot; JustinFX.com </title>
+
+  
+  <link rel="stylesheet" href="http://justinfx.com/css/poole.css">
+  <link rel="stylesheet" href="http://justinfx.com/css/syntax.css">
+  <link rel="stylesheet" href="http://justinfx.com/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="http://justinfx.com/css/fluidbox.min.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="JustinFX.com" />
+
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+
+  <script src="http://justinfx.com/js/jquery.min.js"></script>
+  <script src="http://justinfx.com/js/jquery.ba-throttle-debounce.min.js"></script>
+  <script src="http://justinfx.com/js/imagesloaded.pkgd.min.js"></script>
+  <script src="http://justinfx.com/js/jquery.fluidbox.min.js"></script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Raleway']
+      }
+    });
+
+    $(function () {
+      $('a').fluidbox();
+    })
+  </script>
+
+</head>
+
+<body>
+
+  <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1><a href="http://justinfx.com">JustinFX.com</a></h1>
+      <p class="lead">
+       Coding, FX, And Just Random Stuff 
+      </p>
+    </div>
+
+
+
+    <ul class="sidebar-nav">
+      <li><a href="http://justinfx.com/blog">Posts</a></li>
+      
+        <li><a href="/about/">About </a></li>
+      
+        <li><a href="/developer-resume/">Developer Resume </a></li>
+      
+        <li><a href="/vfx-resume/">VFX Resume </a></li>
+      
+        <li><a href="/visual-fx-demo/">Visual FX Demo </a></li>
+      
+        <li><a href="/short-films/">Short Films </a></li>
+      
+      <br/>
+      
+    </ul>
+      <a href="mailto:justinisrael@gmail.com"><i class="fa fa-envelope-o"></i></a>&nbsp;
+      <a href="https://www.google.com/&#43;JustinIsrael"><i class="fa fa-google-plus"></i></a>&nbsp;
+      
+      <a href="http://www.linkedin.com/in/justinisrael"><i class="fa fa-linkedin-square"></i></a>&nbsp;
+      <a href="https://github.com/justinfx"><i class="fa fa-github-square"></i></a>&nbsp;
+      <a href="http://stackoverflow.com/users/496445/jdi"><i class="fa fa-stack-overflow"></i></a>&nbsp;
+      <a href="https://www.facebook.com/justinisrael"><i class="fa fa-facebook-square"></i></a>&nbsp;
+      <a href="http://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
+
+    <p class="footnote">powered by <a href="http://hugo.spf13.com">Hugo</a> <br/>
+    &copy; 2015 Justin Israel. All rights reserved.</p>
+    
+  </div>
+</div>
+
+
+  <div class="content container">
+    <div class="post">
+    <h1 class="post-title">PyQt: Overloading/Ignoring events on widgets</h1>
+    <span class="post-date">Mar 10, 2010</span>
+    
+    <p>You know when you have all these widgets laid out in your class, and you are hooking up all the connections, and you say &#8220;Aw dammit I have to subclass QLabel now just so make it ignore blahEvent&#8221;? You end up with all these little widget subclasses, where all they are doing is ignoring an event.</p>
+
+<p>I noticed I was doing this a few times, in more than one of my classes, and finally got annoyed for the last time. I figured there had to be a simple way of just overloading the method on the normal object when I create an instance. Fortunately python considers everything objects and pretty much anything can be changed. So I did this:</p>
+
+<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">myLabel <span style="color: #666666">=</span> QLabel()
+myLabel<span style="color: #666666">.</span>mousePressEvent <span style="color: #666666">=</span> <span style="color: #007020; font-weight: bold">lambda</span> event: event<span style="color: #666666">.</span>ignore()
+</pre></div>
+</p>
+
+<p>Magic.</p>
+
+<p>I have also had to make clickable widgets, such as QLabel:</p>
+
+<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">myLabel <span style="color: #666666">=</span> QLabel()
+myLabel<span style="color: #666666">.</span>mousePressEvent <span style="color: #666666">=</span> <span style="color: #007020; font-weight: bold">lambda</span> event: myLabel<span style="color: #666666">.</span>emit(SIGNAL(<span style="color: #4070a0">&quot;clicked&quot;</span>))
+</pre></div>
+</p>
+
+<p>Or if you had to do more than just a single statement:</p>
+
+<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">myLabel <span style="color: #666666">=</span> QLabel()
+<span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">clickedEvent</span>(event):
+myLabel<span style="color: #666666">.</span>emit(SIGNAL(<span style="color: #4070a0">&quot;clicked&quot;</span>))
+<span style="color: #60a0b0; font-style: italic"># do other stuff</span>
+<span style="color: #60a0b0; font-style: italic"># do stuff</span>
+event<span style="color: #666666">.</span>accept()
+myLabel<span style="color: #666666">.</span>mousePressEvent <span style="color: #666666">=</span> clickedEvent
+</pre></div>
+</p>
+
+<p>I like this better than piling up subclasses that don&#8217;t do much.</p>
+
+    
+
+     
+	
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost") 
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'justinfx';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments powered by <a href="http://disqus.com/?ref_noscript">Disqus.</a></noscript>
+</div>
+</div> 
+
+</body>w
+</html>

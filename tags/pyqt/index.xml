@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>JustinFX.com</title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://justinfx.com/tags/pyqt/</link>
+    <language>en-us</language>
+    <author>Justin Israel</author>
+    <copyright>2011 Justin Israel</copyright>
+    <updated>Mon, 21 Nov 2011 00:00:00 UTC</updated>
+    
+    
+    <item>
+      <title>Mixing PyQt4 widgets and Maya UI objects</title>
+      <link>http://justinfx.com/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</link>
+      <pubDate>Mon, 21 Nov 2011 00:00:00 UTC</pubDate>
+      <author>Justin Israel</author>
+      <guid>http://justinfx.com/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</guid>
+      <description>&lt;p&gt;A question came up in the &lt;a href=&#34;http://groups.google.com/group/python_inside_maya&#34;&gt;Maya-Python mailing list&lt;/a&gt; that I thought was a really good topic, and should be reposted.&lt;/p&gt;
+
+&lt;p&gt;Someone asked how you can create maya UI objects and embed them within your main PyQt application. Specifically he wanted to create a modelPanel and embed it so that he would have a camera view within his own PyQt window.&lt;/p&gt;
+
+&lt;p&gt;Here is my example of how to achieve this&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;PyQt4&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; QtCore, QtGui
+
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;maya.cmds&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;cmds&lt;/span&gt;
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;maya.OpenMayaUI&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;mui&lt;/span&gt;
+
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;sip&lt;/span&gt;
+
+
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;MyDialog&lt;/span&gt;(QtGui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QDialog):
+
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;__init__&lt;/span&gt;(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;, parent, &lt;span style=&#34;color: #666666&#34;&gt;**&lt;/span&gt;kwargs):
+        &lt;span style=&#34;color: #007020&#34;&gt;super&lt;/span&gt;(MyDialog, &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;__init__(parent, &lt;span style=&#34;color: #666666&#34;&gt;**&lt;/span&gt;kwargs)
+        
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setObjectName(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;MyWindow&amp;quot;&lt;/span&gt;)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;resize(&lt;span style=&#34;color: #40a070&#34;&gt;800&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;600&lt;/span&gt;)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setWindowTitle(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;PyQt ModelPanel Test&amp;quot;&lt;/span&gt;)
+
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QtGui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QVBoxLayout(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setContentsMargins(&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;)
+
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# need to set a name so it can be referenced by maya node path&lt;/span&gt;
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setObjectName(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;mainLayout&amp;quot;&lt;/span&gt;)
+        
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# First use SIP to unwrap the layout into a pointer&lt;/span&gt;
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Then get the full path to the UI in maya as a string&lt;/span&gt;
+        layout &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;fullName(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;unwrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout)))
+        cmds&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setParent(layout)
+
+        paneLayoutName &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; cmds&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;paneLayout()
+        
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Find a pointer to the paneLayout that we just created&lt;/span&gt;
+        ptr &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;findControl(paneLayoutName)
+        
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Wrap the pointer into a python QObject&lt;/span&gt;
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;paneLayout &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;wrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(ptr), QtCore&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QObject)
+
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;cameraName &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; cmds&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;camera()[&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;]
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanelName &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; cmds&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanel(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;customModelPanel&amp;quot;&lt;/span&gt;, label&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;ModelPanel Test&amp;quot;&lt;/span&gt;, cam&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;cameraName)
+        
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Find a pointer to the modelPanel that we just created&lt;/span&gt;
+        ptr &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;findControl(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanelName)
+        
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Wrap the pointer into a python QObject&lt;/span&gt;
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;wrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(ptr), QtCore&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QObject)
+
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# add our QObject reference to the paneLayout to our layout&lt;/span&gt;
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addWidget(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;paneLayout)
+
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;showEvent&lt;/span&gt;(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;, event):
+        &lt;span style=&#34;color: #007020&#34;&gt;super&lt;/span&gt;(MyDialog, &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;showEvent(event)
+
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# maya can lag in how it repaints UI. Force it to repaint&lt;/span&gt;
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# when we show the window.&lt;/span&gt;
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;repaint()
+                    
+
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;show&lt;/span&gt;():
+    &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# get a pointer to the maya main window&lt;/span&gt;
+    ptr &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mainWindow()
+    &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# use sip to wrap the pointer into a QObject&lt;/span&gt;
+    win &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;wrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(ptr), QtCore&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QObject)
+    d &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; MyDialog(win)
+    d&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;show()
+
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;return&lt;/span&gt; d
+
+
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;try&lt;/span&gt;:
+    dialog&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;deleteLater()
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;except&lt;/span&gt;:
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;pass&lt;/span&gt;    
+dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;You need sip and the MQtUtil functions to convert between maya node paths and python Qbjects. Its the same idea as having to use those functions to get a reference to the maya MainWindow, in order to parent your dialog.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Python for Maya Artists – Volume 2</title>
+      <link>http://justinfx.com/2011/11/15/python-for-maya-artists-volume-2/</link>
+      <pubDate>Tue, 15 Nov 2011 00:00:00 UTC</pubDate>
+      <author>Justin Israel</author>
+      <guid>http://justinfx.com/2011/11/15/python-for-maya-artists-volume-2/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;&lt;img class=&#34;alignnone&#34; src=&#34;http://justinfx.com/wp-content/uploads/2011/11/maya_python_vol2.jpg&#34; alt=&#34;&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Second video in the python for maya series, just released through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h3 id=&#34;python-for-maya-8211-volume-2-https-cmivfx-com-store-328-python-for-maya-vol-02:932d1044b07cc887e7b7c36e5a9ebc4e&#34;&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;Python For Maya &amp;#8211; Volume 2&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;If you watched the first video, you now have a good grasp on Python. Sweet. Let&amp;#8217;s plow through some more involved concepts like python juggernauts!&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;With a working knowledge of the python scripting language, and the Maya Python commands API, we can continue to learn new ways to solve more challenging problems, create complete scripts, and build user interfaces around our tools. We also introduce the Maya Python API; a lower-level interface into Maya.&lt;/p&gt;
+
+&lt;p&gt;This video focuses more on breaking down full scripts, as opposed to typing out syntax. Its jam packaged with information and moves fast to deliver you as much brain food as possible. The first segment of the video transitions from beginning to intermediate level, with the majority of the video being intermediate, and finishing out by touching on advanced concepts. The included project files are abundant, complete, and full of helpful documentation so that you can take your time and learn about each piece of the tools.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If you check it out, leave me feedback!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;https://cmivfx.com/store/328-python-for-maya-vol-02&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;First video can be &lt;a href=&#34;http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/&#34;&gt;found here&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Installing PyQt4 for Maya 2012&#43; (osx)</title>
+      <link>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
+      <pubDate>Thu, 10 Nov 2011 00:00:00 UTC</pubDate>
+      <author>Justin Israel</author>
+      <guid>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
+      <description>&lt;p&gt;This is a follow up post to my previous one on &lt;a href=&#34;http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/&#34;&gt;Installing PyQt4 for Maya 2011&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Recently while putting together my next video tutorial for Python for Maya, I came to a section where I wanted to demo PyQt4 in Maya2012. But I was concerned that viewers would have to go through the complicated steps of building PyQt4. I noticed that other people have made available precompiled PyQt installers for windows (&lt;a href=&#34;http://blarg.robertkist.com/?p=51&#34; target=&#34;_blank&#34; class=&#34;broken_link&#34;&gt;here&lt;/a&gt;) but I could not find any for OSX or linux. So I decided to put together a build.&lt;/p&gt;
+
+&lt;p&gt;I created a new project on github called MyQt4&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/MyQt4&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/justinfx/MyQt4&#34;&gt;https://github.com/justinfx/MyQt4&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Its a Makefile for completely downloading and building PyQt4 for maya, and generating a .pkg installer. Hopefully someone can contribute improvements since I dont have a ton of experience writing makefiles, and also that someone might create a linux version.&lt;/p&gt;
+
+&lt;p&gt;Here is a link to the latest pkg build:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Snow Leopard: &lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Maya2011: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.7.4-maya2011-x64-osx-10.6.pkg&#34; target=&#34;_blank&#34;&gt;MyQt4.7.4-maya2011-x64-osx-10.6.pkg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Maya2012: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.9.4-maya2012-x64-osx-10.6.pkg&#34; target=&#34;_blank&#34;&gt;MyQt4.9.4-maya2012-x64-osx-10.6.pkg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Maya2013: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.9.4-maya2013-x64-osx-10.6.pkg&#34; target=&#34;_blank&#34;&gt;MyQt4.9.4-maya2013-x64-osx-10.6.pkg&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Lion:  &lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Maya2012: &lt;a href=&#34;http://dl.dropbox.com/u/34613220/MyQt4/MyQt4.8.6-maya2012-x64-osx-10.7.pkg&#34; target=&#34;_blank&#34;&gt;MyQt4.8.6-maya2012-x64-osx-10.7.pkg&lt;/a&gt;   (Thanks &lt;a href=&#34;https://github.com/cgrebeld&#34; target=&#34;_blank&#34;&gt;Chris&lt;/a&gt;!)&lt;/li&gt;
+&lt;li&gt;Maya2013: &lt;a href=&#34;http://dl.dropbox.com/u/34613220/MyQt4/MyQt4.8.6-maya2013-x64-osx-10.7.pkg&#34;&gt;MyQt4.8.6-maya2013-x64-osx-10.7.pkg&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Mountain Lion:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;span style=&#34;line-height: 13px;&#34;&gt;Maya2011:&lt;a href=&#34;http://infixlabs.com/MyQt/MyQt4.7.4-maya2011-x64-osx-20130114.pkg&#34;&gt; MyQt4.7.4-maya2011&lt;wbr /&gt;-x64-osx-20130114.pkg&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here are builds other people have made:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Win 32bit: &lt;a href=&#34;http://blarg.robertkist.com/?p=51&#34;&gt;http://blarg.robertkist.com/?p=51&lt;/a&gt;{.broken_link}&lt;/li&gt;
+&lt;li&gt;Win 64bit:  &lt;a href=&#34;http://nathanhorne.com/?p=322&#34;&gt;http://nathanhorne.com/?p=322  &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Win 7 64bit Maya 2013: &lt;a href=&#34;https://www.box.com/s/1db3b0c903059ac89fc4&#34;&gt;https://www.box.com/s/1db3b0c903059ac89fc4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Linux:  &lt;a href=&#34;http://www.kurianos.com/wordpress/?p=551&#34;&gt;http://www.kurianos.com/wordpress/?p=551&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Installing PyQt for maya 2011 (OSX)</title>
+      <link>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</link>
+      <pubDate>Sat, 08 Jan 2011 00:00:00 UTC</pubDate>
+      <author>Justin Israel</author>
+      <guid>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</guid>
+      <description>
+
+&lt;h4 id=&#34;update:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;Update:&lt;/h4&gt;
+
+&lt;p&gt;I am now hosting a built package for Maya2011: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.7.4-maya2011-x64-osx-10.6.pkg&#34;&gt;MyQt4.7.4-maya2011-x64-osx-10.6.pkg&lt;/a&gt; And for Maya 2012+, see: &lt;a href=&#34;http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/&#34;&gt;Installing pyqt4 for maya2012&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Personally, when trying to run PyQt from within Maya 2009 / 2010 using the pumpThread method, I never had much luck. The best I ever got was the ability to bring up a dialog but not without locking up the UI, even though the pumpThread tool is meant to address that.&lt;/p&gt;
+
+&lt;p&gt;Anyways, when I found out Maya 2011 was rewritten based on Qt for the UI, I was really stoked. I saw the example video of being able to design a ui file in Designer, and just directly open it in a maya script, and all I could think about was designing Qt GUIs so much more easily now. Turns out that Maya 2011 didn&amp;#8217;t actually ship with PyQt included for licensing reasons I&amp;#8217;m sure. But it included documentation on how one could go about building PyQt for maya. Unfortunately I had tons of issues that caused maya to just crash when importing PyQt.&lt;/p&gt;
+
+&lt;p&gt;What I finally figured out was a mish-mash of information from the maya documention, and different forums and user groups. So I decided to make this easier on anyone having the same problems as I did, and just collect that information into one place. This process is for OSX. I&amp;#8217;m sure most of it is probably still relevant to linux or win, except for the last parts with &amp;#8216;install_name_tool&amp;#8217;. You would just need to make sure to find the right Qt/PyQt/SIP packages for your OS.&lt;/p&gt;
+
+&lt;h5 id=&#34;building-pyqt4-for-maya-2011-on-osx:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;Building PyQt4 for Maya 2011 on OSX&lt;/h5&gt;
+
+&lt;hr /&gt;
+
+&lt;h6 id=&#34;update-for-maya-2012:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;&lt;em&gt;&lt;strong&gt;Update for Maya 2012&lt;/strong&gt;&lt;/em&gt;&lt;/h6&gt;
+
+&lt;p&gt;While Maya uses newer versions, it seems the versions from the 2011 install still work. But here they are anyways incase you want the newer version for 2012:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Autodesk modified &lt;a href=&#34;http://images.autodesk.com/adsk/files/Qt-4.7.1-Modified_for_Maya.zip&#34;&gt;qt 4.7.1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2011/01/sip-4.12.4.tar.gz&#34;&gt;sip 4.12.4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/src/PyQt-mac-gpl-4.8.6.tar.gz&#34;&gt;pyqt 4.8.6&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Make sure you have downloaded and installed the latest XCode from Apple. Its also included on your OSX installation disc.&lt;/p&gt;
+
+&lt;h6 id=&#34;qt-maya-has-a-specific-version-of-qt-built-into-it-this-is-qt-4-5-3:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;Qt: Maya has a specific version of Qt built into it. This is Qt 4.5.3.&lt;/h6&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Download:  &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/src/qt-mac-opensource-src-4.5.3.tar.gz&#34;&gt;qt-mac-opensource-src-4.5.3.tar.gz&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Extract: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;tar zxvf qt-mac-opensource-src-4.5.3.tar.gz
+&lt;span style=&#34;color: #007020&#34;&gt;cd &lt;/span&gt;qt-mac-opensource-src-4.5.3
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Build and install: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;./configure -cocoa -arch x86_64 -debug-and-release &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+  -no-phonon -no-phonon-backend -no-qt3support &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+  -no-webkit -nomake docs -nomake examples -nomake demos &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+  -nomake translations -no-rpath -no-framework
+make -j 8
+sudo make install
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h6 id=&#34;sip-the-maya-docs-recommend-sip-version-4-10:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;SIP: The maya docs recommend sip version 4.10&lt;/h6&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Download this specific SIP:   &lt;a href=&#34;http://justinfx.com/wp-content/uploads/2011/01/sip-4.10.tar.gz&#34;&gt;sip-4.10.tar.gz&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Extract: &lt;pre class=&#34;theme:twilight top-margin:20 bottom-margin:20 toolbar-overlay:false striped:false nums:false lang:sh decode:true&#34;&gt;tar zxvf sip-4.10.tar.gz
+cd sip-4.10&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Build and install: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+  configure.py --arch&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;x86_64
+make -j 8
+sudo make install
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h6 id=&#34;pyqt4-the-maya-docs-suggest-pyqt-4-7:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;PyQt4: The maya docs suggest PyQt 4.7&lt;/h6&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Download this specific PyQt: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/src/PyQt-mac-gpl-4.7.4.tar.gz&#34;&gt;PyQt-mac-gpl-4.7.4.tar.gz&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Extract: &lt;pre class=&#34;striped:false nums:false lang:sh decode:true&#34;&gt;tar zxvf PyQt-mac-gpl-4.7.3.tar.gz
+cd PyQt-mac-gpl-4.7.3&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Set up some environment variables before building: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;QTDIR&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt-4.5.3
+&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;PATH&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt-4.5.3/bin:&lt;span style=&#34;color: #bb60d5&#34;&gt;$PATH&lt;/span&gt;
+&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;QMAKESPEC&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt-4.5.3/mkspecs/macx-g++
+&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;DYLD_LIBRARY_PATH&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt-4.5.3/lib
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Build and install: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+  configure.py &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+  &lt;span style=&#34;color: #bb60d5&#34;&gt;LIBDIR_QT&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt‐4.5.3/lib &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+  &lt;span style=&#34;color: #bb60d5&#34;&gt;INCDIR_QT&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt‐4.5.3/include &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+  &lt;span style=&#34;color: #bb60d5&#34;&gt;MOC&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt‐4.5.3/bin/moc &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+  -w --no-designer-plugin
+make -j 8
+sudo make install
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;PyQt4 will now be installed into Maya&amp;#8217;s python site-packages, BUT will be linked against the wrong Qt binaries. The maya docs have an annoying multi step set of commands but they don&amp;#8217;t copy/paste nicely, so here is a for-loop you can use: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;for&lt;/span&gt; mod in Core Gui Svg OpenGL Xml
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;do&lt;/span&gt; 
+  sudo find /Applications/Autodesk/maya2011/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python2.6/site-packages/PyQt4 -name &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;*so&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+  -exec install_name_tool -change libQt&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;mod&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;}&lt;/span&gt;.4.dylib @executable_path/Qt&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;mod&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;{}&lt;/span&gt; ;
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;done&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;At this point you should be able to start up Maya and import and run PyQt from the script editor. You no longer need the pumpThread. Here is a test code snippet that I borrowed from here (the original had typos in it that I corrected)&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;maya.OpenMayaUI&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;mui&lt;/span&gt;
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;PyQt4.QtCore&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;PyQt4.QtGui&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;
+
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;getMayaWindow&lt;/span&gt;():
+    ptr &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mainWindow()
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;return&lt;/span&gt; sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;wrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(ptr), QObject)
+
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;Form&lt;/span&gt;(QDialog):
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;__init__&lt;/span&gt;(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;, parent&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;None&lt;/span&gt;):
+        &lt;span style=&#34;color: #007020&#34;&gt;super&lt;/span&gt;(Form, &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;__init__(parent)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setWindowTitle(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Test Dialog&amp;#39;&lt;/span&gt;)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setObjectName(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;mainUI&amp;#39;&lt;/span&gt;)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mainLayout &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QVBoxLayout(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;myButton &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QPushButton(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;myButton&amp;#39;&lt;/span&gt;)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mainLayout&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addWidget(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;myButton)
+
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;global&lt;/span&gt; app
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;global&lt;/span&gt; form
+app &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; qApp
+form &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; Form(getMayaWindow())
+form&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;show()
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;It doesn&amp;#8217;t seem like you even need the install of Qt 4.5.3 that we did at this point since we changed the links, unless you use another Qt module besides QtCore, QtGui, QtSvg, QtXml, QtOpenGL (such as QtNetwork), but this could be solved by copying over the missing libs to where Maya is expecting them. Example for copying over QtNetwork:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo cp /usr/local/Trolltech/Qt-4.5.3/lib/libQtNetwork.* 
+    /Applications/Autodesk/maya2011/Maya.app/Contents/MacOS
+sudo install_name_tool -change libQtCore.4.dylib @executable_path/QtCore 
+    /Applications/Autodesk/maya2011/Maya.app/Contents/MacOS/libQtNetwork.4.dylib
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;If you happen to have a mixed library environment like me, with more than one python lib location for code, and you see any funny errors while importing a module, just make sure that mayas python site-package is always in the front of the sys.path:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sys&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;path&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;insert(&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;/Applications/Autodesk/maya2011/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python2.6/site-packages&amp;#39;&lt;/span&gt;)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;And there you have it. PyQt4 now installed in Maya 2011 under OSX.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;References:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://images.autodesk.com/adsk/files/pyqtmaya2011.pdf&#34;&gt;http://images.autodesk.com/adsk/files/pyqtmaya2011.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://groups.google.com/group/python_inside_maya/browse_thread/thread/cd7109604407cba2/618a61ccebf8ac10?lnk=raot&amp;amp;pli=1&#34;&gt;groups.google.com/group/python_inside_maya&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://community.softimage.com/forum/autodesk-maya/python/pyqt-and-maya-pyqt-window-parented-to-maya-window/&#34;&gt;http://community.softimage.com/forum/autodesk-maya/python/pyqt-and-maya-pyqt-window-parented-to-maya-window/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>AtomSplitter source code released</title>
+      <link>http://justinfx.com/2010/10/08/atomsplitter-source-code-released/</link>
+      <pubDate>Fri, 08 Oct 2010 00:00:00 UTC</pubDate>
+      <author>Justin Israel</author>
+      <guid>http://justinfx.com/2010/10/08/atomsplitter-source-code-released/</guid>
+      <description>
+
+&lt;p&gt;We finally decided to release the source code for AtomSplitter, since we were getting some feedback that the application builds weren&amp;#8217;t 100% working on every possible system.&lt;/p&gt;
+
+&lt;h3 id=&#34;update-1:164f6ae88bdbcce4049ceec3461f4758&#34;&gt;Update #1:&lt;/h3&gt;
+
+&lt;p&gt;I have posted the AtomSplitter project on github now: &lt;a href=&#34;https://github.com/justinfx/AtomSplitter&#34;&gt;https://github.com/justinfx/AtomSplitter&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Project site:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/AtomSplitter&#34;&gt;http://redmine.justinfx.com/projects/atomsplitter&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The current version is 1.6.2,  which adds the cmivfx chatroom to a tab, and some minor bug fixes. More info:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.6&#34;&gt;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.6&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>AtomSplitter v1.6 update</title>
+      <link>http://justinfx.com/2010/08/31/208/</link>
+      <pubDate>Tue, 31 Aug 2010 00:00:00 UTC</pubDate>
+      <author>Justin Israel</author>
+      <guid>http://justinfx.com/2010/08/31/208/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2009/12/chan2fbx.jpg&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;AtomSplitter has been updated to v1.6, available through cmivfx.com&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.6&#34;&gt;AtomSplitter 1.6 &amp;#8211; cmiVFX.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Updates:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Exports Terragen .tgd scene file format&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx&#34;&gt;See the original post.&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;COMMAND LINE HELP
+
+OSX:
+AtomSplitter.app/Contents/MacOS/AtomSplitter &amp;lt;chan file&amp;gt; [out file]
+
+Linux:
+AtomSplitter &amp;lt;chan file&amp;gt; [out file]
+
+Windows:
+AtomSplitter.exe &amp;lt;chan file&amp;gt; [out file]
+
+=========================================
+
+HELP:
+$ AtomSplitter -h
+
+Usage: AtomSplitter &amp;lt;chan file&amp;gt; [out file]
+
+Options:
+-h, --help
+        show this help message and exit
+-o OBJ, --obj=OBJ
+        Optional nuke-exported pointCloud .obj file
+-f FPS, --fps=FPS
+        Set FPS rate (default 24)
+-x WIDTH, --width=WIDTH
+        Set frame width (default 2048)
+-y HEIGHT, --height=HEIGHT
+        Set frame height (default 1556)
+--filmwidth=FILMWIDTH
+        Set film aperature width in mm (default 24.576)
+--filmheight=FILMHEIGHT
+        Set film aperature height in mm (default 18.672)
+-s SCALE, --scale=SCALE
+        Scale the translation values by this amount
+-F FORMAT, --format=FORMAT
+        Output format (fbx, action, terragen)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>AtomSplitter v1.5 update</title>
+      <link>http://justinfx.com/2010/05/26/atomsplitter-v1-5-update/</link>
+      <pubDate>Wed, 26 May 2010 00:00:00 UTC</pubDate>
+      <author>Justin Israel</author>
+      <guid>http://justinfx.com/2010/05/26/atomsplitter-v1-5-update/</guid>
+      <description>&lt;p&gt;AtomSplitter has been updated to v1.5, available through cmivfx.com&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.5&#34;&gt;AtomSplitter 1.5 &amp;#8211; cmiVFX.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    Updates:
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;ul&gt;
+    &lt;li&gt;
+      Added the ability to convert point cloud data, exported from Nuke as a .obj, to be included in the fbx/action export.
+    &lt;/li&gt;
+  &lt;/ul&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/&#34;&gt;See the original post.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>AtomSplitter v1.2 update</title>
+      <link>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</link>
+      <pubDate>Tue, 11 May 2010 00:00:00 UTC</pubDate>
+      <author>Justin Israel</author>
+      <guid>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</guid>
+      <description>&lt;p&gt;AtomSplitter (chanToFbx) has been updated to v1.2, available through cmivfx.com&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.2&#34;&gt;&lt;span style=&#34;color: #00ccff;&#34;&gt;AtomSplitter 1.2 &amp;#8211; cmiVFX.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Updates:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Camera rotation order set to ZXY, which is the Nuke camera default&lt;/li&gt;
+&lt;li&gt;Fixed a bug where the FocalLength value was not being keyframed properly&lt;/li&gt;
+&lt;li&gt;Added a scene scale field, for adjusting the translation values globally.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you haven&amp;#8217;t visited &lt;a href=&#34;http://cmiVFX.com&#34; target=&#34;_blank&#34;&gt;cmiVFX.com&lt;/a&gt; before, PLEASE check them out. Chris Maynard does an amazing job rounding up top talent in the industry to create these outstanding visual fx tutorials. The information is always cutting edge.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/&#34;&gt;&lt;span style=&#34;color: #993366;&#34;&gt;See the original post.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>SouthPark: A crazy little interface. The TaskMonster.</title>
+      <link>http://justinfx.com/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</link>
+      <pubDate>Tue, 16 Mar 2010 00:00:00 UTC</pubDate>
+      <author>Justin Israel</author>
+      <guid>http://justinfx.com/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</guid>
+      <description>&lt;p&gt;I get to do a lot of interesting applications at SouthPark. This one in particular was the most challenging use of PyQt that I have experienced to date.&lt;/p&gt;
+
+&lt;p&gt;The backstory&amp;#8230;.&lt;/p&gt;
+
+&lt;p&gt;The art department wanted a tool to help them track assigned tasks, the progress, and to share media and notes associated with the tasks. Furthermore, they wanted to be able to skin the interface with custom graphics to make it their own.&lt;/p&gt;
+
+&lt;p&gt;Progress&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;During the winter break (about a month) I was able to come up with version 1.0 of TaskMonster. It was written in python, using PyQt for the UI, sqlalchemy to talk to the database, and twisted for the client/server communication. Each client app sends messages to a small server daemon which in turn tells the rest of the clients about the updates.&lt;/p&gt;
+
+&lt;p&gt;Version 2.0 Alpha&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;Tony Postma, from the art department, put together a design in Corel which I could hopefully implement in the UI.  It called for the users to be represented as little pods in a circle around the supervisor, Adrien Beard. And each user pod could be clicked and rotated into place, in order to view that persons tasks.&lt;/p&gt;
+
+&lt;p&gt;After a bunch of testing I was able to design a rotating widget that could dynamically lay out N widgets around it in a circle, track their position, and jump to any other widget. I was also able to break down the corel-&amp;gt;illustrator file, into a combination of SVG and PNG images, and skin the UI via CSS stylesheets.&lt;/p&gt;
+
+&lt;p&gt;Its currently an alpha release. I guess I need to really learn how to control the widget painting, to make it faster. Never had to do this much before.&lt;/p&gt;
+
+&lt;p&gt;What I came up with&amp;#8230;  &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2010/03/taskMonster2.jpg&#34; rel=&#34;lightbox[71]&#34;&gt;&lt;img class=&#34;alignnone size-large wp-image-72&#34; title=&#34;taskMonster2&#34; src=&#34;http://justinfx.com/wp-content/uploads/2010/03/taskMonster2-1024x724.jpg&#34; alt=&#34;&#34; width=&#34;663&#34; height=&#34;469&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe src=&#34;https://player.vimeo.com/video/143717524?byline=0&#34; 
+        width=&#34;640&#34; 
+        height=&#34;360&#34; 
+        frameborder=&#34;0&#34; 
+        webkitallowfullscreen 
+        mozallowfullscreen 
+        allowfullscreen &gt;
+&lt;/iframe&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>PyQt: Overloading/Ignoring events on widgets</title>
+      <link>http://justinfx.com/2010/03/10/pyqt-ignoring-events-on-widgets/</link>
+      <pubDate>Wed, 10 Mar 2010 00:00:00 UTC</pubDate>
+      <author>Justin Israel</author>
+      <guid>http://justinfx.com/2010/03/10/pyqt-ignoring-events-on-widgets/</guid>
+      <description>&lt;p&gt;You know when you have all these widgets laid out in your class, and you are hooking up all the connections, and you say &amp;#8220;Aw dammit I have to subclass QLabel now just so make it ignore blahEvent&amp;#8221;? You end up with all these little widget subclasses, where all they are doing is ignoring an event.&lt;/p&gt;
+
+&lt;p&gt;I noticed I was doing this a few times, in more than one of my classes, and finally got annoyed for the last time. I figured there had to be a simple way of just overloading the method on the normal object when I create an instance. Fortunately python considers everything objects and pretty much anything can be changed. So I did this:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
+myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mousePressEvent &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;lambda&lt;/span&gt; event: event&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;ignore()
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Magic.&lt;/p&gt;
+
+&lt;p&gt;I have also had to make clickable widgets, such as QLabel:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
+myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mousePressEvent &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;lambda&lt;/span&gt; event: myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;emit(SIGNAL(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;clicked&amp;quot;&lt;/span&gt;))
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Or if you had to do more than just a single statement:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;clickedEvent&lt;/span&gt;(event):
+myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;emit(SIGNAL(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;clicked&amp;quot;&lt;/span&gt;))
+&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# do other stuff&lt;/span&gt;
+&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# do stuff&lt;/span&gt;
+event&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;accept()
+myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mousePressEvent &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; clickedEvent
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;I like this better than piling up subclasses that don&amp;#8217;t do much.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>chanToFbx tool released through cmiVFX</title>
+      <link>http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/</link>
+      <pubDate>Mon, 07 Dec 2009 00:00:00 UTC</pubDate>
+      <author>Justin Israel</author>
+      <guid>http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/</guid>
+      <description>&lt;p&gt;&lt;img class=&#34;alignnone size-full wp-image-39&#34; title=&#34;chan2fbx&#34; src=&#34;http://justinfx.com/wp-content/uploads/2009/12/chan2fbx.jpg&#34; alt=&#34;chan2fbx&#34; width=&#34;201&#34; height=&#34;104&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I had received a mailing list email from cmiVFX, where Chris Maynard was challenging the community to write a tool that could convert a nuke camera .chan file to a functional FBX format. This was apparently meant to compliment the new 3d camera tracker in NukeX. So I decided to take on the challenge.&lt;/p&gt;
+
+&lt;p&gt;The tool started out as a command-line python script that would translate the chan files simple column-style output to fbx. But in testing specifically with Flame, Chris found that the fbx simply would not import all the channels properly. Thus, I was asked to integrate a solution by Georges Nakhle for converting the chan to an .action format, which is native to Flame. So with George&amp;#8217;s .action code, Chris&amp;#8217;s testing with the scaling in Flame, and the rest of my code, we seemed to have all the bases covered in getting the .chan file into a universal format.&lt;/p&gt;
+
+&lt;p&gt;Chris asked if I would wrap the tool into a GUI, to allow easier access to the few options the script provides. Using the cmiVFX.com website as a reference, I threw together a nice looking GUI in PyQt. It was fun because I got to really play around with CSS and skinning in PyQt, which is something I never really had to do before. I learned how much of a pain in the ass Palettes are, and how freaking simple the CSS route makes it to control the look or widgets.&lt;/p&gt;
+
+&lt;p&gt;Chris released it today: &lt;del&gt;&lt;a title=&#34;http://www.fxmogul.com/&#34; href=&#34;http://www.fxmogul.com/&#34; target=&#34;_blank&#34; class=&#34;broken_link&#34;&gt;&lt;a href=&#34;http://www.fxmogul.com/&#34;&gt;http://www.fxmogul.com/&lt;/a&gt;&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Update: This is no longer hosted through cmivfx, and has been posted on github, labeled &amp;#8220;AtomSplitter&amp;#8221;: &lt;a href=&#34;https://github.com/justinfx/AtomSplitter&#34;&gt;https://github.com/justinfx/AtomSplitter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Currently there is a version for both OSX and Windows. I have been having some issues packaging the code under Linux, but I just need to really sit down and figure it out. The build is kinda larger than I hoped, but thats what I get for distributing PyQt &lt;img src=&#34;http://justinfx.com/wp-includes/images/smilies/simple-smile.png&#34; alt=&#34;:-)&#34; class=&#34;wp-smiley&#34; style=&#34;height: 1em; max-height: 1em;&#34; /&gt;&lt;/p&gt;
+
+&lt;div id=&#34;attachment_41&#34; style=&#34;width: 590px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;img class=&#34;size-full wp-image-41&#34; title=&#34;chan2FBX_screen&#34; src=&#34;http://justinfx.com/wp-content/uploads/2009/12/chan2FBX_screen.jpg&#34; alt=&#34;.chan To FBX GUI (osx)&#34; width=&#34;580&#34; height=&#34;428&#34; /&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    .chan To FBX GUI (osx)
+  &lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    
+  </channel>
+</rss>

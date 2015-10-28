@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>JustinFX.com</title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://justinfx.com/tags/mac/</link>
+    <language>en-us</language>
+    <author>Justin Israel</author>
+    <copyright>2011 Justin Israel</copyright>
+    <updated>Mon, 05 Dec 2011 00:00:00 UTC</updated>
+    
+    
+    <item>
+      <title>Apple Macbooks and Unexplainable LCD Screen Flicker</title>
+      <link>http://justinfx.com/2011/12/05/apple-macbooks-and-unexplainable-lcd-flicker/</link>
+      <pubDate>Mon, 05 Dec 2011 00:00:00 UTC</pubDate>
+      <author>Justin Israel</author>
+      <guid>http://justinfx.com/2011/12/05/apple-macbooks-and-unexplainable-lcd-flicker/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2011/12/bmacbook_flicker.png&#34; alt=&#34;&#34; title=&#34;Macbook Pro flicker&#34; width=&#34;490&#34; height=&#34;268&#34; class=&#34;alignnone size-full wp-image-395&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I had just received my &lt;a href=&#34;http://www.bhphotovideo.com/c/product/756789-REG/Apple_MC721LL_A_15_4_MacBook_Pro_Notebook.html&#34;&gt;brand new MacBook Pro&lt;/a&gt; a few days ago. Amazing machine. Probably the best laptop I have ever laid my hands upon. It was the early Feb 2011 model so I got a crazy good deal. But something caught my eye that I just had to investigate&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;m a bit obsessive when it comes to small issues that I can&amp;#8217;t resolve, and this is just still bothering me. I noticed that when I smooth scroll (trackpad or smooth wheel logitech mouse) on such content as webpages, or Mail, that there is a flicker in the display of text and context. It depends on the size and orientation of the content, whether it will flicker more or less. My eyes just couldn&amp;#8217;t ignore it and I figured it couldn&amp;#8217;t possibly be normal functionality. Thus, step one of my problem solving began: Google search.&lt;/p&gt;
+
+&lt;p&gt;My search turned up a number of similar complaints to both &lt;a href=&#34;http://www.apple.com/macbookpro/&#34;&gt;MacBook Pro&lt;/a&gt; and &lt;a href=&#34;http://www.apple.com/macbookair/&#34;&gt;Air&lt;/a&gt; models, such as this discussion: &lt;a href=&#34;https://discussions.apple.com/thread/2645516?start=0&amp;amp;tstart=0&#34;&gt;https://discussions.apple.com/thread/2645516?start=0&amp;amp;tstart=0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It seemed the problem was not just limited to my specific early 2011 Macbook Pro. Suggestions ranged from resetting the PRAM (holding cmd+option+p+r for a couple of reboot cycles), to toggling the screen through display resolutions, to adjusting brightness of the display. Nothing seemed to make much of a difference to me.&lt;/p&gt;
+
+&lt;h4 id=&#34;inversion-pixel-walk:9e3cc28b2ebc6ec1cd4f8ea209bce00a&#34;&gt;Inversion (pixel-walk)&lt;/h4&gt;
+
+&lt;p&gt;Googling also turned up a reference to this site, which offers various types of LCD tests: &lt;a href=&#34;http://www.lagom.nl/lcd-test/inversion.php&#34;&gt;http://www.lagom.nl/lcd-test/inversion.php&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;According to this site, its normal to have a slight flicker in one box. And heavier flickering suggests voltage alignment issues in the LCD display. Using this test, I tried it on a number of Apple product configurations. Here is a collection of my findings:&lt;/p&gt;
+
+&lt;table class=&#34;sample&#34;&gt;
+  &lt;tr&gt;
+    &lt;th width=&#34;170&#34; scope=&#34;col&#34;&gt;
+      Device
+    &lt;/th&gt;
+    
+    &lt;th width=&#34;137&#34; scope=&#34;col&#34;&gt;
+      Display
+    &lt;/th&gt;
+    
+    &lt;th width=&#34;241&#34; scope=&#34;col&#34;&gt;
+      Scrolling
+    &lt;/th&gt;
+    
+    &lt;th width=&#34;233&#34; scope=&#34;col&#34;&gt;
+      Not Scrolling
+    &lt;/th&gt;
+  &lt;/tr&gt;
+  
+  &lt;tr&gt;
+    &lt;td&gt;
+      Macbook Pro (early 2011)
+    &lt;/td&gt;
+    
+    &lt;td&gt;
+      15&#34; 1440&amp;#215;900
+    &lt;/td&gt;
+    
+    &lt;td&gt;
+      Heavy multi-color flickering in all boxes
+    &lt;/td&gt;
+    
+    &lt;td&gt;
+      At least 2 boxes always lightly flickering
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  
+  &lt;tr&gt;
+    &lt;td&gt;
+      Mac Pro MacPro4,1 (2009)
+    &lt;/td&gt;
+    
+    &lt;td&gt;
+      24&#34; Cinema Display
+    &lt;/td&gt;
+    
+    &lt;td&gt;
+      Light amount of flickering in all boxes
+    &lt;/td&gt;
+    
+    &lt;td&gt;
+      No flicker
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  
+  &lt;tr&gt;
+    &lt;td&gt;
+      Mac Pro MacPro5,1 (2010)
+    &lt;/td&gt;
+    
+    &lt;td&gt;
+      27&#34; LED Cinema Display
+    &lt;/td&gt;
+    
+    &lt;td&gt;
+      No flicker
+    &lt;/td&gt;
+    
+    &lt;td&gt;
+      Very light flicker in box 7a
+    &lt;/td&gt;
+  &lt;/tr&gt;&lt;caption&gt; 
+  
+  &lt;a href=&#34;http://www.lagom.nl/lcd-test/inversion.php&#34;&gt;Inversion (pixel-walk)&lt;/a&gt; test results on LCD displays&lt;br /&gt; &lt;/caption&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;apple-support:9e3cc28b2ebc6ec1cd4f8ea209bce00a&#34;&gt;Apple Support&lt;/h4&gt;
+
+&lt;p&gt;After speaking to support over the phone, they suggested that I go into the store for more help. When I got to the store and started speaking with a tech at the Genius Bar, he had never heard of this issue before. But once I showed him an example on both news.google.com, and in my Apple Mail, he definitely acknowledged that its noticeable. He then went off into the back to research the issue a bit.&lt;/p&gt;
+
+&lt;p&gt;When the tech came back he said that he had found no outstanding information from Apple about this issue. A second tech even came and looked at the issue, and had no explanation for it.&lt;/p&gt;
+
+&lt;p&gt;I went around the store and checked web page scrolling on 13&amp;#8243; MacBook Airs, and 13&amp;#8243;, 15&amp;#8243;, and 17&amp;#8243; MacBook Pro models, with and without the higher resolution LCD display options. All models exhibited the same flicker during scrolling. My final recommendation from the stumped Apple tech was that it could be an issue with Lion and its rendering of fonts, or whatever, and that I could either return my laptop, or hold out for some kind of fix from Apple. Basically, no idea.&lt;/p&gt;
+
+&lt;p&gt;My question is&amp;#8230; Am I being overly sensitive to this display flicker? I figure I can&amp;#8217;t be the only one, as per the discussion lists of other users that notice the problem. Some of my friends with the same laptop said they have never really noticed until I pointed it out. I just wonder why such a fantastic laptop would exhibit this visual artifact, and whether it is something I should just accept as being normal?&lt;/p&gt;
+</description>
+    </item>
+    
+    
+  </channel>
+</rss>

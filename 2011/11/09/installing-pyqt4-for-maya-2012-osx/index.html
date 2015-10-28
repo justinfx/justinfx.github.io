@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+
+  <title> Installing PyQt4 for Maya 2012&#43; (osx)  &middot; JustinFX.com </title>
+
+  
+  <link rel="stylesheet" href="http://justinfx.com/css/poole.css">
+  <link rel="stylesheet" href="http://justinfx.com/css/syntax.css">
+  <link rel="stylesheet" href="http://justinfx.com/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="http://justinfx.com/css/fluidbox.min.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="JustinFX.com" />
+
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+
+  <script src="http://justinfx.com/js/jquery.min.js"></script>
+  <script src="http://justinfx.com/js/jquery.ba-throttle-debounce.min.js"></script>
+  <script src="http://justinfx.com/js/imagesloaded.pkgd.min.js"></script>
+  <script src="http://justinfx.com/js/jquery.fluidbox.min.js"></script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Raleway']
+      }
+    });
+
+    $(function () {
+      $('a').fluidbox();
+    })
+  </script>
+
+</head>
+
+<body>
+
+  <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1><a href="http://justinfx.com">JustinFX.com</a></h1>
+      <p class="lead">
+       Coding, FX, And Just Random Stuff 
+      </p>
+    </div>
+
+
+
+    <ul class="sidebar-nav">
+      <li><a href="http://justinfx.com/blog">Posts</a></li>
+      
+        <li><a href="/about/">About </a></li>
+      
+        <li><a href="/developer-resume/">Developer Resume </a></li>
+      
+        <li><a href="/vfx-resume/">VFX Resume </a></li>
+      
+        <li><a href="/visual-fx-demo/">Visual FX Demo </a></li>
+      
+        <li><a href="/short-films/">Short Films </a></li>
+      
+      <br/>
+      
+    </ul>
+      <a href="mailto:justinisrael@gmail.com"><i class="fa fa-envelope-o"></i></a>&nbsp;
+      <a href="https://www.google.com/&#43;JustinIsrael"><i class="fa fa-google-plus"></i></a>&nbsp;
+      
+      <a href="http://www.linkedin.com/in/justinisrael"><i class="fa fa-linkedin-square"></i></a>&nbsp;
+      <a href="https://github.com/justinfx"><i class="fa fa-github-square"></i></a>&nbsp;
+      <a href="http://stackoverflow.com/users/496445/jdi"><i class="fa fa-stack-overflow"></i></a>&nbsp;
+      <a href="https://www.facebook.com/justinisrael"><i class="fa fa-facebook-square"></i></a>&nbsp;
+      <a href="http://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
+
+    <p class="footnote">powered by <a href="http://hugo.spf13.com">Hugo</a> <br/>
+    &copy; 2015 Justin Israel. All rights reserved.</p>
+    
+  </div>
+</div>
+
+
+  <div class="content container">
+    <div class="post">
+    <h1 class="post-title">Installing PyQt4 for Maya 2012&#43; (osx)</h1>
+    <span class="post-date">Nov 10, 2011</span>
+    
+    <p>This is a follow up post to my previous one on <a href="/2011/01/07/installing-pyqt-for-maya-2011-osx/">Installing PyQt4 for Maya 2011</a></p>
+
+<p>Recently while putting together my next video tutorial for Python for Maya, I came to a section where I wanted to demo PyQt4 in Maya2012. But I was concerned that viewers would have to go through the complicated steps of building PyQt4. I noticed that other people have made available precompiled PyQt installers for windows (<a href="http://blarg.robertkist.com/?p=51" target="_blank" class="broken_link">here</a>) but I could not find any for OSX or linux. So I decided to put together a build.</p>
+
+<p>I created a new project on github called MyQt4</p>
+
+<p><a href="https://github.com/justinfx/MyQt4" target="_blank"><a href="https://github.com/justinfx/MyQt4">https://github.com/justinfx/MyQt4</a></a></p>
+
+<p>Its a Makefile for completely downloading and building PyQt4 for maya, and generating a .pkg installer. Hopefully someone can contribute improvements since I dont have a ton of experience writing makefiles, and also that someone might create a linux version.</p>
+
+<p>Here is a link to the latest pkg build:</p>
+
+<p><strong>Snow Leopard: </strong></p>
+
+<ul>
+<li>Maya2011: <a href="https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.7.4-maya2011-x64-osx-10.6.pkg" target="_blank">MyQt4.7.4-maya2011-x64-osx-10.6.pkg</a></li>
+<li>Maya2012: <a href="https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.9.4-maya2012-x64-osx-10.6.pkg" target="_blank">MyQt4.9.4-maya2012-x64-osx-10.6.pkg</a></li>
+<li>Maya2013: <a href="https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.9.4-maya2013-x64-osx-10.6.pkg" target="_blank">MyQt4.9.4-maya2013-x64-osx-10.6.pkg</a></li>
+</ul>
+
+<p><strong>Lion:  </strong></p>
+
+<ul>
+<li>Maya2012: <a href="http://dl.dropbox.com/u/34613220/MyQt4/MyQt4.8.6-maya2012-x64-osx-10.7.pkg" target="_blank">MyQt4.8.6-maya2012-x64-osx-10.7.pkg</a>   (Thanks <a href="https://github.com/cgrebeld" target="_blank">Chris</a>!)</li>
+<li>Maya2013: <a href="http://dl.dropbox.com/u/34613220/MyQt4/MyQt4.8.6-maya2013-x64-osx-10.7.pkg">MyQt4.8.6-maya2013-x64-osx-10.7.pkg</a></li>
+</ul>
+
+<p><strong>Mountain Lion:</strong></p>
+
+<ul>
+<li><span style="line-height: 13px;">Maya2011:<a href="http://infixlabs.com/MyQt/MyQt4.7.4-maya2011-x64-osx-20130114.pkg"> MyQt4.7.4-maya2011<wbr />-x64-osx-20130114.pkg</a></span></li>
+</ul>
+
+<p>Here are builds other people have made:</p>
+
+<ul>
+<li>Win 32bit: <a href="http://blarg.robertkist.com/?p=51">http://blarg.robertkist.com/?p=51</a>{.broken_link}</li>
+<li>Win 64bit:  <a href="http://nathanhorne.com/?p=322">http://nathanhorne.com/?p=322  </a></li>
+<li>Win 7 64bit Maya 2013: <a href="https://www.box.com/s/1db3b0c903059ac89fc4">https://www.box.com/s/1db3b0c903059ac89fc4</a></li>
+<li>Linux:  <a href="http://www.kurianos.com/wordpress/?p=551">http://www.kurianos.com/wordpress/?p=551</a></li>
+</ul>
+
+    
+
+     
+	
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost") 
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'justinfx';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments powered by <a href="http://disqus.com/?ref_noscript">Disqus.</a></noscript>
+</div>
+</div> 
+
+</body>w
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+
+  <title> Tutorial: PyQt4 UI Development for Maya  &middot; JustinFX.com </title>
+
+  
+  <link rel="stylesheet" href="http://justinfx.com/css/poole.css">
+  <link rel="stylesheet" href="http://justinfx.com/css/syntax.css">
+  <link rel="stylesheet" href="http://justinfx.com/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="http://justinfx.com/css/fluidbox.min.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="JustinFX.com" />
+
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+
+  <script src="http://justinfx.com/js/jquery.min.js"></script>
+  <script src="http://justinfx.com/js/jquery.ba-throttle-debounce.min.js"></script>
+  <script src="http://justinfx.com/js/imagesloaded.pkgd.min.js"></script>
+  <script src="http://justinfx.com/js/jquery.fluidbox.min.js"></script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Raleway']
+      }
+    });
+
+    $(function () {
+      $('a').fluidbox();
+    })
+  </script>
+
+</head>
+
+<body>
+
+  <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1><a href="http://justinfx.com">JustinFX.com</a></h1>
+      <p class="lead">
+       Coding, FX, And Just Random Stuff 
+      </p>
+    </div>
+
+
+
+    <ul class="sidebar-nav">
+      <li><a href="http://justinfx.com/blog">Posts</a></li>
+      
+        <li><a href="/about/">About </a></li>
+      
+        <li><a href="/developer-resume/">Developer Resume </a></li>
+      
+        <li><a href="/vfx-resume/">VFX Resume </a></li>
+      
+        <li><a href="/visual-fx-demo/">Visual FX Demo </a></li>
+      
+        <li><a href="/short-films/">Short Films </a></li>
+      
+      <br/>
+      
+    </ul>
+      <a href="mailto:justinisrael@gmail.com"><i class="fa fa-envelope-o"></i></a>&nbsp;
+      <a href="https://www.google.com/&#43;JustinIsrael"><i class="fa fa-google-plus"></i></a>&nbsp;
+      
+      <a href="http://www.linkedin.com/in/justinisrael"><i class="fa fa-linkedin-square"></i></a>&nbsp;
+      <a href="https://github.com/justinfx"><i class="fa fa-github-square"></i></a>&nbsp;
+      <a href="http://stackoverflow.com/users/496445/jdi"><i class="fa fa-stack-overflow"></i></a>&nbsp;
+      <a href="https://www.facebook.com/justinisrael"><i class="fa fa-facebook-square"></i></a>&nbsp;
+      <a href="http://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
+
+    <p class="footnote">powered by <a href="http://hugo.spf13.com">Hugo</a> <br/>
+    &copy; 2015 Justin Israel. All rights reserved.</p>
+    
+  </div>
+</div>
+
+
+  <div class="content container">
+    <div class="post">
+    <h1 class="post-title">Tutorial: PyQt4 UI Development for Maya</h1>
+    <span class="post-date">Oct 12, 2012</span>
+    
+    
+
+<h2 id="img-class-alignnone-size-full-wp-image-525-title-pyqt4-for-maya-src-wp-content-uploads-2012-10-1350054625-master-jpeg-alt-width-800-height-450-http-www-cmivfx-com-tutorials-view-498-pyqt4-ui-development-for-maya:0b27a6f46a58e7008385b6231f12d6d0"><a href="http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya"><img class="alignnone size-full wp-image-525" title="PyQt4 for Maya" src="/wp-content/uploads/2012/10/1350054625_Master.jpeg" alt="" width="800" height="450" /></a></h2>
+
+<h1 id="pyqt4-ui-development-for-maya:0b27a6f46a58e7008385b6231f12d6d0">PyQt4 UI Development for Maya</h1>
+
+<p>Just released my 3rd python-based online training video through <a href="https://cmivfx.com/store/498-pyqt4+ui+development+for+maya">cmiVFX.com</a></p>
+
+<h2 id="introduction:0b27a6f46a58e7008385b6231f12d6d0"><strong>Introduction</strong></h2>
+
+<div>
+  This tutorial is about learning PyQt4 python bindings for the Qt Framework, and how to introduce new UI elements to Maya as a platform.
+</div>
+
+<div>
+  We discuss what comprises a &#8220;Framework&#8221; and a &#8220;GUI Framework&#8221;, and how Qt and PyQt4 work together.
+</div>
+
+<div>
+</div>
+
+<p>&nbsp;</p>
+
+<h3 id="getting-started-with-pyqt4:0b27a6f46a58e7008385b6231f12d6d0"><strong>Getting Started With PyQt4</strong></h3>
+
+<div>
+  There are multiple ways of getting a working installation of PyQt4, both for the general system and for Maya. We look into these approaches to get your system up and running to begin working with PyQt4!
+</div>
+
+<div>
+  We also talk about what is included, such as command line tools and applications, tips on how to test and learn the code, and how to structure a project.
+</div>
+
+<div>
+</div>
+
+<p>&nbsp;</p>
+
+<h3 id="pyqt4-fundamentals:0b27a6f46a58e7008385b6231f12d6d0"><strong>PyQt4 Fundamentals</strong></h3>
+
+<div>
+  Lets get crackin&#8217; and learn the basics!
+</div>
+
+<div>
+  • What is a QObject? What is a QWidget? Common PyQt4 classes are explained in detail
+</div>
+
+<div>
+  • Working with the Qt Designer application, to build a UI visually
+</div>
+
+<div>
+  • Layouts: Making widgets resize elegantly and stay organized in your design
+</div>
+
+<div>
+  • Coordinate space: How do widgets transform in your 2D screen space?
+</div>
+
+<div>
+  • QApplication and the Qt Event Loop: The engine that runs your UI
+</div>
+
+<div>
+  • Events, Signals, and Slots: How components communicate changes and how the application can respond to changes to make it dynamic
+</div>
+
+<div>
+</div>
+
+<p>&nbsp;</p>
+
+<h3 id="general-examples:0b27a6f46a58e7008385b6231f12d6d0"><strong>General Examples</strong></h3>
+
+<div>
+  With an understanding of the framework components, we can begin working with fully functional stand-alone examples.
+</div>
+
+<div>
+  • Common PyQt4 app template
+</div>
+
+<div>
+  • Subclassing Widgets: Creating custom functionality to the existing classes provided by PyQt4
+</div>
+
+<div>
+  • Dialogs: Raising dialog windows above existing windows, Modal vs Non-modal, and creating forms. We look at different ways to validate the data provided by the user, to these dialog forms.
+</div>
+
+<div>
+</div>
+
+<p>&nbsp;</p>
+
+<h3 id="pyqt4-and-maya-introduction:0b27a6f46a58e7008385b6231f12d6d0"><strong>PyQt4 And Maya Introduction</strong></h3>
+
+<div>
+  Finally, some Maya action! Maya has a slightly different approach to using PyQt4…
+</div>
+
+<div>
+  • How does the QApplication and event loop work?
+</div>
+
+<div>
+  • Common Maya PyQt4 app template
+</div>
+
+<div>
+  • Looking at the Maya API&#8217;s MQtUtil class
+</div>
+
+<div>
+  • The sip module: Helping us translate between Maya&#8217;s Qt and our own PyQt4 code
+</div>
+
+<div>
+</div>
+
+<p>&nbsp;</p>
+
+<h3 id="replicating-maya-8217-s-ui-components:0b27a6f46a58e7008385b6231f12d6d0"><strong>Replicating Maya&#8217;s UI Components</strong></h3>
+
+<div>
+  What better way to see examples of creating UI for Maya than to replicate some existing functionality? This gives us the opportunity expand with custom functionality
+</div>
+
+<div>
+  In this chapter we will take two different UI components in Maya, and do a basic custom version of our own, and show to how link them up to Maya&#8217;s own callbacks.
+</div>
+
+<div>
+</div>
+
+<div>
+  <strong>Some Features Of This Chapter Include</strong>
+</div>
+
+<div>
+  • The QTableWidget
+</div>
+
+<div>
+  • Model / View separation with QTreeView
+</div>
+
+<div>
+  • Docking windows into the Maya interface
+</div>
+
+<div>
+  • Mixing together PyQt4, the Maya API, Maya commands, and callbacks
+</div>
+
+<div>
+  • Sorting model data
+</div>
+
+<div>
+</div>
+
+<p>&nbsp;</p>
+
+<h3 id="customizations:0b27a6f46a58e7008385b6231f12d6d0"><strong>Customizations</strong></h3>
+
+<div>
+  A button can be a button, and a slider might look alright in its stock form, but sometimes we want to customize the look of our widgets. This chapter introduces multiple ways of achieving custom looks to our components
+</div>
+
+<div>
+  • Stylin&#8217; Stylesheets: Use CSS-like syntax for applying style sheets to widgets
+</div>
+
+<div>
+  • Painting By … Paint events: For even more control, we can tell a widget exactly how to draw itself on the screen. We will look at two different examples of how to use custom painting.
+</div>
+
+<p>&nbsp;</p>
+
+<h3 id="span-style-color-ff6600-previous-cmivfx-tutorials-span:0b27a6f46a58e7008385b6231f12d6d0"><span style="color: #ff6600;">Previous cmiVFX tutorials:</span></h3>
+
+<ul>
+<li><a href="https://cmivfx.com/store/320-python+introduction+vol+01+-+maya">Intro to Python for Maya &#8211; Vol 1</a></li>
+<li><a href="https://cmivfx.com/store/328-python-for-maya-vol-02">Python for Maya  &#8211; Vol 2</a></li>
+</ul>
+
+    
+
+     
+	
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost") 
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'justinfx';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments powered by <a href="http://disqus.com/?ref_noscript">Disqus.</a></noscript>
+</div>
+</div> 
+
+</body>w
+</html>

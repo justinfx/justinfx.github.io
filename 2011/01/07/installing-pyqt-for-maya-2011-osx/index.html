@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+
+  <title> Installing PyQt for maya 2011 (OSX)  &middot; JustinFX.com </title>
+
+  
+  <link rel="stylesheet" href="http://justinfx.com/css/poole.css">
+  <link rel="stylesheet" href="http://justinfx.com/css/syntax.css">
+  <link rel="stylesheet" href="http://justinfx.com/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="http://justinfx.com/css/fluidbox.min.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="JustinFX.com" />
+
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+
+  <script src="http://justinfx.com/js/jquery.min.js"></script>
+  <script src="http://justinfx.com/js/jquery.ba-throttle-debounce.min.js"></script>
+  <script src="http://justinfx.com/js/imagesloaded.pkgd.min.js"></script>
+  <script src="http://justinfx.com/js/jquery.fluidbox.min.js"></script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Raleway']
+      }
+    });
+
+    $(function () {
+      $('a').fluidbox();
+    })
+  </script>
+
+</head>
+
+<body>
+
+  <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1><a href="http://justinfx.com">JustinFX.com</a></h1>
+      <p class="lead">
+       Coding, FX, And Just Random Stuff 
+      </p>
+    </div>
+
+
+
+    <ul class="sidebar-nav">
+      <li><a href="http://justinfx.com/blog">Posts</a></li>
+      
+        <li><a href="/about/">About </a></li>
+      
+        <li><a href="/developer-resume/">Developer Resume </a></li>
+      
+        <li><a href="/vfx-resume/">VFX Resume </a></li>
+      
+        <li><a href="/visual-fx-demo/">Visual FX Demo </a></li>
+      
+        <li><a href="/short-films/">Short Films </a></li>
+      
+      <br/>
+      
+    </ul>
+      <a href="mailto:justinisrael@gmail.com"><i class="fa fa-envelope-o"></i></a>&nbsp;
+      <a href="https://www.google.com/&#43;JustinIsrael"><i class="fa fa-google-plus"></i></a>&nbsp;
+      
+      <a href="http://www.linkedin.com/in/justinisrael"><i class="fa fa-linkedin-square"></i></a>&nbsp;
+      <a href="https://github.com/justinfx"><i class="fa fa-github-square"></i></a>&nbsp;
+      <a href="http://stackoverflow.com/users/496445/jdi"><i class="fa fa-stack-overflow"></i></a>&nbsp;
+      <a href="https://www.facebook.com/justinisrael"><i class="fa fa-facebook-square"></i></a>&nbsp;
+      <a href="http://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
+
+    <p class="footnote">powered by <a href="http://hugo.spf13.com">Hugo</a> <br/>
+    &copy; 2015 Justin Israel. All rights reserved.</p>
+    
+  </div>
+</div>
+
+
+  <div class="content container">
+    <div class="post">
+    <h1 class="post-title">Installing PyQt for maya 2011 (OSX)</h1>
+    <span class="post-date">Jan 8, 2011</span>
+    
+    
+
+<h4 id="update:a3a52b14c80229d1dc2a6829c906b500">Update:</h4>
+
+<p>I am now hosting a built package for Maya2011: <a href="https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.7.4-maya2011-x64-osx-10.6.pkg">MyQt4.7.4-maya2011-x64-osx-10.6.pkg</a> And for Maya 2012+, see: <a href="/2011/11/09/installing-pyqt4-for-maya-2012-osx/">Installing pyqt4 for maya2012</a></p>
+
+<hr />
+
+<p>Personally, when trying to run PyQt from within Maya 2009 / 2010 using the pumpThread method, I never had much luck. The best I ever got was the ability to bring up a dialog but not without locking up the UI, even though the pumpThread tool is meant to address that.</p>
+
+<p>Anyways, when I found out Maya 2011 was rewritten based on Qt for the UI, I was really stoked. I saw the example video of being able to design a ui file in Designer, and just directly open it in a maya script, and all I could think about was designing Qt GUIs so much more easily now. Turns out that Maya 2011 didn&#8217;t actually ship with PyQt included for licensing reasons I&#8217;m sure. But it included documentation on how one could go about building PyQt for maya. Unfortunately I had tons of issues that caused maya to just crash when importing PyQt.</p>
+
+<p>What I finally figured out was a mish-mash of information from the maya documention, and different forums and user groups. So I decided to make this easier on anyone having the same problems as I did, and just collect that information into one place. This process is for OSX. I&#8217;m sure most of it is probably still relevant to linux or win, except for the last parts with &#8216;install_name_tool&#8217;. You would just need to make sure to find the right Qt/PyQt/SIP packages for your OS.</p>
+
+<h5 id="building-pyqt4-for-maya-2011-on-osx:a3a52b14c80229d1dc2a6829c906b500">Building PyQt4 for Maya 2011 on OSX</h5>
+
+<hr />
+
+<h6 id="update-for-maya-2012:a3a52b14c80229d1dc2a6829c906b500"><em><strong>Update for Maya 2012</strong></em></h6>
+
+<p>While Maya uses newer versions, it seems the versions from the 2011 install still work. But here they are anyways incase you want the newer version for 2012:</p>
+
+<ul>
+<li>Autodesk modified <a href="http://images.autodesk.com/adsk/files/Qt-4.7.1-Modified_for_Maya.zip">qt 4.7.1</a></li>
+<li><a href="/wp-content/uploads/2011/01/sip-4.12.4.tar.gz">sip 4.12.4</a></li>
+<li><a href="https://dl.dropbox.com/u/34613220/MyQt4/src/PyQt-mac-gpl-4.8.6.tar.gz">pyqt 4.8.6</a></li>
+</ul>
+
+<hr />
+
+<p>Make sure you have downloaded and installed the latest XCode from Apple. Its also included on your OSX installation disc.</p>
+
+<h6 id="qt-maya-has-a-specific-version-of-qt-built-into-it-this-is-qt-4-5-3:a3a52b14c80229d1dc2a6829c906b500">Qt: Maya has a specific version of Qt built into it. This is Qt 4.5.3.</h6>
+
+<ol>
+<li>Download:  <a href="https://dl.dropbox.com/u/34613220/MyQt4/src/qt-mac-opensource-src-4.5.3.tar.gz">qt-mac-opensource-src-4.5.3.tar.gz</a></li>
+
+<li><p>Extract: <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">tar zxvf qt-mac-opensource-src-4.5.3.tar.gz
+<span style="color: #007020">cd </span>qt-mac-opensource-src-4.5.3
+</pre></div>
+</p></li>
+
+<li><p>Build and install: <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">./configure -cocoa -arch x86_64 -debug-and-release <span style="color: #4070a0; font-weight: bold">\</span>
+  -no-phonon -no-phonon-backend -no-qt3support <span style="color: #4070a0; font-weight: bold">\</span>
+  -no-webkit -nomake docs -nomake examples -nomake demos <span style="color: #4070a0; font-weight: bold">\</span>
+  -nomake translations -no-rpath -no-framework
+make -j 8
+sudo make install
+</pre></div>
+</p></li>
+</ol>
+
+<h6 id="sip-the-maya-docs-recommend-sip-version-4-10:a3a52b14c80229d1dc2a6829c906b500">SIP: The maya docs recommend sip version 4.10</h6>
+
+<ol>
+<li>Download this specific SIP:   <a href="/wp-content/uploads/2011/01/sip-4.10.tar.gz">sip-4.10.tar.gz</a></li>
+
+<li><p>Extract: <pre class="theme:twilight top-margin:20 bottom-margin:20 toolbar-overlay:false striped:false nums:false lang:sh decode:true">tar zxvf sip-4.10.tar.gz
+cd sip-4.10</pre></p></li>
+
+<li><p>Build and install: <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy <span style="color: #4070a0; font-weight: bold">\</span>
+  configure.py --arch<span style="color: #666666">=</span>x86_64
+make -j 8
+sudo make install
+</pre></div>
+</p></li>
+</ol>
+
+<h6 id="pyqt4-the-maya-docs-suggest-pyqt-4-7:a3a52b14c80229d1dc2a6829c906b500">PyQt4: The maya docs suggest PyQt 4.7</h6>
+
+<ol>
+<li>Download this specific PyQt: <a href="https://dl.dropbox.com/u/34613220/MyQt4/src/PyQt-mac-gpl-4.7.4.tar.gz">PyQt-mac-gpl-4.7.4.tar.gz</a></li>
+
+<li><p>Extract: <pre class="striped:false nums:false lang:sh decode:true">tar zxvf PyQt-mac-gpl-4.7.3.tar.gz
+cd PyQt-mac-gpl-4.7.3</pre></p></li>
+
+<li><p>Set up some environment variables before building: <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020">export </span><span style="color: #bb60d5">QTDIR</span><span style="color: #666666">=</span>/usr/local/Trolltech/Qt-4.5.3
+<span style="color: #007020">export </span><span style="color: #bb60d5">PATH</span><span style="color: #666666">=</span>/usr/local/Trolltech/Qt-4.5.3/bin:<span style="color: #bb60d5">$PATH</span>
+<span style="color: #007020">export </span><span style="color: #bb60d5">QMAKESPEC</span><span style="color: #666666">=</span>/usr/local/Trolltech/Qt-4.5.3/mkspecs/macx-g++
+<span style="color: #007020">export </span><span style="color: #bb60d5">DYLD_LIBRARY_PATH</span><span style="color: #666666">=</span>/usr/local/Trolltech/Qt-4.5.3/lib
+</pre></div>
+</p></li>
+
+<li><p>Build and install: <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy <span style="color: #4070a0; font-weight: bold">\</span>
+  configure.py <span style="color: #4070a0; font-weight: bold">\</span>
+  <span style="color: #bb60d5">LIBDIR_QT</span><span style="color: #666666">=</span>/usr/local/Trolltech/Qt‐4.5.3/lib <span style="color: #4070a0; font-weight: bold">\</span>
+  <span style="color: #bb60d5">INCDIR_QT</span><span style="color: #666666">=</span>/usr/local/Trolltech/Qt‐4.5.3/include <span style="color: #4070a0; font-weight: bold">\</span>
+  <span style="color: #bb60d5">MOC</span><span style="color: #666666">=</span>/usr/local/Trolltech/Qt‐4.5.3/bin/moc <span style="color: #4070a0; font-weight: bold">\</span>
+  -w --no-designer-plugin
+make -j 8
+sudo make install
+</pre></div>
+</p></li>
+
+<li><p>PyQt4 will now be installed into Maya&#8217;s python site-packages, BUT will be linked against the wrong Qt binaries. The maya docs have an annoying multi step set of commands but they don&#8217;t copy/paste nicely, so here is a for-loop you can use: <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020; font-weight: bold">for</span> mod in Core Gui Svg OpenGL Xml
+<span style="color: #007020; font-weight: bold">do</span> 
+  sudo find /Applications/Autodesk/maya2011/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python2.6/site-packages/PyQt4 -name <span style="color: #4070a0">&quot;*so&quot;</span> <span style="color: #4070a0; font-weight: bold">\</span>
+  -exec install_name_tool -change libQt<span style="color: #70a0d0; font-style: italic">${</span><span style="color: #bb60d5">mod</span><span style="color: #70a0d0; font-style: italic">}</span>.4.dylib @executable_path/Qt<span style="color: #70a0d0; font-style: italic">${</span><span style="color: #bb60d5">mod</span><span style="color: #70a0d0; font-style: italic">}</span> <span style="color: #666666">{}</span> ;
+<span style="color: #007020; font-weight: bold">done</span>
+</pre></div>
+</p></li>
+</ol>
+
+<p>At this point you should be able to start up Maya and import and run PyQt from the script editor. You no longer need the pumpThread. Here is a test code snippet that I borrowed from here (the original had typos in it that I corrected)</p>
+
+<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">maya.OpenMayaUI</span> <span style="color: #007020; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">mui</span>
+<span style="color: #007020; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">PyQt4.QtCore</span> <span style="color: #007020; font-weight: bold">import</span> <span style="color: #666666">*</span>
+<span style="color: #007020; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">PyQt4.QtGui</span> <span style="color: #007020; font-weight: bold">import</span> <span style="color: #666666">*</span>
+
+<span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">getMayaWindow</span>():
+    ptr <span style="color: #666666">=</span> mui<span style="color: #666666">.</span>MQtUtil<span style="color: #666666">.</span>mainWindow()
+    <span style="color: #007020; font-weight: bold">return</span> sip<span style="color: #666666">.</span>wrapinstance(<span style="color: #007020">long</span>(ptr), QObject)
+
+<span style="color: #007020; font-weight: bold">class</span> <span style="color: #0e84b5; font-weight: bold">Form</span>(QDialog):
+    <span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">__init__</span>(<span style="color: #007020">self</span>, parent<span style="color: #666666">=</span><span style="color: #007020">None</span>):
+        <span style="color: #007020">super</span>(Form, <span style="color: #007020">self</span>)<span style="color: #666666">.</span>__init__(parent)
+        <span style="color: #007020">self</span><span style="color: #666666">.</span>setWindowTitle(<span style="color: #4070a0">&#39;Test Dialog&#39;</span>)
+        <span style="color: #007020">self</span><span style="color: #666666">.</span>setObjectName(<span style="color: #4070a0">&#39;mainUI&#39;</span>)
+        <span style="color: #007020">self</span><span style="color: #666666">.</span>mainLayout <span style="color: #666666">=</span> QVBoxLayout(<span style="color: #007020">self</span>)
+        <span style="color: #007020">self</span><span style="color: #666666">.</span>myButton <span style="color: #666666">=</span> QPushButton(<span style="color: #4070a0">&#39;myButton&#39;</span>)
+        <span style="color: #007020">self</span><span style="color: #666666">.</span>mainLayout<span style="color: #666666">.</span>addWidget(<span style="color: #007020">self</span><span style="color: #666666">.</span>myButton)
+
+<span style="color: #007020; font-weight: bold">global</span> app
+<span style="color: #007020; font-weight: bold">global</span> form
+app <span style="color: #666666">=</span> qApp
+form <span style="color: #666666">=</span> Form(getMayaWindow())
+form<span style="color: #666666">.</span>show()
+</pre></div>
+</p>
+
+<p>It doesn&#8217;t seem like you even need the install of Qt 4.5.3 that we did at this point since we changed the links, unless you use another Qt module besides QtCore, QtGui, QtSvg, QtXml, QtOpenGL (such as QtNetwork), but this could be solved by copying over the missing libs to where Maya is expecting them. Example for copying over QtNetwork:</p>
+
+<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">sudo cp /usr/local/Trolltech/Qt-4.5.3/lib/libQtNetwork.* 
+    /Applications/Autodesk/maya2011/Maya.app/Contents/MacOS
+sudo install_name_tool -change libQtCore.4.dylib @executable_path/QtCore 
+    /Applications/Autodesk/maya2011/Maya.app/Contents/MacOS/libQtNetwork.4.dylib
+</pre></div>
+</p>
+
+<p>If you happen to have a mixed library environment like me, with more than one python lib location for code, and you see any funny errors while importing a module, just make sure that mayas python site-package is always in the front of the sys.path:</p>
+
+<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">sys<span style="color: #666666">.</span>path<span style="color: #666666">.</span>insert(<span style="color: #40a070">0</span>,<span style="color: #4070a0">&#39;/Applications/Autodesk/maya2011/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python2.6/site-packages&#39;</span>)
+</pre></div>
+</p>
+
+<p>And there you have it. PyQt4 now installed in Maya 2011 under OSX.</p>
+
+<hr />
+
+<p>References:</p>
+
+<ul>
+<li><a href="http://images.autodesk.com/adsk/files/pyqtmaya2011.pdf">http://images.autodesk.com/adsk/files/pyqtmaya2011.pdf</a></li>
+<li><a href="http://groups.google.com/group/python_inside_maya/browse_thread/thread/cd7109604407cba2/618a61ccebf8ac10?lnk=raot&amp;pli=1">groups.google.com/group/python_inside_maya</a></li>
+<li><a href="http://community.softimage.com/forum/autodesk-maya/python/pyqt-and-maya-pyqt-window-parented-to-maya-window/">http://community.softimage.com/forum/autodesk-maya/python/pyqt-and-maya-pyqt-window-parented-to-maya-window/</a></li>
+</ul>
+
+    
+
+     
+	
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost") 
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'justinfx';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments powered by <a href="http://disqus.com/?ref_noscript">Disqus.</a></noscript>
+</div>
+</div> 
+
+</body>w
+</html>

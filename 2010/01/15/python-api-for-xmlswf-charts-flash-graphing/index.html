@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+
+  <title> Python API for XML/SWF Charts (Flash Graphing)  &middot; JustinFX.com </title>
+
+  
+  <link rel="stylesheet" href="http://justinfx.com/css/poole.css">
+  <link rel="stylesheet" href="http://justinfx.com/css/syntax.css">
+  <link rel="stylesheet" href="http://justinfx.com/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="http://justinfx.com/css/fluidbox.min.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="JustinFX.com" />
+
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+
+  <script src="http://justinfx.com/js/jquery.min.js"></script>
+  <script src="http://justinfx.com/js/jquery.ba-throttle-debounce.min.js"></script>
+  <script src="http://justinfx.com/js/imagesloaded.pkgd.min.js"></script>
+  <script src="http://justinfx.com/js/jquery.fluidbox.min.js"></script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Raleway']
+      }
+    });
+
+    $(function () {
+      $('a').fluidbox();
+    })
+  </script>
+
+</head>
+
+<body>
+
+  <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1><a href="http://justinfx.com">JustinFX.com</a></h1>
+      <p class="lead">
+       Coding, FX, And Just Random Stuff 
+      </p>
+    </div>
+
+
+
+    <ul class="sidebar-nav">
+      <li><a href="http://justinfx.com/blog">Posts</a></li>
+      
+        <li><a href="/about/">About </a></li>
+      
+        <li><a href="/developer-resume/">Developer Resume </a></li>
+      
+        <li><a href="/vfx-resume/">VFX Resume </a></li>
+      
+        <li><a href="/visual-fx-demo/">Visual FX Demo </a></li>
+      
+        <li><a href="/short-films/">Short Films </a></li>
+      
+      <br/>
+      
+    </ul>
+      <a href="mailto:justinisrael@gmail.com"><i class="fa fa-envelope-o"></i></a>&nbsp;
+      <a href="https://www.google.com/&#43;JustinIsrael"><i class="fa fa-google-plus"></i></a>&nbsp;
+      
+      <a href="http://www.linkedin.com/in/justinisrael"><i class="fa fa-linkedin-square"></i></a>&nbsp;
+      <a href="https://github.com/justinfx"><i class="fa fa-github-square"></i></a>&nbsp;
+      <a href="http://stackoverflow.com/users/496445/jdi"><i class="fa fa-stack-overflow"></i></a>&nbsp;
+      <a href="https://www.facebook.com/justinisrael"><i class="fa fa-facebook-square"></i></a>&nbsp;
+      <a href="http://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
+
+    <p class="footnote">powered by <a href="http://hugo.spf13.com">Hugo</a> <br/>
+    &copy; 2015 Justin Israel. All rights reserved.</p>
+    
+  </div>
+</div>
+
+
+  <div class="content container">
+    <div class="post">
+    <h1 class="post-title">Python API for XML/SWF Charts (Flash Graphing)</h1>
+    <span class="post-date">Jan 15, 2010</span>
+    
+    
+
+<p>I had a project where I was designing a statistics reporting site, to track production stats. I wanted to have really nice graphs that pulled from the database and were somewhat live and interactive. XML/SWF Charts is this awesome flash-based app that lets you embed graphs in your pages which receive their data from XML. There are tons of graph types and ways to customize the look.</p>
+
+<p><a href="http://www.maani.us/xml_charts/index.php"><img class="alignnone size-full wp-image-59" title="graphs_example" src="/wp-content/uploads/2010/01/graphs_example.jpg" alt="" width="754" height="112" /></a></p>
+
+<p><a href="http://www.maani.us/xml_charts/index.php">http://www.maani.us/xml_charts/index.php</a></p>
+
+<p>So, the thing is&#8230; I wanted to use Django for the site. I decided to write a python module that wraps around the API for SWF charts, so that the XML could easily be generated for me after just setting all my parameters. Thought I might post this here for any python fans wanting nice looking graphs in their site.</p>
+
+<p>Really, this doesn&#8217;t just apply to django. You could just call out from anything to python code that will generate your XML for you.</p>
+
+<p>Example:</p>
+
+<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">chart <span style="color: #666666">=</span> SwfChart()
+
+<span style="color: #60a0b0; font-style: italic"># the data</span>
+chart<span style="color: #666666">.</span>addRow( <span style="color: #4070a0">&#39;Person A&#39;</span>, <span style="color: #40a070">1</span>, <span style="color: #40a070">10</span>, <span style="color: #40a070">5.5</span> )
+chart<span style="color: #666666">.</span>addRow( <span style="color: #4070a0">&#39;Person B&#39;</span>, <span style="color: #40a070">6</span>, <span style="color: #40a070">4.45</span>, <span style="color: #40a070">8</span> )
+chart<span style="color: #666666">.</span>addColumnLabel( <span style="color: #4070a0">&#39;Day1&#39;</span>, <span style="color: #4070a0">&#39;Day2&#39;</span>, <span style="color: #4070a0">&#39;Day3&#39;</span> )
+
+<span style="color: #60a0b0; font-style: italic"># Extra graph settings</span>
+chart<span style="color: #666666">.</span>addFilter(<span style="color: #4070a0">&#39;shadow&#39;</span>, <span style="color: #4070a0">&#39;low&#39;</span>, distance<span style="color: #666666">=</span><span style="color: #40a070">2</span>, angle<span style="color: #666666">=</span><span style="color: #40a070">45</span>, alpha<span style="color: #666666">=</span><span style="color: #40a070">35</span>, blurX<span style="color: #666666">=</span><span style="color: #40a070">5</span>, blurY<span style="color: #666666">=</span><span style="color: #40a070">5</span>)
+chart<span style="color: #666666">.</span>addFilter(<span style="color: #4070a0">&#39;shadow&#39;</span>, <span style="color: #4070a0">&#39;high&#39;</span>, distance<span style="color: #666666">=</span><span style="color: #40a070">3</span>, angle<span style="color: #666666">=</span><span style="color: #40a070">45</span>, alpha<span style="color: #666666">=</span><span style="color: #40a070">35</span>, blurX<span style="color: #666666">=</span><span style="color: #40a070">10</span>, blurY<span style="color: #666666">=</span><span style="color: #40a070">10</span>)
+chart<span style="color: #666666">.</span>addFilter(<span style="color: #4070a0">&#39;bevel&#39;</span>, <span style="color: #4070a0">&#39;bevel1&#39;</span>, strength<span style="color: #666666">=</span><span style="color: #40a070">10</span>, quality<span style="color: #666666">=</span><span style="color: #40a070">3</span>, distance<span style="color: #666666">=</span><span style="color: #40a070">2</span>)
+chart<span style="color: #666666">.</span>setChartBorder(top<span style="color: #666666">=</span><span style="color: #40a070">1</span>, bottom<span style="color: #666666">=</span><span style="color: #40a070">2</span>, left<span style="color: #666666">=</span><span style="color: #40a070">0</span>, right<span style="color: #666666">=</span><span style="color: #40a070">0</span>, color<span style="color: #666666">=</span><span style="color: #4070a0">&#39;000000&#39;</span>)
+chart<span style="color: #666666">.</span>setChartLabel(color<span style="color: #666666">=</span><span style="color: #4070a0">&#39;000000&#39;</span>, alpha<span style="color: #666666">=</span><span style="color: #40a070">80</span>, size<span style="color: #666666">=</span><span style="color: #40a070">8</span>, position<span style="color: #666666">=</span><span style="color: #4070a0">&#39;outside&#39;</span>, hide_zero<span style="color: #666666">=</span><span style="color: #007020">True</span>)
+chart<span style="color: #666666">.</span>setChartTransition(<span style="color: #007020">type</span><span style="color: #666666">=</span><span style="color: #4070a0">&#39;scale&#39;</span>, delay<span style="color: #666666">=.</span><span style="color: #40a070">5</span>, duration<span style="color: #666666">=.</span><span style="color: #40a070">5</span>, order<span style="color: #666666">=</span><span style="color: #4070a0">&#39;series&#39;</span>)
+chart<span style="color: #666666">.</span>setChartRect(shadow<span style="color: #666666">=</span><span style="color: #4070a0">&#39;high&#39;</span>)
+chart<span style="color: #666666">.</span>setLegend(size<span style="color: #666666">=</span><span style="color: #40a070">12</span>, alpha<span style="color: #666666">=</span><span style="color: #40a070">90</span>, fill_alpha<span style="color: #666666">=</span><span style="color: #40a070">30</span>)
+chart<span style="color: #666666">.</span>setAxisTicks(category_ticks<span style="color: #666666">=</span><span style="color: #007020">True</span>, value_ticks<span style="color: #666666">=</span><span style="color: #007020">True</span>, minor_count<span style="color: #666666">=</span><span style="color: #40a070">3</span>)
+chart<span style="color: #666666">.</span>setContextMenu(about<span style="color: #666666">=</span><span style="color: #007020">False</span>)
+
+<span style="color: #60a0b0; font-style: italic"># if you have the licensed version</span>
+chart<span style="color: #666666">.</span>setLicense(<span style="color: #4070a0">&#39;license string&#39;</span>)
+</pre></div>
+</p>
+
+<p>Now at this point, the object can be treated like a string to get the xml, or just call getXML() :</p>
+
+<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020; font-weight: bold">print</span> chart
+
+<span style="color: #007020; font-weight: bold">print</span> chart<span style="color: #666666">.</span>getXML()   <span style="color: #60a0b0; font-style: italic"># same thing</span>
+
+xml <span style="color: #666666">=</span> <span style="color: #007020">str</span>(chart)   <span style="color: #60a0b0; font-style: italic"># or assign the XML string somewhere</span>
+</pre></div>
+</p>
+
+<p>You can download the swfcharts.py module and use it freely. If you find it helpful, post a comment or shoot me an email.</p>
+
+<h4 id="download-swfcharts-py-wp-content-uploads-2010-01-swfcharts-py-zip:49cac3fa1a8c2fa6889e2e792973fcce">Download <a href="/wp-content/uploads/2010/01/swfcharts.py_.zip">swfcharts.py</a></h4>
+
+<p>Pydoc located here for convenience:<span style="color: #ffcc00;"><br /> <a href='/wp-content/uploads/2010/01/swfcharts.html'>swfcharts python documentation</a></span></p>
+
+    
+
+     
+	
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost") 
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'justinfx';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments powered by <a href="http://disqus.com/?ref_noscript">Disqus.</a></noscript>
+</div>
+</div> 
+
+</body>w
+</html>
