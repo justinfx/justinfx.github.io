@@ -3,7 +3,7 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.github.io/tags/curves/</link>
+    <link>http://justinfx.com/tags/curves/</link>
     <language>en-us</language>
     <author>Justin Israel</author>
     <copyright>2010 Justin Israel</copyright>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Maya, and self-intersecting nurbsCurves</title>
-      <link>http://justinfx.github.io/2010/08/09/maya-and-self-intersecting-nurbscurves/</link>
+      <link>http://justinfx.com/2010/08/09/maya-and-self-intersecting-nurbscurves/</link>
       <pubDate>Mon, 09 Aug 2010 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.github.io/2010/08/09/maya-and-self-intersecting-nurbscurves/</guid>
+      <guid>http://justinfx.com/2010/08/09/maya-and-self-intersecting-nurbscurves/</guid>
       <description>
 
 &lt;p&gt;This is a story about my journey in solving a problem at work involving curves. The solution seemed really simple at first, but because of a stupid Maya issue, this turned into me having to rewrite the tool 3 times before I discovered a surprising solution.&lt;/p&gt;
@@ -27,7 +27,7 @@
 &lt;p&gt;We needed a way to detect self-intersecting nurbsCurves, so that we could fix them before working with them as nurbsSurfaces.&lt;/p&gt;
 
 &lt;div id=&#34;attachment_169&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignleft&#34;&gt;
-  &lt;a href=&#34;http://justinfx.github.io/wp-content/uploads/2010/08/curvesExample.png&#34; rel=&#34;lightbox[163]&#34;&gt;&lt;img class=&#34;size-medium wp-image-169  &#34; style=&#34;background-color: white;&#34; title=&#34;nurbsCurve Example&#34; src=&#34;http://justinfx.github.io/wp-content/uploads/2010/08/curvesExample-300x213.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;213&#34; /&gt;&lt;/a&gt;
+  &lt;a href=&#34;http://justinfx.com/wp-content/uploads/2010/08/curvesExample.png&#34; rel=&#34;lightbox[163]&#34;&gt;&lt;img class=&#34;size-medium wp-image-169  &#34; style=&#34;background-color: white;&#34; title=&#34;nurbsCurve Example&#34; src=&#34;http://justinfx.com/wp-content/uploads/2010/08/curvesExample-300x213.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;213&#34; /&gt;&lt;/a&gt;
   
   &lt;p class=&#34;wp-caption-text&#34;&gt;
     Loop Curves (self-intersection)
@@ -59,7 +59,7 @@
 &lt;p&gt;At this point I had accepted the solution for detecting self-intersection, and moved on to writing a maya UI for the tool. It would detect loops and optionally even report back the best estimate to the point where it actually occurred. But once I started writing another bigger tool that would use this script, I just knew it could be done faster with the power of math and without the poop of maya script command calls.&lt;/p&gt;
 
 &lt;div id=&#34;attachment_170&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignleft&#34;&gt;
-  &lt;a href=&#34;http://www.tsplines.com/technology/edu/CurveIntersection.pdf&#34;&gt;&lt;img class=&#34;size-medium wp-image-170&#34; title=&#34;Bezier Clipping&#34; src=&#34;http://justinfx.github.io/wp-content/uploads/2010/08/clipping-300x141.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;141&#34; /&gt;&lt;/a&gt;
+  &lt;a href=&#34;http://www.tsplines.com/technology/edu/CurveIntersection.pdf&#34;&gt;&lt;img class=&#34;size-medium wp-image-170&#34; title=&#34;Bezier Clipping&#34; src=&#34;http://justinfx.com/wp-content/uploads/2010/08/clipping-300x141.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;141&#34; /&gt;&lt;/a&gt;
   
   &lt;p class=&#34;wp-caption-text&#34;&gt;
     Bezier Clipping Method

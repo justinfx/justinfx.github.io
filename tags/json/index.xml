@@ -3,7 +3,7 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.github.io/tags/json/</link>
+    <link>http://justinfx.com/tags/json/</link>
     <language>en-us</language>
     <author>Justin Israel</author>
     <copyright>2012 Justin Israel</copyright>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Python 2.7.2 serializer speed comparisons</title>
-      <link>http://justinfx.github.io/2012/07/25/python-2-7-3-serializer-speed-comparisons/</link>
+      <link>http://justinfx.com/2012/07/25/python-2-7-3-serializer-speed-comparisons/</link>
       <pubDate>Wed, 25 Jul 2012 00:00:00 UTC</pubDate>
       <author>Justin Israel</author>
-      <guid>http://justinfx.github.io/2012/07/25/python-2-7-3-serializer-speed-comparisons/</guid>
+      <guid>http://justinfx.com/2012/07/25/python-2-7-3-serializer-speed-comparisons/</guid>
       <description>&lt;p&gt;In a recent python project where I was sending multiple messages per second of data over a basic socket, I had initially just grabbed the cPickle module to get the prototype proof-of-concept functioning properly. cPickle is awesome for easily serializing more complex python objects like custom classes, even though in my case I am only sending basic types.&lt;/p&gt;
 
 &lt;p&gt;My messages were dicts with some nested dicts, lists, floats, and string values. Roughly 500-1000 bytes. cPickle was doing just fine, but there came a point where I wanted to investigate the areas that could be tightened up. The first thing I realized was that I had forgotten to encode cPickle in the binary format (the default is ascii). That saved me quite a bit of time. But then I casually searched online to see if any json options might be better since my data is pretty primitive anyways.&lt;/p&gt;
