@@ -269,8 +269,13 @@ sudo install_name_tool -change libQtCore.4.dylib @executable_path/QtCore
     if (window.location.hostname == "localhost") 
         return;
 
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
     var disqus_shortname = 'justinfx';
+
+    
+    var disqus_url = 'http:\/\/justinfx.com\/2011\/01\/07\/installing-pyqt-for-maya-2011-osx\/';
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();

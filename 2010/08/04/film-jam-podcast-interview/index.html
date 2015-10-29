@@ -122,8 +122,13 @@
     if (window.location.hostname == "localhost") 
         return;
 
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
     var disqus_shortname = 'justinfx';
+
+    
+    var disqus_url = 'http:\/\/justinfx.com\/2010\/08\/04\/film-jam-podcast-interview\/';
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();
