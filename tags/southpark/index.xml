@@ -59,14 +59,15 @@
 
 &lt;p&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2010/03/taskMonster2.jpg&#34; rel=&#34;lightbox[71]&#34;&gt;&lt;img class=&#34;alignnone size-large wp-image-72&#34; title=&#34;taskMonster2&#34; src=&#34;http://justinfx.com/wp-content/uploads/2010/03/taskMonster2-1024x724.jpg&#34; alt=&#34;&#34; width=&#34;663&#34; height=&#34;469&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;iframe src=&#34;https://player.vimeo.com/video/143717524?byline=0&#34; 
-        width=&#34;640&#34; 
-        height=&#34;360&#34; 
-        frameborder=&#34;0&#34; 
-        webkitallowfullscreen 
-        mozallowfullscreen 
-        allowfullscreen &gt;
-&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;js-video vimeo&#34;&gt;
+	&lt;iframe src=&#34;https://player.vimeo.com/video/143717524?byline=0&#34; 
+	        width=&#34;640&#34; 
+	        height=&#34;360&#34; 
+	        frameborder=&#34;0&#34; 
+	        mozallowfullscreen 
+	        allowfullscreen &gt;
+	&lt;/iframe&gt;
+&lt;/div&gt;&lt;/p&gt;
 </description>
     </item>
     
