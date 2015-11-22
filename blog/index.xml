@@ -7,7 +7,291 @@
     <language>en-us</language>
     <author>Justin Israel</author>
     <copyright>2015 Justin Israel</copyright>
-    <updated>Sun, 07 Jun 2015 00:00:00 UTC</updated>
+    <updated>Sun, 08 Nov 2015 09:32:37 NZDT</updated>
+    
+    
+    <item>
+      <title>Switching from Wordpress to Hugo</title>
+      <link>http://justinfx.com/2015/11/08/switching-from-wordpress-to-hugo/</link>
+      <pubDate>Sun, 08 Nov 2015 09:32:37 NZDT</pubDate>
+      <author>Justin Israel</author>
+      <guid>http://justinfx.com/2015/11/08/switching-from-wordpress-to-hugo/</guid>
+      <description>
+
+&lt;p&gt;Since 2006, my small blog has existed as a Wordpress site. This worked really well for me, as it was easy to hit a one-click install from a hosting dashboard, and then be able to install plugins, themes, and updates, all from the Wordpress admin. Ultimately it was one less thing vying for my time as opposed to a custom site from scratch. With limited free time, and a choice of projects to work on, the last thing I really wanted to do was website design and maintenance.&lt;/p&gt;
+
+&lt;p&gt;In addition to my Wordpress blog, for a while I had also been hosting other applications, such as a Redmine system for project management. Redmine, being a Ruby-on-Rails setup, was quite a memory hog. But with that, combined with Wordpress, it made sense to use some form of hosting. Eventually I stopped using Redmine, and was left with just a Wordpress blog&amp;hellip; hosted on a semi-VPS service, and paying $7 USD a month. Finally I realized this was silly and I should just switch to something that costs&amp;hellip; maybe nothing?&lt;/p&gt;
+
+&lt;h2 id=&#34;hugo-a-static-site-generator:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Hugo: A static site generator&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;m already a fan and user of the &lt;a href=&#34;http://golang.org&#34;&gt;Go language&lt;/a&gt;, and so in following a number of the Go social communities, I discovered &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;. A static site generator is an application that can take content in some original description (markdown in the case of Hugo), and renders final content by applying rules. This final content can then be hosted anywhere, without the need for server-side runtime support, such as Python/PHP/Go/Node/etc, because it does not require server-side processing to handling rendering the pages. This makes the site very portable and simple to deploy, and can be served out of aggressive caching.&lt;/p&gt;
+
+&lt;p&gt;Another benefit of Hugo, specifically, is that you don&amp;rsquo;t need to futz with an in-browser specific editor while writing pages. Hugo comes with a built-in production-grade server, which provides developers the option of watching for any changes in content. When content changes, Hugo will render that content again, and also trigger an update of your local webpage by way of a connected websocket. I can sit comfortably within my code editor of choice (SublimeText), and write a post in markdown. Each time I save the file, my webpage immediately updates to show me the changes.&lt;/p&gt;
+
+&lt;p&gt;This post is primarily focused on my experience in switching to Hugo, and not attempting to provide an A-Z tutorial of using it. Detailed documentation can be found on the official site.&lt;/p&gt;
+
+&lt;h2 id=&#34;migrating-from-wordpress-to-hugo:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Migrating from Wordpress to Hugo&lt;/h2&gt;
+
+&lt;p&gt;I can&amp;rsquo;t claim that the process of converting my Wordpress-based site to Hugo was 100% automatic, or even 90%. Let&amp;rsquo;s say about 80%. But it was fairly painless.&lt;/p&gt;
+
+&lt;p&gt;I started with the &lt;a href=&#34;https://github.com/SchumacherFM/wordpress-to-hugo-exporter&#34;&gt;Hugo To Wordpress Exporter&lt;/a&gt;. Even though there were some claims that it didn&amp;rsquo;t work 100% of the time, I actually had no problems using it with a semi recent 4.x install of Wordpress. I believe those that experienced issues might have had very large sites and encountered some kind of timeout issue. My site has relatively few posts, compared to others, and installing this plugin and exporting the site had worked right away. What you get as an end result is an archive of your site, converted into a basic Hugo project structure. All of your metadata from your posts are preserved in the Hugo format called &lt;a href=&#34;https://gohugo.io/content/front-matter/&#34;&gt;&amp;ldquo;Front Matter&amp;rdquo;&lt;/a&gt;. This is a section of metadata that sits at the top of every markdown file, which the engine will use to build out your static site properly. For instance, the Front Matter that was generated for my post entitled &lt;a href=&#34;http://justinfx.com/2015/06/07/comparing-performance-of-qt-smart-pointer-options/&#34;&gt;&amp;ldquo;Comparing performance of Qt smart pointer options&amp;rdquo;&lt;/a&gt;, looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;---&lt;/span&gt;
+title: Comparing performance of Qt smart pointer options
+author: Justin Israel
+type: post
+date: 2015-06-07
+slug: comparing-performance-of-qt-smart-pointer-options
+url: /2015/06/07/comparing-performance-of-qt-smart-pointer-options/
+categories:
+  - Code
+tags:
+  - benchmark
+  - c++
+  - pointers
+  - qt
+&lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;---&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;This is YAML (the other supported format is TOML), and gives the engine information about the post that it can use to format the page, and to organize it into the site. You can see definitions of categories and tags (preserved from the Wordpress export), which also drives other aspects of the site like the menu system.&lt;/p&gt;
+
+&lt;p&gt;Once I had my new set of markdown files, I saw that they needed a tiny bit of cleanup. This probably has to do with the type of plugins I used in Wordpress to format code and embed media, which couldn&amp;rsquo;t be translated to look exactly the way it should. But it was simple enough to go through each page and correct the bits of hyper-links and code formatting. A great thing about Hugo is that it comes with a production-quality web server, which you can use in development mode as you work on your site:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;$ &lt;/span&gt;hugo server -w -D
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;This starts the server, and tells it to run in &amp;ldquo;watch&amp;rdquo; mode, and to also render posts that are still in &amp;ldquo;draft&amp;rdquo; mode, so that I can see them in their unpublished state on the site. I can then check out my site right away, by hitting &lt;a href=&#34;http://127.0.0.1:1313&#34;&gt;http://127.0.0.1:1313&lt;/a&gt; in my browser. &amp;ldquo;Watch&amp;rdquo; mode means that the site is instrumented with a websocket connection to the server, and will automatically refresh when the server detects that content has changed (after the server automatically renders the content again). This is awesome, because I can type out content, hit save, and see the changes. This was a bit clunkier of a process in Wordpress, where I would type some stuff in a WYSIWYG editor and have to hit &amp;ldquo;save draft&amp;rdquo;, and manually refresh my preview page in another tab (or maybe Wordpress auto-refreshed preview pages. I can&amp;rsquo;t remember now).&lt;/p&gt;
+
+&lt;p&gt;All-in-all the export and cleanup process was the most painless part. Most of the time was spent learning the new concepts of the Hugo system.&lt;/p&gt;
+
+&lt;h2 id=&#34;deployment:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Deployment&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;m going to start with describing the deployment process, since I find that to be one of the most appealing aspects of switching to Hugo. As I had mentioned, my previous solution was a paid hosted approach, in order to have a MySQL database, and a php-based enabled dynamic site. My new approach brings my hosting expense down to &lt;strong&gt;zero&lt;/strong&gt;. By using &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt;, I can treat my site as just another code repository, while serving it for free. You can see the final rendered static site, right here at &lt;a href=&#34;https://github.com/justinfx/justinfx.github.io&#34;&gt;github.com/justinfx/justinfx.github.io&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Generating your static site via Hugo is as simple as doing the following:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;$ &lt;/span&gt;hugo
+&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt; of &lt;span style=&#34;color: #40a070&#34;&gt;1&lt;/span&gt; draft rendered
+&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt; future content 
+&lt;span style=&#34;color: #40a070&#34;&gt;32&lt;/span&gt; pages created
+&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt; paginator pages created
+&lt;span style=&#34;color: #40a070&#34;&gt;45&lt;/span&gt; tags created
+&lt;span style=&#34;color: #40a070&#34;&gt;3&lt;/span&gt; categories created
+in &lt;span style=&#34;color: #40a070&#34;&gt;195&lt;/span&gt; ms
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;This command causes Hugo to generate the site to the &amp;ldquo;public/&amp;rdquo; directory in the current working directory. If I had wanted to generate it to another location, I would just need to pass &lt;code&gt;-d &amp;lt;dest&amp;gt;&lt;/code&gt; to tell Hugo to generate to another output location.&lt;/p&gt;
+
+&lt;p&gt;I actually symlink the &amp;ldquo;public/&amp;rdquo; subdirectory to point to my &amp;ldquo;justinfx.github.io&amp;rdquo; Github Pages local repo. What that means is that after running Hugo, and because it is managed via a git repository, I now only need to commit the new changes to my repo in order to update my public site. This is a very natural workflow for anyone that is comfortable with git repositories. And it also means that I automatically get revision control for any changes to my website.&lt;/p&gt;
+
+&lt;h2 id=&#34;understanding-hugo-concepts:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Understanding Hugo Concepts&lt;/h2&gt;
+
+&lt;p&gt;The aspect that took the longest, in the switch to Hugo, was understanding the project structure, and how the layout of the site was generated. The main terms you will deal with upfront are things like: content, layouts, templates, types, archetypes, and static. To oversimplify what I have come to understand is that the Hugo project structure separates your content from your view, or the way that content ultimately is arranged in your site. You spend the most time getting your layout and types set up once, and then moving forward it becomes a simple matter of typing new markdown content, which gets seamlessly integrated into the layout.&lt;/p&gt;
+
+&lt;h3 id=&#34;configuration:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Configuration&lt;/h3&gt;
+
+&lt;p&gt;The first thing you want to look at is your &lt;code&gt;config.yaml&lt;/code&gt; file. There isn&amp;rsquo;t much to it, and the default could be mostly correct for you. But I did have to change a few things to get it right. Mine looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;---&lt;/span&gt;
+baseurl: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;http://justinfx.com&amp;quot;&lt;/span&gt;
+languageCode: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;en-us&amp;quot;&lt;/span&gt;
+title: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;JustinFX.com&amp;quot;&lt;/span&gt;
+DisqusShortname: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;justinfx&amp;quot;&lt;/span&gt;
+copyright: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;Justin&lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;Israel&amp;quot;&lt;/span&gt;
+pygmentsstyle: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;friendly&amp;quot;&lt;/span&gt;
+
+author:
+    name: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;Justin&lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;Israel&amp;quot;&lt;/span&gt; 
+
+permalinks:
+    blog: /:year/:month/:day/:slug/
+
+taxonomies:
+    tag: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;tags&amp;quot;&lt;/span&gt;
+    category: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;categories&amp;quot;&lt;/span&gt;
+
+params:
+    &amp;lt; snip ... &amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Not every field is required. Probably the most important settings are the &lt;code&gt;baseurl&lt;/code&gt; and &lt;code&gt;title&lt;/code&gt;. The rest of these settings control optional aspects of the site. You can see that I am setting my Disqus id, allowing Hugo to embed its integrated Disqus comment system into your posts. I&amp;rsquo;m also setting some options for how code syntax highlighting is displayed, and some definitions for organization and &lt;a href=&#34;https://gohugo.io/extras/permalinks/&#34;&gt;permalinks&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;content:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Content&lt;/h3&gt;
+
+&lt;p&gt;Under the &amp;ldquo;content/&amp;rdquo; directory of my project is where all my markdown files are stored. I have the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;content/
+    blog/
+        &amp;lt;postA&amp;gt;.md
+        &amp;lt;postB&amp;gt;.md
+        &amp;lt;postC&amp;gt;.md
+    page/
+    	&amp;lt;pageA&amp;gt;.md
+    	&amp;lt;pageB&amp;gt;.md
+    wp-content/
+    	...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;ldquo;blog&amp;rdquo; and &amp;ldquo;page&amp;rdquo; reflect the concepts that came from Wordpress, where I had posts for the blog that would have comments and show up in the feed, and then pages which show up in menus and were not open for comments. The key difference in these two sections is the &amp;ldquo;type&amp;rdquo; parameter that is set in the Front Matter of the markdown files in each section. Blog posts have &lt;code&gt;type: post&lt;/code&gt;, while pages have &lt;code&gt;type: page&lt;/code&gt;. This becomes important in dictating how they are organized and rendered, when they need to line up with your layouts. Blog posts will be grouped and displayed &lt;a href=&#34;http://justinfx.com/blog&#34;&gt;one way&lt;/a&gt;, with indexing and comments, while pages will be displayed another.&lt;/p&gt;
+
+&lt;p&gt;Within the markdown files, in addition to text and markdown formatting, you can also include &lt;a href=&#34;https://gohugo.io/templates/overview/&#34;&gt;template logic&lt;/a&gt;, to be expanded at render time (running the &lt;code&gt;hugo&lt;/code&gt; command).&lt;/p&gt;
+
+&lt;h3 id=&#34;archetypes:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Archetypes&lt;/h3&gt;
+
+&lt;p&gt;At first, I had thought archetypes were something more complicated than they actually are. Really all they do is define a new &amp;ldquo;type template&amp;rdquo; so that when you create new content with &lt;code&gt;hugo new &amp;lt;...&amp;gt;&lt;/code&gt;, the new content will be created with type-specific defaults. For instance, I have an archetype defined that makes any markdown files created in my &amp;ldquo;content/blog/&amp;rdquo; location have the type &amp;ldquo;post&amp;rdquo;:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;$ &lt;/span&gt;ls archetypes/
+blog.md
+
+&lt;span style=&#34;color: #bb60d5&#34;&gt;$ &lt;/span&gt;cat archetypes/blog.md
++++
+&lt;span style=&#34;color: #007020&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;post&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #bb60d5&#34;&gt;draft&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #007020&#34;&gt;true&lt;/span&gt;
++++
+
+&lt;span style=&#34;color: #bb60d5&#34;&gt;$ &lt;/span&gt;hugo new blog/new_post.md
+justinfx.com/content/blog/new_post.md created
+
+&lt;span style=&#34;color: #bb60d5&#34;&gt;$ &lt;/span&gt;cat content/blog/new_post.md
++++
+&lt;span style=&#34;color: #bb60d5&#34;&gt;date&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;2015-11-21T09:20:47+13:00&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #bb60d5&#34;&gt;draft&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #007020&#34;&gt;true&lt;/span&gt;
+&lt;span style=&#34;color: #bb60d5&#34;&gt;title&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;test&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #007020&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;post&amp;quot;&lt;/span&gt;
++++
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;You can see that a new draft post was created for me, and the Front Matter was pre-populated with the settings from the blog archetype. Just an easy way to set up new content really.&lt;/p&gt;
+
+&lt;h3 id=&#34;layouts:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Layouts&lt;/h3&gt;
+
+&lt;p&gt;This was the hardest part of the learning curve for me. Layouts are the part of your codebase that specify how your content is turned into actual views in your static site. There is a correlation between the layout directories, and the type names we talked about previously. Because I have two types, &amp;ldquo;post&amp;rdquo; and &amp;ldquo;page&amp;rdquo;, it means I will have the corresponding locations within the layouts directory. Hugo has a resolution order it will use, when figuring out which layouts to apply. First it will check if there is a direct match for the type, and then it will fall back on a special &amp;ldquo;_default&amp;rdquo; directory. Within these directories, you can specify what content should look like when it is viewed as:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a single item - the actual blog post or page&lt;/li&gt;
+&lt;li&gt;a list of items - an index of all blog posts, such as by date&lt;/li&gt;
+&lt;li&gt;a summary of an item - like a preview of an item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For example, I have some layouts structured like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;layouts/
+    _default/
+        list.html
+        single.html
+        ...
+    page/
+        single.html
+    post/
+        li.html
+        single.html
+        summary.html
+    section/
+        blog.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;ldquo;_default&amp;rdquo; will be the fallback for any particular types that don&amp;rsquo;t explicitly have their own layout definitions. You can see that pages just define a specific single view. Posts define how they look when displayed in a list, or a single view, or their summary view. I also have a &amp;ldquo;section/&amp;rdquo; location defined, which results in the &lt;a href=&#34;http://justinfx.com/blog&#34;&gt;/blog&lt;/a&gt; endpoint on my site.&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;section/blog.html&amp;rdquo; looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;{{ template &amp;quot;chrome/head.html&amp;quot; . }}
+&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+
+{{ template &amp;quot;chrome/sidebar.html&amp;quot; . }}
+
+&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;div&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;class=&amp;quot;content container&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;h1&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;class=&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;Blog Posts&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt; 
+  &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;ul&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;class=&amp;quot;posts&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+      {{ range .Data.Pages.GroupByDate &amp;quot;2006&amp;quot; }}
+	    &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;{{ .Key }}&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+	        &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;ul&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;id=&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+	            {{ range .Pages }}
+	                {{ .Render &amp;quot;li&amp;quot;}}
+	            {{ end }}
+	        &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+      {{ end }}
+  &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+
+&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Breaking this down, we have template directives that will include other templates that render the common header and sidebar. Then we set up how &amp;ldquo;/blog&amp;rdquo; will look when displaying a date-sorted list of all my posts. We loop over all the blog posts, grouped by the year they were created, then loop over each post in a group and render it using its &amp;ldquo;li&amp;rdquo; (list item) definition. This is the place where Hugo will resolve which view to use for list elements. Because we are dealing with &amp;ldquo;post&amp;rdquo; types, Hugo will find &amp;ldquo;layouts/post/li.html&amp;rdquo; first (matching &amp;ldquo;li&amp;rdquo; with &amp;ldquo;li.html&amp;rdquo;, and use that to render each list item.&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;layouts/post/li.html&amp;rdquo; looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;span&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;style=&amp;quot;line-height: 1.0&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+      {{if .Draft}}[draft] {{end}}&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;a&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;href=&amp;quot;{{ .Permalink }}&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;{{ .Title }}&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;div&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;class=&amp;quot;post-item&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+      	&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;span&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;style=&amp;quot;font-size: .75em&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;{{ .Date.Format &amp;quot;Mon, Jan 2, 2006&amp;quot; }}&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;This template is purely concerned with defining an &lt;code&gt;&amp;lt;li&amp;gt;&lt;/code&gt; element. We handle optionally indicating if a post is still in draft state (only visible if we are running the hugo server with &lt;code&gt;-D&lt;/code&gt;), and then showing the title and date of the post.&lt;/p&gt;
+
+&lt;p&gt;Extra info on layouts and views can be found &lt;a href=&#34;https://gohugo.io/content/types/#defining-a-content-type:3d59665407ad3f08f6bcaef4686926f7&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io/content/types/#create-type-directory:3d59665407ad3f08f6bcaef4686926f7&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;themes:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Themes&lt;/h3&gt;
+
+&lt;p&gt;Hugo supports &lt;a href=&#34;https://gohugo.io/themes/overview/&#34;&gt;themes&lt;/a&gt;, and already has a sizable &lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;gallery&lt;/a&gt; of existing themes to choose from.&lt;/p&gt;
+
+&lt;p&gt;I had started out trying to just drop in different themes (placing them in the &amp;ldquo;themes&amp;rdquo; subdirectory, and activating them in the config file or via the command line), but I noticed that not every theme would render properly. I came to find understand that themes still require a bit of integration, and are not simply a stylesheet. They define their own views which become part of the resolution order when Hugo looks them up at render time. Finally I just took the advise from &lt;a href=&#34;http://npf.io/2014/08/hugo-is-awesome/&#34;&gt;Nate Finch&amp;rsquo;s Hugo post&lt;/a&gt;, where he grabbed a theme that was closest to what he wanted and started tweaking it. I then started with Nate&amp;rsquo;s modified theme (since I liked it), and also further tweaked it to match what I liked. This resulted in getting rid of an explicit &amp;ldquo;themes&amp;rdquo; location, and just integrating the templates directly into my &amp;ldquo;layouts/&amp;rdquo; location.&lt;/p&gt;
+
+&lt;h3 id=&#34;shortcodes:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Shortcodes&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/extras/shortcodes/&#34;&gt;Shortcodes&lt;/a&gt; are sweet. They are very similar to Wordpress shortcodes provided by plugins, in that you create little functions that can take arguments and expand into reusable code.&lt;/p&gt;
+
+&lt;p&gt;My shortcodes look like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;shortcodes/
+    lightbox.html
+    vimeo.html
+    youtube.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And &amp;ldquo;vimeo.html&amp;rdquo; looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;div&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;class=&amp;quot;js-video vimeo&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;iframe&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;src=&amp;quot;https://player.vimeo.com/video/{{ .Get 0 }}?byline=0&amp;quot;&lt;/span&gt; 
+	        &lt;span style=&#34;color: #4070a0&#34;&gt;width=&amp;quot;640&amp;quot;&lt;/span&gt; 
+	        &lt;span style=&#34;color: #4070a0&#34;&gt;height=&amp;quot;360&amp;quot;&lt;/span&gt; 
+	        &lt;span style=&#34;color: #4070a0&#34;&gt;frameborder=&amp;quot;0&amp;quot;&lt;/span&gt; 
+	        &lt;span style=&#34;color: #4070a0&#34;&gt;mozallowfullscreen&lt;/span&gt; 
+	        &lt;span style=&#34;color: #4070a0&#34;&gt;allowfullscreen&lt;/span&gt; &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/iframe&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Now I have the ability to embed my vimeo media from within my content markdown files, just by using the shortcode and passing the vimeo id as a parameter:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;{{&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt; vimeo&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;12067694&lt;/span&gt; &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;}}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;static-files:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Static files&lt;/h3&gt;
+
+&lt;p&gt;Static files are pretty straightforward. It is just a &amp;ldquo;static/&amp;rdquo; location where everything underneath is served directly by your site, and does not go through an rendering process when you generate your site. This would be the place to store css, javascript, images, and other static content that simply needs to be served up in pages or urls. Themes can come with their own static locations, which will be integrated into the main static content when you render your site.&lt;/p&gt;
+
+&lt;h3 id=&#34;closing-thoughts:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Closing Thoughts&lt;/h3&gt;
+
+&lt;p&gt;There is something quite satisfying about having the source of my site being so tangible, while being easy to update, and easy to deploy. I don&amp;rsquo;t have to worry about a database, or hosting, or Wordpress site and plugin updates. I don&amp;rsquo;t have to worry about security, since there are no dynamic pages or Wordpress vulnerabilities to guard against. I don&amp;rsquo;t have to mess with backups and exports from a hosting service, since I check my entire site into github.&lt;/p&gt;
+
+&lt;p&gt;Even for someone like me, that hates doing web front-end development, I didn&amp;rsquo;t mind the minimal amount of css and html templates that needed tweaking. The end result is a site that is straightforward to manage, lightning fast to generate when deploying changes, and now costs me nothing to host.&lt;/p&gt;
+</description>
+    </item>
+    
     
     
     <item>
@@ -1402,69 +1686,6 @@ sudo install_name_tool -change libQtCore.4.dylib @executable_path/QtCore
 &lt;p&gt;&lt;a href=&#34;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.6&#34;&gt;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.6&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
-</description>
-    </item>
-    
-    
-    
-    <item>
-      <title>AtomSplitter v1.6 update</title>
-      <link>http://justinfx.com/2010/08/31/208/</link>
-      <pubDate>Tue, 31 Aug 2010 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
-      <guid>http://justinfx.com/2010/08/31/208/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2009/12/chan2fbx.jpg&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;AtomSplitter has been updated to v1.6, available through cmivfx.com&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.6&#34;&gt;AtomSplitter 1.6 &amp;#8211; cmiVFX.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Updates:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Exports Terragen .tgd scene file format&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx&#34;&gt;See the original post.&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;COMMAND LINE HELP
-
-OSX:
-AtomSplitter.app/Contents/MacOS/AtomSplitter &amp;lt;chan file&amp;gt; [out file]
-
-Linux:
-AtomSplitter &amp;lt;chan file&amp;gt; [out file]
-
-Windows:
-AtomSplitter.exe &amp;lt;chan file&amp;gt; [out file]
-
-=========================================
-
-HELP:
-$ AtomSplitter -h
-
-Usage: AtomSplitter &amp;lt;chan file&amp;gt; [out file]
-
-Options:
--h, --help
-        show this help message and exit
--o OBJ, --obj=OBJ
-        Optional nuke-exported pointCloud .obj file
--f FPS, --fps=FPS
-        Set FPS rate (default 24)
--x WIDTH, --width=WIDTH
-        Set frame width (default 2048)
--y HEIGHT, --height=HEIGHT
-        Set frame height (default 1556)
---filmwidth=FILMWIDTH
-        Set film aperature width in mm (default 24.576)
---filmheight=FILMHEIGHT
-        Set film aperature height in mm (default 18.672)
--s SCALE, --scale=SCALE
-        Scale the translation values by this amount
--F FORMAT, --format=FORMAT
-        Output format (fbx, action, terragen)
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
