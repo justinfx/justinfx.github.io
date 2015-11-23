@@ -101,15 +101,15 @@
 
 <p>Since 2006, my small blog has existed as a Wordpress site. This worked really well for me, as it was easy to hit a one-click install from a hosting dashboard, and then be able to install plugins, themes, and updates, all from the Wordpress admin. Ultimately it was one less thing vying for my time as opposed to a custom site from scratch. With limited free time, and a choice of projects to work on, the last thing I really wanted to do was website design and maintenance.</p>
 
-<p>In addition to my Wordpress blog, for a while I had also been hosting other applications, such as a Redmine system for project management. Redmine, being a Ruby-on-Rails setup, was quite a memory hog. But with that, combined with Wordpress, it made sense to use some form of hosting. Eventually I stopped using Redmine, and was left with just a Wordpress blog&hellip; hosted on a semi-VPS service, and paying $7 USD a month. Finally I realized this was silly and I should just switch to something that costs&hellip; maybe nothing?</p>
+<p>In addition to my Wordpress blog, for a while I had also been hosting other applications, such as a Redmine system for project management. Redmine, being a Ruby-on-Rails setup, was quite a memory hog. But that combined with Wordpress made sense to use some form of hosting. Eventually I stopped using Redmine and was left with just a Wordpress blog, hosted on a semi-VPS service, and paying $7 USD a month. Finally I realized this was silly and I should just switch to something that costs&hellip; maybe nothing?</p>
 
 <h2 id="hugo-a-static-site-generator:0fb87c8efc633224c79e1f60cf7f0750">Hugo: A static site generator</h2>
 
-<p>I&rsquo;m already a fan and user of the <a href="http://golang.org">Go language</a>, and so in following a number of the Go social communities, I discovered <a href="https://gohugo.io">Hugo</a>. A static site generator is an application that can take content in some original description (markdown in the case of Hugo), and renders final content by applying rules. This final content can then be hosted anywhere, without the need for server-side runtime support, such as Python/PHP/Go/Node/etc, because it does not require server-side processing to handling rendering the pages. This makes the site very portable and simple to deploy, and can be served out of aggressive caching.</p>
+<p>I&rsquo;m already a fan and user of the <a href="http://golang.org">Go language</a>, and so in following a number of the Go social communities, I discovered <a href="https://gohugo.io">Hugo</a>. A static site generator is an application that can take content in some original description (markdown in the case of Hugo), and renders final content by applying rules. This final content can then be hosted anywhere, without the need for server-side runtime support, such as Python/PHP/Go/Node/etc, because it does not require server-side processing to handle rendering the pages on the fly. This makes the site very portable and simple to deploy, and can be served out of aggressive caching.</p>
 
-<p>Another benefit of Hugo, specifically, is that you don&rsquo;t need to futz with an in-browser specific editor while writing pages. Hugo comes with a built-in production-grade server, which provides developers the option of watching for any changes in content. When content changes, Hugo will render that content again, and also trigger an update of your local webpage by way of a connected websocket. I can sit comfortably within my code editor of choice (SublimeText), and write a post in markdown. Each time I save the file, my webpage immediately updates to show me the changes.</p>
+<p>Another benefit of Hugo is that you don&rsquo;t need to futz with an in-browser editor while writing pages. Hugo comes with a built-in production-grade server, which provides developers the option of watching for any changes in content. When content changes, Hugo will render that content again, and also trigger an update of your local webpage by way of a connected websocket. I can sit comfortably within my code editor of choice (SublimeText), and write a post in markdown. Each time I save the file, my webpage immediately updates to reflect the changes.</p>
 
-<p>This post is primarily focused on my experience in switching to Hugo, and not attempting to provide an A-Z tutorial of using it. Detailed documentation can be found on the official site.</p>
+<p>This post is primarily focused on my experience in switching to Hugo, and not attempting to provide an A-Z tutorial of using it, nor a comparison to any similar options in static site generation. Detailed documentation can be found on the official Hugo site.</p>
 
 <h2 id="migrating-from-wordpress-to-hugo:0fb87c8efc633224c79e1f60cf7f0750">Migrating from Wordpress to Hugo</h2>
 
@@ -149,7 +149,7 @@ tags:
 
 <h2 id="deployment:0fb87c8efc633224c79e1f60cf7f0750">Deployment</h2>
 
-<p>I&rsquo;m going to start with describing the deployment process, since I find that to be one of the most appealing aspects of switching to Hugo. As I had mentioned, my previous solution was a paid hosted approach, in order to have a MySQL database, and a php-based enabled dynamic site. My new approach brings my hosting expense down to <strong>zero</strong>. By using <a href="https://pages.github.com/">Github Pages</a>, I can treat my site as just another code repository, while serving it for free. You can see the final rendered static site, right here at <a href="https://github.com/justinfx/justinfx.github.io">github.com/justinfx/justinfx.github.io</a>.</p>
+<p>I&rsquo;m going to start with describing the deployment process, since I find that to be one of the most appealing aspects of switching to Hugo. As I had mentioned, my previous solution was a paid hosted approach, in order to have a MySQL database, and a php-enabled dynamic site. My new approach brings my hosting expense down to <strong>zero</strong>. By using <a href="https://pages.github.com/">Github Pages</a>, I can treat my site as just another code repository, while serving it for free. You can see the final rendered static site, right here at <a href="https://github.com/justinfx/justinfx.github.io">github.com/justinfx/justinfx.github.io</a>.</p>
 
 <p>Generating your static site via Hugo is as simple as doing the following:</p>
 
@@ -199,7 +199,7 @@ params:
 </pre></div>
 </p>
 
-<p>Not every field is required. Probably the most important settings are the <code>baseurl</code> and <code>title</code>. The rest of these settings control optional aspects of the site. You can see that I am setting my Disqus id, allowing Hugo to embed its integrated Disqus comment system into your posts. I&rsquo;m also setting some options for how code syntax highlighting is displayed, and some definitions for organization and <a href="https://gohugo.io/extras/permalinks/">permalinks</a>.</p>
+<p>Not every field is required. Probably the most important settings are the <code>baseurl</code> and <code>title</code>. The rest of these settings control optional aspects of the site. You can see that I am setting my Disqus id, allowing Hugo to embed its integrated Disqus comment system into the posts. I&rsquo;m also setting some options for how code syntax highlighting is displayed, and some definitions for organization and <a href="https://gohugo.io/extras/permalinks/">permalinks</a>.</p>
 
 <h3 id="content:0fb87c8efc633224c79e1f60cf7f0750">Content</h3>
 
@@ -327,11 +327,11 @@ justinfx.com/content/blog/new_post.md created
 
 <p>Hugo supports <a href="https://gohugo.io/themes/overview/">themes</a>, and already has a sizable <a href="http://themes.gohugo.io/">gallery</a> of existing themes to choose from.</p>
 
-<p>I had started out trying to just drop in different themes (placing them in the &ldquo;themes&rdquo; subdirectory, and activating them in the config file or via the command line), but I noticed that not every theme would render properly. I came to find understand that themes still require a bit of integration, and are not simply a stylesheet. They define their own views which become part of the resolution order when Hugo looks them up at render time. Finally I just took the advise from <a href="http://npf.io/2014/08/hugo-is-awesome/">Nate Finch&rsquo;s Hugo post</a>, where he grabbed a theme that was closest to what he wanted and started tweaking it. I then started with Nate&rsquo;s modified theme (since I liked it), and also further tweaked it to match what I liked. This resulted in getting rid of an explicit &ldquo;themes&rdquo; location, and just integrating the templates directly into my &ldquo;layouts/&rdquo; location.</p>
+<p>I had started out trying to just drop in different themes (placing them in the &ldquo;themes&rdquo; subdirectory, and activating them in the config file or via the command line), but I noticed that not every theme would render properly. I came to understand that themes still require a bit of integration, and are not simply a stylesheet. They define their own views which become part of the resolution order when Hugo looks them up at render time. Finally I just took the advise from <a href="http://npf.io/2014/08/hugo-is-awesome/">Nate Finch&rsquo;s Hugo post</a>, where he grabbed a theme that was closest to what he wanted and started tweaking it. I then started with Nate&rsquo;s modified theme (since I liked it), and also further tweaked it to match what I liked. This resulted in getting rid of an explicit &ldquo;themes&rdquo; location, and just integrating the templates directly into my &ldquo;layouts/&rdquo; location.</p>
 
 <h3 id="shortcodes:0fb87c8efc633224c79e1f60cf7f0750">Shortcodes</h3>
 
-<p><a href="https://gohugo.io/extras/shortcodes/">Shortcodes</a> are sweet. They are very similar to Wordpress shortcodes provided by plugins, in that you create little functions that can take arguments and expand into reusable code.</p>
+<p><a href="https://gohugo.io/extras/shortcodes/">Shortcodes</a> are sweet. They are very similar to Wordpress shortcodes provided by plugins, allowing you to create little functions that can take arguments and expand into reusable code.</p>
 
 <p>My shortcodes look like this:</p>
 
@@ -355,7 +355,7 @@ justinfx.com/content/blog/new_post.md created
 </pre></div>
 </p>
 
-<p>Now I have the ability to embed my vimeo media from within my content markdown files, just by using the shortcode and passing the vimeo id as a parameter:</p>
+<p>Now I have the ability to embed my vimeo media from within my markdown files, just by using the shortcode and passing the vimeo id as a parameter:</p>
 
 <p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">{{<span style="color: #062873; font-weight: bold">&lt; vimeo</span> <span style="color: #4070a0">12067694</span> <span style="color: #062873; font-weight: bold">&gt;</span>}}
 </pre></div>
@@ -363,7 +363,7 @@ justinfx.com/content/blog/new_post.md created
 
 <h3 id="static-files:0fb87c8efc633224c79e1f60cf7f0750">Static files</h3>
 
-<p>Static files are pretty straightforward. It is just a &ldquo;static/&rdquo; location where everything underneath is served directly by your site, and does not go through an rendering process when you generate your site. This would be the place to store css, javascript, images, and other static content that simply needs to be served up in pages or urls. Themes can come with their own static locations, which will be integrated into the main static content when you render your site.</p>
+<p>Static files are pretty straightforward. It is just a &ldquo;static/&rdquo; location where everything underneath is served directly by your site, and does not go through a rendering process when you generate your site. This would be the place to store css, javascript, images, and other static content that simply needs to be served up in pages or urls. Themes can come with their own static locations, which will be integrated into the main static content when you render your site.</p>
 
 <h3 id="closing-thoughts:0fb87c8efc633224c79e1f60cf7f0750">Closing Thoughts</h3>
 
