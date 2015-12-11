@@ -243,7 +243,7 @@ Dependencies:&lt;/p&gt;
 
 &lt;p&gt;Test:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;timeit&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; timeit 
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;timeit&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; timeit 
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;tabulate&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; tabulate
 
 setup &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&amp;#39;&amp;#39;d = {&lt;/span&gt;
@@ -307,7 +307,7 @@ dec_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;insert(&lt;spa
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;Decoding Test (&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; loops)&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; loops
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; tabulate(dec_table, headers&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;firstrow&amp;quot;&lt;/span&gt;)
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;OUTPUT:&lt;/p&gt;
 
@@ -450,12 +450,12 @@ brew install boost&lt;/pre&gt;
 
 &lt;p&gt;Create a virtualenv called &amp;#8220;kinect&amp;#8221;&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;pip install virtualenv
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;pip install virtualenv
 virtualenv --no-site-packages -p python2.7 kinect
 &lt;span style=&#34;color: #007020&#34;&gt;cd &lt;/span&gt;kinect
 &lt;span style=&#34;color: #007020&#34;&gt;source &lt;/span&gt;bin/activate
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;h5 id=&#34;install-libusb-patched-version:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install libusb (patched version)&lt;/strong&gt;&lt;/h5&gt;
 
@@ -498,14 +498,14 @@ virtualenv --no-site-packages -p python2.7 kinect
 
 &lt;p&gt;Be aware that on OSX, PyOpenNI requires a framework build of python 2.7+ and that you must build it for x86_64 specifically. Also, I was having major problems with cmake properly finding the python includes location. I had to suggest a fix, so &lt;a href=&#34;https://github.com/jmendeth/PyOpenNI/issues/16#issuecomment-6515678&#34;&gt;please see here for the necessary corrections&lt;/a&gt;. I have referenced a patched fork of the repository below.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;CPPFLAGS&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;-arch x86_64&amp;quot;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;CPPFLAGS&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;-arch x86_64&amp;quot;&lt;/span&gt;
 git clone git://github.com/justinfx/PyOpenNI.git
 mkdir PyOpenNI-build
 &lt;span style=&#34;color: #007020&#34;&gt;cd &lt;/span&gt;PyOpenNI-build
 cmake -D &lt;span style=&#34;color: #bb60d5&#34;&gt;PYTHON_INCLUDE_DIR&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Headers ../PyOpenNI
 make
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;copy the lib/openni.so module to the python2.7 site-packages&lt;/p&gt;
 
@@ -557,7 +557,7 @@ make
 
 &lt;p&gt;Here is my example of how to achieve this&amp;#8230;&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;PyQt4&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; QtCore, QtGui
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;PyQt4&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; QtCore, QtGui
 
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;maya.cmds&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;cmds&lt;/span&gt;
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;maya.OpenMayaUI&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;mui&lt;/span&gt;
@@ -630,7 +630,7 @@ make
     &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;pass&lt;/span&gt;    
 dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;You need sip and the MQtUtil functions to convert between maya node paths and python Qbjects. Its the same idea as having to use those functions to get a reference to the maya MainWindow, in order to parent your dialog.&lt;/p&gt;
 </description>
@@ -895,7 +895,7 @@ Options:
 
 &lt;p&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2010/03/taskMonster2.jpg&#34; rel=&#34;lightbox[71]&#34;&gt;&lt;img class=&#34;alignnone size-large wp-image-72&#34; title=&#34;taskMonster2&#34; src=&#34;http://justinfx.com/wp-content/uploads/2010/03/taskMonster2-1024x724.jpg&#34; alt=&#34;&#34; width=&#34;663&#34; height=&#34;469&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;js-video vimeo&#34;&gt;
+&lt;div class=&#34;js-video vimeo&#34;&gt;
 	&lt;iframe src=&#34;https://player.vimeo.com/video/143717524?byline=0&#34; 
 	        width=&#34;640&#34; 
 	        height=&#34;360&#34; 
@@ -903,7 +903,7 @@ Options:
 	        mozallowfullscreen 
 	        allowfullscreen &gt;
 	&lt;/iframe&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -919,10 +919,10 @@ Options:
 
 &lt;p&gt;I noticed I was doing this a few times, in more than one of my classes, and finally got annoyed for the last time. I figured there had to be a simple way of just overloading the method on the normal object when I create an instance. Fortunately python considers everything objects and pretty much anything can be changed. So I did this:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
 myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mousePressEvent &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;lambda&lt;/span&gt; event: event&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;ignore()
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;Magic.&lt;/p&gt;
 
@@ -971,7 +971,7 @@ myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mousePressEvent 
 
 &lt;p&gt;Example:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;chart &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; SwfChart()
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;chart &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; SwfChart()
 
 &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# the data&lt;/span&gt;
 chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addRow( &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Person A&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;5.5&lt;/span&gt; )
@@ -993,7 +993,7 @@ chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setContextMenu(abo
 &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# if you have the licensed version&lt;/span&gt;
 chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setLicense(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;license string&amp;#39;&lt;/span&gt;)
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;Now at this point, the object can be treated like a string to get the xml, or just call getXML() :&lt;/p&gt;
 

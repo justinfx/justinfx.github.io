@@ -50,11 +50,11 @@ Qt 5.4.2
 
 &lt;p&gt;&lt;em&gt;test_qobj_qweakpointer&lt;/em&gt; : Creating QWeakPointers directly from QObject instances, adding them to a QList, and then deleting them all. This test could only be performed in Qt4, because Qt5 deprecated QObject tracking support for QWeakPointers, which can now only be used with QSharedPointer&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;test_qpointer&lt;/em&gt; : Creating QPointers directly from QObject instances, adding them to a QList, and then deleting them all.&lt;/p&gt;
+&lt;p&gt;_test&lt;em&gt;qpointer&lt;/em&gt; : Creating QPointers directly from QObject instances, adding them to a QList, and then deleting them all.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;test_boost_sharedptr&lt;/em&gt; : Creating &lt;code&gt;boost::shared_ptrs&lt;/code&gt; from basic struct instances, as well as boost::weak_ptrs for each, adding the shared_ptrs to a QList, and then deleting them&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;test_boost_qobj_sharedptr&lt;/em&gt; : Creating &lt;code&gt;boost::shared_ptrs&lt;/code&gt; from QObject instances, as well as boost::weak_ptrs for each, adding the shared_ptrs to a QList, and then deleting them&lt;/p&gt;
+&lt;p&gt;_test_boost_qobj&lt;em&gt;sharedptr&lt;/em&gt; : Creating &lt;code&gt;boost::shared_ptrs&lt;/code&gt; from QObject instances, as well as boost::weak_ptrs for each, adding the shared_ptrs to a QList, and then deleting them&lt;/p&gt;
 
 &lt;h4 id=&#34;the-test-results:c89abc9fedab4936f89941691d570e98&#34;&gt;The Test Results&lt;/h4&gt;
 
@@ -102,15 +102,15 @@ test_qpointer:              5599 ms   2832 ms
 test_boost_sharedptr:       1370 ms   1350 ms 
 test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt4_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
+&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt4_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
 	&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt4_pointers-300x157.png&#34; title alt&gt;
 &lt;/a&gt;
-&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt5_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
+
+&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt5_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
 	&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt5_pointers-300x154.png&#34; title alt&gt;
 &lt;/a&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;The test shows the overhead of simply going from a simple struct to a QObject, and then the further impact of introducing various smart pointers on QObjects, and also on non-QObjects where permitted.&lt;/p&gt;
 
@@ -161,7 +161,7 @@ Dependencies:&lt;/p&gt;
 
 &lt;p&gt;Test:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;timeit&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; timeit 
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;timeit&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; timeit 
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;tabulate&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; tabulate
 
 setup &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&amp;#39;&amp;#39;d = {&lt;/span&gt;
@@ -225,7 +225,7 @@ dec_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;insert(&lt;spa
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;Decoding Test (&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; loops)&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; loops
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; tabulate(dec_table, headers&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;firstrow&amp;quot;&lt;/span&gt;)
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;OUTPUT:&lt;/p&gt;
 

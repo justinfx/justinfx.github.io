@@ -47,6 +47,18 @@
     })
   </script>
 
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-6692856-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
 </head>
 
 <body>
@@ -117,7 +129,7 @@
 
 <p>I started with the <a href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter">Wordpress To Hugo Exporter</a>. Even though there were some claims that it didn&rsquo;t work 100% of the time, I actually had no problems using it with a semi recent 4.x install of Wordpress. I believe those that experienced issues might have had very large sites and encountered some kind of timeout issue. My site has relatively few posts, compared to others, and installing this plugin and exporting the site had worked right away. What you get as an end result is an archive of your site, converted into a basic Hugo project structure. All of your metadata from your posts are preserved in the Hugo format called <a href="https://gohugo.io/content/front-matter/">&ldquo;Front Matter&rdquo;</a>. This is a section of metadata that sits at the top of every markdown file, which the engine will use to build out your static site properly. For instance, the Front Matter that was generated for my post entitled <a href="/2015/06/07/comparing-performance-of-qt-smart-pointer-options/">&ldquo;Comparing performance of Qt smart pointer options&rdquo;</a>, looks like this:</p>
 
-<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #0e84b5; font-weight: bold">---</span>
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #0e84b5; font-weight: bold">---</span>
 title: Comparing performance of Qt smart pointer options
 author: Justin Israel
 type: post
@@ -133,15 +145,15 @@ tags:
   - qt
 <span style="color: #0e84b5; font-weight: bold">---</span>
 </pre></div>
-</p>
+
 
 <p>This is YAML (the other supported format is TOML), and gives the engine information about the post that it can use to format the page, and to organize it into the site. You can see definitions of categories and tags (preserved from the Wordpress export), which also drives other aspects of the site like the menu system.</p>
 
 <p>Once I had my new set of markdown files, I saw that they needed a tiny bit of cleanup. This probably has to do with the type of plugins I used in Wordpress to format code and embed media, which couldn&rsquo;t be translated to look exactly the way it should. But it was simple enough to go through each page and correct the bits of hyper-links and code formatting. A great thing about Hugo is that it comes with a production-quality web server, which you can use in development mode as you work on your site:</p>
 
-<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #bb60d5">$ </span>hugo server -w -D
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #bb60d5">$ </span>hugo server -w -D
 </pre></div>
-</p>
+
 
 <p>This starts the server, and tells it to run in &ldquo;watch&rdquo; mode, and to also render posts that are still in &ldquo;draft&rdquo; mode, so that I can see them in their unpublished state on the site. I can then check out my site right away, by hitting <a href="http://127.0.0.1:1313">http://127.0.0.1:1313</a> in my browser. &ldquo;Watch&rdquo; mode means that the site is instrumented with a websocket connection to the server, and will automatically refresh when the server detects that content has changed (after the server automatically renders the content again). This is awesome, because I can type out content, hit save, and see the changes. This was a bit clunkier of a process in Wordpress, where I would type some stuff in a WYSIWYG editor and have to hit &ldquo;save draft&rdquo;, and manually refresh my preview page in another tab (or maybe Wordpress auto-refreshed preview pages. I can&rsquo;t remember now).</p>
 
@@ -153,7 +165,7 @@ tags:
 
 <p>Generating your static site via Hugo is as simple as doing the following:</p>
 
-<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #bb60d5">$ </span>hugo
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #bb60d5">$ </span>hugo
 <span style="color: #40a070">0</span> of <span style="color: #40a070">1</span> draft rendered
 <span style="color: #40a070">0</span> future content 
 <span style="color: #40a070">32</span> pages created
@@ -162,7 +174,7 @@ tags:
 <span style="color: #40a070">3</span> categories created
 in <span style="color: #40a070">195</span> ms
 </pre></div>
-</p>
+
 
 <p>This command causes Hugo to generate the site to the &ldquo;public/&rdquo; directory in the current working directory. If I had wanted to generate it to another location, I would just need to pass <code>-d &lt;dest&gt;</code> to tell Hugo to generate to another output location.</p>
 
@@ -176,7 +188,7 @@ in <span style="color: #40a070">195</span> ms
 
 <p>The first thing you want to look at is your <code>config.yaml</code> file. There isn&rsquo;t much to it, and the default could be mostly correct for you. But I did have to change a few things to get it right. Mine looks like this:</p>
 
-<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #0e84b5; font-weight: bold">---</span>
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #0e84b5; font-weight: bold">---</span>
 baseurl: <span style="color: #4070a0">&quot;http://justinfx.com&quot;</span>
 languageCode: <span style="color: #4070a0">&quot;en-us&quot;</span>
 title: <span style="color: #4070a0">&quot;JustinFX.com&quot;</span>
@@ -197,7 +209,7 @@ taxonomies:
 params:
     &lt; snip ... &gt;
 </pre></div>
-</p>
+
 
 <p>Not every field is required. Probably the most important settings are the <code>baseurl</code> and <code>title</code>. The rest of these settings control optional aspects of the site. You can see that I am setting my Disqus id, allowing Hugo to embed its integrated Disqus comment system into the posts. I&rsquo;m also setting some options for how code syntax highlighting is displayed, and some definitions for organization and <a href="https://gohugo.io/extras/permalinks/">permalinks</a>.</p>
 
@@ -225,7 +237,7 @@ params:
 
 <p>At first, I had thought archetypes were something more complicated than they actually are. Really all they do is define a new &ldquo;type template&rdquo; so that when you create new content with <code>hugo new &lt;...&gt;</code>, the new content will be created with type-specific defaults. For instance, I have an archetype defined that makes any markdown files created in my &ldquo;content/blog/&rdquo; location have the type &ldquo;post&rdquo;:</p>
 
-<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #bb60d5">$ </span>ls archetypes/
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #bb60d5">$ </span>ls archetypes/
 blog.md
 
 <span style="color: #bb60d5">$ </span>cat archetypes/blog.md
@@ -245,7 +257,7 @@ justinfx.com/content/blog/new_post.md created
 <span style="color: #007020">type</span> <span style="color: #666666">=</span> <span style="color: #4070a0">&quot;post&quot;</span>
 +++
 </pre></div>
-</p>
+
 
 <p>You can see that a new draft post was created for me, and the Front Matter was pre-populated with the settings from the blog archetype. Just an easy way to set up new content really.</p>
 
@@ -280,7 +292,7 @@ justinfx.com/content/blog/new_post.md created
 
 <p>&ldquo;section/blog.html&rdquo; looks like this:</p>
 
-<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">{{ template &quot;chrome/head.html&quot; . }}
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">{{ template &quot;chrome/head.html&quot; . }}
 <span style="color: #062873; font-weight: bold">&lt;body&gt;</span>
 
 {{ template &quot;chrome/sidebar.html&quot; . }}
@@ -302,7 +314,7 @@ justinfx.com/content/blog/new_post.md created
 <span style="color: #062873; font-weight: bold">&lt;/body&gt;</span>
 <span style="color: #062873; font-weight: bold">&lt;/html&gt;</span>
 </pre></div>
-</p>
+
 
 <p>Breaking this down, we have template directives that will include other templates that render the common header and sidebar. Then we set up how &ldquo;/blog&rdquo; will look when displaying a date-sorted list of all my posts. We loop over all the blog posts, grouped by the year they were created, then loop over each post in a group and render it using its &ldquo;li&rdquo; (list item) definition. This is the place where Hugo will resolve which view to use for list elements. Because we are dealing with &ldquo;post&rdquo; types, Hugo will find &ldquo;layouts/post/li.html&rdquo; first (matching &ldquo;li&rdquo; with &ldquo;li.html&rdquo;, and use that to render each list item.</p>
 

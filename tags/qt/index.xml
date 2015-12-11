@@ -50,11 +50,11 @@ Qt 5.4.2
 
 &lt;p&gt;&lt;em&gt;test_qobj_qweakpointer&lt;/em&gt; : Creating QWeakPointers directly from QObject instances, adding them to a QList, and then deleting them all. This test could only be performed in Qt4, because Qt5 deprecated QObject tracking support for QWeakPointers, which can now only be used with QSharedPointer&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;test_qpointer&lt;/em&gt; : Creating QPointers directly from QObject instances, adding them to a QList, and then deleting them all.&lt;/p&gt;
+&lt;p&gt;_test&lt;em&gt;qpointer&lt;/em&gt; : Creating QPointers directly from QObject instances, adding them to a QList, and then deleting them all.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;test_boost_sharedptr&lt;/em&gt; : Creating &lt;code&gt;boost::shared_ptrs&lt;/code&gt; from basic struct instances, as well as boost::weak_ptrs for each, adding the shared_ptrs to a QList, and then deleting them&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;test_boost_qobj_sharedptr&lt;/em&gt; : Creating &lt;code&gt;boost::shared_ptrs&lt;/code&gt; from QObject instances, as well as boost::weak_ptrs for each, adding the shared_ptrs to a QList, and then deleting them&lt;/p&gt;
+&lt;p&gt;_test_boost_qobj&lt;em&gt;sharedptr&lt;/em&gt; : Creating &lt;code&gt;boost::shared_ptrs&lt;/code&gt; from QObject instances, as well as boost::weak_ptrs for each, adding the shared_ptrs to a QList, and then deleting them&lt;/p&gt;
 
 &lt;h4 id=&#34;the-test-results:c89abc9fedab4936f89941691d570e98&#34;&gt;The Test Results&lt;/h4&gt;
 
@@ -102,15 +102,15 @@ test_qpointer:              5599 ms   2832 ms
 test_boost_sharedptr:       1370 ms   1350 ms 
 test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt4_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
+&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt4_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
 	&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt4_pointers-300x157.png&#34; title alt&gt;
 &lt;/a&gt;
-&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt5_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
+
+&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt5_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
 	&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt5_pointers-300x154.png&#34; title alt&gt;
 &lt;/a&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;The test shows the overhead of simply going from a simple struct to a QObject, and then the further impact of introducing various smart pointers on QObjects, and also on non-QObjects where permitted.&lt;/p&gt;
 
@@ -202,12 +202,12 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;In your setup.py file, which is used for py2app, py2exe, or similar&amp;#8230; add this to the DATA_FILES list, so that it looks as such:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;    DATA_FILES &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; [(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;phonon_backend&amp;#39;&lt;/span&gt;, [
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;    DATA_FILES &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; [(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;phonon_backend&amp;#39;&lt;/span&gt;, [
       &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;/Developer/Applications/Qt/plugins/phonon_backend/libphonon_qt7.dylib&amp;#39;&lt;/span&gt;
     ])]
     
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;This will put the phonon backend plugin into the RESOURCES folder in the app.&lt;/p&gt;&lt;/li&gt;
 
@@ -252,7 +252,7 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2010/03/taskMonster2.jpg&#34; rel=&#34;lightbox[71]&#34;&gt;&lt;img class=&#34;alignnone size-large wp-image-72&#34; title=&#34;taskMonster2&#34; src=&#34;http://justinfx.com/wp-content/uploads/2010/03/taskMonster2-1024x724.jpg&#34; alt=&#34;&#34; width=&#34;663&#34; height=&#34;469&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;js-video vimeo&#34;&gt;
+&lt;div class=&#34;js-video vimeo&#34;&gt;
 	&lt;iframe src=&#34;https://player.vimeo.com/video/143717524?byline=0&#34; 
 	        width=&#34;640&#34; 
 	        height=&#34;360&#34; 
@@ -260,7 +260,7 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 	        mozallowfullscreen 
 	        allowfullscreen &gt;
 	&lt;/iframe&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -276,10 +276,10 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 
 &lt;p&gt;I noticed I was doing this a few times, in more than one of my classes, and finally got annoyed for the last time. I figured there had to be a simple way of just overloading the method on the normal object when I create an instance. Fortunately python considers everything objects and pretty much anything can be changed. So I did this:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
 myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mousePressEvent &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;lambda&lt;/span&gt; event: event&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;ignore()
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;Magic.&lt;/p&gt;
 

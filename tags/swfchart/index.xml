@@ -30,7 +30,7 @@
 
 &lt;p&gt;Example:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;chart &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; SwfChart()
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;chart &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; SwfChart()
 
 &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# the data&lt;/span&gt;
 chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addRow( &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Person A&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;5.5&lt;/span&gt; )
@@ -52,7 +52,7 @@ chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setContextMenu(abo
 &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# if you have the licensed version&lt;/span&gt;
 chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setLicense(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;license string&amp;#39;&lt;/span&gt;)
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;Now at this point, the object can be treated like a string to get the xml, or just call getXML() :&lt;/p&gt;
 

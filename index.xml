@@ -36,7 +36,7 @@
 
 &lt;p&gt;I started with the &lt;a href=&#34;https://github.com/SchumacherFM/wordpress-to-hugo-exporter&#34;&gt;Wordpress To Hugo Exporter&lt;/a&gt;. Even though there were some claims that it didn&amp;rsquo;t work 100% of the time, I actually had no problems using it with a semi recent 4.x install of Wordpress. I believe those that experienced issues might have had very large sites and encountered some kind of timeout issue. My site has relatively few posts, compared to others, and installing this plugin and exporting the site had worked right away. What you get as an end result is an archive of your site, converted into a basic Hugo project structure. All of your metadata from your posts are preserved in the Hugo format called &lt;a href=&#34;https://gohugo.io/content/front-matter/&#34;&gt;&amp;ldquo;Front Matter&amp;rdquo;&lt;/a&gt;. This is a section of metadata that sits at the top of every markdown file, which the engine will use to build out your static site properly. For instance, the Front Matter that was generated for my post entitled &lt;a href=&#34;http://justinfx.com/2015/06/07/comparing-performance-of-qt-smart-pointer-options/&#34;&gt;&amp;ldquo;Comparing performance of Qt smart pointer options&amp;rdquo;&lt;/a&gt;, looks like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;---&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;---&lt;/span&gt;
 title: Comparing performance of Qt smart pointer options
 author: Justin Israel
 type: post
@@ -52,15 +52,15 @@ tags:
   - qt
 &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;---&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;This is YAML (the other supported format is TOML), and gives the engine information about the post that it can use to format the page, and to organize it into the site. You can see definitions of categories and tags (preserved from the Wordpress export), which also drives other aspects of the site like the menu system.&lt;/p&gt;
 
 &lt;p&gt;Once I had my new set of markdown files, I saw that they needed a tiny bit of cleanup. This probably has to do with the type of plugins I used in Wordpress to format code and embed media, which couldn&amp;rsquo;t be translated to look exactly the way it should. But it was simple enough to go through each page and correct the bits of hyper-links and code formatting. A great thing about Hugo is that it comes with a production-quality web server, which you can use in development mode as you work on your site:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;$ &lt;/span&gt;hugo server -w -D
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;$ &lt;/span&gt;hugo server -w -D
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;This starts the server, and tells it to run in &amp;ldquo;watch&amp;rdquo; mode, and to also render posts that are still in &amp;ldquo;draft&amp;rdquo; mode, so that I can see them in their unpublished state on the site. I can then check out my site right away, by hitting &lt;a href=&#34;http://127.0.0.1:1313&#34;&gt;http://127.0.0.1:1313&lt;/a&gt; in my browser. &amp;ldquo;Watch&amp;rdquo; mode means that the site is instrumented with a websocket connection to the server, and will automatically refresh when the server detects that content has changed (after the server automatically renders the content again). This is awesome, because I can type out content, hit save, and see the changes. This was a bit clunkier of a process in Wordpress, where I would type some stuff in a WYSIWYG editor and have to hit &amp;ldquo;save draft&amp;rdquo;, and manually refresh my preview page in another tab (or maybe Wordpress auto-refreshed preview pages. I can&amp;rsquo;t remember now).&lt;/p&gt;
 
@@ -72,7 +72,7 @@ tags:
 
 &lt;p&gt;Generating your static site via Hugo is as simple as doing the following:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;$ &lt;/span&gt;hugo
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;$ &lt;/span&gt;hugo
 &lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt; of &lt;span style=&#34;color: #40a070&#34;&gt;1&lt;/span&gt; draft rendered
 &lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt; future content 
 &lt;span style=&#34;color: #40a070&#34;&gt;32&lt;/span&gt; pages created
@@ -81,7 +81,7 @@ tags:
 &lt;span style=&#34;color: #40a070&#34;&gt;3&lt;/span&gt; categories created
 in &lt;span style=&#34;color: #40a070&#34;&gt;195&lt;/span&gt; ms
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;This command causes Hugo to generate the site to the &amp;ldquo;public/&amp;rdquo; directory in the current working directory. If I had wanted to generate it to another location, I would just need to pass &lt;code&gt;-d &amp;lt;dest&amp;gt;&lt;/code&gt; to tell Hugo to generate to another output location.&lt;/p&gt;
 
@@ -95,7 +95,7 @@ in &lt;span style=&#34;color: #40a070&#34;&gt;195&lt;/span&gt; ms
 
 &lt;p&gt;The first thing you want to look at is your &lt;code&gt;config.yaml&lt;/code&gt; file. There isn&amp;rsquo;t much to it, and the default could be mostly correct for you. But I did have to change a few things to get it right. Mine looks like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;---&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;---&lt;/span&gt;
 baseurl: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;http://justinfx.com&amp;quot;&lt;/span&gt;
 languageCode: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;en-us&amp;quot;&lt;/span&gt;
 title: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;JustinFX.com&amp;quot;&lt;/span&gt;
@@ -116,7 +116,7 @@ taxonomies:
 params:
     &amp;lt; snip ... &amp;gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;Not every field is required. Probably the most important settings are the &lt;code&gt;baseurl&lt;/code&gt; and &lt;code&gt;title&lt;/code&gt;. The rest of these settings control optional aspects of the site. You can see that I am setting my Disqus id, allowing Hugo to embed its integrated Disqus comment system into the posts. I&amp;rsquo;m also setting some options for how code syntax highlighting is displayed, and some definitions for organization and &lt;a href=&#34;https://gohugo.io/extras/permalinks/&#34;&gt;permalinks&lt;/a&gt;.&lt;/p&gt;
 
@@ -144,7 +144,7 @@ params:
 
 &lt;p&gt;At first, I had thought archetypes were something more complicated than they actually are. Really all they do is define a new &amp;ldquo;type template&amp;rdquo; so that when you create new content with &lt;code&gt;hugo new &amp;lt;...&amp;gt;&lt;/code&gt;, the new content will be created with type-specific defaults. For instance, I have an archetype defined that makes any markdown files created in my &amp;ldquo;content/blog/&amp;rdquo; location have the type &amp;ldquo;post&amp;rdquo;:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;$ &lt;/span&gt;ls archetypes/
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;$ &lt;/span&gt;ls archetypes/
 blog.md
 
 &lt;span style=&#34;color: #bb60d5&#34;&gt;$ &lt;/span&gt;cat archetypes/blog.md
@@ -164,7 +164,7 @@ justinfx.com/content/blog/new_post.md created
 &lt;span style=&#34;color: #007020&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;post&amp;quot;&lt;/span&gt;
 +++
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;You can see that a new draft post was created for me, and the Front Matter was pre-populated with the settings from the blog archetype. Just an easy way to set up new content really.&lt;/p&gt;
 
@@ -199,7 +199,7 @@ justinfx.com/content/blog/new_post.md created
 
 &lt;p&gt;&amp;ldquo;section/blog.html&amp;rdquo; looks like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;{{ template &amp;quot;chrome/head.html&amp;quot; . }}
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;{{ template &amp;quot;chrome/head.html&amp;quot; . }}
 &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
 
 {{ template &amp;quot;chrome/sidebar.html&amp;quot; . }}
@@ -221,7 +221,7 @@ justinfx.com/content/blog/new_post.md created
 &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;Breaking this down, we have template directives that will include other templates that render the common header and sidebar. Then we set up how &amp;ldquo;/blog&amp;rdquo; will look when displaying a date-sorted list of all my posts. We loop over all the blog posts, grouped by the year they were created, then loop over each post in a group and render it using its &amp;ldquo;li&amp;rdquo; (list item) definition. This is the place where Hugo will resolve which view to use for list elements. Because we are dealing with &amp;ldquo;post&amp;rdquo; types, Hugo will find &amp;ldquo;layouts/post/li.html&amp;rdquo; first (matching &amp;ldquo;li&amp;rdquo; with &amp;ldquo;li.html&amp;rdquo;, and use that to render each list item.&lt;/p&gt;
 
@@ -334,11 +334,11 @@ Qt 5.4.2
 
 &lt;p&gt;&lt;em&gt;test_qobj_qweakpointer&lt;/em&gt; : Creating QWeakPointers directly from QObject instances, adding them to a QList, and then deleting them all. This test could only be performed in Qt4, because Qt5 deprecated QObject tracking support for QWeakPointers, which can now only be used with QSharedPointer&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;test_qpointer&lt;/em&gt; : Creating QPointers directly from QObject instances, adding them to a QList, and then deleting them all.&lt;/p&gt;
+&lt;p&gt;_test&lt;em&gt;qpointer&lt;/em&gt; : Creating QPointers directly from QObject instances, adding them to a QList, and then deleting them all.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;test_boost_sharedptr&lt;/em&gt; : Creating &lt;code&gt;boost::shared_ptrs&lt;/code&gt; from basic struct instances, as well as boost::weak_ptrs for each, adding the shared_ptrs to a QList, and then deleting them&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;test_boost_qobj_sharedptr&lt;/em&gt; : Creating &lt;code&gt;boost::shared_ptrs&lt;/code&gt; from QObject instances, as well as boost::weak_ptrs for each, adding the shared_ptrs to a QList, and then deleting them&lt;/p&gt;
+&lt;p&gt;_test_boost_qobj&lt;em&gt;sharedptr&lt;/em&gt; : Creating &lt;code&gt;boost::shared_ptrs&lt;/code&gt; from QObject instances, as well as boost::weak_ptrs for each, adding the shared_ptrs to a QList, and then deleting them&lt;/p&gt;
 
 &lt;h4 id=&#34;the-test-results:c89abc9fedab4936f89941691d570e98&#34;&gt;The Test Results&lt;/h4&gt;
 
@@ -386,15 +386,15 @@ test_qpointer:              5599 ms   2832 ms
 test_boost_sharedptr:       1370 ms   1350 ms 
 test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt4_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
+&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt4_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
 	&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt4_pointers-300x157.png&#34; title alt&gt;
 &lt;/a&gt;
-&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt5_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
+
+&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt5_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
 	&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt5_pointers-300x154.png&#34; title alt&gt;
 &lt;/a&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;The test shows the overhead of simply going from a simple struct to a QObject, and then the further impact of introducing various smart pointers on QObjects, and also on non-QObjects where permitted.&lt;/p&gt;
 
@@ -664,7 +664,7 @@ Dependencies:&lt;/p&gt;
 
 &lt;p&gt;Test:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;timeit&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; timeit 
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;timeit&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; timeit 
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;tabulate&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; tabulate
 
 setup &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&amp;#39;&amp;#39;d = {&lt;/span&gt;
@@ -728,7 +728,7 @@ dec_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;insert(&lt;spa
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;Decoding Test (&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; loops)&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; loops
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; tabulate(dec_table, headers&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;firstrow&amp;quot;&lt;/span&gt;)
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;OUTPUT:&lt;/p&gt;
 
@@ -871,12 +871,12 @@ brew install boost&lt;/pre&gt;
 
 &lt;p&gt;Create a virtualenv called &amp;#8220;kinect&amp;#8221;&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;pip install virtualenv
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;pip install virtualenv
 virtualenv --no-site-packages -p python2.7 kinect
 &lt;span style=&#34;color: #007020&#34;&gt;cd &lt;/span&gt;kinect
 &lt;span style=&#34;color: #007020&#34;&gt;source &lt;/span&gt;bin/activate
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;h5 id=&#34;install-libusb-patched-version:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install libusb (patched version)&lt;/strong&gt;&lt;/h5&gt;
 
@@ -919,14 +919,14 @@ virtualenv --no-site-packages -p python2.7 kinect
 
 &lt;p&gt;Be aware that on OSX, PyOpenNI requires a framework build of python 2.7+ and that you must build it for x86_64 specifically. Also, I was having major problems with cmake properly finding the python includes location. I had to suggest a fix, so &lt;a href=&#34;https://github.com/jmendeth/PyOpenNI/issues/16#issuecomment-6515678&#34;&gt;please see here for the necessary corrections&lt;/a&gt;. I have referenced a patched fork of the repository below.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;CPPFLAGS&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;-arch x86_64&amp;quot;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;CPPFLAGS&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;-arch x86_64&amp;quot;&lt;/span&gt;
 git clone git://github.com/justinfx/PyOpenNI.git
 mkdir PyOpenNI-build
 &lt;span style=&#34;color: #007020&#34;&gt;cd &lt;/span&gt;PyOpenNI-build
 cmake -D &lt;span style=&#34;color: #bb60d5&#34;&gt;PYTHON_INCLUDE_DIR&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Headers ../PyOpenNI
 make
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;copy the lib/openni.so module to the python2.7 site-packages&lt;/p&gt;
 
@@ -1171,7 +1171,7 @@ make
 
 &lt;p&gt;Here is my example of how to achieve this&amp;#8230;&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;PyQt4&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; QtCore, QtGui
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;PyQt4&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; QtCore, QtGui
 
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;maya.cmds&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;cmds&lt;/span&gt;
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;maya.OpenMayaUI&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;mui&lt;/span&gt;
@@ -1244,7 +1244,7 @@ make
     &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;pass&lt;/span&gt;    
 dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;You need sip and the MQtUtil functions to convert between maya node paths and python Qbjects. Its the same idea as having to use those functions to get a reference to the maya MainWindow, in order to parent your dialog.&lt;/p&gt;
 </description>

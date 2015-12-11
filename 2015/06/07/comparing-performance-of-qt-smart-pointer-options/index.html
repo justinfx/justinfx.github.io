@@ -47,6 +47,18 @@
     })
   </script>
 
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-6692856-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
 </head>
 
 <body>
@@ -131,11 +143,11 @@ Qt 5.4.2
 
 <p><em>test_qobj_qweakpointer</em> : Creating QWeakPointers directly from QObject instances, adding them to a QList, and then deleting them all. This test could only be performed in Qt4, because Qt5 deprecated QObject tracking support for QWeakPointers, which can now only be used with QSharedPointer</p>
 
-<p><em>test_qpointer</em> : Creating QPointers directly from QObject instances, adding them to a QList, and then deleting them all.</p>
+<p>_test<em>qpointer</em> : Creating QPointers directly from QObject instances, adding them to a QList, and then deleting them all.</p>
 
 <p><em>test_boost_sharedptr</em> : Creating <code>boost::shared_ptrs</code> from basic struct instances, as well as boost::weak_ptrs for each, adding the shared_ptrs to a QList, and then deleting them</p>
 
-<p><em>test_boost_qobj_sharedptr</em> : Creating <code>boost::shared_ptrs</code> from QObject instances, as well as boost::weak_ptrs for each, adding the shared_ptrs to a QList, and then deleting them</p>
+<p>_test_boost_qobj<em>sharedptr</em> : Creating <code>boost::shared_ptrs</code> from QObject instances, as well as boost::weak_ptrs for each, adding the shared_ptrs to a QList, and then deleting them</p>
 
 <h4 id="the-test-results:c89abc9fedab4936f89941691d570e98">The Test Results</h4>
 
@@ -183,15 +195,15 @@ test_qpointer:              5599 ms   2832 ms
 test_boost_sharedptr:       1370 ms   1350 ms 
 test_boost_qobj_sharedptr:  2864 ms   2453 ms</pre>
 
-<p><a href="/wp-content/uploads/2015/06/qt4_pointers.png" title data-fluidbox class="fluidbox">
+<a href="/wp-content/uploads/2015/06/qt4_pointers.png" title data-fluidbox class="fluidbox">
 	<img src="/wp-content/uploads/2015/06/qt4_pointers-300x157.png" title alt>
 </a>
-</p>
 
-<p><a href="/wp-content/uploads/2015/06/qt5_pointers.png" title data-fluidbox class="fluidbox">
+
+<a href="/wp-content/uploads/2015/06/qt5_pointers.png" title data-fluidbox class="fluidbox">
 	<img src="/wp-content/uploads/2015/06/qt5_pointers-300x154.png" title alt>
 </a>
-</p>
+
 
 <p>The test shows the overhead of simply going from a simple struct to a QObject, and then the further impact of introducing various smart pointers on QObjects, and also on non-QObjects where permitted.</p>
 

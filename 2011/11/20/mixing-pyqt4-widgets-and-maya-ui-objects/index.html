@@ -47,6 +47,18 @@
     })
   </script>
 
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-6692856-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
 </head>
 
 <body>
@@ -103,7 +115,7 @@
 
 <p>Here is my example of how to achieve this&#8230;</p>
 
-<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">PyQt4</span> <span style="color: #007020; font-weight: bold">import</span> QtCore, QtGui
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">PyQt4</span> <span style="color: #007020; font-weight: bold">import</span> QtCore, QtGui
 
 <span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">maya.cmds</span> <span style="color: #007020; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">cmds</span>
 <span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">maya.OpenMayaUI</span> <span style="color: #007020; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">mui</span>
@@ -176,7 +188,7 @@
     <span style="color: #007020; font-weight: bold">pass</span>    
 dialog <span style="color: #666666">=</span> show()
 </pre></div>
-</p>
+
 
 <p>You need sip and the MQtUtil functions to convert between maya node paths and python Qbjects. Its the same idea as having to use those functions to get a reference to the maya MainWindow, in order to parent your dialog.</p>
 
