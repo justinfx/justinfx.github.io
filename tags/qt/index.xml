@@ -28,7 +28,7 @@
 
 &lt;p&gt;The test for my benchmark involved creating a number objects, adding them to a list, and then deleting them. The options for the test include both pointers to a basic struct and a QObject, QPointers, QSharedPointers, QWeakPointers, and just for an external comparison I also included boost::shared_ptr and boost::weak_ptr. The test was performed with different numbers of objects, as well as for both Qt4 and Qt5. Here is a more detailed description of each test.&lt;/p&gt;
 
-&lt;h4 id=&#34;the-test-environment&#34;&gt;The Test Environment&lt;/h4&gt;
+&lt;h4 id=&#34;the-test-environment:c89abc9fedab4936f89941691d570e98&#34;&gt;The Test Environment&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;OSX 10.9.5 Laptop  
 2.8 Ghz Intel Core 2 Duo
@@ -38,7 +38,7 @@ Qt 4.8.6
 Qt 5.4.2
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;description-of-tests&#34;&gt;Description of Tests&lt;/h4&gt;
+&lt;h4 id=&#34;description-of-tests:c89abc9fedab4936f89941691d570e98&#34;&gt;Description of Tests&lt;/h4&gt;
 
 &lt;p&gt;&lt;em&gt;test_raw_pointer&lt;/em&gt; : Creating pointers to a basic struct, adding the raw pointers to a QList, and then deleting all of the pointers&lt;/p&gt;
 
@@ -56,7 +56,7 @@ Qt 5.4.2
 
 &lt;p&gt;_test_boost_qobj&lt;em&gt;sharedptr&lt;/em&gt; : Creating &lt;code&gt;boost::shared_ptrs&lt;/code&gt; from QObject instances, as well as boost::weak_ptrs for each, adding the shared_ptrs to a QList, and then deleting them&lt;/p&gt;
 
-&lt;h4 id=&#34;the-test-results&#34;&gt;The Test Results&lt;/h4&gt;
+&lt;h4 id=&#34;the-test-results:c89abc9fedab4936f89941691d570e98&#34;&gt;The Test Results&lt;/h4&gt;
 
 &lt;pre class=&#34;&#34;&gt;Testing w/ 5000 objects        Qt4       Qt5
 =============================================
@@ -202,12 +202,11 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;In your setup.py file, which is used for py2app, py2exe, or similar&amp;#8230; add this to the DATA_FILES list, so that it looks as such:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;    DATA_FILES &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; [(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;phonon_backend&amp;#39;&lt;/span&gt;, [
-      &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;/Developer/Applications/Qt/plugins/phonon_backend/libphonon_qt7.dylib&amp;#39;&lt;/span&gt;
+
+    DATA_FILES = [(&#39;phonon_backend&#39;, [
+      &#39;/Developer/Applications/Qt/plugins/phonon_backend/libphonon_qt7.dylib&#39;
     ])]
     
-&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;This will put the phonon backend plugin into the RESOURCES folder in the app.&lt;/p&gt;&lt;/li&gt;
 
@@ -276,31 +275,31 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 
 &lt;p&gt;I noticed I was doing this a few times, in more than one of my classes, and finally got annoyed for the last time. I figured there had to be a simple way of just overloading the method on the normal object when I create an instance. Fortunately python considers everything objects and pretty much anything can be changed. So I did this:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
-myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mousePressEvent &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;lambda&lt;/span&gt; event: event&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;ignore()
-&lt;/pre&gt;&lt;/div&gt;
+
+myLabel = QLabel()
+myLabel.mousePressEvent = lambda event: event.ignore()
 
 
 &lt;p&gt;Magic.&lt;/p&gt;
 
 &lt;p&gt;I have also had to make clickable widgets, such as QLabel:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
-myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mousePressEvent &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;lambda&lt;/span&gt; event: myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;emit(SIGNAL(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;clicked&amp;quot;&lt;/span&gt;))
-&lt;/pre&gt;&lt;/div&gt;
+
+myLabel = QLabel()
+myLabel.mousePressEvent = lambda event: myLabel.emit(SIGNAL(&#34;clicked&#34;))
 
 
 &lt;p&gt;Or if you had to do more than just a single statement:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;clickedEvent&lt;/span&gt;(event):
-myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;emit(SIGNAL(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;clicked&amp;quot;&lt;/span&gt;))
-&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# do other stuff&lt;/span&gt;
-&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# do stuff&lt;/span&gt;
-event&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;accept()
-myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mousePressEvent &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; clickedEvent
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;p&gt;
+myLabel = QLabel()
+def clickedEvent(event):
+myLabel.emit(SIGNAL(&#34;clicked&#34;))
+# do other stuff
+# do stuff
+event.accept()
+myLabel.mousePressEvent = clickedEvent
+&lt;/p&gt;
 
 &lt;p&gt;I like this better than piling up subclasses that don&amp;#8217;t do much.&lt;/p&gt;
 </description>

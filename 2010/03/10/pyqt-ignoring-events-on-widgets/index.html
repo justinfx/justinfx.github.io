@@ -113,31 +113,31 @@ ga('send', 'pageview');
 
 <p>I noticed I was doing this a few times, in more than one of my classes, and finally got annoyed for the last time. I figured there had to be a simple way of just overloading the method on the normal object when I create an instance. Fortunately python considers everything objects and pretty much anything can be changed. So I did this:</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">myLabel <span style="color: #666666">=</span> QLabel()
-myLabel<span style="color: #666666">.</span>mousePressEvent <span style="color: #666666">=</span> <span style="color: #007020; font-weight: bold">lambda</span> event: event<span style="color: #666666">.</span>ignore()
-</pre></div>
+
+myLabel = QLabel()
+myLabel.mousePressEvent = lambda event: event.ignore()
 
 
 <p>Magic.</p>
 
 <p>I have also had to make clickable widgets, such as QLabel:</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">myLabel <span style="color: #666666">=</span> QLabel()
-myLabel<span style="color: #666666">.</span>mousePressEvent <span style="color: #666666">=</span> <span style="color: #007020; font-weight: bold">lambda</span> event: myLabel<span style="color: #666666">.</span>emit(SIGNAL(<span style="color: #4070a0">&quot;clicked&quot;</span>))
-</pre></div>
+
+myLabel = QLabel()
+myLabel.mousePressEvent = lambda event: myLabel.emit(SIGNAL("clicked"))
 
 
 <p>Or if you had to do more than just a single statement:</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">myLabel <span style="color: #666666">=</span> QLabel()
-<span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">clickedEvent</span>(event):
-myLabel<span style="color: #666666">.</span>emit(SIGNAL(<span style="color: #4070a0">&quot;clicked&quot;</span>))
-<span style="color: #60a0b0; font-style: italic"># do other stuff</span>
-<span style="color: #60a0b0; font-style: italic"># do stuff</span>
-event<span style="color: #666666">.</span>accept()
-myLabel<span style="color: #666666">.</span>mousePressEvent <span style="color: #666666">=</span> clickedEvent
-</pre></div>
-
+<p>
+myLabel = QLabel()
+def clickedEvent(event):
+myLabel.emit(SIGNAL("clicked"))
+# do other stuff
+# do stuff
+event.accept()
+myLabel.mousePressEvent = clickedEvent
+</p>
 
 <p>I like this better than piling up subclasses that don&#8217;t do much.</p>
 

@@ -63,35 +63,35 @@
 &lt;li&gt;&lt;a href=&#34;https://github.com/jmendeth/PyOpenNI&#34;&gt;PyOpenNI&lt;/a&gt; python bindings&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&#34;span-style-text-decoration-underline-install-details-span&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Install Details&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;span-style-text-decoration-underline-install-details-span:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Install Details&lt;/span&gt;&lt;/h4&gt;
 
-&lt;h5 id=&#34;install-homebrew-package-manager&#34;&gt;&lt;strong&gt;Install homebrew (package manager)&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-homebrew-package-manager:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install homebrew (package manager)&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://mxcl.github.com/homebrew/&#34;&gt;http://mxcl.github.com/homebrew/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;install-build-tools&#34;&gt;&lt;strong&gt;Install build tools&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-build-tools:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install build tools&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;pre&gt;brew install cmake
 brew install boost&lt;/pre&gt;
 
-&lt;h5 id=&#34;install-python2-7&#34;&gt;&lt;strong&gt;Install python2.7&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-python2-7:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install python2.7&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;pre&gt;brew install python --framework&lt;/pre&gt;
 
-&lt;h5 id=&#34;suggestion-virtualenv-environment&#34;&gt;&lt;strong&gt;Suggestion: virtualenv Environment&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;suggestion-virtualenv-environment:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Suggestion: virtualenv Environment&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;This is not a requirement. But I recommend using virtualenv to set up an environment that specifically uses python2.7 so that you don&amp;#8217;t have to fight with mixed dependencies and versions.&lt;/p&gt;
 
 &lt;p&gt;Create a virtualenv called &amp;#8220;kinect&amp;#8221;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;pip install virtualenv
+
+pip install virtualenv
 virtualenv --no-site-packages -p python2.7 kinect
-&lt;span style=&#34;color: #007020&#34;&gt;cd &lt;/span&gt;kinect
-&lt;span style=&#34;color: #007020&#34;&gt;source &lt;/span&gt;bin/activate
-&lt;/pre&gt;&lt;/div&gt;
+cd kinect
+source bin/activate
 
 
-&lt;h5 id=&#34;install-libusb-patched-version&#34;&gt;&lt;strong&gt;Install libusb (patched version)&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-libusb-patched-version:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install libusb (patched version)&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;There is a special patched version of the libusb library, in the form of a homebrew formula.&lt;/p&gt;
 
@@ -102,7 +102,7 @@ virtualenv --no-site-packages -p python2.7 kinect
 &lt;pre&gt;&lt;code&gt;brew install libusb-freenect
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h5 id=&#34;install-sensorkinect-drivers&#34;&gt;&lt;strong&gt;Install SensorKinect drivers&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-sensorkinect-drivers:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install SensorKinect drivers&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;pre&gt;&lt;code&gt;git clone https://github.com/avin2/SensorKinect.git
 &lt;/code&gt;&lt;/pre&gt;
@@ -112,7 +112,7 @@ virtualenv --no-site-packages -p python2.7 kinect
 &lt;pre&gt;&lt;code&gt;sudo ./install.sh
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h5 id=&#34;install-openni-framework&#34;&gt;&lt;strong&gt;Install OpenNI framework&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-openni-framework:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install OpenNI framework&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Go here: &lt;a href=&#34;http://www.openni.org/Downloads/OpenNIModules.aspx&#34;&gt;http://www.openni.org/Downloads/OpenNIModules.aspx&lt;/a&gt;&lt;/li&gt;
@@ -120,7 +120,7 @@ virtualenv --no-site-packages -p python2.7 kinect
 &lt;li&gt;&lt;code&gt;sudo ./install.sh&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h5 id=&#34;install-nite-middleware-for-openni&#34;&gt;&lt;strong&gt;Install NITE middleware (for OpenNI)&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-nite-middleware-for-openni:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install NITE middleware (for OpenNI)&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Go here: &lt;a href=&#34;http://www.openni.org/Downloads/OpenNIModules.aspx&#34;&gt;http://www.openni.org/Downloads/OpenNIModules.aspx&lt;/a&gt;&lt;/li&gt;
@@ -128,22 +128,22 @@ virtualenv --no-site-packages -p python2.7 kinect
 &lt;li&gt;&lt;code&gt;sudo ./install.sh&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h5 id=&#34;install-pyopenni&#34;&gt;&lt;strong&gt;Install PyOpenNI&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-pyopenni:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install PyOpenNI&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;Be aware that on OSX, PyOpenNI requires a framework build of python 2.7+ and that you must build it for x86_64 specifically. Also, I was having major problems with cmake properly finding the python includes location. I had to suggest a fix, so &lt;a href=&#34;https://github.com/jmendeth/PyOpenNI/issues/16#issuecomment-6515678&#34;&gt;please see here for the necessary corrections&lt;/a&gt;. I have referenced a patched fork of the repository below.&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;CPPFLAGS&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;-arch x86_64&amp;quot;&lt;/span&gt;
+
+export CPPFLAGS=&#34;-arch x86_64&#34;
 git clone git://github.com/justinfx/PyOpenNI.git
 mkdir PyOpenNI-build
-&lt;span style=&#34;color: #007020&#34;&gt;cd &lt;/span&gt;PyOpenNI-build
-cmake -D &lt;span style=&#34;color: #bb60d5&#34;&gt;PYTHON_INCLUDE_DIR&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Headers ../PyOpenNI
+cd PyOpenNI-build
+cmake -D PYTHON_INCLUDE_DIR=/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Headers ../PyOpenNI
 make
-&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;copy the lib/openni.so module to the python2.7 site-packages&lt;/p&gt;
 
-&lt;h4 id=&#34;span-style-text-decoration-underline-examples-span&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Examples&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;span-style-text-decoration-underline-examples-span:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Examples&lt;/span&gt;&lt;/h4&gt;
 
 &lt;p&gt;Once you have everything installed, you can try out the examples that are included both in the NITE source location that you downloaded and also in the PyOpenNI source location:&lt;/p&gt;
 
@@ -161,7 +161,7 @@ make
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;div class=&#34;embed video-player&#34;&gt;
+&lt;p&gt;&lt;div class=&#34;embed video-player&#34;&gt;
 	&lt;iframe class=&#34;youtube-player&#34; 
 			type=&#34;text/html&#34; 
 			width=&#34;640&#34; height=&#34;385&#34; 
@@ -171,7 +171,7 @@ make
 	&lt;/iframe&gt;
 &lt;/div&gt;
 
-
+&lt;/p&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 </description>
@@ -197,7 +197,7 @@ make
 
 &lt;p&gt;It seemed the problem was not just limited to my specific early 2011 Macbook Pro. Suggestions ranged from resetting the PRAM (holding cmd+option+p+r for a couple of reboot cycles), to toggling the screen through display resolutions, to adjusting brightness of the display. Nothing seemed to make much of a difference to me.&lt;/p&gt;
 
-&lt;h4 id=&#34;inversion-pixel-walk&#34;&gt;Inversion (pixel-walk)&lt;/h4&gt;
+&lt;h4 id=&#34;inversion-pixel-walk:9e3cc28b2ebc6ec1cd4f8ea209bce00a&#34;&gt;Inversion (pixel-walk)&lt;/h4&gt;
 
 &lt;p&gt;Googling also turned up a reference to this site, which offers various types of LCD tests: &lt;a href=&#34;http://www.lagom.nl/lcd-test/inversion.php&#34;&gt;http://www.lagom.nl/lcd-test/inversion.php&lt;/a&gt;&lt;/p&gt;
 
@@ -279,7 +279,7 @@ make
   &lt;a href=&#34;http://www.lagom.nl/lcd-test/inversion.php&#34;&gt;Inversion (pixel-walk)&lt;/a&gt; test results on LCD displays&lt;br /&gt; &lt;/caption&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&#34;apple-support&#34;&gt;Apple Support&lt;/h4&gt;
+&lt;h4 id=&#34;apple-support:9e3cc28b2ebc6ec1cd4f8ea209bce00a&#34;&gt;Apple Support&lt;/h4&gt;
 
 &lt;p&gt;After speaking to support over the phone, they suggested that I go into the store for more help. When I got to the store and started speaking with a tech at the Genius Bar, he had never heard of this issue before. But once I showed him an example on both news.google.com, and in my Apple Mail, he definitely acknowledged that its noticeable. He then went off into the back to research the issue a bit.&lt;/p&gt;
 
@@ -353,7 +353,7 @@ make
       <guid>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</guid>
       <description>
 
-&lt;h4 id=&#34;update&#34;&gt;Update:&lt;/h4&gt;
+&lt;h4 id=&#34;update:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;Update:&lt;/h4&gt;
 
 &lt;p&gt;I am now hosting a built package for Maya2011: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.7.4-maya2011-x64-osx-10.6.pkg&#34;&gt;MyQt4.7.4-maya2011-x64-osx-10.6.pkg&lt;/a&gt; And for Maya 2012+, see: &lt;a href=&#34;http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/&#34;&gt;Installing pyqt4 for maya2012&lt;/a&gt;&lt;/p&gt;
 
@@ -365,11 +365,11 @@ make
 
 &lt;p&gt;What I finally figured out was a mish-mash of information from the maya documention, and different forums and user groups. So I decided to make this easier on anyone having the same problems as I did, and just collect that information into one place. This process is for OSX. I&amp;#8217;m sure most of it is probably still relevant to linux or win, except for the last parts with &amp;#8216;install_name_tool&amp;#8217;. You would just need to make sure to find the right Qt/PyQt/SIP packages for your OS.&lt;/p&gt;
 
-&lt;h5 id=&#34;building-pyqt4-for-maya-2011-on-osx&#34;&gt;Building PyQt4 for Maya 2011 on OSX&lt;/h5&gt;
+&lt;h5 id=&#34;building-pyqt4-for-maya-2011-on-osx:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;Building PyQt4 for Maya 2011 on OSX&lt;/h5&gt;
 
 &lt;hr /&gt;
 
-&lt;h6 id=&#34;update-for-maya-2012&#34;&gt;&lt;em&gt;&lt;strong&gt;Update for Maya 2012&lt;/strong&gt;&lt;/em&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;update-for-maya-2012:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;&lt;em&gt;&lt;strong&gt;Update for Maya 2012&lt;/strong&gt;&lt;/em&gt;&lt;/h6&gt;
 
 &lt;p&gt;While Maya uses newer versions, it seems the versions from the 2011 install still work. But here they are anyways incase you want the newer version for 2012:&lt;/p&gt;
 
@@ -383,27 +383,25 @@ make
 
 &lt;p&gt;Make sure you have downloaded and installed the latest XCode from Apple. Its also included on your OSX installation disc.&lt;/p&gt;
 
-&lt;h6 id=&#34;qt-maya-has-a-specific-version-of-qt-built-into-it-this-is-qt-4-5-3&#34;&gt;Qt: Maya has a specific version of Qt built into it. This is Qt 4.5.3.&lt;/h6&gt;
+&lt;h6 id=&#34;qt-maya-has-a-specific-version-of-qt-built-into-it-this-is-qt-4-5-3:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;Qt: Maya has a specific version of Qt built into it. This is Qt 4.5.3.&lt;/h6&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Download:  &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/src/qt-mac-opensource-src-4.5.3.tar.gz&#34;&gt;qt-mac-opensource-src-4.5.3.tar.gz&lt;/a&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Extract: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;tar zxvf qt-mac-opensource-src-4.5.3.tar.gz
-&lt;span style=&#34;color: #007020&#34;&gt;cd &lt;/span&gt;qt-mac-opensource-src-4.5.3
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Extract: 
+tar zxvf qt-mac-opensource-src-4.5.3.tar.gz
+cd qt-mac-opensource-src-4.5.3&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Build and install: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;./configure -cocoa -arch x86_64 -debug-and-release &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
-  -no-phonon -no-phonon-backend -no-qt3support &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
-  -no-webkit -nomake docs -nomake examples -nomake demos &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+&lt;li&gt;&lt;p&gt;Build and install: 
+./configure -cocoa -arch x86_64 -debug-and-release \
+  -no-phonon -no-phonon-backend -no-qt3support \
+  -no-webkit -nomake docs -nomake examples -nomake demos \
   -nomake translations -no-rpath -no-framework
 make -j 8
-sudo make install
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;&lt;/li&gt;
+sudo make install&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h6 id=&#34;sip-the-maya-docs-recommend-sip-version-4-10&#34;&gt;SIP: The maya docs recommend sip version 4.10&lt;/h6&gt;
+&lt;h6 id=&#34;sip-the-maya-docs-recommend-sip-version-4-10:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;SIP: The maya docs recommend sip version 4.10&lt;/h6&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Download this specific SIP:   &lt;a href=&#34;http://justinfx.com/wp-content/uploads/2011/01/sip-4.10.tar.gz&#34;&gt;sip-4.10.tar.gz&lt;/a&gt;&lt;/li&gt;
@@ -411,15 +409,14 @@ sudo make install
 &lt;li&gt;&lt;p&gt;Extract: &lt;pre class=&#34;theme:twilight top-margin:20 bottom-margin:20 toolbar-overlay:false striped:false nums:false lang:sh decode:true&#34;&gt;tar zxvf sip-4.10.tar.gz
 cd sip-4.10&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Build and install: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
-  configure.py --arch&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;x86_64
+&lt;li&gt;&lt;p&gt;Build and install: 
+/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy \
+  configure.py --arch=x86_64
 make -j 8
-sudo make install
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;&lt;/li&gt;
+sudo make install&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h6 id=&#34;pyqt4-the-maya-docs-suggest-pyqt-4-7&#34;&gt;PyQt4: The maya docs suggest PyQt 4.7&lt;/h6&gt;
+&lt;h6 id=&#34;pyqt4-the-maya-docs-suggest-pyqt-4-7:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;PyQt4: The maya docs suggest PyQt 4.7&lt;/h6&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Download this specific PyQt: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/src/PyQt-mac-gpl-4.7.4.tar.gz&#34;&gt;PyQt-mac-gpl-4.7.4.tar.gz&lt;/a&gt;&lt;/li&gt;
@@ -427,74 +424,74 @@ sudo make install
 &lt;li&gt;&lt;p&gt;Extract: &lt;pre class=&#34;striped:false nums:false lang:sh decode:true&#34;&gt;tar zxvf PyQt-mac-gpl-4.7.3.tar.gz
 cd PyQt-mac-gpl-4.7.3&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Set up some environment variables before building: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;QTDIR&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt-4.5.3
-&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;PATH&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt-4.5.3/bin:&lt;span style=&#34;color: #bb60d5&#34;&gt;$PATH&lt;/span&gt;
-&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;QMAKESPEC&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt-4.5.3/mkspecs/macx-g++
-&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;DYLD_LIBRARY_PATH&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt-4.5.3/lib
-&lt;/pre&gt;&lt;/div&gt;
+&lt;li&gt;&lt;p&gt;Set up some environment variables before building: 
+export QTDIR=/usr/local/Trolltech/Qt-4.5.3
+export PATH=/usr/local/Trolltech/Qt-4.5.3/bin:$PATH
+export QMAKESPEC=/usr/local/Trolltech/Qt-4.5.3/mkspecs/macx-g++
+export DYLD_LIBRARY_PATH=/usr/local/Trolltech/Qt-4.5.3/lib
 &lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Build and install: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
-  configure.py &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
-  &lt;span style=&#34;color: #bb60d5&#34;&gt;LIBDIR_QT&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt‐4.5.3/lib &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
-  &lt;span style=&#34;color: #bb60d5&#34;&gt;INCDIR_QT&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt‐4.5.3/include &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
-  &lt;span style=&#34;color: #bb60d5&#34;&gt;MOC&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt‐4.5.3/bin/moc &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+&lt;li&gt;&lt;p&gt;Build and install: 
+/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy \
+  configure.py \
+  LIBDIR_QT=/usr/local/Trolltech/Qt‐4.5.3/lib \
+  INCDIR_QT=/usr/local/Trolltech/Qt‐4.5.3/include \
+  MOC=/usr/local/Trolltech/Qt‐4.5.3/bin/moc \
   -w --no-designer-plugin
 make -j 8
 sudo make install
-&lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;PyQt4 will now be installed into Maya&amp;#8217;s python site-packages, BUT will be linked against the wrong Qt binaries. The maya docs have an annoying multi step set of commands but they don&amp;#8217;t copy/paste nicely, so here is a for-loop you can use: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;for&lt;/span&gt; mod in Core Gui Svg OpenGL Xml
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;do&lt;/span&gt; 
-  sudo find /Applications/Autodesk/maya2011/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python2.6/site-packages/PyQt4 -name &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;*so&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
-  -exec install_name_tool -change libQt&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;mod&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;}&lt;/span&gt;.4.dylib @executable_path/Qt&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;mod&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;{}&lt;/span&gt; ;
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;done&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;li&gt;&lt;p&gt;PyQt4 will now be installed into Maya&amp;#8217;s python site-packages, BUT will be linked against the wrong Qt binaries. The maya docs have an annoying multi step set of commands but they don&amp;#8217;t copy/paste nicely, so here is a for-loop you can use: 
+for mod in Core Gui Svg OpenGL Xml
+do 
+  sudo find /Applications/Autodesk/maya2011/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python2.6/site-packages/PyQt4 -name &#34;*so&#34; \
+  -exec install_name_tool -change libQt${mod}.4.dylib @executable_path/Qt${mod} {} ;
+done
 &lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;At this point you should be able to start up Maya and import and run PyQt from the script editor. You no longer need the pumpThread. Here is a test code snippet that I borrowed from here (the original had typos in it that I corrected)&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;maya.OpenMayaUI&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;mui&lt;/span&gt;
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;PyQt4.QtCore&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;PyQt4.QtGui&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;
 
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;getMayaWindow&lt;/span&gt;():
-    ptr &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mainWindow()
-    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;return&lt;/span&gt; sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;wrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(ptr), QObject)
+import maya.OpenMayaUI as mui
+from PyQt4.QtCore import *
+from PyQt4.QtGui import *
 
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;Form&lt;/span&gt;(QDialog):
-    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;__init__&lt;/span&gt;(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;, parent&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;None&lt;/span&gt;):
-        &lt;span style=&#34;color: #007020&#34;&gt;super&lt;/span&gt;(Form, &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;__init__(parent)
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setWindowTitle(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Test Dialog&amp;#39;&lt;/span&gt;)
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setObjectName(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;mainUI&amp;#39;&lt;/span&gt;)
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mainLayout &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QVBoxLayout(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;myButton &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QPushButton(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;myButton&amp;#39;&lt;/span&gt;)
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mainLayout&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addWidget(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;myButton)
+def getMayaWindow():
+    ptr = mui.MQtUtil.mainWindow()
+    return sip.wrapinstance(long(ptr), QObject)
 
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;global&lt;/span&gt; app
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;global&lt;/span&gt; form
-app &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; qApp
-form &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; Form(getMayaWindow())
-form&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;show()
-&lt;/pre&gt;&lt;/div&gt;
+class Form(QDialog):
+    def __init__(self, parent=None):
+        super(Form, self).__init__(parent)
+        self.setWindowTitle(&#39;Test Dialog&#39;)
+        self.setObjectName(&#39;mainUI&#39;)
+        self.mainLayout = QVBoxLayout(self)
+        self.myButton = QPushButton(&#39;myButton&#39;)
+        self.mainLayout.addWidget(self.myButton)
+
+global app
+global form
+app = qApp
+form = Form(getMayaWindow())
+form.show()
 
 
 &lt;p&gt;It doesn&amp;#8217;t seem like you even need the install of Qt 4.5.3 that we did at this point since we changed the links, unless you use another Qt module besides QtCore, QtGui, QtSvg, QtXml, QtOpenGL (such as QtNetwork), but this could be solved by copying over the missing libs to where Maya is expecting them. Example for copying over QtNetwork:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo cp /usr/local/Trolltech/Qt-4.5.3/lib/libQtNetwork.* 
+&lt;p&gt;
+sudo cp /usr/local/Trolltech/Qt-4.5.3/lib/libQtNetwork.* 
     /Applications/Autodesk/maya2011/Maya.app/Contents/MacOS
 sudo install_name_tool -change libQtCore.4.dylib @executable_path/QtCore 
     /Applications/Autodesk/maya2011/Maya.app/Contents/MacOS/libQtNetwork.4.dylib
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/p&gt;
 
 &lt;p&gt;If you happen to have a mixed library environment like me, with more than one python lib location for code, and you see any funny errors while importing a module, just make sure that mayas python site-package is always in the front of the sys.path:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sys&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;path&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;insert(&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;/Applications/Autodesk/maya2011/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python2.6/site-packages&amp;#39;&lt;/span&gt;)
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;p&gt;
+sys.path.insert(0,&#39;/Applications/Autodesk/maya2011/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python2.6/site-packages&#39;)
+&lt;/p&gt;
 
 &lt;p&gt;And there you have it. PyQt4 now installed in Maya 2011 under OSX.&lt;/p&gt;
 

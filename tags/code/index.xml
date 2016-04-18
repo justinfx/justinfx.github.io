@@ -36,11 +36,11 @@
 
 &lt;p&gt;&lt;strong&gt;Short questions that primarily request a complete code example as an answer are counter-productive to code communities.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;answer-option-1&#34;&gt;Answer Option 1&lt;/h5&gt;
+&lt;h5 id=&#34;answer-option-1:fdf3e8731e376405437712c7b8b93685&#34;&gt;Answer Option 1&lt;/h5&gt;
 
 &lt;p&gt;As the topic of this article suggests, option 1 is &amp;#8220;Write my code for me&amp;#8221;. It might seem easy as a one-off situation to simply donate a working code snippet and get the person asking this question moving on their merry way, but really this is not helping them in the long run. They haven&amp;#8217;t learned anything beyond the process of hitting a roadblock, then immediately going online to ask for a solution. Had this person included some references to what they have researched, and most importantly a code snippet representing what they have attempted, viewers of this question would have a basis for comment and potentially an answer pointing out where the person has gone wrong.&lt;/p&gt;
 
-&lt;h5 id=&#34;answer-option-2&#34;&gt;Answer Option 2&lt;/h5&gt;
+&lt;h5 id=&#34;answer-option-2:fdf3e8731e376405437712c7b8b93685&#34;&gt;Answer Option 2&lt;/h5&gt;
 
 &lt;p&gt;And in the other direction: providing a lengthy tutorial. We all want to help and teach, but this is just one of numerous questions floating out in the ether that requires a response. Can we really spare that much time for every single question like this to re-teach material that is most likely already documented in generalized contexts all across the internet? That would create quite a lot of redundant information simply because each person combines new components into a new question needing a new lesson. Really, every part of this question can be Googled quite easily. Why ask a community to do a new custom writeup for you?&lt;/p&gt;
 
@@ -61,19 +61,19 @@
 
 &lt;p&gt;&lt;em&gt;Through a conversation between my coworker and I, some interesting metaphors were raised that I simply can&amp;#8217;t resist from sharing&amp;#8230;&lt;/em&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;vending-machine-communities&#34;&gt;Vending-machine communities&lt;/h5&gt;
+&lt;h5 id=&#34;vending-machine-communities:fdf3e8731e376405437712c7b8b93685&#34;&gt;Vending-machine communities&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;Put a question in the slot and pop out a solution.  &lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Be it a traditional forum, an online discussion group, mailing list, or a trust and reputation based technical site like &lt;a href=&#34;http://www.stackoverflow.com&#34;&gt;stackoverflow.com&lt;/a&gt;, these communities are driven by people, not machines. People have to take time to review content, and contribute their knowledge. We all work hard to acquire that knowledge, so lets all try and put some value on it in the form of the quality of our questions. A .25 cent answer is insulting. Treat your questions like they are costing you actual money that properly reflects the value of people&amp;#8217;s knowledge. Code communities don&amp;#8217;t work for you, and you don&amp;#8217;t work for them. We are all here to help because we love it. Please don&amp;#8217;t make us hate it, or feel like we are all just part of a big vending-machine.&lt;/p&gt;
 
-&lt;h5 id=&#34;toilet-paper-answers&#34;&gt;&lt;strong&gt;Toilet paper answers&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;toilet-paper-answers:fdf3e8731e376405437712c7b8b93685&#34;&gt;&lt;strong&gt;Toilet paper answers&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;Answers that can be used only one particular time for one particular situation.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;There is an insane amount of content on the internet. It&amp;#8217;s hard enough sometimes to sift through the results of a vague Google search, let alone the content on our individual communities. When you ask a question that provides zero context, or proof of the extent of your current effort, then both the question and the answer are for the most part &amp;#8220;throw aways&amp;#8221;. If its going to be a persistent part of a community space, it should aim to benefit future support-seekers with similar situations. Referring to the example question above, someone going with Option 1 (&amp;#8220;Write my code&amp;#8221;) will end up providing an answer that will likely not help many people beyond this situation. Unless they too are looking for a way to do a for loop and create 10,000 4k dummy files and measure the execution time. The only way it would stand to benefit future visitors is if the answer did Option 2 and wrote a fully self-describing tutorial.&lt;/p&gt;
 
-&lt;h5 id=&#34;conclusion&#34;&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;conclusion:fdf3e8731e376405437712c7b8b93685&#34;&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;I can only speak for myself about what I might do. I consider myself to be the type that would go as far as to look at API docs for someone, and work out some pretty extensive examples on my local machine. I might even install libs that I don&amp;#8217;t have or have never used before in an effort to provide assistance. But I need to be motivated to do so. It&amp;#8217;s exciting for me to write out a page-length of information if I know it will help this person. But in a case like the above there is no show of effort and no context provided &amp;#8212; just a person asking to have code written for them.&lt;/p&gt;
 
@@ -95,7 +95,7 @@
       <guid>http://justinfx.com/2011/07/28/go-language-for-python-programmers/</guid>
       <description>
 
-&lt;h3 id=&#34;img-class-alignleft-src-https-blog-golang-org-gopher-gopher-png-alt-width-116-height-142-http-golang-org-preface&#34;&gt;&lt;a href=&#34;http://golang.org&#34;&gt;&lt;img class=&#34;alignleft&#34; src=&#34;https://blog.golang.org/gopher/gopher.png&#34; alt=&#34;&#34; width=&#34;116&#34; height=&#34;142&#34; /&gt;&lt;/a&gt; Preface&lt;/h3&gt;
+&lt;h3 id=&#34;img-class-alignleft-src-https-blog-golang-org-gopher-gopher-png-alt-width-116-height-142-http-golang-org-preface:7abf409e83c714d77ef3bb580cbebbaf&#34;&gt;&lt;a href=&#34;http://golang.org&#34;&gt;&lt;img class=&#34;alignleft&#34; src=&#34;https://blog.golang.org/gopher/gopher.png&#34; alt=&#34;&#34; width=&#34;116&#34; height=&#34;142&#34; /&gt;&lt;/a&gt; Preface&lt;/h3&gt;
 
 &lt;p&gt;I&amp;#8217;ve been programming in python for over 5 years now, and I love the language a lot. I would look for any opportunity to accomplish my coding tasks using python, as opposed to learning new languages. PyQt4 for user interfaces, Django for web design, etc&amp;#8230; And when python just isn&amp;#8217;t an option, I have done my share of php, javascript, objective-c and so on.&lt;/p&gt;
 
@@ -105,7 +105,7 @@
 
 &lt;p&gt;Then I came across a post on Google+, by someone that actually works at Google, mentioning a language being developed in-house. So I started reading about Go @ &lt;a href=&#34;http://golang.org/&#34;&gt;http://golang.org/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;the-go-language&#34;&gt;The Go Language&lt;/h3&gt;
+&lt;h3 id=&#34;the-go-language:7abf409e83c714d77ef3bb580cbebbaf&#34;&gt;The Go Language&lt;/h3&gt;
 
 &lt;p&gt;From the standpoint of a python programmer, Go feels like it sits right between C/C++ and python. You get the simpler syntax, but with the speed of a compiled language. Because Go has garbage collection, memory management isn&amp;#8217;t a concern. I was never used to the code/compile/test/repeat pattern before, but it compiles so fast and is so easy to set up a project that it feels pretty natural. Go doesn&amp;#8217;t require you to have header files and declare everything in advance, so banging out a simple program is quite fast and only slightly more overhead than writing a python script. Just have to add the step of compiling it. As far as the library, so far I have found everything pretty useful. And it seems that every time I search for a Go binding for something, I find one. I will go into more detail on that in a bit.&lt;/p&gt;
 
@@ -119,7 +119,7 @@
 
 &lt;p&gt;A pretty crazy aspect of Go is its native support for concurrency using what they call &amp;#8220;Goroutines&amp;#8221;. The closest way I have been able to compare it to my experience in python is while using ZeroMQ for messaging. ZeroMQ promotes not only using its library for messaging, but also to replace issues with threads and locks. It has similar concepts in promoting concurrency. You divide your program up into its components and instead of sharing data structures between them, you communicate over channels (sockets in ZeroMQ). When you fire off a Goroutine, you aren&amp;#8217;t waiting for it anymore. It can run and do its thing and you keep on going. You can then send data back and forth with channels, and even use them just for signaling, like saying &amp;#8220;ok now exit&amp;#8221;.&lt;/p&gt;
 
-&lt;h3 id=&#34;actual-usage&#34;&gt;Actual Usage&lt;/h3&gt;
+&lt;h3 id=&#34;actual-usage:7abf409e83c714d77ef3bb580cbebbaf&#34;&gt;Actual Usage&lt;/h3&gt;
 
 &lt;p&gt;I&amp;#8217;ve been writing a message server so far in python, using the &lt;a href=&#34;http://www.tornadoweb.org/&#34;&gt;Tornado web server&lt;/a&gt;, along with some socket.io bindings called &lt;a href=&#34;https://github.com/MrJoes/tornadio&#34;&gt;TornadIO&lt;/a&gt;, and also &lt;a href=&#34;http://www.zeromq.org/&#34;&gt;ZeroMQ&lt;/a&gt; for internal communication. So far its been working pretty well, but there are a lot of complex layers, with ZeroMQ sort of riding on top of Tornados ioloop. I decided to try and rewrite this server in Go. Turns out Go has a lot of built-in support for doing exactly what this python server was doing. The whole web-socket server functionality is part of the standard http library module. I quickly found &lt;a href=&#34;https://github.com/madari/go-socket.io&#34;&gt;Go bindings for socket.io&lt;/a&gt; and I was on my way.&lt;/p&gt;
 
@@ -127,7 +127,7 @@
 
 &lt;p&gt;So far, this Go server is turning out great, and I&amp;#8217;m excited by the fact that its compiled and faster. I don&amp;#8217;t have to distribute my source code now &lt;img src=&#34;http://justinfx.com/wp-includes/images/smilies/simple-smile.png&#34; alt=&#34;:-)&#34; class=&#34;wp-smiley&#34; style=&#34;height: 1em; max-height: 1em;&#34; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;performance&#34;&gt;Performance&lt;/h3&gt;
+&lt;h3 id=&#34;performance:7abf409e83c714d77ef3bb580cbebbaf&#34;&gt;Performance&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Disclaimer: These numbers are just comparisons between what I built in python vs Go. I think the point is to reflect what I naturally came up with on my first pass at using Go, vs applying years of python experience. I&amp;#8217;m dead sure my Go code isn&amp;#8217;t written as efficiently as someone with more experience, which I think makes it even more interesting of a comparison.&lt;/li&gt;
@@ -209,7 +209,7 @@
 
 &lt;p&gt;The second Go test was after I finished implementing the same 1-to-1 feature set of the python version. I had thought the numbers would be dramatically impacted after adding the overhead of all the internal message routing, but the Go server still came out almost 5x faster than the python version. And this is from my first attempt at writing a Go program! I bet once I get a lot more solid with the language I can optimize this code a lot more.&lt;/p&gt;
 
-&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+&lt;h3 id=&#34;conclusion:7abf409e83c714d77ef3bb580cbebbaf&#34;&gt;Conclusion&lt;/h3&gt;
 
 &lt;p&gt;I&amp;#8217;m pretty hooked on the language. I feel its the perfect option for a python programmer that wants some speed increases and simple concurrency, without having to learn something as intense as C++. Go is supposed to get faster and faster as they improve things like the goroutines, channels, and the garbage collector, so its a great time to jump in and start learning. Its really helped me understand more formal concepts that will probably make learning C++ even easier once I decide to go back to learning it &lt;img src=&#34;http://justinfx.com/wp-includes/images/smilies/simple-smile.png&#34; alt=&#34;:-)&#34; class=&#34;wp-smiley&#34; style=&#34;height: 1em; max-height: 1em;&#34; /&gt;&lt;/p&gt;
 
