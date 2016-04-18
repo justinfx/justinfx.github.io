@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>JustinFX.com</title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://justinfx.com/tags/sublimetext/</link>
+    <language>en-us</language>
+    <author>Justin Israel</author>
+    <copyright>2016 Justin Israel</copyright>
+    <updated>Sun, 17 Apr 2016 15:22:33 NZST</updated>
+    
+    
+    <item>
+      <title>SublimeText Editor and Clang (C&#43;&#43;)</title>
+      <link>http://justinfx.com/2016/04/17/sublimetext-editor-and-clang/</link>
+      <pubDate>Sun, 17 Apr 2016 15:22:33 NZST</pubDate>
+      <author>Justin Israel</author>
+      <guid>http://justinfx.com/2016/04/17/sublimetext-editor-and-clang/</guid>
+      <description>
+
+&lt;p&gt;My code editor of choice has been &lt;a href=&#34;https://www.sublimetext.com&#34;&gt;SublimeText&lt;/a&gt; for a while now. It is blazing fast for searching and doing matching, replacements, and refactoring. I also love that it is very lightweight, so that I can use it as my default shell &lt;code&gt;$EDITOR&lt;/code&gt;, and also have an alias &lt;code&gt;st&lt;/code&gt; which can easily open files and folders in the current or new Sublime window:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;# Add directory to current sublime
+$ st -a /path/to/src
+# Open a new sublime window, with the current directory
+$ st -n .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sublime is cross-platform, which means I can have the same development environment across Linux and OSX. It also has an amazing python-based plugin framework, which is enriched by the plugin manager and plugin community, &lt;a href=&#34;https://packagecontrol.io/&#34;&gt;PackageControl&lt;/a&gt;. While it is not a full-fledged IDE, because of the availability of so many plugin options, you can get it pretty close to being like an IDE for a number of different languages. Currently I use it for Python, Go, Markdown editing, and C++. This post outlines some simple steps for configuration a SublimeText3 project for use with C++.&lt;/p&gt;
+
+&lt;p&gt;Before we get into the specifics of C++ configuration, let me first give a quick overview of my SublimeText3 setup, across all of my language&amp;hellip;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Anaconda&#34;&gt;Anaconda&lt;/a&gt; - Python language Auto-complete, Goto Definition, and Documentation&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Cython%2B&#34;&gt;Cython+&lt;/a&gt; - Cython language Syntax support&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/GoOracle&#34;&gt;GoOracle&lt;/a&gt; - Go language support for using &amp;ldquo;Oracle&amp;rdquo; tool&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/GoSublime&#34;&gt;GoSublime&lt;/a&gt; - IDE-like support for Go language&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Markdown%20Preview&#34;&gt;Markdown Preview&lt;/a&gt; - Markdown highlighting and previewing&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/MayaSublime&#34;&gt;MayaSublime&lt;/a&gt; - Written by myself; Send Python/MEL code into Maya&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Pretty%20JSON&#34;&gt;PrettyJSON&lt;/a&gt; - Reformatting and validating JSON&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/SideBarEnhancements&#34;&gt;SideBarEnhancements&lt;/a&gt; - Amp up the side bar and context menu&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/ThriftSyntax&#34;&gt;ThriftSyntax&lt;/a&gt; - Syntax highlighting for &lt;a href=&#34;https://thrift.apache.org/&#34;&gt;Apache Thrift&lt;/a&gt; spec files&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And the ones we will be looking at today, for C++ support:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#clang-complete&#34;&gt;Clang-Complete&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#switch-file-deluxe&#34;&gt;Switch File Deluxe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#uncrustify&#34;&gt;Uncrustify&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These steps were performed on an OSX laptop, so you will need to look at the specific README files for Linux/Windows details. I also assume you have installed Package Control, which makes it trivial to install plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-name-clang-complete-clang-complete-a&#34;&gt;&lt;a name=&#34;clang-complete&#34;&gt;Clang-Complete&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;OSX already comes with the clang compiler, and this plugin for SublimeText3 allows your source to be compiled on the fly and have diagnostic details made available.&lt;/p&gt;
+
+&lt;p&gt;Install &lt;a href=&#34;https://packagecontrol.io/packages/Clang-Complete&#34;&gt;Clang-Complete&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;There aren&amp;rsquo;t any plugin settings to adjust, but you will want to set up either general clang settings, or project-specific clang settings. General settings may be include paths related to finding system libraries, however in my case I only set up project specific settings.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Project -&amp;gt; Edit Project&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;If you don&amp;rsquo;t already have a &lt;code&gt;settings&lt;/code&gt; key, create one, and then under that create a &lt;code&gt;cc_include_options&lt;/code&gt; list of flags to pass to clang. Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;&amp;quot;settings&amp;quot;: {
+	&amp;quot;cc_include_options&amp;quot;: [
+		&amp;quot;-I/path/to/some/library/include&amp;quot;
+	]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The setting is called &amp;ldquo;cc_include_options&amp;rdquo;, but it is a bit misleading. Really it seems to just be any compiler flags you want to pass to clang. I have put &lt;code&gt;-D&lt;/code&gt; macro defines, as well as being able to disable warnings, etc, etc.&lt;/p&gt;
+
+&lt;p&gt;Once you have your basic includes entered for your given project, you should review your key mappings. There is only one I cared about:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+    &amp;quot;command&amp;quot;: &amp;quot;clang_goto_def&amp;quot;, &amp;quot;keys&amp;quot;: [&amp;quot;super+.&amp;quot;, &amp;quot;super+g&amp;quot;],
+    &amp;quot;context&amp;quot;: [{&amp;quot;key&amp;quot;: &amp;quot;selector&amp;quot;, &amp;quot;operator&amp;quot;: &amp;quot;equal&amp;quot;, &amp;quot;operand&amp;quot;: &amp;quot;source.c++&amp;quot;} ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Adjust the &amp;ldquo;keys&amp;rdquo; sequence as needed. This gives you the ability to jump to definitions from a given symbol.&lt;/p&gt;
+
+&lt;p&gt;At this point, you should have code completion, and the ability to navigate through C++ symbols. You will know your code completion is working if the completion popup has more than just names, and actually has type information on the right side.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-name-switch-file-deluxe-switch-file-deluxe-a&#34;&gt;&lt;a name=&#34;switch-file-deluxe&#34;&gt;Switch File Deluxe&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;This is a pretty sweet and simple plugin that lets you switch between headers and source files. Before Sublime, I had been using Qt Creator for C++ Qt projects, and this functionality was built-in and mapped to the F4 key.&lt;/p&gt;
+
+&lt;p&gt;Install &lt;a href=&#34;https://packagecontrol.io/packages/Switch%20File%20Deluxe&#34;&gt;Switch File Deluxe&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Once installed, all I had to do was map a key sequence:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{ 
+    &amp;quot;command&amp;quot;: &amp;quot;switch_file_deluxe&amp;quot;, &amp;quot;keys&amp;quot;: [&amp;quot;f4&amp;quot;], 
+    &amp;quot;args&amp;quot;: {
+        &amp;quot;extensions&amp;quot;: [
+            &amp;quot;.cpp&amp;quot;, &amp;quot;.cxx&amp;quot;, &amp;quot;.cc&amp;quot;, &amp;quot;.c&amp;quot;, &amp;quot;Qt.cpp&amp;quot;, &amp;quot;Qt.h&amp;quot;, 
+            &amp;quot;.hpp&amp;quot;, &amp;quot;.hxx&amp;quot;, &amp;quot;.h&amp;quot;, &amp;quot;_p.h&amp;quot;, &amp;quot;_p_p.h&amp;quot;, &amp;quot;.ipp&amp;quot;, 
+            &amp;quot;.inl&amp;quot;, &amp;quot;.m&amp;quot;, &amp;quot;.mm&amp;quot;
+        ]
+    } 
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;From any C++ header or source file, when you hit F4 you will switch to the corresponding header or source. If the matching file is ambiguous, you should be presented with a choice of files. Once you select the file, future uses of the key will immediately switch between the previously selected files.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-name-uncrustify-uncrustify-a&#34;&gt;&lt;a name=&#34;uncrustify&#34;&gt;Uncrustify&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;If you prefer your C++ source code to follow a particular style, then you can use the &amp;ldquo;uncrustify&amp;rdquo; tool to apply beautification based on a configuration file of rules.&lt;/p&gt;
+
+&lt;p&gt;First I installed uncrustify via homebrew:  &lt;code&gt;brew install uncrustify&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, install &lt;a href=&#34;https://packagecontrol.io/packages/Uncrustify&#34;&gt;Uncrustify&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If your uncrustify binary is in a non-standard location, you can set the user settings for the plugin with &lt;code&gt;uncrustify_executable&lt;/code&gt;. For setting up projects to match configs, I actually used the &lt;code&gt;uncrustify_config_by_filter&lt;/code&gt; setting to set up a list of patterns:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+	&amp;quot;uncrustify_filtering_rule&amp;quot;: 1,
+	&amp;quot;uncrustify_config_by_filter&amp;quot;: [
+		{&amp;quot;/path/to/some/*/project&amp;quot;: &amp;quot;/path/to/project/uncrustify.cfg&amp;quot;}
+	]	
+}
+
+It helps to store your uncrustify.cfg within your project repo. Also, there is a tool I used for visually editing the rules for setting up an uncrustify config: [universalindent](http://universalindent.sourceforge.net/).
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;wrapping-up&#34;&gt;Wrapping up&lt;/h2&gt;
+
+&lt;p&gt;I don&amp;rsquo;t do much debugging or building from within my editor (I am primarily an Editor+Terminal kind of developer), so I didn&amp;rsquo;t go as far as to investigate Sublime options for debugging. But with a pretty minimal amount of configuration, I have a pretty lightweight and capable editor for working on C++ projects. And it is the same editor I use for working on Python and Go projects.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+  </channel>
+</rss>

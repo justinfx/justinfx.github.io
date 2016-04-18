@@ -98,7 +98,7 @@ ga('send', 'pageview');
       <a class="social-icon" href="http://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
 
     <p class="footnote">powered by <a href="http://hugo.spf13.com">Hugo</a> <br/>
-    &copy; 2015 Justin Israel. All rights reserved.</p>
+    &copy; 2016 Justin Israel. All rights reserved.</p>
     
   </div>
 </div>
@@ -115,7 +115,7 @@ ga('send', 'pageview');
 
 <p>In addition to my Wordpress blog, for a while I had also been hosting other applications, such as a Redmine system for project management. Redmine, being a Ruby-on-Rails setup, was quite a memory hog. But that combined with Wordpress made sense to use some form of hosting. Eventually I stopped using Redmine and was left with just a Wordpress blog, hosted on a semi-VPS service, and paying $7 USD a month. Finally I realized this was silly and I should just switch to something that costs&hellip; maybe nothing?</p>
 
-<h2 id="hugo-a-static-site-generator:0fb87c8efc633224c79e1f60cf7f0750">Hugo: A static site generator</h2>
+<h2 id="hugo-a-static-site-generator">Hugo: A static site generator</h2>
 
 <p>I&rsquo;m already a fan and user of the <a href="http://golang.org">Go language</a>, and so in following a number of the Go social communities, I discovered <a href="https://gohugo.io">Hugo</a>. A static site generator is an application that can take content in some original description (markdown in the case of Hugo), and renders final content by applying rules. This final content can then be hosted anywhere, without the need for server-side runtime support, such as Python/PHP/Go/Node/etc, because it does not require server-side processing to handle rendering the pages on the fly. This makes the site very portable and simple to deploy, and can be served out of aggressive caching.</p>
 
@@ -123,7 +123,7 @@ ga('send', 'pageview');
 
 <p>This post is primarily focused on my experience in switching to Hugo, and not attempting to provide an A-Z tutorial of using it, nor a comparison to any similar options in static site generation. Detailed documentation can be found on the official Hugo site.</p>
 
-<h2 id="migrating-from-wordpress-to-hugo:0fb87c8efc633224c79e1f60cf7f0750">Migrating from Wordpress to Hugo</h2>
+<h2 id="migrating-from-wordpress-to-hugo">Migrating from Wordpress to Hugo</h2>
 
 <p>I can&rsquo;t claim that the process of converting my Wordpress-based site to Hugo was 100% automatic, or even 90%. Let&rsquo;s say about 80%. But it was fairly painless.</p>
 
@@ -159,7 +159,7 @@ tags:
 
 <p>All-in-all the export and cleanup process was the most painless part. Most of the time was spent learning the new concepts of the Hugo system.</p>
 
-<h2 id="deployment:0fb87c8efc633224c79e1f60cf7f0750">Deployment</h2>
+<h2 id="deployment">Deployment</h2>
 
 <p>I&rsquo;m going to start with describing the deployment process, since I find that to be one of the most appealing aspects of switching to Hugo. As I had mentioned, my previous solution was a paid hosted approach, in order to have a MySQL database, and a php-enabled dynamic site. My new approach brings my hosting expense down to <strong>zero</strong>. By using <a href="https://pages.github.com/">Github Pages</a>, I can treat my site as just another code repository, while serving it for free. You can see the final rendered static site, right here at <a href="https://github.com/justinfx/justinfx.github.io">github.com/justinfx/justinfx.github.io</a>.</p>
 
@@ -180,11 +180,11 @@ in <span style="color: #40a070">195</span> ms
 
 <p>I actually symlink the &ldquo;public/&rdquo; subdirectory to point to my &ldquo;justinfx.github.io&rdquo; Github Pages local repo. What that means is that after running Hugo, and because it is managed via a git repository, I now only need to commit the new changes to my repo in order to update my public site. This is a very natural workflow for anyone that is comfortable with git repositories. And it also means that I automatically get revision control for any changes to my website.</p>
 
-<h2 id="understanding-hugo-concepts:0fb87c8efc633224c79e1f60cf7f0750">Understanding Hugo Concepts</h2>
+<h2 id="understanding-hugo-concepts">Understanding Hugo Concepts</h2>
 
 <p>The aspect that took the longest, in the switch to Hugo, was understanding the project structure, and how the layout of the site was generated. The main terms you will deal with upfront are things like: content, layouts, templates, types, archetypes, and static. To oversimplify what I have come to understand is that the Hugo project structure separates your content from your view, or the way that content ultimately is arranged in your site. You spend the most time getting your layout and types set up once, and then moving forward it becomes a simple matter of typing new markdown content, which gets seamlessly integrated into the layout.</p>
 
-<h3 id="configuration:0fb87c8efc633224c79e1f60cf7f0750">Configuration</h3>
+<h3 id="configuration">Configuration</h3>
 
 <p>The first thing you want to look at is your <code>config.yaml</code> file. There isn&rsquo;t much to it, and the default could be mostly correct for you. But I did have to change a few things to get it right. Mine looks like this:</p>
 
@@ -213,7 +213,7 @@ params:
 
 <p>Not every field is required. Probably the most important settings are the <code>baseurl</code> and <code>title</code>. The rest of these settings control optional aspects of the site. You can see that I am setting my Disqus id, allowing Hugo to embed its integrated Disqus comment system into the posts. I&rsquo;m also setting some options for how code syntax highlighting is displayed, and some definitions for organization and <a href="https://gohugo.io/extras/permalinks/">permalinks</a>.</p>
 
-<h3 id="content:0fb87c8efc633224c79e1f60cf7f0750">Content</h3>
+<h3 id="content">Content</h3>
 
 <p>Under the &ldquo;content/&rdquo; directory of my project is where all my markdown files are stored. I have the following:</p>
 
@@ -233,7 +233,7 @@ params:
 
 <p>Within the markdown files, in addition to text and markdown formatting, you can also include <a href="https://gohugo.io/templates/overview/">template logic</a>, to be expanded at render time (running the <code>hugo</code> command).</p>
 
-<h3 id="archetypes:0fb87c8efc633224c79e1f60cf7f0750">Archetypes</h3>
+<h3 id="archetypes">Archetypes</h3>
 
 <p>At first, I had thought archetypes were something more complicated than they actually are. Really all they do is define a new &ldquo;type template&rdquo; so that when you create new content with <code>hugo new &lt;...&gt;</code>, the new content will be created with type-specific defaults. For instance, I have an archetype defined that makes any markdown files created in my &ldquo;content/blog/&rdquo; location have the type &ldquo;post&rdquo;:</p>
 
@@ -261,7 +261,7 @@ justinfx.com/content/blog/new_post.md created
 
 <p>You can see that a new draft post was created for me, and the Front Matter was pre-populated with the settings from the blog archetype. Just an easy way to set up new content really.</p>
 
-<h3 id="layouts:0fb87c8efc633224c79e1f60cf7f0750">Layouts</h3>
+<h3 id="layouts">Layouts</h3>
 
 <p>This was the hardest part of the learning curve for me. Layouts are the part of your codebase that specify how your content is turned into actual views in your static site. There is a correlation between the layout directories, and the type names we talked about previously. Because I have two types, &ldquo;post&rdquo; and &ldquo;page&rdquo;, it means I will have the corresponding locations within the layouts directory. Hugo has a resolution order it will use, when figuring out which layouts to apply. First it will check if there is a direct match for the type, and then it will fall back on a special &ldquo;_default&rdquo; directory. Within these directories, you can specify what content should look like when it is viewed as:</p>
 
@@ -320,7 +320,7 @@ justinfx.com/content/blog/new_post.md created
 
 <p>&ldquo;layouts/post/li.html&rdquo; looks like this:</p>
 
-<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;li&gt;</span>
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;li&gt;</span>
       <span style="color: #062873; font-weight: bold">&lt;span</span> <span style="color: #4070a0">style=&quot;line-height: 1.0&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
       {{if .Draft}}[draft] {{end}}<span style="color: #062873; font-weight: bold">&lt;a</span> <span style="color: #4070a0">href=&quot;{{ .Permalink }}&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>{{ .Title }}<span style="color: #062873; font-weight: bold">&lt;/a&gt;</span>
       <span style="color: #062873; font-weight: bold">&lt;div</span> <span style="color: #4070a0">class=&quot;post-item&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
@@ -329,19 +329,19 @@ justinfx.com/content/blog/new_post.md created
       <span style="color: #062873; font-weight: bold">&lt;/span&gt;</span>
 <span style="color: #062873; font-weight: bold">&lt;/li&gt;</span>
 </pre></div>
-</p>
+
 
 <p>This template is purely concerned with defining an <code>&lt;li&gt;</code> element. We handle optionally indicating if a post is still in draft state (only visible if we are running the hugo server with <code>-D</code>), and then showing the title and date of the post.</p>
 
 <p>Extra info on layouts and views can be found <a href="https://gohugo.io/content/types/#defining-a-content-type:3d59665407ad3f08f6bcaef4686926f7">here</a> and <a href="https://gohugo.io/content/types/#create-type-directory:3d59665407ad3f08f6bcaef4686926f7">here</a></p>
 
-<h3 id="themes:0fb87c8efc633224c79e1f60cf7f0750">Themes</h3>
+<h3 id="themes">Themes</h3>
 
 <p>Hugo supports <a href="https://gohugo.io/themes/overview/">themes</a>, and already has a sizable <a href="http://themes.gohugo.io/">gallery</a> of existing themes to choose from.</p>
 
 <p>I had started out trying to just drop in different themes (placing them in the &ldquo;themes&rdquo; subdirectory, and activating them in the config file or via the command line), but I noticed that not every theme would render properly. I came to understand that themes still require a bit of integration, and are not simply a stylesheet. They define their own views which become part of the resolution order when Hugo looks them up at render time. Finally I just took the advise from <a href="http://npf.io/2014/08/hugo-is-awesome/">Nate Finch&rsquo;s Hugo post</a>, where he grabbed a theme that was closest to what he wanted and started tweaking it. I then started with Nate&rsquo;s modified theme (since I liked it), and also further tweaked it to match what I liked. This resulted in getting rid of an explicit &ldquo;themes&rdquo; location, and just integrating the templates directly into my &ldquo;layouts/&rdquo; location.</p>
 
-<h3 id="shortcodes:0fb87c8efc633224c79e1f60cf7f0750">Shortcodes</h3>
+<h3 id="shortcodes">Shortcodes</h3>
 
 <p><a href="https://gohugo.io/extras/shortcodes/">Shortcodes</a> are sweet. They are very similar to Wordpress shortcodes provided by plugins, allowing you to create little functions that can take arguments and expand into reusable code.</p>
 
@@ -355,7 +355,7 @@ justinfx.com/content/blog/new_post.md created
 
 <p>And &ldquo;vimeo.html&rdquo; looks like this:</p>
 
-<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;div</span> <span style="color: #4070a0">class=&quot;js-video vimeo&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;div</span> <span style="color: #4070a0">class=&quot;js-video vimeo&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
 	<span style="color: #062873; font-weight: bold">&lt;iframe</span> <span style="color: #4070a0">src=&quot;https://player.vimeo.com/video/{{ .Get 0 }}?byline=0&quot;</span> 
 	        <span style="color: #4070a0">width=&quot;640&quot;</span> 
 	        <span style="color: #4070a0">height=&quot;360&quot;</span> 
@@ -365,19 +365,19 @@ justinfx.com/content/blog/new_post.md created
 	<span style="color: #062873; font-weight: bold">&lt;/iframe&gt;</span>
 <span style="color: #062873; font-weight: bold">&lt;/div&gt;</span>
 </pre></div>
-</p>
+
 
 <p>Now I have the ability to embed my vimeo media from within my markdown files, just by using the shortcode and passing the vimeo id as a parameter:</p>
 
-<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">{{<span style="color: #062873; font-weight: bold">&lt; vimeo</span> <span style="color: #4070a0">12067694</span> <span style="color: #062873; font-weight: bold">&gt;</span>}}
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">{{<span style="color: #062873; font-weight: bold">&lt; vimeo</span> <span style="color: #4070a0">12067694</span> <span style="color: #062873; font-weight: bold">&gt;</span>}}
 </pre></div>
-</p>
 
-<h3 id="static-files:0fb87c8efc633224c79e1f60cf7f0750">Static files</h3>
+
+<h3 id="static-files">Static files</h3>
 
 <p>Static files are pretty straightforward. It is just a &ldquo;static/&rdquo; location where everything underneath is served directly by your site, and does not go through a rendering process when you generate your site. This would be the place to store css, javascript, images, and other static content that simply needs to be served up in pages or urls. Themes can come with their own static locations, which will be integrated into the main static content when you render your site.</p>
 
-<h3 id="closing-thoughts:0fb87c8efc633224c79e1f60cf7f0750">Closing Thoughts</h3>
+<h3 id="closing-thoughts">Closing Thoughts</h3>
 
 <p>There is something quite satisfying about having the source of my site being so tangible, while being easy to update, and easy to deploy. I don&rsquo;t have to worry about a database, or hosting, or Wordpress site and plugin updates. I don&rsquo;t have to worry about security, since there are no dynamic pages or Wordpress vulnerabilities to guard against. I don&rsquo;t have to mess with backups and exports from a hosting service, since I check my entire site into github.</p>
 

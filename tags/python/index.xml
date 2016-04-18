@@ -18,13 +18,13 @@
       <guid>http://justinfx.com/2012/10/12/pyqt4-for-maya/</guid>
       <description>
 
-&lt;h2 id=&#34;img-class-alignnone-size-full-wp-image-525-title-pyqt4-for-maya-src-wp-content-uploads-2012-10-1350054625-master-jpeg-alt-width-800-height-450-http-www-cmivfx-com-tutorials-view-498-pyqt4-ui-development-for-maya:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.com/wp-content/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;img-class-alignnone-size-full-wp-image-525-title-pyqt4-for-maya-src-wp-content-uploads-2012-10-1350054625-master-jpeg-alt-width-800-height-450-http-www-cmivfx-com-tutorials-view-498-pyqt4-ui-development-for-maya&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.com/wp-content/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
 
-&lt;h1 id=&#34;pyqt4-ui-development-for-maya:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;PyQt4 UI Development for Maya&lt;/h1&gt;
+&lt;h1 id=&#34;pyqt4-ui-development-for-maya&#34;&gt;PyQt4 UI Development for Maya&lt;/h1&gt;
 
 &lt;p&gt;Just released my 3rd python-based online training video through &lt;a href=&#34;https://cmivfx.com/store/498-pyqt4+ui+development+for+maya&#34;&gt;cmiVFX.com&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;introduction:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;div&gt;
   This tutorial is about learning PyQt4 python bindings for the Qt Framework, and how to introduce new UI elements to Maya as a platform.
@@ -39,7 +39,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;getting-started-with-pyqt4:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;Getting Started With PyQt4&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;getting-started-with-pyqt4&#34;&gt;&lt;strong&gt;Getting Started With PyQt4&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   There are multiple ways of getting a working installation of PyQt4, both for the general system and for Maya. We look into these approaches to get your system up and running to begin working with PyQt4!
@@ -54,7 +54,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;pyqt4-fundamentals:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;PyQt4 Fundamentals&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;pyqt4-fundamentals&#34;&gt;&lt;strong&gt;PyQt4 Fundamentals&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   Lets get crackin&amp;#8217; and learn the basics!
@@ -89,7 +89,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;general-examples:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;General Examples&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;general-examples&#34;&gt;&lt;strong&gt;General Examples&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   With an understanding of the framework components, we can begin working with fully functional stand-alone examples.
@@ -112,7 +112,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;pyqt4-and-maya-introduction:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;PyQt4 And Maya Introduction&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;pyqt4-and-maya-introduction&#34;&gt;&lt;strong&gt;PyQt4 And Maya Introduction&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   Finally, some Maya action! Maya has a slightly different approach to using PyQt4…
@@ -139,7 +139,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;replicating-maya-8217-s-ui-components:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;Replicating Maya&amp;#8217;s UI Components&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;replicating-maya-8217-s-ui-components&#34;&gt;&lt;strong&gt;Replicating Maya&amp;#8217;s UI Components&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   What better way to see examples of creating UI for Maya than to replicate some existing functionality? This gives us the opportunity expand with custom functionality
@@ -181,7 +181,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;customizations:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;Customizations&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;customizations&#34;&gt;&lt;strong&gt;Customizations&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   A button can be a button, and a slider might look alright in its stock form, but sometimes we want to customize the look of our widgets. This chapter introduces multiple ways of achieving custom looks to our components
@@ -197,7 +197,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;span-style-color-ff6600-previous-cmivfx-tutorials-span:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;span style=&#34;color: #ff6600;&#34;&gt;Previous cmiVFX tutorials:&lt;/span&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;span-style-color-ff6600-previous-cmivfx-tutorials-span&#34;&gt;&lt;span style=&#34;color: #ff6600;&#34;&gt;Previous cmiVFX tutorials:&lt;/span&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://cmivfx.com/store/320-python+introduction+vol+01+-+maya&#34;&gt;Intro to Python for Maya &amp;#8211; Vol 1&lt;/a&gt;&lt;/li&gt;
@@ -429,22 +429,22 @@ pickle (ascii)        17.8767
 &lt;li&gt;&lt;a href=&#34;https://github.com/jmendeth/PyOpenNI&#34;&gt;PyOpenNI&lt;/a&gt; python bindings&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&#34;span-style-text-decoration-underline-install-details-span:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Install Details&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;span-style-text-decoration-underline-install-details-span&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Install Details&lt;/span&gt;&lt;/h4&gt;
 
-&lt;h5 id=&#34;install-homebrew-package-manager:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install homebrew (package manager)&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-homebrew-package-manager&#34;&gt;&lt;strong&gt;Install homebrew (package manager)&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://mxcl.github.com/homebrew/&#34;&gt;http://mxcl.github.com/homebrew/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;install-build-tools:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install build tools&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-build-tools&#34;&gt;&lt;strong&gt;Install build tools&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;pre&gt;brew install cmake
 brew install boost&lt;/pre&gt;
 
-&lt;h5 id=&#34;install-python2-7:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install python2.7&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-python2-7&#34;&gt;&lt;strong&gt;Install python2.7&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;pre&gt;brew install python --framework&lt;/pre&gt;
 
-&lt;h5 id=&#34;suggestion-virtualenv-environment:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Suggestion: virtualenv Environment&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;suggestion-virtualenv-environment&#34;&gt;&lt;strong&gt;Suggestion: virtualenv Environment&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;This is not a requirement. But I recommend using virtualenv to set up an environment that specifically uses python2.7 so that you don&amp;#8217;t have to fight with mixed dependencies and versions.&lt;/p&gt;
 
@@ -457,7 +457,7 @@ virtualenv --no-site-packages -p python2.7 kinect
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h5 id=&#34;install-libusb-patched-version:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install libusb (patched version)&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-libusb-patched-version&#34;&gt;&lt;strong&gt;Install libusb (patched version)&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;There is a special patched version of the libusb library, in the form of a homebrew formula.&lt;/p&gt;
 
@@ -468,7 +468,7 @@ virtualenv --no-site-packages -p python2.7 kinect
 &lt;pre&gt;&lt;code&gt;brew install libusb-freenect
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h5 id=&#34;install-sensorkinect-drivers:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install SensorKinect drivers&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-sensorkinect-drivers&#34;&gt;&lt;strong&gt;Install SensorKinect drivers&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;pre&gt;&lt;code&gt;git clone https://github.com/avin2/SensorKinect.git
 &lt;/code&gt;&lt;/pre&gt;
@@ -478,7 +478,7 @@ virtualenv --no-site-packages -p python2.7 kinect
 &lt;pre&gt;&lt;code&gt;sudo ./install.sh
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h5 id=&#34;install-openni-framework:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install OpenNI framework&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-openni-framework&#34;&gt;&lt;strong&gt;Install OpenNI framework&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Go here: &lt;a href=&#34;http://www.openni.org/Downloads/OpenNIModules.aspx&#34;&gt;http://www.openni.org/Downloads/OpenNIModules.aspx&lt;/a&gt;&lt;/li&gt;
@@ -486,7 +486,7 @@ virtualenv --no-site-packages -p python2.7 kinect
 &lt;li&gt;&lt;code&gt;sudo ./install.sh&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h5 id=&#34;install-nite-middleware-for-openni:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install NITE middleware (for OpenNI)&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-nite-middleware-for-openni&#34;&gt;&lt;strong&gt;Install NITE middleware (for OpenNI)&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Go here: &lt;a href=&#34;http://www.openni.org/Downloads/OpenNIModules.aspx&#34;&gt;http://www.openni.org/Downloads/OpenNIModules.aspx&lt;/a&gt;&lt;/li&gt;
@@ -494,7 +494,7 @@ virtualenv --no-site-packages -p python2.7 kinect
 &lt;li&gt;&lt;code&gt;sudo ./install.sh&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h5 id=&#34;install-pyopenni:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install PyOpenNI&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-pyopenni&#34;&gt;&lt;strong&gt;Install PyOpenNI&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;Be aware that on OSX, PyOpenNI requires a framework build of python 2.7+ and that you must build it for x86_64 specifically. Also, I was having major problems with cmake properly finding the python includes location. I had to suggest a fix, so &lt;a href=&#34;https://github.com/jmendeth/PyOpenNI/issues/16#issuecomment-6515678&#34;&gt;please see here for the necessary corrections&lt;/a&gt;. I have referenced a patched fork of the repository below.&lt;/p&gt;
 
@@ -509,7 +509,7 @@ make
 
 &lt;p&gt;copy the lib/openni.so module to the python2.7 site-packages&lt;/p&gt;
 
-&lt;h4 id=&#34;span-style-text-decoration-underline-examples-span:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Examples&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;span-style-text-decoration-underline-examples-span&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Examples&lt;/span&gt;&lt;/h4&gt;
 
 &lt;p&gt;Once you have everything installed, you can try out the examples that are included both in the NITE source location that you downloaded and also in the PyOpenNI source location:&lt;/p&gt;
 
@@ -527,7 +527,7 @@ make
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;embed video-player&#34;&gt;
+&lt;div class=&#34;embed video-player&#34;&gt;
 	&lt;iframe class=&#34;youtube-player&#34; 
 			type=&#34;text/html&#34; 
 			width=&#34;640&#34; height=&#34;385&#34; 
@@ -537,7 +537,7 @@ make
 	&lt;/iframe&gt;
 &lt;/div&gt;
 
-&lt;/p&gt;
+
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 </description>
@@ -650,7 +650,7 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
 
 &lt;p&gt;Second video in the python for maya series, just released through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;!&lt;/p&gt;
 
-&lt;h3 id=&#34;python-for-maya-8211-volume-2-https-cmivfx-com-store-328-python-for-maya-vol-02:932d1044b07cc887e7b7c36e5a9ebc4e&#34;&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;Python For Maya &amp;#8211; Volume 2&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;python-for-maya-8211-volume-2-https-cmivfx-com-store-328-python-for-maya-vol-02&#34;&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;Python For Maya &amp;#8211; Volume 2&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;If you watched the first video, you now have a good grasp on Python. Sweet. Let&amp;#8217;s plow through some more involved concepts like python juggernauts!&lt;/em&gt;&lt;/p&gt;
 
@@ -734,7 +734,7 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
 
 &lt;p&gt;Just released my first online video tutorial, through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;python-introduction-vol-01-8211-maya-http-cmivfx-com-store-320-python-introduction-vol-01-maya:d52e83cf14f8af81936355263d32ad99&#34;&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;Python Introduction Vol 01 &amp;#8211; Maya&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;python-introduction-vol-01-8211-maya-http-cmivfx-com-store-320-python-introduction-vol-01-maya&#34;&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;Python Introduction Vol 01 &amp;#8211; Maya&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;Amazing at Animation? Master of Modeling? Conquistador of Character Rigging?&lt;/em&gt;&lt;/p&gt;
 
@@ -767,7 +767,8 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
 &lt;p&gt;Updates:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Exports Terragen .tgd scene file format&lt;/li&gt;
+&lt;li&gt;Exports Terragen .tgd scene file format
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx&#34;&gt;See the original post.&lt;/a&gt;&lt;/p&gt;
@@ -928,14 +929,14 @@ myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mousePressEvent 
 
 &lt;p&gt;I have also had to make clickable widgets, such as QLabel:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
 myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mousePressEvent &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;lambda&lt;/span&gt; event: myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;emit(SIGNAL(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;clicked&amp;quot;&lt;/span&gt;))
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;Or if you had to do more than just a single statement:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;clickedEvent&lt;/span&gt;(event):
 myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;emit(SIGNAL(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;clicked&amp;quot;&lt;/span&gt;))
 &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# do other stuff&lt;/span&gt;
@@ -943,7 +944,7 @@ myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;emit(SIGNAL(&lt;
 event&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;accept()
 myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mousePressEvent &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; clickedEvent
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;I like this better than piling up subclasses that don&amp;#8217;t do much.&lt;/p&gt;
 </description>
@@ -1007,7 +1008,7 @@ xml &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#3
 
 &lt;p&gt;You can download the swfcharts.py module and use it freely. If you find it helpful, post a comment or shoot me an email.&lt;/p&gt;
 
-&lt;h4 id=&#34;download-swfcharts-py-wp-content-uploads-2010-01-swfcharts-py-zip:49cac3fa1a8c2fa6889e2e792973fcce&#34;&gt;Download &lt;a href=&#34;http://justinfx.com/wp-content/uploads/2010/01/swfcharts.py_.zip&#34;&gt;swfcharts.py&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;download-swfcharts-py-wp-content-uploads-2010-01-swfcharts-py-zip&#34;&gt;Download &lt;a href=&#34;http://justinfx.com/wp-content/uploads/2010/01/swfcharts.py_.zip&#34;&gt;swfcharts.py&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;Pydoc located here for convenience:&lt;span style=&#34;color: #ffcc00;&#34;&gt;&lt;br /&gt; &lt;a href=&#39;http://justinfx.com/wp-content/uploads/2010/01/swfcharts.html&#39;&gt;swfcharts python documentation&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
 </description>

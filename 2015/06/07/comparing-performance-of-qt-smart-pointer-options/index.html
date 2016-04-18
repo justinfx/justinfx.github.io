@@ -98,7 +98,7 @@ ga('send', 'pageview');
       <a class="social-icon" href="http://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
 
     <p class="footnote">powered by <a href="http://hugo.spf13.com">Hugo</a> <br/>
-    &copy; 2015 Justin Israel. All rights reserved.</p>
+    &copy; 2016 Justin Israel. All rights reserved.</p>
     
   </div>
 </div>
@@ -121,7 +121,7 @@ ga('send', 'pageview');
 
 <p>The test for my benchmark involved creating a number objects, adding them to a list, and then deleting them. The options for the test include both pointers to a basic struct and a QObject, QPointers, QSharedPointers, QWeakPointers, and just for an external comparison I also included boost::shared_ptr and boost::weak_ptr. The test was performed with different numbers of objects, as well as for both Qt4 and Qt5. Here is a more detailed description of each test.</p>
 
-<h4 id="the-test-environment:c89abc9fedab4936f89941691d570e98">The Test Environment</h4>
+<h4 id="the-test-environment">The Test Environment</h4>
 
 <pre><code>OSX 10.9.5 Laptop  
 2.8 Ghz Intel Core 2 Duo
@@ -131,7 +131,7 @@ Qt 4.8.6
 Qt 5.4.2
 </code></pre>
 
-<h4 id="description-of-tests:c89abc9fedab4936f89941691d570e98">Description of Tests</h4>
+<h4 id="description-of-tests">Description of Tests</h4>
 
 <p><em>test_raw_pointer</em> : Creating pointers to a basic struct, adding the raw pointers to a QList, and then deleting all of the pointers</p>
 
@@ -149,7 +149,7 @@ Qt 5.4.2
 
 <p>_test_boost_qobj<em>sharedptr</em> : Creating <code>boost::shared_ptrs</code> from QObject instances, as well as boost::weak_ptrs for each, adding the shared_ptrs to a QList, and then deleting them</p>
 
-<h4 id="the-test-results:c89abc9fedab4936f89941691d570e98">The Test Results</h4>
+<h4 id="the-test-results">The Test Results</h4>
 
 <pre class="">Testing w/ 5000 objects        Qt4       Qt5
 =============================================

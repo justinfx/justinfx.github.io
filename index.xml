@@ -6,8 +6,133 @@
     <link>http://justinfx.com/</link>
     <language>en-us</language>
     <author>Justin Israel</author>
-    <copyright>2015 Justin Israel</copyright>
-    <updated>Sun, 08 Nov 2015 09:32:37 NZDT</updated>
+    <copyright>2016 Justin Israel</copyright>
+    <updated>Sun, 17 Apr 2016 15:22:33 NZST</updated>
+    
+    
+    <item>
+      <title>SublimeText Editor and Clang (C&#43;&#43;)</title>
+      <link>http://justinfx.com/2016/04/17/sublimetext-editor-and-clang/</link>
+      <pubDate>Sun, 17 Apr 2016 15:22:33 NZST</pubDate>
+      <author>Justin Israel</author>
+      <guid>http://justinfx.com/2016/04/17/sublimetext-editor-and-clang/</guid>
+      <description>
+
+&lt;p&gt;My code editor of choice has been &lt;a href=&#34;https://www.sublimetext.com&#34;&gt;SublimeText&lt;/a&gt; for a while now. It is blazing fast for searching and doing matching, replacements, and refactoring. I also love that it is very lightweight, so that I can use it as my default shell &lt;code&gt;$EDITOR&lt;/code&gt;, and also have an alias &lt;code&gt;st&lt;/code&gt; which can easily open files and folders in the current or new Sublime window:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;# Add directory to current sublime
+$ st -a /path/to/src
+# Open a new sublime window, with the current directory
+$ st -n .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sublime is cross-platform, which means I can have the same development environment across Linux and OSX. It also has an amazing python-based plugin framework, which is enriched by the plugin manager and plugin community, &lt;a href=&#34;https://packagecontrol.io/&#34;&gt;PackageControl&lt;/a&gt;. While it is not a full-fledged IDE, because of the availability of so many plugin options, you can get it pretty close to being like an IDE for a number of different languages. Currently I use it for Python, Go, Markdown editing, and C++. This post outlines some simple steps for configuration a SublimeText3 project for use with C++.&lt;/p&gt;
+
+&lt;p&gt;Before we get into the specifics of C++ configuration, let me first give a quick overview of my SublimeText3 setup, across all of my language&amp;hellip;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Anaconda&#34;&gt;Anaconda&lt;/a&gt; - Python language Auto-complete, Goto Definition, and Documentation&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Cython%2B&#34;&gt;Cython+&lt;/a&gt; - Cython language Syntax support&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/GoOracle&#34;&gt;GoOracle&lt;/a&gt; - Go language support for using &amp;ldquo;Oracle&amp;rdquo; tool&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/GoSublime&#34;&gt;GoSublime&lt;/a&gt; - IDE-like support for Go language&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Markdown%20Preview&#34;&gt;Markdown Preview&lt;/a&gt; - Markdown highlighting and previewing&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/MayaSublime&#34;&gt;MayaSublime&lt;/a&gt; - Written by myself; Send Python/MEL code into Maya&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Pretty%20JSON&#34;&gt;PrettyJSON&lt;/a&gt; - Reformatting and validating JSON&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/SideBarEnhancements&#34;&gt;SideBarEnhancements&lt;/a&gt; - Amp up the side bar and context menu&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/ThriftSyntax&#34;&gt;ThriftSyntax&lt;/a&gt; - Syntax highlighting for &lt;a href=&#34;https://thrift.apache.org/&#34;&gt;Apache Thrift&lt;/a&gt; spec files&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And the ones we will be looking at today, for C++ support:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#clang-complete&#34;&gt;Clang-Complete&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#switch-file-deluxe&#34;&gt;Switch File Deluxe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#uncrustify&#34;&gt;Uncrustify&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These steps were performed on an OSX laptop, so you will need to look at the specific README files for Linux/Windows details. I also assume you have installed Package Control, which makes it trivial to install plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-name-clang-complete-clang-complete-a&#34;&gt;&lt;a name=&#34;clang-complete&#34;&gt;Clang-Complete&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;OSX already comes with the clang compiler, and this plugin for SublimeText3 allows your source to be compiled on the fly and have diagnostic details made available.&lt;/p&gt;
+
+&lt;p&gt;Install &lt;a href=&#34;https://packagecontrol.io/packages/Clang-Complete&#34;&gt;Clang-Complete&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;There aren&amp;rsquo;t any plugin settings to adjust, but you will want to set up either general clang settings, or project-specific clang settings. General settings may be include paths related to finding system libraries, however in my case I only set up project specific settings.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Project -&amp;gt; Edit Project&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;If you don&amp;rsquo;t already have a &lt;code&gt;settings&lt;/code&gt; key, create one, and then under that create a &lt;code&gt;cc_include_options&lt;/code&gt; list of flags to pass to clang. Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;&amp;quot;settings&amp;quot;: {
+	&amp;quot;cc_include_options&amp;quot;: [
+		&amp;quot;-I/path/to/some/library/include&amp;quot;
+	]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The setting is called &amp;ldquo;cc_include_options&amp;rdquo;, but it is a bit misleading. Really it seems to just be any compiler flags you want to pass to clang. I have put &lt;code&gt;-D&lt;/code&gt; macro defines, as well as being able to disable warnings, etc, etc.&lt;/p&gt;
+
+&lt;p&gt;Once you have your basic includes entered for your given project, you should review your key mappings. There is only one I cared about:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+    &amp;quot;command&amp;quot;: &amp;quot;clang_goto_def&amp;quot;, &amp;quot;keys&amp;quot;: [&amp;quot;super+.&amp;quot;, &amp;quot;super+g&amp;quot;],
+    &amp;quot;context&amp;quot;: [{&amp;quot;key&amp;quot;: &amp;quot;selector&amp;quot;, &amp;quot;operator&amp;quot;: &amp;quot;equal&amp;quot;, &amp;quot;operand&amp;quot;: &amp;quot;source.c++&amp;quot;} ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Adjust the &amp;ldquo;keys&amp;rdquo; sequence as needed. This gives you the ability to jump to definitions from a given symbol.&lt;/p&gt;
+
+&lt;p&gt;At this point, you should have code completion, and the ability to navigate through C++ symbols. You will know your code completion is working if the completion popup has more than just names, and actually has type information on the right side.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-name-switch-file-deluxe-switch-file-deluxe-a&#34;&gt;&lt;a name=&#34;switch-file-deluxe&#34;&gt;Switch File Deluxe&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;This is a pretty sweet and simple plugin that lets you switch between headers and source files. Before Sublime, I had been using Qt Creator for C++ Qt projects, and this functionality was built-in and mapped to the F4 key.&lt;/p&gt;
+
+&lt;p&gt;Install &lt;a href=&#34;https://packagecontrol.io/packages/Switch%20File%20Deluxe&#34;&gt;Switch File Deluxe&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Once installed, all I had to do was map a key sequence:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{ 
+    &amp;quot;command&amp;quot;: &amp;quot;switch_file_deluxe&amp;quot;, &amp;quot;keys&amp;quot;: [&amp;quot;f4&amp;quot;], 
+    &amp;quot;args&amp;quot;: {
+        &amp;quot;extensions&amp;quot;: [
+            &amp;quot;.cpp&amp;quot;, &amp;quot;.cxx&amp;quot;, &amp;quot;.cc&amp;quot;, &amp;quot;.c&amp;quot;, &amp;quot;Qt.cpp&amp;quot;, &amp;quot;Qt.h&amp;quot;, 
+            &amp;quot;.hpp&amp;quot;, &amp;quot;.hxx&amp;quot;, &amp;quot;.h&amp;quot;, &amp;quot;_p.h&amp;quot;, &amp;quot;_p_p.h&amp;quot;, &amp;quot;.ipp&amp;quot;, 
+            &amp;quot;.inl&amp;quot;, &amp;quot;.m&amp;quot;, &amp;quot;.mm&amp;quot;
+        ]
+    } 
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;From any C++ header or source file, when you hit F4 you will switch to the corresponding header or source. If the matching file is ambiguous, you should be presented with a choice of files. Once you select the file, future uses of the key will immediately switch between the previously selected files.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-name-uncrustify-uncrustify-a&#34;&gt;&lt;a name=&#34;uncrustify&#34;&gt;Uncrustify&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;If you prefer your C++ source code to follow a particular style, then you can use the &amp;ldquo;uncrustify&amp;rdquo; tool to apply beautification based on a configuration file of rules.&lt;/p&gt;
+
+&lt;p&gt;First I installed uncrustify via homebrew:  &lt;code&gt;brew install uncrustify&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, install &lt;a href=&#34;https://packagecontrol.io/packages/Uncrustify&#34;&gt;Uncrustify&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If your uncrustify binary is in a non-standard location, you can set the user settings for the plugin with &lt;code&gt;uncrustify_executable&lt;/code&gt;. For setting up projects to match configs, I actually used the &lt;code&gt;uncrustify_config_by_filter&lt;/code&gt; setting to set up a list of patterns:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+	&amp;quot;uncrustify_filtering_rule&amp;quot;: 1,
+	&amp;quot;uncrustify_config_by_filter&amp;quot;: [
+		{&amp;quot;/path/to/some/*/project&amp;quot;: &amp;quot;/path/to/project/uncrustify.cfg&amp;quot;}
+	]	
+}
+
+It helps to store your uncrustify.cfg within your project repo. Also, there is a tool I used for visually editing the rules for setting up an uncrustify config: [universalindent](http://universalindent.sourceforge.net/).
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;wrapping-up&#34;&gt;Wrapping up&lt;/h2&gt;
+
+&lt;p&gt;I don&amp;rsquo;t do much debugging or building from within my editor (I am primarily an Editor+Terminal kind of developer), so I didn&amp;rsquo;t go as far as to investigate Sublime options for debugging. But with a pretty minimal amount of configuration, I have a pretty lightweight and capable editor for working on C++ projects. And it is the same editor I use for working on Python and Go projects.&lt;/p&gt;
+</description>
+    </item>
+    
     
     
     <item>
@@ -22,7 +147,7 @@
 
 &lt;p&gt;In addition to my Wordpress blog, for a while I had also been hosting other applications, such as a Redmine system for project management. Redmine, being a Ruby-on-Rails setup, was quite a memory hog. But that combined with Wordpress made sense to use some form of hosting. Eventually I stopped using Redmine and was left with just a Wordpress blog, hosted on a semi-VPS service, and paying $7 USD a month. Finally I realized this was silly and I should just switch to something that costs&amp;hellip; maybe nothing?&lt;/p&gt;
 
-&lt;h2 id=&#34;hugo-a-static-site-generator:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Hugo: A static site generator&lt;/h2&gt;
+&lt;h2 id=&#34;hugo-a-static-site-generator&#34;&gt;Hugo: A static site generator&lt;/h2&gt;
 
 &lt;p&gt;I&amp;rsquo;m already a fan and user of the &lt;a href=&#34;http://golang.org&#34;&gt;Go language&lt;/a&gt;, and so in following a number of the Go social communities, I discovered &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;. A static site generator is an application that can take content in some original description (markdown in the case of Hugo), and renders final content by applying rules. This final content can then be hosted anywhere, without the need for server-side runtime support, such as Python/PHP/Go/Node/etc, because it does not require server-side processing to handle rendering the pages on the fly. This makes the site very portable and simple to deploy, and can be served out of aggressive caching.&lt;/p&gt;
 
@@ -30,7 +155,7 @@
 
 &lt;p&gt;This post is primarily focused on my experience in switching to Hugo, and not attempting to provide an A-Z tutorial of using it, nor a comparison to any similar options in static site generation. Detailed documentation can be found on the official Hugo site.&lt;/p&gt;
 
-&lt;h2 id=&#34;migrating-from-wordpress-to-hugo:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Migrating from Wordpress to Hugo&lt;/h2&gt;
+&lt;h2 id=&#34;migrating-from-wordpress-to-hugo&#34;&gt;Migrating from Wordpress to Hugo&lt;/h2&gt;
 
 &lt;p&gt;I can&amp;rsquo;t claim that the process of converting my Wordpress-based site to Hugo was 100% automatic, or even 90%. Let&amp;rsquo;s say about 80%. But it was fairly painless.&lt;/p&gt;
 
@@ -66,7 +191,7 @@ tags:
 
 &lt;p&gt;All-in-all the export and cleanup process was the most painless part. Most of the time was spent learning the new concepts of the Hugo system.&lt;/p&gt;
 
-&lt;h2 id=&#34;deployment:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Deployment&lt;/h2&gt;
+&lt;h2 id=&#34;deployment&#34;&gt;Deployment&lt;/h2&gt;
 
 &lt;p&gt;I&amp;rsquo;m going to start with describing the deployment process, since I find that to be one of the most appealing aspects of switching to Hugo. As I had mentioned, my previous solution was a paid hosted approach, in order to have a MySQL database, and a php-enabled dynamic site. My new approach brings my hosting expense down to &lt;strong&gt;zero&lt;/strong&gt;. By using &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt;, I can treat my site as just another code repository, while serving it for free. You can see the final rendered static site, right here at &lt;a href=&#34;https://github.com/justinfx/justinfx.github.io&#34;&gt;github.com/justinfx/justinfx.github.io&lt;/a&gt;.&lt;/p&gt;
 
@@ -87,11 +212,11 @@ in &lt;span style=&#34;color: #40a070&#34;&gt;195&lt;/span&gt; ms
 
 &lt;p&gt;I actually symlink the &amp;ldquo;public/&amp;rdquo; subdirectory to point to my &amp;ldquo;justinfx.github.io&amp;rdquo; Github Pages local repo. What that means is that after running Hugo, and because it is managed via a git repository, I now only need to commit the new changes to my repo in order to update my public site. This is a very natural workflow for anyone that is comfortable with git repositories. And it also means that I automatically get revision control for any changes to my website.&lt;/p&gt;
 
-&lt;h2 id=&#34;understanding-hugo-concepts:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Understanding Hugo Concepts&lt;/h2&gt;
+&lt;h2 id=&#34;understanding-hugo-concepts&#34;&gt;Understanding Hugo Concepts&lt;/h2&gt;
 
 &lt;p&gt;The aspect that took the longest, in the switch to Hugo, was understanding the project structure, and how the layout of the site was generated. The main terms you will deal with upfront are things like: content, layouts, templates, types, archetypes, and static. To oversimplify what I have come to understand is that the Hugo project structure separates your content from your view, or the way that content ultimately is arranged in your site. You spend the most time getting your layout and types set up once, and then moving forward it becomes a simple matter of typing new markdown content, which gets seamlessly integrated into the layout.&lt;/p&gt;
 
-&lt;h3 id=&#34;configuration:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Configuration&lt;/h3&gt;
+&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
 
 &lt;p&gt;The first thing you want to look at is your &lt;code&gt;config.yaml&lt;/code&gt; file. There isn&amp;rsquo;t much to it, and the default could be mostly correct for you. But I did have to change a few things to get it right. Mine looks like this:&lt;/p&gt;
 
@@ -120,7 +245,7 @@ params:
 
 &lt;p&gt;Not every field is required. Probably the most important settings are the &lt;code&gt;baseurl&lt;/code&gt; and &lt;code&gt;title&lt;/code&gt;. The rest of these settings control optional aspects of the site. You can see that I am setting my Disqus id, allowing Hugo to embed its integrated Disqus comment system into the posts. I&amp;rsquo;m also setting some options for how code syntax highlighting is displayed, and some definitions for organization and &lt;a href=&#34;https://gohugo.io/extras/permalinks/&#34;&gt;permalinks&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;content:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Content&lt;/h3&gt;
+&lt;h3 id=&#34;content&#34;&gt;Content&lt;/h3&gt;
 
 &lt;p&gt;Under the &amp;ldquo;content/&amp;rdquo; directory of my project is where all my markdown files are stored. I have the following:&lt;/p&gt;
 
@@ -140,7 +265,7 @@ params:
 
 &lt;p&gt;Within the markdown files, in addition to text and markdown formatting, you can also include &lt;a href=&#34;https://gohugo.io/templates/overview/&#34;&gt;template logic&lt;/a&gt;, to be expanded at render time (running the &lt;code&gt;hugo&lt;/code&gt; command).&lt;/p&gt;
 
-&lt;h3 id=&#34;archetypes:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Archetypes&lt;/h3&gt;
+&lt;h3 id=&#34;archetypes&#34;&gt;Archetypes&lt;/h3&gt;
 
 &lt;p&gt;At first, I had thought archetypes were something more complicated than they actually are. Really all they do is define a new &amp;ldquo;type template&amp;rdquo; so that when you create new content with &lt;code&gt;hugo new &amp;lt;...&amp;gt;&lt;/code&gt;, the new content will be created with type-specific defaults. For instance, I have an archetype defined that makes any markdown files created in my &amp;ldquo;content/blog/&amp;rdquo; location have the type &amp;ldquo;post&amp;rdquo;:&lt;/p&gt;
 
@@ -168,7 +293,7 @@ justinfx.com/content/blog/new_post.md created
 
 &lt;p&gt;You can see that a new draft post was created for me, and the Front Matter was pre-populated with the settings from the blog archetype. Just an easy way to set up new content really.&lt;/p&gt;
 
-&lt;h3 id=&#34;layouts:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Layouts&lt;/h3&gt;
+&lt;h3 id=&#34;layouts&#34;&gt;Layouts&lt;/h3&gt;
 
 &lt;p&gt;This was the hardest part of the learning curve for me. Layouts are the part of your codebase that specify how your content is turned into actual views in your static site. There is a correlation between the layout directories, and the type names we talked about previously. Because I have two types, &amp;ldquo;post&amp;rdquo; and &amp;ldquo;page&amp;rdquo;, it means I will have the corresponding locations within the layouts directory. Hugo has a resolution order it will use, when figuring out which layouts to apply. First it will check if there is a direct match for the type, and then it will fall back on a special &amp;ldquo;_default&amp;rdquo; directory. Within these directories, you can specify what content should look like when it is viewed as:&lt;/p&gt;
 
@@ -227,7 +352,7 @@ justinfx.com/content/blog/new_post.md created
 
 &lt;p&gt;&amp;ldquo;layouts/post/li.html&amp;rdquo; looks like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;
       &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;span&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;style=&amp;quot;line-height: 1.0&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
       {{if .Draft}}[draft] {{end}}&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;a&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;href=&amp;quot;{{ .Permalink }}&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;{{ .Title }}&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
       &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;div&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;class=&amp;quot;post-item&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -236,19 +361,19 @@ justinfx.com/content/blog/new_post.md created
       &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;This template is purely concerned with defining an &lt;code&gt;&amp;lt;li&amp;gt;&lt;/code&gt; element. We handle optionally indicating if a post is still in draft state (only visible if we are running the hugo server with &lt;code&gt;-D&lt;/code&gt;), and then showing the title and date of the post.&lt;/p&gt;
 
 &lt;p&gt;Extra info on layouts and views can be found &lt;a href=&#34;https://gohugo.io/content/types/#defining-a-content-type:3d59665407ad3f08f6bcaef4686926f7&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io/content/types/#create-type-directory:3d59665407ad3f08f6bcaef4686926f7&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;themes:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Themes&lt;/h3&gt;
+&lt;h3 id=&#34;themes&#34;&gt;Themes&lt;/h3&gt;
 
 &lt;p&gt;Hugo supports &lt;a href=&#34;https://gohugo.io/themes/overview/&#34;&gt;themes&lt;/a&gt;, and already has a sizable &lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;gallery&lt;/a&gt; of existing themes to choose from.&lt;/p&gt;
 
 &lt;p&gt;I had started out trying to just drop in different themes (placing them in the &amp;ldquo;themes&amp;rdquo; subdirectory, and activating them in the config file or via the command line), but I noticed that not every theme would render properly. I came to understand that themes still require a bit of integration, and are not simply a stylesheet. They define their own views which become part of the resolution order when Hugo looks them up at render time. Finally I just took the advise from &lt;a href=&#34;http://npf.io/2014/08/hugo-is-awesome/&#34;&gt;Nate Finch&amp;rsquo;s Hugo post&lt;/a&gt;, where he grabbed a theme that was closest to what he wanted and started tweaking it. I then started with Nate&amp;rsquo;s modified theme (since I liked it), and also further tweaked it to match what I liked. This resulted in getting rid of an explicit &amp;ldquo;themes&amp;rdquo; location, and just integrating the templates directly into my &amp;ldquo;layouts/&amp;rdquo; location.&lt;/p&gt;
 
-&lt;h3 id=&#34;shortcodes:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Shortcodes&lt;/h3&gt;
+&lt;h3 id=&#34;shortcodes&#34;&gt;Shortcodes&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://gohugo.io/extras/shortcodes/&#34;&gt;Shortcodes&lt;/a&gt; are sweet. They are very similar to Wordpress shortcodes provided by plugins, allowing you to create little functions that can take arguments and expand into reusable code.&lt;/p&gt;
 
@@ -262,7 +387,7 @@ justinfx.com/content/blog/new_post.md created
 
 &lt;p&gt;And &amp;ldquo;vimeo.html&amp;rdquo; looks like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;div&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;class=&amp;quot;js-video vimeo&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;div&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;class=&amp;quot;js-video vimeo&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
 	&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;iframe&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;src=&amp;quot;https://player.vimeo.com/video/{{ .Get 0 }}?byline=0&amp;quot;&lt;/span&gt; 
 	        &lt;span style=&#34;color: #4070a0&#34;&gt;width=&amp;quot;640&amp;quot;&lt;/span&gt; 
 	        &lt;span style=&#34;color: #4070a0&#34;&gt;height=&amp;quot;360&amp;quot;&lt;/span&gt; 
@@ -272,19 +397,19 @@ justinfx.com/content/blog/new_post.md created
 	&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/iframe&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;Now I have the ability to embed my vimeo media from within my markdown files, just by using the shortcode and passing the vimeo id as a parameter:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;{{&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt; vimeo&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;12067694&lt;/span&gt; &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;}}
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;{{&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;lt; vimeo&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;12067694&lt;/span&gt; &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;}}
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
 
-&lt;h3 id=&#34;static-files:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Static files&lt;/h3&gt;
+
+&lt;h3 id=&#34;static-files&#34;&gt;Static files&lt;/h3&gt;
 
 &lt;p&gt;Static files are pretty straightforward. It is just a &amp;ldquo;static/&amp;rdquo; location where everything underneath is served directly by your site, and does not go through a rendering process when you generate your site. This would be the place to store css, javascript, images, and other static content that simply needs to be served up in pages or urls. Themes can come with their own static locations, which will be integrated into the main static content when you render your site.&lt;/p&gt;
 
-&lt;h3 id=&#34;closing-thoughts:0fb87c8efc633224c79e1f60cf7f0750&#34;&gt;Closing Thoughts&lt;/h3&gt;
+&lt;h3 id=&#34;closing-thoughts&#34;&gt;Closing Thoughts&lt;/h3&gt;
 
 &lt;p&gt;There is something quite satisfying about having the source of my site being so tangible, while being easy to update, and easy to deploy. I don&amp;rsquo;t have to worry about a database, or hosting, or Wordpress site and plugin updates. I don&amp;rsquo;t have to worry about security, since there are no dynamic pages or Wordpress vulnerabilities to guard against. I don&amp;rsquo;t have to mess with backups and exports from a hosting service, since I check my entire site into github.&lt;/p&gt;
 
@@ -312,7 +437,7 @@ justinfx.com/content/blog/new_post.md created
 
 &lt;p&gt;The test for my benchmark involved creating a number objects, adding them to a list, and then deleting them. The options for the test include both pointers to a basic struct and a QObject, QPointers, QSharedPointers, QWeakPointers, and just for an external comparison I also included boost::shared_ptr and boost::weak_ptr. The test was performed with different numbers of objects, as well as for both Qt4 and Qt5. Here is a more detailed description of each test.&lt;/p&gt;
 
-&lt;h4 id=&#34;the-test-environment:c89abc9fedab4936f89941691d570e98&#34;&gt;The Test Environment&lt;/h4&gt;
+&lt;h4 id=&#34;the-test-environment&#34;&gt;The Test Environment&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;OSX 10.9.5 Laptop  
 2.8 Ghz Intel Core 2 Duo
@@ -322,7 +447,7 @@ Qt 4.8.6
 Qt 5.4.2
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;description-of-tests:c89abc9fedab4936f89941691d570e98&#34;&gt;Description of Tests&lt;/h4&gt;
+&lt;h4 id=&#34;description-of-tests&#34;&gt;Description of Tests&lt;/h4&gt;
 
 &lt;p&gt;&lt;em&gt;test_raw_pointer&lt;/em&gt; : Creating pointers to a basic struct, adding the raw pointers to a QList, and then deleting all of the pointers&lt;/p&gt;
 
@@ -340,7 +465,7 @@ Qt 5.4.2
 
 &lt;p&gt;_test_boost_qobj&lt;em&gt;sharedptr&lt;/em&gt; : Creating &lt;code&gt;boost::shared_ptrs&lt;/code&gt; from QObject instances, as well as boost::weak_ptrs for each, adding the shared_ptrs to a QList, and then deleting them&lt;/p&gt;
 
-&lt;h4 id=&#34;the-test-results:c89abc9fedab4936f89941691d570e98&#34;&gt;The Test Results&lt;/h4&gt;
+&lt;h4 id=&#34;the-test-results&#34;&gt;The Test Results&lt;/h4&gt;
 
 &lt;pre class=&#34;&#34;&gt;Testing w/ 5000 objects        Qt4       Qt5
 =============================================
@@ -439,13 +564,13 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
       <guid>http://justinfx.com/2012/10/12/pyqt4-for-maya/</guid>
       <description>
 
-&lt;h2 id=&#34;img-class-alignnone-size-full-wp-image-525-title-pyqt4-for-maya-src-wp-content-uploads-2012-10-1350054625-master-jpeg-alt-width-800-height-450-http-www-cmivfx-com-tutorials-view-498-pyqt4-ui-development-for-maya:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.com/wp-content/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;img-class-alignnone-size-full-wp-image-525-title-pyqt4-for-maya-src-wp-content-uploads-2012-10-1350054625-master-jpeg-alt-width-800-height-450-http-www-cmivfx-com-tutorials-view-498-pyqt4-ui-development-for-maya&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.com/wp-content/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
 
-&lt;h1 id=&#34;pyqt4-ui-development-for-maya:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;PyQt4 UI Development for Maya&lt;/h1&gt;
+&lt;h1 id=&#34;pyqt4-ui-development-for-maya&#34;&gt;PyQt4 UI Development for Maya&lt;/h1&gt;
 
 &lt;p&gt;Just released my 3rd python-based online training video through &lt;a href=&#34;https://cmivfx.com/store/498-pyqt4+ui+development+for+maya&#34;&gt;cmiVFX.com&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;introduction:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;div&gt;
   This tutorial is about learning PyQt4 python bindings for the Qt Framework, and how to introduce new UI elements to Maya as a platform.
@@ -460,7 +585,7 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;getting-started-with-pyqt4:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;Getting Started With PyQt4&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;getting-started-with-pyqt4&#34;&gt;&lt;strong&gt;Getting Started With PyQt4&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   There are multiple ways of getting a working installation of PyQt4, both for the general system and for Maya. We look into these approaches to get your system up and running to begin working with PyQt4!
@@ -475,7 +600,7 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;pyqt4-fundamentals:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;PyQt4 Fundamentals&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;pyqt4-fundamentals&#34;&gt;&lt;strong&gt;PyQt4 Fundamentals&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   Lets get crackin&amp;#8217; and learn the basics!
@@ -510,7 +635,7 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;general-examples:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;General Examples&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;general-examples&#34;&gt;&lt;strong&gt;General Examples&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   With an understanding of the framework components, we can begin working with fully functional stand-alone examples.
@@ -533,7 +658,7 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;pyqt4-and-maya-introduction:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;PyQt4 And Maya Introduction&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;pyqt4-and-maya-introduction&#34;&gt;&lt;strong&gt;PyQt4 And Maya Introduction&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   Finally, some Maya action! Maya has a slightly different approach to using PyQt4…
@@ -560,7 +685,7 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;replicating-maya-8217-s-ui-components:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;Replicating Maya&amp;#8217;s UI Components&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;replicating-maya-8217-s-ui-components&#34;&gt;&lt;strong&gt;Replicating Maya&amp;#8217;s UI Components&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   What better way to see examples of creating UI for Maya than to replicate some existing functionality? This gives us the opportunity expand with custom functionality
@@ -602,7 +727,7 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;customizations:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;Customizations&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;customizations&#34;&gt;&lt;strong&gt;Customizations&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   A button can be a button, and a slider might look alright in its stock form, but sometimes we want to customize the look of our widgets. This chapter introduces multiple ways of achieving custom looks to our components
@@ -618,7 +743,7 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;span-style-color-ff6600-previous-cmivfx-tutorials-span:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;span style=&#34;color: #ff6600;&#34;&gt;Previous cmiVFX tutorials:&lt;/span&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;span-style-color-ff6600-previous-cmivfx-tutorials-span&#34;&gt;&lt;span style=&#34;color: #ff6600;&#34;&gt;Previous cmiVFX tutorials:&lt;/span&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://cmivfx.com/store/320-python+introduction+vol+01+-+maya&#34;&gt;Intro to Python for Maya &amp;#8211; Vol 1&lt;/a&gt;&lt;/li&gt;
@@ -850,22 +975,22 @@ pickle (ascii)        17.8767
 &lt;li&gt;&lt;a href=&#34;https://github.com/jmendeth/PyOpenNI&#34;&gt;PyOpenNI&lt;/a&gt; python bindings&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&#34;span-style-text-decoration-underline-install-details-span:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Install Details&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;span-style-text-decoration-underline-install-details-span&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Install Details&lt;/span&gt;&lt;/h4&gt;
 
-&lt;h5 id=&#34;install-homebrew-package-manager:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install homebrew (package manager)&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-homebrew-package-manager&#34;&gt;&lt;strong&gt;Install homebrew (package manager)&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://mxcl.github.com/homebrew/&#34;&gt;http://mxcl.github.com/homebrew/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;install-build-tools:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install build tools&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-build-tools&#34;&gt;&lt;strong&gt;Install build tools&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;pre&gt;brew install cmake
 brew install boost&lt;/pre&gt;
 
-&lt;h5 id=&#34;install-python2-7:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install python2.7&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-python2-7&#34;&gt;&lt;strong&gt;Install python2.7&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;pre&gt;brew install python --framework&lt;/pre&gt;
 
-&lt;h5 id=&#34;suggestion-virtualenv-environment:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Suggestion: virtualenv Environment&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;suggestion-virtualenv-environment&#34;&gt;&lt;strong&gt;Suggestion: virtualenv Environment&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;This is not a requirement. But I recommend using virtualenv to set up an environment that specifically uses python2.7 so that you don&amp;#8217;t have to fight with mixed dependencies and versions.&lt;/p&gt;
 
@@ -878,7 +1003,7 @@ virtualenv --no-site-packages -p python2.7 kinect
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h5 id=&#34;install-libusb-patched-version:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install libusb (patched version)&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-libusb-patched-version&#34;&gt;&lt;strong&gt;Install libusb (patched version)&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;There is a special patched version of the libusb library, in the form of a homebrew formula.&lt;/p&gt;
 
@@ -889,7 +1014,7 @@ virtualenv --no-site-packages -p python2.7 kinect
 &lt;pre&gt;&lt;code&gt;brew install libusb-freenect
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h5 id=&#34;install-sensorkinect-drivers:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install SensorKinect drivers&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-sensorkinect-drivers&#34;&gt;&lt;strong&gt;Install SensorKinect drivers&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;pre&gt;&lt;code&gt;git clone https://github.com/avin2/SensorKinect.git
 &lt;/code&gt;&lt;/pre&gt;
@@ -899,7 +1024,7 @@ virtualenv --no-site-packages -p python2.7 kinect
 &lt;pre&gt;&lt;code&gt;sudo ./install.sh
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h5 id=&#34;install-openni-framework:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install OpenNI framework&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-openni-framework&#34;&gt;&lt;strong&gt;Install OpenNI framework&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Go here: &lt;a href=&#34;http://www.openni.org/Downloads/OpenNIModules.aspx&#34;&gt;http://www.openni.org/Downloads/OpenNIModules.aspx&lt;/a&gt;&lt;/li&gt;
@@ -907,7 +1032,7 @@ virtualenv --no-site-packages -p python2.7 kinect
 &lt;li&gt;&lt;code&gt;sudo ./install.sh&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h5 id=&#34;install-nite-middleware-for-openni:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install NITE middleware (for OpenNI)&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-nite-middleware-for-openni&#34;&gt;&lt;strong&gt;Install NITE middleware (for OpenNI)&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Go here: &lt;a href=&#34;http://www.openni.org/Downloads/OpenNIModules.aspx&#34;&gt;http://www.openni.org/Downloads/OpenNIModules.aspx&lt;/a&gt;&lt;/li&gt;
@@ -915,7 +1040,7 @@ virtualenv --no-site-packages -p python2.7 kinect
 &lt;li&gt;&lt;code&gt;sudo ./install.sh&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h5 id=&#34;install-pyopenni:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install PyOpenNI&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-pyopenni&#34;&gt;&lt;strong&gt;Install PyOpenNI&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;Be aware that on OSX, PyOpenNI requires a framework build of python 2.7+ and that you must build it for x86_64 specifically. Also, I was having major problems with cmake properly finding the python includes location. I had to suggest a fix, so &lt;a href=&#34;https://github.com/jmendeth/PyOpenNI/issues/16#issuecomment-6515678&#34;&gt;please see here for the necessary corrections&lt;/a&gt;. I have referenced a patched fork of the repository below.&lt;/p&gt;
 
@@ -930,7 +1055,7 @@ make
 
 &lt;p&gt;copy the lib/openni.so module to the python2.7 site-packages&lt;/p&gt;
 
-&lt;h4 id=&#34;span-style-text-decoration-underline-examples-span:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Examples&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;span-style-text-decoration-underline-examples-span&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Examples&lt;/span&gt;&lt;/h4&gt;
 
 &lt;p&gt;Once you have everything installed, you can try out the examples that are included both in the NITE source location that you downloaded and also in the PyOpenNI source location:&lt;/p&gt;
 
@@ -948,7 +1073,7 @@ make
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;embed video-player&#34;&gt;
+&lt;div class=&#34;embed video-player&#34;&gt;
 	&lt;iframe class=&#34;youtube-player&#34; 
 			type=&#34;text/html&#34; 
 			width=&#34;640&#34; height=&#34;385&#34; 
@@ -958,7 +1083,7 @@ make
 	&lt;/iframe&gt;
 &lt;/div&gt;
 
-&lt;/p&gt;
+
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 </description>
@@ -994,11 +1119,11 @@ make
 
 &lt;p&gt;&lt;strong&gt;Short questions that primarily request a complete code example as an answer are counter-productive to code communities.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;answer-option-1:fdf3e8731e376405437712c7b8b93685&#34;&gt;Answer Option 1&lt;/h5&gt;
+&lt;h5 id=&#34;answer-option-1&#34;&gt;Answer Option 1&lt;/h5&gt;
 
 &lt;p&gt;As the topic of this article suggests, option 1 is &amp;#8220;Write my code for me&amp;#8221;. It might seem easy as a one-off situation to simply donate a working code snippet and get the person asking this question moving on their merry way, but really this is not helping them in the long run. They haven&amp;#8217;t learned anything beyond the process of hitting a roadblock, then immediately going online to ask for a solution. Had this person included some references to what they have researched, and most importantly a code snippet representing what they have attempted, viewers of this question would have a basis for comment and potentially an answer pointing out where the person has gone wrong.&lt;/p&gt;
 
-&lt;h5 id=&#34;answer-option-2:fdf3e8731e376405437712c7b8b93685&#34;&gt;Answer Option 2&lt;/h5&gt;
+&lt;h5 id=&#34;answer-option-2&#34;&gt;Answer Option 2&lt;/h5&gt;
 
 &lt;p&gt;And in the other direction: providing a lengthy tutorial. We all want to help and teach, but this is just one of numerous questions floating out in the ether that requires a response. Can we really spare that much time for every single question like this to re-teach material that is most likely already documented in generalized contexts all across the internet? That would create quite a lot of redundant information simply because each person combines new components into a new question needing a new lesson. Really, every part of this question can be Googled quite easily. Why ask a community to do a new custom writeup for you?&lt;/p&gt;
 
@@ -1019,19 +1144,19 @@ make
 
 &lt;p&gt;&lt;em&gt;Through a conversation between my coworker and I, some interesting metaphors were raised that I simply can&amp;#8217;t resist from sharing&amp;#8230;&lt;/em&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;vending-machine-communities:fdf3e8731e376405437712c7b8b93685&#34;&gt;Vending-machine communities&lt;/h5&gt;
+&lt;h5 id=&#34;vending-machine-communities&#34;&gt;Vending-machine communities&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;Put a question in the slot and pop out a solution.  &lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Be it a traditional forum, an online discussion group, mailing list, or a trust and reputation based technical site like &lt;a href=&#34;http://www.stackoverflow.com&#34;&gt;stackoverflow.com&lt;/a&gt;, these communities are driven by people, not machines. People have to take time to review content, and contribute their knowledge. We all work hard to acquire that knowledge, so lets all try and put some value on it in the form of the quality of our questions. A .25 cent answer is insulting. Treat your questions like they are costing you actual money that properly reflects the value of people&amp;#8217;s knowledge. Code communities don&amp;#8217;t work for you, and you don&amp;#8217;t work for them. We are all here to help because we love it. Please don&amp;#8217;t make us hate it, or feel like we are all just part of a big vending-machine.&lt;/p&gt;
 
-&lt;h5 id=&#34;toilet-paper-answers:fdf3e8731e376405437712c7b8b93685&#34;&gt;&lt;strong&gt;Toilet paper answers&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;toilet-paper-answers&#34;&gt;&lt;strong&gt;Toilet paper answers&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;Answers that can be used only one particular time for one particular situation.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;There is an insane amount of content on the internet. It&amp;#8217;s hard enough sometimes to sift through the results of a vague Google search, let alone the content on our individual communities. When you ask a question that provides zero context, or proof of the extent of your current effort, then both the question and the answer are for the most part &amp;#8220;throw aways&amp;#8221;. If its going to be a persistent part of a community space, it should aim to benefit future support-seekers with similar situations. Referring to the example question above, someone going with Option 1 (&amp;#8220;Write my code&amp;#8221;) will end up providing an answer that will likely not help many people beyond this situation. Unless they too are looking for a way to do a for loop and create 10,000 4k dummy files and measure the execution time. The only way it would stand to benefit future visitors is if the answer did Option 2 and wrote a fully self-describing tutorial.&lt;/p&gt;
 
-&lt;h5 id=&#34;conclusion:fdf3e8731e376405437712c7b8b93685&#34;&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;conclusion&#34;&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;I can only speak for myself about what I might do. I consider myself to be the type that would go as far as to look at API docs for someone, and work out some pretty extensive examples on my local machine. I might even install libs that I don&amp;#8217;t have or have never used before in an effort to provide assistance. But I need to be motivated to do so. It&amp;#8217;s exciting for me to write out a page-length of information if I know it will help this person. But in a case like the above there is no show of effort and no context provided &amp;#8212; just a person asking to have code written for them.&lt;/p&gt;
 
@@ -1063,7 +1188,7 @@ make
 
 &lt;p&gt;It seemed the problem was not just limited to my specific early 2011 Macbook Pro. Suggestions ranged from resetting the PRAM (holding cmd+option+p+r for a couple of reboot cycles), to toggling the screen through display resolutions, to adjusting brightness of the display. Nothing seemed to make much of a difference to me.&lt;/p&gt;
 
-&lt;h4 id=&#34;inversion-pixel-walk:9e3cc28b2ebc6ec1cd4f8ea209bce00a&#34;&gt;Inversion (pixel-walk)&lt;/h4&gt;
+&lt;h4 id=&#34;inversion-pixel-walk&#34;&gt;Inversion (pixel-walk)&lt;/h4&gt;
 
 &lt;p&gt;Googling also turned up a reference to this site, which offers various types of LCD tests: &lt;a href=&#34;http://www.lagom.nl/lcd-test/inversion.php&#34;&gt;http://www.lagom.nl/lcd-test/inversion.php&lt;/a&gt;&lt;/p&gt;
 
@@ -1145,7 +1270,7 @@ make
   &lt;a href=&#34;http://www.lagom.nl/lcd-test/inversion.php&#34;&gt;Inversion (pixel-walk)&lt;/a&gt; test results on LCD displays&lt;br /&gt; &lt;/caption&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&#34;apple-support:9e3cc28b2ebc6ec1cd4f8ea209bce00a&#34;&gt;Apple Support&lt;/h4&gt;
+&lt;h4 id=&#34;apple-support&#34;&gt;Apple Support&lt;/h4&gt;
 
 &lt;p&gt;After speaking to support over the phone, they suggested that I go into the store for more help. When I got to the store and started speaking with a tech at the Genius Bar, he had never heard of this issue before. But once I showed him an example on both news.google.com, and in my Apple Mail, he definitely acknowledged that its noticeable. He then went off into the back to research the issue a bit.&lt;/p&gt;
 
@@ -1264,7 +1389,7 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
 
 &lt;p&gt;Second video in the python for maya series, just released through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;!&lt;/p&gt;
 
-&lt;h3 id=&#34;python-for-maya-8211-volume-2-https-cmivfx-com-store-328-python-for-maya-vol-02:932d1044b07cc887e7b7c36e5a9ebc4e&#34;&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;Python For Maya &amp;#8211; Volume 2&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;python-for-maya-8211-volume-2-https-cmivfx-com-store-328-python-for-maya-vol-02&#34;&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;Python For Maya &amp;#8211; Volume 2&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;If you watched the first video, you now have a good grasp on Python. Sweet. Let&amp;#8217;s plow through some more involved concepts like python juggernauts!&lt;/em&gt;&lt;/p&gt;
 
@@ -1348,7 +1473,7 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
 
 &lt;p&gt;Just released my first online video tutorial, through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;python-introduction-vol-01-8211-maya-http-cmivfx-com-store-320-python-introduction-vol-01-maya:d52e83cf14f8af81936355263d32ad99&#34;&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;Python Introduction Vol 01 &amp;#8211; Maya&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;python-introduction-vol-01-8211-maya-http-cmivfx-com-store-320-python-introduction-vol-01-maya&#34;&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;Python Introduction Vol 01 &amp;#8211; Maya&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;Amazing at Animation? Master of Modeling? Conquistador of Character Rigging?&lt;/em&gt;&lt;/p&gt;
 
@@ -1374,7 +1499,7 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
       <guid>http://justinfx.com/2011/07/28/go-language-for-python-programmers/</guid>
       <description>
 
-&lt;h3 id=&#34;img-class-alignleft-src-https-blog-golang-org-gopher-gopher-png-alt-width-116-height-142-http-golang-org-preface:7abf409e83c714d77ef3bb580cbebbaf&#34;&gt;&lt;a href=&#34;http://golang.org&#34;&gt;&lt;img class=&#34;alignleft&#34; src=&#34;https://blog.golang.org/gopher/gopher.png&#34; alt=&#34;&#34; width=&#34;116&#34; height=&#34;142&#34; /&gt;&lt;/a&gt; Preface&lt;/h3&gt;
+&lt;h3 id=&#34;img-class-alignleft-src-https-blog-golang-org-gopher-gopher-png-alt-width-116-height-142-http-golang-org-preface&#34;&gt;&lt;a href=&#34;http://golang.org&#34;&gt;&lt;img class=&#34;alignleft&#34; src=&#34;https://blog.golang.org/gopher/gopher.png&#34; alt=&#34;&#34; width=&#34;116&#34; height=&#34;142&#34; /&gt;&lt;/a&gt; Preface&lt;/h3&gt;
 
 &lt;p&gt;I&amp;#8217;ve been programming in python for over 5 years now, and I love the language a lot. I would look for any opportunity to accomplish my coding tasks using python, as opposed to learning new languages. PyQt4 for user interfaces, Django for web design, etc&amp;#8230; And when python just isn&amp;#8217;t an option, I have done my share of php, javascript, objective-c and so on.&lt;/p&gt;
 
@@ -1384,7 +1509,7 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
 
 &lt;p&gt;Then I came across a post on Google+, by someone that actually works at Google, mentioning a language being developed in-house. So I started reading about Go @ &lt;a href=&#34;http://golang.org/&#34;&gt;http://golang.org/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;the-go-language:7abf409e83c714d77ef3bb580cbebbaf&#34;&gt;The Go Language&lt;/h3&gt;
+&lt;h3 id=&#34;the-go-language&#34;&gt;The Go Language&lt;/h3&gt;
 
 &lt;p&gt;From the standpoint of a python programmer, Go feels like it sits right between C/C++ and python. You get the simpler syntax, but with the speed of a compiled language. Because Go has garbage collection, memory management isn&amp;#8217;t a concern. I was never used to the code/compile/test/repeat pattern before, but it compiles so fast and is so easy to set up a project that it feels pretty natural. Go doesn&amp;#8217;t require you to have header files and declare everything in advance, so banging out a simple program is quite fast and only slightly more overhead than writing a python script. Just have to add the step of compiling it. As far as the library, so far I have found everything pretty useful. And it seems that every time I search for a Go binding for something, I find one. I will go into more detail on that in a bit.&lt;/p&gt;
 
@@ -1398,7 +1523,7 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
 
 &lt;p&gt;A pretty crazy aspect of Go is its native support for concurrency using what they call &amp;#8220;Goroutines&amp;#8221;. The closest way I have been able to compare it to my experience in python is while using ZeroMQ for messaging. ZeroMQ promotes not only using its library for messaging, but also to replace issues with threads and locks. It has similar concepts in promoting concurrency. You divide your program up into its components and instead of sharing data structures between them, you communicate over channels (sockets in ZeroMQ). When you fire off a Goroutine, you aren&amp;#8217;t waiting for it anymore. It can run and do its thing and you keep on going. You can then send data back and forth with channels, and even use them just for signaling, like saying &amp;#8220;ok now exit&amp;#8221;.&lt;/p&gt;
 
-&lt;h3 id=&#34;actual-usage:7abf409e83c714d77ef3bb580cbebbaf&#34;&gt;Actual Usage&lt;/h3&gt;
+&lt;h3 id=&#34;actual-usage&#34;&gt;Actual Usage&lt;/h3&gt;
 
 &lt;p&gt;I&amp;#8217;ve been writing a message server so far in python, using the &lt;a href=&#34;http://www.tornadoweb.org/&#34;&gt;Tornado web server&lt;/a&gt;, along with some socket.io bindings called &lt;a href=&#34;https://github.com/MrJoes/tornadio&#34;&gt;TornadIO&lt;/a&gt;, and also &lt;a href=&#34;http://www.zeromq.org/&#34;&gt;ZeroMQ&lt;/a&gt; for internal communication. So far its been working pretty well, but there are a lot of complex layers, with ZeroMQ sort of riding on top of Tornados ioloop. I decided to try and rewrite this server in Go. Turns out Go has a lot of built-in support for doing exactly what this python server was doing. The whole web-socket server functionality is part of the standard http library module. I quickly found &lt;a href=&#34;https://github.com/madari/go-socket.io&#34;&gt;Go bindings for socket.io&lt;/a&gt; and I was on my way.&lt;/p&gt;
 
@@ -1406,7 +1531,7 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
 
 &lt;p&gt;So far, this Go server is turning out great, and I&amp;#8217;m excited by the fact that its compiled and faster. I don&amp;#8217;t have to distribute my source code now &lt;img src=&#34;http://justinfx.com/wp-includes/images/smilies/simple-smile.png&#34; alt=&#34;:-)&#34; class=&#34;wp-smiley&#34; style=&#34;height: 1em; max-height: 1em;&#34; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;performance:7abf409e83c714d77ef3bb580cbebbaf&#34;&gt;Performance&lt;/h3&gt;
+&lt;h3 id=&#34;performance&#34;&gt;Performance&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Disclaimer: These numbers are just comparisons between what I built in python vs Go. I think the point is to reflect what I naturally came up with on my first pass at using Go, vs applying years of python experience. I&amp;#8217;m dead sure my Go code isn&amp;#8217;t written as efficiently as someone with more experience, which I think makes it even more interesting of a comparison.&lt;/li&gt;
@@ -1488,178 +1613,11 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
 
 &lt;p&gt;The second Go test was after I finished implementing the same 1-to-1 feature set of the python version. I had thought the numbers would be dramatically impacted after adding the overhead of all the internal message routing, but the Go server still came out almost 5x faster than the python version. And this is from my first attempt at writing a Go program! I bet once I get a lot more solid with the language I can optimize this code a lot more.&lt;/p&gt;
 
-&lt;h3 id=&#34;conclusion:7abf409e83c714d77ef3bb580cbebbaf&#34;&gt;Conclusion&lt;/h3&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
 
 &lt;p&gt;I&amp;#8217;m pretty hooked on the language. I feel its the perfect option for a python programmer that wants some speed increases and simple concurrency, without having to learn something as intense as C++. Go is supposed to get faster and faster as they improve things like the goroutines, channels, and the garbage collector, so its a great time to jump in and start learning. Its really helped me understand more formal concepts that will probably make learning C++ even easier once I decide to go back to learning it &lt;img src=&#34;http://justinfx.com/wp-includes/images/smilies/simple-smile.png&#34; alt=&#34;:-)&#34; class=&#34;wp-smiley&#34; style=&#34;height: 1em; max-height: 1em;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
-</description>
-    </item>
-    
-    
-    
-    <item>
-      <title>Installing PyQt for maya 2011 (OSX)</title>
-      <link>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</link>
-      <pubDate>Sat, 08 Jan 2011 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
-      <guid>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</guid>
-      <description>
-
-&lt;h4 id=&#34;update:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;Update:&lt;/h4&gt;
-
-&lt;p&gt;I am now hosting a built package for Maya2011: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.7.4-maya2011-x64-osx-10.6.pkg&#34;&gt;MyQt4.7.4-maya2011-x64-osx-10.6.pkg&lt;/a&gt; And for Maya 2012+, see: &lt;a href=&#34;http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/&#34;&gt;Installing pyqt4 for maya2012&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Personally, when trying to run PyQt from within Maya 2009 / 2010 using the pumpThread method, I never had much luck. The best I ever got was the ability to bring up a dialog but not without locking up the UI, even though the pumpThread tool is meant to address that.&lt;/p&gt;
-
-&lt;p&gt;Anyways, when I found out Maya 2011 was rewritten based on Qt for the UI, I was really stoked. I saw the example video of being able to design a ui file in Designer, and just directly open it in a maya script, and all I could think about was designing Qt GUIs so much more easily now. Turns out that Maya 2011 didn&amp;#8217;t actually ship with PyQt included for licensing reasons I&amp;#8217;m sure. But it included documentation on how one could go about building PyQt for maya. Unfortunately I had tons of issues that caused maya to just crash when importing PyQt.&lt;/p&gt;
-
-&lt;p&gt;What I finally figured out was a mish-mash of information from the maya documention, and different forums and user groups. So I decided to make this easier on anyone having the same problems as I did, and just collect that information into one place. This process is for OSX. I&amp;#8217;m sure most of it is probably still relevant to linux or win, except for the last parts with &amp;#8216;install_name_tool&amp;#8217;. You would just need to make sure to find the right Qt/PyQt/SIP packages for your OS.&lt;/p&gt;
-
-&lt;h5 id=&#34;building-pyqt4-for-maya-2011-on-osx:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;Building PyQt4 for Maya 2011 on OSX&lt;/h5&gt;
-
-&lt;hr /&gt;
-
-&lt;h6 id=&#34;update-for-maya-2012:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;&lt;em&gt;&lt;strong&gt;Update for Maya 2012&lt;/strong&gt;&lt;/em&gt;&lt;/h6&gt;
-
-&lt;p&gt;While Maya uses newer versions, it seems the versions from the 2011 install still work. But here they are anyways incase you want the newer version for 2012:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Autodesk modified &lt;a href=&#34;http://images.autodesk.com/adsk/files/Qt-4.7.1-Modified_for_Maya.zip&#34;&gt;qt 4.7.1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2011/01/sip-4.12.4.tar.gz&#34;&gt;sip 4.12.4&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/src/PyQt-mac-gpl-4.8.6.tar.gz&#34;&gt;pyqt 4.8.6&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Make sure you have downloaded and installed the latest XCode from Apple. Its also included on your OSX installation disc.&lt;/p&gt;
-
-&lt;h6 id=&#34;qt-maya-has-a-specific-version-of-qt-built-into-it-this-is-qt-4-5-3:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;Qt: Maya has a specific version of Qt built into it. This is Qt 4.5.3.&lt;/h6&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Download:  &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/src/qt-mac-opensource-src-4.5.3.tar.gz&#34;&gt;qt-mac-opensource-src-4.5.3.tar.gz&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Extract: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;tar zxvf qt-mac-opensource-src-4.5.3.tar.gz
-&lt;span style=&#34;color: #007020&#34;&gt;cd &lt;/span&gt;qt-mac-opensource-src-4.5.3
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Build and install: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;./configure -cocoa -arch x86_64 -debug-and-release &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
-  -no-phonon -no-phonon-backend -no-qt3support &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
-  -no-webkit -nomake docs -nomake examples -nomake demos &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
-  -nomake translations -no-rpath -no-framework
-make -j 8
-sudo make install
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h6 id=&#34;sip-the-maya-docs-recommend-sip-version-4-10:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;SIP: The maya docs recommend sip version 4.10&lt;/h6&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Download this specific SIP:   &lt;a href=&#34;http://justinfx.com/wp-content/uploads/2011/01/sip-4.10.tar.gz&#34;&gt;sip-4.10.tar.gz&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Extract: &lt;pre class=&#34;theme:twilight top-margin:20 bottom-margin:20 toolbar-overlay:false striped:false nums:false lang:sh decode:true&#34;&gt;tar zxvf sip-4.10.tar.gz
-cd sip-4.10&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Build and install: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
-  configure.py --arch&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;x86_64
-make -j 8
-sudo make install
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h6 id=&#34;pyqt4-the-maya-docs-suggest-pyqt-4-7:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;PyQt4: The maya docs suggest PyQt 4.7&lt;/h6&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Download this specific PyQt: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/src/PyQt-mac-gpl-4.7.4.tar.gz&#34;&gt;PyQt-mac-gpl-4.7.4.tar.gz&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Extract: &lt;pre class=&#34;striped:false nums:false lang:sh decode:true&#34;&gt;tar zxvf PyQt-mac-gpl-4.7.3.tar.gz
-cd PyQt-mac-gpl-4.7.3&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Set up some environment variables before building: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;QTDIR&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt-4.5.3
-&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;PATH&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt-4.5.3/bin:&lt;span style=&#34;color: #bb60d5&#34;&gt;$PATH&lt;/span&gt;
-&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;QMAKESPEC&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt-4.5.3/mkspecs/macx-g++
-&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;DYLD_LIBRARY_PATH&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt-4.5.3/lib
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Build and install: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
-  configure.py &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
-  &lt;span style=&#34;color: #bb60d5&#34;&gt;LIBDIR_QT&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt‐4.5.3/lib &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
-  &lt;span style=&#34;color: #bb60d5&#34;&gt;INCDIR_QT&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt‐4.5.3/include &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
-  &lt;span style=&#34;color: #bb60d5&#34;&gt;MOC&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt‐4.5.3/bin/moc &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
-  -w --no-designer-plugin
-make -j 8
-sudo make install
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;PyQt4 will now be installed into Maya&amp;#8217;s python site-packages, BUT will be linked against the wrong Qt binaries. The maya docs have an annoying multi step set of commands but they don&amp;#8217;t copy/paste nicely, so here is a for-loop you can use: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;for&lt;/span&gt; mod in Core Gui Svg OpenGL Xml
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;do&lt;/span&gt; 
-  sudo find /Applications/Autodesk/maya2011/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python2.6/site-packages/PyQt4 -name &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;*so&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
-  -exec install_name_tool -change libQt&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;mod&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;}&lt;/span&gt;.4.dylib @executable_path/Qt&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;mod&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;{}&lt;/span&gt; ;
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;done&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;At this point you should be able to start up Maya and import and run PyQt from the script editor. You no longer need the pumpThread. Here is a test code snippet that I borrowed from here (the original had typos in it that I corrected)&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;maya.OpenMayaUI&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;mui&lt;/span&gt;
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;PyQt4.QtCore&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;PyQt4.QtGui&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;getMayaWindow&lt;/span&gt;():
-    ptr &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mainWindow()
-    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;return&lt;/span&gt; sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;wrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(ptr), QObject)
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;Form&lt;/span&gt;(QDialog):
-    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;__init__&lt;/span&gt;(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;, parent&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;None&lt;/span&gt;):
-        &lt;span style=&#34;color: #007020&#34;&gt;super&lt;/span&gt;(Form, &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;__init__(parent)
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setWindowTitle(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Test Dialog&amp;#39;&lt;/span&gt;)
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setObjectName(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;mainUI&amp;#39;&lt;/span&gt;)
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mainLayout &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QVBoxLayout(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;myButton &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QPushButton(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;myButton&amp;#39;&lt;/span&gt;)
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mainLayout&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addWidget(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;myButton)
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;global&lt;/span&gt; app
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;global&lt;/span&gt; form
-app &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; qApp
-form &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; Form(getMayaWindow())
-form&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;show()
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;It doesn&amp;#8217;t seem like you even need the install of Qt 4.5.3 that we did at this point since we changed the links, unless you use another Qt module besides QtCore, QtGui, QtSvg, QtXml, QtOpenGL (such as QtNetwork), but this could be solved by copying over the missing libs to where Maya is expecting them. Example for copying over QtNetwork:&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo cp /usr/local/Trolltech/Qt-4.5.3/lib/libQtNetwork.* 
-    /Applications/Autodesk/maya2011/Maya.app/Contents/MacOS
-sudo install_name_tool -change libQtCore.4.dylib @executable_path/QtCore 
-    /Applications/Autodesk/maya2011/Maya.app/Contents/MacOS/libQtNetwork.4.dylib
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;If you happen to have a mixed library environment like me, with more than one python lib location for code, and you see any funny errors while importing a module, just make sure that mayas python site-package is always in the front of the sys.path:&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sys&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;path&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;insert(&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;/Applications/Autodesk/maya2011/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python2.6/site-packages&amp;#39;&lt;/span&gt;)
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;And there you have it. PyQt4 now installed in Maya 2011 under OSX.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;References:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://images.autodesk.com/adsk/files/pyqtmaya2011.pdf&#34;&gt;http://images.autodesk.com/adsk/files/pyqtmaya2011.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://groups.google.com/group/python_inside_maya/browse_thread/thread/cd7109604407cba2/618a61ccebf8ac10?lnk=raot&amp;amp;pli=1&#34;&gt;groups.google.com/group/python_inside_maya&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://community.softimage.com/forum/autodesk-maya/python/pyqt-and-maya-pyqt-window-parented-to-maya-window/&#34;&gt;http://community.softimage.com/forum/autodesk-maya/python/pyqt-and-maya-pyqt-window-parented-to-maya-window/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

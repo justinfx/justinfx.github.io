@@ -98,7 +98,7 @@ ga('send', 'pageview');
       <a class="social-icon" href="http://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
 
     <p class="footnote">powered by <a href="http://hugo.spf13.com">Hugo</a> <br/>
-    &copy; 2015 Justin Israel. All rights reserved.</p>
+    &copy; 2016 Justin Israel. All rights reserved.</p>
     
   </div>
 </div>
@@ -122,14 +122,14 @@ myLabel<span style="color: #666666">.</span>mousePressEvent <span style="color: 
 
 <p>I have also had to make clickable widgets, such as QLabel:</p>
 
-<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">myLabel <span style="color: #666666">=</span> QLabel()
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">myLabel <span style="color: #666666">=</span> QLabel()
 myLabel<span style="color: #666666">.</span>mousePressEvent <span style="color: #666666">=</span> <span style="color: #007020; font-weight: bold">lambda</span> event: myLabel<span style="color: #666666">.</span>emit(SIGNAL(<span style="color: #4070a0">&quot;clicked&quot;</span>))
 </pre></div>
-</p>
+
 
 <p>Or if you had to do more than just a single statement:</p>
 
-<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">myLabel <span style="color: #666666">=</span> QLabel()
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">myLabel <span style="color: #666666">=</span> QLabel()
 <span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">clickedEvent</span>(event):
 myLabel<span style="color: #666666">.</span>emit(SIGNAL(<span style="color: #4070a0">&quot;clicked&quot;</span>))
 <span style="color: #60a0b0; font-style: italic"># do other stuff</span>
@@ -137,7 +137,7 @@ myLabel<span style="color: #666666">.</span>emit(SIGNAL(<span style="color: #407
 event<span style="color: #666666">.</span>accept()
 myLabel<span style="color: #666666">.</span>mousePressEvent <span style="color: #666666">=</span> clickedEvent
 </pre></div>
-</p>
+
 
 <p>I like this better than piling up subclasses that don&#8217;t do much.</p>
 

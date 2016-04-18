@@ -98,7 +98,7 @@ ga('send', 'pageview');
       <a class="social-icon" href="http://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
 
     <p class="footnote">powered by <a href="http://hugo.spf13.com">Hugo</a> <br/>
-    &copy; 2015 Justin Israel. All rights reserved.</p>
+    &copy; 2016 Justin Israel. All rights reserved.</p>
     
   </div>
 </div>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     
     
 
-<h4 id="update:a3a52b14c80229d1dc2a6829c906b500">Update:</h4>
+<h4 id="update">Update:</h4>
 
 <p>I am now hosting a built package for Maya2011: <a href="https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.7.4-maya2011-x64-osx-10.6.pkg">MyQt4.7.4-maya2011-x64-osx-10.6.pkg</a> And for Maya 2012+, see: <a href="/2011/11/09/installing-pyqt4-for-maya-2012-osx/">Installing pyqt4 for maya2012</a></p>
 
@@ -123,11 +123,11 @@ ga('send', 'pageview');
 
 <p>What I finally figured out was a mish-mash of information from the maya documention, and different forums and user groups. So I decided to make this easier on anyone having the same problems as I did, and just collect that information into one place. This process is for OSX. I&#8217;m sure most of it is probably still relevant to linux or win, except for the last parts with &#8216;install_name_tool&#8217;. You would just need to make sure to find the right Qt/PyQt/SIP packages for your OS.</p>
 
-<h5 id="building-pyqt4-for-maya-2011-on-osx:a3a52b14c80229d1dc2a6829c906b500">Building PyQt4 for Maya 2011 on OSX</h5>
+<h5 id="building-pyqt4-for-maya-2011-on-osx">Building PyQt4 for Maya 2011 on OSX</h5>
 
 <hr />
 
-<h6 id="update-for-maya-2012:a3a52b14c80229d1dc2a6829c906b500"><em><strong>Update for Maya 2012</strong></em></h6>
+<h6 id="update-for-maya-2012"><em><strong>Update for Maya 2012</strong></em></h6>
 
 <p>While Maya uses newer versions, it seems the versions from the 2011 install still work. But here they are anyways incase you want the newer version for 2012:</p>
 
@@ -141,7 +141,7 @@ ga('send', 'pageview');
 
 <p>Make sure you have downloaded and installed the latest XCode from Apple. Its also included on your OSX installation disc.</p>
 
-<h6 id="qt-maya-has-a-specific-version-of-qt-built-into-it-this-is-qt-4-5-3:a3a52b14c80229d1dc2a6829c906b500">Qt: Maya has a specific version of Qt built into it. This is Qt 4.5.3.</h6>
+<h6 id="qt-maya-has-a-specific-version-of-qt-built-into-it-this-is-qt-4-5-3">Qt: Maya has a specific version of Qt built into it. This is Qt 4.5.3.</h6>
 
 <ol>
 <li>Download:  <a href="https://dl.dropbox.com/u/34613220/MyQt4/src/qt-mac-opensource-src-4.5.3.tar.gz">qt-mac-opensource-src-4.5.3.tar.gz</a></li>
@@ -161,7 +161,7 @@ sudo make install
 </p></li>
 </ol>
 
-<h6 id="sip-the-maya-docs-recommend-sip-version-4-10:a3a52b14c80229d1dc2a6829c906b500">SIP: The maya docs recommend sip version 4.10</h6>
+<h6 id="sip-the-maya-docs-recommend-sip-version-4-10">SIP: The maya docs recommend sip version 4.10</h6>
 
 <ol>
 <li>Download this specific SIP:   <a href="/wp-content/uploads/2011/01/sip-4.10.tar.gz">sip-4.10.tar.gz</a></li>
@@ -177,7 +177,7 @@ sudo make install
 </p></li>
 </ol>
 
-<h6 id="pyqt4-the-maya-docs-suggest-pyqt-4-7:a3a52b14c80229d1dc2a6829c906b500">PyQt4: The maya docs suggest PyQt 4.7</h6>
+<h6 id="pyqt4-the-maya-docs-suggest-pyqt-4-7">PyQt4: The maya docs suggest PyQt 4.7</h6>
 
 <ol>
 <li>Download this specific PyQt: <a href="https://dl.dropbox.com/u/34613220/MyQt4/src/PyQt-mac-gpl-4.7.4.tar.gz">PyQt-mac-gpl-4.7.4.tar.gz</a></li>
@@ -214,7 +214,7 @@ sudo make install
 
 <p>At this point you should be able to start up Maya and import and run PyQt from the script editor. You no longer need the pumpThread. Here is a test code snippet that I borrowed from here (the original had typos in it that I corrected)</p>
 
-<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">maya.OpenMayaUI</span> <span style="color: #007020; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">mui</span>
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">maya.OpenMayaUI</span> <span style="color: #007020; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">mui</span>
 <span style="color: #007020; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">PyQt4.QtCore</span> <span style="color: #007020; font-weight: bold">import</span> <span style="color: #666666">*</span>
 <span style="color: #007020; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">PyQt4.QtGui</span> <span style="color: #007020; font-weight: bold">import</span> <span style="color: #666666">*</span>
 
@@ -237,22 +237,22 @@ app <span style="color: #666666">=</span> qApp
 form <span style="color: #666666">=</span> Form(getMayaWindow())
 form<span style="color: #666666">.</span>show()
 </pre></div>
-</p>
+
 
 <p>It doesn&#8217;t seem like you even need the install of Qt 4.5.3 that we did at this point since we changed the links, unless you use another Qt module besides QtCore, QtGui, QtSvg, QtXml, QtOpenGL (such as QtNetwork), but this could be solved by copying over the missing libs to where Maya is expecting them. Example for copying over QtNetwork:</p>
 
-<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">sudo cp /usr/local/Trolltech/Qt-4.5.3/lib/libQtNetwork.* 
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">sudo cp /usr/local/Trolltech/Qt-4.5.3/lib/libQtNetwork.* 
     /Applications/Autodesk/maya2011/Maya.app/Contents/MacOS
 sudo install_name_tool -change libQtCore.4.dylib @executable_path/QtCore 
     /Applications/Autodesk/maya2011/Maya.app/Contents/MacOS/libQtNetwork.4.dylib
 </pre></div>
-</p>
+
 
 <p>If you happen to have a mixed library environment like me, with more than one python lib location for code, and you see any funny errors while importing a module, just make sure that mayas python site-package is always in the front of the sys.path:</p>
 
-<p><div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">sys<span style="color: #666666">.</span>path<span style="color: #666666">.</span>insert(<span style="color: #40a070">0</span>,<span style="color: #4070a0">&#39;/Applications/Autodesk/maya2011/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python2.6/site-packages&#39;</span>)
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">sys<span style="color: #666666">.</span>path<span style="color: #666666">.</span>insert(<span style="color: #40a070">0</span>,<span style="color: #4070a0">&#39;/Applications/Autodesk/maya2011/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python2.6/site-packages&#39;</span>)
 </pre></div>
-</p>
+
 
 <p>And there you have it. PyQt4 now installed in Maya 2011 under OSX.</p>
 
