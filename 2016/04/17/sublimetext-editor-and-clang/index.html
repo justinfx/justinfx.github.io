@@ -220,9 +220,39 @@ $ st -n .
 It helps to store your uncrustify.cfg within your project repo. Also, there is a tool I used for visually editing the rules for setting up an uncrustify config: [universalindent](http://universalindent.sourceforge.net/).
 </code></pre>
 
+<h2 id="build-system">Build System</h2>
+
+<p>On a per-project basis, you can set up your build commands. Going into <code>Project -&gt; Edit Project</code>, I added something like the following to work with my particular build system for the project:</p>
+
+<pre><code class="language-json">{
+  &quot;build_systems&quot;: [
+    {
+      &quot;file_regex&quot;: &quot;(\\S*?):(\\d+):(\\d+): (error.*)&quot;,
+      &quot;name&quot;: &quot;Default 'Project' Build&quot;,
+      &quot;shell&quot;: true,
+      &quot;shell_cmd&quot;: &quot;./\\$USER/scripts/build_cmd arg1 arg2&quot;,
+      &quot;variants&quot;: [
+        {
+          &quot;cmd&quot;: [
+            &quot;./\\$USER/scripts/build_cmd arg3 arg4&quot;
+          ],
+          &quot;name&quot;: &quot;'Project' Build Debug&quot;,
+          &quot;shell&quot;: true
+        }
+      ],
+      &quot;working_dir&quot;: &quot;/path/to/project/root&quot;
+    }
+  ]
+}
+</code></pre>
+
+<p><code>file_regex</code> is a pattern specifying how to capture the filename, line number, column number, and error message from the output of the build command. This is useful to adapt to any kind of build system and have Sublime give you context about the errors in your view.</p>
+
+<p>You specify the default build command, and then optionally a number of variants for the build system, such as debug builds or different options. Once this is entered you can now set your build system selection and use your build hotkey.</p>
+
 <h2 id="wrapping-up">Wrapping up</h2>
 
-<p>I don&rsquo;t do much debugging or building from within my editor (I am primarily an Editor+Terminal kind of developer), so I didn&rsquo;t go as far as to investigate Sublime options for debugging. But with a pretty minimal amount of configuration, I have a pretty lightweight and capable editor for working on C++ projects. And it is the same editor I use for working on Python and Go projects.</p>
+<p>I don&rsquo;t do much debugging from within my editor (I am primarily an Editor+Terminal kind of developer), so I didn&rsquo;t go as far as to investigate Sublime options for debugging. But with a pretty minimal amount of configuration, I have a pretty lightweight and capable editor for working on C++ projects. And it is the same editor I use for working on Python and Go projects.</p>
 
 <p>Got any other recommendations for making SublimeText an even more capable solution for C++ projects? Let me know!</p>
 
