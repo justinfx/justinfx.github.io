@@ -22,7 +22,7 @@
 
 &lt;h2 id=&#34;a-bit-about-wrapping-c-c&#34;&gt;A bit about wrapping C/C++&lt;/h2&gt;
 
-&lt;p&gt;I&amp;rsquo;ve had a some past experience in writing cgo bindings on top of C and C++ libraries.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve had some past experience in writing cgo bindings on top of C and C++ libraries.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Author&lt;/strong&gt;&lt;/p&gt;
 
