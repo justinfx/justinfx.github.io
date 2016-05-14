@@ -45,70 +45,70 @@ Dependencies:&lt;/p&gt;
 
 &lt;p&gt;Test:&lt;/p&gt;
 
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;timeit&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; timeit 
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;tabulate&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; tabulate
 
-from timeit import timeit 
-from tabulate import tabulate
+setup &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&amp;#39;&amp;#39;d = {&lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;    &amp;#39;words&amp;#39;: &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;        Lorem ipsum dolor sit amet, consectetur adipiscing &lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;        elit. Mauris adipiscing adipiscing placerat. &lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;        Vestibulum augue augue, &lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;        pellentesque quis sollicitudin id, adipiscing.&lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;        &amp;quot;&amp;quot;&amp;quot;,&lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;    &amp;#39;list&amp;#39;: range(100),&lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;    &amp;#39;dict&amp;#39;: dict((str(i),&amp;#39;a&amp;#39;) for i in xrange(100)),&lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;    &amp;#39;int&amp;#39;: 100,&lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;    &amp;#39;float&amp;#39;: 100.123456&lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;}&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 
-setup = &#39;&#39;&#39;d = {
-    &#39;words&#39;: &#34;&#34;&#34;
-        Lorem ipsum dolor sit amet, consectetur adipiscing 
-        elit. Mauris adipiscing adipiscing placerat. 
-        Vestibulum augue augue, 
-        pellentesque quis sollicitudin id, adipiscing.
-        &#34;&#34;&#34;,
-    &#39;list&#39;: range(100),
-    &#39;dict&#39;: dict((str(i),&#39;a&#39;) for i in xrange(100)),
-    &#39;int&#39;: 100,
-    &#39;float&#39;: 100.123456
-}&#39;&#39;&#39;
+setup_pickle    &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; ; import cPickle ; src = cPickle.dumps(d)&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup
+setup_pickle2   &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; ; import cPickle ; src = cPickle.dumps(d, 2)&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup
+setup_json      &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; ; import json; src = json.dumps(d)&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup
+setup_msgpack   &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; ; src = msgpack.dumps(d)&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup
 
-setup_pickle    = &#39;%s ; import cPickle ; src = cPickle.dumps(d)&#39; % setup
-setup_pickle2   = &#39;%s ; import cPickle ; src = cPickle.dumps(d, 2)&#39; % setup
-setup_json      = &#39;%s ; import json; src = json.dumps(d)&#39; % setup
-setup_msgpack   = &#39;%s ; src = msgpack.dumps(d)&#39; % setup
-
-tests = [
-    # (title, setup, enc_test, dec_test)
-    (&#39;pickle (ascii)&#39;, &#39;import pickle; %s&#39; % setup_pickle, &#39;pickle.dumps(d, 0)&#39;, &#39;pickle.loads(src)&#39;),
-    (&#39;pickle (binary)&#39;, &#39;import pickle; %s&#39; % setup_pickle2, &#39;pickle.dumps(d, 2)&#39;, &#39;pickle.loads(src)&#39;),
-    (&#39;cPickle (ascii)&#39;, &#39;import cPickle; %s&#39; % setup_pickle, &#39;cPickle.dumps(d, 0)&#39;, &#39;cPickle.loads(src)&#39;),
-    (&#39;cPickle (binary)&#39;, &#39;import cPickle; %s&#39; % setup_pickle2, &#39;cPickle.dumps(d, 2)&#39;, &#39;cPickle.loads(src)&#39;),
-    (&#39;json&#39;, &#39;import json; %s&#39; % setup_json, &#39;json.dumps(d)&#39;, &#39;json.loads(src)&#39;),
-    (&#39;simplejson-3.3.1&#39;, &#39;import simplejson; %s&#39; % setup_json, &#39;simplejson.dumps(d)&#39;, &#39;simplejson.loads(src)&#39;),
-    (&#39;python-cjson-1.0.5&#39;, &#39;import cjson; %s&#39; % setup_json, &#39;cjson.encode(d)&#39;, &#39;cjson.decode(src)&#39;),
-    (&#39;ujson-1.33&#39;, &#39;import ujson; %s&#39; % setup_json, &#39;ujson.dumps(d)&#39;, &#39;ujson.loads(src)&#39;),
-    (&#39;yajl 0.3.5&#39;, &#39;import yajl; %s&#39; % setup_json, &#39;yajl.dumps(d)&#39;, &#39;yajl.loads(src)&#39;),
-    (&#39;msgpack-python-0.3.0&#39;, &#39;import msgpack; %s&#39; % setup_msgpack, &#39;msgpack.dumps(d)&#39;, &#39;msgpack.loads(src)&#39;),
+tests &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; [
+    &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# (title, setup, enc_test, dec_test)&lt;/span&gt;
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;pickle (ascii)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import pickle; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_pickle, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;pickle.dumps(d, 0)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;pickle.loads(src)&amp;#39;&lt;/span&gt;),
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;pickle (binary)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import pickle; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_pickle2, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;pickle.dumps(d, 2)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;pickle.loads(src)&amp;#39;&lt;/span&gt;),
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cPickle (ascii)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import cPickle; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_pickle, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cPickle.dumps(d, 0)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cPickle.loads(src)&amp;#39;&lt;/span&gt;),
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cPickle (binary)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import cPickle; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_pickle2, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cPickle.dumps(d, 2)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cPickle.loads(src)&amp;#39;&lt;/span&gt;),
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;json&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import json; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_json, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;json.dumps(d)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;json.loads(src)&amp;#39;&lt;/span&gt;),
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;simplejson-3.3.1&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import simplejson; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_json, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;simplejson.dumps(d)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;simplejson.loads(src)&amp;#39;&lt;/span&gt;),
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;python-cjson-1.0.5&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import cjson; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_json, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cjson.encode(d)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cjson.decode(src)&amp;#39;&lt;/span&gt;),
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;ujson-1.33&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import ujson; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_json, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;ujson.dumps(d)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;ujson.loads(src)&amp;#39;&lt;/span&gt;),
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;yajl 0.3.5&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import yajl; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_json, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;yajl.dumps(d)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;yajl.loads(src)&amp;#39;&lt;/span&gt;),
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;msgpack-python-0.3.0&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import msgpack; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_msgpack, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;msgpack.dumps(d)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;msgpack.loads(src)&amp;#39;&lt;/span&gt;),
 ]
 
-loops = 15000
-enc_table = []
-dec_table = []
+loops &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #40a070&#34;&gt;15000&lt;/span&gt;
+enc_table &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; []
+dec_table &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; []
 
-print &#34;Running tests (%d loops each)&#34; % loops
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;Running tests (&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; loops each)&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; loops
 
-for title, mod, enc, dec in tests:
-    print title
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;for&lt;/span&gt; title, mod, enc, dec &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;in&lt;/span&gt; tests:
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; title
 
-    print &#34;  [Encode]&#34;, enc 
-    result = timeit(enc, mod, number=loops)
-    enc_table.append([title, result])
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;  [Encode]&amp;quot;&lt;/span&gt;, enc 
+    result &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; timeit(enc, mod, number&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;loops)
+    enc_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;append([title, result])
 
-    print &#34;  [Decode]&#34;, dec 
-    result = timeit(dec, mod, number=loops)
-    dec_table.append([title, result])
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;  [Decode]&amp;quot;&lt;/span&gt;, dec 
+    result &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; timeit(dec, mod, number&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;loops)
+    dec_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;append([title, result])
 
-enc_table.sort(key=lambda x: x[1])
-enc_table.insert(0, [&#39;Package&#39;, &#39;Seconds&#39;])
+enc_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;sort(key&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;lambda&lt;/span&gt; x: x[&lt;span style=&#34;color: #40a070&#34;&gt;1&lt;/span&gt;])
+enc_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;insert(&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;, [&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Package&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Seconds&amp;#39;&lt;/span&gt;])
 
-dec_table.sort(key=lambda x: x[1])
-dec_table.insert(0, [&#39;Package&#39;, &#39;Seconds&#39;])
+dec_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;sort(key&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;lambda&lt;/span&gt; x: x[&lt;span style=&#34;color: #40a070&#34;&gt;1&lt;/span&gt;])
+dec_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;insert(&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;, [&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Package&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Seconds&amp;#39;&lt;/span&gt;])
 
-print &#34;\nEncoding Test (%d loops)&#34; % loops
-print tabulate(enc_table, headers=&#34;firstrow&#34;)
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;Encoding Test (&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; loops)&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; loops
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; tabulate(enc_table, headers&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;firstrow&amp;quot;&lt;/span&gt;)
 
-print &#34;\nDecoding Test (%d loops)&#34; % loops
-print tabulate(dec_table, headers=&#34;firstrow&#34;)
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;Decoding Test (&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; loops)&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; loops
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; tabulate(dec_table, headers&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;firstrow&amp;quot;&lt;/span&gt;)
+&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;OUTPUT:&lt;/p&gt;

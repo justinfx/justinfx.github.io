@@ -156,35 +156,35 @@ ga('send', 'pageview');
 <li><a href="https://github.com/jmendeth/PyOpenNI">PyOpenNI</a> python bindings</li>
 </ol>
 
-<h4 id="span-style-text-decoration-underline-install-details-span:272e896a64c0a0732640f02c01214cae"><span style="text-decoration: underline;">Install Details</span></h4>
+<h4 id="span-style-text-decoration-underline-install-details-span"><span style="text-decoration: underline;">Install Details</span></h4>
 
-<h5 id="install-homebrew-package-manager:272e896a64c0a0732640f02c01214cae"><strong>Install homebrew (package manager)</strong></h5>
+<h5 id="install-homebrew-package-manager"><strong>Install homebrew (package manager)</strong></h5>
 
 <p><a href="http://mxcl.github.com/homebrew/">http://mxcl.github.com/homebrew/</a></p>
 
-<h5 id="install-build-tools:272e896a64c0a0732640f02c01214cae"><strong>Install build tools</strong></h5>
+<h5 id="install-build-tools"><strong>Install build tools</strong></h5>
 
 <pre>brew install cmake
 brew install boost</pre>
 
-<h5 id="install-python2-7:272e896a64c0a0732640f02c01214cae"><strong>Install python2.7</strong></h5>
+<h5 id="install-python2-7"><strong>Install python2.7</strong></h5>
 
 <pre>brew install python --framework</pre>
 
-<h5 id="suggestion-virtualenv-environment:272e896a64c0a0732640f02c01214cae"><strong>Suggestion: virtualenv Environment</strong></h5>
+<h5 id="suggestion-virtualenv-environment"><strong>Suggestion: virtualenv Environment</strong></h5>
 
 <p>This is not a requirement. But I recommend using virtualenv to set up an environment that specifically uses python2.7 so that you don&#8217;t have to fight with mixed dependencies and versions.</p>
 
 <p>Create a virtualenv called &#8220;kinect&#8221;</p>
 
-
-pip install virtualenv
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">pip install virtualenv
 virtualenv --no-site-packages -p python2.7 kinect
-cd kinect
-source bin/activate
+<span style="color: #007020">cd </span>kinect
+<span style="color: #007020">source </span>bin/activate
+</pre></div>
 
 
-<h5 id="install-libusb-patched-version:272e896a64c0a0732640f02c01214cae"><strong>Install libusb (patched version)</strong></h5>
+<h5 id="install-libusb-patched-version"><strong>Install libusb (patched version)</strong></h5>
 
 <p>There is a special patched version of the libusb library, in the form of a homebrew formula.</p>
 
@@ -195,7 +195,7 @@ source bin/activate
 <pre><code>brew install libusb-freenect
 </code></pre>
 
-<h5 id="install-sensorkinect-drivers:272e896a64c0a0732640f02c01214cae"><strong>Install SensorKinect drivers</strong></h5>
+<h5 id="install-sensorkinect-drivers"><strong>Install SensorKinect drivers</strong></h5>
 
 <pre><code>git clone https://github.com/avin2/SensorKinect.git
 </code></pre>
@@ -205,7 +205,7 @@ source bin/activate
 <pre><code>sudo ./install.sh
 </code></pre>
 
-<h5 id="install-openni-framework:272e896a64c0a0732640f02c01214cae"><strong>Install OpenNI framework</strong></h5>
+<h5 id="install-openni-framework"><strong>Install OpenNI framework</strong></h5>
 
 <ol>
 <li>Go here: <a href="http://www.openni.org/Downloads/OpenNIModules.aspx">http://www.openni.org/Downloads/OpenNIModules.aspx</a></li>
@@ -213,7 +213,7 @@ source bin/activate
 <li><code>sudo ./install.sh</code></li>
 </ol>
 
-<h5 id="install-nite-middleware-for-openni:272e896a64c0a0732640f02c01214cae"><strong>Install NITE middleware (for OpenNI)</strong></h5>
+<h5 id="install-nite-middleware-for-openni"><strong>Install NITE middleware (for OpenNI)</strong></h5>
 
 <ol>
 <li>Go here: <a href="http://www.openni.org/Downloads/OpenNIModules.aspx">http://www.openni.org/Downloads/OpenNIModules.aspx</a></li>
@@ -221,22 +221,22 @@ source bin/activate
 <li><code>sudo ./install.sh</code></li>
 </ol>
 
-<h5 id="install-pyopenni:272e896a64c0a0732640f02c01214cae"><strong>Install PyOpenNI</strong></h5>
+<h5 id="install-pyopenni"><strong>Install PyOpenNI</strong></h5>
 
 <p>Be aware that on OSX, PyOpenNI requires a framework build of python 2.7+ and that you must build it for x86_64 specifically. Also, I was having major problems with cmake properly finding the python includes location. I had to suggest a fix, so <a href="https://github.com/jmendeth/PyOpenNI/issues/16#issuecomment-6515678">please see here for the necessary corrections</a>. I have referenced a patched fork of the repository below.</p>
 
-
-export CPPFLAGS="-arch x86_64"
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020">export </span><span style="color: #bb60d5">CPPFLAGS</span><span style="color: #666666">=</span><span style="color: #4070a0">&quot;-arch x86_64&quot;</span>
 git clone git://github.com/justinfx/PyOpenNI.git
 mkdir PyOpenNI-build
-cd PyOpenNI-build
-cmake -D PYTHON_INCLUDE_DIR=/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Headers ../PyOpenNI
+<span style="color: #007020">cd </span>PyOpenNI-build
+cmake -D <span style="color: #bb60d5">PYTHON_INCLUDE_DIR</span><span style="color: #666666">=</span>/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Headers ../PyOpenNI
 make
+</pre></div>
 
 
 <p>copy the lib/openni.so module to the python2.7 site-packages</p>
 
-<h4 id="span-style-text-decoration-underline-examples-span:272e896a64c0a0732640f02c01214cae"><span style="text-decoration: underline;">Examples</span></h4>
+<h4 id="span-style-text-decoration-underline-examples-span"><span style="text-decoration: underline;">Examples</span></h4>
 
 <p>Once you have everything installed, you can try out the examples that are included both in the NITE source location that you downloaded and also in the PyOpenNI source location:</p>
 
@@ -254,7 +254,7 @@ make
 
 <p>&nbsp;</p>
 
-<p><div class="embed video-player">
+<div class="embed video-player">
 	<iframe class="youtube-player" 
 			type="text/html" 
 			width="640" height="385" 
@@ -264,7 +264,7 @@ make
 	</iframe>
 </div>
 
-</p>
+
 
 <p>&nbsp;</p>
 

@@ -145,7 +145,7 @@ $ st -n .
 
 <p>These steps were performed on an OSX laptop, so you will need to look at the specific README files for Linux/Windows details. I also assume you have installed Package Control, which makes it trivial to install plugins.</p>
 
-<h2 id="a-name-clang-complete-clang-complete-a:dbee46960bb6bb5d6beda61224ec3cde"><a name="clang-complete">Clang-Complete</a></h2>
+<h2 id="a-name-clang-complete-clang-complete-a"><a name="clang-complete">Clang-Complete</a></h2>
 
 <p>OSX already comes with the clang compiler, and this plugin for SublimeText3 allows your source to be compiled on the fly and have diagnostic details made available.</p>
 
@@ -178,7 +178,7 @@ $ st -n .
 
 <p>At this point, you should have code completion, and the ability to navigate through C++ symbols. You will know your code completion is working if the completion popup has more than just names, and actually has type information on the right side.</p>
 
-<h2 id="a-name-switch-file-deluxe-switch-file-deluxe-a:dbee46960bb6bb5d6beda61224ec3cde"><a name="switch-file-deluxe">Switch File Deluxe</a></h2>
+<h2 id="a-name-switch-file-deluxe-switch-file-deluxe-a"><a name="switch-file-deluxe">Switch File Deluxe</a></h2>
 
 <p>This is a pretty sweet and simple plugin that lets you switch between headers and source files. Before Sublime, I had been using Qt Creator for C++ Qt projects, and this functionality was built-in and mapped to the F4 key.</p>
 
@@ -200,7 +200,7 @@ $ st -n .
 
 <p>From any C++ header or source file, when you hit F4 you will switch to the corresponding header or source. If the matching file is ambiguous, you should be presented with a choice of files. Once you select the file, future uses of the key will immediately switch between the previously selected files.</p>
 
-<h2 id="a-name-uncrustify-uncrustify-a:dbee46960bb6bb5d6beda61224ec3cde"><a name="uncrustify">Uncrustify</a></h2>
+<h2 id="a-name-uncrustify-uncrustify-a"><a name="uncrustify">Uncrustify</a></h2>
 
 <p>If you prefer your C++ source code to follow a particular style, then you can use the &ldquo;uncrustify&rdquo; tool to apply beautification based on a configuration file of rules.</p>
 
@@ -220,39 +220,9 @@ $ st -n .
 It helps to store your uncrustify.cfg within your project repo. Also, there is a tool I used for visually editing the rules for setting up an uncrustify config: [universalindent](http://universalindent.sourceforge.net/).
 </code></pre>
 
-<h2 id="build-system:dbee46960bb6bb5d6beda61224ec3cde">Build System</h2>
+<h2 id="wrapping-up">Wrapping up</h2>
 
-<p>On a per-project basis, you can set up your build commands. Going into <code>Project -&gt; Edit Project</code>, I added something like the following to work with my particular build system for the project:</p>
-
-<pre><code class="language-json">{
-  &quot;build_systems&quot;: [
-    {
-      &quot;file_regex&quot;: &quot;(\\S*?):(\\d+):(\\d+): (error.*)&quot;,
-      &quot;name&quot;: &quot;Default 'Project' Build&quot;,
-      &quot;shell&quot;: true,
-      &quot;shell_cmd&quot;: &quot;./\\$USER/scripts/build_cmd arg1 arg2&quot;,
-      &quot;variants&quot;: [
-        {
-          &quot;cmd&quot;: [
-            &quot;./\\$USER/scripts/build_cmd arg3 arg4&quot;
-          ],
-          &quot;name&quot;: &quot;'Project' Build Debug&quot;,
-          &quot;shell&quot;: true
-        }
-      ],
-      &quot;working_dir&quot;: &quot;/path/to/project/root&quot;
-    }
-  ]
-}
-</code></pre>
-
-<p><code>file_regex</code> is a pattern specifying how to capture the filename, line number, column number, and error message from the output of the build command. This is useful to adapt to any kind of build system and have Sublime give you context about the errors in your view.</p>
-
-<p>You specify the default build command, and then optionally a number of variants for the build system, such as debug builds or different options. Once this is entered you can now set your build system selection and use your build hotkey.</p>
-
-<h2 id="wrapping-up:dbee46960bb6bb5d6beda61224ec3cde">Wrapping up</h2>
-
-<p>I don&rsquo;t do much debugging from within my editor (I am primarily an Editor+Terminal kind of developer), so I didn&rsquo;t go as far as to investigate Sublime options for debugging. But with a pretty minimal amount of configuration, I have a pretty lightweight and capable editor for working on C++ projects. And it is the same editor I use for working on Python and Go projects.</p>
+<p>I don&rsquo;t do much debugging or building from within my editor (I am primarily an Editor+Terminal kind of developer), so I didn&rsquo;t go as far as to investigate Sublime options for debugging. But with a pretty minimal amount of configuration, I have a pretty lightweight and capable editor for working on C++ projects. And it is the same editor I use for working on Python and Go projects.</p>
 
 <p>Got any other recommendations for making SublimeText an even more capable solution for C++ projects? Let me know!</p>
 

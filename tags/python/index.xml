@@ -18,13 +18,13 @@
       <guid>http://justinfx.com/2012/10/12/pyqt4-for-maya/</guid>
       <description>
 
-&lt;h2 id=&#34;img-class-alignnone-size-full-wp-image-525-title-pyqt4-for-maya-src-wp-content-uploads-2012-10-1350054625-master-jpeg-alt-width-800-height-450-http-www-cmivfx-com-tutorials-view-498-pyqt4-ui-development-for-maya:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.com/wp-content/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;img-class-alignnone-size-full-wp-image-525-title-pyqt4-for-maya-src-wp-content-uploads-2012-10-1350054625-master-jpeg-alt-width-800-height-450-http-www-cmivfx-com-tutorials-view-498-pyqt4-ui-development-for-maya&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.com/wp-content/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
 
-&lt;h1 id=&#34;pyqt4-ui-development-for-maya:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;PyQt4 UI Development for Maya&lt;/h1&gt;
+&lt;h1 id=&#34;pyqt4-ui-development-for-maya&#34;&gt;PyQt4 UI Development for Maya&lt;/h1&gt;
 
 &lt;p&gt;Just released my 3rd python-based online training video through &lt;a href=&#34;https://cmivfx.com/store/498-pyqt4+ui+development+for+maya&#34;&gt;cmiVFX.com&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;introduction:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;div&gt;
   This tutorial is about learning PyQt4 python bindings for the Qt Framework, and how to introduce new UI elements to Maya as a platform.
@@ -39,7 +39,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;getting-started-with-pyqt4:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;Getting Started With PyQt4&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;getting-started-with-pyqt4&#34;&gt;&lt;strong&gt;Getting Started With PyQt4&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   There are multiple ways of getting a working installation of PyQt4, both for the general system and for Maya. We look into these approaches to get your system up and running to begin working with PyQt4!
@@ -54,7 +54,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;pyqt4-fundamentals:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;PyQt4 Fundamentals&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;pyqt4-fundamentals&#34;&gt;&lt;strong&gt;PyQt4 Fundamentals&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   Lets get crackin&amp;#8217; and learn the basics!
@@ -89,7 +89,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;general-examples:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;General Examples&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;general-examples&#34;&gt;&lt;strong&gt;General Examples&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   With an understanding of the framework components, we can begin working with fully functional stand-alone examples.
@@ -112,7 +112,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;pyqt4-and-maya-introduction:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;PyQt4 And Maya Introduction&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;pyqt4-and-maya-introduction&#34;&gt;&lt;strong&gt;PyQt4 And Maya Introduction&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   Finally, some Maya action! Maya has a slightly different approach to using PyQt4…
@@ -139,7 +139,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;replicating-maya-8217-s-ui-components:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;Replicating Maya&amp;#8217;s UI Components&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;replicating-maya-8217-s-ui-components&#34;&gt;&lt;strong&gt;Replicating Maya&amp;#8217;s UI Components&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   What better way to see examples of creating UI for Maya than to replicate some existing functionality? This gives us the opportunity expand with custom functionality
@@ -181,7 +181,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;customizations:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;Customizations&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;customizations&#34;&gt;&lt;strong&gt;Customizations&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   A button can be a button, and a slider might look alright in its stock form, but sometimes we want to customize the look of our widgets. This chapter introduces multiple ways of achieving custom looks to our components
@@ -197,7 +197,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;span-style-color-ff6600-previous-cmivfx-tutorials-span:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;span style=&#34;color: #ff6600;&#34;&gt;Previous cmiVFX tutorials:&lt;/span&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;span-style-color-ff6600-previous-cmivfx-tutorials-span&#34;&gt;&lt;span style=&#34;color: #ff6600;&#34;&gt;Previous cmiVFX tutorials:&lt;/span&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://cmivfx.com/store/320-python+introduction+vol+01+-+maya&#34;&gt;Intro to Python for Maya &amp;#8211; Vol 1&lt;/a&gt;&lt;/li&gt;
@@ -243,70 +243,70 @@ Dependencies:&lt;/p&gt;
 
 &lt;p&gt;Test:&lt;/p&gt;
 
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;timeit&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; timeit 
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;tabulate&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; tabulate
 
-from timeit import timeit 
-from tabulate import tabulate
+setup &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&amp;#39;&amp;#39;d = {&lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;    &amp;#39;words&amp;#39;: &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;        Lorem ipsum dolor sit amet, consectetur adipiscing &lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;        elit. Mauris adipiscing adipiscing placerat. &lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;        Vestibulum augue augue, &lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;        pellentesque quis sollicitudin id, adipiscing.&lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;        &amp;quot;&amp;quot;&amp;quot;,&lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;    &amp;#39;list&amp;#39;: range(100),&lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;    &amp;#39;dict&amp;#39;: dict((str(i),&amp;#39;a&amp;#39;) for i in xrange(100)),&lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;    &amp;#39;int&amp;#39;: 100,&lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;    &amp;#39;float&amp;#39;: 100.123456&lt;/span&gt;
+&lt;span style=&#34;color: #4070a0&#34;&gt;}&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 
-setup = &#39;&#39;&#39;d = {
-    &#39;words&#39;: &#34;&#34;&#34;
-        Lorem ipsum dolor sit amet, consectetur adipiscing 
-        elit. Mauris adipiscing adipiscing placerat. 
-        Vestibulum augue augue, 
-        pellentesque quis sollicitudin id, adipiscing.
-        &#34;&#34;&#34;,
-    &#39;list&#39;: range(100),
-    &#39;dict&#39;: dict((str(i),&#39;a&#39;) for i in xrange(100)),
-    &#39;int&#39;: 100,
-    &#39;float&#39;: 100.123456
-}&#39;&#39;&#39;
+setup_pickle    &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; ; import cPickle ; src = cPickle.dumps(d)&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup
+setup_pickle2   &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; ; import cPickle ; src = cPickle.dumps(d, 2)&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup
+setup_json      &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; ; import json; src = json.dumps(d)&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup
+setup_msgpack   &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; ; src = msgpack.dumps(d)&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup
 
-setup_pickle    = &#39;%s ; import cPickle ; src = cPickle.dumps(d)&#39; % setup
-setup_pickle2   = &#39;%s ; import cPickle ; src = cPickle.dumps(d, 2)&#39; % setup
-setup_json      = &#39;%s ; import json; src = json.dumps(d)&#39; % setup
-setup_msgpack   = &#39;%s ; src = msgpack.dumps(d)&#39; % setup
-
-tests = [
-    # (title, setup, enc_test, dec_test)
-    (&#39;pickle (ascii)&#39;, &#39;import pickle; %s&#39; % setup_pickle, &#39;pickle.dumps(d, 0)&#39;, &#39;pickle.loads(src)&#39;),
-    (&#39;pickle (binary)&#39;, &#39;import pickle; %s&#39; % setup_pickle2, &#39;pickle.dumps(d, 2)&#39;, &#39;pickle.loads(src)&#39;),
-    (&#39;cPickle (ascii)&#39;, &#39;import cPickle; %s&#39; % setup_pickle, &#39;cPickle.dumps(d, 0)&#39;, &#39;cPickle.loads(src)&#39;),
-    (&#39;cPickle (binary)&#39;, &#39;import cPickle; %s&#39; % setup_pickle2, &#39;cPickle.dumps(d, 2)&#39;, &#39;cPickle.loads(src)&#39;),
-    (&#39;json&#39;, &#39;import json; %s&#39; % setup_json, &#39;json.dumps(d)&#39;, &#39;json.loads(src)&#39;),
-    (&#39;simplejson-3.3.1&#39;, &#39;import simplejson; %s&#39; % setup_json, &#39;simplejson.dumps(d)&#39;, &#39;simplejson.loads(src)&#39;),
-    (&#39;python-cjson-1.0.5&#39;, &#39;import cjson; %s&#39; % setup_json, &#39;cjson.encode(d)&#39;, &#39;cjson.decode(src)&#39;),
-    (&#39;ujson-1.33&#39;, &#39;import ujson; %s&#39; % setup_json, &#39;ujson.dumps(d)&#39;, &#39;ujson.loads(src)&#39;),
-    (&#39;yajl 0.3.5&#39;, &#39;import yajl; %s&#39; % setup_json, &#39;yajl.dumps(d)&#39;, &#39;yajl.loads(src)&#39;),
-    (&#39;msgpack-python-0.3.0&#39;, &#39;import msgpack; %s&#39; % setup_msgpack, &#39;msgpack.dumps(d)&#39;, &#39;msgpack.loads(src)&#39;),
+tests &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; [
+    &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# (title, setup, enc_test, dec_test)&lt;/span&gt;
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;pickle (ascii)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import pickle; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_pickle, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;pickle.dumps(d, 0)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;pickle.loads(src)&amp;#39;&lt;/span&gt;),
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;pickle (binary)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import pickle; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_pickle2, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;pickle.dumps(d, 2)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;pickle.loads(src)&amp;#39;&lt;/span&gt;),
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cPickle (ascii)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import cPickle; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_pickle, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cPickle.dumps(d, 0)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cPickle.loads(src)&amp;#39;&lt;/span&gt;),
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cPickle (binary)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import cPickle; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_pickle2, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cPickle.dumps(d, 2)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cPickle.loads(src)&amp;#39;&lt;/span&gt;),
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;json&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import json; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_json, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;json.dumps(d)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;json.loads(src)&amp;#39;&lt;/span&gt;),
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;simplejson-3.3.1&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import simplejson; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_json, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;simplejson.dumps(d)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;simplejson.loads(src)&amp;#39;&lt;/span&gt;),
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;python-cjson-1.0.5&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import cjson; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_json, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cjson.encode(d)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cjson.decode(src)&amp;#39;&lt;/span&gt;),
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;ujson-1.33&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import ujson; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_json, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;ujson.dumps(d)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;ujson.loads(src)&amp;#39;&lt;/span&gt;),
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;yajl 0.3.5&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import yajl; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_json, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;yajl.dumps(d)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;yajl.loads(src)&amp;#39;&lt;/span&gt;),
+    (&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;msgpack-python-0.3.0&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import msgpack; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_msgpack, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;msgpack.dumps(d)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;msgpack.loads(src)&amp;#39;&lt;/span&gt;),
 ]
 
-loops = 15000
-enc_table = []
-dec_table = []
+loops &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #40a070&#34;&gt;15000&lt;/span&gt;
+enc_table &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; []
+dec_table &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; []
 
-print &#34;Running tests (%d loops each)&#34; % loops
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;Running tests (&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; loops each)&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; loops
 
-for title, mod, enc, dec in tests:
-    print title
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;for&lt;/span&gt; title, mod, enc, dec &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;in&lt;/span&gt; tests:
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; title
 
-    print &#34;  [Encode]&#34;, enc 
-    result = timeit(enc, mod, number=loops)
-    enc_table.append([title, result])
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;  [Encode]&amp;quot;&lt;/span&gt;, enc 
+    result &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; timeit(enc, mod, number&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;loops)
+    enc_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;append([title, result])
 
-    print &#34;  [Decode]&#34;, dec 
-    result = timeit(dec, mod, number=loops)
-    dec_table.append([title, result])
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;  [Decode]&amp;quot;&lt;/span&gt;, dec 
+    result &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; timeit(dec, mod, number&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;loops)
+    dec_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;append([title, result])
 
-enc_table.sort(key=lambda x: x[1])
-enc_table.insert(0, [&#39;Package&#39;, &#39;Seconds&#39;])
+enc_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;sort(key&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;lambda&lt;/span&gt; x: x[&lt;span style=&#34;color: #40a070&#34;&gt;1&lt;/span&gt;])
+enc_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;insert(&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;, [&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Package&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Seconds&amp;#39;&lt;/span&gt;])
 
-dec_table.sort(key=lambda x: x[1])
-dec_table.insert(0, [&#39;Package&#39;, &#39;Seconds&#39;])
+dec_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;sort(key&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;lambda&lt;/span&gt; x: x[&lt;span style=&#34;color: #40a070&#34;&gt;1&lt;/span&gt;])
+dec_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;insert(&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;, [&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Package&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Seconds&amp;#39;&lt;/span&gt;])
 
-print &#34;\nEncoding Test (%d loops)&#34; % loops
-print tabulate(enc_table, headers=&#34;firstrow&#34;)
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;Encoding Test (&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; loops)&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; loops
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; tabulate(enc_table, headers&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;firstrow&amp;quot;&lt;/span&gt;)
 
-print &#34;\nDecoding Test (%d loops)&#34; % loops
-print tabulate(dec_table, headers=&#34;firstrow&#34;)
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;Decoding Test (&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; loops)&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; loops
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; tabulate(dec_table, headers&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;firstrow&amp;quot;&lt;/span&gt;)
+&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;OUTPUT:&lt;/p&gt;
@@ -429,35 +429,35 @@ pickle (ascii)        17.8767
 &lt;li&gt;&lt;a href=&#34;https://github.com/jmendeth/PyOpenNI&#34;&gt;PyOpenNI&lt;/a&gt; python bindings&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&#34;span-style-text-decoration-underline-install-details-span:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Install Details&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;span-style-text-decoration-underline-install-details-span&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Install Details&lt;/span&gt;&lt;/h4&gt;
 
-&lt;h5 id=&#34;install-homebrew-package-manager:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install homebrew (package manager)&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-homebrew-package-manager&#34;&gt;&lt;strong&gt;Install homebrew (package manager)&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://mxcl.github.com/homebrew/&#34;&gt;http://mxcl.github.com/homebrew/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;install-build-tools:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install build tools&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-build-tools&#34;&gt;&lt;strong&gt;Install build tools&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;pre&gt;brew install cmake
 brew install boost&lt;/pre&gt;
 
-&lt;h5 id=&#34;install-python2-7:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install python2.7&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-python2-7&#34;&gt;&lt;strong&gt;Install python2.7&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;pre&gt;brew install python --framework&lt;/pre&gt;
 
-&lt;h5 id=&#34;suggestion-virtualenv-environment:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Suggestion: virtualenv Environment&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;suggestion-virtualenv-environment&#34;&gt;&lt;strong&gt;Suggestion: virtualenv Environment&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;This is not a requirement. But I recommend using virtualenv to set up an environment that specifically uses python2.7 so that you don&amp;#8217;t have to fight with mixed dependencies and versions.&lt;/p&gt;
 
 &lt;p&gt;Create a virtualenv called &amp;#8220;kinect&amp;#8221;&lt;/p&gt;
 
-
-pip install virtualenv
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;pip install virtualenv
 virtualenv --no-site-packages -p python2.7 kinect
-cd kinect
-source bin/activate
+&lt;span style=&#34;color: #007020&#34;&gt;cd &lt;/span&gt;kinect
+&lt;span style=&#34;color: #007020&#34;&gt;source &lt;/span&gt;bin/activate
+&lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h5 id=&#34;install-libusb-patched-version:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install libusb (patched version)&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-libusb-patched-version&#34;&gt;&lt;strong&gt;Install libusb (patched version)&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;There is a special patched version of the libusb library, in the form of a homebrew formula.&lt;/p&gt;
 
@@ -468,7 +468,7 @@ source bin/activate
 &lt;pre&gt;&lt;code&gt;brew install libusb-freenect
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h5 id=&#34;install-sensorkinect-drivers:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install SensorKinect drivers&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-sensorkinect-drivers&#34;&gt;&lt;strong&gt;Install SensorKinect drivers&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;pre&gt;&lt;code&gt;git clone https://github.com/avin2/SensorKinect.git
 &lt;/code&gt;&lt;/pre&gt;
@@ -478,7 +478,7 @@ source bin/activate
 &lt;pre&gt;&lt;code&gt;sudo ./install.sh
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h5 id=&#34;install-openni-framework:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install OpenNI framework&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-openni-framework&#34;&gt;&lt;strong&gt;Install OpenNI framework&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Go here: &lt;a href=&#34;http://www.openni.org/Downloads/OpenNIModules.aspx&#34;&gt;http://www.openni.org/Downloads/OpenNIModules.aspx&lt;/a&gt;&lt;/li&gt;
@@ -486,7 +486,7 @@ source bin/activate
 &lt;li&gt;&lt;code&gt;sudo ./install.sh&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h5 id=&#34;install-nite-middleware-for-openni:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install NITE middleware (for OpenNI)&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-nite-middleware-for-openni&#34;&gt;&lt;strong&gt;Install NITE middleware (for OpenNI)&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Go here: &lt;a href=&#34;http://www.openni.org/Downloads/OpenNIModules.aspx&#34;&gt;http://www.openni.org/Downloads/OpenNIModules.aspx&lt;/a&gt;&lt;/li&gt;
@@ -494,22 +494,22 @@ source bin/activate
 &lt;li&gt;&lt;code&gt;sudo ./install.sh&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h5 id=&#34;install-pyopenni:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install PyOpenNI&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-pyopenni&#34;&gt;&lt;strong&gt;Install PyOpenNI&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;Be aware that on OSX, PyOpenNI requires a framework build of python 2.7+ and that you must build it for x86_64 specifically. Also, I was having major problems with cmake properly finding the python includes location. I had to suggest a fix, so &lt;a href=&#34;https://github.com/jmendeth/PyOpenNI/issues/16#issuecomment-6515678&#34;&gt;please see here for the necessary corrections&lt;/a&gt;. I have referenced a patched fork of the repository below.&lt;/p&gt;
 
-
-export CPPFLAGS=&#34;-arch x86_64&#34;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;CPPFLAGS&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;-arch x86_64&amp;quot;&lt;/span&gt;
 git clone git://github.com/justinfx/PyOpenNI.git
 mkdir PyOpenNI-build
-cd PyOpenNI-build
-cmake -D PYTHON_INCLUDE_DIR=/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Headers ../PyOpenNI
+&lt;span style=&#34;color: #007020&#34;&gt;cd &lt;/span&gt;PyOpenNI-build
+cmake -D &lt;span style=&#34;color: #bb60d5&#34;&gt;PYTHON_INCLUDE_DIR&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Headers ../PyOpenNI
 make
+&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;copy the lib/openni.so module to the python2.7 site-packages&lt;/p&gt;
 
-&lt;h4 id=&#34;span-style-text-decoration-underline-examples-span:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Examples&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;span-style-text-decoration-underline-examples-span&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Examples&lt;/span&gt;&lt;/h4&gt;
 
 &lt;p&gt;Once you have everything installed, you can try out the examples that are included both in the NITE source location that you downloaded and also in the PyOpenNI source location:&lt;/p&gt;
 
@@ -527,7 +527,7 @@ make
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;embed video-player&#34;&gt;
+&lt;div class=&#34;embed video-player&#34;&gt;
 	&lt;iframe class=&#34;youtube-player&#34; 
 			type=&#34;text/html&#34; 
 			width=&#34;640&#34; height=&#34;385&#34; 
@@ -537,7 +537,7 @@ make
 	&lt;/iframe&gt;
 &lt;/div&gt;
 
-&lt;/p&gt;
+
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 </description>
@@ -557,79 +557,79 @@ make
 
 &lt;p&gt;Here is my example of how to achieve this&amp;#8230;&lt;/p&gt;
 
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;PyQt4&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; QtCore, QtGui
 
-from PyQt4 import QtCore, QtGui
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;maya.cmds&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;cmds&lt;/span&gt;
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;maya.OpenMayaUI&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;mui&lt;/span&gt;
 
-import maya.cmds as cmds
-import maya.OpenMayaUI as mui
-
-import sip
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;sip&lt;/span&gt;
 
 
-class MyDialog(QtGui.QDialog):
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;MyDialog&lt;/span&gt;(QtGui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QDialog):
 
-    def __init__(self, parent, **kwargs):
-        super(MyDialog, self).__init__(parent, **kwargs)
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;__init__&lt;/span&gt;(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;, parent, &lt;span style=&#34;color: #666666&#34;&gt;**&lt;/span&gt;kwargs):
+        &lt;span style=&#34;color: #007020&#34;&gt;super&lt;/span&gt;(MyDialog, &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;__init__(parent, &lt;span style=&#34;color: #666666&#34;&gt;**&lt;/span&gt;kwargs)
         
-        self.setObjectName(&#34;MyWindow&#34;)
-        self.resize(800, 600)
-        self.setWindowTitle(&#34;PyQt ModelPanel Test&#34;)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setObjectName(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;MyWindow&amp;quot;&lt;/span&gt;)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;resize(&lt;span style=&#34;color: #40a070&#34;&gt;800&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;600&lt;/span&gt;)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setWindowTitle(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;PyQt ModelPanel Test&amp;quot;&lt;/span&gt;)
 
-        self.verticalLayout = QtGui.QVBoxLayout(self)
-        self.verticalLayout.setContentsMargins(0,0,0,0)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QtGui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QVBoxLayout(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setContentsMargins(&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;)
 
-        # need to set a name so it can be referenced by maya node path
-        self.verticalLayout.setObjectName(&#34;mainLayout&#34;)
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# need to set a name so it can be referenced by maya node path&lt;/span&gt;
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setObjectName(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;mainLayout&amp;quot;&lt;/span&gt;)
         
-        # First use SIP to unwrap the layout into a pointer
-        # Then get the full path to the UI in maya as a string
-        layout = mui.MQtUtil.fullName(long(sip.unwrapinstance(self.verticalLayout)))
-        cmds.setParent(layout)
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# First use SIP to unwrap the layout into a pointer&lt;/span&gt;
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Then get the full path to the UI in maya as a string&lt;/span&gt;
+        layout &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;fullName(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;unwrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout)))
+        cmds&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setParent(layout)
 
-        paneLayoutName = cmds.paneLayout()
+        paneLayoutName &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; cmds&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;paneLayout()
         
-        # Find a pointer to the paneLayout that we just created
-        ptr = mui.MQtUtil.findControl(paneLayoutName)
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Find a pointer to the paneLayout that we just created&lt;/span&gt;
+        ptr &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;findControl(paneLayoutName)
         
-        # Wrap the pointer into a python QObject
-        self.paneLayout = sip.wrapinstance(long(ptr), QtCore.QObject)
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Wrap the pointer into a python QObject&lt;/span&gt;
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;paneLayout &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;wrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(ptr), QtCore&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QObject)
 
-        self.cameraName = cmds.camera()[0]
-        self.modelPanelName = cmds.modelPanel(&#34;customModelPanel&#34;, label=&#34;ModelPanel Test&#34;, cam=self.cameraName)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;cameraName &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; cmds&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;camera()[&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;]
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanelName &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; cmds&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanel(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;customModelPanel&amp;quot;&lt;/span&gt;, label&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;ModelPanel Test&amp;quot;&lt;/span&gt;, cam&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;cameraName)
         
-        # Find a pointer to the modelPanel that we just created
-        ptr = mui.MQtUtil.findControl(self.modelPanelName)
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Find a pointer to the modelPanel that we just created&lt;/span&gt;
+        ptr &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;findControl(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanelName)
         
-        # Wrap the pointer into a python QObject
-        self.modelPanel = sip.wrapinstance(long(ptr), QtCore.QObject)
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Wrap the pointer into a python QObject&lt;/span&gt;
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;wrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(ptr), QtCore&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QObject)
 
-        # add our QObject reference to the paneLayout to our layout
-        self.verticalLayout.addWidget(self.paneLayout)
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# add our QObject reference to the paneLayout to our layout&lt;/span&gt;
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addWidget(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;paneLayout)
 
-    def showEvent(self, event):
-        super(MyDialog, self).showEvent(event)
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;showEvent&lt;/span&gt;(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;, event):
+        &lt;span style=&#34;color: #007020&#34;&gt;super&lt;/span&gt;(MyDialog, &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;showEvent(event)
 
-        # maya can lag in how it repaints UI. Force it to repaint
-        # when we show the window.
-        self.modelPanel.repaint()
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# maya can lag in how it repaints UI. Force it to repaint&lt;/span&gt;
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# when we show the window.&lt;/span&gt;
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;repaint()
                     
 
-def show():
-    # get a pointer to the maya main window
-    ptr = mui.MQtUtil.mainWindow()
-    # use sip to wrap the pointer into a QObject
-    win = sip.wrapinstance(long(ptr), QtCore.QObject)
-    d = MyDialog(win)
-    d.show()
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;show&lt;/span&gt;():
+    &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# get a pointer to the maya main window&lt;/span&gt;
+    ptr &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mainWindow()
+    &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# use sip to wrap the pointer into a QObject&lt;/span&gt;
+    win &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;wrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(ptr), QtCore&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QObject)
+    d &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; MyDialog(win)
+    d&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;show()
 
-    return d
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;return&lt;/span&gt; d
 
 
-try:
-    dialog.deleteLater()
-except:
-    pass    
-dialog = show()
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;try&lt;/span&gt;:
+    dialog&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;deleteLater()
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;except&lt;/span&gt;:
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;pass&lt;/span&gt;    
+dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
+&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;You need sip and the MQtUtil functions to convert between maya node paths and python Qbjects. Its the same idea as having to use those functions to get a reference to the maya MainWindow, in order to parent your dialog.&lt;/p&gt;
@@ -650,7 +650,7 @@ dialog = show()
 
 &lt;p&gt;Second video in the python for maya series, just released through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;!&lt;/p&gt;
 
-&lt;h3 id=&#34;python-for-maya-8211-volume-2-https-cmivfx-com-store-328-python-for-maya-vol-02:932d1044b07cc887e7b7c36e5a9ebc4e&#34;&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;Python For Maya &amp;#8211; Volume 2&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;python-for-maya-8211-volume-2-https-cmivfx-com-store-328-python-for-maya-vol-02&#34;&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;Python For Maya &amp;#8211; Volume 2&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;If you watched the first video, you now have a good grasp on Python. Sweet. Let&amp;#8217;s plow through some more involved concepts like python juggernauts!&lt;/em&gt;&lt;/p&gt;
 
@@ -734,7 +734,7 @@ dialog = show()
 
 &lt;p&gt;Just released my first online video tutorial, through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;python-introduction-vol-01-8211-maya-http-cmivfx-com-store-320-python-introduction-vol-01-maya:d52e83cf14f8af81936355263d32ad99&#34;&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;Python Introduction Vol 01 &amp;#8211; Maya&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;python-introduction-vol-01-8211-maya-http-cmivfx-com-store-320-python-introduction-vol-01-maya&#34;&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;Python Introduction Vol 01 &amp;#8211; Maya&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;Amazing at Animation? Master of Modeling? Conquistador of Character Rigging?&lt;/em&gt;&lt;/p&gt;
 
@@ -767,7 +767,8 @@ dialog = show()
 &lt;p&gt;Updates:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Exports Terragen .tgd scene file format&lt;/li&gt;
+&lt;li&gt;Exports Terragen .tgd scene file format
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx&#34;&gt;See the original post.&lt;/a&gt;&lt;/p&gt;
@@ -919,31 +920,31 @@ Options:
 
 &lt;p&gt;I noticed I was doing this a few times, in more than one of my classes, and finally got annoyed for the last time. I figured there had to be a simple way of just overloading the method on the normal object when I create an instance. Fortunately python considers everything objects and pretty much anything can be changed. So I did this:&lt;/p&gt;
 
-
-myLabel = QLabel()
-myLabel.mousePressEvent = lambda event: event.ignore()
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
+myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mousePressEvent &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;lambda&lt;/span&gt; event: event&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;ignore()
+&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Magic.&lt;/p&gt;
 
 &lt;p&gt;I have also had to make clickable widgets, such as QLabel:&lt;/p&gt;
 
-
-myLabel = QLabel()
-myLabel.mousePressEvent = lambda event: myLabel.emit(SIGNAL(&#34;clicked&#34;))
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
+myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mousePressEvent &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;lambda&lt;/span&gt; event: myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;emit(SIGNAL(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;clicked&amp;quot;&lt;/span&gt;))
+&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Or if you had to do more than just a single statement:&lt;/p&gt;
 
-&lt;p&gt;
-myLabel = QLabel()
-def clickedEvent(event):
-myLabel.emit(SIGNAL(&#34;clicked&#34;))
-# do other stuff
-# do stuff
-event.accept()
-myLabel.mousePressEvent = clickedEvent
-&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;clickedEvent&lt;/span&gt;(event):
+myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;emit(SIGNAL(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;clicked&amp;quot;&lt;/span&gt;))
+&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# do other stuff&lt;/span&gt;
+&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# do stuff&lt;/span&gt;
+event&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;accept()
+myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mousePressEvent &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; clickedEvent
+&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;I like this better than piling up subclasses that don&amp;#8217;t do much.&lt;/p&gt;
 </description>
@@ -971,43 +972,43 @@ myLabel.mousePressEvent = clickedEvent
 
 &lt;p&gt;Example:&lt;/p&gt;
 
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;chart &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; SwfChart()
 
-chart = SwfChart()
+&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# the data&lt;/span&gt;
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addRow( &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Person A&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;5.5&lt;/span&gt; )
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addRow( &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Person B&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;6&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;4.45&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;8&lt;/span&gt; )
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addColumnLabel( &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Day1&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Day2&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Day3&amp;#39;&lt;/span&gt; )
 
-# the data
-chart.addRow( &#39;Person A&#39;, 1, 10, 5.5 )
-chart.addRow( &#39;Person B&#39;, 6, 4.45, 8 )
-chart.addColumnLabel( &#39;Day1&#39;, &#39;Day2&#39;, &#39;Day3&#39; )
+&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Extra graph settings&lt;/span&gt;
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addFilter(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;shadow&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;low&amp;#39;&lt;/span&gt;, distance&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;2&lt;/span&gt;, angle&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;45&lt;/span&gt;, alpha&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;35&lt;/span&gt;, blurX&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;5&lt;/span&gt;, blurY&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;5&lt;/span&gt;)
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addFilter(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;shadow&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;high&amp;#39;&lt;/span&gt;, distance&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;3&lt;/span&gt;, angle&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;45&lt;/span&gt;, alpha&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;35&lt;/span&gt;, blurX&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;10&lt;/span&gt;, blurY&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;10&lt;/span&gt;)
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addFilter(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;bevel&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;bevel1&amp;#39;&lt;/span&gt;, strength&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;10&lt;/span&gt;, quality&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;3&lt;/span&gt;, distance&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;2&lt;/span&gt;)
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setChartBorder(top&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;1&lt;/span&gt;, bottom&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;2&lt;/span&gt;, left&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;, right&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;, color&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;000000&amp;#39;&lt;/span&gt;)
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setChartLabel(color&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;000000&amp;#39;&lt;/span&gt;, alpha&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;80&lt;/span&gt;, size&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;8&lt;/span&gt;, position&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;outside&amp;#39;&lt;/span&gt;, hide_zero&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;True&lt;/span&gt;)
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setChartTransition(&lt;span style=&#34;color: #007020&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;scale&amp;#39;&lt;/span&gt;, delay&lt;span style=&#34;color: #666666&#34;&gt;=.&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;5&lt;/span&gt;, duration&lt;span style=&#34;color: #666666&#34;&gt;=.&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;5&lt;/span&gt;, order&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;series&amp;#39;&lt;/span&gt;)
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setChartRect(shadow&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;high&amp;#39;&lt;/span&gt;)
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setLegend(size&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;12&lt;/span&gt;, alpha&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;90&lt;/span&gt;, fill_alpha&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;30&lt;/span&gt;)
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setAxisTicks(category_ticks&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;True&lt;/span&gt;, value_ticks&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;True&lt;/span&gt;, minor_count&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;3&lt;/span&gt;)
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setContextMenu(about&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;False&lt;/span&gt;)
 
-# Extra graph settings
-chart.addFilter(&#39;shadow&#39;, &#39;low&#39;, distance=2, angle=45, alpha=35, blurX=5, blurY=5)
-chart.addFilter(&#39;shadow&#39;, &#39;high&#39;, distance=3, angle=45, alpha=35, blurX=10, blurY=10)
-chart.addFilter(&#39;bevel&#39;, &#39;bevel1&#39;, strength=10, quality=3, distance=2)
-chart.setChartBorder(top=1, bottom=2, left=0, right=0, color=&#39;000000&#39;)
-chart.setChartLabel(color=&#39;000000&#39;, alpha=80, size=8, position=&#39;outside&#39;, hide_zero=True)
-chart.setChartTransition(type=&#39;scale&#39;, delay=.5, duration=.5, order=&#39;series&#39;)
-chart.setChartRect(shadow=&#39;high&#39;)
-chart.setLegend(size=12, alpha=90, fill_alpha=30)
-chart.setAxisTicks(category_ticks=True, value_ticks=True, minor_count=3)
-chart.setContextMenu(about=False)
-
-# if you have the licensed version
-chart.setLicense(&#39;license string&#39;)
+&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# if you have the licensed version&lt;/span&gt;
+chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setLicense(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;license string&amp;#39;&lt;/span&gt;)
+&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Now at this point, the object can be treated like a string to get the xml, or just call getXML() :&lt;/p&gt;
 
-&lt;p&gt;
-print chart
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; chart
 
-print chart.getXML()   # same thing
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; chart&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;getXML()   &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# same thing&lt;/span&gt;
 
-xml = str(chart)   # or assign the XML string somewhere
+xml &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #007020&#34;&gt;str&lt;/span&gt;(chart)   &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# or assign the XML string somewhere&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
 &lt;p&gt;You can download the swfcharts.py module and use it freely. If you find it helpful, post a comment or shoot me an email.&lt;/p&gt;
 
-&lt;h4 id=&#34;download-swfcharts-py-wp-content-uploads-2010-01-swfcharts-py-zip:49cac3fa1a8c2fa6889e2e792973fcce&#34;&gt;Download &lt;a href=&#34;http://justinfx.com/wp-content/uploads/2010/01/swfcharts.py_.zip&#34;&gt;swfcharts.py&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;download-swfcharts-py-wp-content-uploads-2010-01-swfcharts-py-zip&#34;&gt;Download &lt;a href=&#34;http://justinfx.com/wp-content/uploads/2010/01/swfcharts.py_.zip&#34;&gt;swfcharts.py&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;Pydoc located here for convenience:&lt;span style=&#34;color: #ffcc00;&#34;&gt;&lt;br /&gt; &lt;a href=&#39;http://justinfx.com/wp-content/uploads/2010/01/swfcharts.html&#39;&gt;swfcharts python documentation&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
 </description>

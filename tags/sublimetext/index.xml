@@ -52,7 +52,7 @@ $ st -n .
 
 &lt;p&gt;These steps were performed on an OSX laptop, so you will need to look at the specific README files for Linux/Windows details. I also assume you have installed Package Control, which makes it trivial to install plugins.&lt;/p&gt;
 
-&lt;h2 id=&#34;a-name-clang-complete-clang-complete-a:dbee46960bb6bb5d6beda61224ec3cde&#34;&gt;&lt;a name=&#34;clang-complete&#34;&gt;Clang-Complete&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;a-name-clang-complete-clang-complete-a&#34;&gt;&lt;a name=&#34;clang-complete&#34;&gt;Clang-Complete&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;OSX already comes with the clang compiler, and this plugin for SublimeText3 allows your source to be compiled on the fly and have diagnostic details made available.&lt;/p&gt;
 
@@ -85,7 +85,7 @@ $ st -n .
 
 &lt;p&gt;At this point, you should have code completion, and the ability to navigate through C++ symbols. You will know your code completion is working if the completion popup has more than just names, and actually has type information on the right side.&lt;/p&gt;
 
-&lt;h2 id=&#34;a-name-switch-file-deluxe-switch-file-deluxe-a:dbee46960bb6bb5d6beda61224ec3cde&#34;&gt;&lt;a name=&#34;switch-file-deluxe&#34;&gt;Switch File Deluxe&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;a-name-switch-file-deluxe-switch-file-deluxe-a&#34;&gt;&lt;a name=&#34;switch-file-deluxe&#34;&gt;Switch File Deluxe&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;This is a pretty sweet and simple plugin that lets you switch between headers and source files. Before Sublime, I had been using Qt Creator for C++ Qt projects, and this functionality was built-in and mapped to the F4 key.&lt;/p&gt;
 
@@ -107,7 +107,7 @@ $ st -n .
 
 &lt;p&gt;From any C++ header or source file, when you hit F4 you will switch to the corresponding header or source. If the matching file is ambiguous, you should be presented with a choice of files. Once you select the file, future uses of the key will immediately switch between the previously selected files.&lt;/p&gt;
 
-&lt;h2 id=&#34;a-name-uncrustify-uncrustify-a:dbee46960bb6bb5d6beda61224ec3cde&#34;&gt;&lt;a name=&#34;uncrustify&#34;&gt;Uncrustify&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;a-name-uncrustify-uncrustify-a&#34;&gt;&lt;a name=&#34;uncrustify&#34;&gt;Uncrustify&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;If you prefer your C++ source code to follow a particular style, then you can use the &amp;ldquo;uncrustify&amp;rdquo; tool to apply beautification based on a configuration file of rules.&lt;/p&gt;
 
@@ -127,39 +127,9 @@ $ st -n .
 It helps to store your uncrustify.cfg within your project repo. Also, there is a tool I used for visually editing the rules for setting up an uncrustify config: [universalindent](http://universalindent.sourceforge.net/).
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;build-system:dbee46960bb6bb5d6beda61224ec3cde&#34;&gt;Build System&lt;/h2&gt;
+&lt;h2 id=&#34;wrapping-up&#34;&gt;Wrapping up&lt;/h2&gt;
 
-&lt;p&gt;On a per-project basis, you can set up your build commands. Going into &lt;code&gt;Project -&amp;gt; Edit Project&lt;/code&gt;, I added something like the following to work with my particular build system for the project:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;build_systems&amp;quot;: [
-    {
-      &amp;quot;file_regex&amp;quot;: &amp;quot;(\\S*?):(\\d+):(\\d+): (error.*)&amp;quot;,
-      &amp;quot;name&amp;quot;: &amp;quot;Default &#39;Project&#39; Build&amp;quot;,
-      &amp;quot;shell&amp;quot;: true,
-      &amp;quot;shell_cmd&amp;quot;: &amp;quot;./\\$USER/scripts/build_cmd arg1 arg2&amp;quot;,
-      &amp;quot;variants&amp;quot;: [
-        {
-          &amp;quot;cmd&amp;quot;: [
-            &amp;quot;./\\$USER/scripts/build_cmd arg3 arg4&amp;quot;
-          ],
-          &amp;quot;name&amp;quot;: &amp;quot;&#39;Project&#39; Build Debug&amp;quot;,
-          &amp;quot;shell&amp;quot;: true
-        }
-      ],
-      &amp;quot;working_dir&amp;quot;: &amp;quot;/path/to/project/root&amp;quot;
-    }
-  ]
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;file_regex&lt;/code&gt; is a pattern specifying how to capture the filename, line number, column number, and error message from the output of the build command. This is useful to adapt to any kind of build system and have Sublime give you context about the errors in your view.&lt;/p&gt;
-
-&lt;p&gt;You specify the default build command, and then optionally a number of variants for the build system, such as debug builds or different options. Once this is entered you can now set your build system selection and use your build hotkey.&lt;/p&gt;
-
-&lt;h2 id=&#34;wrapping-up:dbee46960bb6bb5d6beda61224ec3cde&#34;&gt;Wrapping up&lt;/h2&gt;
-
-&lt;p&gt;I don&amp;rsquo;t do much debugging from within my editor (I am primarily an Editor+Terminal kind of developer), so I didn&amp;rsquo;t go as far as to investigate Sublime options for debugging. But with a pretty minimal amount of configuration, I have a pretty lightweight and capable editor for working on C++ projects. And it is the same editor I use for working on Python and Go projects.&lt;/p&gt;
+&lt;p&gt;I don&amp;rsquo;t do much debugging or building from within my editor (I am primarily an Editor+Terminal kind of developer), so I didn&amp;rsquo;t go as far as to investigate Sublime options for debugging. But with a pretty minimal amount of configuration, I have a pretty lightweight and capable editor for working on C++ projects. And it is the same editor I use for working on Python and Go projects.&lt;/p&gt;
 
 &lt;p&gt;Got any other recommendations for making SublimeText an even more capable solution for C++ projects? Let me know!&lt;/p&gt;
 </description>

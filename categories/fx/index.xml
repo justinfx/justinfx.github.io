@@ -18,13 +18,13 @@
       <guid>http://justinfx.com/2012/10/12/pyqt4-for-maya/</guid>
       <description>
 
-&lt;h2 id=&#34;img-class-alignnone-size-full-wp-image-525-title-pyqt4-for-maya-src-wp-content-uploads-2012-10-1350054625-master-jpeg-alt-width-800-height-450-http-www-cmivfx-com-tutorials-view-498-pyqt4-ui-development-for-maya:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.com/wp-content/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;img-class-alignnone-size-full-wp-image-525-title-pyqt4-for-maya-src-wp-content-uploads-2012-10-1350054625-master-jpeg-alt-width-800-height-450-http-www-cmivfx-com-tutorials-view-498-pyqt4-ui-development-for-maya&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.com/wp-content/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
 
-&lt;h1 id=&#34;pyqt4-ui-development-for-maya:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;PyQt4 UI Development for Maya&lt;/h1&gt;
+&lt;h1 id=&#34;pyqt4-ui-development-for-maya&#34;&gt;PyQt4 UI Development for Maya&lt;/h1&gt;
 
 &lt;p&gt;Just released my 3rd python-based online training video through &lt;a href=&#34;https://cmivfx.com/store/498-pyqt4+ui+development+for+maya&#34;&gt;cmiVFX.com&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;introduction:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;div&gt;
   This tutorial is about learning PyQt4 python bindings for the Qt Framework, and how to introduce new UI elements to Maya as a platform.
@@ -39,7 +39,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;getting-started-with-pyqt4:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;Getting Started With PyQt4&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;getting-started-with-pyqt4&#34;&gt;&lt;strong&gt;Getting Started With PyQt4&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   There are multiple ways of getting a working installation of PyQt4, both for the general system and for Maya. We look into these approaches to get your system up and running to begin working with PyQt4!
@@ -54,7 +54,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;pyqt4-fundamentals:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;PyQt4 Fundamentals&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;pyqt4-fundamentals&#34;&gt;&lt;strong&gt;PyQt4 Fundamentals&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   Lets get crackin&amp;#8217; and learn the basics!
@@ -89,7 +89,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;general-examples:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;General Examples&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;general-examples&#34;&gt;&lt;strong&gt;General Examples&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   With an understanding of the framework components, we can begin working with fully functional stand-alone examples.
@@ -112,7 +112,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;pyqt4-and-maya-introduction:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;PyQt4 And Maya Introduction&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;pyqt4-and-maya-introduction&#34;&gt;&lt;strong&gt;PyQt4 And Maya Introduction&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   Finally, some Maya action! Maya has a slightly different approach to using PyQt4…
@@ -139,7 +139,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;replicating-maya-8217-s-ui-components:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;Replicating Maya&amp;#8217;s UI Components&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;replicating-maya-8217-s-ui-components&#34;&gt;&lt;strong&gt;Replicating Maya&amp;#8217;s UI Components&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   What better way to see examples of creating UI for Maya than to replicate some existing functionality? This gives us the opportunity expand with custom functionality
@@ -181,7 +181,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;customizations:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;strong&gt;Customizations&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;customizations&#34;&gt;&lt;strong&gt;Customizations&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
   A button can be a button, and a slider might look alright in its stock form, but sometimes we want to customize the look of our widgets. This chapter introduces multiple ways of achieving custom looks to our components
@@ -197,7 +197,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;span-style-color-ff6600-previous-cmivfx-tutorials-span:0b27a6f46a58e7008385b6231f12d6d0&#34;&gt;&lt;span style=&#34;color: #ff6600;&#34;&gt;Previous cmiVFX tutorials:&lt;/span&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;span-style-color-ff6600-previous-cmivfx-tutorials-span&#34;&gt;&lt;span style=&#34;color: #ff6600;&#34;&gt;Previous cmiVFX tutorials:&lt;/span&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://cmivfx.com/store/320-python+introduction+vol+01+-+maya&#34;&gt;Intro to Python for Maya &amp;#8211; Vol 1&lt;/a&gt;&lt;/li&gt;
@@ -261,35 +261,35 @@
 &lt;li&gt;&lt;a href=&#34;https://github.com/jmendeth/PyOpenNI&#34;&gt;PyOpenNI&lt;/a&gt; python bindings&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&#34;span-style-text-decoration-underline-install-details-span:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Install Details&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;span-style-text-decoration-underline-install-details-span&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Install Details&lt;/span&gt;&lt;/h4&gt;
 
-&lt;h5 id=&#34;install-homebrew-package-manager:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install homebrew (package manager)&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-homebrew-package-manager&#34;&gt;&lt;strong&gt;Install homebrew (package manager)&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://mxcl.github.com/homebrew/&#34;&gt;http://mxcl.github.com/homebrew/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;install-build-tools:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install build tools&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-build-tools&#34;&gt;&lt;strong&gt;Install build tools&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;pre&gt;brew install cmake
 brew install boost&lt;/pre&gt;
 
-&lt;h5 id=&#34;install-python2-7:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install python2.7&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-python2-7&#34;&gt;&lt;strong&gt;Install python2.7&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;pre&gt;brew install python --framework&lt;/pre&gt;
 
-&lt;h5 id=&#34;suggestion-virtualenv-environment:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Suggestion: virtualenv Environment&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;suggestion-virtualenv-environment&#34;&gt;&lt;strong&gt;Suggestion: virtualenv Environment&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;This is not a requirement. But I recommend using virtualenv to set up an environment that specifically uses python2.7 so that you don&amp;#8217;t have to fight with mixed dependencies and versions.&lt;/p&gt;
 
 &lt;p&gt;Create a virtualenv called &amp;#8220;kinect&amp;#8221;&lt;/p&gt;
 
-
-pip install virtualenv
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;pip install virtualenv
 virtualenv --no-site-packages -p python2.7 kinect
-cd kinect
-source bin/activate
+&lt;span style=&#34;color: #007020&#34;&gt;cd &lt;/span&gt;kinect
+&lt;span style=&#34;color: #007020&#34;&gt;source &lt;/span&gt;bin/activate
+&lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h5 id=&#34;install-libusb-patched-version:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install libusb (patched version)&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-libusb-patched-version&#34;&gt;&lt;strong&gt;Install libusb (patched version)&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;There is a special patched version of the libusb library, in the form of a homebrew formula.&lt;/p&gt;
 
@@ -300,7 +300,7 @@ source bin/activate
 &lt;pre&gt;&lt;code&gt;brew install libusb-freenect
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h5 id=&#34;install-sensorkinect-drivers:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install SensorKinect drivers&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-sensorkinect-drivers&#34;&gt;&lt;strong&gt;Install SensorKinect drivers&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;pre&gt;&lt;code&gt;git clone https://github.com/avin2/SensorKinect.git
 &lt;/code&gt;&lt;/pre&gt;
@@ -310,7 +310,7 @@ source bin/activate
 &lt;pre&gt;&lt;code&gt;sudo ./install.sh
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h5 id=&#34;install-openni-framework:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install OpenNI framework&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-openni-framework&#34;&gt;&lt;strong&gt;Install OpenNI framework&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Go here: &lt;a href=&#34;http://www.openni.org/Downloads/OpenNIModules.aspx&#34;&gt;http://www.openni.org/Downloads/OpenNIModules.aspx&lt;/a&gt;&lt;/li&gt;
@@ -318,7 +318,7 @@ source bin/activate
 &lt;li&gt;&lt;code&gt;sudo ./install.sh&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h5 id=&#34;install-nite-middleware-for-openni:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install NITE middleware (for OpenNI)&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-nite-middleware-for-openni&#34;&gt;&lt;strong&gt;Install NITE middleware (for OpenNI)&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Go here: &lt;a href=&#34;http://www.openni.org/Downloads/OpenNIModules.aspx&#34;&gt;http://www.openni.org/Downloads/OpenNIModules.aspx&lt;/a&gt;&lt;/li&gt;
@@ -326,22 +326,22 @@ source bin/activate
 &lt;li&gt;&lt;code&gt;sudo ./install.sh&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h5 id=&#34;install-pyopenni:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;strong&gt;Install PyOpenNI&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;install-pyopenni&#34;&gt;&lt;strong&gt;Install PyOpenNI&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;p&gt;Be aware that on OSX, PyOpenNI requires a framework build of python 2.7+ and that you must build it for x86_64 specifically. Also, I was having major problems with cmake properly finding the python includes location. I had to suggest a fix, so &lt;a href=&#34;https://github.com/jmendeth/PyOpenNI/issues/16#issuecomment-6515678&#34;&gt;please see here for the necessary corrections&lt;/a&gt;. I have referenced a patched fork of the repository below.&lt;/p&gt;
 
-
-export CPPFLAGS=&#34;-arch x86_64&#34;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;CPPFLAGS&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;-arch x86_64&amp;quot;&lt;/span&gt;
 git clone git://github.com/justinfx/PyOpenNI.git
 mkdir PyOpenNI-build
-cd PyOpenNI-build
-cmake -D PYTHON_INCLUDE_DIR=/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Headers ../PyOpenNI
+&lt;span style=&#34;color: #007020&#34;&gt;cd &lt;/span&gt;PyOpenNI-build
+cmake -D &lt;span style=&#34;color: #bb60d5&#34;&gt;PYTHON_INCLUDE_DIR&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Headers ../PyOpenNI
 make
+&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;copy the lib/openni.so module to the python2.7 site-packages&lt;/p&gt;
 
-&lt;h4 id=&#34;span-style-text-decoration-underline-examples-span:272e896a64c0a0732640f02c01214cae&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Examples&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;span-style-text-decoration-underline-examples-span&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Examples&lt;/span&gt;&lt;/h4&gt;
 
 &lt;p&gt;Once you have everything installed, you can try out the examples that are included both in the NITE source location that you downloaded and also in the PyOpenNI source location:&lt;/p&gt;
 
@@ -359,7 +359,7 @@ make
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;embed video-player&#34;&gt;
+&lt;div class=&#34;embed video-player&#34;&gt;
 	&lt;iframe class=&#34;youtube-player&#34; 
 			type=&#34;text/html&#34; 
 			width=&#34;640&#34; height=&#34;385&#34; 
@@ -369,7 +369,7 @@ make
 	&lt;/iframe&gt;
 &lt;/div&gt;
 
-&lt;/p&gt;
+
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 </description>
@@ -389,79 +389,79 @@ make
 
 &lt;p&gt;Here is my example of how to achieve this&amp;#8230;&lt;/p&gt;
 
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;PyQt4&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; QtCore, QtGui
 
-from PyQt4 import QtCore, QtGui
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;maya.cmds&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;cmds&lt;/span&gt;
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;maya.OpenMayaUI&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;mui&lt;/span&gt;
 
-import maya.cmds as cmds
-import maya.OpenMayaUI as mui
-
-import sip
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;sip&lt;/span&gt;
 
 
-class MyDialog(QtGui.QDialog):
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;MyDialog&lt;/span&gt;(QtGui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QDialog):
 
-    def __init__(self, parent, **kwargs):
-        super(MyDialog, self).__init__(parent, **kwargs)
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;__init__&lt;/span&gt;(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;, parent, &lt;span style=&#34;color: #666666&#34;&gt;**&lt;/span&gt;kwargs):
+        &lt;span style=&#34;color: #007020&#34;&gt;super&lt;/span&gt;(MyDialog, &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;__init__(parent, &lt;span style=&#34;color: #666666&#34;&gt;**&lt;/span&gt;kwargs)
         
-        self.setObjectName(&#34;MyWindow&#34;)
-        self.resize(800, 600)
-        self.setWindowTitle(&#34;PyQt ModelPanel Test&#34;)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setObjectName(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;MyWindow&amp;quot;&lt;/span&gt;)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;resize(&lt;span style=&#34;color: #40a070&#34;&gt;800&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;600&lt;/span&gt;)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setWindowTitle(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;PyQt ModelPanel Test&amp;quot;&lt;/span&gt;)
 
-        self.verticalLayout = QtGui.QVBoxLayout(self)
-        self.verticalLayout.setContentsMargins(0,0,0,0)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QtGui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QVBoxLayout(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setContentsMargins(&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;)
 
-        # need to set a name so it can be referenced by maya node path
-        self.verticalLayout.setObjectName(&#34;mainLayout&#34;)
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# need to set a name so it can be referenced by maya node path&lt;/span&gt;
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setObjectName(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;mainLayout&amp;quot;&lt;/span&gt;)
         
-        # First use SIP to unwrap the layout into a pointer
-        # Then get the full path to the UI in maya as a string
-        layout = mui.MQtUtil.fullName(long(sip.unwrapinstance(self.verticalLayout)))
-        cmds.setParent(layout)
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# First use SIP to unwrap the layout into a pointer&lt;/span&gt;
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Then get the full path to the UI in maya as a string&lt;/span&gt;
+        layout &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;fullName(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;unwrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout)))
+        cmds&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setParent(layout)
 
-        paneLayoutName = cmds.paneLayout()
+        paneLayoutName &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; cmds&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;paneLayout()
         
-        # Find a pointer to the paneLayout that we just created
-        ptr = mui.MQtUtil.findControl(paneLayoutName)
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Find a pointer to the paneLayout that we just created&lt;/span&gt;
+        ptr &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;findControl(paneLayoutName)
         
-        # Wrap the pointer into a python QObject
-        self.paneLayout = sip.wrapinstance(long(ptr), QtCore.QObject)
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Wrap the pointer into a python QObject&lt;/span&gt;
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;paneLayout &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;wrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(ptr), QtCore&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QObject)
 
-        self.cameraName = cmds.camera()[0]
-        self.modelPanelName = cmds.modelPanel(&#34;customModelPanel&#34;, label=&#34;ModelPanel Test&#34;, cam=self.cameraName)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;cameraName &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; cmds&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;camera()[&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;]
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanelName &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; cmds&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanel(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;customModelPanel&amp;quot;&lt;/span&gt;, label&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;ModelPanel Test&amp;quot;&lt;/span&gt;, cam&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;cameraName)
         
-        # Find a pointer to the modelPanel that we just created
-        ptr = mui.MQtUtil.findControl(self.modelPanelName)
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Find a pointer to the modelPanel that we just created&lt;/span&gt;
+        ptr &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;findControl(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanelName)
         
-        # Wrap the pointer into a python QObject
-        self.modelPanel = sip.wrapinstance(long(ptr), QtCore.QObject)
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Wrap the pointer into a python QObject&lt;/span&gt;
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;wrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(ptr), QtCore&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QObject)
 
-        # add our QObject reference to the paneLayout to our layout
-        self.verticalLayout.addWidget(self.paneLayout)
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# add our QObject reference to the paneLayout to our layout&lt;/span&gt;
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addWidget(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;paneLayout)
 
-    def showEvent(self, event):
-        super(MyDialog, self).showEvent(event)
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;showEvent&lt;/span&gt;(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;, event):
+        &lt;span style=&#34;color: #007020&#34;&gt;super&lt;/span&gt;(MyDialog, &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;showEvent(event)
 
-        # maya can lag in how it repaints UI. Force it to repaint
-        # when we show the window.
-        self.modelPanel.repaint()
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# maya can lag in how it repaints UI. Force it to repaint&lt;/span&gt;
+        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# when we show the window.&lt;/span&gt;
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;repaint()
                     
 
-def show():
-    # get a pointer to the maya main window
-    ptr = mui.MQtUtil.mainWindow()
-    # use sip to wrap the pointer into a QObject
-    win = sip.wrapinstance(long(ptr), QtCore.QObject)
-    d = MyDialog(win)
-    d.show()
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;show&lt;/span&gt;():
+    &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# get a pointer to the maya main window&lt;/span&gt;
+    ptr &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mainWindow()
+    &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# use sip to wrap the pointer into a QObject&lt;/span&gt;
+    win &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;wrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(ptr), QtCore&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QObject)
+    d &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; MyDialog(win)
+    d&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;show()
 
-    return d
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;return&lt;/span&gt; d
 
 
-try:
-    dialog.deleteLater()
-except:
-    pass    
-dialog = show()
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;try&lt;/span&gt;:
+    dialog&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;deleteLater()
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;except&lt;/span&gt;:
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;pass&lt;/span&gt;    
+dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
+&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;You need sip and the MQtUtil functions to convert between maya node paths and python Qbjects. Its the same idea as having to use those functions to get a reference to the maya MainWindow, in order to parent your dialog.&lt;/p&gt;
@@ -482,7 +482,7 @@ dialog = show()
 
 &lt;p&gt;Second video in the python for maya series, just released through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;!&lt;/p&gt;
 
-&lt;h3 id=&#34;python-for-maya-8211-volume-2-https-cmivfx-com-store-328-python-for-maya-vol-02:932d1044b07cc887e7b7c36e5a9ebc4e&#34;&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;Python For Maya &amp;#8211; Volume 2&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;python-for-maya-8211-volume-2-https-cmivfx-com-store-328-python-for-maya-vol-02&#34;&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;Python For Maya &amp;#8211; Volume 2&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;If you watched the first video, you now have a good grasp on Python. Sweet. Let&amp;#8217;s plow through some more involved concepts like python juggernauts!&lt;/em&gt;&lt;/p&gt;
 
@@ -566,7 +566,7 @@ dialog = show()
 
 &lt;p&gt;Just released my first online video tutorial, through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;python-introduction-vol-01-8211-maya-http-cmivfx-com-store-320-python-introduction-vol-01-maya:d52e83cf14f8af81936355263d32ad99&#34;&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;Python Introduction Vol 01 &amp;#8211; Maya&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;python-introduction-vol-01-8211-maya-http-cmivfx-com-store-320-python-introduction-vol-01-maya&#34;&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;Python Introduction Vol 01 &amp;#8211; Maya&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;Amazing at Animation? Master of Modeling? Conquistador of Character Rigging?&lt;/em&gt;&lt;/p&gt;
 
@@ -592,7 +592,7 @@ dialog = show()
       <guid>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</guid>
       <description>
 
-&lt;h4 id=&#34;update:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;Update:&lt;/h4&gt;
+&lt;h4 id=&#34;update&#34;&gt;Update:&lt;/h4&gt;
 
 &lt;p&gt;I am now hosting a built package for Maya2011: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.7.4-maya2011-x64-osx-10.6.pkg&#34;&gt;MyQt4.7.4-maya2011-x64-osx-10.6.pkg&lt;/a&gt; And for Maya 2012+, see: &lt;a href=&#34;http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/&#34;&gt;Installing pyqt4 for maya2012&lt;/a&gt;&lt;/p&gt;
 
@@ -604,11 +604,11 @@ dialog = show()
 
 &lt;p&gt;What I finally figured out was a mish-mash of information from the maya documention, and different forums and user groups. So I decided to make this easier on anyone having the same problems as I did, and just collect that information into one place. This process is for OSX. I&amp;#8217;m sure most of it is probably still relevant to linux or win, except for the last parts with &amp;#8216;install_name_tool&amp;#8217;. You would just need to make sure to find the right Qt/PyQt/SIP packages for your OS.&lt;/p&gt;
 
-&lt;h5 id=&#34;building-pyqt4-for-maya-2011-on-osx:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;Building PyQt4 for Maya 2011 on OSX&lt;/h5&gt;
+&lt;h5 id=&#34;building-pyqt4-for-maya-2011-on-osx&#34;&gt;Building PyQt4 for Maya 2011 on OSX&lt;/h5&gt;
 
 &lt;hr /&gt;
 
-&lt;h6 id=&#34;update-for-maya-2012:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;&lt;em&gt;&lt;strong&gt;Update for Maya 2012&lt;/strong&gt;&lt;/em&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;update-for-maya-2012&#34;&gt;&lt;em&gt;&lt;strong&gt;Update for Maya 2012&lt;/strong&gt;&lt;/em&gt;&lt;/h6&gt;
 
 &lt;p&gt;While Maya uses newer versions, it seems the versions from the 2011 install still work. But here they are anyways incase you want the newer version for 2012:&lt;/p&gt;
 
@@ -622,25 +622,27 @@ dialog = show()
 
 &lt;p&gt;Make sure you have downloaded and installed the latest XCode from Apple. Its also included on your OSX installation disc.&lt;/p&gt;
 
-&lt;h6 id=&#34;qt-maya-has-a-specific-version-of-qt-built-into-it-this-is-qt-4-5-3:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;Qt: Maya has a specific version of Qt built into it. This is Qt 4.5.3.&lt;/h6&gt;
+&lt;h6 id=&#34;qt-maya-has-a-specific-version-of-qt-built-into-it-this-is-qt-4-5-3&#34;&gt;Qt: Maya has a specific version of Qt built into it. This is Qt 4.5.3.&lt;/h6&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Download:  &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/src/qt-mac-opensource-src-4.5.3.tar.gz&#34;&gt;qt-mac-opensource-src-4.5.3.tar.gz&lt;/a&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Extract: 
-tar zxvf qt-mac-opensource-src-4.5.3.tar.gz
-cd qt-mac-opensource-src-4.5.3&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Extract: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;tar zxvf qt-mac-opensource-src-4.5.3.tar.gz
+&lt;span style=&#34;color: #007020&#34;&gt;cd &lt;/span&gt;qt-mac-opensource-src-4.5.3
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Build and install: 
-./configure -cocoa -arch x86_64 -debug-and-release \
-  -no-phonon -no-phonon-backend -no-qt3support \
-  -no-webkit -nomake docs -nomake examples -nomake demos \
+&lt;li&gt;&lt;p&gt;Build and install: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;./configure -cocoa -arch x86_64 -debug-and-release &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+  -no-phonon -no-phonon-backend -no-qt3support &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+  -no-webkit -nomake docs -nomake examples -nomake demos &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
   -nomake translations -no-rpath -no-framework
 make -j 8
-sudo make install&lt;/p&gt;&lt;/li&gt;
+sudo make install
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h6 id=&#34;sip-the-maya-docs-recommend-sip-version-4-10:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;SIP: The maya docs recommend sip version 4.10&lt;/h6&gt;
+&lt;h6 id=&#34;sip-the-maya-docs-recommend-sip-version-4-10&#34;&gt;SIP: The maya docs recommend sip version 4.10&lt;/h6&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Download this specific SIP:   &lt;a href=&#34;http://justinfx.com/wp-content/uploads/2011/01/sip-4.10.tar.gz&#34;&gt;sip-4.10.tar.gz&lt;/a&gt;&lt;/li&gt;
@@ -648,14 +650,15 @@ sudo make install&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Extract: &lt;pre class=&#34;theme:twilight top-margin:20 bottom-margin:20 toolbar-overlay:false striped:false nums:false lang:sh decode:true&#34;&gt;tar zxvf sip-4.10.tar.gz
 cd sip-4.10&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Build and install: 
-/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy \
-  configure.py --arch=x86_64
+&lt;li&gt;&lt;p&gt;Build and install: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+  configure.py --arch&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;x86_64
 make -j 8
-sudo make install&lt;/p&gt;&lt;/li&gt;
+sudo make install
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h6 id=&#34;pyqt4-the-maya-docs-suggest-pyqt-4-7:a3a52b14c80229d1dc2a6829c906b500&#34;&gt;PyQt4: The maya docs suggest PyQt 4.7&lt;/h6&gt;
+&lt;h6 id=&#34;pyqt4-the-maya-docs-suggest-pyqt-4-7&#34;&gt;PyQt4: The maya docs suggest PyQt 4.7&lt;/h6&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Download this specific PyQt: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/src/PyQt-mac-gpl-4.7.4.tar.gz&#34;&gt;PyQt-mac-gpl-4.7.4.tar.gz&lt;/a&gt;&lt;/li&gt;
@@ -663,74 +666,74 @@ sudo make install&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Extract: &lt;pre class=&#34;striped:false nums:false lang:sh decode:true&#34;&gt;tar zxvf PyQt-mac-gpl-4.7.3.tar.gz
 cd PyQt-mac-gpl-4.7.3&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Set up some environment variables before building: 
-export QTDIR=/usr/local/Trolltech/Qt-4.5.3
-export PATH=/usr/local/Trolltech/Qt-4.5.3/bin:$PATH
-export QMAKESPEC=/usr/local/Trolltech/Qt-4.5.3/mkspecs/macx-g++
-export DYLD_LIBRARY_PATH=/usr/local/Trolltech/Qt-4.5.3/lib
+&lt;li&gt;&lt;p&gt;Set up some environment variables before building: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;QTDIR&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt-4.5.3
+&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;PATH&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt-4.5.3/bin:&lt;span style=&#34;color: #bb60d5&#34;&gt;$PATH&lt;/span&gt;
+&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;QMAKESPEC&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt-4.5.3/mkspecs/macx-g++
+&lt;span style=&#34;color: #007020&#34;&gt;export &lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;DYLD_LIBRARY_PATH&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt-4.5.3/lib
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Build and install: 
-/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy \
-  configure.py \
-  LIBDIR_QT=/usr/local/Trolltech/Qt‐4.5.3/lib \
-  INCDIR_QT=/usr/local/Trolltech/Qt‐4.5.3/include \
-  MOC=/usr/local/Trolltech/Qt‐4.5.3/bin/moc \
+&lt;li&gt;&lt;p&gt;Build and install: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+  configure.py &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+  &lt;span style=&#34;color: #bb60d5&#34;&gt;LIBDIR_QT&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt‐4.5.3/lib &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+  &lt;span style=&#34;color: #bb60d5&#34;&gt;INCDIR_QT&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt‐4.5.3/include &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+  &lt;span style=&#34;color: #bb60d5&#34;&gt;MOC&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt‐4.5.3/bin/moc &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
   -w --no-designer-plugin
 make -j 8
 sudo make install
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;PyQt4 will now be installed into Maya&amp;#8217;s python site-packages, BUT will be linked against the wrong Qt binaries. The maya docs have an annoying multi step set of commands but they don&amp;#8217;t copy/paste nicely, so here is a for-loop you can use: 
-for mod in Core Gui Svg OpenGL Xml
-do 
-  sudo find /Applications/Autodesk/maya2011/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python2.6/site-packages/PyQt4 -name &#34;*so&#34; \
-  -exec install_name_tool -change libQt${mod}.4.dylib @executable_path/Qt${mod} {} ;
-done
+&lt;li&gt;&lt;p&gt;PyQt4 will now be installed into Maya&amp;#8217;s python site-packages, BUT will be linked against the wrong Qt binaries. The maya docs have an annoying multi step set of commands but they don&amp;#8217;t copy/paste nicely, so here is a for-loop you can use: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;for&lt;/span&gt; mod in Core Gui Svg OpenGL Xml
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;do&lt;/span&gt; 
+  sudo find /Applications/Autodesk/maya2011/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python2.6/site-packages/PyQt4 -name &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;*so&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
+  -exec install_name_tool -change libQt&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;mod&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;}&lt;/span&gt;.4.dylib @executable_path/Qt&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt;mod&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;{}&lt;/span&gt; ;
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;done&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;At this point you should be able to start up Maya and import and run PyQt from the script editor. You no longer need the pumpThread. Here is a test code snippet that I borrowed from here (the original had typos in it that I corrected)&lt;/p&gt;
 
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;maya.OpenMayaUI&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;mui&lt;/span&gt;
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;PyQt4.QtCore&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;PyQt4.QtGui&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;
 
-import maya.OpenMayaUI as mui
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;getMayaWindow&lt;/span&gt;():
+    ptr &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mainWindow()
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;return&lt;/span&gt; sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;wrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(ptr), QObject)
 
-def getMayaWindow():
-    ptr = mui.MQtUtil.mainWindow()
-    return sip.wrapinstance(long(ptr), QObject)
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;Form&lt;/span&gt;(QDialog):
+    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;__init__&lt;/span&gt;(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;, parent&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;None&lt;/span&gt;):
+        &lt;span style=&#34;color: #007020&#34;&gt;super&lt;/span&gt;(Form, &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;__init__(parent)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setWindowTitle(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Test Dialog&amp;#39;&lt;/span&gt;)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setObjectName(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;mainUI&amp;#39;&lt;/span&gt;)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mainLayout &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QVBoxLayout(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;myButton &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QPushButton(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;myButton&amp;#39;&lt;/span&gt;)
+        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mainLayout&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addWidget(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;myButton)
 
-class Form(QDialog):
-    def __init__(self, parent=None):
-        super(Form, self).__init__(parent)
-        self.setWindowTitle(&#39;Test Dialog&#39;)
-        self.setObjectName(&#39;mainUI&#39;)
-        self.mainLayout = QVBoxLayout(self)
-        self.myButton = QPushButton(&#39;myButton&#39;)
-        self.mainLayout.addWidget(self.myButton)
-
-global app
-global form
-app = qApp
-form = Form(getMayaWindow())
-form.show()
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;global&lt;/span&gt; app
+&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;global&lt;/span&gt; form
+app &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; qApp
+form &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; Form(getMayaWindow())
+form&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;show()
+&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;It doesn&amp;#8217;t seem like you even need the install of Qt 4.5.3 that we did at this point since we changed the links, unless you use another Qt module besides QtCore, QtGui, QtSvg, QtXml, QtOpenGL (such as QtNetwork), but this could be solved by copying over the missing libs to where Maya is expecting them. Example for copying over QtNetwork:&lt;/p&gt;
 
-&lt;p&gt;
-sudo cp /usr/local/Trolltech/Qt-4.5.3/lib/libQtNetwork.* 
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo cp /usr/local/Trolltech/Qt-4.5.3/lib/libQtNetwork.* 
     /Applications/Autodesk/maya2011/Maya.app/Contents/MacOS
 sudo install_name_tool -change libQtCore.4.dylib @executable_path/QtCore 
     /Applications/Autodesk/maya2011/Maya.app/Contents/MacOS/libQtNetwork.4.dylib
-&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;If you happen to have a mixed library environment like me, with more than one python lib location for code, and you see any funny errors while importing a module, just make sure that mayas python site-package is always in the front of the sys.path:&lt;/p&gt;
 
-&lt;p&gt;
-sys.path.insert(0,&#39;/Applications/Autodesk/maya2011/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python2.6/site-packages&#39;)
-&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sys&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;path&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;insert(&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;/Applications/Autodesk/maya2011/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python2.6/site-packages&amp;#39;&lt;/span&gt;)
+&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;And there you have it. PyQt4 now installed in Maya 2011 under OSX.&lt;/p&gt;
 
@@ -758,7 +761,7 @@ sys.path.insert(0,&#39;/Applications/Autodesk/maya2011/Maya.app/Contents/Framewo
 
 &lt;p&gt;We finally decided to release the source code for AtomSplitter, since we were getting some feedback that the application builds weren&amp;#8217;t 100% working on every possible system.&lt;/p&gt;
 
-&lt;h3 id=&#34;update-1:164f6ae88bdbcce4049ceec3461f4758&#34;&gt;Update #1:&lt;/h3&gt;
+&lt;h3 id=&#34;update-1&#34;&gt;Update #1:&lt;/h3&gt;
 
 &lt;p&gt;I have posted the AtomSplitter project on github now: &lt;a href=&#34;https://github.com/justinfx/AtomSplitter&#34;&gt;https://github.com/justinfx/AtomSplitter&lt;/a&gt;&lt;/p&gt;
 
@@ -791,7 +794,8 @@ sys.path.insert(0,&#39;/Applications/Autodesk/maya2011/Maya.app/Contents/Framewo
 &lt;p&gt;Updates:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Exports Terragen .tgd scene file format&lt;/li&gt;
+&lt;li&gt;Exports Terragen .tgd scene file format
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx&#34;&gt;See the original post.&lt;/a&gt;&lt;/p&gt;
@@ -849,7 +853,7 @@ Options:
 
 &lt;p&gt;This is a story about my journey in solving a problem at work involving curves. The solution seemed really simple at first, but because of a stupid Maya issue, this turned into me having to rewrite the tool 3 times before I discovered a surprising solution.&lt;/p&gt;
 
-&lt;h4 id=&#34;the-problem:ae04e419cb95d75a49b5de01060ead5d&#34;&gt;The Problem:&lt;/h4&gt;
+&lt;h4 id=&#34;the-problem&#34;&gt;The Problem:&lt;/h4&gt;
 
 &lt;p&gt;Because we rely heavily on the process of importing Illustrator .ai files into Maya as nurbsCurves, we constantly have to deal with curves that intersect themselves. This is a result of the curves having been hand drawn originally in the art department, and they posed issues during rendering after being planar-ized.&lt;/p&gt;
 
@@ -863,19 +867,19 @@ Options:
   &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h4 id=&#34;getting-started-i-hate-you-maya:ae04e419cb95d75a49b5de01060ead5d&#34;&gt;Getting started. I hate you, Maya:&lt;/h4&gt;
+&lt;h4 id=&#34;getting-started-i-hate-you-maya&#34;&gt;Getting started. I hate you, Maya:&lt;/h4&gt;
 
 &lt;p&gt;The obvious place for me to start was to use the existing &lt;em&gt;curveIntersect&lt;/em&gt; command. This command will tell you if two curves intersect, and at what points. Although it requires that you tell it 2 individual curves to test, I figured I could just split the single curve into parts (using detach curve), and pair off all the parts to test them. And here is where I ran into something that just pissed me off. While it works great to tell you where the intersection is&amp;#8230; when it DOESN&amp;#8217;T find an intersection, it prints a &amp;#8220;Warning: Could not find curve-curve intersection&amp;#8221; line. Printing to the script editor in maya is SUPER expensive as I have found. Everything slows down. This was the initial reason I decided not to use this method. I later found out the RIGHT hack way to deal with this is to wrap the entire process in scriptEditorInfo commands to suppress warnings being printed to the Script Editor and re-enable after. This method does prevent the amazing slowness, but still has the unacceptable flood of warnings once suppression is turned back off again. So even with this fix, I still found this approach to be too slow. For a single complex curve object that might have, say, 500 spans&amp;#8230; that would be 124750 unique combinations that would have to be tested with the &lt;em&gt;curveIntersect&lt;/em&gt; command. In a test of just looping that many times and calling this command, the process took 54 seconds! No way could this work, with a scene that could easily have 2000+ nurbsCurves!&lt;/p&gt;
 
 &lt;p&gt;Great. Now I get to investigate my own intersection detection from scratch.&lt;/p&gt;
 
-&lt;h4 id=&#34;span-style-font-weight-normal-strong-approach-2-8211-brute-force-strong-span:ae04e419cb95d75a49b5de01060ead5d&#34;&gt;&lt;span style=&#34;font-weight: normal;&#34;&gt;&lt;strong&gt;Approach #2 &amp;#8211; Brute Force&lt;/strong&gt;&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;span-style-font-weight-normal-strong-approach-2-8211-brute-force-strong-span&#34;&gt;&lt;span style=&#34;font-weight: normal;&#34;&gt;&lt;strong&gt;Approach #2 &amp;#8211; Brute Force&lt;/strong&gt;&lt;/span&gt;&lt;/h4&gt;
 
 &lt;p&gt;I&amp;#8217;m a film school graduate&amp;#8230; not a computer science major. Never thought I would have to use the kind of math I TRIED to implement for a first solution. Solving the cubic function of every curve segment to find the intersections? Meh. Too hard.&lt;/p&gt;
 
 &lt;p&gt;Next I thought of an idea to take a curve and sample N-amount of points from start to end parameter. So lets say 1000 samples. I would get 1000 points on the curve, then compare each point to the other non-neighboring points to see if they are within a distance tolerance of each other. If they are, I consider this a point in the curve where it looped and self-intersected. This method did work. It was still not super fast, but no where NEAR as slow as using the intersect command. I built in some dynamic scaling of the sampling and tolerance to accommodate for curves of different size and complexity.  Even though I had to test 499500 point combinations per nurbsCurve for the 1000 point samples, this was only math and not a repeat call to &lt;em&gt;curveIntersect&lt;/em&gt;. Ultimately, I was still not where I needed to be in terms of usability. A complex curve could still be a few seconds to test. Still too slow.&lt;/p&gt;
 
-&lt;h4 id=&#34;approach-2-5-8211-brute-force-mixed-with-a-fast-little-pre-check:ae04e419cb95d75a49b5de01060ead5d&#34;&gt;&lt;strong&gt;Approach #2.5 &amp;#8211; Brute Force mixed with a fast little pre-check&lt;/strong&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;approach-2-5-8211-brute-force-mixed-with-a-fast-little-pre-check&#34;&gt;&lt;strong&gt;Approach #2.5 &amp;#8211; Brute Force mixed with a fast little pre-check&lt;/strong&gt;&lt;/h4&gt;
 
 &lt;p&gt;Amongst the tons of search results I waded through on google, I found a really cool little trick someone came up with: &lt;a href=&#34;http://forums.cgsociety.org/archive/index.php/t-517347.html&#34;&gt;http://forums.cgsociety.org/archive/index.php/t-517347.html&lt;/a&gt;&lt;/p&gt;
 
@@ -883,7 +887,7 @@ Options:
 
 &lt;p&gt;Well then, why couldn&amp;#8217;t I just use this method as my detection algorithm? While it was pretty darn fast since no iteration is involved, I discovered a few limited cases where I was getting False Negatives: The method said there was only one face (no intersection) on a curve that actually did have a self intersection. So I decided to use this as a pre-check to save time. If it DID say there was self-intersection, great! Log it. Otherwise, slow test it with the brute force method.&lt;/p&gt;
 
-&lt;h4 id=&#34;approach-3-8211-math-that-i-never-learned:ae04e419cb95d75a49b5de01060ead5d&#34;&gt;Approach #3 &amp;#8211; Math that I never learned&lt;/h4&gt;
+&lt;h4 id=&#34;approach-3-8211-math-that-i-never-learned&#34;&gt;Approach #3 &amp;#8211; Math that I never learned&lt;/h4&gt;
 
 &lt;p&gt;At this point I had accepted the solution for detecting self-intersection, and moved on to writing a maya UI for the tool. It would detect loops and optionally even report back the best estimate to the point where it actually occurred. But once I started writing another bigger tool that would use this script, I just knew it could be done faster with the power of math and without the poop of maya script command calls.&lt;/p&gt;
 
@@ -901,13 +905,13 @@ Options:
 
 &lt;p&gt;I was really stoked by this idea. The paper made it look really straight forward. I ended up writing a really cool custom wrapper around a nurbsCurve object that could represent a sub-section of the curve, and could easily give me things like the length and parameter range. It had a &lt;em&gt;split()&lt;/em&gt; method that could split the curve at a given length or parameter and give me back two sub-curves, of which each could further be split. This class was integrated into the Bezier Clipping method and I finally got it all working. The initial tests were amazingly fast, but I ended up finding that the process became quite slow on large numbers of complex curves. I attribute this to my implementation of the bezier clipping, not the method itself. I didn&amp;#8217;t take the time to actually generate proper sub-segments based on the bounding box overlap, and instead just did a simple &lt;sup&gt;50&lt;/sup&gt;&amp;frasl;&lt;sub&gt;50&lt;/sub&gt; split of each curve, and tested the new combinations. I think I was just so bummed about the performance results that I didn&amp;#8217;t feel like making the improvements to the process would make enough of a difference. What I had now was ultimately slower than my brute force method when tested against an entire scene of curves. So I decided to just go back to that.&lt;/p&gt;
 
-&lt;h4 id=&#34;approach-4-8211-the-unexpected-trick:ae04e419cb95d75a49b5de01060ead5d&#34;&gt;Approach #4 &amp;#8211; The unexpected trick&lt;/h4&gt;
+&lt;h4 id=&#34;approach-4-8211-the-unexpected-trick&#34;&gt;Approach #4 &amp;#8211; The unexpected trick&lt;/h4&gt;
 
 &lt;p&gt;Whilst working on the larger project meant to make use of the loop detection script, I discovered something amongst the curve commands. &lt;em&gt;offsetCurve&lt;/em&gt; includes the function of clipping away loops while creating the new offset curve object. My idea was to create an offsetCurve with the minimal changes, at a zero distance, so the curves would be right on top of each other. Then I could just compare the area/length/etc attributes of the curves to see if there was a change. This was really fast and really accurate, down to the smallest loops. Right now I&amp;#8217;m comparing the area and length values rounded to a certain tolerance. This method was amazingly fast, and a fraction of the code.&lt;/p&gt;
 
 &lt;p&gt;The only minor downside was I found that because of the rounding I needed to do to compare the values, every so often a couple curves would be found as self-intersecting when they were not. Thats much better than MISSING curves during the detection. So what I did was combine the earlier face-counting solution with this one, to fail over between the two. The combination was really fast and accurate, without 100,000 warnings showing up in the stupid script editor.&lt;/p&gt;
 
-&lt;h4 id=&#34;all-in-all:ae04e419cb95d75a49b5de01060ead5d&#34;&gt;All in all&lt;/h4&gt;
+&lt;h4 id=&#34;all-in-all&#34;&gt;All in all&lt;/h4&gt;
 
 &lt;p&gt;&lt;span style=&#34;font-weight: normal;&#34;&gt;I&amp;#8217;m really surprised how many versions of this tool I had to write, to ultimately end up at a really simple one. I never would have thought to look at this &lt;em&gt;offsetCurve&lt;/em&gt; command for a solution. Had to dig into some math I never thought I would use, also. So THATS what those stupid polynomial equations were for?&lt;/span&gt;&lt;/p&gt;
 
@@ -929,7 +933,7 @@ Options:
 
 &lt;p&gt;Please make sure to leave a review about the show via iTunes!&lt;/p&gt;
 
-&lt;h3 id=&#34;episode-20:6e68d1e4c5f8f04f50444d6628910009&#34;&gt;Episode #20&lt;/h3&gt;
+&lt;h3 id=&#34;episode-20&#34;&gt;Episode #20&lt;/h3&gt;
 
 &lt;p&gt;&lt;span style=&#34;color: #00ccff;&#34;&gt;Playlist page&lt;/span&gt;&lt;span style=&#34;color: #00ccff;&#34;&gt;&lt;br /&gt; &lt;/span&gt;&lt;/p&gt;
 </description>

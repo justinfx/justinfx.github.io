@@ -28,7 +28,7 @@
 
 &lt;p&gt;The test for my benchmark involved creating a number objects, adding them to a list, and then deleting them. The options for the test include both pointers to a basic struct and a QObject, QPointers, QSharedPointers, QWeakPointers, and just for an external comparison I also included boost::shared_ptr and boost::weak_ptr. The test was performed with different numbers of objects, as well as for both Qt4 and Qt5. Here is a more detailed description of each test.&lt;/p&gt;
 
-&lt;h4 id=&#34;the-test-environment:c89abc9fedab4936f89941691d570e98&#34;&gt;The Test Environment&lt;/h4&gt;
+&lt;h4 id=&#34;the-test-environment&#34;&gt;The Test Environment&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;OSX 10.9.5 Laptop  
 2.8 Ghz Intel Core 2 Duo
@@ -38,7 +38,7 @@ Qt 4.8.6
 Qt 5.4.2
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;description-of-tests:c89abc9fedab4936f89941691d570e98&#34;&gt;Description of Tests&lt;/h4&gt;
+&lt;h4 id=&#34;description-of-tests&#34;&gt;Description of Tests&lt;/h4&gt;
 
 &lt;p&gt;&lt;em&gt;test_raw_pointer&lt;/em&gt; : Creating pointers to a basic struct, adding the raw pointers to a QList, and then deleting all of the pointers&lt;/p&gt;
 
@@ -56,7 +56,7 @@ Qt 5.4.2
 
 &lt;p&gt;_test_boost_qobj&lt;em&gt;sharedptr&lt;/em&gt; : Creating &lt;code&gt;boost::shared_ptrs&lt;/code&gt; from QObject instances, as well as boost::weak_ptrs for each, adding the shared_ptrs to a QList, and then deleting them&lt;/p&gt;
 
-&lt;h4 id=&#34;the-test-results:c89abc9fedab4936f89941691d570e98&#34;&gt;The Test Results&lt;/h4&gt;
+&lt;h4 id=&#34;the-test-results&#34;&gt;The Test Results&lt;/h4&gt;
 
 &lt;pre class=&#34;&#34;&gt;Testing w/ 5000 objects        Qt4       Qt5
 =============================================
