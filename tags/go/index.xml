@@ -3,18 +3,18 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/go/</link>
+    <link>http://justinfx.com/tags/go/index.xml</link>
     <language>en-us</language>
-    <author>Justin Israel</author>
-    <copyright>2016 Justin Israel</copyright>
-    <updated>Sat, 14 May 2016 15:53:48 NZST</updated>
+    
+    <copyright>2017 Justin Israel</copyright>
+    <updated>2006-01-02 15:04:05 &#43;0000 MST</updated>
     
     
     <item>
       <title>C&#43;&#43; Bindings For A Go Library</title>
       <link>http://justinfx.com/2016/05/14/cpp-bindings-for-go/</link>
-      <pubDate>Sat, 14 May 2016 15:53:48 NZST</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2016/05/14/cpp-bindings-for-go/</guid>
       <description>
 
@@ -253,8 +253,8 @@ sum.c  sum.go sum.h  sum.so
     <item>
       <title>Go language for python programmers</title>
       <link>http://justinfx.com/2011/07/28/go-language-for-python-programmers/</link>
-      <pubDate>Thu, 28 Jul 2011 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2011/07/28/go-language-for-python-programmers/</guid>
       <description>
 

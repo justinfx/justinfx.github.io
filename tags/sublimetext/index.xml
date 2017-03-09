@@ -3,18 +3,18 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/sublimetext/</link>
+    <link>http://justinfx.com/tags/sublimetext/index.xml</link>
     <language>en-us</language>
-    <author>Justin Israel</author>
-    <copyright>2016 Justin Israel</copyright>
-    <updated>Sun, 17 Apr 2016 15:22:33 NZST</updated>
+    
+    <copyright>2017 Justin Israel</copyright>
+    <updated>2006-01-02 15:04:05 &#43;0000 MST</updated>
     
     
     <item>
       <title>SublimeText Editor and Clang (C&#43;&#43;)</title>
       <link>http://justinfx.com/2016/04/17/sublimetext-editor-and-clang/</link>
-      <pubDate>Sun, 17 Apr 2016 15:22:33 NZST</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2016/04/17/sublimetext-editor-and-clang/</guid>
       <description>
 

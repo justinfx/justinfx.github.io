@@ -3,18 +3,18 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/c&#43;&#43;/</link>
+    <link>http://justinfx.com/tags/c&#43;&#43;/index.xml</link>
     <language>en-us</language>
-    <author>Justin Israel</author>
-    <copyright>2016 Justin Israel</copyright>
-    <updated>Sat, 14 May 2016 15:53:48 NZST</updated>
+    
+    <copyright>2017 Justin Israel</copyright>
+    <updated>2006-01-02 15:04:05 &#43;0000 MST</updated>
     
     
     <item>
       <title>C&#43;&#43; Bindings For A Go Library</title>
       <link>http://justinfx.com/2016/05/14/cpp-bindings-for-go/</link>
-      <pubDate>Sat, 14 May 2016 15:53:48 NZST</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2016/05/14/cpp-bindings-for-go/</guid>
       <description>
 
@@ -253,8 +253,8 @@ sum.c  sum.go sum.h  sum.so
     <item>
       <title>SublimeText Editor and Clang (C&#43;&#43;)</title>
       <link>http://justinfx.com/2016/04/17/sublimetext-editor-and-clang/</link>
-      <pubDate>Sun, 17 Apr 2016 15:22:33 NZST</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2016/04/17/sublimetext-editor-and-clang/</guid>
       <description>
 
@@ -410,8 +410,8 @@ It helps to store your uncrustify.cfg within your project repo. Also, there is a
     <item>
       <title>Comparing performance of Qt smart pointer options</title>
       <link>http://justinfx.com/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</link>
-      <pubDate>Sun, 07 Jun 2015 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</guid>
       <description>
 

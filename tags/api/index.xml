@@ -3,22 +3,30 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/api/</link>
+    <link>http://justinfx.com/tags/api/index.xml</link>
     <language>en-us</language>
-    <author>Justin Israel</author>
-    <copyright>2011 Justin Israel</copyright>
-    <updated>Mon, 21 Nov 2011 00:00:00 UTC</updated>
+    
+    <copyright>2017 Justin Israel</copyright>
+    <updated>2006-01-02 15:04:05 &#43;0000 MST</updated>
     
     
     <item>
       <title>Mixing PyQt4 widgets and Maya UI objects</title>
       <link>http://justinfx.com/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</link>
-      <pubDate>Mon, 21 Nov 2011 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</guid>
       <description>&lt;p&gt;A question came up in the &lt;a href=&#34;http://groups.google.com/group/python_inside_maya&#34;&gt;Maya-Python mailing list&lt;/a&gt; that I thought was a really good topic, and should be reposted.&lt;/p&gt;
 
 &lt;p&gt;Someone asked how you can create maya UI objects and embed them within your main PyQt application. Specifically he wanted to create a modelPanel and embed it so that he would have a camera view within his own PyQt window.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;Update&lt;/em&gt;: Instructions for Maya 2017+, using PySide2 and Qt5, are available via this &lt;a href=&#34;http://blog.virtualmethodstudio.com/2017/03/embed-maya-native-ui-objects-in-pyside2/&#34;&gt;blog post by Lidia Martínez&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;p&gt;Here is my example of how to achieve this&amp;#8230;&lt;/p&gt;
 
@@ -97,8 +105,7 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;You need sip and the MQtUtil functions to convert between maya node paths and python Qbjects. Its the same idea as having to use those functions to get a reference to the maya MainWindow, in order to parent your dialog.&lt;/p&gt;
-</description>
+&lt;p&gt;You need sip and the MQtUtil functions to convert between maya node paths and python Qbjects. Its the same idea as having to use those functions to get a reference to the maya MainWindow, in order to parent your dialog.&lt;/p&gt;</description>
     </item>
     
     

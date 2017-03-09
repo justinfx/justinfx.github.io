@@ -3,18 +3,18 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/qt/</link>
+    <link>http://justinfx.com/tags/qt/index.xml</link>
     <language>en-us</language>
-    <author>Justin Israel</author>
-    <copyright>2015 Justin Israel</copyright>
-    <updated>Sun, 07 Jun 2015 00:00:00 UTC</updated>
+    
+    <copyright>2017 Justin Israel</copyright>
+    <updated>2006-01-02 15:04:05 &#43;0000 MST</updated>
     
     
     <item>
       <title>Comparing performance of Qt smart pointer options</title>
       <link>http://justinfx.com/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</link>
-      <pubDate>Sun, 07 Jun 2015 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</guid>
       <description>
 
@@ -129,8 +129,8 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
     <item>
       <title>Installing PyQt4 for Maya 2012&#43; (osx)</title>
       <link>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
-      <pubDate>Thu, 10 Nov 2011 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
       <description>&lt;p&gt;This is a follow up post to my previous one on &lt;a href=&#34;http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/&#34;&gt;Installing PyQt4 for Maya 2011&lt;/a&gt;&lt;/p&gt;
 
@@ -181,8 +181,8 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
     <item>
       <title>PyQt4: phonon… and on… and on</title>
       <link>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</link>
-      <pubDate>Fri, 19 Mar 2010 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</guid>
       <description>&lt;p&gt;&amp;#8220;App&amp;#8217;ing up&amp;#8221; PyQt&amp;#8230; ugh.&lt;/p&gt;
 
@@ -227,8 +227,8 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
     <item>
       <title>SouthPark: A crazy little interface. The TaskMonster.</title>
       <link>http://justinfx.com/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</link>
-      <pubDate>Tue, 16 Mar 2010 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</guid>
       <description>&lt;p&gt;I get to do a lot of interesting applications at SouthPark. This one in particular was the most challenging use of PyQt that I have experienced to date.&lt;/p&gt;
 
@@ -269,8 +269,8 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
     <item>
       <title>PyQt: Overloading/Ignoring events on widgets</title>
       <link>http://justinfx.com/2010/03/10/pyqt-ignoring-events-on-widgets/</link>
-      <pubDate>Wed, 10 Mar 2010 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2010/03/10/pyqt-ignoring-events-on-widgets/</guid>
       <description>&lt;p&gt;You know when you have all these widgets laid out in your class, and you are hooking up all the connections, and you say &amp;#8220;Aw dammit I have to subclass QLabel now just so make it ignore blahEvent&amp;#8221;? You end up with all these little widget subclasses, where all they are doing is ignoring an event.&lt;/p&gt;
 

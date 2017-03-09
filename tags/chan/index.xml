@@ -3,22 +3,24 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/chan/</link>
+    <link>http://justinfx.com/tags/chan/index.xml</link>
     <language>en-us</language>
-    <author>Justin Israel</author>
-    <copyright>2010 Justin Israel</copyright>
-    <updated>Tue, 31 Aug 2010 00:00:00 UTC</updated>
+    
+    <copyright>2017 Justin Israel</copyright>
+    <updated>2006-01-02 15:04:05 &#43;0000 MST</updated>
     
     
     <item>
       <title>AtomSplitter v1.6 update</title>
       <link>http://justinfx.com/2010/08/31/208/</link>
-      <pubDate>Tue, 31 Aug 2010 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2010/08/31/208/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2009/12/chan2fbx.jpg&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;AtomSplitter has been updated to v1.6, available through cmivfx.com&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.6&#34;&gt;AtomSplitter 1.6 &amp;#8211; cmiVFX.com&lt;/a&gt;&lt;/p&gt;
 
@@ -68,8 +70,7 @@ Options:
         Scale the translation values by this amount
 -F FORMAT, --format=FORMAT
         Output format (fbx, action, terragen)
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     
@@ -77,10 +78,12 @@ Options:
     <item>
       <title>AtomSplitter v1.5 update</title>
       <link>http://justinfx.com/2010/05/26/atomsplitter-v1-5-update/</link>
-      <pubDate>Wed, 26 May 2010 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2010/05/26/atomsplitter-v1-5-update/</guid>
       <description>&lt;p&gt;AtomSplitter has been updated to v1.5, available through cmivfx.com&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.5&#34;&gt;AtomSplitter 1.5 &amp;#8211; cmiVFX.com&lt;/a&gt;&lt;/p&gt;
 
@@ -94,8 +97,7 @@ Options:
     &lt;/li&gt;
   &lt;/ul&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/&#34;&gt;See the original post.&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/&#34;&gt;See the original post.&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     
@@ -103,10 +105,12 @@ Options:
     <item>
       <title>AtomSplitter v1.2 update</title>
       <link>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</link>
-      <pubDate>Tue, 11 May 2010 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</guid>
       <description>&lt;p&gt;AtomSplitter (chanToFbx) has been updated to v1.2, available through cmivfx.com&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.2&#34;&gt;&lt;span style=&#34;color: #00ccff;&#34;&gt;AtomSplitter 1.2 &amp;#8211; cmiVFX.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -120,8 +124,7 @@ Options:
 
 &lt;p&gt;If you haven&amp;#8217;t visited &lt;a href=&#34;http://cmiVFX.com&#34; target=&#34;_blank&#34;&gt;cmiVFX.com&lt;/a&gt; before, PLEASE check them out. Chris Maynard does an amazing job rounding up top talent in the industry to create these outstanding visual fx tutorials. The information is always cutting edge.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/&#34;&gt;&lt;span style=&#34;color: #993366;&#34;&gt;See the original post.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/&#34;&gt;&lt;span style=&#34;color: #993366;&#34;&gt;See the original post.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     
@@ -129,12 +132,14 @@ Options:
     <item>
       <title>chanToFbx tool released through cmiVFX</title>
       <link>http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/</link>
-      <pubDate>Mon, 07 Dec 2009 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/</guid>
       <description>&lt;p&gt;&lt;img class=&#34;alignnone size-full wp-image-39&#34; title=&#34;chan2fbx&#34; src=&#34;http://justinfx.com/wp-content/uploads/2009/12/chan2fbx.jpg&#34; alt=&#34;chan2fbx&#34; width=&#34;201&#34; height=&#34;104&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I had received a mailing list email from cmiVFX, where Chris Maynard was challenging the community to write a tool that could convert a nuke camera .chan file to a functional FBX format. This was apparently meant to compliment the new 3d camera tracker in NukeX. So I decided to take on the challenge.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;The tool started out as a command-line python script that would translate the chan files simple column-style output to fbx. But in testing specifically with Flame, Chris found that the fbx simply would not import all the channels properly. Thus, I was asked to integrate a solution by Georges Nakhle for converting the chan to an .action format, which is native to Flame. So with George&amp;#8217;s .action code, Chris&amp;#8217;s testing with the scaling in Flame, and the rest of my code, we seemed to have all the bases covered in getting the .chan file into a universal format.&lt;/p&gt;
 
@@ -154,8 +159,7 @@ Options:
   &lt;p class=&#34;wp-caption-text&#34;&gt;
     .chan To FBX GUI (osx)
   &lt;/p&gt;
-&lt;/div&gt;
-</description>
+&lt;/div&gt;</description>
     </item>
     
     

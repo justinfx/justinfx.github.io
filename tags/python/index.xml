@@ -3,18 +3,18 @@
   <channel>
       <title>JustinFX.com</title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/python/</link>
+    <link>http://justinfx.com/tags/python/index.xml</link>
     <language>en-us</language>
-    <author>Justin Israel</author>
-    <copyright>2012 Justin Israel</copyright>
-    <updated>Fri, 12 Oct 2012 00:00:00 UTC</updated>
+    
+    <copyright>2017 Justin Israel</copyright>
+    <updated>2006-01-02 15:04:05 &#43;0000 MST</updated>
     
     
     <item>
       <title>Tutorial: PyQt4 UI Development for Maya</title>
       <link>http://justinfx.com/2012/10/12/pyqt4-for-maya/</link>
-      <pubDate>Fri, 12 Oct 2012 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2012/10/12/pyqt4-for-maya/</guid>
       <description>
 
@@ -211,8 +211,8 @@
     <item>
       <title>Python 2.7.2 serializer speed comparisons</title>
       <link>http://justinfx.com/2012/07/25/python-2-7-3-serializer-speed-comparisons/</link>
-      <pubDate>Wed, 25 Jul 2012 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2012/07/25/python-2-7-3-serializer-speed-comparisons/</guid>
       <description>&lt;p&gt;In a recent python project where I was sending multiple messages per second of data over a basic socket, I had initially just grabbed the cPickle module to get the prototype proof-of-concept functioning properly. cPickle is awesome for easily serializing more complex python objects like custom classes, even though in my case I am only sending basic types.&lt;/p&gt;
 
@@ -379,8 +379,8 @@ pickle (ascii)        17.8767
     <item>
       <title>Getting started with XBOX 360 Kinect on OSX</title>
       <link>http://justinfx.com/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</link>
-      <pubDate>Thu, 21 Jun 2012 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</guid>
       <description>
 
@@ -548,12 +548,20 @@ make
     <item>
       <title>Mixing PyQt4 widgets and Maya UI objects</title>
       <link>http://justinfx.com/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</link>
-      <pubDate>Mon, 21 Nov 2011 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</guid>
       <description>&lt;p&gt;A question came up in the &lt;a href=&#34;http://groups.google.com/group/python_inside_maya&#34;&gt;Maya-Python mailing list&lt;/a&gt; that I thought was a really good topic, and should be reposted.&lt;/p&gt;
 
 &lt;p&gt;Someone asked how you can create maya UI objects and embed them within your main PyQt application. Specifically he wanted to create a modelPanel and embed it so that he would have a camera view within his own PyQt window.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;Update&lt;/em&gt;: Instructions for Maya 2017+, using PySide2 and Qt5, are available via this &lt;a href=&#34;http://blog.virtualmethodstudio.com/2017/03/embed-maya-native-ui-objects-in-pyside2/&#34;&gt;blog post by Lidia Martínez&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;p&gt;Here is my example of how to achieve this&amp;#8230;&lt;/p&gt;
 
@@ -632,8 +640,7 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;You need sip and the MQtUtil functions to convert between maya node paths and python Qbjects. Its the same idea as having to use those functions to get a reference to the maya MainWindow, in order to parent your dialog.&lt;/p&gt;
-</description>
+&lt;p&gt;You need sip and the MQtUtil functions to convert between maya node paths and python Qbjects. Its the same idea as having to use those functions to get a reference to the maya MainWindow, in order to parent your dialog.&lt;/p&gt;</description>
     </item>
     
     
@@ -641,8 +648,8 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
     <item>
       <title>Python for Maya Artists – Volume 2</title>
       <link>http://justinfx.com/2011/11/15/python-for-maya-artists-volume-2/</link>
-      <pubDate>Tue, 15 Nov 2011 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2011/11/15/python-for-maya-artists-volume-2/</guid>
       <description>
 
@@ -673,8 +680,8 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
     <item>
       <title>Installing PyQt4 for Maya 2012&#43; (osx)</title>
       <link>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
-      <pubDate>Thu, 10 Nov 2011 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
       <description>&lt;p&gt;This is a follow up post to my previous one on &lt;a href=&#34;http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/&#34;&gt;Installing PyQt4 for Maya 2011&lt;/a&gt;&lt;/p&gt;
 
@@ -725,8 +732,8 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
     <item>
       <title>Intro to Python for Maya Artists – Tutorial</title>
       <link>http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/</link>
-      <pubDate>Sat, 08 Oct 2011 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/</guid>
       <description>
 
@@ -755,12 +762,14 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
     <item>
       <title>AtomSplitter v1.6 update</title>
       <link>http://justinfx.com/2010/08/31/208/</link>
-      <pubDate>Tue, 31 Aug 2010 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2010/08/31/208/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2009/12/chan2fbx.jpg&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;AtomSplitter has been updated to v1.6, available through cmivfx.com&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.6&#34;&gt;AtomSplitter 1.6 &amp;#8211; cmiVFX.com&lt;/a&gt;&lt;/p&gt;
 
@@ -810,8 +819,7 @@ Options:
         Scale the translation values by this amount
 -F FORMAT, --format=FORMAT
         Output format (fbx, action, terragen)
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     
@@ -819,10 +827,12 @@ Options:
     <item>
       <title>AtomSplitter v1.5 update</title>
       <link>http://justinfx.com/2010/05/26/atomsplitter-v1-5-update/</link>
-      <pubDate>Wed, 26 May 2010 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2010/05/26/atomsplitter-v1-5-update/</guid>
       <description>&lt;p&gt;AtomSplitter has been updated to v1.5, available through cmivfx.com&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.5&#34;&gt;AtomSplitter 1.5 &amp;#8211; cmiVFX.com&lt;/a&gt;&lt;/p&gt;
 
@@ -836,8 +846,7 @@ Options:
     &lt;/li&gt;
   &lt;/ul&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/&#34;&gt;See the original post.&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/&#34;&gt;See the original post.&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     
@@ -845,10 +854,12 @@ Options:
     <item>
       <title>AtomSplitter v1.2 update</title>
       <link>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</link>
-      <pubDate>Tue, 11 May 2010 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</guid>
       <description>&lt;p&gt;AtomSplitter (chanToFbx) has been updated to v1.2, available through cmivfx.com&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.2&#34;&gt;&lt;span style=&#34;color: #00ccff;&#34;&gt;AtomSplitter 1.2 &amp;#8211; cmiVFX.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -862,8 +873,7 @@ Options:
 
 &lt;p&gt;If you haven&amp;#8217;t visited &lt;a href=&#34;http://cmiVFX.com&#34; target=&#34;_blank&#34;&gt;cmiVFX.com&lt;/a&gt; before, PLEASE check them out. Chris Maynard does an amazing job rounding up top talent in the industry to create these outstanding visual fx tutorials. The information is always cutting edge.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/&#34;&gt;&lt;span style=&#34;color: #993366;&#34;&gt;See the original post.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/&#34;&gt;&lt;span style=&#34;color: #993366;&#34;&gt;See the original post.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     
@@ -871,8 +881,8 @@ Options:
     <item>
       <title>SouthPark: A crazy little interface. The TaskMonster.</title>
       <link>http://justinfx.com/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</link>
-      <pubDate>Tue, 16 Mar 2010 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</guid>
       <description>&lt;p&gt;I get to do a lot of interesting applications at SouthPark. This one in particular was the most challenging use of PyQt that I have experienced to date.&lt;/p&gt;
 
@@ -913,8 +923,8 @@ Options:
     <item>
       <title>PyQt: Overloading/Ignoring events on widgets</title>
       <link>http://justinfx.com/2010/03/10/pyqt-ignoring-events-on-widgets/</link>
-      <pubDate>Wed, 10 Mar 2010 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2010/03/10/pyqt-ignoring-events-on-widgets/</guid>
       <description>&lt;p&gt;You know when you have all these widgets laid out in your class, and you are hooking up all the connections, and you say &amp;#8220;Aw dammit I have to subclass QLabel now just so make it ignore blahEvent&amp;#8221;? You end up with all these little widget subclasses, where all they are doing is ignoring an event.&lt;/p&gt;
 
@@ -955,8 +965,8 @@ myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mousePressEvent 
     <item>
       <title>Python API for XML/SWF Charts (Flash Graphing)</title>
       <link>http://justinfx.com/2010/01/15/python-api-for-xmlswf-charts-flash-graphing/</link>
-      <pubDate>Fri, 15 Jan 2010 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2010/01/15/python-api-for-xmlswf-charts-flash-graphing/</guid>
       <description>
 
@@ -1019,12 +1029,14 @@ xml &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#3
     <item>
       <title>chanToFbx tool released through cmiVFX</title>
       <link>http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/</link>
-      <pubDate>Mon, 07 Dec 2009 00:00:00 UTC</pubDate>
-      <author>Justin Israel</author>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
       <guid>http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/</guid>
       <description>&lt;p&gt;&lt;img class=&#34;alignnone size-full wp-image-39&#34; title=&#34;chan2fbx&#34; src=&#34;http://justinfx.com/wp-content/uploads/2009/12/chan2fbx.jpg&#34; alt=&#34;chan2fbx&#34; width=&#34;201&#34; height=&#34;104&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I had received a mailing list email from cmiVFX, where Chris Maynard was challenging the community to write a tool that could convert a nuke camera .chan file to a functional FBX format. This was apparently meant to compliment the new 3d camera tracker in NukeX. So I decided to take on the challenge.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;The tool started out as a command-line python script that would translate the chan files simple column-style output to fbx. But in testing specifically with Flame, Chris found that the fbx simply would not import all the channels properly. Thus, I was asked to integrate a solution by Georges Nakhle for converting the chan to an .action format, which is native to Flame. So with George&amp;#8217;s .action code, Chris&amp;#8217;s testing with the scaling in Flame, and the rest of my code, we seemed to have all the bases covered in getting the .chan file into a universal format.&lt;/p&gt;
 
@@ -1044,8 +1056,7 @@ xml &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#3
   &lt;p class=&#34;wp-caption-text&#34;&gt;
     .chan To FBX GUI (osx)
   &lt;/p&gt;
-&lt;/div&gt;
-</description>
+&lt;/div&gt;</description>
     </item>
     
     
