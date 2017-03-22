@@ -16,10 +16,10 @@
       <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
       
       <guid>http://justinfx.com/2017/03/22/python-tutorials-released-free/</guid>
-      <description>
-
-&lt;p&gt;In 2011 and 2012 I had released 3 commercial Python training tutorials, using Maya as a target platform.
+      <description>&lt;p&gt;In 2011 and 2012 I had released 3 commercial Python training tutorials, using Maya as a target platform.
 Now enjoy them free of charge!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#python-for-maya-artists-volume-1&#34;&gt;Python For Maya Artists - Volume 1&lt;/a&gt;&lt;/li&gt;
@@ -160,8 +160,7 @@ Now enjoy them free of charge!&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Stylin&amp;rsquo; Style-sheets: Use CSS-like syntax for applying style sheets to widgets&lt;/li&gt;
 &lt;li&gt;Painting By &amp;hellip; Paint events: For even more control, we can tell a widget exactly how to draw itself on the screen. We will look at two different examples of how to use custom painting.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;/ul&gt;</description>
     </item>
     
     
