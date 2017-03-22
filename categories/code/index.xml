@@ -11,6 +11,162 @@
     
     
     <item>
+      <title>Python Video Tutorials Released Free</title>
+      <link>http://justinfx.com/2017/03/22/python-tutorials-released-free/</link>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
+      <guid>http://justinfx.com/2017/03/22/python-tutorials-released-free/</guid>
+      <description>
+
+&lt;p&gt;In 2011 and 2012 I had released 3 commercial Python training tutorials, using Maya as a target platform.
+Now enjoy them free of charge!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#python-for-maya-artists-volume-1&#34;&gt;Python For Maya Artists - Volume 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#python-for-maya-artists-volume-2&#34;&gt;Python For Maya Artists - Volume 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pyqt4-ui-development-for-maya&#34;&gt;PyQt4 UI Development for Maya&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;python-for-maya-artists-volume-1&#34;&gt;Python For Maya Artists - Volume 1&lt;/h2&gt;
+
+&lt;div class=&#34;embed video-player&#34;&gt;
+	&lt;iframe class=&#34;youtube-player&#34; 
+			type=&#34;text/html&#34; 
+			width=&#34;640&#34; height=&#34;385&#34; 
+			src=&#34;http://www.youtube.com/embed/PDKxDbt6EGQ&#34; 
+			allowfullscreen 
+			frameborder=&#34;0&#34;&gt;
+	&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/tutorials/tree/master/Python_For_Maya_Vol_01&#34;&gt;Project material available here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Amazing at Animation? Master of Modeling? Conquistador of Character Rigging?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;But how is your Python?&lt;/p&gt;
+
+&lt;p&gt;This course brings the talented artist into the fold of the technical-side of Maya. Learn the basics of Python, and its place in your 3D workflow, with visual examples and real world problems. Get a kick-start on adding some automation into your life, and solving common problems in a fraction of the time. By the end of this video, you should have a deeper understanding of one of the languages Maya speaks under the hood, and how to start viewing your scenes in terms of glorious Python code!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;python-for-maya-artists-volume-2&#34;&gt;Python For Maya Artists - Volume 2&lt;/h2&gt;
+
+&lt;div class=&#34;embed video-player&#34;&gt;
+	&lt;iframe class=&#34;youtube-player&#34; 
+			type=&#34;text/html&#34; 
+			width=&#34;640&#34; height=&#34;385&#34; 
+			src=&#34;http://www.youtube.com/embed/_tqumyujaU4&#34; 
+			allowfullscreen 
+			frameborder=&#34;0&#34;&gt;
+	&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/tutorials/tree/master/Python_For_Maya_Vol_02&#34;&gt;Project material available here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;If you watched the first video, you now have a good grasp on Python. Sweet. Let&amp;rsquo;s plow through some more involved concepts like python juggernauts!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;With a working knowledge of the python scripting language, and the Maya Python commands API, we can continue to learn new ways to solve more challenging problems, create complete scripts, and build user interfaces around our tools. We also introduce the Maya Python API; a lower-level interface into Maya.&lt;/p&gt;
+
+&lt;p&gt;This video focuses more on breaking down full scripts, as opposed to typing out syntax. Its jam packaged with information and moves fast to deliver you as much brain food as possible. The first segment of the video transitions from beginning to intermediate level, with the majority of the video being intermediate, and finishing out by touching on advanced concepts. The included project files are abundant, complete, and full of helpful documentation so that you can take your time and learn about each piece of the tools.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;pyqt4-ui-development-for-maya&#34;&gt;PyQt4 UI Development for Maya&lt;/h2&gt;
+
+&lt;div class=&#34;embed video-player&#34;&gt;
+	&lt;iframe class=&#34;youtube-player&#34; 
+			type=&#34;text/html&#34; 
+			width=&#34;640&#34; height=&#34;385&#34; 
+			src=&#34;http://www.youtube.com/embed/X7cO4MzhjKw&#34; 
+			allowfullscreen 
+			frameborder=&#34;0&#34;&gt;
+	&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/tutorials/tree/master/PyQt4_UI_Development_for_Maya&#34;&gt;Project material available here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;This tutorial is about learning PyQt4 python bindings for the Qt Framework, and how to introduce new UI elements to Maya as a platform.&lt;/p&gt;
+
+&lt;p&gt;We discuss what comprises a &amp;#8220;Framework&amp;#8221; and a &amp;#8220;GUI Framework&amp;#8221;, and how Qt and PyQt4 work together.&lt;/p&gt;
+
+&lt;h3 id=&#34;getting-started-with-pyqt4&#34;&gt;&lt;strong&gt;Getting Started With PyQt4&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;There are multiple ways of getting a working installation of PyQt4, both for the general system and for Maya. We look into these approaches to get your system up and running to begin working with PyQt4!&lt;/p&gt;
+
+&lt;p&gt;We also talk about what is included, such as command line tools and applications, tips on how to test and learn the code, and how to structure a project.&lt;/p&gt;
+
+&lt;h3 id=&#34;pyqt4-fundamentals&#34;&gt;&lt;strong&gt;PyQt4 Fundamentals&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Lets get crackin&amp;rsquo; and learn the basics!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What is a QObject? What is a QWidget? Common PyQt4 classes are explained in detail&lt;/li&gt;
+&lt;li&gt;Working with the Qt Designer application, to build a UI visually&lt;/li&gt;
+&lt;li&gt;Layouts: Making widgets resize elegantly and stay organized in your design&lt;/li&gt;
+&lt;li&gt;Coordinate space: How do widgets transform in your 2D screen space?&lt;/li&gt;
+&lt;li&gt;QApplication and the Qt Event Loop: The engine that runs your UI&lt;/li&gt;
+&lt;li&gt;Events, Signals, and Slots: How components communicate changes and how the application can respond to changes to make it dynamic&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;general-examples&#34;&gt;&lt;strong&gt;General Examples&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;With an understanding of the framework components, we can begin working with fully functional stand-alone examples.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Common PyQt4 app template&lt;/li&gt;
+&lt;li&gt;Subclassing Widgets: Creating custom functionality to the existing classes provided by PyQt4&lt;/li&gt;
+&lt;li&gt;Dialogs: Raising dialog windows above existing windows, Modal vs Non-modal, and creating forms. We look at different ways to validate the data provided by the user, to these dialog forms.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;pyqt4-and-maya-introduction&#34;&gt;&lt;strong&gt;PyQt4 And Maya Introduction&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Finally, some Maya action! Maya has a slightly different approach to using PyQt4…&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;How does the QApplication and event loop work?&lt;/li&gt;
+&lt;li&gt;Common Maya PyQt4 app template&lt;/li&gt;
+&lt;li&gt;Looking at the Maya API&amp;rsquo;s MQtUtil class&lt;/li&gt;
+&lt;li&gt;The sip module: Helping us translate between Maya&amp;rsquo;s Qt and our own PyQt4 code&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;replicating-maya-s-ui-components&#34;&gt;&lt;strong&gt;Replicating Maya&amp;rsquo;s UI Components&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;What better way to see examples of creating UI for Maya than to replicate some existing functionality? This gives us the opportunity expand with custom functionality&lt;/p&gt;
+
+&lt;p&gt;In this chapter we will take two different UI components in Maya, and do a basic custom version of our own, and show to how link them up to Maya&amp;rsquo;s own callbacks.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Some Features Of This Chapter Include&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The QTableWidget&lt;/li&gt;
+&lt;li&gt;Model / View separation with QTreeView&lt;/li&gt;
+&lt;li&gt;Docking windows into the Maya interface&lt;/li&gt;
+&lt;li&gt;Mixing together PyQt4, the Maya API, Maya commands, and callbacks&lt;/li&gt;
+&lt;li&gt;Sorting model data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;customizations&#34;&gt;&lt;strong&gt;Customizations&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;A button can be a button, and a slider might look alright in its stock form, but sometimes we want to customize the look of our widgets. This chapter introduces multiple ways of achieving custom looks to our components&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Stylin&amp;rsquo; Style-sheets: Use CSS-like syntax for applying style sheets to widgets&lt;/li&gt;
+&lt;li&gt;Painting By &amp;hellip; Paint events: For even more control, we can tell a widget exactly how to draw itself on the screen. We will look at two different examples of how to use custom painting.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
       <title>C&#43;&#43; Bindings For A Go Library</title>
       <link>http://justinfx.com/2016/05/14/cpp-bindings-for-go/</link>
       <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
@@ -1671,84 +1827,6 @@ sudo install_name_tool -change libQtCore.4.dylib @executable_path/QtCore
 &lt;p&gt;&lt;a href=&#34;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.6&#34;&gt;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.6&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;</description>
-    </item>
-    
-    
-    
-    <item>
-      <title>Maya, and self-intersecting nurbsCurves</title>
-      <link>http://justinfx.com/2010/08/09/maya-and-self-intersecting-nurbscurves/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
-      
-      <guid>http://justinfx.com/2010/08/09/maya-and-self-intersecting-nurbscurves/</guid>
-      <description>
-
-&lt;p&gt;This is a story about my journey in solving a problem at work involving curves. The solution seemed really simple at first, but because of a stupid Maya issue, this turned into me having to rewrite the tool 3 times before I discovered a surprising solution.&lt;/p&gt;
-
-&lt;h4 id=&#34;the-problem&#34;&gt;The Problem:&lt;/h4&gt;
-
-&lt;p&gt;Because we rely heavily on the process of importing Illustrator .ai files into Maya as nurbsCurves, we constantly have to deal with curves that intersect themselves. This is a result of the curves having been hand drawn originally in the art department, and they posed issues during rendering after being planar-ized.&lt;/p&gt;
-
-&lt;p&gt;We needed a way to detect self-intersecting nurbsCurves, so that we could fix them before working with them as nurbsSurfaces.&lt;/p&gt;
-
-&lt;div id=&#34;attachment_169&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignleft&#34;&gt;
-  &lt;a href=&#34;http://justinfx.com/wp-content/uploads/2010/08/curvesExample.png&#34; rel=&#34;lightbox[163]&#34;&gt;&lt;img class=&#34;size-medium wp-image-169  &#34; style=&#34;background-color: white;&#34; title=&#34;nurbsCurve Example&#34; src=&#34;http://justinfx.com/wp-content/uploads/2010/08/curvesExample-300x213.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;213&#34; /&gt;&lt;/a&gt;
-  
-  &lt;p class=&#34;wp-caption-text&#34;&gt;
-    Loop Curves (self-intersection)
-  &lt;/p&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&#34;getting-started-i-hate-you-maya&#34;&gt;Getting started. I hate you, Maya:&lt;/h4&gt;
-
-&lt;p&gt;The obvious place for me to start was to use the existing &lt;em&gt;curveIntersect&lt;/em&gt; command. This command will tell you if two curves intersect, and at what points. Although it requires that you tell it 2 individual curves to test, I figured I could just split the single curve into parts (using detach curve), and pair off all the parts to test them. And here is where I ran into something that just pissed me off. While it works great to tell you where the intersection is&amp;#8230; when it DOESN&amp;#8217;T find an intersection, it prints a &amp;#8220;Warning: Could not find curve-curve intersection&amp;#8221; line. Printing to the script editor in maya is SUPER expensive as I have found. Everything slows down. This was the initial reason I decided not to use this method. I later found out the RIGHT hack way to deal with this is to wrap the entire process in scriptEditorInfo commands to suppress warnings being printed to the Script Editor and re-enable after. This method does prevent the amazing slowness, but still has the unacceptable flood of warnings once suppression is turned back off again. So even with this fix, I still found this approach to be too slow. For a single complex curve object that might have, say, 500 spans&amp;#8230; that would be 124750 unique combinations that would have to be tested with the &lt;em&gt;curveIntersect&lt;/em&gt; command. In a test of just looping that many times and calling this command, the process took 54 seconds! No way could this work, with a scene that could easily have 2000+ nurbsCurves!&lt;/p&gt;
-
-&lt;p&gt;Great. Now I get to investigate my own intersection detection from scratch.&lt;/p&gt;
-
-&lt;h4 id=&#34;span-style-font-weight-normal-strong-approach-2-8211-brute-force-strong-span&#34;&gt;&lt;span style=&#34;font-weight: normal;&#34;&gt;&lt;strong&gt;Approach #2 &amp;#8211; Brute Force&lt;/strong&gt;&lt;/span&gt;&lt;/h4&gt;
-
-&lt;p&gt;I&amp;#8217;m a film school graduate&amp;#8230; not a computer science major. Never thought I would have to use the kind of math I TRIED to implement for a first solution. Solving the cubic function of every curve segment to find the intersections? Meh. Too hard.&lt;/p&gt;
-
-&lt;p&gt;Next I thought of an idea to take a curve and sample N-amount of points from start to end parameter. So lets say 1000 samples. I would get 1000 points on the curve, then compare each point to the other non-neighboring points to see if they are within a distance tolerance of each other. If they are, I consider this a point in the curve where it looped and self-intersected. This method did work. It was still not super fast, but no where NEAR as slow as using the intersect command. I built in some dynamic scaling of the sampling and tolerance to accommodate for curves of different size and complexity.  Even though I had to test 499500 point combinations per nurbsCurve for the 1000 point samples, this was only math and not a repeat call to &lt;em&gt;curveIntersect&lt;/em&gt;. Ultimately, I was still not where I needed to be in terms of usability. A complex curve could still be a few seconds to test. Still too slow.&lt;/p&gt;
-
-&lt;h4 id=&#34;approach-2-5-8211-brute-force-mixed-with-a-fast-little-pre-check&#34;&gt;&lt;strong&gt;Approach #2.5 &amp;#8211; Brute Force mixed with a fast little pre-check&lt;/strong&gt;&lt;/h4&gt;
-
-&lt;p&gt;Amongst the tons of search results I waded through on google, I found a really cool little trick someone came up with: &lt;a href=&#34;http://forums.cgsociety.org/archive/index.php/t-517347.html&#34;&gt;http://forums.cgsociety.org/archive/index.php/t-517347.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;He suggested a cool hack where you planar the surface, then convert it to polygon with certain options, and then count the number of resulting faces that were produced. Theoretically there should only be 1 face if the curve never intersected itself. If it did, those loops should also have faces.&lt;/p&gt;
-
-&lt;p&gt;Well then, why couldn&amp;#8217;t I just use this method as my detection algorithm? While it was pretty darn fast since no iteration is involved, I discovered a few limited cases where I was getting False Negatives: The method said there was only one face (no intersection) on a curve that actually did have a self intersection. So I decided to use this as a pre-check to save time. If it DID say there was self-intersection, great! Log it. Otherwise, slow test it with the brute force method.&lt;/p&gt;
-
-&lt;h4 id=&#34;approach-3-8211-math-that-i-never-learned&#34;&gt;Approach #3 &amp;#8211; Math that I never learned&lt;/h4&gt;
-
-&lt;p&gt;At this point I had accepted the solution for detecting self-intersection, and moved on to writing a maya UI for the tool. It would detect loops and optionally even report back the best estimate to the point where it actually occurred. But once I started writing another bigger tool that would use this script, I just knew it could be done faster with the power of math and without the poop of maya script command calls.&lt;/p&gt;
-
-&lt;div id=&#34;attachment_170&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignleft&#34;&gt;
-  &lt;a href=&#34;http://www.tsplines.com/technology/edu/CurveIntersection.pdf&#34;&gt;&lt;img class=&#34;size-medium wp-image-170&#34; title=&#34;Bezier Clipping&#34; src=&#34;http://justinfx.com/wp-content/uploads/2010/08/clipping-300x141.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;141&#34; /&gt;&lt;/a&gt;
-  
-  &lt;p class=&#34;wp-caption-text&#34;&gt;
-    Bezier Clipping Method
-  &lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;I discovered a paper written about a method called &amp;#8220;Bezier Clipping&amp;#8221; : &lt;a href=&#34;http://www.tsplines.com/technology/edu/CurveIntersection.pdf&#34;&gt;Curve intersection using Bezier Clipping&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;For this method to be used on a single curve, one would first need to split the curve into its segments, in my case producing a bunch of cubic curves. With each pair of combinations, a bounding box check would be performed. If the bounding boxes do not overlap, you are done. No intersection would have occurred. If the bounding boxes did overlap, then you would start drilling down the check by clipping away sections of the curves outside the bounding box overlap. You can discover the intersection pretty fast by either drilling down until the segments are small enough to represent the single point, or the segments are now small enough to be considered linear and a you can use the slopes to find the intersection.&lt;/p&gt;
-
-&lt;p&gt;I was really stoked by this idea. The paper made it look really straight forward. I ended up writing a really cool custom wrapper around a nurbsCurve object that could represent a sub-section of the curve, and could easily give me things like the length and parameter range. It had a &lt;em&gt;split()&lt;/em&gt; method that could split the curve at a given length or parameter and give me back two sub-curves, of which each could further be split. This class was integrated into the Bezier Clipping method and I finally got it all working. The initial tests were amazingly fast, but I ended up finding that the process became quite slow on large numbers of complex curves. I attribute this to my implementation of the bezier clipping, not the method itself. I didn&amp;#8217;t take the time to actually generate proper sub-segments based on the bounding box overlap, and instead just did a simple &lt;sup&gt;50&lt;/sup&gt;&amp;frasl;&lt;sub&gt;50&lt;/sub&gt; split of each curve, and tested the new combinations. I think I was just so bummed about the performance results that I didn&amp;#8217;t feel like making the improvements to the process would make enough of a difference. What I had now was ultimately slower than my brute force method when tested against an entire scene of curves. So I decided to just go back to that.&lt;/p&gt;
-
-&lt;h4 id=&#34;approach-4-8211-the-unexpected-trick&#34;&gt;Approach #4 &amp;#8211; The unexpected trick&lt;/h4&gt;
-
-&lt;p&gt;Whilst working on the larger project meant to make use of the loop detection script, I discovered something amongst the curve commands. &lt;em&gt;offsetCurve&lt;/em&gt; includes the function of clipping away loops while creating the new offset curve object. My idea was to create an offsetCurve with the minimal changes, at a zero distance, so the curves would be right on top of each other. Then I could just compare the area/length/etc attributes of the curves to see if there was a change. This was really fast and really accurate, down to the smallest loops. Right now I&amp;#8217;m comparing the area and length values rounded to a certain tolerance. This method was amazingly fast, and a fraction of the code.&lt;/p&gt;
-
-&lt;p&gt;The only minor downside was I found that because of the rounding I needed to do to compare the values, every so often a couple curves would be found as self-intersecting when they were not. Thats much better than MISSING curves during the detection. So what I did was combine the earlier face-counting solution with this one, to fail over between the two. The combination was really fast and accurate, without 100,000 warnings showing up in the stupid script editor.&lt;/p&gt;
-
-&lt;h4 id=&#34;all-in-all&#34;&gt;All in all&lt;/h4&gt;
-
-&lt;p&gt;&lt;span style=&#34;font-weight: normal;&#34;&gt;I&amp;#8217;m really surprised how many versions of this tool I had to write, to ultimately end up at a really simple one. I never would have thought to look at this &lt;em&gt;offsetCurve&lt;/em&gt; command for a solution. Had to dig into some math I never thought I would use, also. So THATS what those stupid polynomial equations were for?&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span style=&#34;font-weight: normal;&#34;&gt;&lt;br /&gt; &lt;/span&gt;&lt;/p&gt;
-</description>
     </item>
     
     

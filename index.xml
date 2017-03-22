@@ -11,6 +11,162 @@
     
     
     <item>
+      <title>Python Video Tutorials Released Free</title>
+      <link>http://justinfx.com/2017/03/22/python-tutorials-released-free/</link>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
+      <guid>http://justinfx.com/2017/03/22/python-tutorials-released-free/</guid>
+      <description>
+
+&lt;p&gt;In 2011 and 2012 I had released 3 commercial Python training tutorials, using Maya as a target platform.
+Now enjoy them free of charge!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#python-for-maya-artists-volume-1&#34;&gt;Python For Maya Artists - Volume 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#python-for-maya-artists-volume-2&#34;&gt;Python For Maya Artists - Volume 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pyqt4-ui-development-for-maya&#34;&gt;PyQt4 UI Development for Maya&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;python-for-maya-artists-volume-1&#34;&gt;Python For Maya Artists - Volume 1&lt;/h2&gt;
+
+&lt;div class=&#34;embed video-player&#34;&gt;
+	&lt;iframe class=&#34;youtube-player&#34; 
+			type=&#34;text/html&#34; 
+			width=&#34;640&#34; height=&#34;385&#34; 
+			src=&#34;http://www.youtube.com/embed/PDKxDbt6EGQ&#34; 
+			allowfullscreen 
+			frameborder=&#34;0&#34;&gt;
+	&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/tutorials/tree/master/Python_For_Maya_Vol_01&#34;&gt;Project material available here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Amazing at Animation? Master of Modeling? Conquistador of Character Rigging?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;But how is your Python?&lt;/p&gt;
+
+&lt;p&gt;This course brings the talented artist into the fold of the technical-side of Maya. Learn the basics of Python, and its place in your 3D workflow, with visual examples and real world problems. Get a kick-start on adding some automation into your life, and solving common problems in a fraction of the time. By the end of this video, you should have a deeper understanding of one of the languages Maya speaks under the hood, and how to start viewing your scenes in terms of glorious Python code!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;python-for-maya-artists-volume-2&#34;&gt;Python For Maya Artists - Volume 2&lt;/h2&gt;
+
+&lt;div class=&#34;embed video-player&#34;&gt;
+	&lt;iframe class=&#34;youtube-player&#34; 
+			type=&#34;text/html&#34; 
+			width=&#34;640&#34; height=&#34;385&#34; 
+			src=&#34;http://www.youtube.com/embed/_tqumyujaU4&#34; 
+			allowfullscreen 
+			frameborder=&#34;0&#34;&gt;
+	&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/tutorials/tree/master/Python_For_Maya_Vol_02&#34;&gt;Project material available here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;If you watched the first video, you now have a good grasp on Python. Sweet. Let&amp;rsquo;s plow through some more involved concepts like python juggernauts!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;With a working knowledge of the python scripting language, and the Maya Python commands API, we can continue to learn new ways to solve more challenging problems, create complete scripts, and build user interfaces around our tools. We also introduce the Maya Python API; a lower-level interface into Maya.&lt;/p&gt;
+
+&lt;p&gt;This video focuses more on breaking down full scripts, as opposed to typing out syntax. Its jam packaged with information and moves fast to deliver you as much brain food as possible. The first segment of the video transitions from beginning to intermediate level, with the majority of the video being intermediate, and finishing out by touching on advanced concepts. The included project files are abundant, complete, and full of helpful documentation so that you can take your time and learn about each piece of the tools.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;pyqt4-ui-development-for-maya&#34;&gt;PyQt4 UI Development for Maya&lt;/h2&gt;
+
+&lt;div class=&#34;embed video-player&#34;&gt;
+	&lt;iframe class=&#34;youtube-player&#34; 
+			type=&#34;text/html&#34; 
+			width=&#34;640&#34; height=&#34;385&#34; 
+			src=&#34;http://www.youtube.com/embed/X7cO4MzhjKw&#34; 
+			allowfullscreen 
+			frameborder=&#34;0&#34;&gt;
+	&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/tutorials/tree/master/PyQt4_UI_Development_for_Maya&#34;&gt;Project material available here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;This tutorial is about learning PyQt4 python bindings for the Qt Framework, and how to introduce new UI elements to Maya as a platform.&lt;/p&gt;
+
+&lt;p&gt;We discuss what comprises a &amp;#8220;Framework&amp;#8221; and a &amp;#8220;GUI Framework&amp;#8221;, and how Qt and PyQt4 work together.&lt;/p&gt;
+
+&lt;h3 id=&#34;getting-started-with-pyqt4&#34;&gt;&lt;strong&gt;Getting Started With PyQt4&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;There are multiple ways of getting a working installation of PyQt4, both for the general system and for Maya. We look into these approaches to get your system up and running to begin working with PyQt4!&lt;/p&gt;
+
+&lt;p&gt;We also talk about what is included, such as command line tools and applications, tips on how to test and learn the code, and how to structure a project.&lt;/p&gt;
+
+&lt;h3 id=&#34;pyqt4-fundamentals&#34;&gt;&lt;strong&gt;PyQt4 Fundamentals&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Lets get crackin&amp;rsquo; and learn the basics!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What is a QObject? What is a QWidget? Common PyQt4 classes are explained in detail&lt;/li&gt;
+&lt;li&gt;Working with the Qt Designer application, to build a UI visually&lt;/li&gt;
+&lt;li&gt;Layouts: Making widgets resize elegantly and stay organized in your design&lt;/li&gt;
+&lt;li&gt;Coordinate space: How do widgets transform in your 2D screen space?&lt;/li&gt;
+&lt;li&gt;QApplication and the Qt Event Loop: The engine that runs your UI&lt;/li&gt;
+&lt;li&gt;Events, Signals, and Slots: How components communicate changes and how the application can respond to changes to make it dynamic&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;general-examples&#34;&gt;&lt;strong&gt;General Examples&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;With an understanding of the framework components, we can begin working with fully functional stand-alone examples.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Common PyQt4 app template&lt;/li&gt;
+&lt;li&gt;Subclassing Widgets: Creating custom functionality to the existing classes provided by PyQt4&lt;/li&gt;
+&lt;li&gt;Dialogs: Raising dialog windows above existing windows, Modal vs Non-modal, and creating forms. We look at different ways to validate the data provided by the user, to these dialog forms.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;pyqt4-and-maya-introduction&#34;&gt;&lt;strong&gt;PyQt4 And Maya Introduction&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Finally, some Maya action! Maya has a slightly different approach to using PyQt4…&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;How does the QApplication and event loop work?&lt;/li&gt;
+&lt;li&gt;Common Maya PyQt4 app template&lt;/li&gt;
+&lt;li&gt;Looking at the Maya API&amp;rsquo;s MQtUtil class&lt;/li&gt;
+&lt;li&gt;The sip module: Helping us translate between Maya&amp;rsquo;s Qt and our own PyQt4 code&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;replicating-maya-s-ui-components&#34;&gt;&lt;strong&gt;Replicating Maya&amp;rsquo;s UI Components&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;What better way to see examples of creating UI for Maya than to replicate some existing functionality? This gives us the opportunity expand with custom functionality&lt;/p&gt;
+
+&lt;p&gt;In this chapter we will take two different UI components in Maya, and do a basic custom version of our own, and show to how link them up to Maya&amp;rsquo;s own callbacks.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Some Features Of This Chapter Include&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The QTableWidget&lt;/li&gt;
+&lt;li&gt;Model / View separation with QTreeView&lt;/li&gt;
+&lt;li&gt;Docking windows into the Maya interface&lt;/li&gt;
+&lt;li&gt;Mixing together PyQt4, the Maya API, Maya commands, and callbacks&lt;/li&gt;
+&lt;li&gt;Sorting model data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;customizations&#34;&gt;&lt;strong&gt;Customizations&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;A button can be a button, and a slider might look alright in its stock form, but sometimes we want to customize the look of our widgets. This chapter introduces multiple ways of achieving custom looks to our components&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Stylin&amp;rsquo; Style-sheets: Use CSS-like syntax for applying style sheets to widgets&lt;/li&gt;
+&lt;li&gt;Painting By &amp;hellip; Paint events: For even more control, we can tell a widget exactly how to draw itself on the screen. We will look at two different examples of how to use custom painting.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
       <title>C&#43;&#43; Bindings For A Go Library</title>
       <link>http://justinfx.com/2016/05/14/cpp-bindings-for-go/</link>
       <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
@@ -1735,36 +1891,6 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
 &lt;li&gt;Win 7 64bit Maya 2013: &lt;a href=&#34;https://www.box.com/s/1db3b0c903059ac89fc4&#34;&gt;https://www.box.com/s/1db3b0c903059ac89fc4&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Linux:  &lt;a href=&#34;http://www.kurianos.com/wordpress/?p=551&#34;&gt;http://www.kurianos.com/wordpress/?p=551&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    
-    
-    <item>
-      <title>Intro to Python for Maya Artists – Tutorial</title>
-      <link>http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
-      
-      <guid>http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;&lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;http://justinfx.com/wp-content/uploads/2011/10/1318089294_Python_Background_master.jpg&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Just released my first online video tutorial, through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;python-introduction-vol-01-8211-maya-http-cmivfx-com-store-320-python-introduction-vol-01-maya&#34;&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;Python Introduction Vol 01 &amp;#8211; Maya&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;Amazing at Animation? Master of Modeling? Conquistador of Character Rigging?&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;But how is your Python?&lt;/p&gt;
-
-&lt;p&gt;This course brings the talented artist into the fold of the technical-side of Maya. Learn the basics of Python, and its place in your 3D workflow, with visual examples and real world problems. Get a kick-start on adding some automation into your life, and solving common problems in a fraction of the time. By the end of this video, you should have a deeper understanding of one of the languages Maya speaks under the hood, and how to start viewing your scenes in terms of glorious Python code!&lt;/p&gt;
-
-&lt;p&gt;Check it out: &lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;If you check out this course, please leave me some feedback! I would love to hear your thoughts.&lt;/p&gt;
-
-&lt;p&gt;Stay tuned for more installments to come!&lt;/p&gt;
 </description>
     </item>
     

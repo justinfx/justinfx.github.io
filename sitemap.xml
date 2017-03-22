@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://justinfx.com/2017/03/22/python-tutorials-released-free/</loc>
+    <lastmod>2017-03-22T22:39:43+13:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://justinfx.com/2016/05/14/cpp-bindings-for-go/</loc>
     <lastmod>2016-05-14T15:53:48+12:00</lastmod>
   </url>
@@ -213,7 +218,7 @@
   
   <url>
     <loc>http://justinfx.com/blog/</loc>
-    <lastmod>2016-05-14T15:53:48+12:00</lastmod>
+    <lastmod>2017-03-22T22:39:43+13:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -254,7 +259,7 @@
   
   <url>
     <loc>http://justinfx.com/categories/code/</loc>
-    <lastmod>2016-05-14T15:53:48+12:00</lastmod>
+    <lastmod>2017-03-22T22:39:43+13:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -320,7 +325,7 @@
   
   <url>
     <loc>http://justinfx.com/</loc>
-    <lastmod>2016-05-14T15:53:48+12:00</lastmod>
+    <lastmod>2017-03-22T22:39:43+13:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -344,7 +349,7 @@
   
   <url>
     <loc>http://justinfx.com/tags/maya/</loc>
-    <lastmod>2012-10-12T00:00:00+00:00</lastmod>
+    <lastmod>2017-03-22T22:39:43+13:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -410,13 +415,13 @@
   
   <url>
     <loc>http://justinfx.com/tags/pyqt4/</loc>
-    <lastmod>2012-10-12T00:00:00+00:00</lastmod>
+    <lastmod>2017-03-22T22:39:43+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://justinfx.com/tags/python/</loc>
-    <lastmod>2012-10-12T00:00:00+00:00</lastmod>
+    <lastmod>2017-03-22T22:39:43+13:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -480,6 +485,12 @@
   </url>
   
   <url>
+    <loc>http://justinfx.com/tags/training/</loc>
+    <lastmod>2017-03-22T22:39:43+13:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://justinfx.com/tags/troubleshooting/</loc>
     <lastmod>2011-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -487,7 +498,7 @@
   
   <url>
     <loc>http://justinfx.com/tags/tutorial/</loc>
-    <lastmod>2012-10-12T00:00:00+00:00</lastmod>
+    <lastmod>2017-03-22T22:39:43+13:00</lastmod>
     <priority>0</priority>
   </url>
   
