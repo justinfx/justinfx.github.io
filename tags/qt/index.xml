@@ -202,7 +202,7 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;In your setup.py file, which is used for py2app, py2exe, or similar&amp;#8230; add this to the DATA_FILES list, so that it looks as such:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;    DATA_FILES &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; [(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;phonon_backend&amp;#39;&lt;/span&gt;, [
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;    DATA_FILES &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; [(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;phonon_backend&amp;#39;&lt;/span&gt;, [
       &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;/Developer/Applications/Qt/plugins/phonon_backend/libphonon_qt7.dylib&amp;#39;&lt;/span&gt;
     ])]
     
@@ -276,7 +276,7 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 
 &lt;p&gt;I noticed I was doing this a few times, in more than one of my classes, and finally got annoyed for the last time. I figured there had to be a simple way of just overloading the method on the normal object when I create an instance. Fortunately python considers everything objects and pretty much anything can be changed. So I did this:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
 myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mousePressEvent &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;lambda&lt;/span&gt; event: event&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;ignore()
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -285,14 +285,14 @@ myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mousePressEvent 
 
 &lt;p&gt;I have also had to make clickable widgets, such as QLabel:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
 myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mousePressEvent &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;lambda&lt;/span&gt; event: myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;emit(SIGNAL(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;clicked&amp;quot;&lt;/span&gt;))
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Or if you had to do more than just a single statement:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;myLabel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QLabel()
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;clickedEvent&lt;/span&gt;(event):
 myLabel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;emit(SIGNAL(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;clicked&amp;quot;&lt;/span&gt;))
 &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# do other stuff&lt;/span&gt;

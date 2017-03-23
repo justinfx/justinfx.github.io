@@ -41,7 +41,7 @@
 
 &lt;p&gt;&lt;em&gt;ref: &lt;a href=&#34;https://github.com/justinfx/openimageigo/blob/master/cpp/oiio.h&#34;&gt;github.com/justinfx/openimageigo/cpp/oiio.h&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// oiio.h&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// oiio.h&lt;/span&gt;
 &lt;span style=&#34;color: #007020&#34;&gt;#ifdef __cplusplus&lt;/span&gt;
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;extern&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;C&amp;quot;&lt;/span&gt; {
 &lt;span style=&#34;color: #007020&#34;&gt;#endif&lt;/span&gt;
@@ -79,7 +79,7 @@ ImageInput&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt; &lt;span sty
 
 &lt;p&gt;I had been asked more than once by colleagues if a C++ version of fileseq was available. It wasn&amp;rsquo;t, and I also didn&amp;rsquo;t want to have to maintain a 3rd standalone port that should follow the same behavior as the other two. But since the introduction of the &lt;a href=&#34;https://golang.org/doc/go1.5#link&#34;&gt;Go &lt;code&gt;-buildmode&lt;/code&gt;&lt;/a&gt; flag in 1.5, it has become possible to export functions from Go to C/C++&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// sum.go&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// sum.go&lt;/span&gt;
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;package&lt;/span&gt; main
 
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;C&amp;quot;&lt;/span&gt;
@@ -102,9 +102,9 @@ sum.c  sum.go sum.h  sum.so
 
 &lt;p&gt;Now we have a shared library and a header file, to use in our C app&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// sum.c&lt;/span&gt;
-&lt;span style=&#34;color: #007020&#34;&gt;#include &amp;lt;stdio.h&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color: #007020&#34;&gt;#include &amp;quot;sum.h&amp;quot;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// sum.c&lt;/span&gt;
+&lt;span style=&#34;color: #007020&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color: #007020&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;&amp;quot;sum.h&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;&lt;/span&gt;
 
 &lt;span style=&#34;color: #902000&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;main&lt;/span&gt;(&lt;span style=&#34;color: #902000&#34;&gt;void&lt;/span&gt;) {
 
@@ -135,7 +135,7 @@ sum.c  sum.go sum.h  sum.so
 
 &lt;p&gt;The full implementation is located here: &lt;a href=&#34;https://github.com/justinfx/gofileseq/tree/master/cpp&#34;&gt;github.com/justinfx/gofileseq/cpp&lt;/a&gt;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;type&lt;/span&gt; FileSeqId &lt;span style=&#34;color: #902000&#34;&gt;uint64&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;type&lt;/span&gt; FileSeqId &lt;span style=&#34;color: #902000&#34;&gt;uint64&lt;/span&gt;
 
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;type&lt;/span&gt; fileSeqRef &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;struct&lt;/span&gt; {
 	&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;fileseq.FileSequence
@@ -165,7 +165,7 @@ sum.c  sum.go sum.h  sum.so
 
 &lt;p&gt;Now when C++ wants to create a &lt;code&gt;FileSequence&lt;/code&gt;, they can call a &lt;code&gt;New&lt;/code&gt; function which will create an instance, add it to the map, and return a uint64 id handle&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;//export FileSequence_New&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;//export FileSequence_New&lt;/span&gt;
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;func&lt;/span&gt; FileSequence_New(frange &lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;C.char) (FileSeqId, Error) {
 	fs, e &lt;span style=&#34;color: #666666&#34;&gt;:=&lt;/span&gt; fileseq.NewFileSequence(C.GoString(frange))
 	&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;if&lt;/span&gt; e &lt;span style=&#34;color: #666666&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;nil&lt;/span&gt; {
@@ -193,7 +193,7 @@ sum.c  sum.go sum.h  sum.so
 
 &lt;p&gt;&lt;em&gt;ref: &lt;a href=&#34;https://github.com/justinfx/gofileseq/blob/master/cpp/private/fileseq_p.h#L16&#34;&gt;github.com/justinfx/gofileseq/cpp/private/fileseq_p.h&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;StringProxy&lt;/span&gt; {
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;StringProxy&lt;/span&gt; {
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;:&lt;/span&gt;
     StringProxy(&lt;span style=&#34;color: #902000&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt; managed) &lt;span style=&#34;color: #666666&#34;&gt;:&lt;/span&gt; m_data(managed), m_str() {
         &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;if&lt;/span&gt; (managed &lt;span style=&#34;color: #666666&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #007020&#34;&gt;NULL&lt;/span&gt;) {
@@ -214,7 +214,7 @@ sum.c  sum.go sum.h  sum.so
 
 &lt;p&gt;This all ended up working fine! I created some benchmarks to compare fileseq between Python, C++, and Go. The test involved looping 100k times, creating a FileSequence, and calling 4 methods on it.&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color: #902000&#34;&gt;int&lt;/span&gt; n &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #40a070&#34;&gt;100000&lt;/span&gt;;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color: #902000&#34;&gt;int&lt;/span&gt; n &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #40a070&#34;&gt;100000&lt;/span&gt;;
 
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color: #902000&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color: #666666&#34;&gt;&amp;lt;&lt;/span&gt; n; &lt;span style=&#34;color: #666666&#34;&gt;++&lt;/span&gt;i) {
     fileseq&lt;span style=&#34;color: #666666&#34;&gt;::&lt;/span&gt;FileSequence fs(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;/path/to/file_name.1-100x2#.ext&amp;quot;&lt;/span&gt;);
@@ -237,7 +237,7 @@ sum.c  sum.go sum.h  sum.so
 
 &lt;p&gt;i.e., something like this:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #002070; font-weight: bold&#34;&gt;fs&lt;/span&gt; :&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;FileSequence)unsafe.Pointer(
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #002070; font-weight: bold&#34;&gt;fs&lt;/span&gt; :&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;FileSequence)unsafe.Pointer(
 		C.malloc(unsafe.Sizeof(FileSequence{}))) 
 &lt;/pre&gt;&lt;/div&gt;
 

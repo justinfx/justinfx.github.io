@@ -34,7 +34,7 @@
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;In your setup.py file, which is used for py2app, py2exe, or similar&amp;#8230; add this to the DATA_FILES list, so that it looks as such:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;    DATA_FILES &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; [(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;phonon_backend&amp;#39;&lt;/span&gt;, [
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;    DATA_FILES &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; [(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;phonon_backend&amp;#39;&lt;/span&gt;, [
       &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;/Developer/Applications/Qt/plugins/phonon_backend/libphonon_qt7.dylib&amp;#39;&lt;/span&gt;
     ])]
     

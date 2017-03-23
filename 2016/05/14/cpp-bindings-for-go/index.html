@@ -108,6 +108,9 @@ ga('send', 'pageview');
     <div class="post">
     <h1 class="post-title">C&#43;&#43; Bindings For A Go Library</h1>
     <span class="post-date">May 14, 2016</span>
+
+    
+
     
     
 
@@ -134,7 +137,7 @@ ga('send', 'pageview');
 
 <p><em>ref: <a href="https://github.com/justinfx/openimageigo/blob/master/cpp/oiio.h">github.com/justinfx/openimageigo/cpp/oiio.h</a></em></p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #60a0b0; font-style: italic">// oiio.h</span>
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span><span style="color: #60a0b0; font-style: italic">// oiio.h</span>
 <span style="color: #007020">#ifdef __cplusplus</span>
 <span style="color: #007020; font-weight: bold">extern</span> <span style="color: #4070a0">&quot;C&quot;</span> {
 <span style="color: #007020">#endif</span>
@@ -172,7 +175,7 @@ ImageInput<span style="color: #666666">*</span> <span style="color: #06287e">Ima
 
 <p>I had been asked more than once by colleagues if a C++ version of fileseq was available. It wasn&rsquo;t, and I also didn&rsquo;t want to have to maintain a 3rd standalone port that should follow the same behavior as the other two. But since the introduction of the <a href="https://golang.org/doc/go1.5#link">Go <code>-buildmode</code></a> flag in 1.5, it has become possible to export functions from Go to C/C++</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #60a0b0; font-style: italic">// sum.go</span>
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span><span style="color: #60a0b0; font-style: italic">// sum.go</span>
 <span style="color: #007020; font-weight: bold">package</span> main
 
 <span style="color: #007020; font-weight: bold">import</span> <span style="color: #4070a0">&quot;C&quot;</span>
@@ -195,9 +198,9 @@ sum.c  sum.go sum.h  sum.so
 
 <p>Now we have a shared library and a header file, to use in our C app</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #60a0b0; font-style: italic">// sum.c</span>
-<span style="color: #007020">#include &lt;stdio.h&gt;</span>
-<span style="color: #007020">#include &quot;sum.h&quot;</span>
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span><span style="color: #60a0b0; font-style: italic">// sum.c</span>
+<span style="color: #007020">#include</span> <span style="color: #60a0b0; font-style: italic">&lt;stdio.h&gt;</span><span style="color: #007020"></span>
+<span style="color: #007020">#include</span> <span style="color: #60a0b0; font-style: italic">&quot;sum.h&quot;</span><span style="color: #007020"></span>
 
 <span style="color: #902000">int</span> <span style="color: #06287e">main</span>(<span style="color: #902000">void</span>) {
 
@@ -228,7 +231,7 @@ sum.c  sum.go sum.h  sum.so
 
 <p>The full implementation is located here: <a href="https://github.com/justinfx/gofileseq/tree/master/cpp">github.com/justinfx/gofileseq/cpp</a></p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020; font-weight: bold">type</span> FileSeqId <span style="color: #902000">uint64</span>
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span><span style="color: #007020; font-weight: bold">type</span> FileSeqId <span style="color: #902000">uint64</span>
 
 <span style="color: #007020; font-weight: bold">type</span> fileSeqRef <span style="color: #007020; font-weight: bold">struct</span> {
 	<span style="color: #666666">*</span>fileseq.FileSequence
@@ -258,7 +261,7 @@ sum.c  sum.go sum.h  sum.so
 
 <p>Now when C++ wants to create a <code>FileSequence</code>, they can call a <code>New</code> function which will create an instance, add it to the map, and return a uint64 id handle</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #60a0b0; font-style: italic">//export FileSequence_New</span>
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span><span style="color: #60a0b0; font-style: italic">//export FileSequence_New</span>
 <span style="color: #007020; font-weight: bold">func</span> FileSequence_New(frange <span style="color: #666666">*</span>C.char) (FileSeqId, Error) {
 	fs, e <span style="color: #666666">:=</span> fileseq.NewFileSequence(C.GoString(frange))
 	<span style="color: #007020; font-weight: bold">if</span> e <span style="color: #666666">!=</span> <span style="color: #007020; font-weight: bold">nil</span> {
@@ -286,7 +289,7 @@ sum.c  sum.go sum.h  sum.so
 
 <p><em>ref: <a href="https://github.com/justinfx/gofileseq/blob/master/cpp/private/fileseq_p.h#L16">github.com/justinfx/gofileseq/cpp/private/fileseq_p.h</a></em></p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020; font-weight: bold">class</span> <span style="color: #0e84b5; font-weight: bold">StringProxy</span> {
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span><span style="color: #007020; font-weight: bold">class</span> <span style="color: #0e84b5; font-weight: bold">StringProxy</span> {
 <span style="color: #007020; font-weight: bold">public</span><span style="color: #666666">:</span>
     StringProxy(<span style="color: #902000">char</span><span style="color: #666666">*</span> managed) <span style="color: #666666">:</span> m_data(managed), m_str() {
         <span style="color: #007020; font-weight: bold">if</span> (managed <span style="color: #666666">!=</span> <span style="color: #007020">NULL</span>) {
@@ -307,7 +310,7 @@ sum.c  sum.go sum.h  sum.so
 
 <p>This all ended up working fine! I created some benchmarks to compare fileseq between Python, C++, and Go. The test involved looping 100k times, creating a FileSequence, and calling 4 methods on it.</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020; font-weight: bold">const</span> <span style="color: #902000">int</span> n <span style="color: #666666">=</span> <span style="color: #40a070">100000</span>;
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span><span style="color: #007020; font-weight: bold">const</span> <span style="color: #902000">int</span> n <span style="color: #666666">=</span> <span style="color: #40a070">100000</span>;
 
 <span style="color: #007020; font-weight: bold">for</span> (<span style="color: #902000">int</span> i<span style="color: #666666">=</span><span style="color: #40a070">0</span>; i <span style="color: #666666">&lt;</span> n; <span style="color: #666666">++</span>i) {
     fileseq<span style="color: #666666">::</span>FileSequence fs(<span style="color: #4070a0">&quot;/path/to/file_name.1-100x2#.ext&quot;</span>);
@@ -330,7 +333,7 @@ sum.c  sum.go sum.h  sum.so
 
 <p>i.e., something like this:</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #002070; font-weight: bold">fs</span> :<span style="color: #666666">=</span> (<span style="color: #666666">*</span>FileSequence)unsafe.Pointer(
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span><span style="color: #002070; font-weight: bold">fs</span> :<span style="color: #666666">=</span> (<span style="color: #666666">*</span>FileSequence)unsafe.Pointer(
 		C.malloc(unsafe.Sizeof(FileSequence{}))) 
 </pre></div>
 

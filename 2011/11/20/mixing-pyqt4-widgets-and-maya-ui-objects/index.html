@@ -108,6 +108,9 @@ ga('send', 'pageview');
     <div class="post">
     <h1 class="post-title">Mixing PyQt4 widgets and Maya UI objects</h1>
     <span class="post-date">Nov 21, 2011</span>
+
+    
+
     
     <p>A question came up in the <a href="http://groups.google.com/group/python_inside_maya">Maya-Python mailing list</a> that I thought was a really good topic, and should be reposted.</p>
 
@@ -123,7 +126,7 @@ ga('send', 'pageview');
 
 <p>Here is my example of how to achieve this&#8230;</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">PyQt4</span> <span style="color: #007020; font-weight: bold">import</span> QtCore, QtGui
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span><span style="color: #007020; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">PyQt4</span> <span style="color: #007020; font-weight: bold">import</span> QtCore, QtGui
 
 <span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">maya.cmds</span> <span style="color: #007020; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">cmds</span>
 <span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">maya.OpenMayaUI</span> <span style="color: #007020; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">mui</span>
@@ -134,7 +137,7 @@ ga('send', 'pageview');
 <span style="color: #007020; font-weight: bold">class</span> <span style="color: #0e84b5; font-weight: bold">MyDialog</span>(QtGui<span style="color: #666666">.</span>QDialog):
 
     <span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">__init__</span>(<span style="color: #007020">self</span>, parent, <span style="color: #666666">**</span>kwargs):
-        <span style="color: #007020">super</span>(MyDialog, <span style="color: #007020">self</span>)<span style="color: #666666">.</span>__init__(parent, <span style="color: #666666">**</span>kwargs)
+        <span style="color: #007020">super</span>(MyDialog, <span style="color: #007020">self</span>)<span style="color: #666666">.</span><span style="color: #06287e">__init__</span>(parent, <span style="color: #666666">**</span>kwargs)
         
         <span style="color: #007020">self</span><span style="color: #666666">.</span>setObjectName(<span style="color: #4070a0">&quot;MyWindow&quot;</span>)
         <span style="color: #007020">self</span><span style="color: #666666">.</span>resize(<span style="color: #40a070">800</span>, <span style="color: #40a070">600</span>)
