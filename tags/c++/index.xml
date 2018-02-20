@@ -258,7 +258,7 @@ C.malloc(unsafe.Sizeof(FileSequence{})))
       <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
       
       <guid>http://justinfx.com/2016/04/17/sublimetext-editor-and-clang/</guid>
-      <description>
+      <description>&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;My code editor of choice has been &lt;a href=&#34;https://www.sublimetext.com&#34;&gt;SublimeText&lt;/a&gt; for a while now. It is blazing fast for searching and doing matching, replacements, and refactoring. I also love that it is very lightweight, so that I can use it as my default shell &lt;code&gt;$EDITOR&lt;/code&gt;, and also have an alias &lt;code&gt;st&lt;/code&gt; which can easily open files and folders in the current or new Sublime window:&lt;/p&gt;
 
@@ -403,8 +403,7 @@ It helps to store your uncrustify.cfg within your project repo. Also, there is a
 
 &lt;p&gt;I don&amp;rsquo;t do much debugging from within my editor (I am primarily an Editor+Terminal kind of developer), so I didn&amp;rsquo;t go as far as to investigate Sublime options for debugging. But with a pretty minimal amount of configuration, I have a pretty lightweight and capable editor for working on C++ projects. And it is the same editor I use for working on Python and Go projects.&lt;/p&gt;
 
-&lt;p&gt;Got any other recommendations for making SublimeText an even more capable solution for C++ projects? Let me know!&lt;/p&gt;
-</description>
+&lt;p&gt;Got any other recommendations for making SublimeText an even more capable solution for C++ projects? Let me know!&lt;/p&gt;</description>
     </item>
     
     
