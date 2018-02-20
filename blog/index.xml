@@ -12,10 +12,10 @@
     
     <item>
       <title>seqls &amp; seqinfo (gofileseq) binary releases</title>
-      <link>http://justinfx.com/gofileseq-binary-release</link>
+      <link>http://justinfx.com/2018/02/20/gofileseq-binary/</link>
       <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
       
-      <guid>http://justinfx.com/gofileseq-binary-release</guid>
+      <guid>http://justinfx.com/2018/02/20/gofileseq-binary/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png&#34; style=&#34;width:100px; float:left;&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/gofileseq&#34; title=&#34;gofileseq&#34;&gt;gofileseq&lt;/a&gt; is a Go language library for parsing file sequence strings commonly used in VFX and animation applications.&lt;/p&gt;
