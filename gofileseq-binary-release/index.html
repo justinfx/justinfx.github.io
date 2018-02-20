@@ -9,7 +9,7 @@
 
   
 
-  <title> AtomSplitter source code released  &middot; JustinFX.com </title>
+  <title> seqls &amp; seqinfo (gofileseq) binary releases  &middot; JustinFX.com </title>
 
   
   <link rel="stylesheet" href="http://justinfx.com/css/poole.css">
@@ -110,27 +110,86 @@ ga('send', 'pageview');
 
   <div class="content container">
     <div class="post">
-    <h1 class="post-title">AtomSplitter source code released</h1>
-    <span class="post-date">Oct 8, 2010</span>
+    <h1 class="post-title">seqls &amp; seqinfo (gofileseq) binary releases</h1>
+    <span class="post-date">Feb 20, 2018</span>
 
     
-    <p>We finally decided to release the source code for AtomSplitter, since we were getting some feedback that the application builds weren&#8217;t 100% working on every possible system.</p>
+    <p><img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" style="width:100px; float:left;"></p>
 
-<p></p>
+<p><a href="https://github.com/justinfx/gofileseq" title="gofileseq">gofileseq</a> is a Go language library for parsing file sequence strings commonly used in VFX and animation applications.</p>
 
-<h3 id="update-1">Update #1:</h3>
+<p><p style="clear:both"></p>
 
-<p>I have posted the AtomSplitter project on github now: <a href="https://github.com/justinfx/AtomSplitter">https://github.com/justinfx/AtomSplitter</a></p>
+<p>Sequences of files follow a pattern similar to:</p>
 
-<p>Project site:</p>
+<pre><code>/path/to/some/file_foo.0100.exr
+/path/to/some/file_foo.1-100#.jpg
+/path/to/some/file_foo.1-100@@@.tif
+</code></pre>
 
-<p><a href="https://github.com/justinfx/AtomSplitter">http://redmine.justinfx.com/projects/atomsplitter</a></p>
+<p>Support range formats:</p>
 
-<p>The current version is 1.6.2,  which adds the cmivfx chatroom to a tab, and some minor bug fixes. More info:</p>
+<pre><code>       Standard: 1-10
+    Comma Delim: 1-10,10-20
+        Chunked: 1-100x5
+         Filled: 1-100y5
+      Staggered: 1-100:3 (1-100x3, 1-100x2, 1-100)
+Negative frames: -10-100
+        Padding: #=4 padded, @=single pad
+</code></pre>
 
-<p><a href="http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.6">http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.6</a></p>
+<p>Included with the library are two command line utilities:</p>
 
-<p>&nbsp;</p>
+<p><a href="https://github.com/justinfx/gofileseq/tree/master/cmd/seqls">seqls</a> - An ls style tool for searching and listing file sequences</p>
+
+<pre><code>$ seqls -r 
+
+file_foo.0100.exr
+subdir/file_foo.1-100#.jpg
+subdir2/file_foo.1-100@@@.tif
+</code></pre>
+
+<p><a href="https://github.com/justinfx/gofileseq/tree/master/cmd/seqinfo">seqinfo</a> - Parses one or more sequence pattern strings and list plain text or json info</p>
+
+<pre><code>$ seqinfo --json &quot;/path/to/file.exr&quot; &quot;/path/to/seq.-10-200x2@@.exr&quot;
+{
+    &quot;/path/to/file.exr&quot;: {
+        &quot;error&quot;: &quot;&quot;,
+        &quot;string&quot;: &quot;/path/to/file.exr&quot;,
+        &quot;dir&quot;: &quot;/path/to/&quot;,
+        &quot;base&quot;: &quot;file&quot;,
+        &quot;range&quot;: &quot;&quot;,
+        &quot;pad&quot;: &quot;&quot;,
+        &quot;ext&quot;: &quot;.exr&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 0,
+        &quot;length&quot;: 1,
+        &quot;zfill&quot;: 0,
+        &quot;hasRange&quot;: false
+    },
+    &quot;/path/to/seq.-10-200x2@@.exr&quot;: {
+        &quot;error&quot;: &quot;&quot;,
+        &quot;string&quot;: &quot;/path/to/seq.-10-200x2@@.exr&quot;,
+        &quot;dir&quot;: &quot;/path/to/&quot;,
+        &quot;base&quot;: &quot;seq.&quot;,
+        &quot;range&quot;: &quot;-10-200x2&quot;,
+        &quot;pad&quot;: &quot;@@&quot;,
+        &quot;ext&quot;: &quot;.exr&quot;,
+        &quot;start&quot;: -10,
+        &quot;end&quot;: 200,
+        &quot;length&quot;: 106,
+        &quot;zfill&quot;: 2,
+        &quot;hasRange&quot;: true
+    }
+}
+</code></pre>
+
+<p>As of recent, the gofileseq project has adopted the use of the <a href="https://goreleaser.com/">goreleaser</a> tool, which means that <a href="https://github.com/justinfx/gofileseq/releases">tagged releases</a> now automatically include cross-compiled binaries of the tools for linux, osx, and windows.</p>
+
+<p><a href="https://github.com/justinfx/gofileseq/releases"><img src="https://badge.fury.io/gh/justinfx%2Fgofileseq.svg" alt="Latest Release" /></a></p>
+
+<p>There is also a <a href="https://github.com/justinfx/gofileseq/tree/master/cpp-port" title="C++ port">C++ port</a> of gofileseq within the repository, for those C++ devs that need to work with VFX-style file sequence patterns.  Doxygen API docs are now automatically built from the master branch: <a href="http://justinfx.com/gofileseq/cpp">justinfx.com/gofileseq/cpp</a></p>
+
     
 
      
@@ -145,10 +204,10 @@ ga('send', 'pageview');
         return;
 
     var disqus_shortname = 'justinfx';
-    var disqus_title = 'AtomSplitter source code released';
+    var disqus_title = 'seqls \x26 seqinfo (gofileseq) binary releases';
     
-    var disqus_identifier = 'http:\/\/justinfx.com\/2010\/10\/08\/atomsplitter-source-code-released\/';
-    var disqus_url = 'http:\/\/justinfx.com\/2010\/10\/08\/atomsplitter-source-code-released\/';
+    var disqus_identifier = 'http:\/\/justinfx.comgofileseq-binary-release';
+    var disqus_url = 'http:\/\/justinfx.comgofileseq-binary-release';
     
 
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

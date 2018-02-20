@@ -102,7 +102,7 @@ ga('send', 'pageview');
       <a class="social-icon" href="http://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
 
     <p class="footnote">powered by <a href="http://hugo.spf13.com">Hugo</a> <br/>
-    &copy; 2017 Justin Israel. All rights reserved.</p>
+    &copy; 2018 Justin Israel. All rights reserved.</p>
     
   </div>
 </div>
@@ -160,7 +160,7 @@ ga('send', 'pageview');
   -no-phonon -no-phonon-backend -no-qt3support <span style="color: #4070a0; font-weight: bold">\</span>
   -no-webkit -nomake docs -nomake examples -nomake demos <span style="color: #4070a0; font-weight: bold">\</span>
   -nomake translations -no-rpath -no-framework
-make -j <span style="color: #40a070">8</span>
+make -j 8
 sudo make install
 </pre></div>
 </p></li>
@@ -176,7 +176,7 @@ cd sip-4.10</pre></p></li>
 
 <li><p>Build and install: <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span>/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy <span style="color: #4070a0; font-weight: bold">\</span>
   configure.py --arch<span style="color: #666666">=</span>x86_64
-make -j <span style="color: #40a070">8</span>
+make -j 8
 sudo make install
 </pre></div>
 </p></li>
@@ -203,7 +203,7 @@ cd PyQt-mac-gpl-4.7.3</pre></p></li>
   <span style="color: #bb60d5">INCDIR_QT</span><span style="color: #666666">=</span>/usr/local/Trolltech/Qt‐4.5.3/include <span style="color: #4070a0; font-weight: bold">\</span>
   <span style="color: #bb60d5">MOC</span><span style="color: #666666">=</span>/usr/local/Trolltech/Qt‐4.5.3/bin/moc <span style="color: #4070a0; font-weight: bold">\</span>
   -w --no-designer-plugin
-make -j <span style="color: #40a070">8</span>
+make -j 8
 sudo make install
 </pre></div>
 </p></li>
@@ -229,7 +229,7 @@ sudo make install
 
 <span style="color: #007020; font-weight: bold">class</span> <span style="color: #0e84b5; font-weight: bold">Form</span>(QDialog):
     <span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">__init__</span>(<span style="color: #007020">self</span>, parent<span style="color: #666666">=</span><span style="color: #007020">None</span>):
-        <span style="color: #007020">super</span>(Form, <span style="color: #007020">self</span>)<span style="color: #666666">.</span><span style="color: #06287e">__init__</span>(parent)
+        <span style="color: #007020">super</span>(Form, <span style="color: #007020">self</span>)<span style="color: #666666">.</span>__init__(parent)
         <span style="color: #007020">self</span><span style="color: #666666">.</span>setWindowTitle(<span style="color: #4070a0">&#39;Test Dialog&#39;</span>)
         <span style="color: #007020">self</span><span style="color: #666666">.</span>setObjectName(<span style="color: #4070a0">&#39;mainUI&#39;</span>)
         <span style="color: #007020">self</span><span style="color: #666666">.</span>mainLayout <span style="color: #666666">=</span> QVBoxLayout(<span style="color: #007020">self</span>)

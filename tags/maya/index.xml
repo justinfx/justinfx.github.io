@@ -6,7 +6,7 @@
     <link>http://justinfx.com/tags/maya/index.xml</link>
     <language>en-us</language>
     
-    <copyright>2017 Justin Israel</copyright>
+    <copyright>2018 Justin Israel</copyright>
     <updated>2006-01-02 15:04:05 &#43;0000 MST</updated>
     
     
@@ -394,7 +394,7 @@ Now enjoy them free of charge!&lt;/p&gt;
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;MyDialog&lt;/span&gt;(QtGui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QDialog):
 
     &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;__init__&lt;/span&gt;(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;, parent, &lt;span style=&#34;color: #666666&#34;&gt;**&lt;/span&gt;kwargs):
-        &lt;span style=&#34;color: #007020&#34;&gt;super&lt;/span&gt;(MyDialog, &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06287e&#34;&gt;__init__&lt;/span&gt;(parent, &lt;span style=&#34;color: #666666&#34;&gt;**&lt;/span&gt;kwargs)
+        &lt;span style=&#34;color: #007020&#34;&gt;super&lt;/span&gt;(MyDialog, &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;__init__(parent, &lt;span style=&#34;color: #666666&#34;&gt;**&lt;/span&gt;kwargs)
         
         &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setObjectName(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;MyWindow&amp;quot;&lt;/span&gt;)
         &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;resize(&lt;span style=&#34;color: #40a070&#34;&gt;800&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;600&lt;/span&gt;)
@@ -629,7 +629,7 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
   -no-phonon -no-phonon-backend -no-qt3support &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
   -no-webkit -nomake docs -nomake examples -nomake demos &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
   -nomake translations -no-rpath -no-framework
-make -j &lt;span style=&#34;color: #40a070&#34;&gt;8&lt;/span&gt;
+make -j 8
 sudo make install
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;&lt;/li&gt;
@@ -645,7 +645,7 @@ cd sip-4.10&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Build and install: &lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
   configure.py --arch&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;x86_64
-make -j &lt;span style=&#34;color: #40a070&#34;&gt;8&lt;/span&gt;
+make -j 8
 sudo make install
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;&lt;/li&gt;
@@ -672,7 +672,7 @@ cd PyQt-mac-gpl-4.7.3&lt;/pre&gt;&lt;/p&gt;&lt;/li&gt;
   &lt;span style=&#34;color: #bb60d5&#34;&gt;INCDIR_QT&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt‐4.5.3/include &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
   &lt;span style=&#34;color: #bb60d5&#34;&gt;MOC&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Trolltech/Qt‐4.5.3/bin/moc &lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&lt;/span&gt;
   -w --no-designer-plugin
-make -j &lt;span style=&#34;color: #40a070&#34;&gt;8&lt;/span&gt;
+make -j 8
 sudo make install
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;&lt;/li&gt;
@@ -698,7 +698,7 @@ sudo make install
 
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;Form&lt;/span&gt;(QDialog):
     &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;__init__&lt;/span&gt;(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;, parent&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;None&lt;/span&gt;):
-        &lt;span style=&#34;color: #007020&#34;&gt;super&lt;/span&gt;(Form, &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06287e&#34;&gt;__init__&lt;/span&gt;(parent)
+        &lt;span style=&#34;color: #007020&#34;&gt;super&lt;/span&gt;(Form, &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;__init__(parent)
         &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setWindowTitle(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Test Dialog&amp;#39;&lt;/span&gt;)
         &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setObjectName(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;mainUI&amp;#39;&lt;/span&gt;)
         &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mainLayout &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QVBoxLayout(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)

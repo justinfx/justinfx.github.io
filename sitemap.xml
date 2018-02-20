@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://justinfx.com/gofileseq-binary-release</loc>
+    <lastmod>2018-02-20T13:48:07+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://justinfx.com/2017/03/22/python-tutorials-released-free/</loc>
     <lastmod>2017-03-22T22:39:43+13:00</lastmod>
   </url>
@@ -218,7 +223,7 @@
   
   <url>
     <loc>http://justinfx.com/blog/</loc>
-    <lastmod>2017-03-22T22:39:43+13:00</lastmod>
+    <lastmod>2018-02-20T13:48:07+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -252,14 +257,14 @@
   </url>
   
   <url>
-    <loc>http://justinfx.com/tags/code/</loc>
-    <lastmod>2012-04-14T00:00:00+00:00</lastmod>
+    <loc>http://justinfx.com/categories/code/</loc>
+    <lastmod>2017-03-22T22:39:43+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://justinfx.com/categories/code/</loc>
-    <lastmod>2017-03-22T22:39:43+13:00</lastmod>
+    <loc>http://justinfx.com/tags/code/</loc>
+    <lastmod>2012-04-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -325,7 +330,7 @@
   
   <url>
     <loc>http://justinfx.com/</loc>
-    <lastmod>2017-03-22T22:39:43+13:00</lastmod>
+    <lastmod>2018-02-20T13:48:07+00:00</lastmod>
     <priority>0</priority>
   </url>
   
