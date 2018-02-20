@@ -1081,9 +1081,7 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
       <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
       
       <guid>http://justinfx.com/2012/10/12/pyqt4-for-maya/</guid>
-      <description>
-
-&lt;h2 id=&#34;img-class-alignnone-size-full-wp-image-525-title-pyqt4-for-maya-src-wp-content-uploads-2012-10-1350054625-master-jpeg-alt-width-800-height-450-http-www-cmivfx-com-tutorials-view-498-pyqt4-ui-development-for-maya&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.com/wp-content/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;img-class-alignnone-size-full-wp-image-525-title-pyqt4-for-maya-src-wp-content-uploads-2012-10-1350054625-master-jpeg-alt-width-800-height-450-http-www-cmivfx-com-tutorials-view-498-pyqt4-ui-development-for-maya&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.com/wp-content/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h1 id=&#34;pyqt4-ui-development-for-maya&#34;&gt;PyQt4 UI Development for Maya&lt;/h1&gt;
 
@@ -1092,183 +1090,184 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;div&gt;
-  This tutorial is about learning PyQt4 python bindings for the Qt Framework, and how to introduce new UI elements to Maya as a platform.
+This tutorial is about learning PyQt4 python bindings for the Qt Framework, and how to introduce new UI elements to Maya as a platform.
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;div&gt;
+We discuss what comprises a “Framework” and a “GUI Framework”, and how Qt and PyQt4 work together.
 &lt;/div&gt;
 
 &lt;div&gt;
-  We discuss what comprises a &amp;#8220;Framework&amp;#8221; and a &amp;#8220;GUI Framework&amp;#8221;, and how Qt and PyQt4 work together.
 &lt;/div&gt;
 
-&lt;div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
 
 &lt;h3 id=&#34;getting-started-with-pyqt4&#34;&gt;&lt;strong&gt;Getting Started With PyQt4&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
-  There are multiple ways of getting a working installation of PyQt4, both for the general system and for Maya. We look into these approaches to get your system up and running to begin working with PyQt4!
+There are multiple ways of getting a working installation of PyQt4, both for the general system and for Maya. We look into these approaches to get your system up and running to begin working with PyQt4!
 &lt;/div&gt;
 
 &lt;div&gt;
-  We also talk about what is included, such as command line tools and applications, tips on how to test and learn the code, and how to structure a project.
+We also talk about what is included, such as command line tools and applications, tips on how to test and learn the code, and how to structure a project.
 &lt;/div&gt;
 
 &lt;div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
 
 &lt;h3 id=&#34;pyqt4-fundamentals&#34;&gt;&lt;strong&gt;PyQt4 Fundamentals&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
-  Lets get crackin&amp;#8217; and learn the basics!
+Lets get crackin’ and learn the basics!
 &lt;/div&gt;
 
 &lt;div&gt;
-  • What is a QObject? What is a QWidget? Common PyQt4 classes are explained in detail
+• What is a QObject? What is a QWidget? Common PyQt4 classes are explained in detail
 &lt;/div&gt;
 
 &lt;div&gt;
-  • Working with the Qt Designer application, to build a UI visually
+• Working with the Qt Designer application, to build a UI visually
 &lt;/div&gt;
 
 &lt;div&gt;
-  • Layouts: Making widgets resize elegantly and stay organized in your design
+• Layouts: Making widgets resize elegantly and stay organized in your design
 &lt;/div&gt;
 
 &lt;div&gt;
-  • Coordinate space: How do widgets transform in your 2D screen space?
+• Coordinate space: How do widgets transform in your 2D screen space?
 &lt;/div&gt;
 
 &lt;div&gt;
-  • QApplication and the Qt Event Loop: The engine that runs your UI
+• QApplication and the Qt Event Loop: The engine that runs your UI
 &lt;/div&gt;
 
 &lt;div&gt;
-  • Events, Signals, and Slots: How components communicate changes and how the application can respond to changes to make it dynamic
+• Events, Signals, and Slots: How components communicate changes and how the application can respond to changes to make it dynamic
 &lt;/div&gt;
 
 &lt;div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
 
 &lt;h3 id=&#34;general-examples&#34;&gt;&lt;strong&gt;General Examples&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
-  With an understanding of the framework components, we can begin working with fully functional stand-alone examples.
+With an understanding of the framework components, we can begin working with fully functional stand-alone examples.
 &lt;/div&gt;
 
 &lt;div&gt;
-  • Common PyQt4 app template
+• Common PyQt4 app template
 &lt;/div&gt;
 
 &lt;div&gt;
-  • Subclassing Widgets: Creating custom functionality to the existing classes provided by PyQt4
+• Subclassing Widgets: Creating custom functionality to the existing classes provided by PyQt4
 &lt;/div&gt;
 
 &lt;div&gt;
-  • Dialogs: Raising dialog windows above existing windows, Modal vs Non-modal, and creating forms. We look at different ways to validate the data provided by the user, to these dialog forms.
+• Dialogs: Raising dialog windows above existing windows, Modal vs Non-modal, and creating forms. We look at different ways to validate the data provided by the user, to these dialog forms.
 &lt;/div&gt;
 
 &lt;div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
 
 &lt;h3 id=&#34;pyqt4-and-maya-introduction&#34;&gt;&lt;strong&gt;PyQt4 And Maya Introduction&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
-  Finally, some Maya action! Maya has a slightly different approach to using PyQt4…
+Finally, some Maya action! Maya has a slightly different approach to using PyQt4…
 &lt;/div&gt;
 
 &lt;div&gt;
-  • How does the QApplication and event loop work?
+• How does the QApplication and event loop work?
 &lt;/div&gt;
 
 &lt;div&gt;
-  • Common Maya PyQt4 app template
+• Common Maya PyQt4 app template
 &lt;/div&gt;
 
 &lt;div&gt;
-  • Looking at the Maya API&amp;#8217;s MQtUtil class
+• Looking at the Maya API’s MQtUtil class
 &lt;/div&gt;
 
 &lt;div&gt;
-  • The sip module: Helping us translate between Maya&amp;#8217;s Qt and our own PyQt4 code
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;h3 id=&#34;replicating-maya-8217-s-ui-components&#34;&gt;&lt;strong&gt;Replicating Maya&amp;#8217;s UI Components&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;div&gt;
-  What better way to see examples of creating UI for Maya than to replicate some existing functionality? This gives us the opportunity expand with custom functionality
-&lt;/div&gt;
-
-&lt;div&gt;
-  In this chapter we will take two different UI components in Maya, and do a basic custom version of our own, and show to how link them up to Maya&amp;#8217;s own callbacks.
+• The sip module: Helping us translate between Maya’s Qt and our own PyQt4 code
 &lt;/div&gt;
 
 &lt;div&gt;
 &lt;/div&gt;
 
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h3 id=&#34;replicating-maya-s-ui-components&#34;&gt;&lt;strong&gt;Replicating Maya’s UI Components&lt;/strong&gt;&lt;/h3&gt;
+
 &lt;div&gt;
-  &lt;strong&gt;Some Features Of This Chapter Include&lt;/strong&gt;
+What better way to see examples of creating UI for Maya than to replicate some existing functionality? This gives us the opportunity expand with custom functionality
 &lt;/div&gt;
 
 &lt;div&gt;
-  • The QTableWidget
-&lt;/div&gt;
-
-&lt;div&gt;
-  • Model / View separation with QTreeView
-&lt;/div&gt;
-
-&lt;div&gt;
-  • Docking windows into the Maya interface
-&lt;/div&gt;
-
-&lt;div&gt;
-  • Mixing together PyQt4, the Maya API, Maya commands, and callbacks
-&lt;/div&gt;
-
-&lt;div&gt;
-  • Sorting model data
+In this chapter we will take two different UI components in Maya, and do a basic custom version of our own, and show to how link them up to Maya’s own callbacks.
 &lt;/div&gt;
 
 &lt;div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;div&gt;
+&lt;strong&gt;Some Features Of This Chapter Include&lt;/strong&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+• The QTableWidget
+&lt;/div&gt;
+
+&lt;div&gt;
+• Model / View separation with QTreeView
+&lt;/div&gt;
+
+&lt;div&gt;
+• Docking windows into the Maya interface
+&lt;/div&gt;
+
+&lt;div&gt;
+• Mixing together PyQt4, the Maya API, Maya commands, and callbacks
+&lt;/div&gt;
+
+&lt;div&gt;
+• Sorting model data
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;p&gt; &lt;/p&gt;
 
 &lt;h3 id=&#34;customizations&#34;&gt;&lt;strong&gt;Customizations&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;div&gt;
-  A button can be a button, and a slider might look alright in its stock form, but sometimes we want to customize the look of our widgets. This chapter introduces multiple ways of achieving custom looks to our components
+A button can be a button, and a slider might look alright in its stock form, but sometimes we want to customize the look of our widgets. This chapter introduces multiple ways of achieving custom looks to our components
 &lt;/div&gt;
 
 &lt;div&gt;
-  • Stylin&amp;#8217; Stylesheets: Use CSS-like syntax for applying style sheets to widgets
+• Stylin’ Stylesheets: Use CSS-like syntax for applying style sheets to widgets
 &lt;/div&gt;
 
 &lt;div&gt;
-  • Painting By … Paint events: For even more control, we can tell a widget exactly how to draw itself on the screen. We will look at two different examples of how to use custom painting.
+• Painting By … Paint events: For even more control, we can tell a widget exactly how to draw itself on the screen. We will look at two different examples of how to use custom painting.
 &lt;/div&gt;
 
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
 
 &lt;h3 id=&#34;span-style-color-ff6600-previous-cmivfx-tutorials-span&#34;&gt;&lt;span style=&#34;color: #ff6600;&#34;&gt;Previous cmiVFX tutorials:&lt;/span&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://cmivfx.com/store/320-python+introduction+vol+01+-+maya&#34;&gt;Intro to Python for Maya &amp;#8211; Vol 1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;Python for Maya  &amp;#8211; Vol 2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;li&gt;&lt;a href=&#34;https://cmivfx.com/store/320-python+introduction+vol+01+-+maya&#34;&gt;Intro to Python for Maya – Vol 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;Python for Maya  – Vol 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     
