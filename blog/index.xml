@@ -11,98 +11,6 @@
     
     
     <item>
-      <title>seqls &amp; seqinfo (gofileseq) binary releases</title>
-      <link>http://justinfx.com/2018/02/20/gofileseq-binary/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
-      
-      <guid>http://justinfx.com/2018/02/20/gofileseq-binary/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png&#34; style=&#34;width:100px; float:left;&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/gofileseq&#34; title=&#34;gofileseq&#34;&gt;gofileseq&lt;/a&gt; is a Go language library for parsing file sequence strings commonly used in VFX and animation applications.&lt;/p&gt;
-
-&lt;p&gt;&lt;p style=&#34;clear:both&#34;&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;sequences-of-files-follow-a-pattern-similar-to&#34;&gt;Sequences of files follow a pattern similar to&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;/path/to/some/file_foo.0100.exr
-/path/to/some/file_foo.1-100#.jpg
-/path/to/some/file_foo.1-100@@@.tif
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;support-range-formats&#34;&gt;Support range formats&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;       Standard: 1-10
-    Comma Delim: 1-10,10-20
-        Chunked: 1-100x5
-         Filled: 1-100y5
-      Staggered: 1-100:3 (1-100x3, 1-100x2, 1-100)
-Negative frames: -10-100
-        Padding: #=4 padded, @=single pad
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;tools&#34;&gt;Tools&lt;/h4&gt;
-
-&lt;p&gt;Included with the library are two command line utilities:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/gofileseq/tree/master/cmd/seqls&#34;&gt;seqls&lt;/a&gt; - An &lt;code&gt;ls&lt;/code&gt;-style tool for searching and listing file sequences&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ seqls -r 
-
-file_foo.0100.exr
-subdir/file_foo.1-100#.jpg
-subdir2/file_foo.1-100@@@.tif
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/gofileseq/tree/master/cmd/seqinfo&#34;&gt;seqinfo&lt;/a&gt; - Parses one or more sequence pattern strings and list plain text or json info&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ seqinfo --json &amp;quot;/path/to/file.exr&amp;quot; &amp;quot;/path/to/seq.-10-200x2@@.exr&amp;quot;
-{
-    &amp;quot;/path/to/file.exr&amp;quot;: {
-        &amp;quot;error&amp;quot;: &amp;quot;&amp;quot;,
-        &amp;quot;string&amp;quot;: &amp;quot;/path/to/file.exr&amp;quot;,
-        &amp;quot;dir&amp;quot;: &amp;quot;/path/to/&amp;quot;,
-        &amp;quot;base&amp;quot;: &amp;quot;file&amp;quot;,
-        &amp;quot;range&amp;quot;: &amp;quot;&amp;quot;,
-        &amp;quot;pad&amp;quot;: &amp;quot;&amp;quot;,
-        &amp;quot;ext&amp;quot;: &amp;quot;.exr&amp;quot;,
-        &amp;quot;start&amp;quot;: 0,
-        &amp;quot;end&amp;quot;: 0,
-        &amp;quot;length&amp;quot;: 1,
-        &amp;quot;zfill&amp;quot;: 0,
-        &amp;quot;hasRange&amp;quot;: false
-    },
-    &amp;quot;/path/to/seq.-10-200x2@@.exr&amp;quot;: {
-        &amp;quot;error&amp;quot;: &amp;quot;&amp;quot;,
-        &amp;quot;string&amp;quot;: &amp;quot;/path/to/seq.-10-200x2@@.exr&amp;quot;,
-        &amp;quot;dir&amp;quot;: &amp;quot;/path/to/&amp;quot;,
-        &amp;quot;base&amp;quot;: &amp;quot;seq.&amp;quot;,
-        &amp;quot;range&amp;quot;: &amp;quot;-10-200x2&amp;quot;,
-        &amp;quot;pad&amp;quot;: &amp;quot;@@&amp;quot;,
-        &amp;quot;ext&amp;quot;: &amp;quot;.exr&amp;quot;,
-        &amp;quot;start&amp;quot;: -10,
-        &amp;quot;end&amp;quot;: 200,
-        &amp;quot;length&amp;quot;: 106,
-        &amp;quot;zfill&amp;quot;: 2,
-        &amp;quot;hasRange&amp;quot;: true
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As of recent, the gofileseq project has adopted the use of the &lt;a href=&#34;https://goreleaser.com/&#34;&gt;goreleaser&lt;/a&gt; tool, which means that &lt;a href=&#34;https://github.com/justinfx/gofileseq/releases&#34;&gt;tagged releases&lt;/a&gt; now automatically include cross-compiled binaries of the tools for linux, osx, and windows.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/gofileseq/releases&#34;&gt;&lt;img src=&#34;https://badge.fury.io/go/github.com%2Fjustinfx%2Fgofileseq.svg&#34; alt=&#34;Latest Release&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;c&#34;&gt;C++&lt;/h4&gt;
-
-&lt;p&gt;There is also a &lt;a href=&#34;https://github.com/justinfx/gofileseq/tree/master/cpp-port&#34; title=&#34;C++ port&#34;&gt;C++ port&lt;/a&gt; of gofileseq within the repository, for those C++ devs that need to work with VFX-style file sequence patterns.  Doxygen API docs are now automatically built from the master branch: &lt;a href=&#34;http://justinfx.com/gofileseq/cpp&#34;&gt;justinfx.com/gofileseq/cpp&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    
-    
-    <item>
       <title>Python Video Tutorials Released Free</title>
       <link>http://justinfx.com/2017/03/22/python-tutorials-released-free/</link>
       <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
@@ -1980,6 +1888,36 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
 &lt;li&gt;Win 7 64bit Maya 2013: &lt;a href=&#34;https://www.box.com/s/1db3b0c903059ac89fc4&#34;&gt;https://www.box.com/s/1db3b0c903059ac89fc4&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Linux:  &lt;a href=&#34;http://www.kurianos.com/wordpress/?p=551&#34;&gt;http://www.kurianos.com/wordpress/?p=551&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Intro to Python for Maya Artists – Tutorial</title>
+      <link>http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/</link>
+      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      
+      <guid>http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;&lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;http://justinfx.com/wp-content/uploads/2011/10/1318089294_Python_Background_master.jpg&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Just released my first online video tutorial, through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;python-introduction-vol-01-8211-maya-http-cmivfx-com-store-320-python-introduction-vol-01-maya&#34;&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;Python Introduction Vol 01 &amp;#8211; Maya&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Amazing at Animation? Master of Modeling? Conquistador of Character Rigging?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;But how is your Python?&lt;/p&gt;
+
+&lt;p&gt;This course brings the talented artist into the fold of the technical-side of Maya. Learn the basics of Python, and its place in your 3D workflow, with visual examples and real world problems. Get a kick-start on adding some automation into your life, and solving common problems in a fraction of the time. By the end of this video, you should have a deeper understanding of one of the languages Maya speaks under the hood, and how to start viewing your scenes in terms of glorious Python code!&lt;/p&gt;
+
+&lt;p&gt;Check it out: &lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you check out this course, please leave me some feedback! I would love to hear your thoughts.&lt;/p&gt;
+
+&lt;p&gt;Stay tuned for more installments to come!&lt;/p&gt;
 </description>
     </item>
     
