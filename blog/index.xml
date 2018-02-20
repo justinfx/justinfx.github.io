@@ -88,7 +88,7 @@ subdir2/file_foo.1-100@@@.tif
 
 &lt;p&gt;As of recent, the gofileseq project has adopted the use of the &lt;a href=&#34;https://goreleaser.com/&#34;&gt;goreleaser&lt;/a&gt; tool, which means that &lt;a href=&#34;https://github.com/justinfx/gofileseq/releases&#34;&gt;tagged releases&lt;/a&gt; now automatically include cross-compiled binaries of the tools for linux, osx, and windows.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/gofileseq/releases&#34;&gt;&lt;img src=&#34;https://badge.fury.io/gh/justinfx%2Fgofileseq.svg&#34; alt=&#34;Latest Release&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/gofileseq/releases&#34;&gt;&lt;img src=&#34;https://badge.fury.io/go/github.com%2Fjustinfx%2Fgofileseq.svg&#34; alt=&#34;Latest Release&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;There is also a &lt;a href=&#34;https://github.com/justinfx/gofileseq/tree/master/cpp-port&#34; title=&#34;C++ port&#34;&gt;C++ port&lt;/a&gt; of gofileseq within the repository, for those C++ devs that need to work with VFX-style file sequence patterns.  Doxygen API docs are now automatically built from the master branch: &lt;a href=&#34;http://justinfx.com/gofileseq/cpp&#34;&gt;justinfx.com/gofileseq/cpp&lt;/a&gt;&lt;/p&gt;
 </description>
