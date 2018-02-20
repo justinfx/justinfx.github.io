@@ -114,20 +114,22 @@ ga('send', 'pageview');
     <span class="post-date">Feb 20, 2018</span>
 
     
-    <p><img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" style="width:100px; float:left;"></p>
+    
+
+<p><img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" style="width:100px; float:left;"></p>
 
 <p><a href="https://github.com/justinfx/gofileseq" title="gofileseq">gofileseq</a> is a Go language library for parsing file sequence strings commonly used in VFX and animation applications.</p>
 
 <p><p style="clear:both"></p>
 
-<p>Sequences of files follow a pattern similar to:</p>
+<h4 id="sequences-of-files-follow-a-pattern-similar-to">Sequences of files follow a pattern similar to</h4>
 
 <pre><code>/path/to/some/file_foo.0100.exr
 /path/to/some/file_foo.1-100#.jpg
 /path/to/some/file_foo.1-100@@@.tif
 </code></pre>
 
-<p>Support range formats:</p>
+<h4 id="support-range-formats">Support range formats</h4>
 
 <pre><code>       Standard: 1-10
     Comma Delim: 1-10,10-20
@@ -137,6 +139,8 @@ ga('send', 'pageview');
 Negative frames: -10-100
         Padding: #=4 padded, @=single pad
 </code></pre>
+
+<h4 id="tools">Tools</h4>
 
 <p>Included with the library are two command line utilities:</p>
 
@@ -187,6 +191,8 @@ subdir2/file_foo.1-100@@@.tif
 <p>As of recent, the gofileseq project has adopted the use of the <a href="https://goreleaser.com/">goreleaser</a> tool, which means that <a href="https://github.com/justinfx/gofileseq/releases">tagged releases</a> now automatically include cross-compiled binaries of the tools for linux, osx, and windows.</p>
 
 <p><a href="https://github.com/justinfx/gofileseq/releases"><img src="https://badge.fury.io/go/github.com%2Fjustinfx%2Fgofileseq.svg" alt="Latest Release" /></a></p>
+
+<h4 id="c">C++</h4>
 
 <p>There is also a <a href="https://github.com/justinfx/gofileseq/tree/master/cpp-port" title="C++ port">C++ port</a> of gofileseq within the repository, for those C++ devs that need to work with VFX-style file sequence patterns.  Doxygen API docs are now automatically built from the master branch: <a href="http://justinfx.com/gofileseq/cpp">justinfx.com/gofileseq/cpp</a></p>
 

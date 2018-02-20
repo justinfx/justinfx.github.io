@@ -16,20 +16,22 @@
       <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
       
       <guid>http://justinfx.com/2018/02/20/gofileseq-binary/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png&#34; style=&#34;width:100px; float:left;&#34;&gt;&lt;/p&gt;
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png&#34; style=&#34;width:100px; float:left;&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/gofileseq&#34; title=&#34;gofileseq&#34;&gt;gofileseq&lt;/a&gt; is a Go language library for parsing file sequence strings commonly used in VFX and animation applications.&lt;/p&gt;
 
 &lt;p&gt;&lt;p style=&#34;clear:both&#34;&gt;&lt;/p&gt;
 
-&lt;p&gt;Sequences of files follow a pattern similar to:&lt;/p&gt;
+&lt;h4 id=&#34;sequences-of-files-follow-a-pattern-similar-to&#34;&gt;Sequences of files follow a pattern similar to&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;/path/to/some/file_foo.0100.exr
 /path/to/some/file_foo.1-100#.jpg
 /path/to/some/file_foo.1-100@@@.tif
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Support range formats:&lt;/p&gt;
+&lt;h4 id=&#34;support-range-formats&#34;&gt;Support range formats&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;       Standard: 1-10
     Comma Delim: 1-10,10-20
@@ -39,6 +41,8 @@
 Negative frames: -10-100
         Padding: #=4 padded, @=single pad
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;tools&#34;&gt;Tools&lt;/h4&gt;
 
 &lt;p&gt;Included with the library are two command line utilities:&lt;/p&gt;
 
@@ -89,6 +93,8 @@ subdir2/file_foo.1-100@@@.tif
 &lt;p&gt;As of recent, the gofileseq project has adopted the use of the &lt;a href=&#34;https://goreleaser.com/&#34;&gt;goreleaser&lt;/a&gt; tool, which means that &lt;a href=&#34;https://github.com/justinfx/gofileseq/releases&#34;&gt;tagged releases&lt;/a&gt; now automatically include cross-compiled binaries of the tools for linux, osx, and windows.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/gofileseq/releases&#34;&gt;&lt;img src=&#34;https://badge.fury.io/go/github.com%2Fjustinfx%2Fgofileseq.svg&#34; alt=&#34;Latest Release&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;c&#34;&gt;C++&lt;/h4&gt;
 
 &lt;p&gt;There is also a &lt;a href=&#34;https://github.com/justinfx/gofileseq/tree/master/cpp-port&#34; title=&#34;C++ port&#34;&gt;C++ port&lt;/a&gt; of gofileseq within the repository, for those C++ devs that need to work with VFX-style file sequence patterns.  Doxygen API docs are now automatically built from the master branch: &lt;a href=&#34;http://justinfx.com/gofileseq/cpp&#34;&gt;justinfx.com/gofileseq/cpp&lt;/a&gt;&lt;/p&gt;
 </description>
