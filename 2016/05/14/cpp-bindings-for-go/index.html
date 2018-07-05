@@ -53,13 +53,16 @@
 
 
 <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-6692856-1', 'auto');
-ga('send', 'pageview');
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-6692856-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
 
 
@@ -139,26 +142,25 @@ ga('send', 'pageview');
 
 <p><em>ref:</em> <a href="https://github.com/justinfx/openimageigo/blob/master/cpp/oiio.h"><em>github.com/justinfx/openimageigo/cpp/oiio.h</em></a></p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #60a0b0; font-style: italic">// oiio.h</span>
-<span style="border: 1px solid #FF0000">\#</span>ifdef __cplusplus
-<span style="color: #007020; font-weight: bold">extern</span> <span style="color: #4070a0">&quot;C&quot;</span> {
-<span style="border: 1px solid #FF0000">\#</span>endif
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#60a0b0;font-style:italic">// oiio.h
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="">\</span><span style="color:#007020">#ifdef __cplusplus
+</span><span style="color:#007020"></span><span style="color:#007020;font-weight:bold">extern</span> <span style="color:#4070a0">&#34;C&#34;</span> {
+<span style="">\</span><span style="color:#007020">#endif
+</span><span style="color:#007020"></span>
+<span style="color:#007020;font-weight:bold">typedef</span> <span style="color:#902000">void</span> ImageInput;
 
-<span style="color: #007020; font-weight: bold">typedef</span> <span style="color: #902000">void</span> ImageInput;
-
-<span style="color: #60a0b0; font-style: italic">// imageinput.cpp</span>
-ImageInput<span style="border: 1px solid #FF0000">\</span><span style="color: #666666">*</span> ImageInput_Open(<span style="color: #007020; font-weight: bold">const</span> <span style="color: #902000">char</span><span style="border: 1px solid #FF0000">\</span><span style="color: #666666">*</span> filename, <span style="color: #007020; font-weight: bold">const</span> ImageSpec _config) {
-std<span style="color: #666666">::</span>string s_filename(filename);
-<span style="color: #007020; font-weight: bold">return</span> (ImageInput_) OIIO<span style="color: #666666">::</span>ImageInput<span style="color: #666666">::</span>open(
+<span style="color:#60a0b0;font-style:italic">// imageinput.cpp
+</span><span style="color:#60a0b0;font-style:italic"></span>ImageInput<span style="">\</span><span style="color:#666">*</span> ImageInput_Open(<span style="color:#007020;font-weight:bold">const</span> <span style="color:#902000">char</span><span style="">\</span><span style="color:#666">*</span> filename, <span style="color:#007020;font-weight:bold">const</span> ImageSpec _config) {
+std<span style="color:#666">::</span>string s_filename(filename);
+<span style="color:#007020;font-weight:bold">return</span> (ImageInput_) OIIO<span style="color:#666">::</span>ImageInput<span style="color:#666">::</span>open(
 s_filename,
-<span style="color: #007020; font-weight: bold">static_cast</span><span style="color: #666666">&lt;</span><span style="color: #007020; font-weight: bold">const</span> OIIO<span style="color: #666666">::</span>ImageSpec<span style="border: 1px solid #FF0000">\</span><span style="color: #666666">*&gt;</span>(config));
+<span style="color:#007020;font-weight:bold">static_cast</span><span style="color:#666">&lt;</span><span style="color:#007020;font-weight:bold">const</span> OIIO<span style="color:#666">::</span>ImageSpec<span style="">\</span><span style="color:#666">*&gt;</span>(config));
 }
 
-<span style="color: #007020; font-weight: bold">const</span> <span style="color: #902000">char</span><span style="border: 1px solid #FF0000">\</span><span style="color: #666666">*</span> ImageInput_format_name(ImageInput <span style="border: 1px solid #FF0000">\</span><span style="color: #666666">*</span>in) {
-<span style="color: #007020; font-weight: bold">return</span> <span style="color: #007020; font-weight: bold">static_cast</span>[OIIO<span style="color: #666666">::</span>ImageInput<span style="border: 1px solid #FF0000">\</span><span style="color: #666666">*</span>](OIIO<span style="color: #666666">::</span>ImageInput<span style="border: 1px solid #FF0000">\</span><span style="color: #666666">*</span>)(in)<span style="color: #666666">-&gt;</span>format_name();
+<span style="color:#007020;font-weight:bold">const</span> <span style="color:#902000">char</span><span style="">\</span><span style="color:#666">*</span> ImageInput_format_name(ImageInput <span style="">\</span><span style="color:#666">*</span>in) {
+<span style="color:#007020;font-weight:bold">return</span> <span style="color:#007020;font-weight:bold">static_cast</span>[OIIO<span style="color:#666">::</span>ImageInput<span style="">\</span><span style="color:#666">*</span>](OIIO<span style="color:#666">::</span>ImageInput<span style="">\</span><span style="color:#666">*</span>)(in)<span style="color:#666">-&gt;</span>format_name();
 }
-</pre></div>
-
+</code></pre></div>
 
 <p>As you can see, we make an opaque <code>ImageInput\*</code> available to Go, and create a shim layer that is C compatible. <code>ImageInput_Open()</code> is a factory function that wraps the static C++ <code>ImageInput::open()</code> equivalent. We just cast between our pointer and theirs (OIIO&rsquo;s), in order to call functions and methods.</p>
 
@@ -177,21 +179,19 @@ s_filename,
 
 <p>I had been asked more than once by colleagues if a C++ version of fileseq was available. It wasn&rsquo;t, and I also didn&rsquo;t want to have to maintain a 3rd standalone port that should follow the same behavior as the other two. But since the introduction of the <a href="https://golang.org/doc/go1.5#link">Go </a><code>[-buildmode](https://golang.org/doc/go1.5#link)</code> flag in 1.5, it has become possible to export functions from Go to C/C++</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #60a0b0; font-style: italic">// sum.go</span>
-<span style="color: #007020; font-weight: bold">package</span> main
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#60a0b0;font-style:italic">// sum.go
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">package</span> main
 
-<span style="color: #007020; font-weight: bold">import</span> <span style="color: #4070a0">&quot;C&quot;</span>
+<span style="color:#007020;font-weight:bold">import</span> <span style="color:#4070a0">&#34;C&#34;</span>
 
-<span style="color: #60a0b0; font-style: italic">//export sum</span>
-<span style="color: #007020; font-weight: bold">func</span> sum(x, y <span style="color: #902000">int</span>) <span style="color: #902000">int</span> {
-<span style="color: #007020; font-weight: bold">return</span> x <span style="color: #666666">+</span> y
+<span style="color:#60a0b0;font-style:italic">//export sum
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">func</span> sum(x, y <span style="color:#902000">int</span>) <span style="color:#902000">int</span> {
+<span style="color:#007020;font-weight:bold">return</span> x <span style="color:#666">+</span> y
 }
 
-<span style="color: #007020; font-weight: bold">func</span> main() {
+<span style="color:#007020;font-weight:bold">func</span> main() {
 
-}
-</pre></div>
-
+}</code></pre></div>
 
 <pre><code class="language-shell">$ go build -buildmode=c-shared -o sum.so
 $ ls
@@ -200,20 +200,18 @@ sum.c  sum.go sum.h  sum.so
 
 <p>Now we have a shared library and a header file, to use in our C app</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #60a0b0; font-style: italic">// sum.c</span>
-<span style="border: 1px solid #FF0000">\#</span>include <span style="color: #666666">&lt;</span>stdio.h<span style="color: #666666">&gt;</span>
-<span style="border: 1px solid #FF0000">\#</span>include <span style="color: #4070a0">&quot;sum.h&quot;</span>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#60a0b0;font-style:italic">// sum.c
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="">\</span><span style="color:#007020">#include</span> <span style="color:#007020">&lt;stdio.h&gt;</span><span style="color:#007020">
+</span><span style="color:#007020"></span><span style="">\</span><span style="color:#007020">#include</span> <span style="color:#007020">&#34;sum.h&#34;</span><span style="color:#007020">
+</span><span style="color:#007020"></span>
+<span style="color:#902000">int</span> main(<span style="color:#902000">void</span>) {
 
-<span style="color: #902000">int</span> main(<span style="color: #902000">void</span>) {
-
-    <span style="color: #902000">int</span> z <span style="color: #666666">=</span> sum(<span style="color: #40a070">1</span>, <span style="color: #40a070">2</span>);
-    printf(<span style="color: #4070a0">&quot;1+2=%d</span><span style="color: #4070a0; font-weight: bold">\n</span><span style="color: #4070a0">&quot;</span>, z);
+    <span style="color:#902000">int</span> z <span style="color:#666">=</span> sum(<span style="color:#40a070">1</span>, <span style="color:#40a070">2</span>);
+    printf(<span style="color:#4070a0">&#34;1+2=%d</span><span style="color:#4070a0;font-weight:bold">\n</span><span style="color:#4070a0">&#34;</span>, z);
     
-    <span style="color: #007020; font-weight: bold">return</span> <span style="color: #40a070">0</span>;
+    <span style="color:#007020;font-weight:bold">return</span> <span style="color:#40a070">0</span>;
 
-}
-</pre></div>
-
+}</code></pre></div>
 
 <pre><code class="language-shell">$ gcc sum.c sum.so -o sum &amp;&amp; ./sum
 1+2=3
@@ -234,98 +232,92 @@ sum.c  sum.go sum.h  sum.so
 
 <p>The full implementation is located here: <a href="https://github.com/justinfx/gofileseq/tree/master/cpp">github.com/justinfx/gofileseq/cpp</a></p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020; font-weight: bold">type</span> FileSeqId <span style="color: #902000">uint64</span>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#007020;font-weight:bold">type</span> FileSeqId <span style="color:#902000">uint64</span>
 
-<span style="color: #007020; font-weight: bold">type</span> fileSeqRef <span style="color: #007020; font-weight: bold">struct</span> {
-<span style="border: 1px solid #FF0000">\</span><span style="color: #666666">*</span>fileseq.FileSequence
-refs <span style="color: #902000">uint32</span>
+<span style="color:#007020;font-weight:bold">type</span> fileSeqRef <span style="color:#007020;font-weight:bold">struct</span> {
+<span style="">\</span><span style="color:#666">*</span>fileseq.FileSequence
+refs <span style="color:#902000">uint32</span>
 }
 
-<span style="color: #007020; font-weight: bold">type</span> fileSeqMap <span style="color: #007020; font-weight: bold">struct</span> {
-lock <span style="border: 1px solid #FF0000">\</span><span style="color: #666666">*</span>sync.RWMutex
-m    <span style="color: #007020; font-weight: bold">map</span><span style="border: 1px solid #FF0000">\</span>[FileSeqId<span style="border: 1px solid #FF0000">\</span>]<span style="border: 1px solid #FF0000">\</span><span style="color: #666666">*</span>fileSeqRef
+<span style="color:#007020;font-weight:bold">type</span> fileSeqMap <span style="color:#007020;font-weight:bold">struct</span> {
+lock <span style="">\</span><span style="color:#666">*</span>sync.RWMutex
+m    <span style="color:#007020;font-weight:bold">map</span><span style="">\</span>[FileSeqId<span style="">\</span>]<span style="">\</span><span style="color:#666">*</span>fileSeqRef
 rand idMaker
 }
 
-<span style="color: #007020; font-weight: bold">type</span> idMaker <span style="color: #007020; font-weight: bold">interface</span> {
-Uint64() <span style="color: #902000">uint64</span>
+<span style="color:#007020;font-weight:bold">type</span> idMaker <span style="color:#007020;font-weight:bold">interface</span> {
+Uint64() <span style="color:#902000">uint64</span>
 }
 
-<span style="color: #007020; font-weight: bold">func</span> (m <span style="border: 1px solid #FF0000">\</span><span style="color: #666666">*</span>frameSetMap) Incref(id FrameSetId) {
-<span style="color: #60a0b0; font-style: italic">// Inc refs</span>
-}
+<span style="color:#007020;font-weight:bold">func</span> (m <span style="">\</span><span style="color:#666">*</span>frameSetMap) Incref(id FrameSetId) {
+<span style="color:#60a0b0;font-style:italic">// Inc refs
+</span><span style="color:#60a0b0;font-style:italic"></span>}
 
-<span style="color: #007020; font-weight: bold">func</span> (m <span style="border: 1px solid #FF0000">\</span><span style="color: #666666">*</span>frameSetMap) Decref(id FrameSetId) {
-<span style="color: #60a0b0; font-style: italic">// Dec refs</span>
-<span style="color: #60a0b0; font-style: italic">// If refs == 0, delete from map</span>
-}
-</pre></div>
-
+<span style="color:#007020;font-weight:bold">func</span> (m <span style="">\</span><span style="color:#666">*</span>frameSetMap) Decref(id FrameSetId) {
+<span style="color:#60a0b0;font-style:italic">// Dec refs
+</span><span style="color:#60a0b0;font-style:italic">// If refs == 0, delete from map
+</span><span style="color:#60a0b0;font-style:italic"></span>}</code></pre></div>
 
 <p>Now when C++ wants to create a <code>FileSequence</code>, they can call a <code>New</code> function which will create an instance, add it to the map, and return a uint64 id handle</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #60a0b0; font-style: italic">//export FileSequence_New</span>
-<span style="color: #007020; font-weight: bold">func</span> FileSequence_New(frange <span style="border: 1px solid #FF0000">\</span><span style="color: #666666">*</span>C.char) (FileSeqId, Error) {
-fs, e <span style="color: #666666">:=</span> fileseq.NewFileSequence(C.GoString(frange))
-<span style="color: #007020; font-weight: bold">if</span> e <span style="color: #666666">!=</span> <span style="color: #007020; font-weight: bold">nil</span> {
-<span style="color: #60a0b0; font-style: italic">// err string is freed by caller</span>
-<span style="color: #007020; font-weight: bold">return</span> <span style="color: #40a070">0</span>, C.CString(e.Error())
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#60a0b0;font-style:italic">//export FileSequence_New
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">func</span> FileSequence_New(frange <span style="">\</span><span style="color:#666">*</span>C.char) (FileSeqId, Error) {
+fs, e <span style="color:#666">:=</span> fileseq.NewFileSequence(C.GoString(frange))
+<span style="color:#007020;font-weight:bold">if</span> e <span style="color:#666">!=</span> <span style="color:#007020;font-weight:bold">nil</span> {
+<span style="color:#60a0b0;font-style:italic">// err string is freed by caller
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">return</span> <span style="color:#40a070">0</span>, C.CString(e.Error())
 }
 
-    id <span style="color: #666666">:=</span> sFileSeqs.Add(fs)
-    <span style="color: #007020; font-weight: bold">return</span> id, <span style="color: #007020; font-weight: bold">nil</span>
+    id <span style="color:#666">:=</span> sFileSeqs.Add(fs)
+    <span style="color:#007020;font-weight:bold">return</span> id, <span style="color:#007020;font-weight:bold">nil</span>
 
 }
 
-<span style="color: #60a0b0; font-style: italic">//export FileSequence_Dirname</span>
-<span style="color: #007020; font-weight: bold">func</span> FileSequence_Dirname(id FileSeqId) <span style="border: 1px solid #FF0000">\</span><span style="color: #666666">*</span>C.char {
-fs, ok <span style="color: #666666">:=</span> sFileSeqs.Get(id)
-<span style="color: #60a0b0; font-style: italic">// caller must free string</span>
-<span style="color: #007020; font-weight: bold">if</span> !ok {
-<span style="color: #007020; font-weight: bold">return</span> C.CString(<span style="color: #4070a0">&quot;&quot;</span>)
+<span style="color:#60a0b0;font-style:italic">//export FileSequence_Dirname
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">func</span> FileSequence_Dirname(id FileSeqId) <span style="">\</span><span style="color:#666">*</span>C.char {
+fs, ok <span style="color:#666">:=</span> sFileSeqs.Get(id)
+<span style="color:#60a0b0;font-style:italic">// caller must free string
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">if</span> !ok {
+<span style="color:#007020;font-weight:bold">return</span> C.CString(<span style="color:#4070a0">&#34;&#34;</span>)
 }
-<span style="color: #007020; font-weight: bold">return</span> C.CString(fs.Dirname())
-}
-</pre></div>
-
+<span style="color:#007020;font-weight:bold">return</span> C.CString(fs.Dirname())
+}</code></pre></div>
 
 <p>You can see here that because this is C++ calling Go, we aren&rsquo;t able to free the C string from Go, as the string needs to outlive the Go call. We just make sure that C++ always frees <code>\*C.char</code> when it is returned. To make sure I always clean up the <code>char\*</code> in C++, I made a helper <code>StringProxy</code> class which wraps it and cleans it up in the destructor:</p>
 
 <p><em>ref:</em> <a href="https://github.com/justinfx/gofileseq/blob/master/cpp/private/fileseq_p.h#L16">_github.com/justinfx/gofileseq/cpp/private/fileseq<em>p.h</em></a></p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020; font-weight: bold">class</span> <span style="color: #0e84b5; font-weight: bold">StringProxy</span> {
-<span style="color: #007020; font-weight: bold">public</span><span style="color: #666666">:</span>
-StringProxy(<span style="color: #902000">char</span><span style="border: 1px solid #FF0000">\</span><span style="color: #666666">*</span> managed) <span style="color: #666666">:</span> m_data(managed), m_str() {
-<span style="color: #007020; font-weight: bold">if</span> (managed <span style="color: #666666">!=</span> <span style="color: #007020">NULL</span>) {
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#007020;font-weight:bold">class</span><span style=""> </span><span style="color:#0e84b5;font-weight:bold">StringProxy</span> {
+<span style="color:#007020;font-weight:bold">public</span><span style="color:#666">:</span>
+StringProxy(<span style="color:#902000">char</span><span style="">\</span><span style="color:#666">*</span> managed) <span style="color:#666">:</span> m_data(managed), m_str() {
+<span style="color:#007020;font-weight:bold">if</span> (managed <span style="color:#666">!=</span> <span style="color:#007020">NULL</span>) {
 m_str.assign(managed);
 }
 }
 
-    <span style="color: #666666">~</span>StringProxy() {
-        <span style="color: #007020; font-weight: bold">if</span> (m_data <span style="color: #666666">!=</span> <span style="color: #007020">NULL</span>) {
+    <span style="color:#666">~</span>StringProxy() {
+        <span style="color:#007020;font-weight:bold">if</span> (m_data <span style="color:#666">!=</span> <span style="color:#007020">NULL</span>) {
             free(m_data);
-            m_data <span style="color: #666666">=</span> <span style="color: #007020">NULL</span>;
+            m_data <span style="color:#666">=</span> <span style="color:#007020">NULL</span>;
         }
     }
-    <span style="color: #60a0b0; font-style: italic">//...</span>
-
+    <span style="color:#60a0b0;font-style:italic">//...
+</span><span style="color:#60a0b0;font-style:italic"></span>
 };
-</pre></div>
-
+</code></pre></div>
 
 <p>This all ended up working fine! I created some benchmarks to compare fileseq between Python, C++, and Go. The test involved looping 100k times, creating a FileSequence, and calling 4 methods on it.</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020; font-weight: bold">const</span> <span style="color: #902000">int</span> n <span style="color: #666666">=</span> <span style="color: #40a070">100000</span>;
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#007020;font-weight:bold">const</span> <span style="color:#902000">int</span> n <span style="color:#666">=</span> <span style="color:#40a070">100000</span>;
 
-<span style="color: #007020; font-weight: bold">for</span> (<span style="color: #902000">int</span> i<span style="color: #666666">=</span><span style="color: #40a070">0</span>; i <span style="color: #666666">&lt;</span> n; <span style="color: #666666">++</span>i) {
-fileseq<span style="color: #666666">::</span>FileSequence fs(<span style="color: #4070a0">&quot;/path/to/file_name.1-100x2#.ext&quot;</span>);
-str <span style="color: #666666">=</span> fs.string();
-str <span style="color: #666666">=</span> fs.frameRange();
-num <span style="color: #666666">=</span> fs.start();
-num <span style="color: #666666">=</span> fs.end();
+<span style="color:#007020;font-weight:bold">for</span> (<span style="color:#902000">int</span> i<span style="color:#666">=</span><span style="color:#40a070">0</span>; i <span style="color:#666">&lt;</span> n; <span style="color:#666">++</span>i) {
+fileseq<span style="color:#666">::</span>FileSequence fs(<span style="color:#4070a0">&#34;/path/to/file_name.1-100x2#.ext&#34;</span>);
+str <span style="color:#666">=</span> fs.string();
+str <span style="color:#666">=</span> fs.frameRange();
+num <span style="color:#666">=</span> fs.start();
+num <span style="color:#666">=</span> fs.end();
 }
-</pre></div>
-
+</code></pre></div>
 
 <pre><code>Python:  8.0s
     Go:  1.9s
@@ -338,10 +330,9 @@ num <span style="color: #666666">=</span> fs.end();
 
 <p>i.e., something like this:</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #002070; font-weight: bold">fs</span> :<span style="color: #666666">=</span> (<span style="border: 1px solid #FF0000">\</span><span style="color: #666666">*</span>FileSequence)unsafe.Pointer(
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#002070;font-weight:bold">fs</span> :<span style="color:#666">=</span> (<span style="">\</span><span style="color:#666">*</span>FileSequence)unsafe.Pointer(
 C.malloc(unsafe.Sizeof(FileSequence{})))
-</pre></div>
-
+</code></pre></div>
 
 <p>I tried to apply this approach, but it became really tedious and confusing to figure out how to malloc all of the internal data nested in the types. For instance, <code>FrameSet</code> has methods that create more data along the way. And I had no idea how to cleanly get it to keep malloc&rsquo;ing memory so the entire structure continues to be 100% managed by C++. So I gave up on trying this route, although I bet it would work for less nested structs.</p>
 

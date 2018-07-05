@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>http://justinfx.com/2018/02/20/gofileseq-binary/</loc>
@@ -486,6 +487,7 @@
   
   <url>
     <loc>http://justinfx.com/tags/</loc>
+    <lastmod>2011-11-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,182 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>JustinFX.com</title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/3d/index.xml</link>
+    <title>3d on JustinFX.com</title>
+    <link>http://justinfx.com/tags/3d/</link>
+    <description>Recent content in 3d on JustinFX.com</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>Justin Israel</copyright>
+    <lastBuildDate>Thu, 21 Jun 2012 00:00:00 +0000</lastBuildDate>
     
-    <copyright>2018 Justin Israel</copyright>
-    <updated>2006-01-02 15:04:05 &#43;0000 MST</updated>
+	<atom:link href="http://justinfx.com/tags/3d/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Getting started with XBOX 360 Kinect on OSX</title>
       <link>http://justinfx.com/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Thu, 21 Jun 2012 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</guid>
-      <description>
-
-&lt;p&gt;A recent project of mine involves research and development with an XBOX 360 Kinect Sensor. Being a python guy, I started searching for python bindings to some OSX-supported framework. When you just get started looking into this area it can be a little confusing. There are a number of layers to the software stack to enable one to accomplish anything meaningful. This is just a short and general blog post outlining the basics of what I have discovered thus far, to help anyone else that might also be getting started.&lt;/p&gt;
-
-&lt;p&gt;At the lowest level, you need a driver. Something that can talk to the USB device that is the Kinect sensor. When you purchase the XBOX Kinect for Windows version of the sensor, and you are going to be developing on windows, much of this whole stack is provided to you by way of the Kinect SDK. But for the open source folks with the standard XBOX 360 sensor, you need to piece together your own solution.&lt;/p&gt;
-
-&lt;p&gt;Two drivers that I have discovered thus far:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://openkinect.org/wiki/Main_Page&#34;&gt;OpenKinect&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/avin2/SensorKinect&#34;&gt;PrimeSense Sensor&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I had started OpenKinect (libfreenect) because it comes with a &lt;a href=&#34;https://github.com/OpenKinect/libfreenect/tree/master/wrappers/python&#34;&gt;python wrapper&lt;/a&gt; included. There were a few dependencies (I will talk about specific build steps in just a moment), but once I got this installed I was able to fire up the included  glview app and see both depth and rgb data streaming in from my sensor. The role of these drivers is to provide simply the basic streams. That is, the depth, rgb, audio, and a few other sensor data streams. If your goal is to start tracking players, seeing skeletons, and registering gestures, the drivers are not enough. You would be required to make your own solution from this raw data at this phase in the game.&lt;/p&gt;
-
-&lt;p&gt;You would now want to look into middleware that can take the raw data and provide to you an API with higher level information. This would include finding users in the scene for you, tracking their body features, and giving you various events to watch for as the data streams.&lt;/p&gt;
-
-&lt;p&gt;Being that my goal was to have python bindings, I found my options to be much more limited than if I were going to be developing in C++. Wrappers have to exist for the framework you want. This is where my research really started ramping up. I spent a few days dealing wtih compiling issues, as well as having an actual bad power adapter that had to be exchanged. But all said and done, here is what I have settled on thus far&amp;#8230;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Driver: &lt;a href=&#34;https://github.com/avin2/SensorKinect&#34;&gt;PrimeSense Sensor&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/OpenNI/OpenNI&#34;&gt;OpenNI Framework&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;A recent project of mine involves research and development with an XBOX 360 Kinect Sensor. Being a python guy, I started searching for python bindings to some OSX-supported framework. When you just get started looking into this area it can be a little confusing. There are a number of layers to the software stack to enable one to accomplish anything meaningful. This is just a short and general blog post outlining the basics of what I have discovered thus far, to help anyone else that might also be getting started.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;At the lowest level, you need a driver. Something that can talk to the USB device that is the Kinect sensor. When you purchase the XBOX Kinect for Windows version of the sensor, and you are going to be developing on windows, much of this whole stack is provided to you by way of the Kinect SDK. But for the open source folks with the standard XBOX 360 sensor, you need to piece together your own solution.&lt;/p&gt;
-
-&lt;p&gt;Two drivers that I have discovered thus far:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://openkinect.org/wiki/Main_Page&#34;&gt;OpenKinect&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/avin2/SensorKinect&#34;&gt;PrimeSense Sensor&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I had started OpenKinect (libfreenect) because it comes with a &lt;a href=&#34;https://github.com/OpenKinect/libfreenect/tree/master/wrappers/python&#34;&gt;python wrapper&lt;/a&gt; included. There were a few dependencies (I will talk about specific build steps in just a moment), but once I got this installed I was able to fire up the included  glview app and see both depth and rgb data streaming in from my sensor. The role of these drivers is to provide simply the basic streams. That is, the depth, rgb, audio, and a few other sensor data streams. If your goal is to start tracking players, seeing skeletons, and registering gestures, the drivers are not enough. You would be required to make your own solution from this raw data at this phase in the game.&lt;/p&gt;
-
-&lt;p&gt;You would now want to look into middleware that can take the raw data and provide to you an API with higher level information. This would include finding users in the scene for you, tracking their body features, and giving you various events to watch for as the data streams.&lt;/p&gt;
-
-&lt;p&gt;Being that my goal was to have python bindings, I found my options to be much more limited than if I were going to be developing in C++. Wrappers have to exist for the framework you want. This is where my research really started ramping up. I spent a few days dealing wtih compiling issues, as well as having an actual bad power adapter that had to be exchanged. But all said and done, here is what I have settled on thus far&amp;#8230;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Driver: &lt;a href=&#34;https://github.com/avin2/SensorKinect&#34;&gt;PrimeSense Sensor&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/OpenNI/OpenNI&#34;&gt;OpenNI Framework&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.openni.org/Downloads/OpenNIModules.aspx&#34;&gt;OpenNI Modules&lt;/a&gt; for OpenNI&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/jmendeth/PyOpenNI&#34;&gt;PyOpenNI&lt;/a&gt; python bindings&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&#34;span-style-text-decoration-underline-install-details-span&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Install Details&lt;/span&gt;&lt;/h4&gt;
-
-&lt;h5 id=&#34;install-homebrew-package-manager&#34;&gt;&lt;strong&gt;Install homebrew (package manager)&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://mxcl.github.com/homebrew/&#34;&gt;http://mxcl.github.com/homebrew/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h5 id=&#34;install-build-tools&#34;&gt;&lt;strong&gt;Install build tools&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;pre&gt;brew install cmake
-brew install boost&lt;/pre&gt;
-
-&lt;h5 id=&#34;install-python2-7&#34;&gt;&lt;strong&gt;Install python2.7&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;pre&gt;brew install python --framework&lt;/pre&gt;
-
-&lt;h5 id=&#34;suggestion-virtualenv-environment&#34;&gt;&lt;strong&gt;Suggestion: virtualenv Environment&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;p&gt;This is not a requirement. But I recommend using virtualenv to set up an environment that specifically uses python2.7 so that you don&amp;#8217;t have to fight with mixed dependencies and versions.&lt;/p&gt;
-
-&lt;p&gt;Create a virtualenv called &amp;#8220;kinect&amp;#8221;&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;pip install virtualenv
-virtualenv --no-site-packages -p python2.7 kinect
-&lt;span style=&#34;color: #007020&#34;&gt;cd&lt;/span&gt; kinect
-&lt;span style=&#34;color: #007020&#34;&gt;source&lt;/span&gt; bin/activate
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h5 id=&#34;install-libusb-patched-version&#34;&gt;&lt;strong&gt;Install libusb (patched version)&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;p&gt;There is a special patched version of the libusb library, in the form of a homebrew formula.&lt;/p&gt;
-
-&lt;pre class=&#34;lang:default decode:true&#34;&gt;git clone https://github.com/OpenKinect/libfreenect.git&lt;/pre&gt;
-
-&lt;p&gt;Now copy platform/osx/homebrew/libusb-freenect.rb -&amp;gt; /usr/local/Library/Formula/&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;brew install libusb-freenect
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h5 id=&#34;install-sensorkinect-drivers&#34;&gt;&lt;strong&gt;Install SensorKinect drivers&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/avin2/SensorKinect.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then uncompress Bin/SensorKinect093-Bin-MacOSX-v*tar.bz2&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo ./install.sh
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h5 id=&#34;install-openni-framework&#34;&gt;&lt;strong&gt;Install OpenNI framework&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Go here: &lt;a href=&#34;http://www.openni.org/Downloads/OpenNIModules.aspx&#34;&gt;http://www.openni.org/Downloads/OpenNIModules.aspx&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Download Unstable Binary for MacOSX&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sudo ./install.sh&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&#34;install-nite-middleware-for-openni&#34;&gt;&lt;strong&gt;Install NITE middleware (for OpenNI)&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Go here: &lt;a href=&#34;http://www.openni.org/Downloads/OpenNIModules.aspx&#34;&gt;http://www.openni.org/Downloads/OpenNIModules.aspx&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Download Unstable MIDDLEWARE of NITE for OSX&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sudo ./install.sh&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&#34;install-pyopenni&#34;&gt;&lt;strong&gt;Install PyOpenNI&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;p&gt;Be aware that on OSX, PyOpenNI requires a framework build of python 2.7+ and that you must build it for x86_64 specifically. Also, I was having major problems with cmake properly finding the python includes location. I had to suggest a fix, so &lt;a href=&#34;https://github.com/jmendeth/PyOpenNI/issues/16#issuecomment-6515678&#34;&gt;please see here for the necessary corrections&lt;/a&gt;. I have referenced a patched fork of the repository below.&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color: #bb60d5&#34;&gt;CPPFLAGS&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;-arch x86_64&amp;quot;&lt;/span&gt;
-git clone git://github.com/justinfx/PyOpenNI.git
-mkdir PyOpenNI-build
-&lt;span style=&#34;color: #007020&#34;&gt;cd&lt;/span&gt; PyOpenNI-build
-cmake -D &lt;span style=&#34;color: #bb60d5&#34;&gt;PYTHON_INCLUDE_DIR&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Headers ../PyOpenNI
-make
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;copy the lib/openni.so module to the python2.7 site-packages&lt;/p&gt;
-
-&lt;h4 id=&#34;span-style-text-decoration-underline-examples-span&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Examples&lt;/span&gt;&lt;/h4&gt;
-
-&lt;p&gt;Once you have everything installed, you can try out the examples that are included both in the NITE source location that you downloaded and also in the PyOpenNI source location:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;NITE/Samples&lt;/li&gt;
-&lt;li&gt;PyOpenNI/examples&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div&gt;
-  I also tried out ofxKinect (&lt;a href=&#34;https://github.com/ofTheo/ofxKinect&#34;&gt;github.com/ofTheo/ofxKinect&lt;/a&gt;) on the side, which is an addon for  &lt;a href=&#34;http://www.openframeworks.cc/&#34;&gt;OpenFrameworks&lt;/a&gt;. This is kind of a separate path than the OpenNI stack. I would say its more like an advanced offering of libfreenect. Using the included example, I recorded a 3D point cloud that is built on the fly from the RGB and depth data:
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;div class=&#34;embed video-player&#34;&gt;
-	&lt;iframe class=&#34;youtube-player&#34; 
-			type=&#34;text/html&#34; 
-			width=&#34;640&#34; height=&#34;385&#34; 
-			src=&#34;http://www.youtube.com/embed/vICLgxnZ1Bs&#34; 
-			allowfullscreen 
-			frameborder=&#34;0&#34;&gt;
-	&lt;/iframe&gt;
-&lt;/div&gt;
-
-
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-</description>
+      <description>A recent project of mine involves research and development with an XBOX 360 Kinect Sensor. Being a python guy, I started searching for python bindings to some OSX-supported framework. When you just get started looking into this area it can be a little confusing. There are a number of layers to the software stack to enable one to accomplish anything meaningful. This is just a short and general blog post outlining the basics of what I have discovered thus far, to help anyone else that might also be getting started.</description>
     </item>
-    
     
   </channel>
 </rss>

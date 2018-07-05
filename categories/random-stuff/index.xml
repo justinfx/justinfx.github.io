@@ -1,290 +1,58 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>JustinFX.com</title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/categories/random-stuff/index.xml</link>
+    <title>Random Stuff on JustinFX.com</title>
+    <link>http://justinfx.com/categories/random-stuff/</link>
+    <description>Recent content in Random Stuff on JustinFX.com</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>Justin Israel</copyright>
+    <lastBuildDate>Wed, 19 Dec 2012 00:00:00 +0000</lastBuildDate>
     
-    <copyright>2018 Justin Israel</copyright>
-    <updated>2006-01-02 15:04:05 &#43;0000 MST</updated>
+	<atom:link href="http://justinfx.com/categories/random-stuff/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>South Park “going-away” book gift</title>
       <link>http://justinfx.com/2012/12/19/south-park-going-away-book-gift/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Wed, 19 Dec 2012 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2012/12/19/south-park-going-away-book-gift/</guid>
-      <description>&lt;p&gt;On my last day of work at South Park Studios, my co-worker Tory gave me a present. It&amp;#8217;s a book that collects together a history of doodles and graphics, capturing significant moments during my 4 year run with the team.&lt;/p&gt;
-
-&lt;p&gt;Tory tends to represent our team as dog characters. I can be identified usually by the pierced chin. Much of this content refers to inside jokes, but I feel it also has a number of generally hilarious imagery.&lt;/p&gt;
-
-&lt;p&gt;Thank you, Tory!&lt;/p&gt;
-
-&lt;div style=&#39;position: relative; padding-bottom: 101%; height: 0; overflow: hidden;&#39;&gt;&lt;iframe id=&#39;iframe&#39; src=&#39;//flickrit.com/slideshowholderpicasa.php?height=100&amp;size=big&amp;setId=114971272077029635708/SouthParkGoingAwayBook&amp;click=true&amp;credit=2&amp;theme=1&amp;thumbnails=0&amp;transition=0&amp;layoutType=responsive&amp;sort=0&#39; scrolling=&#39;no&#39; frameborder=&#39;0&#39; style=&#39;width:100%; height:100%; position: absolute; top:0; left:0;&#39; &gt;&lt;/iframe&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;
-&lt;br&gt;&lt;/p&gt;
-</description>
+      <description>On my last day of work at South Park Studios, my co-worker Tory gave me a present. It&amp;#8217;s a book that collects together a history of doodles and graphics, capturing significant moments during my 4 year run with the team.
+Tory tends to represent our team as dog characters. I can be identified usually by the pierced chin. Much of this content refers to inside jokes, but I feel it also has a number of generally hilarious imagery.</description>
     </item>
-    
-    
     
     <item>
       <title>Apple Macbooks and Unexplainable LCD Screen Flicker</title>
       <link>http://justinfx.com/2011/12/05/apple-macbooks-and-unexplainable-lcd-flicker/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Mon, 05 Dec 2011 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2011/12/05/apple-macbooks-and-unexplainable-lcd-flicker/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2011/12/bmacbook_flicker.png&#34; alt=&#34;&#34; title=&#34;Macbook Pro flicker&#34; width=&#34;490&#34; height=&#34;268&#34; class=&#34;alignnone size-full wp-image-395&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I had just received my &lt;a href=&#34;http://www.bhphotovideo.com/c/product/756789-REG/Apple_MC721LL_A_15_4_MacBook_Pro_Notebook.html&#34;&gt;brand new MacBook Pro&lt;/a&gt; a few days ago. Amazing machine. Probably the best laptop I have ever laid my hands upon. It was the early Feb 2011 model so I got a crazy good deal. But something caught my eye that I just had to investigate&amp;#8230;&lt;/p&gt;
-
-&lt;p&gt;I&amp;#8217;m a bit obsessive when it comes to small issues that I can&amp;#8217;t resolve, and this is just still bothering me. I noticed that when I smooth scroll (trackpad or smooth wheel logitech mouse) on such content as webpages, or Mail, that there is a flicker in the display of text and context. It depends on the size and orientation of the content, whether it will flicker more or less. My eyes just couldn&amp;#8217;t ignore it and I figured it couldn&amp;#8217;t possibly be normal functionality. Thus, step one of my problem solving began: Google search.&lt;/p&gt;
-
-&lt;p&gt;My search turned up a number of similar complaints to both &lt;a href=&#34;http://www.apple.com/macbookpro/&#34;&gt;MacBook Pro&lt;/a&gt; and &lt;a href=&#34;http://www.apple.com/macbookair/&#34;&gt;Air&lt;/a&gt; models, such as this discussion: &lt;a href=&#34;https://discussions.apple.com/thread/2645516?start=0&amp;amp;tstart=0&#34;&gt;https://discussions.apple.com/thread/2645516?start=0&amp;amp;tstart=0&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;It seemed the problem was not just limited to my specific early 2011 Macbook Pro. Suggestions ranged from resetting the PRAM (holding cmd+option+p+r for a couple of reboot cycles), to toggling the screen through display resolutions, to adjusting brightness of the display. Nothing seemed to make much of a difference to me.&lt;/p&gt;
-
-&lt;h4 id=&#34;inversion-pixel-walk&#34;&gt;Inversion (pixel-walk)&lt;/h4&gt;
-
-&lt;p&gt;Googling also turned up a reference to this site, which offers various types of LCD tests: &lt;a href=&#34;http://www.lagom.nl/lcd-test/inversion.php&#34;&gt;http://www.lagom.nl/lcd-test/inversion.php&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;According to this site, its normal to have a slight flicker in one box. And heavier flickering suggests voltage alignment issues in the LCD display. Using this test, I tried it on a number of Apple product configurations. Here is a collection of my findings:&lt;/p&gt;
-
-&lt;table class=&#34;sample&#34;&gt;
-  &lt;tr&gt;
-    &lt;th width=&#34;170&#34; scope=&#34;col&#34;&gt;
-      Device
-    &lt;/th&gt;
-    
-    &lt;th width=&#34;137&#34; scope=&#34;col&#34;&gt;
-      Display
-    &lt;/th&gt;
-    
-    &lt;th width=&#34;241&#34; scope=&#34;col&#34;&gt;
-      Scrolling
-    &lt;/th&gt;
-    
-    &lt;th width=&#34;233&#34; scope=&#34;col&#34;&gt;
-      Not Scrolling
-    &lt;/th&gt;
-  &lt;/tr&gt;
-  
-  &lt;tr&gt;
-    &lt;td&gt;
-      Macbook Pro (early 2011)
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      15&#34; 1440&amp;#215;900
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      Heavy multi-color flickering in all boxes
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      At least 2 boxes always lightly flickering
-    &lt;/td&gt;
-  &lt;/tr&gt;
-  
-  &lt;tr&gt;
-    &lt;td&gt;
-      Mac Pro MacPro4,1 (2009)
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      24&#34; Cinema Display
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      Light amount of flickering in all boxes
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      No flicker
-    &lt;/td&gt;
-  &lt;/tr&gt;
-  
-  &lt;tr&gt;
-    &lt;td&gt;
-      Mac Pro MacPro5,1 (2010)
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      27&#34; LED Cinema Display
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      No flicker
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      Very light flicker in box 7a
-    &lt;/td&gt;
-  &lt;/tr&gt;&lt;caption&gt; 
-  
-  &lt;a href=&#34;http://www.lagom.nl/lcd-test/inversion.php&#34;&gt;Inversion (pixel-walk)&lt;/a&gt; test results on LCD displays&lt;br /&gt; &lt;/caption&gt;
-&lt;/table&gt;
-
-&lt;h4 id=&#34;apple-support&#34;&gt;Apple Support&lt;/h4&gt;
-
-&lt;p&gt;After speaking to support over the phone, they suggested that I go into the store for more help. When I got to the store and started speaking with a tech at the Genius Bar, he had never heard of this issue before. But once I showed him an example on both news.google.com, and in my Apple Mail, he definitely acknowledged that its noticeable. He then went off into the back to research the issue a bit.&lt;/p&gt;
-
-&lt;p&gt;When the tech came back he said that he had found no outstanding information from Apple about this issue. A second tech even came and looked at the issue, and had no explanation for it.&lt;/p&gt;
-
-&lt;p&gt;I went around the store and checked web page scrolling on 13&amp;#8243; MacBook Airs, and 13&amp;#8243;, 15&amp;#8243;, and 17&amp;#8243; MacBook Pro models, with and without the higher resolution LCD display options. All models exhibited the same flicker during scrolling. My final recommendation from the stumped Apple tech was that it could be an issue with Lion and its rendering of fonts, or whatever, and that I could either return my laptop, or hold out for some kind of fix from Apple. Basically, no idea.&lt;/p&gt;
-
-&lt;p&gt;My question is&amp;#8230; Am I being overly sensitive to this display flicker? I figure I can&amp;#8217;t be the only one, as per the discussion lists of other users that notice the problem. Some of my friends with the same laptop said they have never really noticed until I pointed it out. I just wonder why such a fantastic laptop would exhibit this visual artifact, and whether it is something I should just accept as being normal?&lt;/p&gt;
-</description>
+      <description>I had just received my brand new MacBook Pro a few days ago. Amazing machine. Probably the best laptop I have ever laid my hands upon. It was the early Feb 2011 model so I got a crazy good deal. But something caught my eye that I just had to investigate&amp;#8230;
+I&amp;#8217;m a bit obsessive when it comes to small issues that I can&amp;#8217;t resolve, and this is just still bothering me.</description>
     </item>
-    
-    
     
     <item>
       <title>Failed… hard</title>
       <link>http://justinfx.com/2010/01/11/failed-hard/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Tue, 12 Jan 2010 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2010/01/11/failed-hard/</guid>
       <description>&lt;p&gt;I never thought I had known such a real sense of failure until today, when a system diagnostic became intent on showing me just how hard of a failure we will be experiencing together.&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;div id=&#34;attachment_47&#34; style=&#34;width: 650px&#34; class=&#34;wp-caption alignnone&#34;&gt;
-  &lt;a href=&#34;http://justinfx.com/wp-content/uploads/2010/01/IMG950087.jpg&#34; rel=&#34;lightbox[46]&#34;&gt;&lt;img class=&#34;size-full wp-image-47&#34; title=&#34;IMG950087&#34; src=&#34;http://justinfx.com/wp-content/uploads/2010/01/IMG950087.jpg&#34; alt=&#34;&#34; width=&#34;640&#34; height=&#34;480&#34; /&gt;&lt;/a&gt;
-  
-  &lt;p class=&#34;wp-caption-text&#34;&gt;
-    The hardest system fail ever
-  &lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;This is probably the hardest system failure I have ever felt.&lt;/p&gt;
-
-&lt;p&gt;The system failed so hard, I was actually sent home from work for the day, and the system called my mom on the phone to inform her just how much of a failure this was. They scheduled a Parent-System conference for next week.&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
-    
-    
     
     <item>
       <title>My fake grandmother…</title>
       <link>http://justinfx.com/2009/11/18/my-fake-grandmother/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Wed, 18 Nov 2009 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2009/11/18/my-fake-grandmother/</guid>
       <description>&lt;p&gt;This is something that started back in 2006, when I received an email from one Miriam Israel. This Miriam claimed to be my grandmother, and proceeded to ask about details in my life that were not my details, and not my life. I thought a simple case of mistaken identity was made and informed her briefly that she had the wrong person. And I asked her to please remove me from her address book. Unfortunately, she didn&amp;#8217;t seem to understand, and a few more correspondence took place during that year. I had forgotten about it until today, when it resurfaced. When I looked back across all the based mails, I realized it was kinda funny. So here it is.&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;I actually do not have the first original mail and my reply. But you will get the idea. She asked me a bunch of stuff, and I replied with something like &amp;#8220;Sorry. I&amp;#8217;m not your grandson. Wrong person. Please remove me from your address book.&amp;#8221;. Also, there were a few times when I just didn&amp;#8217;t respond, and instead I bounced the mail so it looked like a wrong address. The following are the rest of the emails, after the first one.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;from: Miriam Israel
-to: justinisrael &amp;lt;justinisrael@gmail.com&amp;gt;
-date: Fri, Sep 29, 2006 at 2:58 AM
-
-Dear Justin
-
-Received your email.  Why?  What is wrong?  Why areyu s angry?
-
-I WILL NOT ever remove you from my address book – your name is engraved on my heart.  AND you will  always be related to me and all the family here in South Africa and also to te family in Tampa.
-
-Wish you good health, strength and courage and success.  May the coming year be wonderful, better than the previous one.  Love also from Charlene and all of us here.
-
-Love you as always,  hug and kisses for Alex.   Grandma
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;from: Justin Israel &amp;lt;justinisrael@gmail.com&amp;gt;
-to: Miriam Israel
-date: Sun, Oct 1, 2006 at 10:07 AM
-
-Miriam,
-
-These are not words of anger towards you… the clear fact is, we have no relation. You have me mixed up with someone else, possibly another Justin Israel?
-I do not have any relations in Africa… and for that matter, any living relatives outside of the U.S..
-I appreciate your inquiry as to how ‘Alex’ is doing, but there is no known Alex in my family.
-
-We are NOT related, so please remove me from your emails. If you were actually close to the correct Justin Israel, or this ‘Alex’, you might know the person’s telephone number and how to actually reach your loved ones.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;from: Miriam Israel
-to: justinisrael &amp;lt;justinisrael@gmail.com&amp;gt;
-date: Fri, Nov 10, 2006 at 5:04 AM
-
-Dear Justin, Jill and Alex
-I want toknow if Alex has still got  jerseys which I made for him.  Do any still fit him?  What size clothes do you buy for him?  2/3  or 3/4 years?  I made him several more but the maid we had stole them plus other things as well.   I bought more wool today to make him something, so that he will have it,from me with love, before the cold hits you.   How is he doing?  Photographs please!
-
-My arthritis is very bad.  My neck, back, hands and legs are affected, but I still keep on doing things.  It is very hot now with quite a lot of rain.  Errol and Hadassa ae going to Connecticut for 10 days for rabbi’s conference for Aish Hatorah.  She will post the jersey to you P.G.  Ari finished his last end of the year exams.  He is exhausted – he has worked very hard.  Lisa is still writing final matric exams and should be finished in a week.
-
-It is almost shabbos so will end with good wishes and love to all.  It would be nice to have an email from you – with answers to my questions.  Please ask Marty to be in touch with me.  Is Mommy well?
-
-As always, with warm love,
-Grandma.
-
-How are you Justin, and what is happening?.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;from: Miriam Israel
-to: justinisrael &amp;lt;justinisrael@gmail.com&amp;gt;
-date: Tue, Dec 5, 2006 at 9:43 AM
-
-Dear Justin,
-Just got your email, only one.  I did not receive theone with Alex’s size and measurement.  Has the package arrived yet?  When it does, please let meknow how the jersey fits Alex.  How are you all?  Let me know what Alex does, says, does at school.  Do you ever take him to shul? If not then shame on you.
-Did I tellyou four months ago that Leanne had twins, boy and girl at 26 weeks.  They wereminute.  Had to be in ICU for three months.  They have beenhome now for one month.  Still verysmall but puttingon weight and crying crying crying.  Leanne does not get any sleep as she is busy with them all day.  She does not have a maid.  Suzanne and Elise help her when they can.  They are both working.  Suzanne is leaving her teaching post this month.  She will teach privately at home, needs the money.  They are called Binjamin (in Hebrew) and Batya after Leanne’s father.
-Hadassa and Errol leave N.York tomorrow and will be home P.G. on Thursday.  Pity you could not see each other!
-Please keep in touch. Hope you enjoyed your birthday.  Wish you many more happy, healthy and successful years to come.
-With much love and hugs for Alex and you both.   
-Grandma.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;from: Justin Israel &amp;lt;justinisrael@gmail.com&amp;gt;
-to: Miriam Israel
-date: Wed, Dec 6, 2006 at 9:12 AM
-
-Oh dearest Grandma,
-It pain us so much to say, that poor little Alex has lost both of his legs.
-His size is now only 3 feet tall, and he must be pulled in a small radio flyer wagon that we had found at a garage sale.
-We are looking for the money to buy him robotic legs, similar to the movie Robocop, but this procedure is expensive, and it does not come with the gun holster, like in the movie.
-Please mourn this tragedy with us.
-Not your relative,
-Justin
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;from: Miriam Israel
-to: justinisrael &amp;lt;justinisrael@gmail.com&amp;gt;
-date: Mon, Dec 25, 2006 at 7:12 AM
-
-Did you send this?
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;from: Justin Israel &amp;lt;justinisrael@gmail.com&amp;gt;
-to: Miriam Israel
-date: Mon, Dec 25, 2006 at 5:25 PM
-
-Ah yes.
-
-Yes I did send this. Did you finally receive it?
-Are you slightly confused? Well maybe if you would listen to people instead of rambling on and living in a fantasy, you might have realized much earlier that I am not related to you, and that you have an incorrect email address. I decided, once you persisted to email me, that I would get your attention once and for all, and make you understand that you are not my relative.
-Glad you finally figured this out.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2009/11/miriam.jpg&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
-	&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2009/11/miriam-300x201.jpg&#34; title alt&gt;
-&lt;/a&gt;
-
-
-&lt;hr /&gt;
-
-&lt;h4 id=&#34;update&#34;&gt;Update:&lt;/h4&gt;
-
-&lt;p&gt;My co-worker, could not let this situation go in her mind, and has hunted down the real Justin Israel: &lt;a href=&#34;http://www.facebook.com/justinisrael2&#34;&gt;http://www.facebook.com/justinisrael2&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I totally beat him to getting the first facebook perma-link for our name.&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
-    
     
   </channel>
 </rss>

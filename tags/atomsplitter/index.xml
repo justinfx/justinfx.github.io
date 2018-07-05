@@ -1,40 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>JustinFX.com</title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/atomsplitter/index.xml</link>
+    <title>Atomsplitter on JustinFX.com</title>
+    <link>http://justinfx.com/tags/atomsplitter/</link>
+    <description>Recent content in Atomsplitter on JustinFX.com</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>Justin Israel</copyright>
+    <lastBuildDate>Fri, 08 Oct 2010 00:00:00 +0000</lastBuildDate>
     
-    <copyright>2018 Justin Israel</copyright>
-    <updated>2006-01-02 15:04:05 &#43;0000 MST</updated>
+	<atom:link href="http://justinfx.com/tags/atomsplitter/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>AtomSplitter source code released</title>
       <link>http://justinfx.com/2010/10/08/atomsplitter-source-code-released/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Fri, 08 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2010/10/08/atomsplitter-source-code-released/</guid>
       <description>&lt;p&gt;We finally decided to release the source code for AtomSplitter, since we were getting some feedback that the application builds weren&amp;#8217;t 100% working on every possible system.&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;update-1&#34;&gt;Update #1:&lt;/h3&gt;
-
-&lt;p&gt;I have posted the AtomSplitter project on github now: &lt;a href=&#34;https://github.com/justinfx/AtomSplitter&#34;&gt;https://github.com/justinfx/AtomSplitter&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Project site:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/AtomSplitter&#34;&gt;http://redmine.justinfx.com/projects/atomsplitter&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The current version is 1.6.2,  which adds the cmivfx chatroom to a tab, and some minor bug fixes. More info:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.6&#34;&gt;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.6&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
-    
     
   </channel>
 </rss>

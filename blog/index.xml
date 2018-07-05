@@ -1,1083 +1,96 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>JustinFX.com</title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/blog/index.xml</link>
+    <title>Blogs on JustinFX.com</title>
+    <link>http://justinfx.com/blog/</link>
+    <description>Recent content in Blogs on JustinFX.com</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>Justin Israel</copyright>
+    <lastBuildDate>Tue, 20 Feb 2018 13:48:07 +0000</lastBuildDate>
     
-    <copyright>2018 Justin Israel</copyright>
-    <updated>2006-01-02 15:04:05 &#43;0000 MST</updated>
+	<atom:link href="http://justinfx.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>seqls &amp; seqinfo (gofileseq) binary releases</title>
       <link>http://justinfx.com/2018/02/20/gofileseq-binary/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Tue, 20 Feb 2018 13:48:07 +0000</pubDate>
       
       <guid>http://justinfx.com/2018/02/20/gofileseq-binary/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png&#34; style=&#34;width:100px; float:left;&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/gofileseq&#34; title=&#34;gofileseq&#34;&gt;gofileseq&lt;/a&gt; is a Go language library for parsing file sequence strings commonly used in VFX and animation applications.&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;p style=&#34;clear:both&#34;&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;sequences-of-files-follow-a-pattern-similar-to&#34;&gt;Sequences of files follow a pattern similar to&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;/path/to/some/file_foo.0100.exr
-/path/to/some/file_foo.1-100#.jpg
-/path/to/some/file_foo.1-100@@@.tif
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;support-range-formats&#34;&gt;Support range formats&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;       Standard: 1-10
-    Comma Delim: 1-10,10-20
-        Chunked: 1-100x5
-         Filled: 1-100y5
-      Staggered: 1-100:3 (1-100x3, 1-100x2, 1-100)
-Negative frames: -10-100
-        Padding: #=4 padded, @=single pad
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;tools&#34;&gt;Tools&lt;/h4&gt;
-
-&lt;p&gt;Included with the library are two command line utilities:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/gofileseq/tree/master/cmd/seqls&#34;&gt;seqls&lt;/a&gt; - An &lt;code&gt;ls&lt;/code&gt;-style tool for searching and listing file sequences&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ seqls -r 
-
-file_foo.0100.exr
-subdir/file_foo.1-100#.jpg
-subdir2/file_foo.1-100@@@.tif
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/gofileseq/tree/master/cmd/seqinfo&#34;&gt;seqinfo&lt;/a&gt; - Parses one or more sequence pattern strings and list plain text or json info&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ seqinfo --json &amp;quot;/path/to/file.exr&amp;quot; &amp;quot;/path/to/seq.-10-200x2@@.exr&amp;quot;
-{
-    &amp;quot;/path/to/file.exr&amp;quot;: {
-        &amp;quot;error&amp;quot;: &amp;quot;&amp;quot;,
-        &amp;quot;string&amp;quot;: &amp;quot;/path/to/file.exr&amp;quot;,
-        &amp;quot;dir&amp;quot;: &amp;quot;/path/to/&amp;quot;,
-        &amp;quot;base&amp;quot;: &amp;quot;file&amp;quot;,
-        &amp;quot;range&amp;quot;: &amp;quot;&amp;quot;,
-        &amp;quot;pad&amp;quot;: &amp;quot;&amp;quot;,
-        &amp;quot;ext&amp;quot;: &amp;quot;.exr&amp;quot;,
-        &amp;quot;start&amp;quot;: 0,
-        &amp;quot;end&amp;quot;: 0,
-        &amp;quot;length&amp;quot;: 1,
-        &amp;quot;zfill&amp;quot;: 0,
-        &amp;quot;hasRange&amp;quot;: false
-    },
-    &amp;quot;/path/to/seq.-10-200x2@@.exr&amp;quot;: {
-        &amp;quot;error&amp;quot;: &amp;quot;&amp;quot;,
-        &amp;quot;string&amp;quot;: &amp;quot;/path/to/seq.-10-200x2@@.exr&amp;quot;,
-        &amp;quot;dir&amp;quot;: &amp;quot;/path/to/&amp;quot;,
-        &amp;quot;base&amp;quot;: &amp;quot;seq.&amp;quot;,
-        &amp;quot;range&amp;quot;: &amp;quot;-10-200x2&amp;quot;,
-        &amp;quot;pad&amp;quot;: &amp;quot;@@&amp;quot;,
-        &amp;quot;ext&amp;quot;: &amp;quot;.exr&amp;quot;,
-        &amp;quot;start&amp;quot;: -10,
-        &amp;quot;end&amp;quot;: 200,
-        &amp;quot;length&amp;quot;: 106,
-        &amp;quot;zfill&amp;quot;: 2,
-        &amp;quot;hasRange&amp;quot;: true
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As of recent, the gofileseq project has adopted the use of the &lt;a href=&#34;https://goreleaser.com/&#34;&gt;goreleaser&lt;/a&gt; tool, which means that &lt;a href=&#34;https://github.com/justinfx/gofileseq/releases&#34;&gt;tagged releases&lt;/a&gt; now automatically include cross-compiled binaries of the tools for linux, osx, and windows.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/gofileseq/releases&#34;&gt;&lt;img src=&#34;https://badge.fury.io/go/github.com%2Fjustinfx%2Fgofileseq.svg&#34; alt=&#34;Latest Release&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;c&#34;&gt;C++&lt;/h4&gt;
-
-&lt;p&gt;There is also a &lt;a href=&#34;https://github.com/justinfx/gofileseq/tree/master/cpp-port&#34; title=&#34;C++ port&#34;&gt;C++ port&lt;/a&gt; of gofileseq within the repository, for those C++ devs that need to work with VFX-style file sequence patterns.  Doxygen API docs are now automatically built from the master branch: &lt;a href=&#34;http://justinfx.com/gofileseq/cpp&#34;&gt;justinfx.com/gofileseq/cpp&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
-    
-    
     
     <item>
       <title>Python Video Tutorials Released Free</title>
       <link>http://justinfx.com/2017/03/22/python-tutorials-released-free/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Wed, 22 Mar 2017 22:39:43 +1300</pubDate>
       
       <guid>http://justinfx.com/2017/03/22/python-tutorials-released-free/</guid>
       <description>&lt;p&gt;In 2011 and 2012 I had released 3 commercial Python training tutorials, using Maya as a target platform.
 Now enjoy them free of charge!&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#python-for-maya-artists-volume-1&#34;&gt;Python For Maya Artists - Volume 1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#python-for-maya-artists-volume-2&#34;&gt;Python For Maya Artists - Volume 2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#pyqt4-ui-development-for-maya&#34;&gt;PyQt4 UI Development for Maya&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;python-for-maya-artists-volume-1&#34;&gt;Python For Maya Artists - Volume 1&lt;/h2&gt;
-
-&lt;div class=&#34;embed video-player&#34;&gt;
-	&lt;iframe class=&#34;youtube-player&#34; 
-			type=&#34;text/html&#34; 
-			width=&#34;640&#34; height=&#34;385&#34; 
-			src=&#34;http://www.youtube.com/embed/PDKxDbt6EGQ&#34; 
-			allowfullscreen 
-			frameborder=&#34;0&#34;&gt;
-	&lt;/iframe&gt;
-&lt;/div&gt;
-
-
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/tutorials/tree/master/Python_For_Maya_Vol_01&#34;&gt;Project material available here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Amazing at Animation? Master of Modeling? Conquistador of Character Rigging?&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;But how is your Python?&lt;/p&gt;
-
-&lt;p&gt;This course brings the talented artist into the fold of the technical-side of Maya. Learn the basics of Python, and its place in your 3D workflow, with visual examples and real world problems. Get a kick-start on adding some automation into your life, and solving common problems in a fraction of the time. By the end of this video, you should have a deeper understanding of one of the languages Maya speaks under the hood, and how to start viewing your scenes in terms of glorious Python code!&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;python-for-maya-artists-volume-2&#34;&gt;Python For Maya Artists - Volume 2&lt;/h2&gt;
-
-&lt;div class=&#34;embed video-player&#34;&gt;
-	&lt;iframe class=&#34;youtube-player&#34; 
-			type=&#34;text/html&#34; 
-			width=&#34;640&#34; height=&#34;385&#34; 
-			src=&#34;http://www.youtube.com/embed/_tqumyujaU4&#34; 
-			allowfullscreen 
-			frameborder=&#34;0&#34;&gt;
-	&lt;/iframe&gt;
-&lt;/div&gt;
-
-
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/tutorials/tree/master/Python_For_Maya_Vol_02&#34;&gt;Project material available here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;If you watched the first video, you now have a good grasp on Python. Sweet. Let&amp;rsquo;s plow through some more involved concepts like python juggernauts!&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;With a working knowledge of the python scripting language, and the Maya Python commands API, we can continue to learn new ways to solve more challenging problems, create complete scripts, and build user interfaces around our tools. We also introduce the Maya Python API; a lower-level interface into Maya.&lt;/p&gt;
-
-&lt;p&gt;This video focuses more on breaking down full scripts, as opposed to typing out syntax. Its jam packaged with information and moves fast to deliver you as much brain food as possible. The first segment of the video transitions from beginning to intermediate level, with the majority of the video being intermediate, and finishing out by touching on advanced concepts. The included project files are abundant, complete, and full of helpful documentation so that you can take your time and learn about each piece of the tools.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;pyqt4-ui-development-for-maya&#34;&gt;PyQt4 UI Development for Maya&lt;/h2&gt;
-
-&lt;div class=&#34;embed video-player&#34;&gt;
-	&lt;iframe class=&#34;youtube-player&#34; 
-			type=&#34;text/html&#34; 
-			width=&#34;640&#34; height=&#34;385&#34; 
-			src=&#34;http://www.youtube.com/embed/X7cO4MzhjKw&#34; 
-			allowfullscreen 
-			frameborder=&#34;0&#34;&gt;
-	&lt;/iframe&gt;
-&lt;/div&gt;
-
-
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/tutorials/tree/master/PyQt4_UI_Development_for_Maya&#34;&gt;Project material available here&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;This tutorial is about learning PyQt4 python bindings for the Qt Framework, and how to introduce new UI elements to Maya as a platform.&lt;/p&gt;
-
-&lt;p&gt;We discuss what comprises a &amp;#8220;Framework&amp;#8221; and a &amp;#8220;GUI Framework&amp;#8221;, and how Qt and PyQt4 work together.&lt;/p&gt;
-
-&lt;h3 id=&#34;getting-started-with-pyqt4&#34;&gt;&lt;strong&gt;Getting Started With PyQt4&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;There are multiple ways of getting a working installation of PyQt4, both for the general system and for Maya. We look into these approaches to get your system up and running to begin working with PyQt4!&lt;/p&gt;
-
-&lt;p&gt;We also talk about what is included, such as command line tools and applications, tips on how to test and learn the code, and how to structure a project.&lt;/p&gt;
-
-&lt;h3 id=&#34;pyqt4-fundamentals&#34;&gt;&lt;strong&gt;PyQt4 Fundamentals&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;Lets get crackin&amp;rsquo; and learn the basics!&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;What is a QObject? What is a QWidget? Common PyQt4 classes are explained in detail&lt;/li&gt;
-&lt;li&gt;Working with the Qt Designer application, to build a UI visually&lt;/li&gt;
-&lt;li&gt;Layouts: Making widgets resize elegantly and stay organized in your design&lt;/li&gt;
-&lt;li&gt;Coordinate space: How do widgets transform in your 2D screen space?&lt;/li&gt;
-&lt;li&gt;QApplication and the Qt Event Loop: The engine that runs your UI&lt;/li&gt;
-&lt;li&gt;Events, Signals, and Slots: How components communicate changes and how the application can respond to changes to make it dynamic&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;general-examples&#34;&gt;&lt;strong&gt;General Examples&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;With an understanding of the framework components, we can begin working with fully functional stand-alone examples.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Common PyQt4 app template&lt;/li&gt;
-&lt;li&gt;Subclassing Widgets: Creating custom functionality to the existing classes provided by PyQt4&lt;/li&gt;
-&lt;li&gt;Dialogs: Raising dialog windows above existing windows, Modal vs Non-modal, and creating forms. We look at different ways to validate the data provided by the user, to these dialog forms.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;pyqt4-and-maya-introduction&#34;&gt;&lt;strong&gt;PyQt4 And Maya Introduction&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;Finally, some Maya action! Maya has a slightly different approach to using PyQt4…&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;How does the QApplication and event loop work?&lt;/li&gt;
-&lt;li&gt;Common Maya PyQt4 app template&lt;/li&gt;
-&lt;li&gt;Looking at the Maya API&amp;rsquo;s MQtUtil class&lt;/li&gt;
-&lt;li&gt;The sip module: Helping us translate between Maya&amp;rsquo;s Qt and our own PyQt4 code&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;replicating-maya-s-ui-components&#34;&gt;&lt;strong&gt;Replicating Maya&amp;rsquo;s UI Components&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;What better way to see examples of creating UI for Maya than to replicate some existing functionality? This gives us the opportunity expand with custom functionality&lt;/p&gt;
-
-&lt;p&gt;In this chapter we will take two different UI components in Maya, and do a basic custom version of our own, and show to how link them up to Maya&amp;rsquo;s own callbacks.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Some Features Of This Chapter Include&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The QTableWidget&lt;/li&gt;
-&lt;li&gt;Model / View separation with QTreeView&lt;/li&gt;
-&lt;li&gt;Docking windows into the Maya interface&lt;/li&gt;
-&lt;li&gt;Mixing together PyQt4, the Maya API, Maya commands, and callbacks&lt;/li&gt;
-&lt;li&gt;Sorting model data&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;customizations&#34;&gt;&lt;strong&gt;Customizations&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;A button can be a button, and a slider might look alright in its stock form, but sometimes we want to customize the look of our widgets. This chapter introduces multiple ways of achieving custom looks to our components&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Stylin&amp;rsquo; Style-sheets: Use CSS-like syntax for applying style sheets to widgets&lt;/li&gt;
-&lt;li&gt;Painting By &amp;hellip; Paint events: For even more control, we can tell a widget exactly how to draw itself on the screen. We will look at two different examples of how to use custom painting.&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
-    
-    
     
     <item>
       <title>C&#43;&#43; Bindings For A Go Library</title>
       <link>http://justinfx.com/2016/05/14/cpp-bindings-for-go/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Sat, 14 May 2016 15:53:48 +1200</pubDate>
       
       <guid>http://justinfx.com/2016/05/14/cpp-bindings-for-go/</guid>
       <description>&lt;p&gt;This is an overview describing my approach to creating C++ bindings around a Go library.&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;a-bit-about-wrapping-c-c&#34;&gt;A bit about wrapping C/C++&lt;/h2&gt;
-
-&lt;p&gt;I&amp;rsquo;ve had some past experience in writing cgo bindings on top of C and C++ libraries.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Author&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/justinfx/openimageigo&#34;&gt;OpenImageigo&lt;/a&gt; and &lt;a href=&#34;https://github.com/justinfx/opencolorigo&#34;&gt;OpenColorigo&lt;/a&gt; - Color pipeline and image manipulation and conversion libraries relevant to the Visual Effects industry. These cgo libraries wrap C++.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Contributor&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gographics/imagick&#34;&gt;imagick&lt;/a&gt; - Bindings on top of the C-API for ImageMagick; Image manipulation&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/wkschwartz/pigosat&#34;&gt;pigosat&lt;/a&gt; - Bindings on top of Picosat C-API; Satisfiability solver.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;C libraries are more straight-forward to wrap, because Go can access them directly. C++, on the other hand, requires a &amp;ldquo;shim&amp;rdquo; layer written in C. This layer has to handle the calls between Go and the target C++ library. An example would be to treat a C++ class as an opaque pointer and provide C functions that accept the pointer and delegate to the C++ methods. Or to convert between vectors and arrays:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;ref:&lt;/em&gt; &lt;a href=&#34;https://github.com/justinfx/openimageigo/blob/master/cpp/oiio.h&#34;&gt;&lt;em&gt;github.com/justinfx/openimageigo/cpp/oiio.h&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// oiio.h&lt;/span&gt;
-&lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\#&lt;/span&gt;ifdef __cplusplus
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;extern&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;C&amp;quot;&lt;/span&gt; {
-&lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\#&lt;/span&gt;endif
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;typedef&lt;/span&gt; &lt;span style=&#34;color: #902000&#34;&gt;void&lt;/span&gt; ImageInput;
-
-&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// imageinput.cpp&lt;/span&gt;
-ImageInput&lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt; ImageInput_Open(&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color: #902000&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt; filename, &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;const&lt;/span&gt; ImageSpec _config) {
-std&lt;span style=&#34;color: #666666&#34;&gt;::&lt;/span&gt;string s_filename(filename);
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;return&lt;/span&gt; (ImageInput_) OIIO&lt;span style=&#34;color: #666666&#34;&gt;::&lt;/span&gt;ImageInput&lt;span style=&#34;color: #666666&#34;&gt;::&lt;/span&gt;open(
-s_filename,
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;static_cast&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;const&lt;/span&gt; OIIO&lt;span style=&#34;color: #666666&#34;&gt;::&lt;/span&gt;ImageSpec&lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&amp;gt;&lt;/span&gt;(config));
-}
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color: #902000&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt; ImageInput_format_name(ImageInput &lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;in) {
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;static_cast&lt;/span&gt;[OIIO&lt;span style=&#34;color: #666666&#34;&gt;::&lt;/span&gt;ImageInput&lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;](OIIO&lt;span style=&#34;color: #666666&#34;&gt;::&lt;/span&gt;ImageInput&lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;)(in)&lt;span style=&#34;color: #666666&#34;&gt;-&amp;gt;&lt;/span&gt;format_name();
-}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;As you can see, we make an opaque &lt;code&gt;ImageInput\*&lt;/code&gt; available to Go, and create a shim layer that is C compatible. &lt;code&gt;ImageInput_Open()&lt;/code&gt; is a factory function that wraps the static C++ &lt;code&gt;ImageInput::open()&lt;/code&gt; equivalent. We just cast between our pointer and theirs (OIIO&amp;rsquo;s), in order to call functions and methods.&lt;/p&gt;
-
-&lt;p&gt;But like I said, these are Go bindings on top of C/C++ libraries. What about exposing a C++ library on top of a pure Go library?&lt;/p&gt;
-
-&lt;h2 id=&#34;exposing-go-libraries-to-c&#34;&gt;Exposing Go libraries to C++&lt;/h2&gt;
-
-&lt;p&gt;I had previously written a Go library called &lt;a href=&#34;https://github.com/justinfx/gofileseq&#34;&gt;gofileseq&lt;/a&gt;. This library also caters to the Visual Effects industry, providing a way to build, parse, and find sequences of files, and frame ranges. Such as dealing with:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/path/to/some/file_foo.0100.exr
-/path/to/some/file_foo.1-100#.jpg
-/path/to/some/file_foo.1-50x2,100-200x3@@@.tif
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;gofileseq&lt;/code&gt; library is a port of a python equivalent, &lt;a href=&#34;https://github.com/sqlboy/fileseq&#34;&gt;fileseq&lt;/a&gt;, which I help to maintain. If the parsing rules need to be updated in the Python library, they should also be updated to match in the Go library, to maintain compatibility.&lt;/p&gt;
-
-&lt;p&gt;I had been asked more than once by colleagues if a C++ version of fileseq was available. It wasn&amp;rsquo;t, and I also didn&amp;rsquo;t want to have to maintain a 3rd standalone port that should follow the same behavior as the other two. But since the introduction of the &lt;a href=&#34;https://golang.org/doc/go1.5#link&#34;&gt;Go &lt;/a&gt;&lt;code&gt;[-buildmode](https://golang.org/doc/go1.5#link)&lt;/code&gt; flag in 1.5, it has become possible to export functions from Go to C/C++&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// sum.go&lt;/span&gt;
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;package&lt;/span&gt; main
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;C&amp;quot;&lt;/span&gt;
-
-&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;//export sum&lt;/span&gt;
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;func&lt;/span&gt; sum(x, y &lt;span style=&#34;color: #902000&#34;&gt;int&lt;/span&gt;) &lt;span style=&#34;color: #902000&#34;&gt;int&lt;/span&gt; {
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;return&lt;/span&gt; x &lt;span style=&#34;color: #666666&#34;&gt;+&lt;/span&gt; y
-}
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;func&lt;/span&gt; main() {
-
-}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ go build -buildmode=c-shared -o sum.so
-$ ls
-sum.c  sum.go sum.h  sum.so
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now we have a shared library and a header file, to use in our C app&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// sum.c&lt;/span&gt;
-&lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\#&lt;/span&gt;include &lt;span style=&#34;color: #666666&#34;&gt;&amp;lt;&lt;/span&gt;stdio.h&lt;span style=&#34;color: #666666&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\#&lt;/span&gt;include &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;sum.h&amp;quot;&lt;/span&gt;
-
-&lt;span style=&#34;color: #902000&#34;&gt;int&lt;/span&gt; main(&lt;span style=&#34;color: #902000&#34;&gt;void&lt;/span&gt;) {
-
-    &lt;span style=&#34;color: #902000&#34;&gt;int&lt;/span&gt; z &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; sum(&lt;span style=&#34;color: #40a070&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;2&lt;/span&gt;);
-    printf(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;1+2=%d&lt;/span&gt;&lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;&lt;/span&gt;, z);
-    
-    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;;
-
-}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ gcc sum.c sum.so -o sum &amp;amp;&amp;amp; ./sum
-1+2=3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This looks pretty straight-forward, right? It would seem so until you encounter the need to export instances of your types from Go to C, and these types contain pointers to other types. You see, there are certain rules about what you can do when communicating via cgo. And these rules were &lt;a href=&#34;https://golang.org/cmd/cgo/#hdr-Passing_pointers&#34;&gt;made official as off Go 1.6&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Some of those rules are:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;You can pass Go pointers to C, but C should not hang on to them beyond the scope of the call.&lt;/li&gt;
-&lt;li&gt;You can not pass memory to C that contains pointers. That is, a struct which has pointer fields.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;These pose an issue if you want to be able to have your C++ library create instances of objects in Go and hang on to them longer than the Go function call. In the case of &lt;code&gt;gofileseq&lt;/code&gt;, the main two objects are &lt;code&gt;[FileSequence](https://godoc.org/github.com/justinfx/gofileseq#FileSequence)&lt;/code&gt; and &lt;code&gt;[FrameSet](https://godoc.org/github.com/justinfx/gofileseq#FrameSet)&lt;/code&gt;. These are constructed from strings, perform parsing, and maintain private state. So a user would want to construct them and keep them around until they are done calling methods on them. But according to the cgo rules, I can&amp;rsquo;t give a pointer to C++ for it to hang on to indefinitely, and I can&amp;rsquo;t create a C struct in a shim to populate, because there are more internal pointers involved in a &lt;code&gt;FileSequence&lt;/code&gt;. Basically I saw this as a more complex type than just a struct with simple data fields.&lt;/p&gt;
-
-&lt;p&gt;How do I construct these instances for C++? I created package-private maps using generated &lt;code&gt;uint64&lt;/code&gt; keys, and the instances as values. Actually, I wrap the instances up in a struct that also tracks reference counts. This allows C++ to manage the lifetime of the objects.&lt;/p&gt;
-
-&lt;p&gt;The full implementation is located here: &lt;a href=&#34;https://github.com/justinfx/gofileseq/tree/master/cpp&#34;&gt;github.com/justinfx/gofileseq/cpp&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;type&lt;/span&gt; FileSeqId &lt;span style=&#34;color: #902000&#34;&gt;uint64&lt;/span&gt;
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;type&lt;/span&gt; fileSeqRef &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;struct&lt;/span&gt; {
-&lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;fileseq.FileSequence
-refs &lt;span style=&#34;color: #902000&#34;&gt;uint32&lt;/span&gt;
-}
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;type&lt;/span&gt; fileSeqMap &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;struct&lt;/span&gt; {
-lock &lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;sync.RWMutex
-m    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;map&lt;/span&gt;&lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;[FileSeqId&lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;]&lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;fileSeqRef
-rand idMaker
-}
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;type&lt;/span&gt; idMaker &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;interface&lt;/span&gt; {
-Uint64() &lt;span style=&#34;color: #902000&#34;&gt;uint64&lt;/span&gt;
-}
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;func&lt;/span&gt; (m &lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;frameSetMap) Incref(id FrameSetId) {
-&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// Inc refs&lt;/span&gt;
-}
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;func&lt;/span&gt; (m &lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;frameSetMap) Decref(id FrameSetId) {
-&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// Dec refs&lt;/span&gt;
-&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// If refs == 0, delete from map&lt;/span&gt;
-}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Now when C++ wants to create a &lt;code&gt;FileSequence&lt;/code&gt;, they can call a &lt;code&gt;New&lt;/code&gt; function which will create an instance, add it to the map, and return a uint64 id handle&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;//export FileSequence_New&lt;/span&gt;
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;func&lt;/span&gt; FileSequence_New(frange &lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;C.char) (FileSeqId, Error) {
-fs, e &lt;span style=&#34;color: #666666&#34;&gt;:=&lt;/span&gt; fileseq.NewFileSequence(C.GoString(frange))
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;if&lt;/span&gt; e &lt;span style=&#34;color: #666666&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;nil&lt;/span&gt; {
-&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// err string is freed by caller&lt;/span&gt;
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;, C.CString(e.Error())
-}
-
-    id &lt;span style=&#34;color: #666666&#34;&gt;:=&lt;/span&gt; sFileSeqs.Add(fs)
-    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;return&lt;/span&gt; id, &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;nil&lt;/span&gt;
-
-}
-
-&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;//export FileSequence_Dirname&lt;/span&gt;
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;func&lt;/span&gt; FileSequence_Dirname(id FileSeqId) &lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;C.char {
-fs, ok &lt;span style=&#34;color: #666666&#34;&gt;:=&lt;/span&gt; sFileSeqs.Get(id)
-&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// caller must free string&lt;/span&gt;
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;if&lt;/span&gt; !ok {
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;return&lt;/span&gt; C.CString(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;)
-}
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;return&lt;/span&gt; C.CString(fs.Dirname())
-}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;You can see here that because this is C++ calling Go, we aren&amp;rsquo;t able to free the C string from Go, as the string needs to outlive the Go call. We just make sure that C++ always frees &lt;code&gt;\*C.char&lt;/code&gt; when it is returned. To make sure I always clean up the &lt;code&gt;char\*&lt;/code&gt; in C++, I made a helper &lt;code&gt;StringProxy&lt;/code&gt; class which wraps it and cleans it up in the destructor:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;ref:&lt;/em&gt; &lt;a href=&#34;https://github.com/justinfx/gofileseq/blob/master/cpp/private/fileseq_p.h#L16&#34;&gt;_github.com/justinfx/gofileseq/cpp/private/fileseq&lt;em&gt;p.h&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;StringProxy&lt;/span&gt; {
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;:&lt;/span&gt;
-StringProxy(&lt;span style=&#34;color: #902000&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt; managed) &lt;span style=&#34;color: #666666&#34;&gt;:&lt;/span&gt; m_data(managed), m_str() {
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;if&lt;/span&gt; (managed &lt;span style=&#34;color: #666666&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #007020&#34;&gt;NULL&lt;/span&gt;) {
-m_str.assign(managed);
-}
-}
-
-    &lt;span style=&#34;color: #666666&#34;&gt;~&lt;/span&gt;StringProxy() {
-        &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;if&lt;/span&gt; (m_data &lt;span style=&#34;color: #666666&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #007020&#34;&gt;NULL&lt;/span&gt;) {
-            free(m_data);
-            m_data &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #007020&#34;&gt;NULL&lt;/span&gt;;
-        }
-    }
-    &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;//...&lt;/span&gt;
-
-};
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;This all ended up working fine! I created some benchmarks to compare fileseq between Python, C++, and Go. The test involved looping 100k times, creating a FileSequence, and calling 4 methods on it.&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color: #902000&#34;&gt;int&lt;/span&gt; n &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #40a070&#34;&gt;100000&lt;/span&gt;;
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color: #902000&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color: #666666&#34;&gt;&amp;lt;&lt;/span&gt; n; &lt;span style=&#34;color: #666666&#34;&gt;++&lt;/span&gt;i) {
-fileseq&lt;span style=&#34;color: #666666&#34;&gt;::&lt;/span&gt;FileSequence fs(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;/path/to/file_name.1-100x2#.ext&amp;quot;&lt;/span&gt;);
-str &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; fs.string();
-str &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; fs.frameRange();
-num &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; fs.start();
-num &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; fs.end();
-}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;pre&gt;&lt;code&gt;Python:  8.0s
-    Go:  1.9s
-   C++:  3.2s
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;There is a bit of overhead in the C++ lib from the fact that they are bindings on top of a Go layer, but I think the win for me is that it is still an acceptable level of performance and I don&amp;rsquo;t have to maintain a 3rd standalone port of fileseq!&lt;/p&gt;
-
-&lt;p&gt;It bothered me a little that I did have to rely on a mutex-guarded static map, so I &lt;a href=&#34;https://groups.google.com/d/topic/golang-nuts/kLRFdycy0yc/discussion&#34;&gt;asked on go-nuts about an alternative approach&lt;/a&gt;. Ian Lance Taylor confirmed that the guarded map approach, with opaque ids as keys, was a completely viable approach to solving this problem. But that in some circumstance it can also be possible to malloc C memory to back Go objects, in which case they are not tracked by Go&amp;rsquo;s GC.&lt;/p&gt;
-
-&lt;p&gt;i.e., something like this:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #002070; font-weight: bold&#34;&gt;fs&lt;/span&gt; :&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;FileSequence)unsafe.Pointer(
-C.malloc(unsafe.Sizeof(FileSequence{})))
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;I tried to apply this approach, but it became really tedious and confusing to figure out how to malloc all of the internal data nested in the types. For instance, &lt;code&gt;FrameSet&lt;/code&gt; has methods that create more data along the way. And I had no idea how to cleanly get it to keep malloc&amp;rsquo;ing memory so the entire structure continues to be 100% managed by C++. So I gave up on trying this route, although I bet it would work for less nested structs.&lt;/p&gt;
-
-&lt;p&gt;If anyone has any suggestions on another way to improve the process of exporting instances of Go objects to C++, I would definitely welcome feedback! And for anyone wanting to make their Go libraries available to C++, I hope this overview has been useful!&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
-    
-    
     
     <item>
       <title>SublimeText Editor and Clang (C&#43;&#43;)</title>
       <link>http://justinfx.com/2016/04/17/sublimetext-editor-and-clang/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Sun, 17 Apr 2016 15:22:33 +1200</pubDate>
       
       <guid>http://justinfx.com/2016/04/17/sublimetext-editor-and-clang/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;My code editor of choice has been &lt;a href=&#34;https://www.sublimetext.com&#34;&gt;SublimeText&lt;/a&gt; for a while now. It is blazing fast for searching and doing matching, replacements, and refactoring. I also love that it is very lightweight, so that I can use it as my default shell &lt;code&gt;$EDITOR&lt;/code&gt;, and also have an alias &lt;code&gt;st&lt;/code&gt; which can easily open files and folders in the current or new Sublime window:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;# Add directory to current sublime
-$ st -a /path/to/src
-# Open a new sublime window, with the current directory
-$ st -n .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sublime is cross-platform, which means I can have the same development environment across Linux and OSX. It also has an amazing python-based plugin framework, which is enriched by the plugin manager and plugin community, &lt;a href=&#34;https://packagecontrol.io/&#34;&gt;PackageControl&lt;/a&gt;. While it is not a full-fledged IDE, because of the availability of so many plugin options, you can get it pretty close to being like an IDE for a number of different languages. Currently I use it for Python, Go, Markdown editing, and C++. This post outlines some simple steps for configuration a SublimeText3 project for use with C++.&lt;/p&gt;
-
-&lt;p&gt;Before we get into the specifics of C++ configuration, let me first give a quick overview of my SublimeText3 setup, across all of my language&amp;hellip;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Anaconda&#34;&gt;Anaconda&lt;/a&gt; - Python language Auto-complete, Goto Definition, and Documentation&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Cython%2B&#34;&gt;Cython+&lt;/a&gt; - Cython language Syntax support&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/GoOracle&#34;&gt;GoOracle&lt;/a&gt; - Go language support for using &amp;ldquo;Oracle&amp;rdquo; tool&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/GoSublime&#34;&gt;GoSublime&lt;/a&gt; - IDE-like support for Go language&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Markdown%20Preview&#34;&gt;Markdown Preview&lt;/a&gt; - Markdown highlighting and previewing&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/MayaSublime&#34;&gt;MayaSublime&lt;/a&gt; - Written by myself; Send Python/MEL code into Maya&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Pretty%20JSON&#34;&gt;PrettyJSON&lt;/a&gt; - Reformatting and validating JSON&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/SideBarEnhancements&#34;&gt;SideBarEnhancements&lt;/a&gt; - Amp up the side bar and context menu&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://packagecontrol.io/packages/ThriftSyntax&#34;&gt;ThriftSyntax&lt;/a&gt; - Syntax highlighting for &lt;a href=&#34;https://thrift.apache.org/&#34;&gt;Apache Thrift&lt;/a&gt; spec files&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;And the ones we will be looking at today, for C++ support:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#clang-complete&#34;&gt;Clang-Complete&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#switch-file-deluxe&#34;&gt;Switch File Deluxe&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#uncrustify&#34;&gt;Uncrustify&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;These steps were performed on an OSX laptop, so you will need to look at the specific README files for Linux/Windows details. I also assume you have installed Package Control, which makes it trivial to install plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;a-name-clang-complete-clang-complete-a&#34;&gt;&lt;a name=&#34;clang-complete&#34;&gt;Clang-Complete&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;OSX already comes with the clang compiler, and this plugin for SublimeText3 allows your source to be compiled on the fly and have diagnostic details made available.&lt;/p&gt;
-
-&lt;p&gt;Install &lt;a href=&#34;https://packagecontrol.io/packages/Clang-Complete&#34;&gt;Clang-Complete&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;There aren&amp;rsquo;t any plugin settings to adjust, but you will want to set up either general clang settings, or project-specific clang settings. General settings may be include paths related to finding system libraries, however in my case I only set up project specific settings.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Project -&amp;gt; Edit Project&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;If you don&amp;rsquo;t already have a &lt;code&gt;settings&lt;/code&gt; key, create one, and then under that create a &lt;code&gt;cc_include_options&lt;/code&gt; list of flags to pass to clang. Example:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;&amp;quot;settings&amp;quot;: {
-	&amp;quot;cc_include_options&amp;quot;: [
-		&amp;quot;-I/path/to/some/library/include&amp;quot;
-	]
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The setting is called &amp;ldquo;cc_include_options&amp;rdquo;, but it is a bit misleading. Really it seems to just be any compiler flags you want to pass to clang. I have put &lt;code&gt;-D&lt;/code&gt; macro defines, as well as being able to disable warnings, etc, etc.&lt;/p&gt;
-
-&lt;p&gt;Once you have your basic includes entered for your given project, you should review your key mappings. There is only one I cared about:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-    &amp;quot;command&amp;quot;: &amp;quot;clang_goto_def&amp;quot;, &amp;quot;keys&amp;quot;: [&amp;quot;super+.&amp;quot;, &amp;quot;super+g&amp;quot;],
-    &amp;quot;context&amp;quot;: [{&amp;quot;key&amp;quot;: &amp;quot;selector&amp;quot;, &amp;quot;operator&amp;quot;: &amp;quot;equal&amp;quot;, &amp;quot;operand&amp;quot;: &amp;quot;source.c++&amp;quot;} ]
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Adjust the &amp;ldquo;keys&amp;rdquo; sequence as needed. This gives you the ability to jump to definitions from a given symbol.&lt;/p&gt;
-
-&lt;p&gt;At this point, you should have code completion, and the ability to navigate through C++ symbols. You will know your code completion is working if the completion popup has more than just names, and actually has type information on the right side.&lt;/p&gt;
-
-&lt;h2 id=&#34;a-name-switch-file-deluxe-switch-file-deluxe-a&#34;&gt;&lt;a name=&#34;switch-file-deluxe&#34;&gt;Switch File Deluxe&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;This is a pretty sweet and simple plugin that lets you switch between headers and source files. Before Sublime, I had been using Qt Creator for C++ Qt projects, and this functionality was built-in and mapped to the F4 key.&lt;/p&gt;
-
-&lt;p&gt;Install &lt;a href=&#34;https://packagecontrol.io/packages/Switch%20File%20Deluxe&#34;&gt;Switch File Deluxe&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Once installed, all I had to do was map a key sequence:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{ 
-    &amp;quot;command&amp;quot;: &amp;quot;switch_file_deluxe&amp;quot;, &amp;quot;keys&amp;quot;: [&amp;quot;f4&amp;quot;], 
-    &amp;quot;args&amp;quot;: {
-        &amp;quot;extensions&amp;quot;: [
-            &amp;quot;.cpp&amp;quot;, &amp;quot;.cxx&amp;quot;, &amp;quot;.cc&amp;quot;, &amp;quot;.c&amp;quot;, &amp;quot;Qt.cpp&amp;quot;, &amp;quot;Qt.h&amp;quot;, 
-            &amp;quot;.hpp&amp;quot;, &amp;quot;.hxx&amp;quot;, &amp;quot;.h&amp;quot;, &amp;quot;_p.h&amp;quot;, &amp;quot;_p_p.h&amp;quot;, &amp;quot;.ipp&amp;quot;, 
-            &amp;quot;.inl&amp;quot;, &amp;quot;.m&amp;quot;, &amp;quot;.mm&amp;quot;
-        ]
-    } 
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;From any C++ header or source file, when you hit F4 you will switch to the corresponding header or source. If the matching file is ambiguous, you should be presented with a choice of files. Once you select the file, future uses of the key will immediately switch between the previously selected files.&lt;/p&gt;
-
-&lt;h2 id=&#34;a-name-uncrustify-uncrustify-a&#34;&gt;&lt;a name=&#34;uncrustify&#34;&gt;Uncrustify&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;If you prefer your C++ source code to follow a particular style, then you can use the &amp;ldquo;uncrustify&amp;rdquo; tool to apply beautification based on a configuration file of rules.&lt;/p&gt;
-
-&lt;p&gt;First I installed uncrustify via homebrew:  &lt;code&gt;brew install uncrustify&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Then, install &lt;a href=&#34;https://packagecontrol.io/packages/Uncrustify&#34;&gt;Uncrustify&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;If your uncrustify binary is in a non-standard location, you can set the user settings for the plugin with &lt;code&gt;uncrustify_executable&lt;/code&gt;. For setting up projects to match configs, I actually used the &lt;code&gt;uncrustify_config_by_filter&lt;/code&gt; setting to set up a list of patterns:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-	&amp;quot;uncrustify_filtering_rule&amp;quot;: 1,
-	&amp;quot;uncrustify_config_by_filter&amp;quot;: [
-		{&amp;quot;/path/to/some/*/project&amp;quot;: &amp;quot;/path/to/project/uncrustify.cfg&amp;quot;}
-	]	
-}
-
-It helps to store your uncrustify.cfg within your project repo. Also, there is a tool I used for visually editing the rules for setting up an uncrustify config: [universalindent](http://universalindent.sourceforge.net/).
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;build-system&#34;&gt;Build System&lt;/h2&gt;
-
-&lt;p&gt;On a per-project basis, you can set up your build commands. Going into &lt;code&gt;Project -&amp;gt; Edit Project&lt;/code&gt;, I added something like the following to work with my particular build system for the project:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;build_systems&amp;quot;: [
-    {
-      &amp;quot;file_regex&amp;quot;: &amp;quot;(\\S*?):(\\d+):(\\d+): (error.*)&amp;quot;,
-      &amp;quot;name&amp;quot;: &amp;quot;Default &#39;Project&#39; Build&amp;quot;,
-      &amp;quot;shell&amp;quot;: true,
-      &amp;quot;shell_cmd&amp;quot;: &amp;quot;./\\$USER/scripts/build_cmd arg1 arg2&amp;quot;,
-      &amp;quot;variants&amp;quot;: [
-        {
-          &amp;quot;cmd&amp;quot;: [
-            &amp;quot;./\\$USER/scripts/build_cmd arg3 arg4&amp;quot;
-          ],
-          &amp;quot;name&amp;quot;: &amp;quot;&#39;Project&#39; Build Debug&amp;quot;,
-          &amp;quot;shell&amp;quot;: true
-        }
-      ],
-      &amp;quot;working_dir&amp;quot;: &amp;quot;/path/to/project/root&amp;quot;
-    }
-  ]
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;file_regex&lt;/code&gt; is a pattern specifying how to capture the filename, line number, column number, and error message from the output of the build command. This is useful to adapt to any kind of build system and have Sublime give you context about the errors in your view.&lt;/p&gt;
-
-&lt;p&gt;You specify the default build command, and then optionally a number of variants for the build system, such as debug builds or different options. Once this is entered you can now set your build system selection and use your build hotkey.&lt;/p&gt;
-
-&lt;h2 id=&#34;wrapping-up&#34;&gt;Wrapping up&lt;/h2&gt;
-
-&lt;p&gt;I don&amp;rsquo;t do much debugging from within my editor (I am primarily an Editor+Terminal kind of developer), so I didn&amp;rsquo;t go as far as to investigate Sublime options for debugging. But with a pretty minimal amount of configuration, I have a pretty lightweight and capable editor for working on C++ projects. And it is the same editor I use for working on Python and Go projects.&lt;/p&gt;
-
-&lt;p&gt;Got any other recommendations for making SublimeText an even more capable solution for C++ projects? Let me know!&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
-    
-    
     
     <item>
       <title>Switching from Wordpress to Hugo</title>
       <link>http://justinfx.com/2015/11/08/switching-from-wordpress-to-hugo/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Sun, 08 Nov 2015 09:32:37 +1300</pubDate>
       
       <guid>http://justinfx.com/2015/11/08/switching-from-wordpress-to-hugo/</guid>
-      <description>
-
-&lt;p&gt;Since 2006, my small blog has existed as a Wordpress site. This worked really well for me, as it was easy to hit a one-click install from a hosting dashboard, and then be able to install plugins, themes, and updates, all from the Wordpress admin. Ultimately it was one less thing vying for my time as opposed to a custom site from scratch. With limited free time, and a choice of projects to work on, the last thing I really wanted to do was website design and maintenance.&lt;/p&gt;
-
-&lt;p&gt;In addition to my Wordpress blog, for a while I had also been hosting other applications, such as a Redmine system for project management. Redmine, being a Ruby-on-Rails setup, was quite a memory hog. But that combined with Wordpress made sense to use some form of hosting. Eventually I stopped using Redmine and was left with just a Wordpress blog, hosted on a semi-VPS service, and paying $7 USD a month. Finally I realized this was silly and I should just switch to something that costs&amp;hellip; maybe nothing?&lt;/p&gt;
-
-&lt;h2 id=&#34;hugo-a-static-site-generator&#34;&gt;Hugo: A static site generator&lt;/h2&gt;
-
-&lt;p&gt;I&amp;rsquo;m already a fan and user of the &lt;a href=&#34;http://golang.org&#34;&gt;Go language&lt;/a&gt;, and so in following a number of the Go social communities, I discovered &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;. A static site generator is an application that can take content in some original description (markdown in the case of Hugo), and renders final content by applying rules. This final content can then be hosted anywhere, without the need for server-side runtime support, such as Python/PHP/Go/Node/etc, because it does not require server-side processing to handle rendering the pages on the fly. This makes the site very portable and simple to deploy, and can be served out of aggressive caching.&lt;/p&gt;
-
-&lt;p&gt;Another benefit of Hugo is that you don&amp;rsquo;t need to futz with an in-browser editor while writing pages. Hugo comes with a built-in production-grade server, which provides developers the option of watching for any changes in content. When content changes, Hugo will render that content again, and also trigger an update of your local webpage by way of a connected websocket. I can sit comfortably within my code editor of choice (SublimeText), and write a post in markdown. Each time I save the file, my webpage immediately updates to reflect the changes.&lt;/p&gt;
-
-&lt;p&gt;This post is primarily focused on my experience in switching to Hugo, and not attempting to provide an A-Z tutorial of using it, nor a comparison to any similar options in static site generation. Detailed documentation can be found on the official Hugo site.&lt;/p&gt;
-
-&lt;h2 id=&#34;migrating-from-wordpress-to-hugo&#34;&gt;Migrating from Wordpress to Hugo&lt;/h2&gt;
-
-&lt;p&gt;I can&amp;rsquo;t claim that the process of converting my Wordpress-based site to Hugo was 100% automatic, or even 90%. Let&amp;rsquo;s say about 80%. But it was fairly painless.&lt;/p&gt;
-
-&lt;p&gt;I started with the &lt;a href=&#34;https://github.com/SchumacherFM/wordpress-to-hugo-exporter&#34;&gt;Wordpress To Hugo Exporter&lt;/a&gt;. Even though there were some claims that it didn&amp;rsquo;t work 100% of the time, I actually had no problems using it with a semi recent 4.x install of Wordpress. I believe those that experienced issues might have had very large sites and encountered some kind of timeout issue. My site has relatively few posts, compared to others, and installing this plugin and exporting the site had worked right away. What you get as an end result is an archive of your site, converted into a basic Hugo project structure. All of your metadata from your posts are preserved in the Hugo format called &lt;a href=&#34;https://gohugo.io/content/front-matter/&#34;&gt;&amp;ldquo;Front Matter&amp;rdquo;&lt;/a&gt;. This is a section of metadata that sits at the top of every markdown file, which the engine will use to build out your static site properly. For instance, the Front Matter that was generated for my post entitled &lt;a href=&#34;http://justinfx.com/2015/06/07/comparing-performance-of-qt-smart-pointer-options/&#34;&gt;&amp;ldquo;Comparing performance of Qt smart pointer options&amp;rdquo;&lt;/a&gt;, looks like this:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;---&lt;/span&gt;
-title: Comparing performance of Qt smart pointer options
-author: Justin Israel
-type: post
-date: 2015-06-07
-slug: comparing-performance-of-qt-smart-pointer-options
-url: /2015/06/07/comparing-performance-of-qt-smart-pointer-options/
-categories:
-  - Code
-tags:
-  - benchmark
-  - c++
-  - pointers
-  - qt
-&lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;---&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;This is YAML (the other supported format is TOML), and gives the engine information about the post that it can use to format the page, and to organize it into the site. You can see definitions of categories and tags (preserved from the Wordpress export), which also drives other aspects of the site like the menu system.&lt;/p&gt;
-
-&lt;p&gt;Once I had my new set of markdown files, I saw that they needed a tiny bit of cleanup. This probably has to do with the type of plugins I used in Wordpress to format code and embed media, which couldn&amp;rsquo;t be translated to look exactly the way it should. But it was simple enough to go through each page and correct the bits of hyper-links and code formatting. A great thing about Hugo is that it comes with a production-quality web server, which you can use in development mode as you work on your site:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;$ hugo server -w -D
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;This starts the server, and tells it to run in &amp;ldquo;watch&amp;rdquo; mode, and to also render posts that are still in &amp;ldquo;draft&amp;rdquo; mode, so that I can see them in their unpublished state on the site. I can then check out my site right away, by hitting &lt;a href=&#34;http://127.0.0.1:1313&#34;&gt;http://127.0.0.1:1313&lt;/a&gt; in my browser. &amp;ldquo;Watch&amp;rdquo; mode means that the site is instrumented with a websocket connection to the server, and will automatically refresh when the server detects that content has changed (after the server automatically renders the content again). This is awesome, because I can type out content, hit save, and see the changes. This was a bit clunkier of a process in Wordpress, where I would type some stuff in a WYSIWYG editor and have to hit &amp;ldquo;save draft&amp;rdquo;, and manually refresh my preview page in another tab (or maybe Wordpress auto-refreshed preview pages. I can&amp;rsquo;t remember now).&lt;/p&gt;
-
-&lt;p&gt;All-in-all the export and cleanup process was the most painless part. Most of the time was spent learning the new concepts of the Hugo system.&lt;/p&gt;
-
-&lt;h2 id=&#34;deployment&#34;&gt;Deployment&lt;/h2&gt;
-
-&lt;p&gt;I&amp;rsquo;m going to start with describing the deployment process, since I find that to be one of the most appealing aspects of switching to Hugo. As I had mentioned, my previous solution was a paid hosted approach, in order to have a MySQL database, and a php-enabled dynamic site. My new approach brings my hosting expense down to &lt;strong&gt;zero&lt;/strong&gt;. By using &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt;, I can treat my site as just another code repository, while serving it for free. You can see the final rendered static site, right here at &lt;a href=&#34;https://github.com/justinfx/justinfx.github.io&#34;&gt;github.com/justinfx/justinfx.github.io&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Generating your static site via Hugo is as simple as doing the following:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;$ hugo
-&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt; of &lt;span style=&#34;color: #40a070&#34;&gt;1&lt;/span&gt; draft rendered
-&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt; future content 
-&lt;span style=&#34;color: #40a070&#34;&gt;32&lt;/span&gt; pages created
-&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt; paginator pages created
-&lt;span style=&#34;color: #40a070&#34;&gt;45&lt;/span&gt; tags created
-&lt;span style=&#34;color: #40a070&#34;&gt;3&lt;/span&gt; categories created
-in &lt;span style=&#34;color: #40a070&#34;&gt;195&lt;/span&gt; ms
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;This command causes Hugo to generate the site to the &amp;ldquo;public/&amp;rdquo; directory in the current working directory. If I had wanted to generate it to another location, I would just need to pass &lt;code&gt;-d &amp;lt;dest&amp;gt;&lt;/code&gt; to tell Hugo to generate to another output location.&lt;/p&gt;
-
-&lt;p&gt;I actually symlink the &amp;ldquo;public/&amp;rdquo; subdirectory to point to my &amp;ldquo;justinfx.github.io&amp;rdquo; Github Pages local repo. What that means is that after running Hugo, and because it is managed via a git repository, I now only need to commit the new changes to my repo in order to update my public site. This is a very natural workflow for anyone that is comfortable with git repositories. And it also means that I automatically get revision control for any changes to my website.&lt;/p&gt;
-
-&lt;h2 id=&#34;understanding-hugo-concepts&#34;&gt;Understanding Hugo Concepts&lt;/h2&gt;
-
-&lt;p&gt;The aspect that took the longest, in the switch to Hugo, was understanding the project structure, and how the layout of the site was generated. The main terms you will deal with upfront are things like: content, layouts, templates, types, archetypes, and static. To oversimplify what I have come to understand is that the Hugo project structure separates your content from your view, or the way that content ultimately is arranged in your site. You spend the most time getting your layout and types set up once, and then moving forward it becomes a simple matter of typing new markdown content, which gets seamlessly integrated into the layout.&lt;/p&gt;
-
-&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
-
-&lt;p&gt;The first thing you want to look at is your &lt;code&gt;config.yaml&lt;/code&gt; file. There isn&amp;rsquo;t much to it, and the default could be mostly correct for you. But I did have to change a few things to get it right. Mine looks like this:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;---&lt;/span&gt;
-baseurl: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;http://justinfx.com&amp;quot;&lt;/span&gt;
-languageCode: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;en-us&amp;quot;&lt;/span&gt;
-title: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;JustinFX.com&amp;quot;&lt;/span&gt;
-DisqusShortname: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;justinfx&amp;quot;&lt;/span&gt;
-copyright: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;Justin&lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;Israel&amp;quot;&lt;/span&gt;
-pygmentsstyle: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;friendly&amp;quot;&lt;/span&gt;
-
-author:
-    name: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;Justin&lt;/span&gt;&lt;span style=&#34;color: #bb60d5&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;Israel&amp;quot;&lt;/span&gt; 
-
-permalinks:
-    blog: /:year/:month/:day/:slug/
-
-taxonomies:
-    tag: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;tags&amp;quot;&lt;/span&gt;
-    category: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;categories&amp;quot;&lt;/span&gt;
-
-params:
-    &amp;lt; snip ... &amp;gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Not every field is required. Probably the most important settings are the &lt;code&gt;baseurl&lt;/code&gt; and &lt;code&gt;title&lt;/code&gt;. The rest of these settings control optional aspects of the site. You can see that I am setting my Disqus id, allowing Hugo to embed its integrated Disqus comment system into the posts. I&amp;rsquo;m also setting some options for how code syntax highlighting is displayed, and some definitions for organization and &lt;a href=&#34;https://gohugo.io/extras/permalinks/&#34;&gt;permalinks&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;content&#34;&gt;Content&lt;/h3&gt;
-
-&lt;p&gt;Under the &amp;ldquo;content/&amp;rdquo; directory of my project is where all my markdown files are stored. I have the following:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;content/
-    blog/
-        &amp;lt;postA&amp;gt;.md
-        &amp;lt;postB&amp;gt;.md
-        &amp;lt;postC&amp;gt;.md
-    page/
-    	&amp;lt;pageA&amp;gt;.md
-    	&amp;lt;pageB&amp;gt;.md
-    wp-content/
-    	...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&amp;ldquo;blog&amp;rdquo; and &amp;ldquo;page&amp;rdquo; reflect the concepts that came from Wordpress, where I had posts for the blog that would have comments and show up in the feed, and then pages which show up in menus and were not open for comments. The key difference in these two sections is the &amp;ldquo;type&amp;rdquo; parameter that is set in the Front Matter of the markdown files in each section. Blog posts have &lt;code&gt;type: post&lt;/code&gt;, while pages have &lt;code&gt;type: page&lt;/code&gt;. This becomes important in dictating how they are organized and rendered, when they need to line up with your layouts. Blog posts will be grouped and displayed &lt;a href=&#34;http://justinfx.com/blog&#34;&gt;one way&lt;/a&gt;, with indexing and comments, while pages will be displayed another.&lt;/p&gt;
-
-&lt;p&gt;Within the markdown files, in addition to text and markdown formatting, you can also include &lt;a href=&#34;https://gohugo.io/templates/overview/&#34;&gt;template logic&lt;/a&gt;, to be expanded at render time (running the &lt;code&gt;hugo&lt;/code&gt; command).&lt;/p&gt;
-
-&lt;h3 id=&#34;archetypes&#34;&gt;Archetypes&lt;/h3&gt;
-
-&lt;p&gt;At first, I had thought archetypes were something more complicated than they actually are. Really all they do is define a new &amp;ldquo;type template&amp;rdquo; so that when you create new content with &lt;code&gt;hugo new &amp;lt;...&amp;gt;&lt;/code&gt;, the new content will be created with type-specific defaults. For instance, I have an archetype defined that makes any markdown files created in my &amp;ldquo;content/blog/&amp;rdquo; location have the type &amp;ldquo;post&amp;rdquo;:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;$ ls archetypes/
-blog.md
-
-$ cat archetypes/blog.md
-+++
-&lt;span style=&#34;color: #007020&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;post&amp;quot;&lt;/span&gt;
-&lt;span style=&#34;color: #bb60d5&#34;&gt;draft&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #007020&#34;&gt;true&lt;/span&gt;
-+++
-
-$ hugo new blog/new_post.md
-justinfx.com/content/blog/new_post.md created
-
-$ cat content/blog/new_post.md
-+++
-&lt;span style=&#34;color: #bb60d5&#34;&gt;date&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;2015-11-21T09:20:47+13:00&amp;quot;&lt;/span&gt;
-&lt;span style=&#34;color: #bb60d5&#34;&gt;draft&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #007020&#34;&gt;true&lt;/span&gt;
-&lt;span style=&#34;color: #bb60d5&#34;&gt;title&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;test&amp;quot;&lt;/span&gt;
-&lt;span style=&#34;color: #007020&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;post&amp;quot;&lt;/span&gt;
-+++
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;You can see that a new draft post was created for me, and the Front Matter was pre-populated with the settings from the blog archetype. Just an easy way to set up new content really.&lt;/p&gt;
-
-&lt;h3 id=&#34;layouts&#34;&gt;Layouts&lt;/h3&gt;
-
-&lt;p&gt;This was the hardest part of the learning curve for me. Layouts are the part of your codebase that specify how your content is turned into actual views in your static site. There is a correlation between the layout directories, and the type names we talked about previously. Because I have two types, &amp;ldquo;post&amp;rdquo; and &amp;ldquo;page&amp;rdquo;, it means I will have the corresponding locations within the layouts directory. Hugo has a resolution order it will use, when figuring out which layouts to apply. First it will check if there is a direct match for the type, and then it will fall back on a special &amp;ldquo;_default&amp;rdquo; directory. Within these directories, you can specify what content should look like when it is viewed as:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;a single item - the actual blog post or page&lt;/li&gt;
-&lt;li&gt;a list of items - an index of all blog posts, such as by date&lt;/li&gt;
-&lt;li&gt;a summary of an item - like a preview of an item&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;For example, I have some layouts structured like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;layouts/
-    _default/
-        list.html
-        single.html
-        ...
-    page/
-        single.html
-    post/
-        li.html
-        single.html
-        summary.html
-    section/
-        blog.html
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&amp;ldquo;_default&amp;rdquo; will be the fallback for any particular types that don&amp;rsquo;t explicitly have their own layout definitions. You can see that pages just define a specific single view. Posts define how they look when displayed in a list, or a single view, or their summary view. I also have a &amp;ldquo;section/&amp;rdquo; location defined, which results in the &lt;a href=&#34;http://justinfx.com/blog&#34;&gt;/blog&lt;/a&gt; endpoint on my site.&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;section/blog.html&amp;rdquo; looks like this:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;{{ template &amp;quot;chrome/head.html&amp;quot; . }}
-&amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;body&lt;/span&gt;&amp;gt;
-
-{{ template &amp;quot;chrome/sidebar.html&amp;quot; . }}
-
-&amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;content container&amp;quot;&lt;/span&gt;&amp;gt;
-  &amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;h1&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&amp;gt;Blog Posts&amp;lt;/&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;h1&lt;/span&gt;&amp;gt; 
-  &amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;ul&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;posts&amp;quot;&lt;/span&gt;&amp;gt;
-      {{ range .Data.Pages.GroupByDate &amp;quot;2006&amp;quot; }}
-	    &amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;h2&lt;/span&gt;&amp;gt;{{ .Key }}&amp;lt;/&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;h2&lt;/span&gt;&amp;gt;
-	        &amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;ul&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&amp;gt;
-	            {{ range .Pages }}
-	                {{ .Render &amp;quot;li&amp;quot;}}
-	            {{ end }}
-	        &amp;lt;/&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;ul&lt;/span&gt;&amp;gt;
-      {{ end }}
-  &amp;lt;/&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;ul&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;div&lt;/span&gt;&amp;gt;
-
-&amp;lt;/&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;body&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;html&lt;/span&gt;&amp;gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Breaking this down, we have template directives that will include other templates that render the common header and sidebar. Then we set up how &amp;ldquo;/blog&amp;rdquo; will look when displaying a date-sorted list of all my posts. We loop over all the blog posts, grouped by the year they were created, then loop over each post in a group and render it using its &amp;ldquo;li&amp;rdquo; (list item) definition. This is the place where Hugo will resolve which view to use for list elements. Because we are dealing with &amp;ldquo;post&amp;rdquo; types, Hugo will find &amp;ldquo;layouts/post/li.html&amp;rdquo; first (matching &amp;ldquo;li&amp;rdquo; with &amp;ldquo;li.html&amp;rdquo;, and use that to render each list item.&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;layouts/post/li.html&amp;rdquo; looks like this:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;li&lt;/span&gt;&amp;gt;
-      &amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;style&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;line-height: 1.0&amp;quot;&lt;/span&gt;&amp;gt;
-      {{if .Draft}}[draft] {{end}}&amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;{{ .Permalink }}&amp;quot;&lt;/span&gt;&amp;gt;{{ .Title }}&amp;lt;/&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;a&lt;/span&gt;&amp;gt;
-      &amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;post-item&amp;quot;&lt;/span&gt;&amp;gt;
-      	&amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;style&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;font-size: .75em&amp;quot;&lt;/span&gt;&amp;gt;{{ .Date.Format &amp;quot;Mon, Jan 2, 2006&amp;quot; }}&amp;lt;/&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;span&lt;/span&gt;&amp;gt;
-      &amp;lt;/&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;div&lt;/span&gt;&amp;gt;
-      &amp;lt;/&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;span&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;li&lt;/span&gt;&amp;gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;This template is purely concerned with defining an &lt;code&gt;&amp;lt;li&amp;gt;&lt;/code&gt; element. We handle optionally indicating if a post is still in draft state (only visible if we are running the hugo server with &lt;code&gt;-D&lt;/code&gt;), and then showing the title and date of the post.&lt;/p&gt;
-
-&lt;p&gt;Extra info on layouts and views can be found &lt;a href=&#34;https://gohugo.io/content/types/#defining-a-content-type:3d59665407ad3f08f6bcaef4686926f7&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io/content/types/#create-type-directory:3d59665407ad3f08f6bcaef4686926f7&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;themes&#34;&gt;Themes&lt;/h3&gt;
-
-&lt;p&gt;Hugo supports &lt;a href=&#34;https://gohugo.io/themes/overview/&#34;&gt;themes&lt;/a&gt;, and already has a sizable &lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;gallery&lt;/a&gt; of existing themes to choose from.&lt;/p&gt;
-
-&lt;p&gt;I had started out trying to just drop in different themes (placing them in the &amp;ldquo;themes&amp;rdquo; subdirectory, and activating them in the config file or via the command line), but I noticed that not every theme would render properly. I came to understand that themes still require a bit of integration, and are not simply a stylesheet. They define their own views which become part of the resolution order when Hugo looks them up at render time. Finally I just took the advise from &lt;a href=&#34;http://npf.io/2014/08/hugo-is-awesome/&#34;&gt;Nate Finch&amp;rsquo;s Hugo post&lt;/a&gt;, where he grabbed a theme that was closest to what he wanted and started tweaking it. I then started with Nate&amp;rsquo;s modified theme (since I liked it), and also further tweaked it to match what I liked. This resulted in getting rid of an explicit &amp;ldquo;themes&amp;rdquo; location, and just integrating the templates directly into my &amp;ldquo;layouts/&amp;rdquo; location.&lt;/p&gt;
-
-&lt;h3 id=&#34;shortcodes&#34;&gt;Shortcodes&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gohugo.io/extras/shortcodes/&#34;&gt;Shortcodes&lt;/a&gt; are sweet. They are very similar to Wordpress shortcodes provided by plugins, allowing you to create little functions that can take arguments and expand into reusable code.&lt;/p&gt;
-
-&lt;p&gt;My shortcodes look like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;shortcodes/
-    lightbox.html
-    vimeo.html
-    youtube.html
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And &amp;ldquo;vimeo.html&amp;rdquo; looks like this:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;js-video vimeo&amp;quot;&lt;/span&gt;&amp;gt;
-	&amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;iframe&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;https://player.vimeo.com/video/{{ .Get 0 }}?byline=0&amp;quot;&lt;/span&gt; 
-	        &lt;span style=&#34;color: #4070a0&#34;&gt;width&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;640&amp;quot;&lt;/span&gt; 
-	        &lt;span style=&#34;color: #4070a0&#34;&gt;height&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;360&amp;quot;&lt;/span&gt; 
-	        &lt;span style=&#34;color: #4070a0&#34;&gt;frameborder&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;0&amp;quot;&lt;/span&gt; 
-	        &lt;span style=&#34;color: #4070a0&#34;&gt;mozallowfullscreen&lt;/span&gt; 
-	        &lt;span style=&#34;color: #4070a0&#34;&gt;allowfullscreen&lt;/span&gt; &amp;gt;
-	&amp;lt;/&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;iframe&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;div&lt;/span&gt;&amp;gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Now I have the ability to embed my vimeo media from within my markdown files, just by using the shortcode and passing the vimeo id as a parameter:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;{{&amp;lt; &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;vimeo&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;12067694&lt;/span&gt; &amp;gt;}}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3 id=&#34;static-files&#34;&gt;Static files&lt;/h3&gt;
-
-&lt;p&gt;Static files are pretty straightforward. It is just a &amp;ldquo;static/&amp;rdquo; location where everything underneath is served directly by your site, and does not go through a rendering process when you generate your site. This would be the place to store css, javascript, images, and other static content that simply needs to be served up in pages or urls. Themes can come with their own static locations, which will be integrated into the main static content when you render your site.&lt;/p&gt;
-
-&lt;h3 id=&#34;closing-thoughts&#34;&gt;Closing Thoughts&lt;/h3&gt;
-
-&lt;p&gt;There is something quite satisfying about having the source of my site being so tangible, while being easy to update, and easy to deploy. I don&amp;rsquo;t have to worry about a database, or hosting, or Wordpress site and plugin updates. I don&amp;rsquo;t have to worry about security, since there are no dynamic pages or Wordpress vulnerabilities to guard against. I don&amp;rsquo;t have to mess with backups and exports from a hosting service, since I check my entire site into github.&lt;/p&gt;
-
-&lt;p&gt;Even for someone like me, that hates doing web front-end development, I didn&amp;rsquo;t mind the minimal amount of css and html templates that needed tweaking. The end result is a site that is straightforward to manage, lightning fast to generate when deploying changes, and now costs me nothing to host.&lt;/p&gt;
-</description>
+      <description>Since 2006, my small blog has existed as a Wordpress site. This worked really well for me, as it was easy to hit a one-click install from a hosting dashboard, and then be able to install plugins, themes, and updates, all from the Wordpress admin. Ultimately it was one less thing vying for my time as opposed to a custom site from scratch. With limited free time, and a choice of projects to work on, the last thing I really wanted to do was website design and maintenance.</description>
     </item>
-    
-    
     
     <item>
       <title>Comparing performance of Qt smart pointer options</title>
       <link>http://justinfx.com/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Sun, 07 Jun 2015 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</guid>
       <description>&lt;p&gt;There are a number of sources of information on the usage and behavioral differences of the many “smart pointer” options offered by Qt. But one thing I couldn’t find enough information on were the performance characteristics.&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;“&lt;a href=&#34;http://www.macieira.org/blog/2012/07/continue-using-qpointer/&#34;&gt;Continue Using QPointer&lt;/a&gt;” describes the complicated situation that came about when the Qt project was choosing to either deprecate QPointer vs QWeakPointer APIs in Qt5, and ultimately how QPointer was preserved. It also describes how in Qt4, the QPointer has a large performance hit vs its improved backend in Qt5. So basically it says to choose performance vs compatibility.&lt;/p&gt;
-
-&lt;p&gt;“&lt;a href=&#34;http://stackoverflow.com/questions/5026197/what-c-smart-pointer-implementations-are-available/5026705#5026705&#34;&gt;What C++ Smart Pointer Implementations are available?&lt;/a&gt;“, on StackOverflow, offers a pretty nice breakdown of not only the Qt smart pointers, but also other available options via Boost and C++11.&lt;/p&gt;
-
-&lt;p&gt;I was in a situation where an existing code base had a number of basic classes that were stored in very large parent/child relationships, as pointers. Once I needed to start sharing pointers between some newer classes, I pretty quickly ran into issues of dangling pointers when relationships would change and objects would get deleted, and it seemed that a proper solution would be to introduce some sort of guarded/smart pointer in the mix. Each of a number of options have their own pros and cons. My first approach was just to use a QPointer at the point of creation, and only change the signature of functions that really needed to receive the QPointer. But I was concerned about performance, since more than one source referenced just how slow QPointer can be. But I didn’t want to just switch to a QWeakPointer because of the deprecation in Qt5. So I ended up doing some benchmarks and figured this information might round out the rest of the available info on the web.&lt;/p&gt;
-
-&lt;p&gt;The test for my benchmark involved creating a number objects, adding them to a list, and then deleting them. The options for the test include both pointers to a basic struct and a QObject, QPointers, QSharedPointers, QWeakPointers, and just for an external comparison I also included boost::shared_ptr and boost::weak_ptr. The test was performed with different numbers of objects, as well as for both Qt4 and Qt5. Here is a more detailed description of each test.&lt;/p&gt;
-
-&lt;h4 id=&#34;the-test-environment&#34;&gt;The Test Environment&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;OSX 10.9.5 Laptop  
-2.8 Ghz Intel Core 2 Duo
-8 GB 1067 Mhz DDR3 memory
-Clang x86 64bit
-Qt 4.8.6
-Qt 5.4.2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;description-of-tests&#34;&gt;Description of Tests&lt;/h4&gt;
-
-&lt;p&gt;_test_raw&lt;em&gt;pointer&lt;/em&gt; : Creating pointers to a basic struct, adding the raw pointers to a QList, and then deleting all of the pointers&lt;/p&gt;
-
-&lt;p&gt;_test_raw&lt;em&gt;qobject&lt;/em&gt; : Creating pointers to QObject instances, adding them to a QList, and then deleting all of the pointers&lt;/p&gt;
-
-&lt;p&gt;_test_ptr&lt;em&gt;qsharedpointer&lt;/em&gt; : Creating QSharedPointers to a basic struct, and also a QWeakPointer for each, and adding the shared pointers to a QList. Then deleting them all.&lt;/p&gt;
-
-&lt;p&gt;_test_qobj&lt;em&gt;qsharedpointer&lt;/em&gt; : Creating QSharedPointers to a QObject, and also a QWeakPointer for each, and adding the shared pointers to a QList. Then deleting them all.&lt;/p&gt;
-
-&lt;p&gt;_test_qobj&lt;em&gt;qweakpointer&lt;/em&gt; : Creating QWeakPointers directly from QObject instances, adding them to a QList, and then deleting them all. This test could only be performed in Qt4, because Qt5 deprecated QObject tracking support for QWeakPointers, which can now only be used with QSharedPointer&lt;/p&gt;
-
-&lt;p&gt;_test&lt;em&gt;qpointer&lt;/em&gt; : Creating QPointers directly from QObject instances, adding them to a QList, and then deleting them all.&lt;/p&gt;
-
-&lt;p&gt;_test_boost&lt;em&gt;sharedptr&lt;/em&gt; : Creating &lt;code&gt;boost::shared_ptrs&lt;/code&gt; from basic struct instances, as well as boost::weak_ptrs for each, adding the shared_ptrs to a QList, and then deleting them&lt;/p&gt;
-
-&lt;p&gt;_test_boost_qobj&lt;em&gt;sharedptr&lt;/em&gt; : Creating &lt;code&gt;boost::shared_ptrs&lt;/code&gt; from QObject instances, as well as boost::weak_ptrs for each, adding the shared_ptrs to a QList, and then deleting them&lt;/p&gt;
-
-&lt;h4 id=&#34;the-test-results&#34;&gt;The Test Results&lt;/h4&gt;
-
-&lt;h1 id=&#34;pre-class-testing-w-5000-objects-qt4-qt5&#34;&gt;&lt;pre class=&#34;&#34;&gt;Testing w/ 5000 objects        Qt4       Qt5&lt;/h1&gt;
-
-&lt;p&gt;test_raw_pointer:              1 ms      1 ms
-test_raw_qobject:              4 ms      3 ms
-test_ptr_qsharedpointer:       3 ms      3 ms
-test_qobj_qsharedpointer:     13 ms      6 ms
-test_qobj_qweakpointer:        6 ms      -
-test_qpointer:                 8 ms      7 ms
-test_boost_sharedptr:          5 ms      3 ms
-test_boost_qobj_sharedptr:     6 ms      4 ms&lt;/p&gt;
-
-&lt;h1 id=&#34;testing-w-50000-objects&#34;&gt;Testing w/ 50000 objects&lt;/h1&gt;
-
-&lt;p&gt;test_raw_pointer:             12 ms     10 ms
-test_raw_qobject:             41 ms     35 ms
-test_ptr_qsharedpointer:      32 ms     35 ms
-test_qobj_qsharedpointer:     66 ms     62 ms
-test_qobj_qweakpointer:       76 ms     -
-test_qpointer:               103 ms     65 ms
-test_boost_sharedptr:         32 ms     31 ms
-test_boost_qobj_sharedptr:    69 ms     61 ms&lt;/p&gt;
-
-&lt;h1 id=&#34;testing-w-500000-objects&#34;&gt;Testing w/ 500000 objects&lt;/h1&gt;
-
-&lt;p&gt;test_raw_pointer:            109 ms    107 ms
-test_raw_qobject:            379 ms    329 ms
-test_ptr_qsharedpointer:     352 ms    354 ms
-test_qobj_qsharedpointer:    709 ms    642 ms
-test_qobj_qweakpointer:      811 ms    -
-test_qpointer:              1109 ms    725 ms
-test_boost_sharedptr:        350 ms    346 ms
-test_boost_qobj_sharedptr:   680 ms    611 ms&lt;/p&gt;
-
-&lt;h1 id=&#34;testing-w-2000000-objects&#34;&gt;Testing w/ 2000000 objects&lt;/h1&gt;
-
-&lt;p&gt;test_raw_pointer:            417 ms    401 ms
-test_raw_qobject:           1502 ms   1201 ms
-test_ptr_qsharedpointer:    1933 ms   1383 ms
-test_qobj_qsharedpointer:   3207 ms   2604 ms
-test_qobj_qweakpointer:     3387 ms   -
-test_qpointer:              5599 ms   2832 ms
-test_boost_sharedptr:       1370 ms   1350 ms
-test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;&lt;/p&gt;
-
-&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt4_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
-	&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt4_pointers-300x157.png&#34; title alt&gt;
-&lt;/a&gt;
-
-
-&lt;a href=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt5_pointers.png&#34; title data-fluidbox class=&#34;fluidbox&#34;&gt;
-	&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2015/06/qt5_pointers-300x154.png&#34; title alt&gt;
-&lt;/a&gt;
-
-
-&lt;p&gt;The test shows the overhead of simply going from a simple struct to a QObject, and then the further impact of introducing various smart pointers on QObjects, and also on non-QObjects where permitted.&lt;/p&gt;
-
-&lt;p&gt;QPointer was the easiest change to introduce, because after you make the original class into a QObject subclass, you only need to change the code at the call site(s) where the pointers are created, and then only within the functions that specifically need to receive a guarded QPointer. For all the other function signatures, QPointer will automatically cast to an unguarded T* and behave exactly the same as before. But you can see from the results that the performance impact can be over 10x slower than when we originally started with our non-QObject class. In Qt5, while it is still most poorly performing option, it is not too far off from the option of a QSharePointer + QWeakPointer.&lt;/p&gt;
-
-&lt;p&gt;The best performing option seems to be keeping the class as a non-QObject and using either QSharedPointer+QWeakPointer, or boost shared_ptr+weak_ptr. Although, this is the most intrusive change since all signatures have to be updated to accept QSharedPointer (or typedef).&lt;/p&gt;
-
-&lt;p&gt;In between, using a QWeakPointer with direct QObject tracking seems like a balance between the ease of slotting it in to the existing code, and performance. The classes would still need to be QObject subclasses, but only the specific functions that need a QWeakPointer would need to change. Unfortunately this is not supported anymore in Qt5 (as only the QSharedPointer support is allowed), so it becomes a choice of whether the code needs to stay clean for future compatibility, or if one just wants to make the change later when a Qt5 migration actually happens.&lt;/p&gt;
-
-&lt;p&gt;For a small number of object creations/deletions, the performance difference doesn’t seem like it would matter that much, but when it involves tons of objects it might be a problem. If your classes were already QObjects then there are less options to consider in the first place. And the more performant route, if you don’t care about the amount of code that has to change, would probably be to shoot for QSharedPointer + QWeakPointer.&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
-    
-    
     
     <item>
       <title>South Park “going-away” book gift</title>
       <link>http://justinfx.com/2012/12/19/south-park-going-away-book-gift/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Wed, 19 Dec 2012 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2012/12/19/south-park-going-away-book-gift/</guid>
-      <description>&lt;p&gt;On my last day of work at South Park Studios, my co-worker Tory gave me a present. It&amp;#8217;s a book that collects together a history of doodles and graphics, capturing significant moments during my 4 year run with the team.&lt;/p&gt;
-
-&lt;p&gt;Tory tends to represent our team as dog characters. I can be identified usually by the pierced chin. Much of this content refers to inside jokes, but I feel it also has a number of generally hilarious imagery.&lt;/p&gt;
-
-&lt;p&gt;Thank you, Tory!&lt;/p&gt;
-
-&lt;div style=&#39;position: relative; padding-bottom: 101%; height: 0; overflow: hidden;&#39;&gt;&lt;iframe id=&#39;iframe&#39; src=&#39;//flickrit.com/slideshowholderpicasa.php?height=100&amp;size=big&amp;setId=114971272077029635708/SouthParkGoingAwayBook&amp;click=true&amp;credit=2&amp;theme=1&amp;thumbnails=0&amp;transition=0&amp;layoutType=responsive&amp;sort=0&#39; scrolling=&#39;no&#39; frameborder=&#39;0&#39; style=&#39;width:100%; height:100%; position: absolute; top:0; left:0;&#39; &gt;&lt;/iframe&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;
-&lt;br&gt;&lt;/p&gt;
-</description>
+      <description>On my last day of work at South Park Studios, my co-worker Tory gave me a present. It&amp;#8217;s a book that collects together a history of doodles and graphics, capturing significant moments during my 4 year run with the team.
+Tory tends to represent our team as dog characters. I can be identified usually by the pierced chin. Much of this content refers to inside jokes, but I feel it also has a number of generally hilarious imagery.</description>
     </item>
-    
-    
     
     <item>
       <title>Tutorial: PyQt4 UI Development for Maya</title>
       <link>http://justinfx.com/2012/10/12/pyqt4-for-maya/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Fri, 12 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2012/10/12/pyqt4-for-maya/</guid>
       <description>&lt;h2 id=&#34;img-class-alignnone-size-full-wp-image-525-title-pyqt4-for-maya-src-wp-content-uploads-2012-10-1350054625-master-jpeg-alt-width-800-height-450-http-www-cmivfx-com-tutorials-view-498-pyqt4-ui-development-for-maya&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.com/wp-content/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
@@ -1092,818 +105,69 @@ test_boost_qobj_sharedptr:  2864 ms   2453 ms&lt;/pre&gt;&lt;/p&gt;
 This tutorial is about learning PyQt4 python bindings for the Qt Framework, and how to introduce new UI elements to Maya as a platform.
 &lt;/div&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;div&gt;
-We discuss what comprises a “Framework” and a “GUI Framework”, and how Qt and PyQt4 work together.
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;/div&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h3 id=&#34;getting-started-with-pyqt4&#34;&gt;&lt;strong&gt;Getting Started With PyQt4&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;div&gt;
-There are multiple ways of getting a working installation of PyQt4, both for the general system and for Maya. We look into these approaches to get your system up and running to begin working with PyQt4!
-&lt;/div&gt;
-
-&lt;div&gt;
-We also talk about what is included, such as command line tools and applications, tips on how to test and learn the code, and how to structure a project.
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;/div&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h3 id=&#34;pyqt4-fundamentals&#34;&gt;&lt;strong&gt;PyQt4 Fundamentals&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;div&gt;
-Lets get crackin’ and learn the basics!
-&lt;/div&gt;
-
-&lt;div&gt;
-• What is a QObject? What is a QWidget? Common PyQt4 classes are explained in detail
-&lt;/div&gt;
-
-&lt;div&gt;
-• Working with the Qt Designer application, to build a UI visually
-&lt;/div&gt;
-
-&lt;div&gt;
-• Layouts: Making widgets resize elegantly and stay organized in your design
-&lt;/div&gt;
-
-&lt;div&gt;
-• Coordinate space: How do widgets transform in your 2D screen space?
-&lt;/div&gt;
-
-&lt;div&gt;
-• QApplication and the Qt Event Loop: The engine that runs your UI
-&lt;/div&gt;
-
-&lt;div&gt;
-• Events, Signals, and Slots: How components communicate changes and how the application can respond to changes to make it dynamic
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;/div&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h3 id=&#34;general-examples&#34;&gt;&lt;strong&gt;General Examples&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;div&gt;
-With an understanding of the framework components, we can begin working with fully functional stand-alone examples.
-&lt;/div&gt;
-
-&lt;div&gt;
-• Common PyQt4 app template
-&lt;/div&gt;
-
-&lt;div&gt;
-• Subclassing Widgets: Creating custom functionality to the existing classes provided by PyQt4
-&lt;/div&gt;
-
-&lt;div&gt;
-• Dialogs: Raising dialog windows above existing windows, Modal vs Non-modal, and creating forms. We look at different ways to validate the data provided by the user, to these dialog forms.
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;/div&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h3 id=&#34;pyqt4-and-maya-introduction&#34;&gt;&lt;strong&gt;PyQt4 And Maya Introduction&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;div&gt;
-Finally, some Maya action! Maya has a slightly different approach to using PyQt4…
-&lt;/div&gt;
-
-&lt;div&gt;
-• How does the QApplication and event loop work?
-&lt;/div&gt;
-
-&lt;div&gt;
-• Common Maya PyQt4 app template
-&lt;/div&gt;
-
-&lt;div&gt;
-• Looking at the Maya API’s MQtUtil class
-&lt;/div&gt;
-
-&lt;div&gt;
-• The sip module: Helping us translate between Maya’s Qt and our own PyQt4 code
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;/div&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h3 id=&#34;replicating-maya-s-ui-components&#34;&gt;&lt;strong&gt;Replicating Maya’s UI Components&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;div&gt;
-What better way to see examples of creating UI for Maya than to replicate some existing functionality? This gives us the opportunity expand with custom functionality
-&lt;/div&gt;
-
-&lt;div&gt;
-In this chapter we will take two different UI components in Maya, and do a basic custom version of our own, and show to how link them up to Maya’s own callbacks.
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;strong&gt;Some Features Of This Chapter Include&lt;/strong&gt;
-&lt;/div&gt;
-
-&lt;div&gt;
-• The QTableWidget
-&lt;/div&gt;
-
-&lt;div&gt;
-• Model / View separation with QTreeView
-&lt;/div&gt;
-
-&lt;div&gt;
-• Docking windows into the Maya interface
-&lt;/div&gt;
-
-&lt;div&gt;
-• Mixing together PyQt4, the Maya API, Maya commands, and callbacks
-&lt;/div&gt;
-
-&lt;div&gt;
-• Sorting model data
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;/div&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h3 id=&#34;customizations&#34;&gt;&lt;strong&gt;Customizations&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;div&gt;
-A button can be a button, and a slider might look alright in its stock form, but sometimes we want to customize the look of our widgets. This chapter introduces multiple ways of achieving custom looks to our components
-&lt;/div&gt;
-
-&lt;div&gt;
-• Stylin’ Stylesheets: Use CSS-like syntax for applying style sheets to widgets
-&lt;/div&gt;
-
-&lt;div&gt;
-• Painting By … Paint events: For even more control, we can tell a widget exactly how to draw itself on the screen. We will look at two different examples of how to use custom painting.
-&lt;/div&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h3 id=&#34;span-style-color-ff6600-previous-cmivfx-tutorials-span&#34;&gt;&lt;span style=&#34;color: #ff6600;&#34;&gt;Previous cmiVFX tutorials:&lt;/span&gt;&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://cmivfx.com/store/320-python+introduction+vol+01+-+maya&#34;&gt;Intro to Python for Maya – Vol 1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;Python for Maya  – Vol 2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
-    
-    
     
     <item>
       <title>Python 2.7.2 serializer speed comparisons</title>
       <link>http://justinfx.com/2012/07/25/python-2-7-3-serializer-speed-comparisons/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2012/07/25/python-2-7-3-serializer-speed-comparisons/</guid>
       <description>&lt;p&gt;In a recent python project where I was sending multiple messages per second of data over a basic socket, I had initially just grabbed the cPickle module to get the prototype proof-of-concept functioning properly. cPickle is awesome for easily serializing more complex python objects like custom classes, even though in my case I am only sending basic types.&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;My messages were dicts with some nested dicts, lists, floats, and string values. Roughly 500-1000 bytes. cPickle was doing just fine, but there came a point where I wanted to investigate the areas that could be tightened up. The first thing I realized was that I had forgotten to encode cPickle in the binary format (the default is ascii). That saved me quite a bit of time. But then I casually searched online to see if any json options might be better since my data is pretty primitive anyways.&lt;/p&gt;
-
-&lt;p&gt;I found &lt;a href=&#34;http://pypi.python.org/pypi/ujson/&#34;&gt;UltraJSON&lt;/a&gt;, which is a pure C json parsing library for python, and ran some tests. There are benchmarks on the project page for ujson, as well as other articles on the internet, but I just wanted to post up my own results using a mixed type data container. ujson came out extremely fast: faster than binary cPickle and msgpack, in the encoding test. Although in the decoding test, msgpack appeared to be fastest, followed by binary cPickle, and then ujson coming in 3rd&lt;/p&gt;
-
-&lt;p&gt;This test included the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://docs.python.org/library/pickle.html#module-pickle&#34;&gt;pickle/cPickle&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://docs.python.org/library/json.html&#34;&gt;json&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://pypi.python.org/pypi/simplejson/&#34;&gt;simplejson&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://pypi.python.org/pypi/python-cjson/&#34;&gt;cjson&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://pypi.python.org/pypi/ujson&#34;&gt;ujson&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://pypi.python.org/pypi/yajl/&#34;&gt;yajl-py&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://pypi.python.org/pypi/msgpack-python&#34;&gt;msgpack-python&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;div&gt;
-Here is my Python 2.7.2 test script using timeit for each encode and decode step.
-&lt;/div&gt;
-&lt;br&gt;
-Dependencies:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pip install tabulate simplejson python-cjson ujson yajl msgpack-python
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Test:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;timeit&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; timeit
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;tabulate&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; tabulate
-
-setup &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&amp;#39;&amp;#39;d = {&lt;/span&gt;
-&lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;words&amp;#39;: &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-&lt;span style=&#34;color: #4070a0&#34;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing&lt;/span&gt;
-&lt;span style=&#34;color: #4070a0&#34;&gt;elit. Mauris adipiscing adipiscing placerat.&lt;/span&gt;
-&lt;span style=&#34;color: #4070a0&#34;&gt;Vestibulum augue augue,&lt;/span&gt;
-&lt;span style=&#34;color: #4070a0&#34;&gt;pellentesque quis sollicitudin id, adipiscing.&lt;/span&gt;
-&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;&amp;quot;&amp;quot;,&lt;/span&gt;
-&lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;list&amp;#39;: range(100),&lt;/span&gt;
-&lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;dict&amp;#39;: dict((str(i),&amp;#39;a&amp;#39;) for i in xrange(100)),&lt;/span&gt;
-&lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;int&amp;#39;: 100,&lt;/span&gt;
-&lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;float&amp;#39;: 100.123456&lt;/span&gt;
-&lt;span style=&#34;color: #4070a0&#34;&gt;}&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-
-setup_pickle    &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; ; import cPickle ; src = cPickle.dumps(d)&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup
-setup_pickle2   &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; ; import cPickle ; src = cPickle.dumps(d, 2)&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup
-setup_json      &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; ; import json; src = json.dumps(d)&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup
-setup_msgpack   &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; ; src = msgpack.dumps(d)&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup
-
-tests &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; \[
-\&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# (title, setup, enc_test, dec_test)&lt;/span&gt;
-\(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;pickle (ascii)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import pickle; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_pickle, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;pickle.dumps(d, 0)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;pickle.loads(src)&amp;#39;&lt;/span&gt;),
-\(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;pickle (binary)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import pickle; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_pickle2, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;pickle.dumps(d, 2)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;pickle.loads(src)&amp;#39;&lt;/span&gt;),
-\(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cPickle (ascii)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import cPickle; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_pickle, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cPickle.dumps(d, 0)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cPickle.loads(src)&amp;#39;&lt;/span&gt;),
-\(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cPickle (binary)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import cPickle; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_pickle2, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cPickle.dumps(d, 2)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cPickle.loads(src)&amp;#39;&lt;/span&gt;),
-\(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;json&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import json; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_json, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;json.dumps(d)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;json.loads(src)&amp;#39;&lt;/span&gt;),
-\(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;simplejson-3.3.1&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import simplejson; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_json, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;simplejson.dumps(d)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;simplejson.loads(src)&amp;#39;&lt;/span&gt;),
-\(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;python-cjson-1.0.5&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import cjson; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_json, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cjson.encode(d)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;cjson.decode(src)&amp;#39;&lt;/span&gt;),
-\(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;ujson-1.33&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import ujson; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_json, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;ujson.dumps(d)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;ujson.loads(src)&amp;#39;&lt;/span&gt;),
-\(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;yajl 0.3.5&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import yajl; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_json, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;yajl.dumps(d)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;yajl.loads(src)&amp;#39;&lt;/span&gt;),
-\(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;msgpack-python-0.3.0&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;import msgpack; &lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; setup_msgpack, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;msgpack.dumps(d)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;msgpack.loads(src)&amp;#39;&lt;/span&gt;),
-\]
-
-loops &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #40a070&#34;&gt;15000&lt;/span&gt;
-enc_table &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; \[\]
-dec_table &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; \[\]
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;Running tests (&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; loops each)&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; loops
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;for&lt;/span&gt; title, mod, enc, dec &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;in&lt;/span&gt; tests:
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; title
-
-    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;  [Encode]&amp;quot;&lt;/span&gt;, enc 
-    result &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; timeit(enc, mod, number&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;loops)
-    enc_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;append([title, result])
-    
-    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;  [Decode]&amp;quot;&lt;/span&gt;, dec 
-    result &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; timeit(dec, mod, number&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;loops)
-    dec_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;append([title, result])
-
-enc_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;sort(key&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;lambda&lt;/span&gt; x: x\[&lt;span style=&#34;color: #40a070&#34;&gt;1&lt;/span&gt;\])
-enc_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;insert(&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;, \[&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Package&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Seconds&amp;#39;&lt;/span&gt;\])
-
-dec_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;sort(key&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;lambda&lt;/span&gt; x: x\[&lt;span style=&#34;color: #40a070&#34;&gt;1&lt;/span&gt;\])
-dec_table&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;insert(&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;, \[&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Package&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;Seconds&amp;#39;&lt;/span&gt;\])
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\\&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;nEncoding Test (&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; loops)&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; loops
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; tabulate(enc_table, headers&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;firstrow&amp;quot;&lt;/span&gt;)
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #4070a0; font-weight: bold&#34;&gt;\\&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;nDecoding Test (&lt;/span&gt;&lt;span style=&#34;color: #70a0d0; font-style: italic&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt; loops)&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; loops
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;print&lt;/span&gt; tabulate(dec_table, headers&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;firstrow&amp;quot;&lt;/span&gt;)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;OUTPUT:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Running tests (15000 loops each)
-pickle (ascii)
-  [Encode] pickle.dumps(d, 0)
-  [Decode] pickle.loads(src)
-pickle (binary)
-  [Encode] pickle.dumps(d, 2)
-  [Decode] pickle.loads(src)
-cPickle (ascii)
-  [Encode] cPickle.dumps(d, 0)
-  [Decode] cPickle.loads(src)
-cPickle (binary)
-  [Encode] cPickle.dumps(d, 2)
-  [Decode] cPickle.loads(src)
-json
-  [Encode] json.dumps(d)
-  [Decode] json.loads(src)
-simplejson-3.3.1
-  [Encode] simplejson.dumps(d)
-  [Decode] simplejson.loads(src)
-python-cjson-1.0.5
-  [Encode] cjson.encode(d)
-  [Decode] cjson.decode(src)
-ujson-1.33
-  [Encode] ujson.dumps(d)
-  [Decode] ujson.loads(src)
-yajl 0.3.5
-  [Encode] yajl.dumps(d)
-  [Decode] yajl.loads(src)
-msgpack-python-0.3.0
-  [Encode] msgpack.dumps(d)
-  [Decode] msgpack.loads(src)
-
-Encoding Test (15000 loops)
-Package                 Seconds
---------------------  ---------
-ujson-1.33             0.232215
-msgpack-python-0.3.0   0.241945
-cPickle (binary)       0.305273
-yajl 0.3.5             0.634148
-python-cjson-1.0.5     0.680604
-json                   0.780438
-simplejson-3.3.1       1.04763
-cPickle (ascii)        1.62062
-pickle (ascii)        14.0497
-pickle (binary)       15.4712
-
-Decoding Test (15000 loops)
-Package                 Seconds
---------------------  ---------
-msgpack-python-0.3.0   0.240885
-cPickle (binary)       0.393152
-ujson-1.33             0.396875
-python-cjson-1.0.5     0.694321
-yajl 0.3.5             0.748369
-simplejson-3.3.1       0.780531
-cPickle (ascii)        1.38561
-json                   1.65921
-pickle (binary)        5.20554
-pickle (ascii)        17.8767
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
-    
-    
     
     <item>
       <title>Getting started with XBOX 360 Kinect on OSX</title>
       <link>http://justinfx.com/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Thu, 21 Jun 2012 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</guid>
-      <description>
-
-&lt;p&gt;A recent project of mine involves research and development with an XBOX 360 Kinect Sensor. Being a python guy, I started searching for python bindings to some OSX-supported framework. When you just get started looking into this area it can be a little confusing. There are a number of layers to the software stack to enable one to accomplish anything meaningful. This is just a short and general blog post outlining the basics of what I have discovered thus far, to help anyone else that might also be getting started.&lt;/p&gt;
-
-&lt;p&gt;At the lowest level, you need a driver. Something that can talk to the USB device that is the Kinect sensor. When you purchase the XBOX Kinect for Windows version of the sensor, and you are going to be developing on windows, much of this whole stack is provided to you by way of the Kinect SDK. But for the open source folks with the standard XBOX 360 sensor, you need to piece together your own solution.&lt;/p&gt;
-
-&lt;p&gt;Two drivers that I have discovered thus far:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://openkinect.org/wiki/Main_Page&#34;&gt;OpenKinect&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/avin2/SensorKinect&#34;&gt;PrimeSense Sensor&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I had started OpenKinect (libfreenect) because it comes with a &lt;a href=&#34;https://github.com/OpenKinect/libfreenect/tree/master/wrappers/python&#34;&gt;python wrapper&lt;/a&gt; included. There were a few dependencies (I will talk about specific build steps in just a moment), but once I got this installed I was able to fire up the included  glview app and see both depth and rgb data streaming in from my sensor. The role of these drivers is to provide simply the basic streams. That is, the depth, rgb, audio, and a few other sensor data streams. If your goal is to start tracking players, seeing skeletons, and registering gestures, the drivers are not enough. You would be required to make your own solution from this raw data at this phase in the game.&lt;/p&gt;
-
-&lt;p&gt;You would now want to look into middleware that can take the raw data and provide to you an API with higher level information. This would include finding users in the scene for you, tracking their body features, and giving you various events to watch for as the data streams.&lt;/p&gt;
-
-&lt;p&gt;Being that my goal was to have python bindings, I found my options to be much more limited than if I were going to be developing in C++. Wrappers have to exist for the framework you want. This is where my research really started ramping up. I spent a few days dealing wtih compiling issues, as well as having an actual bad power adapter that had to be exchanged. But all said and done, here is what I have settled on thus far&amp;#8230;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Driver: &lt;a href=&#34;https://github.com/avin2/SensorKinect&#34;&gt;PrimeSense Sensor&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/OpenNI/OpenNI&#34;&gt;OpenNI Framework&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;A recent project of mine involves research and development with an XBOX 360 Kinect Sensor. Being a python guy, I started searching for python bindings to some OSX-supported framework. When you just get started looking into this area it can be a little confusing. There are a number of layers to the software stack to enable one to accomplish anything meaningful. This is just a short and general blog post outlining the basics of what I have discovered thus far, to help anyone else that might also be getting started.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;At the lowest level, you need a driver. Something that can talk to the USB device that is the Kinect sensor. When you purchase the XBOX Kinect for Windows version of the sensor, and you are going to be developing on windows, much of this whole stack is provided to you by way of the Kinect SDK. But for the open source folks with the standard XBOX 360 sensor, you need to piece together your own solution.&lt;/p&gt;
-
-&lt;p&gt;Two drivers that I have discovered thus far:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://openkinect.org/wiki/Main_Page&#34;&gt;OpenKinect&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/avin2/SensorKinect&#34;&gt;PrimeSense Sensor&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I had started OpenKinect (libfreenect) because it comes with a &lt;a href=&#34;https://github.com/OpenKinect/libfreenect/tree/master/wrappers/python&#34;&gt;python wrapper&lt;/a&gt; included. There were a few dependencies (I will talk about specific build steps in just a moment), but once I got this installed I was able to fire up the included  glview app and see both depth and rgb data streaming in from my sensor. The role of these drivers is to provide simply the basic streams. That is, the depth, rgb, audio, and a few other sensor data streams. If your goal is to start tracking players, seeing skeletons, and registering gestures, the drivers are not enough. You would be required to make your own solution from this raw data at this phase in the game.&lt;/p&gt;
-
-&lt;p&gt;You would now want to look into middleware that can take the raw data and provide to you an API with higher level information. This would include finding users in the scene for you, tracking their body features, and giving you various events to watch for as the data streams.&lt;/p&gt;
-
-&lt;p&gt;Being that my goal was to have python bindings, I found my options to be much more limited than if I were going to be developing in C++. Wrappers have to exist for the framework you want. This is where my research really started ramping up. I spent a few days dealing wtih compiling issues, as well as having an actual bad power adapter that had to be exchanged. But all said and done, here is what I have settled on thus far&amp;#8230;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Driver: &lt;a href=&#34;https://github.com/avin2/SensorKinect&#34;&gt;PrimeSense Sensor&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/OpenNI/OpenNI&#34;&gt;OpenNI Framework&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.openni.org/Downloads/OpenNIModules.aspx&#34;&gt;OpenNI Modules&lt;/a&gt; for OpenNI&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/jmendeth/PyOpenNI&#34;&gt;PyOpenNI&lt;/a&gt; python bindings&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&#34;span-style-text-decoration-underline-install-details-span&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Install Details&lt;/span&gt;&lt;/h4&gt;
-
-&lt;h5 id=&#34;install-homebrew-package-manager&#34;&gt;&lt;strong&gt;Install homebrew (package manager)&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://mxcl.github.com/homebrew/&#34;&gt;http://mxcl.github.com/homebrew/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h5 id=&#34;install-build-tools&#34;&gt;&lt;strong&gt;Install build tools&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;pre&gt;brew install cmake
-brew install boost&lt;/pre&gt;
-
-&lt;h5 id=&#34;install-python2-7&#34;&gt;&lt;strong&gt;Install python2.7&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;pre&gt;brew install python --framework&lt;/pre&gt;
-
-&lt;h5 id=&#34;suggestion-virtualenv-environment&#34;&gt;&lt;strong&gt;Suggestion: virtualenv Environment&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;p&gt;This is not a requirement. But I recommend using virtualenv to set up an environment that specifically uses python2.7 so that you don&amp;#8217;t have to fight with mixed dependencies and versions.&lt;/p&gt;
-
-&lt;p&gt;Create a virtualenv called &amp;#8220;kinect&amp;#8221;&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;pip install virtualenv
-virtualenv --no-site-packages -p python2.7 kinect
-&lt;span style=&#34;color: #007020&#34;&gt;cd&lt;/span&gt; kinect
-&lt;span style=&#34;color: #007020&#34;&gt;source&lt;/span&gt; bin/activate
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h5 id=&#34;install-libusb-patched-version&#34;&gt;&lt;strong&gt;Install libusb (patched version)&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;p&gt;There is a special patched version of the libusb library, in the form of a homebrew formula.&lt;/p&gt;
-
-&lt;pre class=&#34;lang:default decode:true&#34;&gt;git clone https://github.com/OpenKinect/libfreenect.git&lt;/pre&gt;
-
-&lt;p&gt;Now copy platform/osx/homebrew/libusb-freenect.rb -&amp;gt; /usr/local/Library/Formula/&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;brew install libusb-freenect
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h5 id=&#34;install-sensorkinect-drivers&#34;&gt;&lt;strong&gt;Install SensorKinect drivers&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/avin2/SensorKinect.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then uncompress Bin/SensorKinect093-Bin-MacOSX-v*tar.bz2&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo ./install.sh
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h5 id=&#34;install-openni-framework&#34;&gt;&lt;strong&gt;Install OpenNI framework&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Go here: &lt;a href=&#34;http://www.openni.org/Downloads/OpenNIModules.aspx&#34;&gt;http://www.openni.org/Downloads/OpenNIModules.aspx&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Download Unstable Binary for MacOSX&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sudo ./install.sh&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&#34;install-nite-middleware-for-openni&#34;&gt;&lt;strong&gt;Install NITE middleware (for OpenNI)&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Go here: &lt;a href=&#34;http://www.openni.org/Downloads/OpenNIModules.aspx&#34;&gt;http://www.openni.org/Downloads/OpenNIModules.aspx&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Download Unstable MIDDLEWARE of NITE for OSX&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sudo ./install.sh&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&#34;install-pyopenni&#34;&gt;&lt;strong&gt;Install PyOpenNI&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;p&gt;Be aware that on OSX, PyOpenNI requires a framework build of python 2.7+ and that you must build it for x86_64 specifically. Also, I was having major problems with cmake properly finding the python includes location. I had to suggest a fix, so &lt;a href=&#34;https://github.com/jmendeth/PyOpenNI/issues/16#issuecomment-6515678&#34;&gt;please see here for the necessary corrections&lt;/a&gt;. I have referenced a patched fork of the repository below.&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color: #bb60d5&#34;&gt;CPPFLAGS&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;-arch x86_64&amp;quot;&lt;/span&gt;
-git clone git://github.com/justinfx/PyOpenNI.git
-mkdir PyOpenNI-build
-&lt;span style=&#34;color: #007020&#34;&gt;cd&lt;/span&gt; PyOpenNI-build
-cmake -D &lt;span style=&#34;color: #bb60d5&#34;&gt;PYTHON_INCLUDE_DIR&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Headers ../PyOpenNI
-make
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;copy the lib/openni.so module to the python2.7 site-packages&lt;/p&gt;
-
-&lt;h4 id=&#34;span-style-text-decoration-underline-examples-span&#34;&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Examples&lt;/span&gt;&lt;/h4&gt;
-
-&lt;p&gt;Once you have everything installed, you can try out the examples that are included both in the NITE source location that you downloaded and also in the PyOpenNI source location:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;NITE/Samples&lt;/li&gt;
-&lt;li&gt;PyOpenNI/examples&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div&gt;
-  I also tried out ofxKinect (&lt;a href=&#34;https://github.com/ofTheo/ofxKinect&#34;&gt;github.com/ofTheo/ofxKinect&lt;/a&gt;) on the side, which is an addon for  &lt;a href=&#34;http://www.openframeworks.cc/&#34;&gt;OpenFrameworks&lt;/a&gt;. This is kind of a separate path than the OpenNI stack. I would say its more like an advanced offering of libfreenect. Using the included example, I recorded a 3D point cloud that is built on the fly from the RGB and depth data:
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;div class=&#34;embed video-player&#34;&gt;
-	&lt;iframe class=&#34;youtube-player&#34; 
-			type=&#34;text/html&#34; 
-			width=&#34;640&#34; height=&#34;385&#34; 
-			src=&#34;http://www.youtube.com/embed/vICLgxnZ1Bs&#34; 
-			allowfullscreen 
-			frameborder=&#34;0&#34;&gt;
-	&lt;/iframe&gt;
-&lt;/div&gt;
-
-
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-</description>
+      <description>A recent project of mine involves research and development with an XBOX 360 Kinect Sensor. Being a python guy, I started searching for python bindings to some OSX-supported framework. When you just get started looking into this area it can be a little confusing. There are a number of layers to the software stack to enable one to accomplish anything meaningful. This is just a short and general blog post outlining the basics of what I have discovered thus far, to help anyone else that might also be getting started.</description>
     </item>
-    
-    
     
     <item>
       <title>Write My Code For Me</title>
       <link>http://justinfx.com/2012/04/14/write-my-code-for-me/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Sat, 14 Apr 2012 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2012/04/14/write-my-code-for-me/</guid>
-      <description>
-
-&lt;p&gt;Permalink &amp;#8211; writemycode.net&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;In the spirit of a &lt;a href=&#34;http://whathaveyoutried.com&#34;&gt;very similar blog post&lt;/a&gt;, I decided to expand upon a specific area of that article&amp;#8230;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Consider a question like this:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I want to do this. Create 10000 files, (filename can be just combination of time and random number). File size should be 4k. And I want to time this. say how many seconds it will take.&lt;/p&gt;
-
-&lt;p&gt;How can I do this on bash?&lt;/p&gt;
-
-&lt;p&gt;Thank you.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Obviously this person needs some assistance, and the question is very short and easy to understand. But the problem with this type of question is that there are really only two ways someone can approach the answer. Your options for an answer are either to just give the person the complete code snippet as they have requested, or fall back on a lengthy personalized tutorial.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Short questions that primarily request a complete code example as an answer are counter-productive to code communities.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h5 id=&#34;answer-option-1&#34;&gt;Answer Option 1&lt;/h5&gt;
-
-&lt;p&gt;As the topic of this article suggests, option 1 is &amp;#8220;Write my code for me&amp;#8221;. It might seem easy as a one-off situation to simply donate a working code snippet and get the person asking this question moving on their merry way, but really this is not helping them in the long run. They haven&amp;#8217;t learned anything beyond the process of hitting a roadblock, then immediately going online to ask for a solution. Had this person included some references to what they have researched, and most importantly a code snippet representing what they have attempted, viewers of this question would have a basis for comment and potentially an answer pointing out where the person has gone wrong.&lt;/p&gt;
-
-&lt;h5 id=&#34;answer-option-2&#34;&gt;Answer Option 2&lt;/h5&gt;
-
-&lt;p&gt;And in the other direction: providing a lengthy tutorial. We all want to help and teach, but this is just one of numerous questions floating out in the ether that requires a response. Can we really spare that much time for every single question like this to re-teach material that is most likely already documented in generalized contexts all across the internet? That would create quite a lot of redundant information simply because each person combines new components into a new question needing a new lesson. Really, every part of this question can be Googled quite easily. Why ask a community to do a new custom writeup for you?&lt;/p&gt;
-
-&lt;p&gt;Now, assuming we actually wanted to write a tutorial for this person asking the question. The problem at this point is where do we begin? The information provided doesn&amp;#8217;t suggest that this person has a grasp on any part of the problem. So the tutorial answer might need to include:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Bash and for-loops&lt;/li&gt;
-&lt;li&gt;How to get the current time&lt;/li&gt;
-&lt;li&gt;How to generate random numbers&lt;/li&gt;
-&lt;li&gt;Creating files&lt;/li&gt;
-&lt;li&gt;Populating new files to a specific size&lt;/li&gt;
-&lt;li&gt;How to write a complete bash script, and time its execution.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Had they told us what they know how to do so far, and what aspect has them stuck, we could simply focus on one area and provide a good bit of knowledge to get them moving again. But right now this is just too much work to net a situation where they will learn something.&lt;/p&gt;
-
-&lt;p&gt;For those that are immediately inclined to provide the complete code snippet to solve the problem, where do we draw the line? What if the question being asked would need 10 lines of code? 20? 100? And if you are also interested in frequently helping people, would you be willing to provide 5 lines of complete code to 10 people a day, knowing that each person probably didn&amp;#8217;t learn much? Furthermore, after having given this individual a quick answer, you have now rewarded their lazy behavior, and more than likely just encouraged them to repeat the bad habit again.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Through a conversation between my coworker and I, some interesting metaphors were raised that I simply can&amp;#8217;t resist from sharing&amp;#8230;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h5 id=&#34;vending-machine-communities&#34;&gt;Vending-machine communities&lt;/h5&gt;
-
-&lt;p&gt;&lt;strong&gt;Put a question in the slot and pop out a solution.  &lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Be it a traditional forum, an online discussion group, mailing list, or a trust and reputation based technical site like &lt;a href=&#34;http://www.stackoverflow.com&#34;&gt;stackoverflow.com&lt;/a&gt;, these communities are driven by people, not machines. People have to take time to review content, and contribute their knowledge. We all work hard to acquire that knowledge, so lets all try and put some value on it in the form of the quality of our questions. A .25 cent answer is insulting. Treat your questions like they are costing you actual money that properly reflects the value of people&amp;#8217;s knowledge. Code communities don&amp;#8217;t work for you, and you don&amp;#8217;t work for them. We are all here to help because we love it. Please don&amp;#8217;t make us hate it, or feel like we are all just part of a big vending-machine.&lt;/p&gt;
-
-&lt;h5 id=&#34;toilet-paper-answers&#34;&gt;&lt;strong&gt;Toilet paper answers&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;p&gt;&lt;strong&gt;Answers that can be used only one particular time for one particular situation.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;There is an insane amount of content on the internet. It&amp;#8217;s hard enough sometimes to sift through the results of a vague Google search, let alone the content on our individual communities. When you ask a question that provides zero context, or proof of the extent of your current effort, then both the question and the answer are for the most part &amp;#8220;throw aways&amp;#8221;. If its going to be a persistent part of a community space, it should aim to benefit future support-seekers with similar situations. Referring to the example question above, someone going with Option 1 (&amp;#8220;Write my code&amp;#8221;) will end up providing an answer that will likely not help many people beyond this situation. Unless they too are looking for a way to do a for loop and create 10,000 4k dummy files and measure the execution time. The only way it would stand to benefit future visitors is if the answer did Option 2 and wrote a fully self-describing tutorial.&lt;/p&gt;
-
-&lt;h5 id=&#34;conclusion&#34;&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;p&gt;I can only speak for myself about what I might do. I consider myself to be the type that would go as far as to look at API docs for someone, and work out some pretty extensive examples on my local machine. I might even install libs that I don&amp;#8217;t have or have never used before in an effort to provide assistance. But I need to be motivated to do so. It&amp;#8217;s exciting for me to write out a page-length of information if I know it will help this person. But in a case like the above there is no show of effort and no context provided &amp;#8212; just a person asking to have code written for them.&lt;/p&gt;
-
-&lt;p&gt;As I suggested already, we all want to help. Thats why we frequent these forums and sites. But we help these types of answer-seekers even more by withholding instant gratification.&lt;/p&gt;
-
-&lt;p&gt;And now&amp;#8230; I direct you back to &lt;a href=&#34;http://whathaveyoutried.com&#34;&gt;whathaveyoutried.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-</description>
+      <description>Permalink &amp;#8211; writemycode.net
+In the spirit of a very similar blog post, I decided to expand upon a specific area of that article&amp;#8230;
+Consider a question like this:
+ I want to do this. Create 10000 files, (filename can be just combination of time and random number). File size should be 4k. And I want to time this. say how many seconds it will take.
+How can I do this on bash?</description>
     </item>
-    
-    
     
     <item>
       <title>Apple Macbooks and Unexplainable LCD Screen Flicker</title>
       <link>http://justinfx.com/2011/12/05/apple-macbooks-and-unexplainable-lcd-flicker/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Mon, 05 Dec 2011 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2011/12/05/apple-macbooks-and-unexplainable-lcd-flicker/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2011/12/bmacbook_flicker.png&#34; alt=&#34;&#34; title=&#34;Macbook Pro flicker&#34; width=&#34;490&#34; height=&#34;268&#34; class=&#34;alignnone size-full wp-image-395&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I had just received my &lt;a href=&#34;http://www.bhphotovideo.com/c/product/756789-REG/Apple_MC721LL_A_15_4_MacBook_Pro_Notebook.html&#34;&gt;brand new MacBook Pro&lt;/a&gt; a few days ago. Amazing machine. Probably the best laptop I have ever laid my hands upon. It was the early Feb 2011 model so I got a crazy good deal. But something caught my eye that I just had to investigate&amp;#8230;&lt;/p&gt;
-
-&lt;p&gt;I&amp;#8217;m a bit obsessive when it comes to small issues that I can&amp;#8217;t resolve, and this is just still bothering me. I noticed that when I smooth scroll (trackpad or smooth wheel logitech mouse) on such content as webpages, or Mail, that there is a flicker in the display of text and context. It depends on the size and orientation of the content, whether it will flicker more or less. My eyes just couldn&amp;#8217;t ignore it and I figured it couldn&amp;#8217;t possibly be normal functionality. Thus, step one of my problem solving began: Google search.&lt;/p&gt;
-
-&lt;p&gt;My search turned up a number of similar complaints to both &lt;a href=&#34;http://www.apple.com/macbookpro/&#34;&gt;MacBook Pro&lt;/a&gt; and &lt;a href=&#34;http://www.apple.com/macbookair/&#34;&gt;Air&lt;/a&gt; models, such as this discussion: &lt;a href=&#34;https://discussions.apple.com/thread/2645516?start=0&amp;amp;tstart=0&#34;&gt;https://discussions.apple.com/thread/2645516?start=0&amp;amp;tstart=0&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;It seemed the problem was not just limited to my specific early 2011 Macbook Pro. Suggestions ranged from resetting the PRAM (holding cmd+option+p+r for a couple of reboot cycles), to toggling the screen through display resolutions, to adjusting brightness of the display. Nothing seemed to make much of a difference to me.&lt;/p&gt;
-
-&lt;h4 id=&#34;inversion-pixel-walk&#34;&gt;Inversion (pixel-walk)&lt;/h4&gt;
-
-&lt;p&gt;Googling also turned up a reference to this site, which offers various types of LCD tests: &lt;a href=&#34;http://www.lagom.nl/lcd-test/inversion.php&#34;&gt;http://www.lagom.nl/lcd-test/inversion.php&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;According to this site, its normal to have a slight flicker in one box. And heavier flickering suggests voltage alignment issues in the LCD display. Using this test, I tried it on a number of Apple product configurations. Here is a collection of my findings:&lt;/p&gt;
-
-&lt;table class=&#34;sample&#34;&gt;
-  &lt;tr&gt;
-    &lt;th width=&#34;170&#34; scope=&#34;col&#34;&gt;
-      Device
-    &lt;/th&gt;
-    
-    &lt;th width=&#34;137&#34; scope=&#34;col&#34;&gt;
-      Display
-    &lt;/th&gt;
-    
-    &lt;th width=&#34;241&#34; scope=&#34;col&#34;&gt;
-      Scrolling
-    &lt;/th&gt;
-    
-    &lt;th width=&#34;233&#34; scope=&#34;col&#34;&gt;
-      Not Scrolling
-    &lt;/th&gt;
-  &lt;/tr&gt;
-  
-  &lt;tr&gt;
-    &lt;td&gt;
-      Macbook Pro (early 2011)
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      15&#34; 1440&amp;#215;900
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      Heavy multi-color flickering in all boxes
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      At least 2 boxes always lightly flickering
-    &lt;/td&gt;
-  &lt;/tr&gt;
-  
-  &lt;tr&gt;
-    &lt;td&gt;
-      Mac Pro MacPro4,1 (2009)
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      24&#34; Cinema Display
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      Light amount of flickering in all boxes
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      No flicker
-    &lt;/td&gt;
-  &lt;/tr&gt;
-  
-  &lt;tr&gt;
-    &lt;td&gt;
-      Mac Pro MacPro5,1 (2010)
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      27&#34; LED Cinema Display
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      No flicker
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      Very light flicker in box 7a
-    &lt;/td&gt;
-  &lt;/tr&gt;&lt;caption&gt; 
-  
-  &lt;a href=&#34;http://www.lagom.nl/lcd-test/inversion.php&#34;&gt;Inversion (pixel-walk)&lt;/a&gt; test results on LCD displays&lt;br /&gt; &lt;/caption&gt;
-&lt;/table&gt;
-
-&lt;h4 id=&#34;apple-support&#34;&gt;Apple Support&lt;/h4&gt;
-
-&lt;p&gt;After speaking to support over the phone, they suggested that I go into the store for more help. When I got to the store and started speaking with a tech at the Genius Bar, he had never heard of this issue before. But once I showed him an example on both news.google.com, and in my Apple Mail, he definitely acknowledged that its noticeable. He then went off into the back to research the issue a bit.&lt;/p&gt;
-
-&lt;p&gt;When the tech came back he said that he had found no outstanding information from Apple about this issue. A second tech even came and looked at the issue, and had no explanation for it.&lt;/p&gt;
-
-&lt;p&gt;I went around the store and checked web page scrolling on 13&amp;#8243; MacBook Airs, and 13&amp;#8243;, 15&amp;#8243;, and 17&amp;#8243; MacBook Pro models, with and without the higher resolution LCD display options. All models exhibited the same flicker during scrolling. My final recommendation from the stumped Apple tech was that it could be an issue with Lion and its rendering of fonts, or whatever, and that I could either return my laptop, or hold out for some kind of fix from Apple. Basically, no idea.&lt;/p&gt;
-
-&lt;p&gt;My question is&amp;#8230; Am I being overly sensitive to this display flicker? I figure I can&amp;#8217;t be the only one, as per the discussion lists of other users that notice the problem. Some of my friends with the same laptop said they have never really noticed until I pointed it out. I just wonder why such a fantastic laptop would exhibit this visual artifact, and whether it is something I should just accept as being normal?&lt;/p&gt;
-</description>
+      <description>I had just received my brand new MacBook Pro a few days ago. Amazing machine. Probably the best laptop I have ever laid my hands upon. It was the early Feb 2011 model so I got a crazy good deal. But something caught my eye that I just had to investigate&amp;#8230;
+I&amp;#8217;m a bit obsessive when it comes to small issues that I can&amp;#8217;t resolve, and this is just still bothering me.</description>
     </item>
-    
-    
     
     <item>
       <title>Mixing PyQt4 widgets and Maya UI objects</title>
       <link>http://justinfx.com/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Mon, 21 Nov 2011 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</guid>
       <description>&lt;p&gt;A question came up in the &lt;a href=&#34;http://groups.google.com/group/python_inside_maya&#34;&gt;Maya-Python mailing list&lt;/a&gt; that I thought was a really good topic, and should be reposted.&lt;/p&gt;
 
 &lt;p&gt;Someone asked how you can create maya UI objects and embed them within your main PyQt application. Specifically he wanted to create a modelPanel and embed it so that he would have a camera view within his own PyQt window.&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;em&gt;Update&lt;/em&gt;: Instructions for Maya 2017+, using PySide2 and Qt5, are available via this &lt;a href=&#34;http://blog.virtualmethodstudio.com/2017/03/embed-maya-native-ui-objects-in-pyside2/&#34;&gt;blog post by Lidia Martínez&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Here is my example of how to achieve this&amp;#8230;&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;PyQt4&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; QtCore, QtGui
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;maya.cmds&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;cmds&lt;/span&gt;
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;maya.OpenMayaUI&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;mui&lt;/span&gt;
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;sip&lt;/span&gt;
-
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;MyDialog&lt;/span&gt;(QtGui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QDialog):
-
-    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;__init__&lt;/span&gt;(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;, parent, &lt;span style=&#34;color: #666666&#34;&gt;**&lt;/span&gt;kwargs):
-        &lt;span style=&#34;color: #007020&#34;&gt;super&lt;/span&gt;(MyDialog, &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;__init__(parent, &lt;span style=&#34;color: #666666&#34;&gt;**&lt;/span&gt;kwargs)
-        
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setObjectName(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;MyWindow&amp;quot;&lt;/span&gt;)
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;resize(&lt;span style=&#34;color: #40a070&#34;&gt;800&lt;/span&gt;, &lt;span style=&#34;color: #40a070&#34;&gt;600&lt;/span&gt;)
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setWindowTitle(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;PyQt ModelPanel Test&amp;quot;&lt;/span&gt;)
-
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; QtGui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QVBoxLayout(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setContentsMargins(&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;)
-
-        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# need to set a name so it can be referenced by maya node path&lt;/span&gt;
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setObjectName(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;mainLayout&amp;quot;&lt;/span&gt;)
-        
-        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# First use SIP to unwrap the layout into a pointer&lt;/span&gt;
-        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Then get the full path to the UI in maya as a string&lt;/span&gt;
-        layout &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;fullName(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;unwrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout)))
-        cmds&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;setParent(layout)
-
-        paneLayoutName &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; cmds&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;paneLayout()
-        
-        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Find a pointer to the paneLayout that we just created&lt;/span&gt;
-        ptr &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;findControl(paneLayoutName)
-        
-        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Wrap the pointer into a python QObject&lt;/span&gt;
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;paneLayout &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;wrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(ptr), QtCore&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QObject)
-
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;cameraName &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; cmds&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;camera()[&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;]
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanelName &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; cmds&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanel(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;customModelPanel&amp;quot;&lt;/span&gt;, label&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;ModelPanel Test&amp;quot;&lt;/span&gt;, cam&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;cameraName)
-        
-        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Find a pointer to the modelPanel that we just created&lt;/span&gt;
-        ptr &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;findControl(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanelName)
-        
-        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# Wrap the pointer into a python QObject&lt;/span&gt;
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanel &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;wrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(ptr), QtCore&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QObject)
-
-        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# add our QObject reference to the paneLayout to our layout&lt;/span&gt;
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;verticalLayout&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;addWidget(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;paneLayout)
-
-    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;showEvent&lt;/span&gt;(&lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;, event):
-        &lt;span style=&#34;color: #007020&#34;&gt;super&lt;/span&gt;(MyDialog, &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;)&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;showEvent(event)
-
-        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# maya can lag in how it repaints UI. Force it to repaint&lt;/span&gt;
-        &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# when we show the window.&lt;/span&gt;
-        &lt;span style=&#34;color: #007020&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;modelPanel&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;repaint()
-                    
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #06287e&#34;&gt;show&lt;/span&gt;():
-    &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# get a pointer to the maya main window&lt;/span&gt;
-    ptr &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; mui&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;MQtUtil&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mainWindow()
-    &lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;# use sip to wrap the pointer into a QObject&lt;/span&gt;
-    win &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; sip&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;wrapinstance(&lt;span style=&#34;color: #007020&#34;&gt;long&lt;/span&gt;(ptr), QtCore&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;QObject)
-    d &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; MyDialog(win)
-    d&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;show()
-
-    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;return&lt;/span&gt; d
-
-
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;try&lt;/span&gt;:
-    dialog&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;deleteLater()
-&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;except&lt;/span&gt;:
-    &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;pass&lt;/span&gt;    
-dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;You need sip and the MQtUtil functions to convert between maya node paths and python Qbjects. Its the same idea as having to use those functions to get a reference to the maya MainWindow, in order to parent your dialog.&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
-    
-    
     
     <item>
       <title>Python for Maya Artists – Volume 2</title>
       <link>http://justinfx.com/2011/11/15/python-for-maya-artists-volume-2/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Tue, 15 Nov 2011 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2011/11/15/python-for-maya-artists-volume-2/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;&lt;img class=&#34;alignnone&#34; src=&#34;http://justinfx.com/wp-content/uploads/2011/11/maya_python_vol2.jpg&#34; alt=&#34;&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -1914,73 +178,202 @@ dialog &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; show()
 
 &lt;p&gt;&lt;em&gt;If you watched the first video, you now have a good grasp on Python. Sweet. Let’s plow through some more involved concepts like python juggernauts!&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;With a working knowledge of the python scripting language, and the Maya Python commands API, we can continue to learn new ways to solve more challenging problems, create complete scripts, and build user interfaces around our tools. We also introduce the Maya Python API; a lower-level interface into Maya.&lt;/p&gt;
-
-&lt;p&gt;This video focuses more on breaking down full scripts, as opposed to typing out syntax. Its jam packaged with information and moves fast to deliver you as much brain food as possible. The first segment of the video transitions from beginning to intermediate level, with the majority of the video being intermediate, and finishing out by touching on advanced concepts. The included project files are abundant, complete, and full of helpful documentation so that you can take your time and learn about each piece of the tools.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;If you check it out, leave me feedback!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;https://cmivfx.com/store/328-python-for-maya-vol-02&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;First video can be &lt;a href=&#34;http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/&#34;&gt;found here&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
-    
-    
     
     <item>
       <title>Installing PyQt4 for Maya 2012&#43; (osx)</title>
       <link>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Thu, 10 Nov 2011 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
-      <description>&lt;p&gt;This is a follow up post to my previous one on &lt;a href=&#34;http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/&#34;&gt;Installing PyQt4 for Maya 2011&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Recently while putting together my next video tutorial for Python for Maya, I came to a section where I wanted to demo PyQt4 in Maya2012. But I was concerned that viewers would have to go through the complicated steps of building PyQt4. I noticed that other people have made available precompiled PyQt installers for windows (&lt;a href=&#34;http://blarg.robertkist.com/?p=51&#34; target=&#34;_blank&#34; class=&#34;broken_link&#34;&gt;here&lt;/a&gt;) but I could not find any for OSX or linux. So I decided to put together a build.&lt;/p&gt;
-
-&lt;p&gt;I created a new project on github called MyQt4&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/MyQt4&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/justinfx/MyQt4&#34;&gt;https://github.com/justinfx/MyQt4&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Its a Makefile for completely downloading and building PyQt4 for maya, and generating a .pkg installer. Hopefully someone can contribute improvements since I dont have a ton of experience writing makefiles, and also that someone might create a linux version.&lt;/p&gt;
-
-&lt;p&gt;Here is a link to the latest pkg build:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Snow Leopard: &lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Maya2011: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.7.4-maya2011-x64-osx-10.6.pkg&#34; target=&#34;_blank&#34;&gt;MyQt4.7.4-maya2011-x64-osx-10.6.pkg&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Maya2012: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.9.4-maya2012-x64-osx-10.6.pkg&#34; target=&#34;_blank&#34;&gt;MyQt4.9.4-maya2012-x64-osx-10.6.pkg&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Maya2013: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.9.4-maya2013-x64-osx-10.6.pkg&#34; target=&#34;_blank&#34;&gt;MyQt4.9.4-maya2013-x64-osx-10.6.pkg&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Lion:  &lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Maya2012: &lt;a href=&#34;http://dl.dropbox.com/u/34613220/MyQt4/MyQt4.8.6-maya2012-x64-osx-10.7.pkg&#34; target=&#34;_blank&#34;&gt;MyQt4.8.6-maya2012-x64-osx-10.7.pkg&lt;/a&gt;   (Thanks &lt;a href=&#34;https://github.com/cgrebeld&#34; target=&#34;_blank&#34;&gt;Chris&lt;/a&gt;!)&lt;/li&gt;
-&lt;li&gt;Maya2013: &lt;a href=&#34;http://dl.dropbox.com/u/34613220/MyQt4/MyQt4.8.6-maya2013-x64-osx-10.7.pkg&#34;&gt;MyQt4.8.6-maya2013-x64-osx-10.7.pkg&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Mountain Lion:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;span style=&#34;line-height: 13px;&#34;&gt;Maya2011:&lt;a href=&#34;http://infixlabs.com/MyQt/MyQt4.7.4-maya2011-x64-osx-20130114.pkg&#34;&gt; MyQt4.7.4-maya2011&lt;wbr /&gt;-x64-osx-20130114.pkg&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Here are builds other people have made:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Win 32bit: &lt;a href=&#34;http://blarg.robertkist.com/?p=51&#34;&gt;http://blarg.robertkist.com/?p=51&lt;/a&gt;{.broken_link}&lt;/li&gt;
-&lt;li&gt;Win 64bit:  &lt;a href=&#34;http://nathanhorne.com/?p=322&#34;&gt;http://nathanhorne.com/?p=322  &lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Win 7 64bit Maya 2013: &lt;a href=&#34;https://www.box.com/s/1db3b0c903059ac89fc4&#34;&gt;https://www.box.com/s/1db3b0c903059ac89fc4&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Linux:  &lt;a href=&#34;http://www.kurianos.com/wordpress/?p=551&#34;&gt;http://www.kurianos.com/wordpress/?p=551&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>This is a follow up post to my previous one on Installing PyQt4 for Maya 2011
+Recently while putting together my next video tutorial for Python for Maya, I came to a section where I wanted to demo PyQt4 in Maya2012. But I was concerned that viewers would have to go through the complicated steps of building PyQt4. I noticed that other people have made available precompiled PyQt installers for windows (here) but I could not find any for OSX or linux.</description>
     </item>
     
+    <item>
+      <title>Intro to Python for Maya Artists – Tutorial</title>
+      <link>http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/</link>
+      <pubDate>Sat, 08 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;&lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;http://justinfx.com/wp-content/uploads/2011/10/1318089294_Python_Background_master.jpg&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Just released my first online video tutorial, through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;python-introduction-vol-01-maya-http-cmivfx-com-store-320-python-introduction-vol-01-maya&#34;&gt;&lt;a href=&#34;http://cmivfx.com/store/320-Python+Introduction+Vol+01+-+Maya&#34;&gt;Python Introduction Vol 01 – Maya&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Amazing at Animation? Master of Modeling? Conquistador of Character Rigging?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;But how is your Python?&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Go language for python programmers</title>
+      <link>http://justinfx.com/2011/07/28/go-language-for-python-programmers/</link>
+      <pubDate>Thu, 28 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://justinfx.com/2011/07/28/go-language-for-python-programmers/</guid>
+      <description>&lt;h3 id=&#34;img-class-alignleft-src-https-blog-golang-org-gopher-gopher-png-alt-width-116-height-142-http-golang-org-preface&#34;&gt;&lt;a href=&#34;http://golang.org&#34;&gt;&lt;img class=&#34;alignleft&#34; src=&#34;https://blog.golang.org/gopher/gopher.png&#34; alt=&#34;&#34; width=&#34;116&#34; height=&#34;142&#34; /&gt;&lt;/a&gt; Preface&lt;/h3&gt;
+
+&lt;p&gt;I’ve been programming in python for over 5 years now, and I love the language a lot. I would look for any opportunity to accomplish my coding tasks using python, as opposed to learning new languages. PyQt4 for user interfaces, Django for web design, etc… And when python just isn’t an option, I have done my share of php, javascript, objective-c and so on.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installing PyQt for maya 2011 (OSX)</title>
+      <link>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</link>
+      <pubDate>Sat, 08 Jan 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</guid>
+      <description>Update: I am now hosting a built package for Maya2011: MyQt4.7.4-maya2011-x64-osx-10.6.pkg And for Maya 2012+, see: Installing pyqt4 for maya2012
+Personally, when trying to run PyQt from within Maya 2009 / 2010 using the pumpThread method, I never had much luck. The best I ever got was the ability to bring up a dialog but not without locking up the UI, even though the pumpThread tool is meant to address that.</description>
+    </item>
+    
+    <item>
+      <title>AtomSplitter source code released</title>
+      <link>http://justinfx.com/2010/10/08/atomsplitter-source-code-released/</link>
+      <pubDate>Fri, 08 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://justinfx.com/2010/10/08/atomsplitter-source-code-released/</guid>
+      <description>&lt;p&gt;We finally decided to release the source code for AtomSplitter, since we were getting some feedback that the application builds weren&amp;#8217;t 100% working on every possible system.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AtomSplitter v1.6 update</title>
+      <link>http://justinfx.com/2010/08/31/208/</link>
+      <pubDate>Tue, 31 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://justinfx.com/2010/08/31/208/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://justinfx.com/wp-content/uploads/2009/12/chan2fbx.jpg&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;AtomSplitter has been updated to v1.6, available through cmivfx.com&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Maya, and self-intersecting nurbsCurves</title>
+      <link>http://justinfx.com/2010/08/09/maya-and-self-intersecting-nurbscurves/</link>
+      <pubDate>Mon, 09 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://justinfx.com/2010/08/09/maya-and-self-intersecting-nurbscurves/</guid>
+      <description>This is a story about my journey in solving a problem at work involving curves. The solution seemed really simple at first, but because of a stupid Maya issue, this turned into me having to rewrite the tool 3 times before I discovered a surprising solution.
+The Problem: Because we rely heavily on the process of importing Illustrator .ai files into Maya as nurbsCurves, we constantly have to deal with curves that intersect themselves.</description>
+    </item>
+    
+    <item>
+      <title>Film Jam Podcast Interview</title>
+      <link>http://justinfx.com/2010/08/04/film-jam-podcast-interview/</link>
+      <pubDate>Thu, 05 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://justinfx.com/2010/08/04/film-jam-podcast-interview/</guid>
+      <description>I recently did an interview with my friends on their show, Film Jam. Its a podcast dealing with the film industry from the perspective of 3 guys working their way up the ladder. Fantastic show up &amp;#8217;till this point. Hopefully I don&amp;#8217;t break the cycle Please make sure to leave a review about the show via iTunes!
+Episode #20 Playlist page</description>
+    </item>
+    
+    <item>
+      <title>AtomSplitter v1.5 update</title>
+      <link>http://justinfx.com/2010/05/26/atomsplitter-v1-5-update/</link>
+      <pubDate>Wed, 26 May 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://justinfx.com/2010/05/26/atomsplitter-v1-5-update/</guid>
+      <description>&lt;p&gt;AtomSplitter has been updated to v1.5, available through cmivfx.com&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AtomSplitter v1.2 update</title>
+      <link>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</link>
+      <pubDate>Tue, 11 May 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</guid>
+      <description>&lt;p&gt;AtomSplitter (chanToFbx) has been updated to v1.2, available through cmivfx.com&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PyQt4: phonon… and on… and on</title>
+      <link>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</link>
+      <pubDate>Fri, 19 Mar 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</guid>
+      <description>&amp;#8220;App&amp;#8217;ing up&amp;#8221; PyQt&amp;#8230; ugh.
+One of biggest problems with PyQt is distributing it in a stand-alone package. Even worse&amp;#8230; wanting to make your Qt plugins still function (Phonon, jpeg, etc). At work I constantly had this battle, along with my co-worker Tory. She actually has a long-standing issue with this, and had to resort to workarounds or half fixes. Here is Tory&amp;#8217;s original post regarding the issue .
+I would see an error similar to this when trying to package up and run an app using the Phonon module.</description>
+    </item>
+    
+    <item>
+      <title>SouthPark: A crazy little interface. The TaskMonster.</title>
+      <link>http://justinfx.com/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</link>
+      <pubDate>Tue, 16 Mar 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://justinfx.com/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</guid>
+      <description>I get to do a lot of interesting applications at SouthPark. This one in particular was the most challenging use of PyQt that I have experienced to date.
+The backstory&amp;#8230;.
+The art department wanted a tool to help them track assigned tasks, the progress, and to share media and notes associated with the tasks. Furthermore, they wanted to be able to skin the interface with custom graphics to make it their own.</description>
+    </item>
+    
+    <item>
+      <title>PyQt: Overloading/Ignoring events on widgets</title>
+      <link>http://justinfx.com/2010/03/10/pyqt-ignoring-events-on-widgets/</link>
+      <pubDate>Wed, 10 Mar 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://justinfx.com/2010/03/10/pyqt-ignoring-events-on-widgets/</guid>
+      <description>You know when you have all these widgets laid out in your class, and you are hooking up all the connections, and you say &amp;#8220;Aw dammit I have to subclass QLabel now just so make it ignore blahEvent&amp;#8221;? You end up with all these little widget subclasses, where all they are doing is ignoring an event.
+I noticed I was doing this a few times, in more than one of my classes, and finally got annoyed for the last time.</description>
+    </item>
+    
+    <item>
+      <title>Python API for XML/SWF Charts (Flash Graphing)</title>
+      <link>http://justinfx.com/2010/01/15/python-api-for-xmlswf-charts-flash-graphing/</link>
+      <pubDate>Fri, 15 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://justinfx.com/2010/01/15/python-api-for-xmlswf-charts-flash-graphing/</guid>
+      <description>I had a project where I was designing a statistics reporting site, to track production stats. I wanted to have really nice graphs that pulled from the database and were somewhat live and interactive. XML/SWF Charts is this awesome flash-based app that lets you embed graphs in your pages which receive their data from XML. There are tons of graph types and ways to customize the look.
+
+http://www.maani.us/xml_charts/index.php</description>
+    </item>
+    
+    <item>
+      <title>Failed… hard</title>
+      <link>http://justinfx.com/2010/01/11/failed-hard/</link>
+      <pubDate>Tue, 12 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://justinfx.com/2010/01/11/failed-hard/</guid>
+      <description>&lt;p&gt;I never thought I had known such a real sense of failure until today, when a system diagnostic became intent on showing me just how hard of a failure we will be experiencing together.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>chanToFbx tool released through cmiVFX</title>
+      <link>http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/</link>
+      <pubDate>Mon, 07 Dec 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/</guid>
+      <description>&lt;p&gt;&lt;img class=&#34;alignnone size-full wp-image-39&#34; title=&#34;chan2fbx&#34; src=&#34;http://justinfx.com/wp-content/uploads/2009/12/chan2fbx.jpg&#34; alt=&#34;chan2fbx&#34; width=&#34;201&#34; height=&#34;104&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I had received a mailing list email from cmiVFX, where Chris Maynard was challenging the community to write a tool that could convert a nuke camera .chan file to a functional FBX format. This was apparently meant to compliment the new 3d camera tracker in NukeX. So I decided to take on the challenge.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>My fake grandmother…</title>
+      <link>http://justinfx.com/2009/11/18/my-fake-grandmother/</link>
+      <pubDate>Wed, 18 Nov 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://justinfx.com/2009/11/18/my-fake-grandmother/</guid>
+      <description>&lt;p&gt;This is something that started back in 2006, when I received an email from one Miriam Israel. This Miriam claimed to be my grandmother, and proceeded to ask about details in my life that were not my details, and not my life. I thought a simple case of mistaken identity was made and informed her briefly that she had the wrong person. And I asked her to please remove me from her address book. Unfortunately, she didn&amp;#8217;t seem to understand, and a few more correspondence took place during that year. I had forgotten about it until today, when it resurfaced. When I looked back across all the based mails, I realized it was kinda funny. So here it is.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

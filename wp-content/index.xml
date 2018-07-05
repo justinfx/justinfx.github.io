@@ -1,15 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>JustinFX.com</title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/wp-content/index.xml</link>
+    <title>Wp-contents on JustinFX.com</title>
+    <link>http://justinfx.com/wp-content/</link>
+    <description>Recent content in Wp-contents on JustinFX.com</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>Justin Israel</copyright>
     
-    <copyright>2018 Justin Israel</copyright>
-    <updated>2006-01-02 15:04:05 &#43;0000 MST</updated>
+	<atom:link href="http://justinfx.com/wp-content/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title></title>
+      <link>http://justinfx.com/wp-content/uploads/2010/01/swfcharts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://justinfx.com/wp-content/uploads/2010/01/swfcharts/</guid>
+      <description>Python: module swfcharts &amp;nbsp;
+&amp;nbsp;
+swfchartsindex
+/Users/justin/Downloads/swfcharts.py swfcharts.py&amp;nbsp;
+Version:&amp;nbsp;1.0
+&amp;nbsp;
+Wrapper&amp;nbsp;class&amp;nbsp;for&amp;nbsp;XML/SWF&amp;nbsp;Charts
+http://www.maani.us/xml_charts/index.php
+&amp;nbsp;
+Written&amp;nbsp;by:&amp;nbsp;Justin&amp;nbsp;Israel&amp;nbsp;([email&amp;nbsp;protected]/* */ )
+&amp;nbsp;
+June&amp;nbsp;2009
+ &amp;nbsp;
+Modules &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; re
+ &amp;nbsp;
+Classes &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  __builtin__.object   SwfChart   exceptions.Exception(exceptions.BaseException)   SwfChartException     &amp;nbsp;
+class SwfChart(__builtin__.object) &amp;nbsp;&amp;nbsp;&amp;nbsp; SUMMARY:&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+A&amp;nbsp;wrapper&amp;nbsp;class&amp;nbsp;around&amp;nbsp;the&amp;nbsp;XML/SWF&amp;nbsp;Charts&amp;nbsp;XML&amp;nbsp;api.
+Represents&amp;nbsp;the&amp;nbsp;attributes&amp;nbsp;and&amp;nbsp;data&amp;nbsp;model&amp;nbsp;for&amp;nbsp;a&amp;nbsp;graph
+and&amp;nbsp;will&amp;nbsp;output&amp;nbsp;the&amp;nbsp;proper&amp;nbsp;XML&amp;nbsp;data&amp;nbsp;to&amp;nbsp;pass&amp;nbsp;into&amp;nbsp;the
+flash&amp;nbsp;SWF&amp;nbsp;Charts&amp;nbsp;application.&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;
+All&amp;nbsp;class&amp;nbsp;properties&amp;nbsp;correspond&amp;nbsp;to&amp;nbsp;the&amp;nbsp;existing&amp;nbsp;properties
+from&amp;nbsp;the&amp;nbsp;XML&amp;nbsp;api,&amp;nbsp;and&amp;nbsp;return&amp;nbsp;the&amp;nbsp;formatted&amp;nbsp;XML&amp;nbsp;code&amp;nbsp;based
+on&amp;nbsp;the&amp;nbsp;attributes&amp;nbsp;that&amp;nbsp;were&amp;nbsp;set&amp;nbsp;with&amp;nbsp;the&amp;nbsp;methods.&amp;nbsp;Once&amp;nbsp;you
+set&amp;nbsp;all&amp;nbsp;your&amp;nbsp;desired&amp;nbsp;settings&amp;nbsp;using&amp;nbsp;the&amp;nbsp;methods,&amp;nbsp;the&amp;nbsp;class
+can&amp;nbsp;be&amp;nbsp;printed&amp;nbsp;or&amp;nbsp;treated&amp;nbsp;like&amp;nbsp;a&amp;nbsp;string&amp;nbsp;to&amp;nbsp;represent&amp;nbsp;the
+entire&amp;nbsp;XML&amp;nbsp;document,&amp;nbsp;or&amp;nbsp;you&amp;nbsp;can&amp;nbsp;call&amp;nbsp;getXML()
+&amp;nbsp;
+Some&amp;nbsp;of&amp;nbsp;the&amp;nbsp;methods&amp;nbsp;take&amp;nbsp;a&amp;nbsp;very&amp;nbsp;large&amp;nbsp;list&amp;nbsp;of&amp;nbsp;optional
+key/value&amp;nbsp;arguments.&amp;nbsp;The&amp;nbsp;available&amp;nbsp;args&amp;nbsp;are&amp;nbsp;listed
+in&amp;nbsp;each&amp;nbsp;method,&amp;nbsp;but&amp;nbsp;for&amp;nbsp;detailed&amp;nbsp;descriptions&amp;nbsp;of&amp;nbsp;the
+attributes,&amp;nbsp;please&amp;nbsp;refer&amp;nbsp;to&amp;nbsp;the&amp;nbsp;XML&amp;nbsp;Charts&amp;nbsp;documentation:
+http://www.maani.us/xml_charts/index.php?menu=Reference
+&amp;nbsp; &amp;nbsp; Methods defined here:
+__init__(self)__init__() __str__(self)The&amp;nbsp;class&amp;nbsp;instance&amp;nbsp;string&amp;nbsp;representation&amp;nbsp;is&amp;nbsp;the&amp;nbsp;complete</description>
+    </item>
     
   </channel>
 </rss>

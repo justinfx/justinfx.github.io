@@ -1,174 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>JustinFX.com</title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/pyqt4/index.xml</link>
+    <title>Pyqt4 on JustinFX.com</title>
+    <link>http://justinfx.com/tags/pyqt4/</link>
+    <description>Recent content in Pyqt4 on JustinFX.com</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>Justin Israel</copyright>
+    <lastBuildDate>Wed, 22 Mar 2017 22:39:43 +1300</lastBuildDate>
     
-    <copyright>2018 Justin Israel</copyright>
-    <updated>2006-01-02 15:04:05 &#43;0000 MST</updated>
+	<atom:link href="http://justinfx.com/tags/pyqt4/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Python Video Tutorials Released Free</title>
       <link>http://justinfx.com/2017/03/22/python-tutorials-released-free/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Wed, 22 Mar 2017 22:39:43 +1300</pubDate>
       
       <guid>http://justinfx.com/2017/03/22/python-tutorials-released-free/</guid>
       <description>&lt;p&gt;In 2011 and 2012 I had released 3 commercial Python training tutorials, using Maya as a target platform.
 Now enjoy them free of charge!&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#python-for-maya-artists-volume-1&#34;&gt;Python For Maya Artists - Volume 1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#python-for-maya-artists-volume-2&#34;&gt;Python For Maya Artists - Volume 2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#pyqt4-ui-development-for-maya&#34;&gt;PyQt4 UI Development for Maya&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;python-for-maya-artists-volume-1&#34;&gt;Python For Maya Artists - Volume 1&lt;/h2&gt;
-
-&lt;div class=&#34;embed video-player&#34;&gt;
-	&lt;iframe class=&#34;youtube-player&#34; 
-			type=&#34;text/html&#34; 
-			width=&#34;640&#34; height=&#34;385&#34; 
-			src=&#34;http://www.youtube.com/embed/PDKxDbt6EGQ&#34; 
-			allowfullscreen 
-			frameborder=&#34;0&#34;&gt;
-	&lt;/iframe&gt;
-&lt;/div&gt;
-
-
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/tutorials/tree/master/Python_For_Maya_Vol_01&#34;&gt;Project material available here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Amazing at Animation? Master of Modeling? Conquistador of Character Rigging?&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;But how is your Python?&lt;/p&gt;
-
-&lt;p&gt;This course brings the talented artist into the fold of the technical-side of Maya. Learn the basics of Python, and its place in your 3D workflow, with visual examples and real world problems. Get a kick-start on adding some automation into your life, and solving common problems in a fraction of the time. By the end of this video, you should have a deeper understanding of one of the languages Maya speaks under the hood, and how to start viewing your scenes in terms of glorious Python code!&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;python-for-maya-artists-volume-2&#34;&gt;Python For Maya Artists - Volume 2&lt;/h2&gt;
-
-&lt;div class=&#34;embed video-player&#34;&gt;
-	&lt;iframe class=&#34;youtube-player&#34; 
-			type=&#34;text/html&#34; 
-			width=&#34;640&#34; height=&#34;385&#34; 
-			src=&#34;http://www.youtube.com/embed/_tqumyujaU4&#34; 
-			allowfullscreen 
-			frameborder=&#34;0&#34;&gt;
-	&lt;/iframe&gt;
-&lt;/div&gt;
-
-
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/tutorials/tree/master/Python_For_Maya_Vol_02&#34;&gt;Project material available here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;If you watched the first video, you now have a good grasp on Python. Sweet. Let&amp;rsquo;s plow through some more involved concepts like python juggernauts!&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;With a working knowledge of the python scripting language, and the Maya Python commands API, we can continue to learn new ways to solve more challenging problems, create complete scripts, and build user interfaces around our tools. We also introduce the Maya Python API; a lower-level interface into Maya.&lt;/p&gt;
-
-&lt;p&gt;This video focuses more on breaking down full scripts, as opposed to typing out syntax. Its jam packaged with information and moves fast to deliver you as much brain food as possible. The first segment of the video transitions from beginning to intermediate level, with the majority of the video being intermediate, and finishing out by touching on advanced concepts. The included project files are abundant, complete, and full of helpful documentation so that you can take your time and learn about each piece of the tools.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;pyqt4-ui-development-for-maya&#34;&gt;PyQt4 UI Development for Maya&lt;/h2&gt;
-
-&lt;div class=&#34;embed video-player&#34;&gt;
-	&lt;iframe class=&#34;youtube-player&#34; 
-			type=&#34;text/html&#34; 
-			width=&#34;640&#34; height=&#34;385&#34; 
-			src=&#34;http://www.youtube.com/embed/X7cO4MzhjKw&#34; 
-			allowfullscreen 
-			frameborder=&#34;0&#34;&gt;
-	&lt;/iframe&gt;
-&lt;/div&gt;
-
-
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/tutorials/tree/master/PyQt4_UI_Development_for_Maya&#34;&gt;Project material available here&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;This tutorial is about learning PyQt4 python bindings for the Qt Framework, and how to introduce new UI elements to Maya as a platform.&lt;/p&gt;
-
-&lt;p&gt;We discuss what comprises a &amp;#8220;Framework&amp;#8221; and a &amp;#8220;GUI Framework&amp;#8221;, and how Qt and PyQt4 work together.&lt;/p&gt;
-
-&lt;h3 id=&#34;getting-started-with-pyqt4&#34;&gt;&lt;strong&gt;Getting Started With PyQt4&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;There are multiple ways of getting a working installation of PyQt4, both for the general system and for Maya. We look into these approaches to get your system up and running to begin working with PyQt4!&lt;/p&gt;
-
-&lt;p&gt;We also talk about what is included, such as command line tools and applications, tips on how to test and learn the code, and how to structure a project.&lt;/p&gt;
-
-&lt;h3 id=&#34;pyqt4-fundamentals&#34;&gt;&lt;strong&gt;PyQt4 Fundamentals&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;Lets get crackin&amp;rsquo; and learn the basics!&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;What is a QObject? What is a QWidget? Common PyQt4 classes are explained in detail&lt;/li&gt;
-&lt;li&gt;Working with the Qt Designer application, to build a UI visually&lt;/li&gt;
-&lt;li&gt;Layouts: Making widgets resize elegantly and stay organized in your design&lt;/li&gt;
-&lt;li&gt;Coordinate space: How do widgets transform in your 2D screen space?&lt;/li&gt;
-&lt;li&gt;QApplication and the Qt Event Loop: The engine that runs your UI&lt;/li&gt;
-&lt;li&gt;Events, Signals, and Slots: How components communicate changes and how the application can respond to changes to make it dynamic&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;general-examples&#34;&gt;&lt;strong&gt;General Examples&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;With an understanding of the framework components, we can begin working with fully functional stand-alone examples.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Common PyQt4 app template&lt;/li&gt;
-&lt;li&gt;Subclassing Widgets: Creating custom functionality to the existing classes provided by PyQt4&lt;/li&gt;
-&lt;li&gt;Dialogs: Raising dialog windows above existing windows, Modal vs Non-modal, and creating forms. We look at different ways to validate the data provided by the user, to these dialog forms.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;pyqt4-and-maya-introduction&#34;&gt;&lt;strong&gt;PyQt4 And Maya Introduction&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;Finally, some Maya action! Maya has a slightly different approach to using PyQt4…&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;How does the QApplication and event loop work?&lt;/li&gt;
-&lt;li&gt;Common Maya PyQt4 app template&lt;/li&gt;
-&lt;li&gt;Looking at the Maya API&amp;rsquo;s MQtUtil class&lt;/li&gt;
-&lt;li&gt;The sip module: Helping us translate between Maya&amp;rsquo;s Qt and our own PyQt4 code&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;replicating-maya-s-ui-components&#34;&gt;&lt;strong&gt;Replicating Maya&amp;rsquo;s UI Components&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;What better way to see examples of creating UI for Maya than to replicate some existing functionality? This gives us the opportunity expand with custom functionality&lt;/p&gt;
-
-&lt;p&gt;In this chapter we will take two different UI components in Maya, and do a basic custom version of our own, and show to how link them up to Maya&amp;rsquo;s own callbacks.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Some Features Of This Chapter Include&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The QTableWidget&lt;/li&gt;
-&lt;li&gt;Model / View separation with QTreeView&lt;/li&gt;
-&lt;li&gt;Docking windows into the Maya interface&lt;/li&gt;
-&lt;li&gt;Mixing together PyQt4, the Maya API, Maya commands, and callbacks&lt;/li&gt;
-&lt;li&gt;Sorting model data&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;customizations&#34;&gt;&lt;strong&gt;Customizations&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;A button can be a button, and a slider might look alright in its stock form, but sometimes we want to customize the look of our widgets. This chapter introduces multiple ways of achieving custom looks to our components&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Stylin&amp;rsquo; Style-sheets: Use CSS-like syntax for applying style sheets to widgets&lt;/li&gt;
-&lt;li&gt;Painting By &amp;hellip; Paint events: For even more control, we can tell a widget exactly how to draw itself on the screen. We will look at two different examples of how to use custom painting.&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
-    
-    
     
     <item>
       <title>Tutorial: PyQt4 UI Development for Maya</title>
       <link>http://justinfx.com/2012/10/12/pyqt4-for-maya/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Fri, 12 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2012/10/12/pyqt4-for-maya/</guid>
       <description>&lt;h2 id=&#34;img-class-alignnone-size-full-wp-image-525-title-pyqt4-for-maya-src-wp-content-uploads-2012-10-1350054625-master-jpeg-alt-width-800-height-450-http-www-cmivfx-com-tutorials-view-498-pyqt4-ui-development-for-maya&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.com/wp-content/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
@@ -183,308 +42,40 @@ Now enjoy them free of charge!&lt;/p&gt;
 This tutorial is about learning PyQt4 python bindings for the Qt Framework, and how to introduce new UI elements to Maya as a platform.
 &lt;/div&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;div&gt;
-We discuss what comprises a “Framework” and a “GUI Framework”, and how Qt and PyQt4 work together.
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;/div&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h3 id=&#34;getting-started-with-pyqt4&#34;&gt;&lt;strong&gt;Getting Started With PyQt4&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;div&gt;
-There are multiple ways of getting a working installation of PyQt4, both for the general system and for Maya. We look into these approaches to get your system up and running to begin working with PyQt4!
-&lt;/div&gt;
-
-&lt;div&gt;
-We also talk about what is included, such as command line tools and applications, tips on how to test and learn the code, and how to structure a project.
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;/div&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h3 id=&#34;pyqt4-fundamentals&#34;&gt;&lt;strong&gt;PyQt4 Fundamentals&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;div&gt;
-Lets get crackin’ and learn the basics!
-&lt;/div&gt;
-
-&lt;div&gt;
-• What is a QObject? What is a QWidget? Common PyQt4 classes are explained in detail
-&lt;/div&gt;
-
-&lt;div&gt;
-• Working with the Qt Designer application, to build a UI visually
-&lt;/div&gt;
-
-&lt;div&gt;
-• Layouts: Making widgets resize elegantly and stay organized in your design
-&lt;/div&gt;
-
-&lt;div&gt;
-• Coordinate space: How do widgets transform in your 2D screen space?
-&lt;/div&gt;
-
-&lt;div&gt;
-• QApplication and the Qt Event Loop: The engine that runs your UI
-&lt;/div&gt;
-
-&lt;div&gt;
-• Events, Signals, and Slots: How components communicate changes and how the application can respond to changes to make it dynamic
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;/div&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h3 id=&#34;general-examples&#34;&gt;&lt;strong&gt;General Examples&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;div&gt;
-With an understanding of the framework components, we can begin working with fully functional stand-alone examples.
-&lt;/div&gt;
-
-&lt;div&gt;
-• Common PyQt4 app template
-&lt;/div&gt;
-
-&lt;div&gt;
-• Subclassing Widgets: Creating custom functionality to the existing classes provided by PyQt4
-&lt;/div&gt;
-
-&lt;div&gt;
-• Dialogs: Raising dialog windows above existing windows, Modal vs Non-modal, and creating forms. We look at different ways to validate the data provided by the user, to these dialog forms.
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;/div&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h3 id=&#34;pyqt4-and-maya-introduction&#34;&gt;&lt;strong&gt;PyQt4 And Maya Introduction&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;div&gt;
-Finally, some Maya action! Maya has a slightly different approach to using PyQt4…
-&lt;/div&gt;
-
-&lt;div&gt;
-• How does the QApplication and event loop work?
-&lt;/div&gt;
-
-&lt;div&gt;
-• Common Maya PyQt4 app template
-&lt;/div&gt;
-
-&lt;div&gt;
-• Looking at the Maya API’s MQtUtil class
-&lt;/div&gt;
-
-&lt;div&gt;
-• The sip module: Helping us translate between Maya’s Qt and our own PyQt4 code
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;/div&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h3 id=&#34;replicating-maya-s-ui-components&#34;&gt;&lt;strong&gt;Replicating Maya’s UI Components&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;div&gt;
-What better way to see examples of creating UI for Maya than to replicate some existing functionality? This gives us the opportunity expand with custom functionality
-&lt;/div&gt;
-
-&lt;div&gt;
-In this chapter we will take two different UI components in Maya, and do a basic custom version of our own, and show to how link them up to Maya’s own callbacks.
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;strong&gt;Some Features Of This Chapter Include&lt;/strong&gt;
-&lt;/div&gt;
-
-&lt;div&gt;
-• The QTableWidget
-&lt;/div&gt;
-
-&lt;div&gt;
-• Model / View separation with QTreeView
-&lt;/div&gt;
-
-&lt;div&gt;
-• Docking windows into the Maya interface
-&lt;/div&gt;
-
-&lt;div&gt;
-• Mixing together PyQt4, the Maya API, Maya commands, and callbacks
-&lt;/div&gt;
-
-&lt;div&gt;
-• Sorting model data
-&lt;/div&gt;
-
-&lt;div&gt;
-&lt;/div&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h3 id=&#34;customizations&#34;&gt;&lt;strong&gt;Customizations&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;div&gt;
-A button can be a button, and a slider might look alright in its stock form, but sometimes we want to customize the look of our widgets. This chapter introduces multiple ways of achieving custom looks to our components
-&lt;/div&gt;
-
-&lt;div&gt;
-• Stylin’ Stylesheets: Use CSS-like syntax for applying style sheets to widgets
-&lt;/div&gt;
-
-&lt;div&gt;
-• Painting By … Paint events: For even more control, we can tell a widget exactly how to draw itself on the screen. We will look at two different examples of how to use custom painting.
-&lt;/div&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h3 id=&#34;span-style-color-ff6600-previous-cmivfx-tutorials-span&#34;&gt;&lt;span style=&#34;color: #ff6600;&#34;&gt;Previous cmiVFX tutorials:&lt;/span&gt;&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://cmivfx.com/store/320-python+introduction+vol+01+-+maya&#34;&gt;Intro to Python for Maya – Vol 1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;Python for Maya  – Vol 2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
-    
-    
     
     <item>
       <title>Installing PyQt4 for Maya 2012&#43; (osx)</title>
       <link>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Thu, 10 Nov 2011 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
-      <description>&lt;p&gt;This is a follow up post to my previous one on &lt;a href=&#34;http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/&#34;&gt;Installing PyQt4 for Maya 2011&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Recently while putting together my next video tutorial for Python for Maya, I came to a section where I wanted to demo PyQt4 in Maya2012. But I was concerned that viewers would have to go through the complicated steps of building PyQt4. I noticed that other people have made available precompiled PyQt installers for windows (&lt;a href=&#34;http://blarg.robertkist.com/?p=51&#34; target=&#34;_blank&#34; class=&#34;broken_link&#34;&gt;here&lt;/a&gt;) but I could not find any for OSX or linux. So I decided to put together a build.&lt;/p&gt;
-
-&lt;p&gt;I created a new project on github called MyQt4&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/MyQt4&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/justinfx/MyQt4&#34;&gt;https://github.com/justinfx/MyQt4&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Its a Makefile for completely downloading and building PyQt4 for maya, and generating a .pkg installer. Hopefully someone can contribute improvements since I dont have a ton of experience writing makefiles, and also that someone might create a linux version.&lt;/p&gt;
-
-&lt;p&gt;Here is a link to the latest pkg build:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Snow Leopard: &lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Maya2011: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.7.4-maya2011-x64-osx-10.6.pkg&#34; target=&#34;_blank&#34;&gt;MyQt4.7.4-maya2011-x64-osx-10.6.pkg&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Maya2012: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.9.4-maya2012-x64-osx-10.6.pkg&#34; target=&#34;_blank&#34;&gt;MyQt4.9.4-maya2012-x64-osx-10.6.pkg&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Maya2013: &lt;a href=&#34;https://dl.dropbox.com/u/34613220/MyQt4/MyQt4.9.4-maya2013-x64-osx-10.6.pkg&#34; target=&#34;_blank&#34;&gt;MyQt4.9.4-maya2013-x64-osx-10.6.pkg&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Lion:  &lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Maya2012: &lt;a href=&#34;http://dl.dropbox.com/u/34613220/MyQt4/MyQt4.8.6-maya2012-x64-osx-10.7.pkg&#34; target=&#34;_blank&#34;&gt;MyQt4.8.6-maya2012-x64-osx-10.7.pkg&lt;/a&gt;   (Thanks &lt;a href=&#34;https://github.com/cgrebeld&#34; target=&#34;_blank&#34;&gt;Chris&lt;/a&gt;!)&lt;/li&gt;
-&lt;li&gt;Maya2013: &lt;a href=&#34;http://dl.dropbox.com/u/34613220/MyQt4/MyQt4.8.6-maya2013-x64-osx-10.7.pkg&#34;&gt;MyQt4.8.6-maya2013-x64-osx-10.7.pkg&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Mountain Lion:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;span style=&#34;line-height: 13px;&#34;&gt;Maya2011:&lt;a href=&#34;http://infixlabs.com/MyQt/MyQt4.7.4-maya2011-x64-osx-20130114.pkg&#34;&gt; MyQt4.7.4-maya2011&lt;wbr /&gt;-x64-osx-20130114.pkg&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Here are builds other people have made:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Win 32bit: &lt;a href=&#34;http://blarg.robertkist.com/?p=51&#34;&gt;http://blarg.robertkist.com/?p=51&lt;/a&gt;{.broken_link}&lt;/li&gt;
-&lt;li&gt;Win 64bit:  &lt;a href=&#34;http://nathanhorne.com/?p=322&#34;&gt;http://nathanhorne.com/?p=322  &lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Win 7 64bit Maya 2013: &lt;a href=&#34;https://www.box.com/s/1db3b0c903059ac89fc4&#34;&gt;https://www.box.com/s/1db3b0c903059ac89fc4&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Linux:  &lt;a href=&#34;http://www.kurianos.com/wordpress/?p=551&#34;&gt;http://www.kurianos.com/wordpress/?p=551&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>This is a follow up post to my previous one on Installing PyQt4 for Maya 2011
+Recently while putting together my next video tutorial for Python for Maya, I came to a section where I wanted to demo PyQt4 in Maya2012. But I was concerned that viewers would have to go through the complicated steps of building PyQt4. I noticed that other people have made available precompiled PyQt installers for windows (here) but I could not find any for OSX or linux.</description>
     </item>
-    
-    
     
     <item>
       <title>AtomSplitter v1.2 update</title>
       <link>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Tue, 11 May 2010 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</guid>
       <description>&lt;p&gt;AtomSplitter (chanToFbx) has been updated to v1.2, available through cmivfx.com&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.cmivfx.com/productpages/product.aspx?name=AtomSplitter_1.2&#34;&gt;&lt;span style=&#34;color: #00ccff;&#34;&gt;AtomSplitter 1.2 &amp;#8211; cmiVFX.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Updates:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Camera rotation order set to ZXY, which is the Nuke camera default&lt;/li&gt;
-&lt;li&gt;Fixed a bug where the FocalLength value was not being keyframed properly&lt;/li&gt;
-&lt;li&gt;Added a scene scale field, for adjusting the translation values globally.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If you haven&amp;#8217;t visited &lt;a href=&#34;http://cmiVFX.com&#34; target=&#34;_blank&#34;&gt;cmiVFX.com&lt;/a&gt; before, PLEASE check them out. Chris Maynard does an amazing job rounding up top talent in the industry to create these outstanding visual fx tutorials. The information is always cutting edge.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/&#34;&gt;&lt;span style=&#34;color: #993366;&#34;&gt;See the original post.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
-    
-    
     
     <item>
       <title>PyQt4: phonon… and on… and on</title>
       <link>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Fri, 19 Mar 2010 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</guid>
-      <description>&lt;p&gt;&amp;#8220;App&amp;#8217;ing up&amp;#8221; PyQt&amp;#8230; ugh.&lt;/p&gt;
-
-&lt;p&gt;One of biggest problems with PyQt is distributing it in a stand-alone package. Even worse&amp;#8230; wanting to make your Qt plugins still function (Phonon, jpeg, etc). At work I constantly had this battle, along with my co-worker Tory. She actually has a long-standing issue with this, and had to resort to workarounds or half fixes. &lt;a href=&#34;http://www.toryhoke.com/2009/03/03/pyqt4-i-hate-you/&#34;&gt;&lt;span style=&#34;color: #3366ff;&#34;&gt;Here is Tory&amp;#8217;s original post regarding the issue&lt;/span&gt;&lt;/a&gt; .&lt;/p&gt;
-
-&lt;p&gt;I would see an error similar to this when trying to package up and run an app using the Phonon module.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;WARNING: bool Phonon::FactoryPrivate::createBackend() phonon backend plugin could not be loaded
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Running &lt;code&gt;macdeployqt myAppName.app&lt;/code&gt; does add things like the jpeg plugin, but never seemed to fix the Phonon issue. I finally decided to randomly look online for a solution, again, last week. What I found was a partial solution, followed by me trying one more thing and bam&amp;#8230;it worked! Video playback from my .app standalone package.&lt;/p&gt;
-
-&lt;p&gt;Here is what I did &amp;#8230;&lt;/p&gt;
-
-&lt;p&gt;(btw you might have to modify the location of the plugin, since I happen to be using OSX)&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;In your setup.py file, which is used for py2app, py2exe, or similar&amp;#8230; add this to the DATA_FILES list, so that it looks as such:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;    DATA_FILES &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; [(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;phonon_backend&amp;#39;&lt;/span&gt;, [
-      &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;/Developer/Applications/Qt/plugins/phonon_backend/libphonon_qt7.dylib&amp;#39;&lt;/span&gt;
-    ])]
-    
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;This will put the phonon backend plugin into the RESOURCES folder in the app.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Package up your application via py2app / py2exe / etc.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;If you are on OSX, use macdeployqt on the app: &lt;code&gt;&amp;gt;&amp;gt;&amp;gt; macdeployqt myApp.app&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Go into the app that was created (show package contents if you are on a mac), and move the phonon_backend directory FROM the Resources directory TO the PlugIns directory (which should be at the same level as Resources).&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;That should be it!&lt;/p&gt;
-</description>
+      <description>&amp;#8220;App&amp;#8217;ing up&amp;#8221; PyQt&amp;#8230; ugh.
+One of biggest problems with PyQt is distributing it in a stand-alone package. Even worse&amp;#8230; wanting to make your Qt plugins still function (Phonon, jpeg, etc). At work I constantly had this battle, along with my co-worker Tory. She actually has a long-standing issue with this, and had to resort to workarounds or half fixes. Here is Tory&amp;#8217;s original post regarding the issue .
+I would see an error similar to this when trying to package up and run an app using the Phonon module.</description>
     </item>
-    
     
   </channel>
 </rss>

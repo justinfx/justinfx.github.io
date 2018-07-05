@@ -53,13 +53,16 @@
 
 
 <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-6692856-1', 'auto');
-ga('send', 'pageview');
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-6692856-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
 
 
@@ -182,12 +185,10 @@ brew install boost</pre>
 
 <p>Create a virtualenv called &#8220;kinect&#8221;</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">pip install virtualenv
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install virtualenv
 virtualenv --no-site-packages -p python2.7 kinect
-<span style="color: #007020">cd</span> kinect
-<span style="color: #007020">source</span> bin/activate
-</pre></div>
-
+<span style="color:#007020">cd</span> kinect
+<span style="color:#007020">source</span> bin/activate</code></pre></div>
 
 <h5 id="install-libusb-patched-version"><strong>Install libusb (patched version)</strong></h5>
 
@@ -230,14 +231,12 @@ virtualenv --no-site-packages -p python2.7 kinect
 
 <p>Be aware that on OSX, PyOpenNI requires a framework build of python 2.7+ and that you must build it for x86_64 specifically. Also, I was having major problems with cmake properly finding the python includes location. I had to suggest a fix, so <a href="https://github.com/jmendeth/PyOpenNI/issues/16#issuecomment-6515678">please see here for the necessary corrections</a>. I have referenced a patched fork of the repository below.</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020">export</span> <span style="color: #bb60d5">CPPFLAGS</span><span style="color: #666666">=</span><span style="color: #4070a0">&quot;-arch x86_64&quot;</span>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#007020">export</span> <span style="color:#bb60d5">CPPFLAGS</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;-arch x86_64&#34;</span>
 git clone git://github.com/justinfx/PyOpenNI.git
 mkdir PyOpenNI-build
-<span style="color: #007020">cd</span> PyOpenNI-build
-cmake -D <span style="color: #bb60d5">PYTHON_INCLUDE_DIR</span><span style="color: #666666">=</span>/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Headers ../PyOpenNI
-make
-</pre></div>
-
+<span style="color:#007020">cd</span> PyOpenNI-build
+cmake -D <span style="color:#bb60d5">PYTHON_INCLUDE_DIR</span><span style="color:#666">=</span>/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Headers ../PyOpenNI
+make</code></pre></div>
 
 <p>copy the lib/openni.so module to the python2.7 site-packages</p>
 

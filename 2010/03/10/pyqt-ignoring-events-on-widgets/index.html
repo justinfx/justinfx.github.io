@@ -53,13 +53,16 @@
 
 
 <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-6692856-1', 'auto');
-ga('send', 'pageview');
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-6692856-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
 
 
@@ -118,31 +121,25 @@ ga('send', 'pageview');
 
 <p>I noticed I was doing this a few times, in more than one of my classes, and finally got annoyed for the last time. I figured there had to be a simple way of just overloading the method on the normal object when I create an instance. Fortunately python considers everything objects and pretty much anything can be changed. So I did this:</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">myLabel <span style="color: #666666">=</span> QLabel()
-myLabel<span style="color: #666666">.</span>mousePressEvent <span style="color: #666666">=</span> <span style="color: #007020; font-weight: bold">lambda</span> event: event<span style="color: #666666">.</span>ignore()
-</pre></div>
-
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">myLabel <span style="color:#666">=</span> QLabel()
+myLabel<span style="color:#666">.</span>mousePressEvent <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">lambda</span> event: event<span style="color:#666">.</span>ignore()</code></pre></div>
 
 <p>Magic.</p>
 
 <p>I have also had to make clickable widgets, such as QLabel:</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">myLabel <span style="color: #666666">=</span> QLabel()
-myLabel<span style="color: #666666">.</span>mousePressEvent <span style="color: #666666">=</span> <span style="color: #007020; font-weight: bold">lambda</span> event: myLabel<span style="color: #666666">.</span>emit(SIGNAL(<span style="color: #4070a0">&quot;clicked&quot;</span>))
-</pre></div>
-
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">myLabel <span style="color:#666">=</span> QLabel()
+myLabel<span style="color:#666">.</span>mousePressEvent <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">lambda</span> event: myLabel<span style="color:#666">.</span>emit(SIGNAL(<span style="color:#4070a0">&#34;clicked&#34;</span>))</code></pre></div>
 
 <p>Or if you had to do more than just a single statement:</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">myLabel <span style="color: #666666">=</span> QLabel()
-<span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">clickedEvent</span>(event):
-myLabel<span style="color: #666666">.</span>emit(SIGNAL(<span style="color: #4070a0">&quot;clicked&quot;</span>))
-<span style="color: #60a0b0; font-style: italic"># do other stuff</span>
-<span style="color: #60a0b0; font-style: italic"># do stuff</span>
-event<span style="color: #666666">.</span>accept()
-myLabel<span style="color: #666666">.</span>mousePressEvent <span style="color: #666666">=</span> clickedEvent
-</pre></div>
-
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">myLabel <span style="color:#666">=</span> QLabel()
+<span style="color:#007020;font-weight:bold">def</span> <span style="color:#06287e">clickedEvent</span>(event):
+myLabel<span style="color:#666">.</span>emit(SIGNAL(<span style="color:#4070a0">&#34;clicked&#34;</span>))
+<span style="color:#60a0b0;font-style:italic"># do other stuff</span>
+<span style="color:#60a0b0;font-style:italic"># do stuff</span>
+event<span style="color:#666">.</span>accept()
+myLabel<span style="color:#666">.</span>mousePressEvent <span style="color:#666">=</span> clickedEvent</code></pre></div>
 
 <p>I like this better than piling up subclasses that don&#8217;t do much.</p>
 

@@ -1,224 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>JustinFX.com</title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/tags/code/index.xml</link>
+    <title>Code on JustinFX.com</title>
+    <link>http://justinfx.com/tags/code/</link>
+    <description>Recent content in Code on JustinFX.com</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>Justin Israel</copyright>
+    <lastBuildDate>Sat, 14 Apr 2012 00:00:00 +0000</lastBuildDate>
     
-    <copyright>2018 Justin Israel</copyright>
-    <updated>2006-01-02 15:04:05 &#43;0000 MST</updated>
+	<atom:link href="http://justinfx.com/tags/code/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Write My Code For Me</title>
       <link>http://justinfx.com/2012/04/14/write-my-code-for-me/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Sat, 14 Apr 2012 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2012/04/14/write-my-code-for-me/</guid>
-      <description>
-
-&lt;p&gt;Permalink &amp;#8211; writemycode.net&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;In the spirit of a &lt;a href=&#34;http://whathaveyoutried.com&#34;&gt;very similar blog post&lt;/a&gt;, I decided to expand upon a specific area of that article&amp;#8230;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Consider a question like this:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I want to do this. Create 10000 files, (filename can be just combination of time and random number). File size should be 4k. And I want to time this. say how many seconds it will take.&lt;/p&gt;
-
-&lt;p&gt;How can I do this on bash?&lt;/p&gt;
-
-&lt;p&gt;Thank you.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Obviously this person needs some assistance, and the question is very short and easy to understand. But the problem with this type of question is that there are really only two ways someone can approach the answer. Your options for an answer are either to just give the person the complete code snippet as they have requested, or fall back on a lengthy personalized tutorial.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Short questions that primarily request a complete code example as an answer are counter-productive to code communities.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h5 id=&#34;answer-option-1&#34;&gt;Answer Option 1&lt;/h5&gt;
-
-&lt;p&gt;As the topic of this article suggests, option 1 is &amp;#8220;Write my code for me&amp;#8221;. It might seem easy as a one-off situation to simply donate a working code snippet and get the person asking this question moving on their merry way, but really this is not helping them in the long run. They haven&amp;#8217;t learned anything beyond the process of hitting a roadblock, then immediately going online to ask for a solution. Had this person included some references to what they have researched, and most importantly a code snippet representing what they have attempted, viewers of this question would have a basis for comment and potentially an answer pointing out where the person has gone wrong.&lt;/p&gt;
-
-&lt;h5 id=&#34;answer-option-2&#34;&gt;Answer Option 2&lt;/h5&gt;
-
-&lt;p&gt;And in the other direction: providing a lengthy tutorial. We all want to help and teach, but this is just one of numerous questions floating out in the ether that requires a response. Can we really spare that much time for every single question like this to re-teach material that is most likely already documented in generalized contexts all across the internet? That would create quite a lot of redundant information simply because each person combines new components into a new question needing a new lesson. Really, every part of this question can be Googled quite easily. Why ask a community to do a new custom writeup for you?&lt;/p&gt;
-
-&lt;p&gt;Now, assuming we actually wanted to write a tutorial for this person asking the question. The problem at this point is where do we begin? The information provided doesn&amp;#8217;t suggest that this person has a grasp on any part of the problem. So the tutorial answer might need to include:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Bash and for-loops&lt;/li&gt;
-&lt;li&gt;How to get the current time&lt;/li&gt;
-&lt;li&gt;How to generate random numbers&lt;/li&gt;
-&lt;li&gt;Creating files&lt;/li&gt;
-&lt;li&gt;Populating new files to a specific size&lt;/li&gt;
-&lt;li&gt;How to write a complete bash script, and time its execution.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Had they told us what they know how to do so far, and what aspect has them stuck, we could simply focus on one area and provide a good bit of knowledge to get them moving again. But right now this is just too much work to net a situation where they will learn something.&lt;/p&gt;
-
-&lt;p&gt;For those that are immediately inclined to provide the complete code snippet to solve the problem, where do we draw the line? What if the question being asked would need 10 lines of code? 20? 100? And if you are also interested in frequently helping people, would you be willing to provide 5 lines of complete code to 10 people a day, knowing that each person probably didn&amp;#8217;t learn much? Furthermore, after having given this individual a quick answer, you have now rewarded their lazy behavior, and more than likely just encouraged them to repeat the bad habit again.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Through a conversation between my coworker and I, some interesting metaphors were raised that I simply can&amp;#8217;t resist from sharing&amp;#8230;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h5 id=&#34;vending-machine-communities&#34;&gt;Vending-machine communities&lt;/h5&gt;
-
-&lt;p&gt;&lt;strong&gt;Put a question in the slot and pop out a solution.  &lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Be it a traditional forum, an online discussion group, mailing list, or a trust and reputation based technical site like &lt;a href=&#34;http://www.stackoverflow.com&#34;&gt;stackoverflow.com&lt;/a&gt;, these communities are driven by people, not machines. People have to take time to review content, and contribute their knowledge. We all work hard to acquire that knowledge, so lets all try and put some value on it in the form of the quality of our questions. A .25 cent answer is insulting. Treat your questions like they are costing you actual money that properly reflects the value of people&amp;#8217;s knowledge. Code communities don&amp;#8217;t work for you, and you don&amp;#8217;t work for them. We are all here to help because we love it. Please don&amp;#8217;t make us hate it, or feel like we are all just part of a big vending-machine.&lt;/p&gt;
-
-&lt;h5 id=&#34;toilet-paper-answers&#34;&gt;&lt;strong&gt;Toilet paper answers&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;p&gt;&lt;strong&gt;Answers that can be used only one particular time for one particular situation.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;There is an insane amount of content on the internet. It&amp;#8217;s hard enough sometimes to sift through the results of a vague Google search, let alone the content on our individual communities. When you ask a question that provides zero context, or proof of the extent of your current effort, then both the question and the answer are for the most part &amp;#8220;throw aways&amp;#8221;. If its going to be a persistent part of a community space, it should aim to benefit future support-seekers with similar situations. Referring to the example question above, someone going with Option 1 (&amp;#8220;Write my code&amp;#8221;) will end up providing an answer that will likely not help many people beyond this situation. Unless they too are looking for a way to do a for loop and create 10,000 4k dummy files and measure the execution time. The only way it would stand to benefit future visitors is if the answer did Option 2 and wrote a fully self-describing tutorial.&lt;/p&gt;
-
-&lt;h5 id=&#34;conclusion&#34;&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;p&gt;I can only speak for myself about what I might do. I consider myself to be the type that would go as far as to look at API docs for someone, and work out some pretty extensive examples on my local machine. I might even install libs that I don&amp;#8217;t have or have never used before in an effort to provide assistance. But I need to be motivated to do so. It&amp;#8217;s exciting for me to write out a page-length of information if I know it will help this person. But in a case like the above there is no show of effort and no context provided &amp;#8212; just a person asking to have code written for them.&lt;/p&gt;
-
-&lt;p&gt;As I suggested already, we all want to help. Thats why we frequent these forums and sites. But we help these types of answer-seekers even more by withholding instant gratification.&lt;/p&gt;
-
-&lt;p&gt;And now&amp;#8230; I direct you back to &lt;a href=&#34;http://whathaveyoutried.com&#34;&gt;whathaveyoutried.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-</description>
+      <description>Permalink &amp;#8211; writemycode.net
+In the spirit of a very similar blog post, I decided to expand upon a specific area of that article&amp;#8230;
+Consider a question like this:
+ I want to do this. Create 10000 files, (filename can be just combination of time and random number). File size should be 4k. And I want to time this. say how many seconds it will take.
+How can I do this on bash?</description>
     </item>
-    
-    
     
     <item>
       <title>Go language for python programmers</title>
       <link>http://justinfx.com/2011/07/28/go-language-for-python-programmers/</link>
-      <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
+      <pubDate>Thu, 28 Jul 2011 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2011/07/28/go-language-for-python-programmers/</guid>
       <description>&lt;h3 id=&#34;img-class-alignleft-src-https-blog-golang-org-gopher-gopher-png-alt-width-116-height-142-http-golang-org-preface&#34;&gt;&lt;a href=&#34;http://golang.org&#34;&gt;&lt;img class=&#34;alignleft&#34; src=&#34;https://blog.golang.org/gopher/gopher.png&#34; alt=&#34;&#34; width=&#34;116&#34; height=&#34;142&#34; /&gt;&lt;/a&gt; Preface&lt;/h3&gt;
 
-&lt;p&gt;I’ve been programming in python for over 5 years now, and I love the language a lot. I would look for any opportunity to accomplish my coding tasks using python, as opposed to learning new languages. PyQt4 for user interfaces, Django for web design, etc… And when python just isn’t an option, I have done my share of php, javascript, objective-c and so on.&lt;/p&gt;
-
-&lt;p&gt;Recently I started thinking that I should probably expand my programming knowledge a bit to make myself more marketable. While python is pretty key in the world of Visual Effects pipelines… so is C++. Having previously focused on being a Compositor and not a programmer, I had always told myself that if I needed to learn C++, then I was going too far in that direction. But now that I have been working in pipeline development for over 2.5 years, it has become clear that I really should explore the world of compiled languages.&lt;/p&gt;
-
-&lt;p&gt;Grabbing some books on C+, I dove in. Yuk. Why is it so freaking boring? It really does suck trying to learn C++ after having been so spoiled with python for so long. Its like taking a Aborigine and trying to turn him into a snooty English gentleman. Hmm…Is that right? Well whatever. Its completely disorienting. So many things that I never had to think about, like type declarations, memory management, pointers… But I kept on reading and learning.&lt;/p&gt;
-
-&lt;p&gt;Then I came across a post on Google+, by someone that actually works at Google, mentioning a language being developed in-house. So I started reading about Go @ &lt;a href=&#34;http://golang.org/&#34;&gt;http://golang.org/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;the-go-language&#34;&gt;The Go Language&lt;/h3&gt;
-
-&lt;p&gt;From the standpoint of a python programmer, Go feels like it sits right between C/C++ and python. You get the simpler syntax, but with the speed of a compiled language. Because Go has garbage collection, memory management isn’t a concern. I was never used to the code/compile/test/repeat pattern before, but it compiles so fast and is so easy to set up a project that it feels pretty natural. Go doesn’t require you to have header files and declare everything in advance, so banging out a simple program is quite fast and only slightly more overhead than writing a python script. Just have to add the step of compiling it. As far as the library, so far I have found everything pretty useful. And it seems that every time I search for a Go binding for something, I find one. I will go into more detail on that in a bit.&lt;/p&gt;
-
-&lt;p&gt;One thing that will make python programmers feel more at home is the type inference while creating a variable. While you can do something like this in Go:  &lt;code&gt;var myString string = &amp;quot;Foo&amp;quot;&lt;/code&gt; you can also type the same thing like this: &lt;code&gt;myString := &amp;quot;Foo&amp;quot;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;code&gt;:=&lt;/code&gt; operator lets you initialize a new variable and makes the compiler figure out what type it should be, based on the return type of the right hand side.&lt;/p&gt;
-
-&lt;p&gt;Pointers are still kind of strange for python programmers, but Go is a lot more flexible about using them. You don’t always have to explicitly dereference them like &lt;code&gt;(\*myPointer).myFunction()&lt;/code&gt;. It just does it for you when you access member functions and attributes:  myPointer.myFunction().&lt;/p&gt;
-
-&lt;p&gt;Having no type inheritance is also a bit different as well. Instead of creating base abstract classes, and subclassing them, you only have structs… no classes. But you share functionality by using interfaces. An interface is just a definition of methods. If any object implements those methods, its consider that type of interface. This is something I have yet to really get into, since my current first project is more of a cmd program, rather than a pkg library. I’m sure I could be using interfaces already, but it hasn’t quite felt natural enough to incorporate as of yet.&lt;/p&gt;
-
-&lt;p&gt;A pretty crazy aspect of Go is its native support for concurrency using what they call “Goroutines”. The closest way I have been able to compare it to my experience in python is while using ZeroMQ for messaging. ZeroMQ promotes not only using its library for messaging, but also to replace issues with threads and locks. It has similar concepts in promoting concurrency. You divide your program up into its components and instead of sharing data structures between them, you communicate over channels (sockets in ZeroMQ). When you fire off a Goroutine, you aren’t waiting for it anymore. It can run and do its thing and you keep on going. You can then send data back and forth with channels, and even use them just for signaling, like saying “ok now exit”.&lt;/p&gt;
-
-&lt;h3 id=&#34;actual-usage&#34;&gt;Actual Usage&lt;/h3&gt;
-
-&lt;p&gt;I’ve been writing a message server so far in python, using the &lt;a href=&#34;http://www.tornadoweb.org/&#34;&gt;Tornado web server&lt;/a&gt;, along with some socket.io bindings called &lt;a href=&#34;https://github.com/MrJoes/tornadio&#34;&gt;TornadIO&lt;/a&gt;, and also &lt;a href=&#34;http://www.zeromq.org/&#34;&gt;ZeroMQ&lt;/a&gt; for internal communication. So far its been working pretty well, but there are a lot of complex layers, with ZeroMQ sort of riding on top of Tornados ioloop. I decided to try and rewrite this server in Go. Turns out Go has a lot of built-in support for doing exactly what this python server was doing. The whole web-socket server functionality is part of the standard http library module. I quickly found &lt;a href=&#34;https://github.com/madari/go-socket.io&#34;&gt;Go bindings for socket.io&lt;/a&gt; and I was on my way.&lt;/p&gt;
-
-&lt;p&gt;It was quite fast to get the server to the point of doing global messages, but now I had to think about implementing the support for channel subscriptions. My first instinct was to go grab ZeroMQ and its bindings again, or to use Redis for the messaging, but then I was thinking “Shouldn’t I be able to do all this with Go’s concurrency?”. One thing that really helped me out was how fast everyone responds on the &lt;a href=&#34;http://groups.google.com/group/golang-nuts&#34;&gt;golang-nuts discussion group&lt;/a&gt;. It was quickly pointed out by more than one person that I should definitely be able to accomplish the internal message routing purely in Go. And they were right. I just set up a “dispatcher” function and run it in a loop as a goroutine, and then pass messages in and out of it. The dispatcher manages its data structure, and no other part of the code accesses it directly.&lt;/p&gt;
-
-&lt;p&gt;So far, this Go server is turning out great, and I’m excited by the fact that its compiled and faster. I don’t have to distribute my source code now &lt;img src=&#34;http://justinfx.com/wp-includes/images/smilies/simple-smile.png&#34; alt=&#34;:-)&#34; class=&#34;wp-smiley&#34; style=&#34;height: 1em; max-height: 1em;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;performance&#34;&gt;Performance&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Disclaimer: These numbers are just comparisons between what I built in python vs Go. I think the point is to reflect what I naturally came up with on my first pass at using Go, vs applying years of python experience. I’m dead sure my Go code isn’t written as efficiently as someone with more experience, which I think makes it even more interesting of a comparison.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Go comes with built in testing and benchmarking functionality. What I built was a client test that connects to a running server and rapid fires messages. It times how long it takes for a 150 byte message to be sent out, flow through the server, and come back to that client as been delivered. The gotest utility that is used to run the test code will run the test, and if it ran too fast to calculate timings, it will repeat the test over and over with larger iterations. When I first got my Go server working to where a client would send a message and it would just get broadcasted right back out to everyone, I ran a benchmark. Here are the results of my tests…&lt;/p&gt;
-
-&lt;table border=&#34;0&#34; width=&#34;500px&#34; cellspacing=&#34;0&#34; cellpadding=&#34;0&#34;&gt;
-&lt;tr&gt;
-&lt;th scope=&#34;col&#34; align=&#34;left&#34; width=&#34;200&#34;&gt;
-TEST
-&lt;/th&gt;
-
-    &lt;th scope=&#34;col&#34; width=&#34;150&#34;&gt;
-      TIME PER MSG
-    &lt;/th&gt;
-    
-    &lt;th scope=&#34;col&#34; width=&#34;150&#34;&gt;
-      NET RESULT
-    &lt;/th&gt;
-
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td width=&#34;200&#34;&gt;
-Python (Tornado, …)
-&lt;/td&gt;
-
-    &lt;td width=&#34;150&#34;&gt;
-      835314 ns/op
-    &lt;/td&gt;
-    
-    &lt;td width=&#34;150&#34;&gt;
-      &amp;#8211;
-    &lt;/td&gt;
-
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td width=&#34;200&#34;&gt;
-Go (barebones messaging)
-&lt;/td&gt;
-
-    &lt;td width=&#34;150&#34;&gt;
-      107091 ns/op
-    &lt;/td&gt;
-    
-    &lt;td width=&#34;150&#34;&gt;
-      7.8x faster
-    &lt;/td&gt;
-
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td width=&#34;200&#34;&gt;
-Go (1-to-1 python port)
-&lt;/td&gt;
-
-    &lt;td width=&#34;150&#34;&gt;
-      159823 ns/op
-    &lt;/td&gt;
-    
-    &lt;td width=&#34;150&#34;&gt;
-      5.2x faster
-    &lt;/td&gt;
-
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td width=&#34;200&#34;&gt;
-Go (weekly.12-01-2011)
-&lt;/td&gt;
-
-    &lt;td width=&#34;150&#34;&gt;
-      76230 ns/op
-    &lt;/td&gt;
-    
-    &lt;td width=&#34;150&#34;&gt;
-      11x faster
-    &lt;/td&gt;
-
-&lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;p&gt;The second Go test was after I finished implementing the same 1-to-1 feature set of the python version. I had thought the numbers would be dramatically impacted after adding the overhead of all the internal message routing, but the Go server still came out almost 5x faster than the python version. And this is from my first attempt at writing a Go program! I bet once I get a lot more solid with the language I can optimize this code a lot more.&lt;/p&gt;
-
-&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
-
-&lt;p&gt;I’m pretty hooked on the language. I feel its the perfect option for a python programmer that wants some speed increases and simple concurrency, without having to learn something as intense as C++. Go is supposed to get faster and faster as they improve things like the goroutines, channels, and the garbage collector, so its a great time to jump in and start learning. Its really helped me understand more formal concepts that will probably make learning C++ even easier once I decide to go back to learning it &lt;img src=&#34;http://justinfx.com/wp-includes/images/smilies/simple-smile.png&#34; alt=&#34;:-)&#34; class=&#34;wp-smiley&#34; style=&#34;height: 1em; max-height: 1em;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;</description>
+&lt;p&gt;I’ve been programming in python for over 5 years now, and I love the language a lot. I would look for any opportunity to accomplish my coding tasks using python, as opposed to learning new languages. PyQt4 for user interfaces, Django for web design, etc… And when python just isn’t an option, I have done my share of php, javascript, objective-c and so on.&lt;/p&gt;</description>
     </item>
-    
     
   </channel>
 </rss>
