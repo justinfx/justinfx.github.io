@@ -182,7 +182,7 @@ brew install boost</pre>
 
 <p>Create a virtualenv called &#8220;kinect&#8221;</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span>pip install virtualenv
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">pip install virtualenv
 virtualenv --no-site-packages -p python2.7 kinect
 <span style="color: #007020">cd</span> kinect
 <span style="color: #007020">source</span> bin/activate
@@ -230,7 +230,7 @@ virtualenv --no-site-packages -p python2.7 kinect
 
 <p>Be aware that on OSX, PyOpenNI requires a framework build of python 2.7+ and that you must build it for x86_64 specifically. Also, I was having major problems with cmake properly finding the python includes location. I had to suggest a fix, so <a href="https://github.com/jmendeth/PyOpenNI/issues/16#issuecomment-6515678">please see here for the necessary corrections</a>. I have referenced a patched fork of the repository below.</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span><span style="color: #007020">export</span> <span style="color: #bb60d5">CPPFLAGS</span><span style="color: #666666">=</span><span style="color: #4070a0">&quot;-arch x86_64&quot;</span>
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020">export</span> <span style="color: #bb60d5">CPPFLAGS</span><span style="color: #666666">=</span><span style="color: #4070a0">&quot;-arch x86_64&quot;</span>
 git clone git://github.com/justinfx/PyOpenNI.git
 mkdir PyOpenNI-build
 <span style="color: #007020">cd</span> PyOpenNI-build

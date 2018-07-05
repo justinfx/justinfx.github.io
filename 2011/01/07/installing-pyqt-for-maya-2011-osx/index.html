@@ -151,12 +151,12 @@ ga('send', 'pageview');
 <ol>
 <li>Download:  <a href="https://dl.dropbox.com/u/34613220/MyQt4/src/qt-mac-opensource-src-4.5.3.tar.gz">qt-mac-opensource-src-4.5.3.tar.gz</a></li>
 
-<li><p>Extract: <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span>tar zxvf qt-mac-opensource-src-4.5.3.tar.gz
+<li><p>Extract: <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">tar zxvf qt-mac-opensource-src-4.5.3.tar.gz
 <span style="color: #007020">cd</span> qt-mac-opensource-src-4.5.3
 </pre></div>
 </p></li>
 
-<li><p>Build and install: <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span>./configure -cocoa -arch x86_64 -debug-and-release <span style="color: #4070a0; font-weight: bold">\</span>
+<li><p>Build and install: <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">./configure -cocoa -arch x86_64 -debug-and-release <span style="color: #4070a0; font-weight: bold">\</span>
   -no-phonon -no-phonon-backend -no-qt3support <span style="color: #4070a0; font-weight: bold">\</span>
   -no-webkit -nomake docs -nomake examples -nomake demos <span style="color: #4070a0; font-weight: bold">\</span>
   -nomake translations -no-rpath -no-framework
@@ -174,7 +174,7 @@ sudo make install
 <li><p>Extract: <pre class="theme:twilight top-margin:20 bottom-margin:20 toolbar-overlay:false striped:false nums:false lang:sh decode:true">tar zxvf sip-4.10.tar.gz
 cd sip-4.10</pre></p></li>
 
-<li><p>Build and install: <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span>/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy <span style="color: #4070a0; font-weight: bold">\</span>
+<li><p>Build and install: <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy <span style="color: #4070a0; font-weight: bold">\</span>
   configure.py --arch<span style="color: #666666">=</span>x86_64
 make -j 8
 sudo make install
@@ -190,14 +190,14 @@ sudo make install
 <li><p>Extract: <pre class="striped:false nums:false lang:sh decode:true">tar zxvf PyQt-mac-gpl-4.7.3.tar.gz
 cd PyQt-mac-gpl-4.7.3</pre></p></li>
 
-<li><p>Set up some environment variables before building: <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span><span style="color: #007020">export</span> <span style="color: #bb60d5">QTDIR</span><span style="color: #666666">=</span>/usr/local/Trolltech/Qt-4.5.3
-<span style="color: #007020">export</span> <span style="color: #bb60d5">PATH</span><span style="color: #666666">=</span>/usr/local/Trolltech/Qt-4.5.3/bin:<span style="color: #bb60d5">$PATH</span>
+<li><p>Set up some environment variables before building: <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020">export</span> <span style="color: #bb60d5">QTDIR</span><span style="color: #666666">=</span>/usr/local/Trolltech/Qt-4.5.3
+<span style="color: #007020">export</span> <span style="color: #bb60d5">PATH</span><span style="color: #666666">=</span>/usr/local/Trolltech/Qt-4.5.3/bin:$PATH
 <span style="color: #007020">export</span> <span style="color: #bb60d5">QMAKESPEC</span><span style="color: #666666">=</span>/usr/local/Trolltech/Qt-4.5.3/mkspecs/macx-g++
 <span style="color: #007020">export</span> <span style="color: #bb60d5">DYLD_LIBRARY_PATH</span><span style="color: #666666">=</span>/usr/local/Trolltech/Qt-4.5.3/lib
 </pre></div>
 </p></li>
 
-<li><p>Build and install: <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span>/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy <span style="color: #4070a0; font-weight: bold">\</span>
+<li><p>Build and install: <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">/Applications/Autodesk/maya2011/Maya.app/Contents/bin/mayapy <span style="color: #4070a0; font-weight: bold">\</span>
   configure.py <span style="color: #4070a0; font-weight: bold">\</span>
   <span style="color: #bb60d5">LIBDIR_QT</span><span style="color: #666666">=</span>/usr/local/Trolltech/Qt‐4.5.3/lib <span style="color: #4070a0; font-weight: bold">\</span>
   <span style="color: #bb60d5">INCDIR_QT</span><span style="color: #666666">=</span>/usr/local/Trolltech/Qt‐4.5.3/include <span style="color: #4070a0; font-weight: bold">\</span>
@@ -208,7 +208,7 @@ sudo make install
 </pre></div>
 </p></li>
 
-<li><p>PyQt4 will now be installed into Maya&#8217;s python site-packages, BUT will be linked against the wrong Qt binaries. The maya docs have an annoying multi step set of commands but they don&#8217;t copy/paste nicely, so here is a for-loop you can use: <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span><span style="color: #007020; font-weight: bold">for</span> mod in Core Gui Svg OpenGL Xml
+<li><p>PyQt4 will now be installed into Maya&#8217;s python site-packages, BUT will be linked against the wrong Qt binaries. The maya docs have an annoying multi step set of commands but they don&#8217;t copy/paste nicely, so here is a for-loop you can use: <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020; font-weight: bold">for</span> mod in Core Gui Svg OpenGL Xml
 <span style="color: #007020; font-weight: bold">do</span> 
   sudo find /Applications/Autodesk/maya2011/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python2.6/site-packages/PyQt4 -name <span style="color: #4070a0">&quot;*so&quot;</span> <span style="color: #4070a0; font-weight: bold">\</span>
   -exec install_name_tool -change libQt<span style="color: #70a0d0; font-style: italic">${</span><span style="color: #bb60d5">mod</span><span style="color: #70a0d0; font-style: italic">}</span>.4.dylib @executable_path/Qt<span style="color: #70a0d0; font-style: italic">${</span><span style="color: #bb60d5">mod</span><span style="color: #70a0d0; font-style: italic">}</span> <span style="color: #666666">{}</span> ;
@@ -219,7 +219,7 @@ sudo make install
 
 <p>At this point you should be able to start up Maya and import and run PyQt from the script editor. You no longer need the pumpThread. Here is a test code snippet that I borrowed from here (the original had typos in it that I corrected)</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span><span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">maya.OpenMayaUI</span> <span style="color: #007020; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">mui</span>
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">maya.OpenMayaUI</span> <span style="color: #007020; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">mui</span>
 <span style="color: #007020; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">PyQt4.QtCore</span> <span style="color: #007020; font-weight: bold">import</span> <span style="color: #666666">*</span>
 <span style="color: #007020; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">PyQt4.QtGui</span> <span style="color: #007020; font-weight: bold">import</span> <span style="color: #666666">*</span>
 
@@ -246,7 +246,7 @@ form<span style="color: #666666">.</span>show()
 
 <p>It doesn&#8217;t seem like you even need the install of Qt 4.5.3 that we did at this point since we changed the links, unless you use another Qt module besides QtCore, QtGui, QtSvg, QtXml, QtOpenGL (such as QtNetwork), but this could be solved by copying over the missing libs to where Maya is expecting them. Example for copying over QtNetwork:</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span>sudo cp /usr/local/Trolltech/Qt-4.5.3/lib/libQtNetwork.* 
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">sudo cp /usr/local/Trolltech/Qt-4.5.3/lib/libQtNetwork.* 
     /Applications/Autodesk/maya2011/Maya.app/Contents/MacOS
 sudo install_name_tool -change libQtCore.4.dylib @executable_path/QtCore 
     /Applications/Autodesk/maya2011/Maya.app/Contents/MacOS/libQtNetwork.4.dylib
@@ -255,7 +255,7 @@ sudo install_name_tool -change libQtCore.4.dylib @executable_path/QtCore
 
 <p>If you happen to have a mixed library environment like me, with more than one python lib location for code, and you see any funny errors while importing a module, just make sure that mayas python site-package is always in the front of the sys.path:</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span>sys<span style="color: #666666">.</span>path<span style="color: #666666">.</span>insert(<span style="color: #40a070">0</span>,<span style="color: #4070a0">&#39;/Applications/Autodesk/maya2011/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python2.6/site-packages&#39;</span>)
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">sys<span style="color: #666666">.</span>path<span style="color: #666666">.</span>insert(<span style="color: #40a070">0</span>,<span style="color: #4070a0">&#39;/Applications/Autodesk/maya2011/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python2.6/site-packages&#39;</span>)
 </pre></div>
 
 

@@ -134,7 +134,7 @@ ga('send', 'pageview');
 
 <p>I started with the <a href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter">Wordpress To Hugo Exporter</a>. Even though there were some claims that it didn&rsquo;t work 100% of the time, I actually had no problems using it with a semi recent 4.x install of Wordpress. I believe those that experienced issues might have had very large sites and encountered some kind of timeout issue. My site has relatively few posts, compared to others, and installing this plugin and exporting the site had worked right away. What you get as an end result is an archive of your site, converted into a basic Hugo project structure. All of your metadata from your posts are preserved in the Hugo format called <a href="https://gohugo.io/content/front-matter/">&ldquo;Front Matter&rdquo;</a>. This is a section of metadata that sits at the top of every markdown file, which the engine will use to build out your static site properly. For instance, the Front Matter that was generated for my post entitled <a href="/2015/06/07/comparing-performance-of-qt-smart-pointer-options/">&ldquo;Comparing performance of Qt smart pointer options&rdquo;</a>, looks like this:</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span><span style="color: #0e84b5; font-weight: bold">---</span>
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #0e84b5; font-weight: bold">---</span>
 title: Comparing performance of Qt smart pointer options
 author: Justin Israel
 type: post
@@ -156,7 +156,7 @@ tags:
 
 <p>Once I had my new set of markdown files, I saw that they needed a tiny bit of cleanup. This probably has to do with the type of plugins I used in Wordpress to format code and embed media, which couldn&rsquo;t be translated to look exactly the way it should. But it was simple enough to go through each page and correct the bits of hyper-links and code formatting. A great thing about Hugo is that it comes with a production-quality web server, which you can use in development mode as you work on your site:</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span>$ hugo server -w -D
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">$ hugo server -w -D
 </pre></div>
 
 
@@ -170,7 +170,7 @@ tags:
 
 <p>Generating your static site via Hugo is as simple as doing the following:</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span>$ hugo
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">$ hugo
 <span style="color: #40a070">0</span> of <span style="color: #40a070">1</span> draft rendered
 <span style="color: #40a070">0</span> future content 
 <span style="color: #40a070">32</span> pages created
@@ -193,7 +193,7 @@ in <span style="color: #40a070">195</span> ms
 
 <p>The first thing you want to look at is your <code>config.yaml</code> file. There isn&rsquo;t much to it, and the default could be mostly correct for you. But I did have to change a few things to get it right. Mine looks like this:</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span><span style="color: #0e84b5; font-weight: bold">---</span>
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #0e84b5; font-weight: bold">---</span>
 baseurl: <span style="color: #4070a0">&quot;http://justinfx.com&quot;</span>
 languageCode: <span style="color: #4070a0">&quot;en-us&quot;</span>
 title: <span style="color: #4070a0">&quot;JustinFX.com&quot;</span>
@@ -242,7 +242,7 @@ params:
 
 <p>At first, I had thought archetypes were something more complicated than they actually are. Really all they do is define a new &ldquo;type template&rdquo; so that when you create new content with <code>hugo new &lt;...&gt;</code>, the new content will be created with type-specific defaults. For instance, I have an archetype defined that makes any markdown files created in my &ldquo;content/blog/&rdquo; location have the type &ldquo;post&rdquo;:</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span>$ ls archetypes/
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">$ ls archetypes/
 blog.md
 
 $ cat archetypes/blog.md
@@ -297,7 +297,7 @@ $ cat content/blog/new_post.md
 
 <p>&ldquo;section/blog.html&rdquo; looks like this:</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span>{{ template &quot;chrome/head.html&quot; . }}
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">{{ template &quot;chrome/head.html&quot; . }}
 &lt;<span style="color: #062873; font-weight: bold">body</span>&gt;
 
 {{ template &quot;chrome/sidebar.html&quot; . }}
@@ -325,7 +325,7 @@ $ cat content/blog/new_post.md
 
 <p>&ldquo;layouts/post/li.html&rdquo; looks like this:</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span>&lt;<span style="color: #062873; font-weight: bold">li</span>&gt;
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">&lt;<span style="color: #062873; font-weight: bold">li</span>&gt;
       &lt;<span style="color: #062873; font-weight: bold">span</span> <span style="color: #4070a0">style</span><span style="color: #666666">=</span><span style="color: #4070a0">&quot;line-height: 1.0&quot;</span>&gt;
       {{if .Draft}}[draft] {{end}}&lt;<span style="color: #062873; font-weight: bold">a</span> <span style="color: #4070a0">href</span><span style="color: #666666">=</span><span style="color: #4070a0">&quot;{{ .Permalink }}&quot;</span>&gt;{{ .Title }}&lt;/<span style="color: #062873; font-weight: bold">a</span>&gt;
       &lt;<span style="color: #062873; font-weight: bold">div</span> <span style="color: #4070a0">class</span><span style="color: #666666">=</span><span style="color: #4070a0">&quot;post-item&quot;</span>&gt;
@@ -360,7 +360,7 @@ $ cat content/blog/new_post.md
 
 <p>And &ldquo;vimeo.html&rdquo; looks like this:</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span>&lt;<span style="color: #062873; font-weight: bold">div</span> <span style="color: #4070a0">class</span><span style="color: #666666">=</span><span style="color: #4070a0">&quot;js-video vimeo&quot;</span>&gt;
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">&lt;<span style="color: #062873; font-weight: bold">div</span> <span style="color: #4070a0">class</span><span style="color: #666666">=</span><span style="color: #4070a0">&quot;js-video vimeo&quot;</span>&gt;
 	&lt;<span style="color: #062873; font-weight: bold">iframe</span> <span style="color: #4070a0">src</span><span style="color: #666666">=</span><span style="color: #4070a0">&quot;https://player.vimeo.com/video/{{ .Get 0 }}?byline=0&quot;</span> 
 	        <span style="color: #4070a0">width</span><span style="color: #666666">=</span><span style="color: #4070a0">&quot;640&quot;</span> 
 	        <span style="color: #4070a0">height</span><span style="color: #666666">=</span><span style="color: #4070a0">&quot;360&quot;</span> 
@@ -374,7 +374,7 @@ $ cat content/blog/new_post.md
 
 <p>Now I have the ability to embed my vimeo media from within my markdown files, just by using the shortcode and passing the vimeo id as a parameter:</p>
 
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span></span>{{&lt; <span style="color: #062873; font-weight: bold">vimeo</span> <span style="color: #4070a0">12067694</span> &gt;}}
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">{{&lt; <span style="color: #062873; font-weight: bold">vimeo</span> <span style="color: #4070a0">12067694</span> &gt;}}
 </pre></div>
 
 

@@ -287,7 +287,7 @@ Now enjoy them free of charge!&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;ref:&lt;/em&gt; &lt;a href=&#34;https://github.com/justinfx/openimageigo/blob/master/cpp/oiio.h&#34;&gt;&lt;em&gt;github.com/justinfx/openimageigo/cpp/oiio.h&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// oiio.h&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// oiio.h&lt;/span&gt;
 &lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\#&lt;/span&gt;ifdef __cplusplus
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;extern&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;C&amp;quot;&lt;/span&gt; {
 &lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\#&lt;/span&gt;endif
@@ -325,7 +325,7 @@ s_filename,
 
 &lt;p&gt;I had been asked more than once by colleagues if a C++ version of fileseq was available. It wasn&amp;rsquo;t, and I also didn&amp;rsquo;t want to have to maintain a 3rd standalone port that should follow the same behavior as the other two. But since the introduction of the &lt;a href=&#34;https://golang.org/doc/go1.5#link&#34;&gt;Go &lt;/a&gt;&lt;code&gt;[-buildmode](https://golang.org/doc/go1.5#link)&lt;/code&gt; flag in 1.5, it has become possible to export functions from Go to C/C++&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// sum.go&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// sum.go&lt;/span&gt;
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;package&lt;/span&gt; main
 
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;C&amp;quot;&lt;/span&gt;
@@ -348,7 +348,7 @@ sum.c  sum.go sum.h  sum.so
 
 &lt;p&gt;Now we have a shared library and a header file, to use in our C app&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// sum.c&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;// sum.c&lt;/span&gt;
 &lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\#&lt;/span&gt;include &lt;span style=&#34;color: #666666&#34;&gt;&amp;lt;&lt;/span&gt;stdio.h&lt;span style=&#34;color: #666666&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\#&lt;/span&gt;include &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;sum.h&amp;quot;&lt;/span&gt;
 
@@ -382,7 +382,7 @@ sum.c  sum.go sum.h  sum.so
 
 &lt;p&gt;The full implementation is located here: &lt;a href=&#34;https://github.com/justinfx/gofileseq/tree/master/cpp&#34;&gt;github.com/justinfx/gofileseq/cpp&lt;/a&gt;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;type&lt;/span&gt; FileSeqId &lt;span style=&#34;color: #902000&#34;&gt;uint64&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;type&lt;/span&gt; FileSeqId &lt;span style=&#34;color: #902000&#34;&gt;uint64&lt;/span&gt;
 
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;type&lt;/span&gt; fileSeqRef &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;struct&lt;/span&gt; {
 &lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;fileseq.FileSequence
@@ -412,7 +412,7 @@ Uint64() &lt;span style=&#34;color: #902000&#34;&gt;uint64&lt;/span&gt;
 
 &lt;p&gt;Now when C++ wants to create a &lt;code&gt;FileSequence&lt;/code&gt;, they can call a &lt;code&gt;New&lt;/code&gt; function which will create an instance, add it to the map, and return a uint64 id handle&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;//export FileSequence_New&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #60a0b0; font-style: italic&#34;&gt;//export FileSequence_New&lt;/span&gt;
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;func&lt;/span&gt; FileSequence_New(frange &lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;C.char) (FileSeqId, Error) {
 fs, e &lt;span style=&#34;color: #666666&#34;&gt;:=&lt;/span&gt; fileseq.NewFileSequence(C.GoString(frange))
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;if&lt;/span&gt; e &lt;span style=&#34;color: #666666&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;nil&lt;/span&gt; {
@@ -441,7 +441,7 @@ fs, ok &lt;span style=&#34;color: #666666&#34;&gt;:=&lt;/span&gt; sFileSeqs.Get(
 
 &lt;p&gt;&lt;em&gt;ref:&lt;/em&gt; &lt;a href=&#34;https://github.com/justinfx/gofileseq/blob/master/cpp/private/fileseq_p.h#L16&#34;&gt;_github.com/justinfx/gofileseq/cpp/private/fileseq&lt;em&gt;p.h&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;StringProxy&lt;/span&gt; {
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;StringProxy&lt;/span&gt; {
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;:&lt;/span&gt;
 StringProxy(&lt;span style=&#34;color: #902000&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt; managed) &lt;span style=&#34;color: #666666&#34;&gt;:&lt;/span&gt; m_data(managed), m_str() {
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;if&lt;/span&gt; (managed &lt;span style=&#34;color: #666666&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #007020&#34;&gt;NULL&lt;/span&gt;) {
@@ -463,7 +463,7 @@ m_str.assign(managed);
 
 &lt;p&gt;This all ended up working fine! I created some benchmarks to compare fileseq between Python, C++, and Go. The test involved looping 100k times, creating a FileSequence, and calling 4 methods on it.&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color: #902000&#34;&gt;int&lt;/span&gt; n &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #40a070&#34;&gt;100000&lt;/span&gt;;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color: #902000&#34;&gt;int&lt;/span&gt; n &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #40a070&#34;&gt;100000&lt;/span&gt;;
 
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color: #902000&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color: #666666&#34;&gt;&amp;lt;&lt;/span&gt; n; &lt;span style=&#34;color: #666666&#34;&gt;++&lt;/span&gt;i) {
 fileseq&lt;span style=&#34;color: #666666&#34;&gt;::&lt;/span&gt;FileSequence fs(&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;/path/to/file_name.1-100x2#.ext&amp;quot;&lt;/span&gt;);
@@ -486,7 +486,7 @@ num &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; fs.end();
 
 &lt;p&gt;i.e., something like this:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #002070; font-weight: bold&#34;&gt;fs&lt;/span&gt; :&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;FileSequence)unsafe.Pointer(
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #002070; font-weight: bold&#34;&gt;fs&lt;/span&gt; :&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;border: 1px solid #FF0000&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt;FileSequence)unsafe.Pointer(
 C.malloc(unsafe.Sizeof(FileSequence{})))
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -680,7 +680,7 @@ It helps to store your uncrustify.cfg within your project repo. Also, there is a
 
 &lt;p&gt;I started with the &lt;a href=&#34;https://github.com/SchumacherFM/wordpress-to-hugo-exporter&#34;&gt;Wordpress To Hugo Exporter&lt;/a&gt;. Even though there were some claims that it didn&amp;rsquo;t work 100% of the time, I actually had no problems using it with a semi recent 4.x install of Wordpress. I believe those that experienced issues might have had very large sites and encountered some kind of timeout issue. My site has relatively few posts, compared to others, and installing this plugin and exporting the site had worked right away. What you get as an end result is an archive of your site, converted into a basic Hugo project structure. All of your metadata from your posts are preserved in the Hugo format called &lt;a href=&#34;https://gohugo.io/content/front-matter/&#34;&gt;&amp;ldquo;Front Matter&amp;rdquo;&lt;/a&gt;. This is a section of metadata that sits at the top of every markdown file, which the engine will use to build out your static site properly. For instance, the Front Matter that was generated for my post entitled &lt;a href=&#34;http://justinfx.com/2015/06/07/comparing-performance-of-qt-smart-pointer-options/&#34;&gt;&amp;ldquo;Comparing performance of Qt smart pointer options&amp;rdquo;&lt;/a&gt;, looks like this:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;---&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;---&lt;/span&gt;
 title: Comparing performance of Qt smart pointer options
 author: Justin Israel
 type: post
@@ -702,7 +702,7 @@ tags:
 
 &lt;p&gt;Once I had my new set of markdown files, I saw that they needed a tiny bit of cleanup. This probably has to do with the type of plugins I used in Wordpress to format code and embed media, which couldn&amp;rsquo;t be translated to look exactly the way it should. But it was simple enough to go through each page and correct the bits of hyper-links and code formatting. A great thing about Hugo is that it comes with a production-quality web server, which you can use in development mode as you work on your site:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ hugo server -w -D
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;$ hugo server -w -D
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -716,7 +716,7 @@ tags:
 
 &lt;p&gt;Generating your static site via Hugo is as simple as doing the following:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ hugo
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;$ hugo
 &lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt; of &lt;span style=&#34;color: #40a070&#34;&gt;1&lt;/span&gt; draft rendered
 &lt;span style=&#34;color: #40a070&#34;&gt;0&lt;/span&gt; future content 
 &lt;span style=&#34;color: #40a070&#34;&gt;32&lt;/span&gt; pages created
@@ -739,7 +739,7 @@ in &lt;span style=&#34;color: #40a070&#34;&gt;195&lt;/span&gt; ms
 
 &lt;p&gt;The first thing you want to look at is your &lt;code&gt;config.yaml&lt;/code&gt; file. There isn&amp;rsquo;t much to it, and the default could be mostly correct for you. But I did have to change a few things to get it right. Mine looks like this:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;---&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;---&lt;/span&gt;
 baseurl: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;http://justinfx.com&amp;quot;&lt;/span&gt;
 languageCode: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;en-us&amp;quot;&lt;/span&gt;
 title: &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;JustinFX.com&amp;quot;&lt;/span&gt;
@@ -788,7 +788,7 @@ params:
 
 &lt;p&gt;At first, I had thought archetypes were something more complicated than they actually are. Really all they do is define a new &amp;ldquo;type template&amp;rdquo; so that when you create new content with &lt;code&gt;hugo new &amp;lt;...&amp;gt;&lt;/code&gt;, the new content will be created with type-specific defaults. For instance, I have an archetype defined that makes any markdown files created in my &amp;ldquo;content/blog/&amp;rdquo; location have the type &amp;ldquo;post&amp;rdquo;:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ ls archetypes/
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;$ ls archetypes/
 blog.md
 
 $ cat archetypes/blog.md
@@ -843,7 +843,7 @@ $ cat content/blog/new_post.md
 
 &lt;p&gt;&amp;ldquo;section/blog.html&amp;rdquo; looks like this:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;{{ template &amp;quot;chrome/head.html&amp;quot; . }}
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;{{ template &amp;quot;chrome/head.html&amp;quot; . }}
 &amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;body&lt;/span&gt;&amp;gt;
 
 {{ template &amp;quot;chrome/sidebar.html&amp;quot; . }}
@@ -871,7 +871,7 @@ $ cat content/blog/new_post.md
 
 &lt;p&gt;&amp;ldquo;layouts/post/li.html&amp;rdquo; looks like this:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;li&lt;/span&gt;&amp;gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;li&lt;/span&gt;&amp;gt;
       &amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;style&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;line-height: 1.0&amp;quot;&lt;/span&gt;&amp;gt;
       {{if .Draft}}[draft] {{end}}&amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;{{ .Permalink }}&amp;quot;&lt;/span&gt;&amp;gt;{{ .Title }}&amp;lt;/&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;a&lt;/span&gt;&amp;gt;
       &amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;post-item&amp;quot;&lt;/span&gt;&amp;gt;
@@ -906,7 +906,7 @@ $ cat content/blog/new_post.md
 
 &lt;p&gt;And &amp;ldquo;vimeo.html&amp;rdquo; looks like this:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;js-video vimeo&amp;quot;&lt;/span&gt;&amp;gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;js-video vimeo&amp;quot;&lt;/span&gt;&amp;gt;
 	&amp;lt;&lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;iframe&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;https://player.vimeo.com/video/{{ .Get 0 }}?byline=0&amp;quot;&lt;/span&gt; 
 	        &lt;span style=&#34;color: #4070a0&#34;&gt;width&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;640&amp;quot;&lt;/span&gt; 
 	        &lt;span style=&#34;color: #4070a0&#34;&gt;height&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;360&amp;quot;&lt;/span&gt; 
@@ -920,7 +920,7 @@ $ cat content/blog/new_post.md
 
 &lt;p&gt;Now I have the ability to embed my vimeo media from within my markdown files, just by using the shortcode and passing the vimeo id as a parameter:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;{{&amp;lt; &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;vimeo&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;12067694&lt;/span&gt; &amp;gt;}}
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;{{&amp;lt; &lt;span style=&#34;color: #062873; font-weight: bold&#34;&gt;vimeo&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;12067694&lt;/span&gt; &amp;gt;}}
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1308,7 +1308,7 @@ Dependencies:&lt;/p&gt;
 
 &lt;p&gt;Test:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;timeit&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; timeit
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;timeit&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; timeit
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;tabulate&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; tabulate
 
 setup &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #4070a0&#34;&gt;&amp;#39;&amp;#39;&amp;#39;d = {&lt;/span&gt;
@@ -1514,7 +1514,7 @@ brew install boost&lt;/pre&gt;
 
 &lt;p&gt;Create a virtualenv called &amp;#8220;kinect&amp;#8221;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;pip install virtualenv
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;pip install virtualenv
 virtualenv --no-site-packages -p python2.7 kinect
 &lt;span style=&#34;color: #007020&#34;&gt;cd&lt;/span&gt; kinect
 &lt;span style=&#34;color: #007020&#34;&gt;source&lt;/span&gt; bin/activate
@@ -1562,7 +1562,7 @@ virtualenv --no-site-packages -p python2.7 kinect
 
 &lt;p&gt;Be aware that on OSX, PyOpenNI requires a framework build of python 2.7+ and that you must build it for x86_64 specifically. Also, I was having major problems with cmake properly finding the python includes location. I had to suggest a fix, so &lt;a href=&#34;https://github.com/jmendeth/PyOpenNI/issues/16#issuecomment-6515678&#34;&gt;please see here for the necessary corrections&lt;/a&gt;. I have referenced a patched fork of the repository below.&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #007020&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color: #bb60d5&#34;&gt;CPPFLAGS&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;-arch x86_64&amp;quot;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color: #bb60d5&#34;&gt;CPPFLAGS&lt;/span&gt;&lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #4070a0&#34;&gt;&amp;quot;-arch x86_64&amp;quot;&lt;/span&gt;
 git clone git://github.com/justinfx/PyOpenNI.git
 mkdir PyOpenNI-build
 &lt;span style=&#34;color: #007020&#34;&gt;cd&lt;/span&gt; PyOpenNI-build
@@ -1822,7 +1822,7 @@ make
 
 &lt;p&gt;Here is my example of how to achieve this&amp;#8230;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;PyQt4&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; QtCore, QtGui
+&lt;div class=&#34;highlight&#34; style=&#34;background: #f0f0f0&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;PyQt4&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; QtCore, QtGui
 
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;maya.cmds&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;cmds&lt;/span&gt;
 &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;maya.OpenMayaUI&lt;/span&gt; &lt;span style=&#34;color: #007020; font-weight: bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #0e84b5; font-weight: bold&#34;&gt;mui&lt;/span&gt;
