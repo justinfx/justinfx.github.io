@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://justinfx.com/2018/07/05/siggraph-2017---large-scale-vfx-pipelines/</loc>
+    <lastmod>2018-07-05T14:19:25+12:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://justinfx.com/2018/02/20/gofileseq-binary/</loc>
     <lastmod>2018-02-20T13:48:07+00:00</lastmod>
   </url>
@@ -224,7 +229,7 @@
   
   <url>
     <loc>http://justinfx.com/blog/</loc>
-    <lastmod>2018-02-20T13:48:07+00:00</lastmod>
+    <lastmod>2018-07-05T14:19:25+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -301,7 +306,7 @@
   
   <url>
     <loc>http://justinfx.com/categories/fx/</loc>
-    <lastmod>2012-10-12T00:00:00+00:00</lastmod>
+    <lastmod>2018-07-05T14:19:25+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -331,7 +336,7 @@
   
   <url>
     <loc>http://justinfx.com/</loc>
-    <lastmod>2018-02-20T13:48:07+00:00</lastmod>
+    <lastmod>2018-07-05T14:19:25+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -408,6 +413,12 @@
   </url>
   
   <url>
+    <loc>http://justinfx.com/tags/presentation/</loc>
+    <lastmod>2018-07-05T14:19:25+12:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://justinfx.com/tags/programming/</loc>
     <lastmod>2011-07-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -446,6 +457,12 @@
   <url>
     <loc>http://justinfx.com/categories/random-stuff/</loc>
     <lastmod>2012-12-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://justinfx.com/tags/siggraph/</loc>
+    <lastmod>2018-07-05T14:19:25+12:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -512,6 +529,12 @@
   <url>
     <loc>http://justinfx.com/tags/ui/</loc>
     <lastmod>2011-11-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://justinfx.com/tags/vfx/</loc>
+    <lastmod>2018-07-05T14:19:25+12:00</lastmod>
     <priority>0</priority>
   </url>
   
