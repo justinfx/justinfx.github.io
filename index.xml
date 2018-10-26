@@ -127,7 +127,7 @@ subdir2/file_foo.1-100@@@.tif
 
 &lt;h4 id=&#34;c&#34;&gt;C++&lt;/h4&gt;
 
-&lt;p&gt;There is also a &lt;a href=&#34;https://github.com/justinfx/gofileseq/tree/master/cpp-port&#34; title=&#34;C++ port&#34;&gt;C++ port&lt;/a&gt; of gofileseq within the repository, for those C++ devs that need to work with VFX-style file sequence patterns.  Doxygen API docs are now automatically built from the master branch: &lt;a href=&#34;http://justinfx.com/gofileseq/cpp&#34;&gt;justinfx.com/gofileseq/cpp&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;There is also a &lt;a href=&#34;https://github.com/justinfx/gofileseq/tree/master/cpp&#34; title=&#34;C++ port&#34;&gt;C++ port&lt;/a&gt; of gofileseq within the repository, for those C++ devs that need to work with VFX-style file sequence patterns.  Doxygen API docs are now automatically built from the master branch: &lt;a href=&#34;http://justinfx.com/gofileseq/cpp&#34;&gt;justinfx.com/gofileseq/cpp&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     
