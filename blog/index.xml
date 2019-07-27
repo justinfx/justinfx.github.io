@@ -31,7 +31,7 @@
       <pubDate>Tue, 20 Feb 2018 13:48:07 +0000</pubDate>
       
       <guid>http://justinfx.com/2018/02/20/gofileseq-binary/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png&#34; style=&#34;width:100px; float:left;&#34;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&#34; style=&#34;width:100px; float:left;&#34; &gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/gofileseq&#34; title=&#34;gofileseq&#34;&gt;gofileseq&lt;/a&gt; is a Go language library for parsing file sequence strings commonly used in VFX and animation applications.&lt;/p&gt;
 
@@ -53,7 +53,7 @@ Now enjoy them free of charge!&lt;/p&gt;
     <item>
       <title>C&#43;&#43; Bindings For A Go Library</title>
       <link>http://justinfx.com/2016/05/14/cpp-bindings-for-go/</link>
-      <pubDate>Sat, 14 May 2016 15:53:48 +1200</pubDate>
+      <pubDate>Sat, 14 May 2016 03:53:48 +0000</pubDate>
       
       <guid>http://justinfx.com/2016/05/14/cpp-bindings-for-go/</guid>
       <description>&lt;p&gt;This is an overview describing my approach to creating C++ bindings around a Go library.&lt;/p&gt;

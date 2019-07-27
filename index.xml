@@ -6,7 +6,7 @@
     <link>http://justinfx.com/</link>
     <language>en-us</language>
     <author>Justin Israel</author>
-    <copyright>2018 Justin Israel</copyright>
+    <copyright>2019 Justin Israel</copyright>
     <updated>2006-01-02 15:04:05 &#43;0000 MST</updated>
     
     
@@ -47,7 +47,7 @@
       <pubDate>2006-01-02 15:04:05 &#43;0000 MST</pubDate>
       <author>Justin Israel</author>
       <guid>http://justinfx.com/2018/02/20/gofileseq-binary/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png&#34; style=&#34;width:100px; float:left;&#34;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&#34; style=&#34;width:100px; float:left;&#34; &gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/gofileseq&#34; title=&#34;gofileseq&#34;&gt;gofileseq&lt;/a&gt; is a Go language library for parsing file sequence strings commonly used in VFX and animation applications.&lt;/p&gt;
 
@@ -319,26 +319,26 @@ Now enjoy them free of charge!&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;ref:&lt;/em&gt; &lt;a href=&#34;https://github.com/justinfx/openimageigo/blob/master/cpp/oiio.h&#34;&gt;&lt;em&gt;github.com/justinfx/openimageigo/cpp/oiio.h&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// oiio.h
-&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#007020&#34;&gt;#ifdef __cplusplus
+&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#007020&#34;&gt;#ifdef __cplusplus
 &lt;/span&gt;&lt;span style=&#34;color:#007020&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;extern&lt;/span&gt; &lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;C&amp;#34;&lt;/span&gt; {
-&lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#007020&#34;&gt;#endif
+&lt;span style=&#34;color:#007020&#34;&gt;#endif
 &lt;/span&gt;&lt;span style=&#34;color:#007020&#34;&gt;&lt;/span&gt;
 &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;typedef&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;void&lt;/span&gt; ImageInput;
 
 &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// imageinput.cpp
-&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;ImageInput&lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt; ImageInput_Open(&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt; filename, &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; ImageSpec _config) {
-std&lt;span style=&#34;color:#666&#34;&gt;::&lt;/span&gt;string s_filename(filename);
-&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; (ImageInput_) OIIO&lt;span style=&#34;color:#666&#34;&gt;::&lt;/span&gt;ImageInput&lt;span style=&#34;color:#666&#34;&gt;::&lt;/span&gt;open(
-s_filename,
-&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;static_cast&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; OIIO&lt;span style=&#34;color:#666&#34;&gt;::&lt;/span&gt;ImageSpec&lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&amp;gt;&lt;/span&gt;(config));
+&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;ImageInput&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#06287e&#34;&gt;ImageInput_Open&lt;/span&gt;(&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt; filename, &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; ImageSpec _config) {
+    std&lt;span style=&#34;color:#666&#34;&gt;::&lt;/span&gt;string s_filename(filename);
+    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; (ImageInput&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;) OIIO&lt;span style=&#34;color:#666&#34;&gt;::&lt;/span&gt;ImageInput&lt;span style=&#34;color:#666&#34;&gt;::&lt;/span&gt;open(
+        s_filename,
+        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;static_cast&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; OIIO&lt;span style=&#34;color:#666&#34;&gt;::&lt;/span&gt;ImageSpec&lt;span style=&#34;color:#666&#34;&gt;*&amp;gt;&lt;/span&gt;(config));
 }
 
-&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt; ImageInput_format_name(ImageInput &lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;in) {
-&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;static_cast&lt;/span&gt;[OIIO&lt;span style=&#34;color:#666&#34;&gt;::&lt;/span&gt;ImageInput&lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;](OIIO&lt;span style=&#34;color:#666&#34;&gt;::&lt;/span&gt;ImageInput&lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;)(in)&lt;span style=&#34;color:#666&#34;&gt;-&amp;gt;&lt;/span&gt;format_name();
+&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#06287e&#34;&gt;ImageInput_format_name&lt;/span&gt;(ImageInput &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;in) {
+    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;static_cast&lt;/span&gt;[OIIO&lt;span style=&#34;color:#666&#34;&gt;::&lt;/span&gt;ImageInput&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;](OIIO&lt;span style=&#34;color:#666&#34;&gt;::&lt;/span&gt;ImageInput&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;)(in)&lt;span style=&#34;color:#666&#34;&gt;-&amp;gt;&lt;/span&gt;format_name();
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;As you can see, we make an opaque &lt;code&gt;ImageInput\*&lt;/code&gt; available to Go, and create a shim layer that is C compatible. &lt;code&gt;ImageInput_Open()&lt;/code&gt; is a factory function that wraps the static C++ &lt;code&gt;ImageInput::open()&lt;/code&gt; equivalent. We just cast between our pointer and theirs (OIIO&amp;rsquo;s), in order to call functions and methods.&lt;/p&gt;
+&lt;p&gt;As you can see, we make an opaque &lt;code&gt;ImageInput*&lt;/code&gt; available to Go, and create a shim layer that is C compatible. &lt;code&gt;ImageInput_Open()&lt;/code&gt; is a factory function that wraps the static C++ &lt;code&gt;ImageInput::open()&lt;/code&gt; equivalent. We just cast between our pointer and theirs (OIIO&amp;rsquo;s), in order to call functions and methods.&lt;/p&gt;
 
 &lt;p&gt;But like I said, these are Go bindings on top of C/C++ libraries. What about exposing a C++ library on top of a pure Go library?&lt;/p&gt;
 
@@ -362,7 +362,7 @@ s_filename,
 
 &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//export sum
 &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;func&lt;/span&gt; sum(x, y &lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt;) &lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; {
-&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; x &lt;span style=&#34;color:#666&#34;&gt;+&lt;/span&gt; y
+    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; x &lt;span style=&#34;color:#666&#34;&gt;+&lt;/span&gt; y
 }
 
 &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;func&lt;/span&gt; main() {
@@ -377,10 +377,10 @@ sum.c  sum.go sum.h  sum.so
 &lt;p&gt;Now we have a shared library and a header file, to use in our C app&lt;/p&gt;
 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// sum.c
-&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#007020&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#007020&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#007020&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#007020&#34;&gt;&lt;/span&gt;&lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#007020&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#007020&#34;&gt;&amp;#34;sum.h&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#007020&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#007020&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#007020&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#007020&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#007020&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#007020&#34;&gt;&amp;#34;sum.h&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#007020&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#007020&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; main(&lt;span style=&#34;color:#902000&#34;&gt;void&lt;/span&gt;) {
+&lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#06287e&#34;&gt;main&lt;/span&gt;(&lt;span style=&#34;color:#902000&#34;&gt;void&lt;/span&gt;) {
 
     &lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; z &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; sum(&lt;span style=&#34;color:#40a070&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#40a070&#34;&gt;2&lt;/span&gt;);
     printf(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;1+2=%d&lt;/span&gt;&lt;span style=&#34;color:#4070a0;font-weight:bold&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;&lt;/span&gt;, z);
@@ -411,38 +411,38 @@ sum.c  sum.go sum.h  sum.so
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;type&lt;/span&gt; FileSeqId &lt;span style=&#34;color:#902000&#34;&gt;uint64&lt;/span&gt;
 
 &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;type&lt;/span&gt; fileSeqRef &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;struct&lt;/span&gt; {
-&lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;fileseq.FileSequence
-refs &lt;span style=&#34;color:#902000&#34;&gt;uint32&lt;/span&gt;
+    &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;fileseq.FileSequence
+    refs &lt;span style=&#34;color:#902000&#34;&gt;uint32&lt;/span&gt;
 }
 
 &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;type&lt;/span&gt; fileSeqMap &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;struct&lt;/span&gt; {
-lock &lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;sync.RWMutex
-m    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;map&lt;/span&gt;&lt;span style=&#34;&#34;&gt;\&lt;/span&gt;[FileSeqId&lt;span style=&#34;&#34;&gt;\&lt;/span&gt;]&lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;fileSeqRef
-rand idMaker
+    lock &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;sync.RWMutex
+    m    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;map&lt;/span&gt;[FileSeqId]&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;fileSeqRef
+    rand idMaker
 }
 
 &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;type&lt;/span&gt; idMaker &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;interface&lt;/span&gt; {
-Uint64() &lt;span style=&#34;color:#902000&#34;&gt;uint64&lt;/span&gt;
+    Uint64() &lt;span style=&#34;color:#902000&#34;&gt;uint64&lt;/span&gt;
 }
 
-&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;func&lt;/span&gt; (m &lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;frameSetMap) Incref(id FrameSetId) {
-&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// Inc refs
+&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;func&lt;/span&gt; (m &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;frameSetMap) Incref(id FrameSetId) {
+    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// Inc refs
 &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;}
 
-&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;func&lt;/span&gt; (m &lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;frameSetMap) Decref(id FrameSetId) {
-&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// Dec refs
-&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// If refs == 0, delete from map
+&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;func&lt;/span&gt; (m &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;frameSetMap) Decref(id FrameSetId) {
+    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// Dec refs
+&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// If refs == 0, delete from map
 &lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now when C++ wants to create a &lt;code&gt;FileSequence&lt;/code&gt;, they can call a &lt;code&gt;New&lt;/code&gt; function which will create an instance, add it to the map, and return a uint64 id handle&lt;/p&gt;
 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//export FileSequence_New
-&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;func&lt;/span&gt; FileSequence_New(frange &lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;C.char) (FileSeqId, Error) {
-fs, e &lt;span style=&#34;color:#666&#34;&gt;:=&lt;/span&gt; fileseq.NewFileSequence(C.GoString(frange))
-&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; e &lt;span style=&#34;color:#666&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;nil&lt;/span&gt; {
-&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// err string is freed by caller
-&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#40a070&#34;&gt;0&lt;/span&gt;, C.CString(e.Error())
-}
+&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;func&lt;/span&gt; FileSequence_New(frange &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;C.char) (FileSeqId, Error) {
+    fs, e &lt;span style=&#34;color:#666&#34;&gt;:=&lt;/span&gt; fileseq.NewFileSequence(C.GoString(frange))
+    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; e &lt;span style=&#34;color:#666&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;nil&lt;/span&gt; {
+        &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// err string is freed by caller
+&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#40a070&#34;&gt;0&lt;/span&gt;, C.CString(e.Error())
+    }
 
     id &lt;span style=&#34;color:#666&#34;&gt;:=&lt;/span&gt; sFileSeqs.Add(fs)
     &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; id, &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;nil&lt;/span&gt;
@@ -450,25 +450,25 @@ fs, e &lt;span style=&#34;color:#666&#34;&gt;:=&lt;/span&gt; fileseq.NewFileSequ
 }
 
 &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;//export FileSequence_Dirname
-&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;func&lt;/span&gt; FileSequence_Dirname(id FileSeqId) &lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;C.char {
-fs, ok &lt;span style=&#34;color:#666&#34;&gt;:=&lt;/span&gt; sFileSeqs.Get(id)
-&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// caller must free string
-&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; !ok {
-&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; C.CString(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;)
-}
-&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; C.CString(fs.Dirname())
+&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;func&lt;/span&gt; FileSequence_Dirname(id FileSeqId) &lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;C.char {
+    fs, ok &lt;span style=&#34;color:#666&#34;&gt;:=&lt;/span&gt; sFileSeqs.Get(id)
+    &lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;// caller must free string
+&lt;/span&gt;&lt;span style=&#34;color:#60a0b0;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; !ok {
+        &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; C.CString(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;)
+    }
+    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;return&lt;/span&gt; C.CString(fs.Dirname())
 }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;You can see here that because this is C++ calling Go, we aren&amp;rsquo;t able to free the C string from Go, as the string needs to outlive the Go call. We just make sure that C++ always frees &lt;code&gt;\*C.char&lt;/code&gt; when it is returned. To make sure I always clean up the &lt;code&gt;char\*&lt;/code&gt; in C++, I made a helper &lt;code&gt;StringProxy&lt;/code&gt; class which wraps it and cleans it up in the destructor:&lt;/p&gt;
+&lt;p&gt;You can see here that because this is C++ calling Go, we aren&amp;rsquo;t able to free the C string from Go, as the string needs to outlive the Go call. We just make sure that C++ always frees &lt;code&gt;*C.char&lt;/code&gt; when it is returned. To make sure I always clean up the &lt;code&gt;char*&lt;/code&gt; in C++, I made a helper &lt;code&gt;StringProxy&lt;/code&gt; class which wraps it and cleans it up in the destructor:&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;ref:&lt;/em&gt; &lt;a href=&#34;https://github.com/justinfx/gofileseq/blob/master/cpp/private/fileseq_p.h#L16&#34;&gt;_github.com/justinfx/gofileseq/cpp/private/fileseq&lt;em&gt;p.h&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0e84b5;font-weight:bold&#34;&gt;StringProxy&lt;/span&gt; {
 &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;:&lt;/span&gt;
-StringProxy(&lt;span style=&#34;color:#902000&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt; managed) &lt;span style=&#34;color:#666&#34;&gt;:&lt;/span&gt; m_data(managed), m_str() {
-&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (managed &lt;span style=&#34;color:#666&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#007020&#34;&gt;NULL&lt;/span&gt;) {
-m_str.assign(managed);
-}
+StringProxy(&lt;span style=&#34;color:#902000&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt; managed) &lt;span style=&#34;color:#666&#34;&gt;:&lt;/span&gt; m_data(managed), m_str() {
+    &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;if&lt;/span&gt; (managed &lt;span style=&#34;color:#666&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#007020&#34;&gt;NULL&lt;/span&gt;) {
+        m_str.assign(managed);
+    }
 }
 
     &lt;span style=&#34;color:#666&#34;&gt;~&lt;/span&gt;StringProxy() {
@@ -487,11 +487,11 @@ m_str.assign(managed);
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; n &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#40a070&#34;&gt;100000&lt;/span&gt;;
 
 &lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#902000&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#40a070&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#666&#34;&gt;&amp;lt;&lt;/span&gt; n; &lt;span style=&#34;color:#666&#34;&gt;++&lt;/span&gt;i) {
-fileseq&lt;span style=&#34;color:#666&#34;&gt;::&lt;/span&gt;FileSequence fs(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;/path/to/file_name.1-100x2#.ext&amp;#34;&lt;/span&gt;);
-str &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; fs.string();
-str &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; fs.frameRange();
-num &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; fs.start();
-num &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; fs.end();
+    fileseq&lt;span style=&#34;color:#666&#34;&gt;::&lt;/span&gt;FileSequence fs(&lt;span style=&#34;color:#4070a0&#34;&gt;&amp;#34;/path/to/file_name.1-100x2#.ext&amp;#34;&lt;/span&gt;);
+    str &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; fs.string();
+    str &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; fs.frameRange();
+    num &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; fs.start();
+    num &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; fs.end();
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -506,7 +506,7 @@ num &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; fs.end();
 
 &lt;p&gt;i.e., something like this:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#002070;font-weight:bold&#34;&gt;fs&lt;/span&gt; :&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;&#34;&gt;\&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;FileSequence)unsafe.Pointer(
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#002070;font-weight:bold&#34;&gt;fs&lt;/span&gt; :&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;color:#666&#34;&gt;*&lt;/span&gt;FileSequence)unsafe.Pointer(
 C.malloc(unsafe.Sizeof(FileSequence{})))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
