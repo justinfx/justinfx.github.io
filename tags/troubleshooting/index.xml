@@ -1,25 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Troubleshooting on JustinFX.com</title>
-    <link>http://justinfx.com/tags/troubleshooting/</link>
-    <description>Recent content in Troubleshooting on JustinFX.com</description>
+    <title>troubleshooting on JustinFX.com</title>
+    <link>http://localhost:1313/tags/troubleshooting/</link>
+    <description>Recent content in troubleshooting on JustinFX.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Mon, 05 Dec 2011 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://justinfx.com/tags/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 05 Dec 2011 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Apple Macbooks and Unexplainable LCD Screen Flicker</title>
-      <link>http://justinfx.com/2011/12/05/apple-macbooks-and-unexplainable-lcd-flicker/</link>
+      <link>http://localhost:1313/2011/12/05/apple-macbooks-and-unexplainable-lcd-flicker/</link>
       <pubDate>Mon, 05 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://justinfx.com/2011/12/05/apple-macbooks-and-unexplainable-lcd-flicker/</guid>
-      <description>I had just received my brand new MacBook Pro a few days ago. Amazing machine. Probably the best laptop I have ever laid my hands upon. It was the early Feb 2011 model so I got a crazy good deal. But something caught my eye that I just had to investigate&amp;#8230;
-I&amp;#8217;m a bit obsessive when it comes to small issues that I can&amp;#8217;t resolve, and this is just still bothering me.</description>
+      <guid>http://localhost:1313/2011/12/05/apple-macbooks-and-unexplainable-lcd-flicker/</guid>
+      <description>I had just received my brand new MacBook Pro a few days ago. Amazing machine. Probably the best laptop I have ever laid my hands upon. It was the early Feb 2011 model so I got a crazy good deal. But something caught my eye that I just had to investigate…
+I’m a bit obsessive when it comes to small issues that I can’t resolve, and this is just still bothering me.</description>
     </item>
     
   </channel>

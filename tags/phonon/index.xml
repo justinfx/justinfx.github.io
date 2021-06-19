@@ -1,25 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Phonon on JustinFX.com</title>
-    <link>http://justinfx.com/tags/phonon/</link>
-    <description>Recent content in Phonon on JustinFX.com</description>
+    <title>phonon on JustinFX.com</title>
+    <link>http://localhost:1313/tags/phonon/</link>
+    <description>Recent content in phonon on JustinFX.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Fri, 19 Mar 2010 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://justinfx.com/tags/phonon/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 19 Mar 2010 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/phonon/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PyQt4: phonon… and on… and on</title>
-      <link>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</link>
+      <link>http://localhost:1313/2010/03/18/pyqt4-phonon-and-on-and-on/</link>
       <pubDate>Fri, 19 Mar 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</guid>
-      <description>&amp;#8220;App&amp;#8217;ing up&amp;#8221; PyQt&amp;#8230; ugh.
-One of biggest problems with PyQt is distributing it in a stand-alone package. Even worse&amp;#8230; wanting to make your Qt plugins still function (Phonon, jpeg, etc). At work I constantly had this battle, along with my co-worker Tory. She actually has a long-standing issue with this, and had to resort to workarounds or half fixes. Here is Tory&amp;#8217;s original post regarding the issue .
+      <guid>http://localhost:1313/2010/03/18/pyqt4-phonon-and-on-and-on/</guid>
+      <description>“App’ing up” PyQt… ugh.
+One of biggest problems with PyQt is distributing it in a stand-alone package. Even worse… wanting to make your Qt plugins still function (Phonon, jpeg, etc). At work I constantly had this battle, along with my co-worker Tory. She actually has a long-standing issue with this, and had to resort to workarounds or half fixes. Here is Tory’s original post regarding the issue .
 I would see an error similar to this when trying to package up and run an app using the Phonon module.</description>
     </item>
     

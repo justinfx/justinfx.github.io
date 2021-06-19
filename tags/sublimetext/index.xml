@@ -1,24 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sublimetext on JustinFX.com</title>
-    <link>http://justinfx.com/tags/sublimetext/</link>
-    <description>Recent content in Sublimetext on JustinFX.com</description>
+    <title>sublimetext on JustinFX.com</title>
+    <link>http://localhost:1313/tags/sublimetext/</link>
+    <description>Recent content in sublimetext on JustinFX.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Sun, 17 Apr 2016 15:22:33 +1200</lastBuildDate>
-    
-	<atom:link href="http://justinfx.com/tags/sublimetext/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 17 Apr 2016 15:22:33 +1200</lastBuildDate><atom:link href="http://localhost:1313/tags/sublimetext/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SublimeText Editor and Clang (C&#43;&#43;)</title>
-      <link>http://justinfx.com/2016/04/17/sublimetext-editor-and-clang/</link>
+      <link>http://localhost:1313/2016/04/17/sublimetext-editor-and-clang/</link>
       <pubDate>Sun, 17 Apr 2016 15:22:33 +1200</pubDate>
       
-      <guid>http://justinfx.com/2016/04/17/sublimetext-editor-and-clang/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/2016/04/17/sublimetext-editor-and-clang/</guid>
+      <description></description>
     </item>
     
   </channel>

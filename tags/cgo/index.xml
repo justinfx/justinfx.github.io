@@ -1,26 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cgo on JustinFX.com</title>
-    <link>http://justinfx.com/tags/cgo/</link>
-    <description>Recent content in Cgo on JustinFX.com</description>
+    <title>cgo on JustinFX.com</title>
+    <link>http://localhost:1313/tags/cgo/</link>
+    <description>Recent content in cgo on JustinFX.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Sat, 14 May 2016 03:53:48 +0000</lastBuildDate>
-    
-	<atom:link href="http://justinfx.com/tags/cgo/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 14 May 2016 03:53:48 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/cgo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>C&#43;&#43; Bindings For A Go Library</title>
-      <link>http://justinfx.com/2016/05/14/cpp-bindings-for-go/</link>
+      <link>http://localhost:1313/2016/05/14/cpp-bindings-for-go/</link>
       <pubDate>Sat, 14 May 2016 03:53:48 +0000</pubDate>
       
-      <guid>http://justinfx.com/2016/05/14/cpp-bindings-for-go/</guid>
-      <description>&lt;p&gt;This is an overview describing my approach to creating C++ bindings around a Go library.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/2016/05/14/cpp-bindings-for-go/</guid>
+      <description>&lt;p&gt;This is an overview describing my approach to creating C++ bindings around a Go library.&lt;/p&gt;</description>
     </item>
     
   </channel>

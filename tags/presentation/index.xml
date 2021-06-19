@@ -1,28 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Presentation on JustinFX.com</title>
-    <link>http://justinfx.com/tags/presentation/</link>
-    <description>Recent content in Presentation on JustinFX.com</description>
+    <title>presentation on JustinFX.com</title>
+    <link>http://localhost:1313/tags/presentation/</link>
+    <description>Recent content in presentation on JustinFX.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Thu, 05 Jul 2018 14:19:25 +1200</lastBuildDate>
-    
-	<atom:link href="http://justinfx.com/tags/presentation/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 05 Jul 2018 14:19:25 +1200</lastBuildDate><atom:link href="http://localhost:1313/tags/presentation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Siggraph 2017 - Large Scale VFX Pipelines</title>
-      <link>http://justinfx.com/2018/07/05/siggraph-2017---large-scale-vfx-pipelines/</link>
+      <link>http://localhost:1313/2018/07/05/siggraph-2017-large-scale-vfx-pipelines/</link>
       <pubDate>Thu, 05 Jul 2018 14:19:25 +1200</pubDate>
       
-      <guid>http://justinfx.com/2018/07/05/siggraph-2017---large-scale-vfx-pipelines/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://justinfx.com/uploads/2018/07/05/s2017-logo.png&#34; style=&#34;width:360px;&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;At the SIGGRAPH 2017 Convention, in Los Angeles, I had represented Weta Digital and presented a 20 minute talk under the Pipe Dreams category:&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/2018/07/05/siggraph-2017-large-scale-vfx-pipelines/</guid>
+      <description>&lt;img src=&#34;http://localhost:1313/uploads/2018/07/05/s2017-logo.png&#34; style=&#34;width:360px;&#34;&gt;
+&lt;p&gt;At the SIGGRAPH 2017 Convention, in Los Angeles, I had represented Weta Digital and presented a 20 minute talk under the Pipe Dreams category:&lt;/p&gt;</description>
     </item>
     
   </channel>

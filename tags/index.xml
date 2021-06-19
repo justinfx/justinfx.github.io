@@ -1,482 +1,478 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on JustinFX.com</title>
-    <link>http://justinfx.com/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on JustinFX.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Thu, 10 Nov 2011 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://justinfx.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Thu, 05 Jul 2018 14:19:25 +1200</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>presentation</title>
+      <link>http://localhost:1313/tags/presentation/</link>
+      <pubDate>Thu, 05 Jul 2018 14:19:25 +1200</pubDate>
+      
+      <guid>http://localhost:1313/tags/presentation/</guid>
+      <description></description>
+    </item>
     
     <item>
-      <title>2012</title>
-      <link>http://justinfx.com/tags/2012/</link>
-      <pubDate>Thu, 10 Nov 2011 00:00:00 +0000</pubDate>
+      <title>siggraph</title>
+      <link>http://localhost:1313/tags/siggraph/</link>
+      <pubDate>Thu, 05 Jul 2018 14:19:25 +1200</pubDate>
       
-      <guid>http://justinfx.com/tags/2012/</guid>
+      <guid>http://localhost:1313/tags/siggraph/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vfx</title>
+      <link>http://localhost:1313/tags/vfx/</link>
+      <pubDate>Thu, 05 Jul 2018 14:19:25 +1200</pubDate>
+      
+      <guid>http://localhost:1313/tags/vfx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>maya</title>
+      <link>http://localhost:1313/tags/maya/</link>
+      <pubDate>Wed, 22 Mar 2017 22:39:43 +1300</pubDate>
+      
+      <guid>http://localhost:1313/tags/maya/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pyqt4</title>
+      <link>http://localhost:1313/tags/pyqt4/</link>
+      <pubDate>Wed, 22 Mar 2017 22:39:43 +1300</pubDate>
+      
+      <guid>http://localhost:1313/tags/pyqt4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Wed, 22 Mar 2017 22:39:43 +1300</pubDate>
+      
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>training</title>
+      <link>http://localhost:1313/tags/training/</link>
+      <pubDate>Wed, 22 Mar 2017 22:39:43 +1300</pubDate>
+      
+      <guid>http://localhost:1313/tags/training/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>http://localhost:1313/tags/tutorial/</link>
+      <pubDate>Wed, 22 Mar 2017 22:39:43 +1300</pubDate>
+      
+      <guid>http://localhost:1313/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bindings</title>
+      <link>http://localhost:1313/tags/bindings/</link>
+      <pubDate>Sat, 14 May 2016 03:53:48 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/bindings/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c&#43;&#43;</title>
+      <link>http://localhost:1313/tags/c&#43;&#43;/</link>
+      <pubDate>Sat, 14 May 2016 03:53:48 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cgo</title>
+      <link>http://localhost:1313/tags/cgo/</link>
+      <pubDate>Sat, 14 May 2016 03:53:48 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/cgo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>http://localhost:1313/tags/go/</link>
+      <pubDate>Sat, 14 May 2016 03:53:48 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>http://localhost:1313/tags/golang/</link>
+      <pubDate>Sat, 14 May 2016 03:53:48 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sublimetext</title>
+      <link>http://localhost:1313/tags/sublimetext/</link>
+      <pubDate>Sun, 17 Apr 2016 15:22:33 +1200</pubDate>
+      
+      <guid>http://localhost:1313/tags/sublimetext/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>benchmark</title>
+      <link>http://localhost:1313/tags/benchmark/</link>
+      <pubDate>Sun, 07 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/benchmark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pointers</title>
+      <link>http://localhost:1313/tags/pointers/</link>
+      <pubDate>Sun, 07 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/pointers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>qt</title>
+      <link>http://localhost:1313/tags/qt/</link>
+      <pubDate>Sun, 07 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/qt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>southpark</title>
+      <link>http://localhost:1313/tags/southpark/</link>
+      <pubDate>Wed, 19 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/southpark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cpickle serialization</title>
+      <link>http://localhost:1313/tags/cpickle-serialization/</link>
+      <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/cpickle-serialization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>json</title>
+      <link>http://localhost:1313/tags/json/</link>
+      <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/json/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pickle</title>
+      <link>http://localhost:1313/tags/pickle/</link>
+      <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/pickle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>speed test</title>
+      <link>http://localhost:1313/tags/speed-test/</link>
+      <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/speed-test/</guid>
       <description></description>
     </item>
     
     <item>
       <title>3d</title>
-      <link>http://justinfx.com/tags/3d/</link>
+      <link>http://localhost:1313/tags/3d/</link>
       <pubDate>Thu, 21 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://justinfx.com/tags/3d/</guid>
+      <guid>http://localhost:1313/tags/3d/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Api</title>
-      <link>http://justinfx.com/tags/api/</link>
+      <title>kinect</title>
+      <link>http://localhost:1313/tags/kinect/</link>
+      <pubDate>Thu, 21 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/kinect/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>osx</title>
+      <link>http://localhost:1313/tags/osx/</link>
+      <pubDate>Thu, 21 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/osx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>code</title>
+      <link>http://localhost:1313/tags/code/</link>
+      <pubDate>Sat, 14 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>question</title>
+      <link>http://localhost:1313/tags/question/</link>
+      <pubDate>Sat, 14 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/question/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stackoverflow</title>
+      <link>http://localhost:1313/tags/stackoverflow/</link>
+      <pubDate>Sat, 14 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/stackoverflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mac</title>
+      <link>http://localhost:1313/tags/mac/</link>
+      <pubDate>Mon, 05 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>macbook</title>
+      <link>http://localhost:1313/tags/macbook/</link>
+      <pubDate>Mon, 05 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/macbook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>troubleshooting</title>
+      <link>http://localhost:1313/tags/troubleshooting/</link>
+      <pubDate>Mon, 05 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/troubleshooting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>api</title>
+      <link>http://localhost:1313/tags/api/</link>
       <pubDate>Mon, 21 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://justinfx.com/tags/api/</guid>
+      <guid>http://localhost:1313/tags/api/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Atomsplitter</title>
-      <link>http://justinfx.com/tags/atomsplitter/</link>
-      <pubDate>Fri, 08 Oct 2010 00:00:00 +0000</pubDate>
+      <title>pyqt</title>
+      <link>http://localhost:1313/tags/pyqt/</link>
+      <pubDate>Mon, 21 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://justinfx.com/tags/atomsplitter/</guid>
+      <guid>http://localhost:1313/tags/pyqt/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Benchmark</title>
-      <link>http://justinfx.com/tags/benchmark/</link>
-      <pubDate>Sun, 07 Jun 2015 00:00:00 +0000</pubDate>
+      <title>sip</title>
+      <link>http://localhost:1313/tags/sip/</link>
+      <pubDate>Mon, 21 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://justinfx.com/tags/benchmark/</guid>
+      <guid>http://localhost:1313/tags/sip/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Bindings</title>
-      <link>http://justinfx.com/tags/bindings/</link>
-      <pubDate>Sat, 14 May 2016 03:53:48 +0000</pubDate>
+      <title>UI</title>
+      <link>http://localhost:1313/tags/ui/</link>
+      <pubDate>Mon, 21 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://justinfx.com/tags/bindings/</guid>
+      <guid>http://localhost:1313/tags/ui/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>C&#43;&#43;</title>
-      <link>http://justinfx.com/tags/c&#43;&#43;/</link>
-      <pubDate>Sat, 14 May 2016 03:53:48 +0000</pubDate>
+      <title>2012</title>
+      <link>http://localhost:1313/tags/2012/</link>
+      <pubDate>Thu, 10 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://justinfx.com/tags/c&#43;&#43;/</guid>
+      <guid>http://localhost:1313/tags/2012/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Cgo</title>
-      <link>http://justinfx.com/tags/cgo/</link>
-      <pubDate>Sat, 14 May 2016 03:53:48 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/cgo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Chan</title>
-      <link>http://justinfx.com/tags/chan/</link>
-      <pubDate>Tue, 31 Aug 2010 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/chan/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cmivfx</title>
-      <link>http://justinfx.com/tags/cmivfx/</link>
+      <title>cmivfx</title>
+      <link>http://localhost:1313/tags/cmivfx/</link>
       <pubDate>Sat, 08 Oct 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://justinfx.com/tags/cmivfx/</guid>
+      <guid>http://localhost:1313/tags/cmivfx/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Code</title>
-      <link>http://justinfx.com/tags/code/</link>
-      <pubDate>Sat, 14 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/code/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cpickle Serialization</title>
-      <link>http://justinfx.com/tags/cpickle-serialization/</link>
-      <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/cpickle-serialization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Curves</title>
-      <link>http://justinfx.com/tags/curves/</link>
-      <pubDate>Mon, 09 Aug 2010 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/curves/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Failure</title>
-      <link>http://justinfx.com/tags/failure/</link>
-      <pubDate>Tue, 12 Jan 2010 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/failure/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Film Jam</title>
-      <link>http://justinfx.com/tags/film-jam/</link>
-      <pubDate>Thu, 05 Aug 2010 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/film-jam/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Flash</title>
-      <link>http://justinfx.com/tags/flash/</link>
-      <pubDate>Fri, 15 Jan 2010 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/flash/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>http://justinfx.com/tags/go/</link>
-      <pubDate>Sat, 14 May 2016 03:53:48 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Golang</title>
-      <link>http://justinfx.com/tags/golang/</link>
-      <pubDate>Sat, 14 May 2016 03:53:48 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Graph</title>
-      <link>http://justinfx.com/tags/graph/</link>
-      <pubDate>Fri, 15 Jan 2010 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/graph/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Json</title>
-      <link>http://justinfx.com/tags/json/</link>
-      <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/json/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kinect</title>
-      <link>http://justinfx.com/tags/kinect/</link>
-      <pubDate>Thu, 21 Jun 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/kinect/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mac</title>
-      <link>http://justinfx.com/tags/mac/</link>
-      <pubDate>Mon, 05 Dec 2011 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/mac/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Macbook</title>
-      <link>http://justinfx.com/tags/macbook/</link>
-      <pubDate>Mon, 05 Dec 2011 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/macbook/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Maya</title>
-      <link>http://justinfx.com/tags/maya/</link>
-      <pubDate>Wed, 22 Mar 2017 22:39:43 +1300</pubDate>
-      
-      <guid>http://justinfx.com/tags/maya/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Nuke</title>
-      <link>http://justinfx.com/tags/nuke/</link>
-      <pubDate>Tue, 31 Aug 2010 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/nuke/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Osx</title>
-      <link>http://justinfx.com/tags/osx/</link>
-      <pubDate>Thu, 21 Jun 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/osx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Phonon</title>
-      <link>http://justinfx.com/tags/phonon/</link>
-      <pubDate>Fri, 19 Mar 2010 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/phonon/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pickle</title>
-      <link>http://justinfx.com/tags/pickle/</link>
-      <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/pickle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Plugin</title>
-      <link>http://justinfx.com/tags/plugin/</link>
-      <pubDate>Fri, 19 Mar 2010 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/plugin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Podcast</title>
-      <link>http://justinfx.com/tags/podcast/</link>
-      <pubDate>Thu, 05 Aug 2010 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/podcast/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pointers</title>
-      <link>http://justinfx.com/tags/pointers/</link>
-      <pubDate>Sun, 07 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/pointers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Presentation</title>
-      <link>http://justinfx.com/tags/presentation/</link>
-      <pubDate>Thu, 05 Jul 2018 14:19:25 +1200</pubDate>
-      
-      <guid>http://justinfx.com/tags/presentation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programming</title>
-      <link>http://justinfx.com/tags/programming/</link>
+      <title>programming</title>
+      <link>http://localhost:1313/tags/programming/</link>
       <pubDate>Thu, 28 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://justinfx.com/tags/programming/</guid>
+      <guid>http://localhost:1313/tags/programming/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Pyqt</title>
-      <link>http://justinfx.com/tags/pyqt/</link>
-      <pubDate>Mon, 21 Nov 2011 00:00:00 +0000</pubDate>
+      <title>atomsplitter</title>
+      <link>http://localhost:1313/tags/atomsplitter/</link>
+      <pubDate>Fri, 08 Oct 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://justinfx.com/tags/pyqt/</guid>
+      <guid>http://localhost:1313/tags/atomsplitter/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Pyqt4</title>
-      <link>http://justinfx.com/tags/pyqt4/</link>
-      <pubDate>Wed, 22 Mar 2017 22:39:43 +1300</pubDate>
+      <title>chan</title>
+      <link>http://localhost:1313/tags/chan/</link>
+      <pubDate>Tue, 31 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://justinfx.com/tags/pyqt4/</guid>
+      <guid>http://localhost:1313/tags/chan/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Python</title>
-      <link>http://justinfx.com/tags/python/</link>
-      <pubDate>Wed, 22 Mar 2017 22:39:43 +1300</pubDate>
+      <title>nuke</title>
+      <link>http://localhost:1313/tags/nuke/</link>
+      <pubDate>Tue, 31 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://justinfx.com/tags/python/</guid>
+      <guid>http://localhost:1313/tags/nuke/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Qt</title>
-      <link>http://justinfx.com/tags/qt/</link>
-      <pubDate>Sun, 07 Jun 2015 00:00:00 +0000</pubDate>
+      <title>curves</title>
+      <link>http://localhost:1313/tags/curves/</link>
+      <pubDate>Mon, 09 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://justinfx.com/tags/qt/</guid>
+      <guid>http://localhost:1313/tags/curves/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Question</title>
-      <link>http://justinfx.com/tags/question/</link>
-      <pubDate>Sat, 14 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/question/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Siggraph</title>
-      <link>http://justinfx.com/tags/siggraph/</link>
-      <pubDate>Thu, 05 Jul 2018 14:19:25 +1200</pubDate>
-      
-      <guid>http://justinfx.com/tags/siggraph/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sip</title>
-      <link>http://justinfx.com/tags/sip/</link>
-      <pubDate>Mon, 21 Nov 2011 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/sip/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Southpark</title>
-      <link>http://justinfx.com/tags/southpark/</link>
-      <pubDate>Wed, 19 Dec 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/southpark/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Speed Test</title>
-      <link>http://justinfx.com/tags/speed-test/</link>
-      <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/speed-test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Stackoverflow</title>
-      <link>http://justinfx.com/tags/stackoverflow/</link>
-      <pubDate>Sat, 14 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/stackoverflow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sublimetext</title>
-      <link>http://justinfx.com/tags/sublimetext/</link>
-      <pubDate>Sun, 17 Apr 2016 15:22:33 +1200</pubDate>
-      
-      <guid>http://justinfx.com/tags/sublimetext/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Swfchart</title>
-      <link>http://justinfx.com/tags/swfchart/</link>
-      <pubDate>Fri, 15 Jan 2010 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/swfchart/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Training</title>
-      <link>http://justinfx.com/tags/training/</link>
-      <pubDate>Wed, 22 Mar 2017 22:39:43 +1300</pubDate>
-      
-      <guid>http://justinfx.com/tags/training/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Troubleshooting</title>
-      <link>http://justinfx.com/tags/troubleshooting/</link>
-      <pubDate>Mon, 05 Dec 2011 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/troubleshooting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tutorial</title>
-      <link>http://justinfx.com/tags/tutorial/</link>
-      <pubDate>Wed, 22 Mar 2017 22:39:43 +1300</pubDate>
-      
-      <guid>http://justinfx.com/tags/tutorial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ui</title>
-      <link>http://justinfx.com/tags/ui/</link>
-      <pubDate>Mon, 21 Nov 2011 00:00:00 +0000</pubDate>
-      
-      <guid>http://justinfx.com/tags/ui/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vfx</title>
-      <link>http://justinfx.com/tags/vfx/</link>
-      <pubDate>Thu, 05 Jul 2018 14:19:25 +1200</pubDate>
-      
-      <guid>http://justinfx.com/tags/vfx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Visual Effects</title>
-      <link>http://justinfx.com/tags/visual-effects/</link>
+      <title>film jam</title>
+      <link>http://localhost:1313/tags/film-jam/</link>
       <pubDate>Thu, 05 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://justinfx.com/tags/visual-effects/</guid>
+      <guid>http://localhost:1313/tags/film-jam/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Xml/Swf Charts</title>
-      <link>http://justinfx.com/tags/xml/swf-charts/</link>
+      <title>podcast</title>
+      <link>http://localhost:1313/tags/podcast/</link>
+      <pubDate>Thu, 05 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/podcast/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>visual effects</title>
+      <link>http://localhost:1313/tags/visual-effects/</link>
+      <pubDate>Thu, 05 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/visual-effects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phonon</title>
+      <link>http://localhost:1313/tags/phonon/</link>
+      <pubDate>Fri, 19 Mar 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/phonon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plugin</title>
+      <link>http://localhost:1313/tags/plugin/</link>
+      <pubDate>Fri, 19 Mar 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/plugin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flash</title>
+      <link>http://localhost:1313/tags/flash/</link>
       <pubDate>Fri, 15 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://justinfx.com/tags/xml/swf-charts/</guid>
+      <guid>http://localhost:1313/tags/flash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>graph</title>
+      <link>http://localhost:1313/tags/graph/</link>
+      <pubDate>Fri, 15 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/graph/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>swfchart</title>
+      <link>http://localhost:1313/tags/swfchart/</link>
+      <pubDate>Fri, 15 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/swfchart/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>failure</title>
+      <link>http://localhost:1313/tags/failure/</link>
+      <pubDate>Tue, 12 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/failure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xml/swf charts</title>
+      <link>http://localhost:1313/tags/xml/swf-charts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/xml/swf-charts/</guid>
       <description></description>
     </item>
     

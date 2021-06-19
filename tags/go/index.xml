@@ -1,37 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Go on JustinFX.com</title>
-    <link>http://justinfx.com/tags/go/</link>
-    <description>Recent content in Go on JustinFX.com</description>
+    <title>go on JustinFX.com</title>
+    <link>http://localhost:1313/tags/go/</link>
+    <description>Recent content in go on JustinFX.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Sat, 14 May 2016 03:53:48 +0000</lastBuildDate>
-    
-	<atom:link href="http://justinfx.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 14 May 2016 03:53:48 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>C&#43;&#43; Bindings For A Go Library</title>
-      <link>http://justinfx.com/2016/05/14/cpp-bindings-for-go/</link>
+      <link>http://localhost:1313/2016/05/14/cpp-bindings-for-go/</link>
       <pubDate>Sat, 14 May 2016 03:53:48 +0000</pubDate>
       
-      <guid>http://justinfx.com/2016/05/14/cpp-bindings-for-go/</guid>
-      <description>&lt;p&gt;This is an overview describing my approach to creating C++ bindings around a Go library.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/2016/05/14/cpp-bindings-for-go/</guid>
+      <description>&lt;p&gt;This is an overview describing my approach to creating C++ bindings around a Go library.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Go language for python programmers</title>
-      <link>http://justinfx.com/2011/07/28/go-language-for-python-programmers/</link>
+      <link>http://localhost:1313/2011/07/28/go-language-for-python-programmers/</link>
       <pubDate>Thu, 28 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://justinfx.com/2011/07/28/go-language-for-python-programmers/</guid>
-      <description>&lt;h3 id=&#34;img-class-alignleft-src-https-blog-golang-org-gopher-gopher-png-alt-width-116-height-142-http-golang-org-preface&#34;&gt;&lt;a href=&#34;http://golang.org&#34;&gt;&lt;img class=&#34;alignleft&#34; src=&#34;https://blog.golang.org/gopher/gopher.png&#34; alt=&#34;&#34; width=&#34;116&#34; height=&#34;142&#34; /&gt;&lt;/a&gt; Preface&lt;/h3&gt;
-
-&lt;p&gt;I’ve been programming in python for over 5 years now, and I love the language a lot. I would look for any opportunity to accomplish my coding tasks using python, as opposed to learning new languages. PyQt4 for user interfaces, Django for web design, etc… And when python just isn’t an option, I have done my share of php, javascript, objective-c and so on.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/2011/07/28/go-language-for-python-programmers/</guid>
+      <description>&lt;h3 id=&#34;heading&#34;&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;img-classalignleft-srchttpsbloggolangorggophergopherpng-alt-width116-height142-httpgolangorg-preface&#34;&gt;&lt;a href=&#34;http://golang.org&#34;&gt;&lt;img class=&#34;alignleft&#34; src=&#34;https://blog.golang.org/gopher/gopher.png&#34; alt=&#34;&#34; width=&#34;116&#34; height=&#34;142&#34; /&gt;&lt;/a&gt; Preface&lt;/h3&gt;
+&lt;p&gt;I’ve been programming in python for over 5 years now, and I love the language a lot. I would look for any opportunity to accomplish my coding tasks using python, as opposed to learning new languages. PyQt4 for user interfaces, Django for web design, etc… And when python just isn’t an option, I have done my share of php, javascript, objective-c and so on.&lt;/p&gt;
+&lt;p&gt;Recently I started thinking that I should probably expand my programming knowledge a bit to make myself more marketable.&lt;/p&gt;</description>
     </item>
     
   </channel>

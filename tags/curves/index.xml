@@ -1,23 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Curves on JustinFX.com</title>
-    <link>http://justinfx.com/tags/curves/</link>
-    <description>Recent content in Curves on JustinFX.com</description>
+    <title>curves on JustinFX.com</title>
+    <link>http://localhost:1313/tags/curves/</link>
+    <description>Recent content in curves on JustinFX.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Mon, 09 Aug 2010 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://justinfx.com/tags/curves/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 09 Aug 2010 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/curves/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Maya, and self-intersecting nurbsCurves</title>
-      <link>http://justinfx.com/2010/08/09/maya-and-self-intersecting-nurbscurves/</link>
+      <link>http://localhost:1313/2010/08/09/maya-and-self-intersecting-nurbscurves/</link>
       <pubDate>Mon, 09 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://justinfx.com/2010/08/09/maya-and-self-intersecting-nurbscurves/</guid>
+      <guid>http://localhost:1313/2010/08/09/maya-and-self-intersecting-nurbscurves/</guid>
       <description>This is a story about my journey in solving a problem at work involving curves. The solution seemed really simple at first, but because of a stupid Maya issue, this turned into me having to rewrite the tool 3 times before I discovered a surprising solution.
 The Problem: Because we rely heavily on the process of importing Illustrator .ai files into Maya as nurbsCurves, we constantly have to deal with curves that intersect themselves.</description>
     </item>
