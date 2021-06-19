@@ -2,47 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>nuke on JustinFX.com</title>
-    <link>http://localhost:1313/tags/nuke/</link>
+    <link>http://justinfx.com/tags/nuke/</link>
     <description>Recent content in nuke on JustinFX.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Tue, 31 Aug 2010 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/nuke/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Aug 2010 00:00:00 +0000</lastBuildDate><atom:link href="http://justinfx.com/tags/nuke/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AtomSplitter v1.6 update</title>
-      <link>http://localhost:1313/2010/08/31/208/</link>
+      <link>http://justinfx.com/2010/08/31/208/</link>
       <pubDate>Tue, 31 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2010/08/31/208/</guid>
-      <description>&lt;img src=&#34;http://localhost:1313/uploads/2009/12/chan2fbx.jpg&#34;&gt;
+      <guid>http://justinfx.com/2010/08/31/208/</guid>
+      <description>&lt;img src=&#34;http://justinfx.com/uploads/2009/12/chan2fbx.jpg&#34;&gt;
 &lt;p&gt;AtomSplitter has been updated to v1.6, available through cmivfx.com&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>AtomSplitter v1.5 update</title>
-      <link>http://localhost:1313/2010/05/26/atomsplitter-v1-5-update/</link>
+      <link>http://justinfx.com/2010/05/26/atomsplitter-v1-5-update/</link>
       <pubDate>Wed, 26 May 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2010/05/26/atomsplitter-v1-5-update/</guid>
+      <guid>http://justinfx.com/2010/05/26/atomsplitter-v1-5-update/</guid>
       <description>&lt;p&gt;AtomSplitter has been updated to v1.5, available through cmivfx.com&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>AtomSplitter v1.2 update</title>
-      <link>http://localhost:1313/2010/05/11/atomsplitter-v1-2-update/</link>
+      <link>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</link>
       <pubDate>Tue, 11 May 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2010/05/11/atomsplitter-v1-2-update/</guid>
+      <guid>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</guid>
       <description>&lt;p&gt;AtomSplitter (chanToFbx) has been updated to v1.2, available through cmivfx.com&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>chanToFbx tool released through cmiVFX</title>
-      <link>http://localhost:1313/2009/12/06/chantofbx-tool-released-through-cmivfx/</link>
+      <link>http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/</link>
       <pubDate>Mon, 07 Dec 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2009/12/06/chantofbx-tool-released-through-cmivfx/</guid>
-      <description>&lt;p&gt;&lt;img class=&#34;alignnone size-full wp-image-39&#34; title=&#34;chan2fbx&#34; src=&#34;http://localhost:1313/uploads/2009/12/chan2fbx.jpg&#34; alt=&#34;chan2fbx&#34; width=&#34;201&#34; height=&#34;104&#34; /&gt;&lt;/p&gt;
+      <guid>http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/</guid>
+      <description>&lt;p&gt;&lt;img class=&#34;alignnone size-full wp-image-39&#34; title=&#34;chan2fbx&#34; src=&#34;http://justinfx.com/uploads/2009/12/chan2fbx.jpg&#34; alt=&#34;chan2fbx&#34; width=&#34;201&#34; height=&#34;104&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;I had received a mailing list email from cmiVFX, where Chris Maynard was challenging the community to write a tool that could convert a nuke camera .chan file to a functional FBX format. This was apparently meant to compliment the new 3d camera tracker in NukeX. So I decided to take on the challenge.&lt;/p&gt;</description>
     </item>
     

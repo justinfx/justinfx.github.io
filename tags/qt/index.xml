@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>qt on JustinFX.com</title>
-    <link>http://localhost:1313/tags/qt/</link>
+    <link>http://justinfx.com/tags/qt/</link>
     <description>Recent content in qt on JustinFX.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Sun, 07 Jun 2015 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/qt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Jun 2015 00:00:00 +0000</lastBuildDate><atom:link href="http://justinfx.com/tags/qt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Comparing performance of Qt smart pointer options</title>
-      <link>http://localhost:1313/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</link>
+      <link>http://justinfx.com/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</link>
       <pubDate>Sun, 07 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</guid>
+      <guid>http://justinfx.com/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</guid>
       <description>&lt;p&gt;There are a number of sources of information on the usage and behavioral differences of the many “smart pointer” options offered by Qt. But one thing I couldn’t find enough information on were the performance characteristics.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Installing PyQt4 for Maya 2012&#43; (osx)</title>
-      <link>http://localhost:1313/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
+      <link>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
       <pubDate>Thu, 10 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
+      <guid>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
       <description>This is a follow up post to my previous one on Installing PyQt4 for Maya 2011
 Recently while putting together my next video tutorial for Python for Maya, I came to a section where I wanted to demo PyQt4 in Maya2012. But I was concerned that viewers would have to go through the complicated steps of building PyQt4. I noticed that other people have made available precompiled PyQt installers for windows (here) but I could not find any for OSX or linux.</description>
     </item>
     
     <item>
       <title>PyQt4: phonon… and on… and on</title>
-      <link>http://localhost:1313/2010/03/18/pyqt4-phonon-and-on-and-on/</link>
+      <link>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</link>
       <pubDate>Fri, 19 Mar 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2010/03/18/pyqt4-phonon-and-on-and-on/</guid>
+      <guid>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</guid>
       <description>“App’ing up” PyQt… ugh.
 One of biggest problems with PyQt is distributing it in a stand-alone package. Even worse… wanting to make your Qt plugins still function (Phonon, jpeg, etc). At work I constantly had this battle, along with my co-worker Tory. She actually has a long-standing issue with this, and had to resort to workarounds or half fixes. Here is Tory’s original post regarding the issue .
 I would see an error similar to this when trying to package up and run an app using the Phonon module.</description>
@@ -40,10 +40,10 @@ I would see an error similar to this when trying to package up and run an app us
     
     <item>
       <title>SouthPark: A crazy little interface. The TaskMonster.</title>
-      <link>http://localhost:1313/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</link>
+      <link>http://justinfx.com/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</link>
       <pubDate>Tue, 16 Mar 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</guid>
+      <guid>http://justinfx.com/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</guid>
       <description>I get to do a lot of interesting applications at SouthPark. This one in particular was the most challenging use of PyQt that I have experienced to date.
 The backstory….
 The art department wanted a tool to help them track assigned tasks, the progress, and to share media and notes associated with the tasks. Furthermore, they wanted to be able to skin the interface with custom graphics to make it their own.</description>
@@ -51,10 +51,10 @@ The art department wanted a tool to help them track assigned tasks, the progress
     
     <item>
       <title>PyQt: Overloading/Ignoring events on widgets</title>
-      <link>http://localhost:1313/2010/03/10/pyqt-ignoring-events-on-widgets/</link>
+      <link>http://justinfx.com/2010/03/10/pyqt-ignoring-events-on-widgets/</link>
       <pubDate>Wed, 10 Mar 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2010/03/10/pyqt-ignoring-events-on-widgets/</guid>
+      <guid>http://justinfx.com/2010/03/10/pyqt-ignoring-events-on-widgets/</guid>
       <description>You know when you have all these widgets laid out in your class, and you are hooking up all the connections, and you say “Aw dammit I have to subclass QLabel now just so make it ignore blahEvent”? You end up with all these little widget subclasses, where all they are doing is ignoring an event.
 I noticed I was doing this a few times, in more than one of my classes, and finally got annoyed for the last time.</description>
     </item>

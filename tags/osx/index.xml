@@ -2,47 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>osx on JustinFX.com</title>
-    <link>http://localhost:1313/tags/osx/</link>
+    <link>http://justinfx.com/tags/osx/</link>
     <description>Recent content in osx on JustinFX.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Thu, 21 Jun 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/osx/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Jun 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://justinfx.com/tags/osx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting started with XBOX 360 Kinect on OSX</title>
-      <link>http://localhost:1313/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</link>
+      <link>http://justinfx.com/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</link>
       <pubDate>Thu, 21 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</guid>
+      <guid>http://justinfx.com/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</guid>
       <description>A recent project of mine involves research and development with an XBOX 360 Kinect Sensor. Being a python guy, I started searching for python bindings to some OSX-supported framework. When you just get started looking into this area it can be a little confusing. There are a number of layers to the software stack to enable one to accomplish anything meaningful. This is just a short and general blog post outlining the basics of what I have discovered thus far, to help anyone else that might also be getting started.</description>
     </item>
     
     <item>
       <title>Apple Macbooks and Unexplainable LCD Screen Flicker</title>
-      <link>http://localhost:1313/2011/12/05/apple-macbooks-and-unexplainable-lcd-flicker/</link>
+      <link>http://justinfx.com/2011/12/05/apple-macbooks-and-unexplainable-lcd-flicker/</link>
       <pubDate>Mon, 05 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2011/12/05/apple-macbooks-and-unexplainable-lcd-flicker/</guid>
+      <guid>http://justinfx.com/2011/12/05/apple-macbooks-and-unexplainable-lcd-flicker/</guid>
       <description>I had just received my brand new MacBook Pro a few days ago. Amazing machine. Probably the best laptop I have ever laid my hands upon. It was the early Feb 2011 model so I got a crazy good deal. But something caught my eye that I just had to investigate…
 I’m a bit obsessive when it comes to small issues that I can’t resolve, and this is just still bothering me.</description>
     </item>
     
     <item>
       <title>Installing PyQt4 for Maya 2012&#43; (osx)</title>
-      <link>http://localhost:1313/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
+      <link>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
       <pubDate>Thu, 10 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
+      <guid>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
       <description>This is a follow up post to my previous one on Installing PyQt4 for Maya 2011
 Recently while putting together my next video tutorial for Python for Maya, I came to a section where I wanted to demo PyQt4 in Maya2012. But I was concerned that viewers would have to go through the complicated steps of building PyQt4. I noticed that other people have made available precompiled PyQt installers for windows (here) but I could not find any for OSX or linux.</description>
     </item>
     
     <item>
       <title>Installing PyQt for maya 2011 (OSX)</title>
-      <link>http://localhost:1313/2011/01/07/installing-pyqt-for-maya-2011-osx/</link>
+      <link>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</link>
       <pubDate>Sat, 08 Jan 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2011/01/07/installing-pyqt-for-maya-2011-osx/</guid>
+      <guid>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</guid>
       <description>Update: I am now hosting a built package for Maya2011: MyQt4.7.4-maya2011-x64-osx-10.6.pkg And for Maya 2012+, see: Installing pyqt4 for maya2012
  Personally, when trying to run PyQt from within Maya 2009 / 2010 using the pumpThread method, I never had much luck. The best I ever got was the ability to bring up a dialog but not without locking up the UI, even though the pumpThread tool is meant to address that.</description>
     </item>

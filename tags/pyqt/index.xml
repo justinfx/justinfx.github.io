@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>pyqt on JustinFX.com</title>
-    <link>http://localhost:1313/tags/pyqt/</link>
+    <link>http://justinfx.com/tags/pyqt/</link>
     <description>Recent content in pyqt on JustinFX.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Mon, 21 Nov 2011 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/pyqt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Nov 2011 00:00:00 +0000</lastBuildDate><atom:link href="http://justinfx.com/tags/pyqt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mixing PyQt4 widgets and Maya UI objects</title>
-      <link>http://localhost:1313/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</link>
+      <link>http://justinfx.com/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</link>
       <pubDate>Mon, 21 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</guid>
+      <guid>http://justinfx.com/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</guid>
       <description>&lt;p&gt;A question came up in the &lt;a href=&#34;http://groups.google.com/group/python_inside_maya&#34;&gt;Maya-Python mailing list&lt;/a&gt; that I thought was a really good topic, and should be reposted.&lt;/p&gt;
 &lt;p&gt;Someone asked how you can create maya UI objects and embed them within your main PyQt application. Specifically he wanted to create a modelPanel and embed it so that he would have a camera view within his own PyQt window.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Python for Maya Artists – Volume 2</title>
-      <link>http://localhost:1313/2011/11/15/python-for-maya-artists-volume-2/</link>
+      <link>http://justinfx.com/2011/11/15/python-for-maya-artists-volume-2/</link>
       <pubDate>Tue, 15 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2011/11/15/python-for-maya-artists-volume-2/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;&lt;img class=&#34;alignnone&#34; src=&#34;http://localhost:1313/uploads/2011/11/maya_python_vol2.jpg&#34; alt=&#34;&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+      <guid>http://justinfx.com/2011/11/15/python-for-maya-artists-volume-2/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;&lt;img class=&#34;alignnone&#34; src=&#34;http://justinfx.com/uploads/2011/11/maya_python_vol2.jpg&#34; alt=&#34;&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Second video in the python for maya series, just released through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;!&lt;/p&gt;
 &lt;h3 id=&#34;python-for-maya--volume-2httpscmivfxcomstore328-python-for-maya-vol-02&#34;&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;Python For Maya – Volume 2&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;If you watched the first video, you now have a good grasp on Python. Sweet. Let’s plow through some more involved concepts like python juggernauts!&lt;/em&gt;&lt;/p&gt;</description>
@@ -32,67 +32,67 @@
     
     <item>
       <title>Installing PyQt4 for Maya 2012&#43; (osx)</title>
-      <link>http://localhost:1313/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
+      <link>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
       <pubDate>Thu, 10 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
+      <guid>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
       <description>This is a follow up post to my previous one on Installing PyQt4 for Maya 2011
 Recently while putting together my next video tutorial for Python for Maya, I came to a section where I wanted to demo PyQt4 in Maya2012. But I was concerned that viewers would have to go through the complicated steps of building PyQt4. I noticed that other people have made available precompiled PyQt installers for windows (here) but I could not find any for OSX or linux.</description>
     </item>
     
     <item>
       <title>Installing PyQt for maya 2011 (OSX)</title>
-      <link>http://localhost:1313/2011/01/07/installing-pyqt-for-maya-2011-osx/</link>
+      <link>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</link>
       <pubDate>Sat, 08 Jan 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2011/01/07/installing-pyqt-for-maya-2011-osx/</guid>
+      <guid>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</guid>
       <description>Update: I am now hosting a built package for Maya2011: MyQt4.7.4-maya2011-x64-osx-10.6.pkg And for Maya 2012+, see: Installing pyqt4 for maya2012
  Personally, when trying to run PyQt from within Maya 2009 / 2010 using the pumpThread method, I never had much luck. The best I ever got was the ability to bring up a dialog but not without locking up the UI, even though the pumpThread tool is meant to address that.</description>
     </item>
     
     <item>
       <title>AtomSplitter source code released</title>
-      <link>http://localhost:1313/2010/10/08/atomsplitter-source-code-released/</link>
+      <link>http://justinfx.com/2010/10/08/atomsplitter-source-code-released/</link>
       <pubDate>Fri, 08 Oct 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2010/10/08/atomsplitter-source-code-released/</guid>
+      <guid>http://justinfx.com/2010/10/08/atomsplitter-source-code-released/</guid>
       <description>&lt;p&gt;We finally decided to release the source code for AtomSplitter, since we were getting some feedback that the application builds weren’t 100% working on every possible system.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>AtomSplitter v1.6 update</title>
-      <link>http://localhost:1313/2010/08/31/208/</link>
+      <link>http://justinfx.com/2010/08/31/208/</link>
       <pubDate>Tue, 31 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2010/08/31/208/</guid>
-      <description>&lt;img src=&#34;http://localhost:1313/uploads/2009/12/chan2fbx.jpg&#34;&gt;
+      <guid>http://justinfx.com/2010/08/31/208/</guid>
+      <description>&lt;img src=&#34;http://justinfx.com/uploads/2009/12/chan2fbx.jpg&#34;&gt;
 &lt;p&gt;AtomSplitter has been updated to v1.6, available through cmivfx.com&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>AtomSplitter v1.5 update</title>
-      <link>http://localhost:1313/2010/05/26/atomsplitter-v1-5-update/</link>
+      <link>http://justinfx.com/2010/05/26/atomsplitter-v1-5-update/</link>
       <pubDate>Wed, 26 May 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2010/05/26/atomsplitter-v1-5-update/</guid>
+      <guid>http://justinfx.com/2010/05/26/atomsplitter-v1-5-update/</guid>
       <description>&lt;p&gt;AtomSplitter has been updated to v1.5, available through cmivfx.com&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>AtomSplitter v1.2 update</title>
-      <link>http://localhost:1313/2010/05/11/atomsplitter-v1-2-update/</link>
+      <link>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</link>
       <pubDate>Tue, 11 May 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2010/05/11/atomsplitter-v1-2-update/</guid>
+      <guid>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</guid>
       <description>&lt;p&gt;AtomSplitter (chanToFbx) has been updated to v1.2, available through cmivfx.com&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>SouthPark: A crazy little interface. The TaskMonster.</title>
-      <link>http://localhost:1313/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</link>
+      <link>http://justinfx.com/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</link>
       <pubDate>Tue, 16 Mar 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</guid>
+      <guid>http://justinfx.com/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</guid>
       <description>I get to do a lot of interesting applications at SouthPark. This one in particular was the most challenging use of PyQt that I have experienced to date.
 The backstory….
 The art department wanted a tool to help them track assigned tasks, the progress, and to share media and notes associated with the tasks. Furthermore, they wanted to be able to skin the interface with custom graphics to make it their own.</description>
@@ -100,21 +100,21 @@ The art department wanted a tool to help them track assigned tasks, the progress
     
     <item>
       <title>PyQt: Overloading/Ignoring events on widgets</title>
-      <link>http://localhost:1313/2010/03/10/pyqt-ignoring-events-on-widgets/</link>
+      <link>http://justinfx.com/2010/03/10/pyqt-ignoring-events-on-widgets/</link>
       <pubDate>Wed, 10 Mar 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2010/03/10/pyqt-ignoring-events-on-widgets/</guid>
+      <guid>http://justinfx.com/2010/03/10/pyqt-ignoring-events-on-widgets/</guid>
       <description>You know when you have all these widgets laid out in your class, and you are hooking up all the connections, and you say “Aw dammit I have to subclass QLabel now just so make it ignore blahEvent”? You end up with all these little widget subclasses, where all they are doing is ignoring an event.
 I noticed I was doing this a few times, in more than one of my classes, and finally got annoyed for the last time.</description>
     </item>
     
     <item>
       <title>chanToFbx tool released through cmiVFX</title>
-      <link>http://localhost:1313/2009/12/06/chantofbx-tool-released-through-cmivfx/</link>
+      <link>http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/</link>
       <pubDate>Mon, 07 Dec 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2009/12/06/chantofbx-tool-released-through-cmivfx/</guid>
-      <description>&lt;p&gt;&lt;img class=&#34;alignnone size-full wp-image-39&#34; title=&#34;chan2fbx&#34; src=&#34;http://localhost:1313/uploads/2009/12/chan2fbx.jpg&#34; alt=&#34;chan2fbx&#34; width=&#34;201&#34; height=&#34;104&#34; /&gt;&lt;/p&gt;
+      <guid>http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/</guid>
+      <description>&lt;p&gt;&lt;img class=&#34;alignnone size-full wp-image-39&#34; title=&#34;chan2fbx&#34; src=&#34;http://justinfx.com/uploads/2009/12/chan2fbx.jpg&#34; alt=&#34;chan2fbx&#34; width=&#34;201&#34; height=&#34;104&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;I had received a mailing list email from cmiVFX, where Chris Maynard was challenging the community to write a tool that could convert a nuke camera .chan file to a functional FBX format. This was apparently meant to compliment the new 3d camera tracker in NukeX. So I decided to take on the challenge.&lt;/p&gt;</description>
     </item>
     

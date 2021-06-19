@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>question on JustinFX.com</title>
-    <link>http://localhost:1313/tags/question/</link>
+    <link>http://justinfx.com/tags/question/</link>
     <description>Recent content in question on JustinFX.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Sat, 14 Apr 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/question/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Apr 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://justinfx.com/tags/question/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Write My Code For Me</title>
-      <link>http://localhost:1313/2012/04/14/write-my-code-for-me/</link>
+      <link>http://justinfx.com/2012/04/14/write-my-code-for-me/</link>
       <pubDate>Sat, 14 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/04/14/write-my-code-for-me/</guid>
+      <guid>http://justinfx.com/2012/04/14/write-my-code-for-me/</guid>
       <description>Permalink – writemycode.net
 In the spirit of a very similar blog post, I decided to expand upon a specific area of that article…
 Consider a question like this:
