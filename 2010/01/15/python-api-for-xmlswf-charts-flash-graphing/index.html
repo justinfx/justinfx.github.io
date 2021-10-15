@@ -121,7 +121,7 @@ if (!doNotTrack) {
 <p>So, the thing is… I wanted to use Django for the site. I decided to write a python module that wraps around the API for SWF charts, so that the XML could easily be generated for me after just setting all my parameters. Thought I might post this here for any python fans wanting nice looking graphs in their site.</p>
 <p>Really, this doesn’t just apply to django. You could just call out from anything to python code that will generate your XML for you.</p>
 <p>Example:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">chart <span style="color:#666">=</span> SwfChart()
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">chart <span style="color:#666">=</span> SwfChart()
 
 <span style="color:#60a0b0;font-style:italic"># the data</span>
 chart<span style="color:#666">.</span>addRow( <span style="color:#4070a0">&#39;Person A&#39;</span>, <span style="color:#40a070">1</span>, <span style="color:#40a070">10</span>, <span style="color:#40a070">5.5</span> )
@@ -143,7 +143,7 @@ chart<span style="color:#666">.</span>setContextMenu(about<span style="color:#66
 <span style="color:#60a0b0;font-style:italic"># if you have the licensed version</span>
 chart<span style="color:#666">.</span>setLicense(<span style="color:#4070a0">&#39;license string&#39;</span>)</code></pre></div>
 <p>Now at this point, the object can be treated like a string to get the xml, or just call getXML() :</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007020">print</span> chart
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007020">print</span> chart
 
 <span style="color:#007020">print</span> chart<span style="color:#666">.</span>getXML()   <span style="color:#60a0b0;font-style:italic"># same thing</span>
 

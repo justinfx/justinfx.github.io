@@ -116,7 +116,7 @@ if (!doNotTrack) {
 
     
     <p>My code editor of choice has been <a href="https://www.sublimetext.com">SublimeText</a> for a while now. It is blazing fast for searching and doing matching, replacements, and refactoring. I also love that it is very lightweight, so that I can use it as my default shell <code>$EDITOR</code>, and also have an alias <code>st</code> which can easily open files and folders in the current or new Sublime window:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#60a0b0;font-style:italic"># Add directory to current sublime</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#60a0b0;font-style:italic"># Add directory to current sublime</span>
 $ st -a /path/to/src
 <span style="color:#60a0b0;font-style:italic"># Open a new sublime window, with the current directory</span>
 $ st -n .
@@ -146,14 +146,14 @@ $ st -n .
 <p>There aren&rsquo;t any plugin settings to adjust, but you will want to set up either general clang settings, or project-specific clang settings. General settings may be include paths related to finding system libraries, however in my case I only set up project specific settings.</p>
 <p><code>Project -&gt; Edit Project</code></p>
 <p>If you don&rsquo;t already have a <code>settings</code> key, create one, and then under that create a <code>cc_include_options</code> list of flags to pass to clang. Example:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4070a0">&#34;settings&#34;</span><span style="">:</span> {
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4070a0">&#34;settings&#34;</span><span style="">:</span> {
 	<span style="color:#062873;font-weight:bold">&#34;cc_include_options&#34;</span>: [
 		<span style="color:#4070a0">&#34;-I/path/to/some/library/include&#34;</span>
 	]
 }
 </code></pre></div><p>The setting is called &ldquo;cc_include_options&rdquo;, but it is a bit misleading. Really it seems to just be any compiler flags you want to pass to clang. I have put <code>-D</code> macro defines, as well as being able to disable warnings, etc, etc.</p>
 <p>Once you have your basic includes entered for your given project, you should review your key mappings. There is only one I cared about:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#062873;font-weight:bold">&#34;command&#34;</span>: <span style="color:#4070a0">&#34;clang_goto_def&#34;</span>, <span style="color:#062873;font-weight:bold">&#34;keys&#34;</span>: [<span style="color:#4070a0">&#34;super+.&#34;</span>, <span style="color:#4070a0">&#34;super+g&#34;</span>],
     <span style="color:#062873;font-weight:bold">&#34;context&#34;</span>: [{<span style="color:#062873;font-weight:bold">&#34;key&#34;</span>: <span style="color:#4070a0">&#34;selector&#34;</span>, <span style="color:#062873;font-weight:bold">&#34;operator&#34;</span>: <span style="color:#4070a0">&#34;equal&#34;</span>, <span style="color:#062873;font-weight:bold">&#34;operand&#34;</span>: <span style="color:#4070a0">&#34;source.c++&#34;</span>} ]
 }
@@ -163,7 +163,7 @@ $ st -n .
 <p>This is a pretty sweet and simple plugin that lets you switch between headers and source files. Before Sublime, I had been using Qt Creator for C++ Qt projects, and this functionality was built-in and mapped to the F4 key.</p>
 <p>Install <a href="https://packagecontrol.io/packages/Switch%20File%20Deluxe">Switch File Deluxe</a></p>
 <p>Once installed, all I had to do was map a key sequence:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{ 
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{ 
     <span style="color:#062873;font-weight:bold">&#34;command&#34;</span>: <span style="color:#4070a0">&#34;switch_file_deluxe&#34;</span>, <span style="color:#062873;font-weight:bold">&#34;keys&#34;</span>: [<span style="color:#4070a0">&#34;f4&#34;</span>], 
     <span style="color:#062873;font-weight:bold">&#34;args&#34;</span>: {
         <span style="color:#062873;font-weight:bold">&#34;extensions&#34;</span>: [
@@ -179,7 +179,7 @@ $ st -n .
 <p>First I installed uncrustify via homebrew:  <code>brew install uncrustify</code></p>
 <p>Then, install <a href="https://packagecontrol.io/packages/Uncrustify">Uncrustify</a></p>
 <p>If your uncrustify binary is in a non-standard location, you can set the user settings for the plugin with <code>uncrustify_executable</code>. For setting up projects to match configs, I actually used the <code>uncrustify_config_by_filter</code> setting to set up a list of patterns:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
 	<span style="color:#062873;font-weight:bold">&#34;uncrustify_filtering_rule&#34;</span>: <span style="color:#40a070">1</span>,
 	<span style="color:#062873;font-weight:bold">&#34;uncrustify_config_by_filter&#34;</span>: [
 		{<span style="color:#062873;font-weight:bold">&#34;/path/to/some/*/project&#34;</span>: <span style="color:#4070a0">&#34;/path/to/project/uncrustify.cfg&#34;</span>}
@@ -189,7 +189,7 @@ $ st -n .
 <span style="">It</span> <span style="">helps</span> <span style="">to</span> <span style="">store</span> <span style="">your</span> <span style="">uncrustify.cfg</span> <span style="">within</span> <span style="">your</span> <span style="">project</span> <span style="">repo.</span> <span style="">Also,</span> <span style="">there</span> <span style="">is</span> <span style="">a</span> <span style="">tool</span> <span style="">I</span> <span style="">used</span> <span style="">for</span> <span style="">visually</span> <span style="">editing</span> <span style="">the</span> <span style="">rules</span> <span style="">for</span> <span style="">setting</span> <span style="">up</span> <span style="">an</span> <span style="">uncrustify</span> <span style="">config:</span> [<span style="">universalindent</span>]<span style="">(http://universalindent.sourceforge.net/).</span>
 </code></pre></div><h2 id="build-system">Build System</h2>
 <p>On a per-project basis, you can set up your build commands. Going into <code>Project -&gt; Edit Project</code>, I added something like the following to work with my particular build system for the project:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#062873;font-weight:bold">&#34;build_systems&#34;</span>: [
     {
       <span style="color:#062873;font-weight:bold">&#34;file_regex&#34;</span>: <span style="color:#4070a0">&#34;(\\S*?):(\\d+):(\\d+): (error.*)&#34;</span>,

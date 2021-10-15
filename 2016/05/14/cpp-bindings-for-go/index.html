@@ -129,7 +129,7 @@ if (!doNotTrack) {
 </ul>
 <p>C libraries are more straight-forward to wrap, because Go can access them directly. C++, on the other hand, requires a &ldquo;shim&rdquo; layer written in C. This layer has to handle the calls between Go and the target C++ library. An example would be to treat a C++ class as an opaque pointer and provide C functions that accept the pointer and delegate to the C++ methods. Or to convert between vectors and arrays:</p>
 <p><em>ref:</em> <a href="https://github.com/justinfx/openimageigo/blob/master/cpp/oiio.h"><em>github.com/justinfx/openimageigo/cpp/oiio.h</em></a></p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#60a0b0;font-style:italic">// oiio.h
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#60a0b0;font-style:italic">// oiio.h
 </span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020">#ifdef __cplusplus
 </span><span style="color:#007020"></span><span style="color:#007020;font-weight:bold">extern</span> <span style="color:#4070a0">&#34;C&#34;</span> {
 <span style="color:#007020">#endif
@@ -156,8 +156,8 @@ if (!doNotTrack) {
 /path/to/some/file_foo.1-50x2,100-200x3@@@.tif
 </code></pre>
 <p><code>gofileseq</code> library is a port of a python equivalent, <a href="https://github.com/sqlboy/fileseq">fileseq</a>, which I help to maintain. If the parsing rules need to be updated in the Python library, they should also be updated to match in the Go library, to maintain compatibility.</p>
-<p>I had been asked more than once by colleagues if a C++ version of fileseq was available. It wasn&rsquo;t, and I also didn&rsquo;t want to have to maintain a 3rd standalone port that should follow the same behavior as the other two. But since the introduction of the <a href="https://golang.org/doc/go1.5#link">Go </a><code>[-buildmode](https://golang.org/doc/go1.5#link)</code> flag in 1.5, it has become possible to export functions from Go to C/C++</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#60a0b0;font-style:italic">// sum.go
+<p>I had been asked more than once by colleagues if a C++ version of fileseq was available. It wasn&rsquo;t, and I also didn&rsquo;t want to have to maintain a 3rd standalone port that should follow the same behavior as the other two. But since the introduction of the Go <a href="https://golang.org/doc/go1.5#link">-buildmode</a> flag in 1.5, it has become possible to export functions from Go to C/C++</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#60a0b0;font-style:italic">// sum.go
 </span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">package</span> main
 
 <span style="color:#007020;font-weight:bold">import</span> <span style="color:#4070a0">&#34;C&#34;</span>
@@ -170,11 +170,11 @@ if (!doNotTrack) {
 <span style="color:#007020;font-weight:bold">func</span> <span style="color:#06287e">main</span>() {
 
 }</code></pre></div>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ go build -buildmode<span style="color:#666">=</span>c-shared -o sum.so
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ go build -buildmode<span style="color:#666">=</span>c-shared -o sum.so
 $ ls
 sum.c  sum.go sum.h  sum.so
 </code></pre></div><p>Now we have a shared library and a header file, to use in our C app</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#60a0b0;font-style:italic">// sum.c
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#60a0b0;font-style:italic">// sum.c
 </span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020">#include</span> <span style="color:#007020">&lt;stdio.h&gt;</span><span style="color:#007020">
 </span><span style="color:#007020">#include</span> <span style="color:#007020">&#34;sum.h&#34;</span><span style="color:#007020">
 </span><span style="color:#007020"></span>
@@ -186,7 +186,7 @@ sum.c  sum.go sum.h  sum.so
     <span style="color:#007020;font-weight:bold">return</span> <span style="color:#40a070">0</span>;
 
 }</code></pre></div>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ gcc sum.c sum.so -o sum <span style="color:#666">&amp;&amp;</span> ./sum
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ gcc sum.c sum.so -o sum <span style="color:#666">&amp;&amp;</span> ./sum
 1+2<span style="color:#666">=</span><span style="color:#40a070">3</span>
 </code></pre></div><p>This looks pretty straight-forward, right? It would seem so until you encounter the need to export instances of your types from Go to C, and these types contain pointers to other types. You see, there are certain rules about what you can do when communicating via cgo. And these rules were <a href="https://golang.org/cmd/cgo/#hdr-Passing_pointers">made official as off Go 1.6</a>.</p>
 <p>Some of those rules are:</p>
@@ -194,10 +194,10 @@ sum.c  sum.go sum.h  sum.so
 <li>You can pass Go pointers to C, but C should not hang on to them beyond the scope of the call.</li>
 <li>You can not pass memory to C that contains pointers. That is, a struct which has pointer fields.</li>
 </ol>
-<p>These pose an issue if you want to be able to have your C++ library create instances of objects in Go and hang on to them longer than the Go function call. In the case of <code>gofileseq</code>, the main two objects are <code>[FileSequence](https://godoc.org/github.com/justinfx/gofileseq#FileSequence)</code> and <code>[FrameSet](https://godoc.org/github.com/justinfx/gofileseq#FrameSet)</code>. These are constructed from strings, perform parsing, and maintain private state. So a user would want to construct them and keep them around until they are done calling methods on them. But according to the cgo rules, I can&rsquo;t give a pointer to C++ for it to hang on to indefinitely, and I can&rsquo;t create a C struct in a shim to populate, because there are more internal pointers involved in a <code>FileSequence</code>. Basically I saw this as a more complex type than just a struct with simple data fields.</p>
+<p>These pose an issue if you want to be able to have your C++ library create instances of objects in Go and hang on to them longer than the Go function call. In the case of <code>gofileseq</code>, the main two objects are <a href="https://godoc.org/github.com/justinfx/gofileseq#FileSequence">FileSequence</a> and <a href="https://godoc.org/github.com/justinfx/gofileseq#FrameSet">FrameSet</a>. These are constructed from strings, perform parsing, and maintain private state. So a user would want to construct them and keep them around until they are done calling methods on them. But according to the cgo rules, I can&rsquo;t give a pointer to C++ for it to hang on to indefinitely, and I can&rsquo;t create a C struct in a shim to populate, because there are more internal pointers involved in a <code>FileSequence</code>. Basically I saw this as a more complex type than just a struct with simple data fields.</p>
 <p>How do I construct these instances for C++? I created package-private maps using generated <code>uint64</code> keys, and the instances as values. Actually, I wrap the instances up in a struct that also tracks reference counts. This allows C++ to manage the lifetime of the objects.</p>
 <p>The full implementation is located here: <a href="https://github.com/justinfx/gofileseq/tree/master/cpp">github.com/justinfx/gofileseq/cpp</a></p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#007020;font-weight:bold">type</span> FileSeqId <span style="color:#902000">uint64</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#007020;font-weight:bold">type</span> FileSeqId <span style="color:#902000">uint64</span>
 
 <span style="color:#007020;font-weight:bold">type</span> fileSeqRef <span style="color:#007020;font-weight:bold">struct</span> {
     <span style="color:#666">*</span>fileseq.FileSequence
@@ -223,7 +223,7 @@ sum.c  sum.go sum.h  sum.so
 </span><span style="color:#60a0b0;font-style:italic"></span>    <span style="color:#60a0b0;font-style:italic">// If refs == 0, delete from map
 </span><span style="color:#60a0b0;font-style:italic"></span>}</code></pre></div>
 <p>Now when C++ wants to create a <code>FileSequence</code>, they can call a <code>New</code> function which will create an instance, add it to the map, and return a uint64 id handle</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#60a0b0;font-style:italic">//export FileSequence_New
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#60a0b0;font-style:italic">//export FileSequence_New
 </span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">func</span> <span style="color:#06287e">FileSequence_New</span>(frange <span style="color:#666">*</span>C.char) (FileSeqId, Error) {
     fs, e <span style="color:#666">:=</span> fileseq.<span style="color:#06287e">NewFileSequence</span>(C.<span style="color:#06287e">GoString</span>(frange))
     <span style="color:#007020;font-weight:bold">if</span> e <span style="color:#666">!=</span> <span style="color:#007020;font-weight:bold">nil</span> {
@@ -247,7 +247,7 @@ sum.c  sum.go sum.h  sum.so
 }</code></pre></div>
 <p>You can see here that because this is C++ calling Go, we aren&rsquo;t able to free the C string from Go, as the string needs to outlive the Go call. We just make sure that C++ always frees <code>*C.char</code> when it is returned. To make sure I always clean up the <code>char*</code> in C++, I made a helper <code>StringProxy</code> class which wraps it and cleans it up in the destructor:</p>
 <p><em>ref:</em> <a href="https://github.com/justinfx/gofileseq/blob/master/cpp/private/fileseq_p.h#L16"><em>github.com/justinfx/gofileseq/cpp/private/fileseq_p.h</em></a></p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#007020;font-weight:bold">class</span> <span style="color:#0e84b5;font-weight:bold">StringProxy</span> {
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#007020;font-weight:bold">class</span> <span style="color:#0e84b5;font-weight:bold">StringProxy</span> {
 <span style="color:#007020;font-weight:bold">public</span><span style="color:#666">:</span>
 StringProxy(<span style="color:#902000">char</span><span style="color:#666">*</span> managed) <span style="color:#666">:</span> m_data(managed), m_str() {
     <span style="color:#007020;font-weight:bold">if</span> (managed <span style="color:#666">!=</span> <span style="color:#007020">NULL</span>) {
@@ -265,7 +265,7 @@ StringProxy(<span style="color:#902000">char</span><span style="color:#666">*</s
 </span><span style="color:#60a0b0;font-style:italic"></span>
 };</code></pre></div>
 <p>This all ended up working fine! I created some benchmarks to compare fileseq between Python, C++, and Go. The test involved looping 100k times, creating a FileSequence, and calling 4 methods on it.</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#007020;font-weight:bold">const</span> <span style="color:#902000">int</span> n <span style="color:#666">=</span> <span style="color:#40a070">100000</span>;
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#007020;font-weight:bold">const</span> <span style="color:#902000">int</span> n <span style="color:#666">=</span> <span style="color:#40a070">100000</span>;
 
 <span style="color:#007020;font-weight:bold">for</span> (<span style="color:#902000">int</span> i<span style="color:#666">=</span><span style="color:#40a070">0</span>; i <span style="color:#666">&lt;</span> n; <span style="color:#666">++</span>i) {
     fileseq<span style="color:#666">::</span>FileSequence fs(<span style="color:#4070a0">&#34;/path/to/file_name.1-100x2#.ext&#34;</span>);
@@ -281,7 +281,7 @@ StringProxy(<span style="color:#902000">char</span><span style="color:#666">*</s
 <p>There is a bit of overhead in the C++ lib from the fact that they are bindings on top of a Go layer, but I think the win for me is that it is still an acceptable level of performance and I don&rsquo;t have to maintain a 3rd standalone port of fileseq!</p>
 <p>It bothered me a little that I did have to rely on a mutex-guarded static map, so I <a href="https://groups.google.com/d/topic/golang-nuts/kLRFdycy0yc/discussion">asked on go-nuts about an alternative approach</a>. Ian Lance Taylor confirmed that the guarded map approach, with opaque ids as keys, was a completely viable approach to solving this problem. But that in some circumstance it can also be possible to malloc C memory to back Go objects, in which case they are not tracked by Go&rsquo;s GC.</p>
 <p>i.e., something like this:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#002070;font-weight:bold">fs</span> :<span style="color:#666">=</span> (<span style="color:#666">*</span>FileSequence)unsafe.Pointer(
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#002070;font-weight:bold">fs</span> :<span style="color:#666">=</span> (<span style="color:#666">*</span>FileSequence)unsafe.Pointer(
 C.malloc(unsafe.Sizeof(FileSequence{})))</code></pre></div>
 <p>I tried to apply this approach, but it became really tedious and confusing to figure out how to malloc all of the internal data nested in the types. For instance, <code>FrameSet</code> has methods that create more data along the way. And I had no idea how to cleanly get it to keep malloc&rsquo;ing memory so the entire structure continues to be 100% managed by C++. So I gave up on trying this route, although I bet it would work for less nested structs.</p>
 <p>If anyone has any suggestions on another way to improve the process of exporting instances of Go objects to C++, I would definitely welcome feedback! And for anyone wanting to make their Go libraries available to C++, I hope this overview has been useful!</p>

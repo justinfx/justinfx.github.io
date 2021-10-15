@@ -117,14 +117,14 @@ if (!doNotTrack) {
     
     <p>You know when you have all these widgets laid out in your class, and you are hooking up all the connections, and you say “Aw dammit I have to subclass QLabel now just so make it ignore blahEvent”? You end up with all these little widget subclasses, where all they are doing is ignoring an event.</p>
 <p>I noticed I was doing this a few times, in more than one of my classes, and finally got annoyed for the last time. I figured there had to be a simple way of just overloading the method on the normal object when I create an instance. Fortunately python considers everything objects and pretty much anything can be changed. So I did this:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">myLabel <span style="color:#666">=</span> QLabel()
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">myLabel <span style="color:#666">=</span> QLabel()
 myLabel<span style="color:#666">.</span>mousePressEvent <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">lambda</span> event: event<span style="color:#666">.</span>ignore()</code></pre></div>
 <p>Magic.</p>
 <p>I have also had to make clickable widgets, such as QLabel:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">myLabel <span style="color:#666">=</span> QLabel()
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">myLabel <span style="color:#666">=</span> QLabel()
 myLabel<span style="color:#666">.</span>mousePressEvent <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">lambda</span> event: myLabel<span style="color:#666">.</span>emit(SIGNAL(<span style="color:#4070a0">&#34;clicked&#34;</span>))</code></pre></div>
 <p>Or if you had to do more than just a single statement:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">myLabel <span style="color:#666">=</span> QLabel()
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">myLabel <span style="color:#666">=</span> QLabel()
 <span style="color:#007020;font-weight:bold">def</span> <span style="color:#06287e">clickedEvent</span>(event):
 myLabel<span style="color:#666">.</span>emit(SIGNAL(<span style="color:#4070a0">&#34;clicked&#34;</span>))
 <span style="color:#60a0b0;font-style:italic"># do other stuff</span>

@@ -156,7 +156,7 @@ brew install boost</pre>
 <h5 id="suggestion-virtualenv-environment"><strong>Suggestion: virtualenv Environment</strong></h5>
 <p>This is not a requirement. But I recommend using virtualenv to set up an environment that specifically uses python2.7 so that you don’t have to fight with mixed dependencies and versions.</p>
 <p>Create a virtualenv called “kinect”</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install virtualenv
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install virtualenv
 virtualenv --no-site-packages -p python2.7 kinect
 <span style="color:#007020">cd</span> kinect
 <span style="color:#007020">source</span> bin/activate</code></pre></div>
@@ -164,11 +164,11 @@ virtualenv --no-site-packages -p python2.7 kinect
 <p>There is a special patched version of the libusb library, in the form of a homebrew formula.</p>
 <pre class="lang:default decode:true">git clone https://github.com/OpenKinect/libfreenect.git</pre>
 <p>Now copy platform/osx/homebrew/libusb-freenect.rb -&gt; /usr/local/Library/Formula/</p>
-<pre><code>brew install libusb-freenect
+<pre tabindex="0"><code>brew install libusb-freenect
 </code></pre><h5 id="install-sensorkinect-drivers"><strong>Install SensorKinect drivers</strong></h5>
-<pre><code>git clone https://github.com/avin2/SensorKinect.git
+<pre tabindex="0"><code>git clone https://github.com/avin2/SensorKinect.git
 </code></pre><p>Then uncompress Bin/SensorKinect093-Bin-MacOSX-v*tar.bz2</p>
-<pre><code>sudo ./install.sh
+<pre tabindex="0"><code>sudo ./install.sh
 </code></pre><h5 id="install-openni-framework"><strong>Install OpenNI framework</strong></h5>
 <ol>
 <li>Go here: <a href="http://www.openni.org/Downloads/OpenNIModules.aspx">http://www.openni.org/Downloads/OpenNIModules.aspx</a></li>
@@ -183,7 +183,7 @@ virtualenv --no-site-packages -p python2.7 kinect
 </ol>
 <h5 id="install-pyopenni"><strong>Install PyOpenNI</strong></h5>
 <p>Be aware that on OSX, PyOpenNI requires a framework build of python 2.7+ and that you must build it for x86_64 specifically. Also, I was having major problems with cmake properly finding the python includes location. I had to suggest a fix, so <a href="https://github.com/jmendeth/PyOpenNI/issues/16#issuecomment-6515678">please see here for the necessary corrections</a>. I have referenced a patched fork of the repository below.</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#007020">export</span> <span style="color:#bb60d5">CPPFLAGS</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;-arch x86_64&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#007020">export</span> <span style="color:#bb60d5">CPPFLAGS</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;-arch x86_64&#34;</span>
 git clone git://github.com/justinfx/PyOpenNI.git
 mkdir PyOpenNI-build
 <span style="color:#007020">cd</span> PyOpenNI-build

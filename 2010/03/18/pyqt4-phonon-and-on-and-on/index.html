@@ -118,19 +118,19 @@ if (!doNotTrack) {
     <p>“App’ing up” PyQt… ugh.</p>
 <p>One of biggest problems with PyQt is distributing it in a stand-alone package. Even worse… wanting to make your Qt plugins still function (Phonon, jpeg, etc). At work I constantly had this battle, along with my co-worker Tory. She actually has a long-standing issue with this, and had to resort to workarounds or half fixes. <a href="http://www.toryhoke.com/2009/03/03/pyqt4-i-hate-you/"><span style="color: #3366ff;">Here is Tory’s original post regarding the issue</span></a> .</p>
 <p>I would see an error similar to this when trying to package up and run an app using the Phonon module.</p>
-<pre><code>WARNING: bool Phonon::FactoryPrivate::createBackend() phonon backend plugin could not be loaded
+<pre tabindex="0"><code>WARNING: bool Phonon::FactoryPrivate::createBackend() phonon backend plugin could not be loaded
 </code></pre><p>Running <code>macdeployqt myAppName.app</code> does add things like the jpeg plugin, but never seemed to fix the Phonon issue. I finally decided to randomly look online for a solution, again, last week. What I found was a partial solution, followed by me trying one more thing and bam…it worked! Video playback from my .app standalone package.</p>
 <p>Here is what I did …</p>
 <p>(btw you might have to modify the location of the plugin, since I happen to be using OSX)</p>
 <ol>
 <li>In your setup.py file, which is used for py2app, py2exe, or similar… add this to the DATA_FILES list, so that it looks as such:</li>
 </ol>
-<pre><code><div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    DATA_FILES <span style="color:#666">=</span> [(<span style="color:#4070a0">&#39;phonon_backend&#39;</span>, [
+<pre><code><div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    <span style="color:#60a0b0;font-style:italic"># This will put the phonon backend plugin into the </span>
+    <span style="color:#60a0b0;font-style:italic"># RESOURCES folder in the app.</span>
+    DATA_FILES <span style="color:#666">=</span> [(<span style="color:#4070a0">&#39;phonon_backend&#39;</span>, [
       <span style="color:#4070a0">&#39;/Developer/Applications/Qt/plugins/phonon_backend/libphonon_qt7.dylib&#39;</span>
     ])]
     </code></pre></div>
-
-This will put the phonon backend plugin into the RESOURCES folder in the app.
 </code></pre>
 <ol start="2">
 <li>Package up your application via py2app / py2exe / etc.</li>
