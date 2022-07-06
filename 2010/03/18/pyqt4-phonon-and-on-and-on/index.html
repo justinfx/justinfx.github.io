@@ -84,7 +84,7 @@ if (!doNotTrack) {
       
         <li><a href="/about/">About </a></li>
       
-        <li><a href="https://stackoverflow.com/cv/justinisrael">Developer Resume </a></li>
+        <li><a href="https://www.linkedin.com/in/justinisrael/">Developer Resume </a></li>
       
         <li><a href="/vfx-resume/">VFX Resume </a></li>
       
@@ -103,7 +103,7 @@ if (!doNotTrack) {
       <a class="social-icon" href="https://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
 
     <p class="footnote"> <br/>
-    &copy; 2021 Justin Israel. All rights reserved.</p>
+    &copy; 2022 Justin Israel. All rights reserved.</p>
     
   </div>
 </div>
@@ -125,12 +125,11 @@ if (!doNotTrack) {
 <ol>
 <li>In your setup.py file, which is used for py2app, py2exe, or similar… add this to the DATA_FILES list, so that it looks as such:</li>
 </ol>
-<pre><code><div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    <span style="color:#60a0b0;font-style:italic"># This will put the phonon backend plugin into the </span>
-    <span style="color:#60a0b0;font-style:italic"># RESOURCES folder in the app.</span>
-    DATA_FILES <span style="color:#666">=</span> [(<span style="color:#4070a0">&#39;phonon_backend&#39;</span>, [
-      <span style="color:#4070a0">&#39;/Developer/Applications/Qt/plugins/phonon_backend/libphonon_qt7.dylib&#39;</span>
-    ])]
-    </code></pre></div>
+<pre><code><div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"># This will put the phonon backend plugin into the </span>
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"># RESOURCES folder in the app.</span>
+</span></span><span style="display:flex;"><span>DATA_FILES <span style="color:#666">=</span> [(<span style="color:#4070a0">&#39;phonon_backend&#39;</span>, [
+</span></span><span style="display:flex;"><span>  <span style="color:#4070a0">&#39;/Developer/Applications/Qt/plugins/phonon_backend/libphonon_qt7.dylib&#39;</span>
+</span></span><span style="display:flex;"><span>])]</span></span></code></pre></div>
 </code></pre>
 <ol start="2">
 <li>Package up your application via py2app / py2exe / etc.</li>

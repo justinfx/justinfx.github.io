@@ -14,7 +14,6 @@
       
       <guid>http://justinfx.com/2010/01/15/python-api-for-xmlswf-charts-flash-graphing/</guid>
       <description>I had a project where I was designing a statistics reporting site, to track production stats. I wanted to have really nice graphs that pulled from the database and were somewhat live and interactive. XML/SWF Charts is this awesome flash-based app that lets you embed graphs in your pages which receive their data from XML. There are tons of graph types and ways to customize the look.
-
 http://www.maani.us/xml_charts/index.php
 So, the thing is… I wanted to use Django for the site.</description>
     </item>

@@ -24,7 +24,7 @@
       <pubDate>Tue, 20 Feb 2018 13:48:07 +0000</pubDate>
       
       <guid>http://justinfx.com/2018/02/20/gofileseq-binary/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&#34; style=&#34;width:100px; float:left;&#34; &gt;&lt;/p&gt;
+      <description>&lt;img src=&#34;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&#34; style=&#34;width:100px; float:left;&#34; &gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/justinfx/gofileseq&#34; title=&#34;gofileseq&#34;&gt;gofileseq&lt;/a&gt; is a Go language library for parsing file sequence strings commonly used in VFX and animation applications.&lt;/p&gt;</description>
     </item>
     
@@ -126,7 +126,7 @@ This tutorial is about learning PyQt4 python bindings for the Qt Framework, and 
       <description>Permalink – writemycode.net
 In the spirit of a very similar blog post, I decided to expand upon a specific area of that article…
 Consider a question like this:
- I want to do this. Create 10000 files, (filename can be just combination of time and random number). File size should be 4k. And I want to time this. say how many seconds it will take.
+I want to do this. Create 10000 files, (filename can be just combination of time and random number). File size should be 4k. And I want to time this. say how many seconds it will take.
 How can I do this on bash?</description>
     </item>
     
@@ -204,7 +204,7 @@ Recently while putting together my next video tutorial for Python for Maya, I ca
       
       <guid>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</guid>
       <description>Update: I am now hosting a built package for Maya2011: MyQt4.7.4-maya2011-x64-osx-10.6.pkg And for Maya 2012+, see: Installing pyqt4 for maya2012
- Personally, when trying to run PyQt from within Maya 2009 / 2010 using the pumpThread method, I never had much luck. The best I ever got was the ability to bring up a dialog but not without locking up the UI, even though the pumpThread tool is meant to address that.</description>
+Personally, when trying to run PyQt from within Maya 2009 / 2010 using the pumpThread method, I never had much luck. The best I ever got was the ability to bring up a dialog but not without locking up the UI, even though the pumpThread tool is meant to address that.</description>
     </item>
     
     <item>
@@ -242,8 +242,7 @@ The Problem: Because we rely heavily on the process of importing Illustrator .ai
       <pubDate>Thu, 05 Aug 2010 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2010/08/04/film-jam-podcast-interview/</guid>
-      <description>I recently did an interview with my friends on their show, Film Jam. Its a podcast dealing with the film industry from the perspective of 3 guys working their way up the ladder. Fantastic show up ’till this point. Hopefully I don’t break the cycle 
-Please make sure to leave a review about the show via iTunes!
+      <description>I recently did an interview with my friends on their show, Film Jam. Its a podcast dealing with the film industry from the perspective of 3 guys working their way up the ladder. Fantastic show up ’till this point. Hopefully I don’t break the cycle Please make sure to leave a review about the show via iTunes!
 Episode #20 Playlist page</description>
     </item>
     
@@ -304,7 +303,6 @@ I noticed I was doing this a few times, in more than one of my classes, and fina
       
       <guid>http://justinfx.com/2010/01/15/python-api-for-xmlswf-charts-flash-graphing/</guid>
       <description>I had a project where I was designing a statistics reporting site, to track production stats. I wanted to have really nice graphs that pulled from the database and were somewhat live and interactive. XML/SWF Charts is this awesome flash-based app that lets you embed graphs in your pages which receive their data from XML. There are tons of graph types and ways to customize the look.
-
 http://www.maani.us/xml_charts/index.php
 So, the thing is… I wanted to use Django for the site.</description>
     </item>
@@ -324,7 +322,7 @@ So, the thing is… I wanted to use Django for the site.</description>
       <pubDate>Mon, 07 Dec 2009 00:00:00 +0000</pubDate>
       
       <guid>http://justinfx.com/2009/12/06/chantofbx-tool-released-through-cmivfx/</guid>
-      <description>&lt;p&gt;&lt;img class=&#34;alignnone size-full wp-image-39&#34; title=&#34;chan2fbx&#34; src=&#34;http://justinfx.com/uploads/2009/12/chan2fbx.jpg&#34; alt=&#34;chan2fbx&#34; width=&#34;201&#34; height=&#34;104&#34; /&gt;&lt;/p&gt;
+      <description>&lt;img class=&#34;alignnone size-full wp-image-39&#34; title=&#34;chan2fbx&#34; src=&#34;http://justinfx.com/uploads/2009/12/chan2fbx.jpg&#34; alt=&#34;chan2fbx&#34; width=&#34;201&#34; height=&#34;104&#34; /&gt;
 &lt;p&gt;I had received a mailing list email from cmiVFX, where Chris Maynard was challenging the community to write a tool that could convert a nuke camera .chan file to a functional FBX format. This was apparently meant to compliment the new 3d camera tracker in NukeX. So I decided to take on the challenge.&lt;/p&gt;</description>
     </item>
     

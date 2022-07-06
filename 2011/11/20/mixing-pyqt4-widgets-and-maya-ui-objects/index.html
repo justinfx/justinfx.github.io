@@ -84,7 +84,7 @@ if (!doNotTrack) {
       
         <li><a href="/about/">About </a></li>
       
-        <li><a href="https://stackoverflow.com/cv/justinisrael">Developer Resume </a></li>
+        <li><a href="https://www.linkedin.com/in/justinisrael/">Developer Resume </a></li>
       
         <li><a href="/vfx-resume/">VFX Resume </a></li>
       
@@ -103,7 +103,7 @@ if (!doNotTrack) {
       <a class="social-icon" href="https://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
 
     <p class="footnote"> <br/>
-    &copy; 2021 Justin Israel. All rights reserved.</p>
+    &copy; 2022 Justin Israel. All rights reserved.</p>
     
   </div>
 </div>
@@ -121,148 +121,148 @@ if (!doNotTrack) {
 <hr>
 <p><em>Update</em>: Instructions for Maya 2017+, using PySide2 and Qt5, are available via this <a href="http://blog.virtualmethodstudio.com/2017/03/embed-maya-native-ui-objects-in-pyside2/">blog post by Lidia Martínez</a></p>
 <p><em>Update</em>: A port of the older PyQt4 example for Maya 2017+ using Qt5 and PySide2</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007020;font-weight:bold">from</span> <span style="color:#0e84b5;font-weight:bold">PySide2</span> <span style="color:#007020;font-weight:bold">import</span> QtCore, QtWidgets
-<span style="color:#007020;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">shiboken2</span>
-
-<span style="color:#007020;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">maya.cmds</span> <span style="color:#007020;font-weight:bold">as</span> <span style="color:#0e84b5;font-weight:bold">cmds</span>
-<span style="color:#007020;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">maya.OpenMayaUI</span> <span style="color:#007020;font-weight:bold">as</span> <span style="color:#0e84b5;font-weight:bold">mui</span>
-
-
-<span style="color:#007020;font-weight:bold">class</span> <span style="color:#0e84b5;font-weight:bold">MyDialog</span>(QtWidgets<span style="color:#666">.</span>QDialog):
-
-    <span style="color:#007020;font-weight:bold">def</span> __init__(self, parent, <span style="color:#666">**</span>kwargs):
-        <span style="color:#007020">super</span>(MyDialog, self)<span style="color:#666">.</span>__init__(parent, <span style="color:#666">**</span>kwargs)
-        
-        self<span style="color:#666">.</span>setObjectName(<span style="color:#4070a0">&#34;MyWindow&#34;</span>)
-        self<span style="color:#666">.</span>resize(<span style="color:#40a070">800</span>, <span style="color:#40a070">600</span>)
-        self<span style="color:#666">.</span>setWindowTitle(<span style="color:#4070a0">&#34;PyQt ModelPanel Test&#34;</span>)
-
-        self<span style="color:#666">.</span>verticalLayout <span style="color:#666">=</span> QtWidgets<span style="color:#666">.</span>QVBoxLayout(self)
-        self<span style="color:#666">.</span>verticalLayout<span style="color:#666">.</span>setContentsMargins(<span style="color:#40a070">0</span>,<span style="color:#40a070">0</span>,<span style="color:#40a070">0</span>,<span style="color:#40a070">0</span>)
-
-        <span style="color:#60a0b0;font-style:italic"># need to set a name so it can be referenced by maya node path</span>
-        self<span style="color:#666">.</span>verticalLayout<span style="color:#666">.</span>setObjectName(<span style="color:#4070a0">&#34;mainLayout&#34;</span>)
-        
-        <span style="color:#60a0b0;font-style:italic"># First use SIP to unwrap the layout into a pointer</span>
-        <span style="color:#60a0b0;font-style:italic"># Then get the full path to the UI in maya as a string</span>
-        layout <span style="color:#666">=</span> mui<span style="color:#666">.</span>MQtUtil<span style="color:#666">.</span>fullName(long(shiboken2<span style="color:#666">.</span>getCppPointer(self<span style="color:#666">.</span>verticalLayout)[<span style="color:#40a070">0</span>]))
-        cmds<span style="color:#666">.</span>setParent(layout)
-
-        paneLayoutName <span style="color:#666">=</span> cmds<span style="color:#666">.</span>paneLayout()
-        
-        <span style="color:#60a0b0;font-style:italic"># Find a pointer to the paneLayout that we just created</span>
-        ptr <span style="color:#666">=</span> mui<span style="color:#666">.</span>MQtUtil<span style="color:#666">.</span>findControl(paneLayoutName)
-        
-        <span style="color:#60a0b0;font-style:italic"># Wrap the pointer into a python QObject</span>
-        self<span style="color:#666">.</span>paneLayout <span style="color:#666">=</span> shiboken2<span style="color:#666">.</span>wrapInstance(long(ptr), QtWidgets<span style="color:#666">.</span>QWidget)
-
-        self<span style="color:#666">.</span>cameraName <span style="color:#666">=</span> cmds<span style="color:#666">.</span>camera()[<span style="color:#40a070">0</span>]
-        self<span style="color:#666">.</span>modelPanelName <span style="color:#666">=</span> cmds<span style="color:#666">.</span>modelPanel(<span style="color:#4070a0">&#34;customModelPanel&#34;</span>, label<span style="color:#666">=</span><span style="color:#4070a0">&#34;ModelPanel Test&#34;</span>, cam<span style="color:#666">=</span>self<span style="color:#666">.</span>cameraName)
-        
-        <span style="color:#60a0b0;font-style:italic"># Find a pointer to the modelPanel that we just created</span>
-        ptr <span style="color:#666">=</span> mui<span style="color:#666">.</span>MQtUtil<span style="color:#666">.</span>findControl(self<span style="color:#666">.</span>modelPanelName)
-        
-        <span style="color:#60a0b0;font-style:italic"># Wrap the pointer into a python QObject</span>
-        self<span style="color:#666">.</span>modelPanel <span style="color:#666">=</span> shiboken2<span style="color:#666">.</span>wrapInstance(long(ptr), QtWidgets<span style="color:#666">.</span>QWidget)
-
-        <span style="color:#60a0b0;font-style:italic"># add our QObject reference to the paneLayout to our layout</span>
-        self<span style="color:#666">.</span>verticalLayout<span style="color:#666">.</span>addWidget(self<span style="color:#666">.</span>paneLayout)
-
-    <span style="color:#007020;font-weight:bold">def</span> <span style="color:#06287e">showEvent</span>(self, event):
-        <span style="color:#007020">super</span>(MyDialog, self)<span style="color:#666">.</span>showEvent(event)
-
-        <span style="color:#60a0b0;font-style:italic"># maya can lag in how it repaints UI. Force it to repaint</span>
-        <span style="color:#60a0b0;font-style:italic"># when we show the window.</span>
-        self<span style="color:#666">.</span>modelPanel<span style="color:#666">.</span>repaint()
-                    
-
-<span style="color:#007020;font-weight:bold">def</span> <span style="color:#06287e">show</span>():
-    <span style="color:#60a0b0;font-style:italic"># get a pointer to the maya main window</span>
-    ptr <span style="color:#666">=</span> mui<span style="color:#666">.</span>MQtUtil<span style="color:#666">.</span>mainWindow()
-    <span style="color:#60a0b0;font-style:italic"># use sip to wrap the pointer into a QObject</span>
-    win <span style="color:#666">=</span> shiboken2<span style="color:#666">.</span>wrapInstance(long(ptr), QtWidgets<span style="color:#666">.</span>QWidget)
-    d <span style="color:#666">=</span> MyDialog(win)
-    d<span style="color:#666">.</span>show()
-
-    <span style="color:#007020;font-weight:bold">return</span> d
-
-
-<span style="color:#007020;font-weight:bold">try</span>:
-    dialog<span style="color:#666">.</span>deleteLater()
-<span style="color:#007020;font-weight:bold">except</span>:
-    <span style="color:#007020;font-weight:bold">pass</span>    
-dialog <span style="color:#666">=</span> show()</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">from</span> <span style="color:#0e84b5;font-weight:bold">PySide2</span> <span style="color:#007020;font-weight:bold">import</span> QtCore, QtWidgets
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">shiboken2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">maya.cmds</span> <span style="color:#007020;font-weight:bold">as</span> <span style="color:#0e84b5;font-weight:bold">cmds</span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">maya.OpenMayaUI</span> <span style="color:#007020;font-weight:bold">as</span> <span style="color:#0e84b5;font-weight:bold">mui</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">class</span> <span style="color:#0e84b5;font-weight:bold">MyDialog</span>(QtWidgets<span style="color:#666">.</span>QDialog):
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">def</span> __init__(self, parent, <span style="color:#666">**</span>kwargs):
+</span></span><span style="display:flex;"><span>        <span style="color:#007020">super</span>(MyDialog, self)<span style="color:#666">.</span>__init__(parent, <span style="color:#666">**</span>kwargs)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>setObjectName(<span style="color:#4070a0">&#34;MyWindow&#34;</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>resize(<span style="color:#40a070">800</span>, <span style="color:#40a070">600</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>setWindowTitle(<span style="color:#4070a0">&#34;PyQt ModelPanel Test&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>verticalLayout <span style="color:#666">=</span> QtWidgets<span style="color:#666">.</span>QVBoxLayout(self)
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>verticalLayout<span style="color:#666">.</span>setContentsMargins(<span style="color:#40a070">0</span>,<span style="color:#40a070">0</span>,<span style="color:#40a070">0</span>,<span style="color:#40a070">0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># need to set a name so it can be referenced by maya node path</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>verticalLayout<span style="color:#666">.</span>setObjectName(<span style="color:#4070a0">&#34;mainLayout&#34;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># First use SIP to unwrap the layout into a pointer</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># Then get the full path to the UI in maya as a string</span>
+</span></span><span style="display:flex;"><span>        layout <span style="color:#666">=</span> mui<span style="color:#666">.</span>MQtUtil<span style="color:#666">.</span>fullName(long(shiboken2<span style="color:#666">.</span>getCppPointer(self<span style="color:#666">.</span>verticalLayout)[<span style="color:#40a070">0</span>]))
+</span></span><span style="display:flex;"><span>        cmds<span style="color:#666">.</span>setParent(layout)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        paneLayoutName <span style="color:#666">=</span> cmds<span style="color:#666">.</span>paneLayout()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># Find a pointer to the paneLayout that we just created</span>
+</span></span><span style="display:flex;"><span>        ptr <span style="color:#666">=</span> mui<span style="color:#666">.</span>MQtUtil<span style="color:#666">.</span>findControl(paneLayoutName)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># Wrap the pointer into a python QObject</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>paneLayout <span style="color:#666">=</span> shiboken2<span style="color:#666">.</span>wrapInstance(long(ptr), QtWidgets<span style="color:#666">.</span>QWidget)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>cameraName <span style="color:#666">=</span> cmds<span style="color:#666">.</span>camera()[<span style="color:#40a070">0</span>]
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>modelPanelName <span style="color:#666">=</span> cmds<span style="color:#666">.</span>modelPanel(<span style="color:#4070a0">&#34;customModelPanel&#34;</span>, label<span style="color:#666">=</span><span style="color:#4070a0">&#34;ModelPanel Test&#34;</span>, cam<span style="color:#666">=</span>self<span style="color:#666">.</span>cameraName)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># Find a pointer to the modelPanel that we just created</span>
+</span></span><span style="display:flex;"><span>        ptr <span style="color:#666">=</span> mui<span style="color:#666">.</span>MQtUtil<span style="color:#666">.</span>findControl(self<span style="color:#666">.</span>modelPanelName)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># Wrap the pointer into a python QObject</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>modelPanel <span style="color:#666">=</span> shiboken2<span style="color:#666">.</span>wrapInstance(long(ptr), QtWidgets<span style="color:#666">.</span>QWidget)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># add our QObject reference to the paneLayout to our layout</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>verticalLayout<span style="color:#666">.</span>addWidget(self<span style="color:#666">.</span>paneLayout)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">def</span> <span style="color:#06287e">showEvent</span>(self, event):
+</span></span><span style="display:flex;"><span>        <span style="color:#007020">super</span>(MyDialog, self)<span style="color:#666">.</span>showEvent(event)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># maya can lag in how it repaints UI. Force it to repaint</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># when we show the window.</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>modelPanel<span style="color:#666">.</span>repaint()
+</span></span><span style="display:flex;"><span>                    
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">def</span> <span style="color:#06287e">show</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#60a0b0;font-style:italic"># get a pointer to the maya main window</span>
+</span></span><span style="display:flex;"><span>    ptr <span style="color:#666">=</span> mui<span style="color:#666">.</span>MQtUtil<span style="color:#666">.</span>mainWindow()
+</span></span><span style="display:flex;"><span>    <span style="color:#60a0b0;font-style:italic"># use sip to wrap the pointer into a QObject</span>
+</span></span><span style="display:flex;"><span>    win <span style="color:#666">=</span> shiboken2<span style="color:#666">.</span>wrapInstance(long(ptr), QtWidgets<span style="color:#666">.</span>QWidget)
+</span></span><span style="display:flex;"><span>    d <span style="color:#666">=</span> MyDialog(win)
+</span></span><span style="display:flex;"><span>    d<span style="color:#666">.</span>show()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">return</span> d
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">try</span>:
+</span></span><span style="display:flex;"><span>    dialog<span style="color:#666">.</span>deleteLater()
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">except</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">pass</span>    
+</span></span><span style="display:flex;"><span>dialog <span style="color:#666">=</span> show()</span></span></code></pre></div>
 <hr>
 <p>Older Maya &lt; 2017 using Qt4 and PyQt4</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007020;font-weight:bold">from</span> <span style="color:#0e84b5;font-weight:bold">PyQt4</span> <span style="color:#007020;font-weight:bold">import</span> QtCore, QtGui
-
-<span style="color:#007020;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">maya.cmds</span> <span style="color:#007020;font-weight:bold">as</span> <span style="color:#0e84b5;font-weight:bold">cmds</span>
-<span style="color:#007020;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">maya.OpenMayaUI</span> <span style="color:#007020;font-weight:bold">as</span> <span style="color:#0e84b5;font-weight:bold">mui</span>
-
-<span style="color:#007020;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">sip</span>
-
-<span style="color:#007020;font-weight:bold">class</span> <span style="color:#0e84b5;font-weight:bold">MyDialog</span>(QtGui<span style="color:#666">.</span>QDialog):
-
-    <span style="color:#007020;font-weight:bold">def</span> __init__(self, parent, <span style="color:#666">**</span>kwargs):
-        <span style="color:#007020">super</span>(MyDialog, self)<span style="color:#666">.</span>__init__(parent, <span style="color:#666">**</span>kwargs)
-        
-        self<span style="color:#666">.</span>setObjectName(<span style="color:#4070a0">&#34;MyWindow&#34;</span>)
-        self<span style="color:#666">.</span>resize(<span style="color:#40a070">800</span>, <span style="color:#40a070">600</span>)
-        self<span style="color:#666">.</span>setWindowTitle(<span style="color:#4070a0">&#34;PyQt ModelPanel Test&#34;</span>)
-    
-        self<span style="color:#666">.</span>verticalLayout <span style="color:#666">=</span> QtGui<span style="color:#666">.</span>QVBoxLayout(self)
-        self<span style="color:#666">.</span>verticalLayout<span style="color:#666">.</span>setContentsMargins(<span style="color:#40a070">0</span>,<span style="color:#40a070">0</span>,<span style="color:#40a070">0</span>,<span style="color:#40a070">0</span>)
-    
-        <span style="color:#60a0b0;font-style:italic"># need to set a name so it can be referenced by maya node path</span>
-        self<span style="color:#666">.</span>verticalLayout<span style="color:#666">.</span>setObjectName(<span style="color:#4070a0">&#34;mainLayout&#34;</span>)
-        
-        <span style="color:#60a0b0;font-style:italic"># First use SIP to unwrap the layout into a pointer</span>
-        <span style="color:#60a0b0;font-style:italic"># Then get the full path to the UI in maya as a string</span>
-        layout <span style="color:#666">=</span> mui<span style="color:#666">.</span>MQtUtil<span style="color:#666">.</span>fullName(long(sip<span style="color:#666">.</span>unwrapinstance(self<span style="color:#666">.</span>verticalLayout)))
-        cmds<span style="color:#666">.</span>setParent(layout)
-    
-        paneLayoutName <span style="color:#666">=</span> cmds<span style="color:#666">.</span>paneLayout()
-        
-        <span style="color:#60a0b0;font-style:italic"># Find a pointer to the paneLayout that we just created</span>
-        ptr <span style="color:#666">=</span> mui<span style="color:#666">.</span>MQtUtil<span style="color:#666">.</span>findControl(paneLayoutName)
-        
-        <span style="color:#60a0b0;font-style:italic"># Wrap the pointer into a python QObject</span>
-        self<span style="color:#666">.</span>paneLayout <span style="color:#666">=</span> sip<span style="color:#666">.</span>wrapinstance(long(ptr), QtCore<span style="color:#666">.</span>QObject)
-    
-        self<span style="color:#666">.</span>cameraName <span style="color:#666">=</span> cmds<span style="color:#666">.</span>camera()[<span style="color:#40a070">0</span>]
-        self<span style="color:#666">.</span>modelPanelName <span style="color:#666">=</span> cmds<span style="color:#666">.</span>modelPanel(<span style="color:#4070a0">&#34;customModelPanel&#34;</span>, label<span style="color:#666">=</span><span style="color:#4070a0">&#34;ModelPanel Test&#34;</span>, cam<span style="color:#666">=</span>self<span style="color:#666">.</span>cameraName)
-        
-        <span style="color:#60a0b0;font-style:italic"># Find a pointer to the modelPanel that we just created</span>
-        ptr <span style="color:#666">=</span> mui<span style="color:#666">.</span>MQtUtil<span style="color:#666">.</span>findControl(self<span style="color:#666">.</span>modelPanelName)
-        
-        <span style="color:#60a0b0;font-style:italic"># Wrap the pointer into a python QObject</span>
-        self<span style="color:#666">.</span>modelPanel <span style="color:#666">=</span> sip<span style="color:#666">.</span>wrapinstance(long(ptr), QtCore<span style="color:#666">.</span>QObject)
-    
-        <span style="color:#60a0b0;font-style:italic"># add our QObject reference to the paneLayout to our layout</span>
-        self<span style="color:#666">.</span>verticalLayout<span style="color:#666">.</span>addWidget(self<span style="color:#666">.</span>paneLayout)
-    
-    <span style="color:#007020;font-weight:bold">def</span> <span style="color:#06287e">showEvent</span>(self, event):
-        <span style="color:#007020">super</span>(MyDialog, self)<span style="color:#666">.</span>showEvent(event)
-    
-        <span style="color:#60a0b0;font-style:italic"># maya can lag in how it repaints UI. Force it to repaint</span>
-        <span style="color:#60a0b0;font-style:italic"># when we show the window.</span>
-        self<span style="color:#666">.</span>modelPanel<span style="color:#666">.</span>repaint()
-
-<span style="color:#007020;font-weight:bold">def</span> <span style="color:#06287e">show</span>():
-    <span style="color:#60a0b0;font-style:italic"># get a pointer to the maya main window</span>
-    ptr <span style="color:#666">=</span> mui<span style="color:#666">.</span>MQtUtil<span style="color:#666">.</span>mainWindow()
-    <span style="color:#60a0b0;font-style:italic"># use sip to wrap the pointer into a QObject</span>
-    win <span style="color:#666">=</span> sip<span style="color:#666">.</span>wrapinstance(long(ptr), QtCore<span style="color:#666">.</span>QObject)
-    d <span style="color:#666">=</span> MyDialog(win)
-    d<span style="color:#666">.</span>show()
-
-    <span style="color:#007020;font-weight:bold">return</span> d
-
-<span style="color:#007020;font-weight:bold">try</span>:
-    dialog<span style="color:#666">.</span>deleteLater()
-<span style="color:#007020;font-weight:bold">except</span>:
-    <span style="color:#007020;font-weight:bold">pass</span>  
-dialog <span style="color:#666">=</span> show()</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">from</span> <span style="color:#0e84b5;font-weight:bold">PyQt4</span> <span style="color:#007020;font-weight:bold">import</span> QtCore, QtGui
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">maya.cmds</span> <span style="color:#007020;font-weight:bold">as</span> <span style="color:#0e84b5;font-weight:bold">cmds</span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">maya.OpenMayaUI</span> <span style="color:#007020;font-weight:bold">as</span> <span style="color:#0e84b5;font-weight:bold">mui</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">sip</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">class</span> <span style="color:#0e84b5;font-weight:bold">MyDialog</span>(QtGui<span style="color:#666">.</span>QDialog):
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">def</span> __init__(self, parent, <span style="color:#666">**</span>kwargs):
+</span></span><span style="display:flex;"><span>        <span style="color:#007020">super</span>(MyDialog, self)<span style="color:#666">.</span>__init__(parent, <span style="color:#666">**</span>kwargs)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>setObjectName(<span style="color:#4070a0">&#34;MyWindow&#34;</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>resize(<span style="color:#40a070">800</span>, <span style="color:#40a070">600</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>setWindowTitle(<span style="color:#4070a0">&#34;PyQt ModelPanel Test&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>verticalLayout <span style="color:#666">=</span> QtGui<span style="color:#666">.</span>QVBoxLayout(self)
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>verticalLayout<span style="color:#666">.</span>setContentsMargins(<span style="color:#40a070">0</span>,<span style="color:#40a070">0</span>,<span style="color:#40a070">0</span>,<span style="color:#40a070">0</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># need to set a name so it can be referenced by maya node path</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>verticalLayout<span style="color:#666">.</span>setObjectName(<span style="color:#4070a0">&#34;mainLayout&#34;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># First use SIP to unwrap the layout into a pointer</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># Then get the full path to the UI in maya as a string</span>
+</span></span><span style="display:flex;"><span>        layout <span style="color:#666">=</span> mui<span style="color:#666">.</span>MQtUtil<span style="color:#666">.</span>fullName(long(sip<span style="color:#666">.</span>unwrapinstance(self<span style="color:#666">.</span>verticalLayout)))
+</span></span><span style="display:flex;"><span>        cmds<span style="color:#666">.</span>setParent(layout)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        paneLayoutName <span style="color:#666">=</span> cmds<span style="color:#666">.</span>paneLayout()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># Find a pointer to the paneLayout that we just created</span>
+</span></span><span style="display:flex;"><span>        ptr <span style="color:#666">=</span> mui<span style="color:#666">.</span>MQtUtil<span style="color:#666">.</span>findControl(paneLayoutName)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># Wrap the pointer into a python QObject</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>paneLayout <span style="color:#666">=</span> sip<span style="color:#666">.</span>wrapinstance(long(ptr), QtCore<span style="color:#666">.</span>QObject)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>cameraName <span style="color:#666">=</span> cmds<span style="color:#666">.</span>camera()[<span style="color:#40a070">0</span>]
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>modelPanelName <span style="color:#666">=</span> cmds<span style="color:#666">.</span>modelPanel(<span style="color:#4070a0">&#34;customModelPanel&#34;</span>, label<span style="color:#666">=</span><span style="color:#4070a0">&#34;ModelPanel Test&#34;</span>, cam<span style="color:#666">=</span>self<span style="color:#666">.</span>cameraName)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># Find a pointer to the modelPanel that we just created</span>
+</span></span><span style="display:flex;"><span>        ptr <span style="color:#666">=</span> mui<span style="color:#666">.</span>MQtUtil<span style="color:#666">.</span>findControl(self<span style="color:#666">.</span>modelPanelName)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># Wrap the pointer into a python QObject</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>modelPanel <span style="color:#666">=</span> sip<span style="color:#666">.</span>wrapinstance(long(ptr), QtCore<span style="color:#666">.</span>QObject)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># add our QObject reference to the paneLayout to our layout</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>verticalLayout<span style="color:#666">.</span>addWidget(self<span style="color:#666">.</span>paneLayout)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">def</span> <span style="color:#06287e">showEvent</span>(self, event):
+</span></span><span style="display:flex;"><span>        <span style="color:#007020">super</span>(MyDialog, self)<span style="color:#666">.</span>showEvent(event)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># maya can lag in how it repaints UI. Force it to repaint</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic"># when we show the window.</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>modelPanel<span style="color:#666">.</span>repaint()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">def</span> <span style="color:#06287e">show</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#60a0b0;font-style:italic"># get a pointer to the maya main window</span>
+</span></span><span style="display:flex;"><span>    ptr <span style="color:#666">=</span> mui<span style="color:#666">.</span>MQtUtil<span style="color:#666">.</span>mainWindow()
+</span></span><span style="display:flex;"><span>    <span style="color:#60a0b0;font-style:italic"># use sip to wrap the pointer into a QObject</span>
+</span></span><span style="display:flex;"><span>    win <span style="color:#666">=</span> sip<span style="color:#666">.</span>wrapinstance(long(ptr), QtCore<span style="color:#666">.</span>QObject)
+</span></span><span style="display:flex;"><span>    d <span style="color:#666">=</span> MyDialog(win)
+</span></span><span style="display:flex;"><span>    d<span style="color:#666">.</span>show()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">return</span> d
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">try</span>:
+</span></span><span style="display:flex;"><span>    dialog<span style="color:#666">.</span>deleteLater()
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">except</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">pass</span>  
+</span></span><span style="display:flex;"><span>dialog <span style="color:#666">=</span> show()</span></span></code></pre></div>
 <p>You need sip and the MQtUtil functions to convert between maya node paths and python Qbjects. Its the same idea as having to use those functions to get a reference to the maya MainWindow, in order to parent your dialog.</p>
     
 

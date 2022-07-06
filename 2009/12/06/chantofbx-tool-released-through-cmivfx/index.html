@@ -84,7 +84,7 @@ if (!doNotTrack) {
       
         <li><a href="/about/">About </a></li>
       
-        <li><a href="https://stackoverflow.com/cv/justinisrael">Developer Resume </a></li>
+        <li><a href="https://www.linkedin.com/in/justinisrael/">Developer Resume </a></li>
       
         <li><a href="/vfx-resume/">VFX Resume </a></li>
       
@@ -103,7 +103,7 @@ if (!doNotTrack) {
       <a class="social-icon" href="https://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
 
     <p class="footnote"> <br/>
-    &copy; 2021 Justin Israel. All rights reserved.</p>
+    &copy; 2022 Justin Israel. All rights reserved.</p>
     
   </div>
 </div>
@@ -115,7 +115,7 @@ if (!doNotTrack) {
     <span class="post-date">Dec 7, 2009</span>
 
     
-    <p><img class="alignnone size-full wp-image-39" title="chan2fbx" src="/uploads/2009/12/chan2fbx.jpg" alt="chan2fbx" width="201" height="104" /></p>
+    <img class="alignnone size-full wp-image-39" title="chan2fbx" src="/uploads/2009/12/chan2fbx.jpg" alt="chan2fbx" width="201" height="104" />
 <p>I had received a mailing list email from cmiVFX, where Chris Maynard was challenging the community to write a tool that could convert a nuke camera .chan file to a functional FBX format. This was apparently meant to compliment the new 3d camera tracker in NukeX. So I decided to take on the challenge.</p>
 <p>The tool started out as a command-line python script that would translate the chan files simple column-style output to fbx. But in testing specifically with Flame, Chris found that the fbx simply would not import all the channels properly. Thus, I was asked to integrate a solution by Georges Nakhle for converting the chan to an .action format, which is native to Flame. So with George’s .action code, Chris’s testing with the scaling in Flame, and the rest of my code, we seemed to have all the bases covered in getting the .chan file into a universal format.</p>
 <p>Chris asked if I would wrap the tool into a GUI, to allow easier access to the few options the script provides. Using the cmiVFX.com website as a reference, I threw together a nice looking GUI in PyQt. It was fun because I got to really play around with CSS and skinning in PyQt, which is something I never really had to do before. I learned how much of a pain in the ass Palettes are, and how freaking simple the CSS route makes it to control the look or widgets.</p>

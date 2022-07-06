@@ -84,7 +84,7 @@ if (!doNotTrack) {
       
         <li><a href="/about/">About </a></li>
       
-        <li><a href="https://stackoverflow.com/cv/justinisrael">Developer Resume </a></li>
+        <li><a href="https://www.linkedin.com/in/justinisrael/">Developer Resume </a></li>
       
         <li><a href="/vfx-resume/">VFX Resume </a></li>
       
@@ -103,7 +103,7 @@ if (!doNotTrack) {
       <a class="social-icon" href="https://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
 
     <p class="footnote"> <br/>
-    &copy; 2021 Justin Israel. All rights reserved.</p>
+    &copy; 2022 Justin Israel. All rights reserved.</p>
     
   </div>
 </div>
@@ -129,24 +129,24 @@ if (!doNotTrack) {
 </ul>
 <p>C libraries are more straight-forward to wrap, because Go can access them directly. C++, on the other hand, requires a &ldquo;shim&rdquo; layer written in C. This layer has to handle the calls between Go and the target C++ library. An example would be to treat a C++ class as an opaque pointer and provide C functions that accept the pointer and delegate to the C++ methods. Or to convert between vectors and arrays:</p>
 <p><em>ref:</em> <a href="https://github.com/justinfx/openimageigo/blob/master/cpp/oiio.h"><em>github.com/justinfx/openimageigo/cpp/oiio.h</em></a></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#60a0b0;font-style:italic">// oiio.h
-</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020">#ifdef __cplusplus
-</span><span style="color:#007020"></span><span style="color:#007020;font-weight:bold">extern</span> <span style="color:#4070a0">&#34;C&#34;</span> {
-<span style="color:#007020">#endif
-</span><span style="color:#007020"></span>
-<span style="color:#007020;font-weight:bold">typedef</span> <span style="color:#902000">void</span> ImageInput;
-
-<span style="color:#60a0b0;font-style:italic">// imageinput.cpp
-</span><span style="color:#60a0b0;font-style:italic"></span>ImageInput<span style="color:#666">*</span> <span style="color:#06287e">ImageInput_Open</span>(<span style="color:#007020;font-weight:bold">const</span> <span style="color:#902000">char</span><span style="color:#666">*</span> filename, <span style="color:#007020;font-weight:bold">const</span> ImageSpec _config) {
-    std<span style="color:#666">::</span>string s_filename(filename);
-    <span style="color:#007020;font-weight:bold">return</span> (ImageInput<span style="color:#666">*</span>) OIIO<span style="color:#666">::</span>ImageInput<span style="color:#666">::</span>open(
-        s_filename,
-        <span style="color:#007020;font-weight:bold">static_cast</span><span style="color:#666">&lt;</span><span style="color:#007020;font-weight:bold">const</span> OIIO<span style="color:#666">::</span>ImageSpec<span style="color:#666">*&gt;</span>(config));
-}
-
-<span style="color:#007020;font-weight:bold">const</span> <span style="color:#902000">char</span><span style="color:#666">*</span> <span style="color:#06287e">ImageInput_format_name</span>(ImageInput <span style="color:#666">*</span>in) {
-    <span style="color:#007020;font-weight:bold">return</span> <span style="color:#007020;font-weight:bold">static_cast</span>[OIIO<span style="color:#666">::</span>ImageInput<span style="color:#666">*</span>](OIIO<span style="color:#666">::</span>ImageInput<span style="color:#666">*</span>)(in)<span style="color:#666">-&gt;</span>format_name();
-}</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">// oiio.h
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020">#ifdef __cplusplus
+</span></span></span><span style="display:flex;"><span><span style="color:#007020"></span><span style="color:#007020;font-weight:bold">extern</span> <span style="color:#4070a0">&#34;C&#34;</span> {
+</span></span><span style="display:flex;"><span><span style="color:#007020">#endif
+</span></span></span><span style="display:flex;"><span><span style="color:#007020"></span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">typedef</span> <span style="color:#902000">void</span> ImageInput;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">// imageinput.cpp
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"></span>ImageInput<span style="color:#666">*</span> <span style="color:#06287e">ImageInput_Open</span>(<span style="color:#007020;font-weight:bold">const</span> <span style="color:#902000">char</span><span style="color:#666">*</span> filename, <span style="color:#007020;font-weight:bold">const</span> ImageSpec _config) {
+</span></span><span style="display:flex;"><span>    std<span style="color:#666">::</span>string s_filename(filename);
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">return</span> (ImageInput<span style="color:#666">*</span>) OIIO<span style="color:#666">::</span>ImageInput<span style="color:#666">::</span>open(
+</span></span><span style="display:flex;"><span>        s_filename,
+</span></span><span style="display:flex;"><span>        <span style="color:#007020;font-weight:bold">static_cast</span><span style="color:#666">&lt;</span><span style="color:#007020;font-weight:bold">const</span> OIIO<span style="color:#666">::</span>ImageSpec<span style="color:#666">*&gt;</span>(config));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">const</span> <span style="color:#902000">char</span><span style="color:#666">*</span> <span style="color:#06287e">ImageInput_format_name</span>(ImageInput <span style="color:#666">*</span>in) {
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">return</span> <span style="color:#007020;font-weight:bold">static_cast</span>[OIIO<span style="color:#666">::</span>ImageInput<span style="color:#666">*</span>](OIIO<span style="color:#666">::</span>ImageInput<span style="color:#666">*</span>)(in)<span style="color:#666">-&gt;</span>format_name();
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>As you can see, we make an opaque <code>ImageInput*</code> available to Go, and create a shim layer that is C compatible. <code>ImageInput_Open()</code> is a factory function that wraps the static C++ <code>ImageInput::open()</code> equivalent. We just cast between our pointer and theirs (OIIO&rsquo;s), in order to call functions and methods.</p>
 <p>But like I said, these are Go bindings on top of C/C++ libraries. What about exposing a C++ library on top of a pure Go library?</p>
 <h2 id="exposing-go-libraries-to-c">Exposing Go libraries to C++</h2>
@@ -157,38 +157,38 @@ if (!doNotTrack) {
 </code></pre>
 <p><code>gofileseq</code> library is a port of a python equivalent, <a href="https://github.com/sqlboy/fileseq">fileseq</a>, which I help to maintain. If the parsing rules need to be updated in the Python library, they should also be updated to match in the Go library, to maintain compatibility.</p>
 <p>I had been asked more than once by colleagues if a C++ version of fileseq was available. It wasn&rsquo;t, and I also didn&rsquo;t want to have to maintain a 3rd standalone port that should follow the same behavior as the other two. But since the introduction of the Go <a href="https://golang.org/doc/go1.5#link">-buildmode</a> flag in 1.5, it has become possible to export functions from Go to C/C++</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#60a0b0;font-style:italic">// sum.go
-</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">package</span> main
-
-<span style="color:#007020;font-weight:bold">import</span> <span style="color:#4070a0">&#34;C&#34;</span>
-
-<span style="color:#60a0b0;font-style:italic">//export sum
-</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">func</span> <span style="color:#06287e">sum</span>(x, y <span style="color:#902000">int</span>) <span style="color:#902000">int</span> {
-    <span style="color:#007020;font-weight:bold">return</span> x <span style="color:#666">+</span> y
-}
-
-<span style="color:#007020;font-weight:bold">func</span> <span style="color:#06287e">main</span>() {
-
-}</code></pre></div>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ go build -buildmode<span style="color:#666">=</span>c-shared -o sum.so
-$ ls
-sum.c  sum.go sum.h  sum.so
-</code></pre></div><p>Now we have a shared library and a header file, to use in our C app</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#60a0b0;font-style:italic">// sum.c
-</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020">#include</span> <span style="color:#007020">&lt;stdio.h&gt;</span><span style="color:#007020">
-</span><span style="color:#007020">#include</span> <span style="color:#007020">&#34;sum.h&#34;</span><span style="color:#007020">
-</span><span style="color:#007020"></span>
-<span style="color:#902000">int</span> <span style="color:#06287e">main</span>(<span style="color:#902000">void</span>) {
-
-    <span style="color:#902000">int</span> z <span style="color:#666">=</span> sum(<span style="color:#40a070">1</span>, <span style="color:#40a070">2</span>);
-    printf(<span style="color:#4070a0">&#34;1+2=%d</span><span style="color:#4070a0;font-weight:bold">\n</span><span style="color:#4070a0">&#34;</span>, z);
-    
-    <span style="color:#007020;font-weight:bold">return</span> <span style="color:#40a070">0</span>;
-
-}</code></pre></div>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ gcc sum.c sum.so -o sum <span style="color:#666">&amp;&amp;</span> ./sum
-1+2<span style="color:#666">=</span><span style="color:#40a070">3</span>
-</code></pre></div><p>This looks pretty straight-forward, right? It would seem so until you encounter the need to export instances of your types from Go to C, and these types contain pointers to other types. You see, there are certain rules about what you can do when communicating via cgo. And these rules were <a href="https://golang.org/cmd/cgo/#hdr-Passing_pointers">made official as off Go 1.6</a>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">// sum.go
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">package</span> main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">import</span> <span style="color:#4070a0">&#34;C&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">//export sum
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">func</span> <span style="color:#06287e">sum</span>(x, y <span style="color:#902000">int</span>) <span style="color:#902000">int</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">return</span> x <span style="color:#666">+</span> y
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">func</span> <span style="color:#06287e">main</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ go build -buildmode<span style="color:#666">=</span>c-shared -o sum.so
+</span></span><span style="display:flex;"><span>$ ls
+</span></span><span style="display:flex;"><span>sum.c  sum.go sum.h  sum.so
+</span></span></code></pre></div><p>Now we have a shared library and a header file, to use in our C app</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">// sum.c
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020">#include</span> <span style="color:#007020">&lt;stdio.h&gt;</span><span style="color:#007020">
+</span></span></span><span style="display:flex;"><span><span style="color:#007020">#include</span> <span style="color:#007020">&#34;sum.h&#34;</span><span style="color:#007020">
+</span></span></span><span style="display:flex;"><span><span style="color:#007020"></span>
+</span></span><span style="display:flex;"><span><span style="color:#902000">int</span> <span style="color:#06287e">main</span>(<span style="color:#902000">void</span>) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#902000">int</span> z <span style="color:#666">=</span> sum(<span style="color:#40a070">1</span>, <span style="color:#40a070">2</span>);
+</span></span><span style="display:flex;"><span>    printf(<span style="color:#4070a0">&#34;1+2=%d</span><span style="color:#4070a0;font-weight:bold">\n</span><span style="color:#4070a0">&#34;</span>, z);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">return</span> <span style="color:#40a070">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ gcc sum.c sum.so -o sum <span style="color:#666">&amp;&amp;</span> ./sum
+</span></span><span style="display:flex;"><span>1+2<span style="color:#666">=</span><span style="color:#40a070">3</span>
+</span></span></code></pre></div><p>This looks pretty straight-forward, right? It would seem so until you encounter the need to export instances of your types from Go to C, and these types contain pointers to other types. You see, there are certain rules about what you can do when communicating via cgo. And these rules were <a href="https://golang.org/cmd/cgo/#hdr-Passing_pointers">made official as off Go 1.6</a>.</p>
 <p>Some of those rules are:</p>
 <ol>
 <li>You can pass Go pointers to C, but C should not hang on to them beyond the scope of the call.</li>
@@ -197,83 +197,83 @@ sum.c  sum.go sum.h  sum.so
 <p>These pose an issue if you want to be able to have your C++ library create instances of objects in Go and hang on to them longer than the Go function call. In the case of <code>gofileseq</code>, the main two objects are <a href="https://godoc.org/github.com/justinfx/gofileseq#FileSequence">FileSequence</a> and <a href="https://godoc.org/github.com/justinfx/gofileseq#FrameSet">FrameSet</a>. These are constructed from strings, perform parsing, and maintain private state. So a user would want to construct them and keep them around until they are done calling methods on them. But according to the cgo rules, I can&rsquo;t give a pointer to C++ for it to hang on to indefinitely, and I can&rsquo;t create a C struct in a shim to populate, because there are more internal pointers involved in a <code>FileSequence</code>. Basically I saw this as a more complex type than just a struct with simple data fields.</p>
 <p>How do I construct these instances for C++? I created package-private maps using generated <code>uint64</code> keys, and the instances as values. Actually, I wrap the instances up in a struct that also tracks reference counts. This allows C++ to manage the lifetime of the objects.</p>
 <p>The full implementation is located here: <a href="https://github.com/justinfx/gofileseq/tree/master/cpp">github.com/justinfx/gofileseq/cpp</a></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#007020;font-weight:bold">type</span> FileSeqId <span style="color:#902000">uint64</span>
-
-<span style="color:#007020;font-weight:bold">type</span> fileSeqRef <span style="color:#007020;font-weight:bold">struct</span> {
-    <span style="color:#666">*</span>fileseq.FileSequence
-    refs <span style="color:#902000">uint32</span>
-}
-
-<span style="color:#007020;font-weight:bold">type</span> fileSeqMap <span style="color:#007020;font-weight:bold">struct</span> {
-    lock <span style="color:#666">*</span>sync.RWMutex
-    m    <span style="color:#007020;font-weight:bold">map</span>[FileSeqId]<span style="color:#666">*</span>fileSeqRef
-    rand idMaker
-}
-
-<span style="color:#007020;font-weight:bold">type</span> idMaker <span style="color:#007020;font-weight:bold">interface</span> {
-    <span style="color:#06287e">Uint64</span>() <span style="color:#902000">uint64</span>
-}
-
-<span style="color:#007020;font-weight:bold">func</span> (m <span style="color:#666">*</span>frameSetMap) <span style="color:#06287e">Incref</span>(id FrameSetId) {
-    <span style="color:#60a0b0;font-style:italic">// Inc refs
-</span><span style="color:#60a0b0;font-style:italic"></span>}
-
-<span style="color:#007020;font-weight:bold">func</span> (m <span style="color:#666">*</span>frameSetMap) <span style="color:#06287e">Decref</span>(id FrameSetId) {
-    <span style="color:#60a0b0;font-style:italic">// Dec refs
-</span><span style="color:#60a0b0;font-style:italic"></span>    <span style="color:#60a0b0;font-style:italic">// If refs == 0, delete from map
-</span><span style="color:#60a0b0;font-style:italic"></span>}</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">type</span> FileSeqId <span style="color:#902000">uint64</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">type</span> fileSeqRef <span style="color:#007020;font-weight:bold">struct</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#666">*</span>fileseq.FileSequence
+</span></span><span style="display:flex;"><span>    refs <span style="color:#902000">uint32</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">type</span> fileSeqMap <span style="color:#007020;font-weight:bold">struct</span> {
+</span></span><span style="display:flex;"><span>    lock <span style="color:#666">*</span>sync.RWMutex
+</span></span><span style="display:flex;"><span>    m    <span style="color:#007020;font-weight:bold">map</span>[FileSeqId]<span style="color:#666">*</span>fileSeqRef
+</span></span><span style="display:flex;"><span>    rand idMaker
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">type</span> idMaker <span style="color:#007020;font-weight:bold">interface</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#06287e">Uint64</span>() <span style="color:#902000">uint64</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">func</span> (m <span style="color:#666">*</span>frameSetMap) <span style="color:#06287e">Incref</span>(id FrameSetId) {
+</span></span><span style="display:flex;"><span>    <span style="color:#60a0b0;font-style:italic">// Inc refs
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">func</span> (m <span style="color:#666">*</span>frameSetMap) <span style="color:#06287e">Decref</span>(id FrameSetId) {
+</span></span><span style="display:flex;"><span>    <span style="color:#60a0b0;font-style:italic">// Dec refs
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"></span>    <span style="color:#60a0b0;font-style:italic">// If refs == 0, delete from map
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"></span>}</span></span></code></pre></div>
 <p>Now when C++ wants to create a <code>FileSequence</code>, they can call a <code>New</code> function which will create an instance, add it to the map, and return a uint64 id handle</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#60a0b0;font-style:italic">//export FileSequence_New
-</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">func</span> <span style="color:#06287e">FileSequence_New</span>(frange <span style="color:#666">*</span>C.char) (FileSeqId, Error) {
-    fs, e <span style="color:#666">:=</span> fileseq.<span style="color:#06287e">NewFileSequence</span>(C.<span style="color:#06287e">GoString</span>(frange))
-    <span style="color:#007020;font-weight:bold">if</span> e <span style="color:#666">!=</span> <span style="color:#007020;font-weight:bold">nil</span> {
-        <span style="color:#60a0b0;font-style:italic">// err string is freed by caller
-</span><span style="color:#60a0b0;font-style:italic"></span>        <span style="color:#007020;font-weight:bold">return</span> <span style="color:#40a070">0</span>, C.<span style="color:#06287e">CString</span>(e.<span style="color:#06287e">Error</span>())
-    }
-
-    id <span style="color:#666">:=</span> sFileSeqs.<span style="color:#06287e">Add</span>(fs)
-    <span style="color:#007020;font-weight:bold">return</span> id, <span style="color:#007020;font-weight:bold">nil</span>
-
-}
-
-<span style="color:#60a0b0;font-style:italic">//export FileSequence_Dirname
-</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">func</span> <span style="color:#06287e">FileSequence_Dirname</span>(id FileSeqId) <span style="color:#666">*</span>C.char {
-    fs, ok <span style="color:#666">:=</span> sFileSeqs.<span style="color:#06287e">Get</span>(id)
-    <span style="color:#60a0b0;font-style:italic">// caller must free string
-</span><span style="color:#60a0b0;font-style:italic"></span>    <span style="color:#007020;font-weight:bold">if</span> !ok {
-        <span style="color:#007020;font-weight:bold">return</span> C.<span style="color:#06287e">CString</span>(<span style="color:#4070a0">&#34;&#34;</span>)
-    }
-    <span style="color:#007020;font-weight:bold">return</span> C.<span style="color:#06287e">CString</span>(fs.<span style="color:#06287e">Dirname</span>())
-}</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">//export FileSequence_New
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">func</span> <span style="color:#06287e">FileSequence_New</span>(frange <span style="color:#666">*</span>C.char) (FileSeqId, Error) {
+</span></span><span style="display:flex;"><span>    fs, e <span style="color:#666">:=</span> fileseq.<span style="color:#06287e">NewFileSequence</span>(C.<span style="color:#06287e">GoString</span>(frange))
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">if</span> e <span style="color:#666">!=</span> <span style="color:#007020;font-weight:bold">nil</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#60a0b0;font-style:italic">// err string is freed by caller
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"></span>        <span style="color:#007020;font-weight:bold">return</span> <span style="color:#40a070">0</span>, C.<span style="color:#06287e">CString</span>(e.<span style="color:#06287e">Error</span>())
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    id <span style="color:#666">:=</span> sFileSeqs.<span style="color:#06287e">Add</span>(fs)
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">return</span> id, <span style="color:#007020;font-weight:bold">nil</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">//export FileSequence_Dirname
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">func</span> <span style="color:#06287e">FileSequence_Dirname</span>(id FileSeqId) <span style="color:#666">*</span>C.char {
+</span></span><span style="display:flex;"><span>    fs, ok <span style="color:#666">:=</span> sFileSeqs.<span style="color:#06287e">Get</span>(id)
+</span></span><span style="display:flex;"><span>    <span style="color:#60a0b0;font-style:italic">// caller must free string
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"></span>    <span style="color:#007020;font-weight:bold">if</span> !ok {
+</span></span><span style="display:flex;"><span>        <span style="color:#007020;font-weight:bold">return</span> C.<span style="color:#06287e">CString</span>(<span style="color:#4070a0">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">return</span> C.<span style="color:#06287e">CString</span>(fs.<span style="color:#06287e">Dirname</span>())
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>You can see here that because this is C++ calling Go, we aren&rsquo;t able to free the C string from Go, as the string needs to outlive the Go call. We just make sure that C++ always frees <code>*C.char</code> when it is returned. To make sure I always clean up the <code>char*</code> in C++, I made a helper <code>StringProxy</code> class which wraps it and cleans it up in the destructor:</p>
 <p><em>ref:</em> <a href="https://github.com/justinfx/gofileseq/blob/master/cpp/private/fileseq_p.h#L16"><em>github.com/justinfx/gofileseq/cpp/private/fileseq_p.h</em></a></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#007020;font-weight:bold">class</span> <span style="color:#0e84b5;font-weight:bold">StringProxy</span> {
-<span style="color:#007020;font-weight:bold">public</span><span style="color:#666">:</span>
-StringProxy(<span style="color:#902000">char</span><span style="color:#666">*</span> managed) <span style="color:#666">:</span> m_data(managed), m_str() {
-    <span style="color:#007020;font-weight:bold">if</span> (managed <span style="color:#666">!=</span> <span style="color:#007020">NULL</span>) {
-        m_str.assign(managed);
-    }
-}
-
-    <span style="color:#666">~</span>StringProxy() {
-        <span style="color:#007020;font-weight:bold">if</span> (m_data <span style="color:#666">!=</span> <span style="color:#007020">NULL</span>) {
-            free(m_data);
-            m_data <span style="color:#666">=</span> <span style="color:#007020">NULL</span>;
-        }
-    }
-    <span style="color:#60a0b0;font-style:italic">//...
-</span><span style="color:#60a0b0;font-style:italic"></span>
-};</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">class</span> <span style="color:#0e84b5;font-weight:bold">StringProxy</span> {
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">public</span><span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>StringProxy(<span style="color:#902000">char</span><span style="color:#666">*</span> managed) <span style="color:#666">:</span> m_data(managed), m_str() {
+</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">if</span> (managed <span style="color:#666">!=</span> <span style="color:#007020">NULL</span>) {
+</span></span><span style="display:flex;"><span>        m_str.assign(managed);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">~</span>StringProxy() {
+</span></span><span style="display:flex;"><span>        <span style="color:#007020;font-weight:bold">if</span> (m_data <span style="color:#666">!=</span> <span style="color:#007020">NULL</span>) {
+</span></span><span style="display:flex;"><span>            free(m_data);
+</span></span><span style="display:flex;"><span>            m_data <span style="color:#666">=</span> <span style="color:#007020">NULL</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#60a0b0;font-style:italic">//...
+</span></span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>};</span></span></code></pre></div>
 <p>This all ended up working fine! I created some benchmarks to compare fileseq between Python, C++, and Go. The test involved looping 100k times, creating a FileSequence, and calling 4 methods on it.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#007020;font-weight:bold">const</span> <span style="color:#902000">int</span> n <span style="color:#666">=</span> <span style="color:#40a070">100000</span>;
-
-<span style="color:#007020;font-weight:bold">for</span> (<span style="color:#902000">int</span> i<span style="color:#666">=</span><span style="color:#40a070">0</span>; i <span style="color:#666">&lt;</span> n; <span style="color:#666">++</span>i) {
-    fileseq<span style="color:#666">::</span>FileSequence fs(<span style="color:#4070a0">&#34;/path/to/file_name.1-100x2#.ext&#34;</span>);
-    str <span style="color:#666">=</span> fs.string();
-    str <span style="color:#666">=</span> fs.frameRange();
-    num <span style="color:#666">=</span> fs.start();
-    num <span style="color:#666">=</span> fs.end();
-}</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">const</span> <span style="color:#902000">int</span> n <span style="color:#666">=</span> <span style="color:#40a070">100000</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">for</span> (<span style="color:#902000">int</span> i<span style="color:#666">=</span><span style="color:#40a070">0</span>; i <span style="color:#666">&lt;</span> n; <span style="color:#666">++</span>i) {
+</span></span><span style="display:flex;"><span>    fileseq<span style="color:#666">::</span>FileSequence fs(<span style="color:#4070a0">&#34;/path/to/file_name.1-100x2#.ext&#34;</span>);
+</span></span><span style="display:flex;"><span>    str <span style="color:#666">=</span> fs.string();
+</span></span><span style="display:flex;"><span>    str <span style="color:#666">=</span> fs.frameRange();
+</span></span><span style="display:flex;"><span>    num <span style="color:#666">=</span> fs.start();
+</span></span><span style="display:flex;"><span>    num <span style="color:#666">=</span> fs.end();
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <pre><code>Python:  8.0s
     Go:  1.9s
    C++:  3.2s
@@ -281,8 +281,8 @@ StringProxy(<span style="color:#902000">char</span><span style="color:#666">*</s
 <p>There is a bit of overhead in the C++ lib from the fact that they are bindings on top of a Go layer, but I think the win for me is that it is still an acceptable level of performance and I don&rsquo;t have to maintain a 3rd standalone port of fileseq!</p>
 <p>It bothered me a little that I did have to rely on a mutex-guarded static map, so I <a href="https://groups.google.com/d/topic/golang-nuts/kLRFdycy0yc/discussion">asked on go-nuts about an alternative approach</a>. Ian Lance Taylor confirmed that the guarded map approach, with opaque ids as keys, was a completely viable approach to solving this problem. But that in some circumstance it can also be possible to malloc C memory to back Go objects, in which case they are not tracked by Go&rsquo;s GC.</p>
 <p>i.e., something like this:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#002070;font-weight:bold">fs</span> :<span style="color:#666">=</span> (<span style="color:#666">*</span>FileSequence)unsafe.Pointer(
-C.malloc(unsafe.Sizeof(FileSequence{})))</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#002070;font-weight:bold">fs</span> :<span style="color:#666">=</span> (<span style="color:#666">*</span>FileSequence)unsafe.Pointer(
+</span></span><span style="display:flex;"><span>C.malloc(unsafe.Sizeof(FileSequence{})))</span></span></code></pre></div>
 <p>I tried to apply this approach, but it became really tedious and confusing to figure out how to malloc all of the internal data nested in the types. For instance, <code>FrameSet</code> has methods that create more data along the way. And I had no idea how to cleanly get it to keep malloc&rsquo;ing memory so the entire structure continues to be 100% managed by C++. So I gave up on trying this route, although I bet it would work for less nested structs.</p>
 <p>If anyone has any suggestions on another way to improve the process of exporting instances of Go objects to C++, I would definitely welcome feedback! And for anyone wanting to make their Go libraries available to C++, I hope this overview has been useful!</p>
     

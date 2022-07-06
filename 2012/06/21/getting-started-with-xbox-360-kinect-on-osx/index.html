@@ -84,7 +84,7 @@ if (!doNotTrack) {
       
         <li><a href="/about/">About </a></li>
       
-        <li><a href="https://stackoverflow.com/cv/justinisrael">Developer Resume </a></li>
+        <li><a href="https://www.linkedin.com/in/justinisrael/">Developer Resume </a></li>
       
         <li><a href="/vfx-resume/">VFX Resume </a></li>
       
@@ -103,7 +103,7 @@ if (!doNotTrack) {
       <a class="social-icon" href="https://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
 
     <p class="footnote"> <br/>
-    &copy; 2021 Justin Israel. All rights reserved.</p>
+    &copy; 2022 Justin Israel. All rights reserved.</p>
     
   </div>
 </div>
@@ -156,10 +156,10 @@ brew install boost</pre>
 <h5 id="suggestion-virtualenv-environment"><strong>Suggestion: virtualenv Environment</strong></h5>
 <p>This is not a requirement. But I recommend using virtualenv to set up an environment that specifically uses python2.7 so that you don’t have to fight with mixed dependencies and versions.</p>
 <p>Create a virtualenv called “kinect”</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install virtualenv
-virtualenv --no-site-packages -p python2.7 kinect
-<span style="color:#007020">cd</span> kinect
-<span style="color:#007020">source</span> bin/activate</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install virtualenv
+</span></span><span style="display:flex;"><span>virtualenv --no-site-packages -p python2.7 kinect
+</span></span><span style="display:flex;"><span><span style="color:#007020">cd</span> kinect
+</span></span><span style="display:flex;"><span><span style="color:#007020">source</span> bin/activate</span></span></code></pre></div>
 <h5 id="install-libusb-patched-version"><strong>Install libusb (patched version)</strong></h5>
 <p>There is a special patched version of the libusb library, in the form of a homebrew formula.</p>
 <pre class="lang:default decode:true">git clone https://github.com/OpenKinect/libfreenect.git</pre>
@@ -183,12 +183,12 @@ virtualenv --no-site-packages -p python2.7 kinect
 </ol>
 <h5 id="install-pyopenni"><strong>Install PyOpenNI</strong></h5>
 <p>Be aware that on OSX, PyOpenNI requires a framework build of python 2.7+ and that you must build it for x86_64 specifically. Also, I was having major problems with cmake properly finding the python includes location. I had to suggest a fix, so <a href="https://github.com/jmendeth/PyOpenNI/issues/16#issuecomment-6515678">please see here for the necessary corrections</a>. I have referenced a patched fork of the repository below.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#007020">export</span> <span style="color:#bb60d5">CPPFLAGS</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;-arch x86_64&#34;</span>
-git clone git://github.com/justinfx/PyOpenNI.git
-mkdir PyOpenNI-build
-<span style="color:#007020">cd</span> PyOpenNI-build
-cmake -D <span style="color:#bb60d5">PYTHON_INCLUDE_DIR</span><span style="color:#666">=</span>/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Headers ../PyOpenNI
-make</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#007020">export</span> <span style="color:#bb60d5">CPPFLAGS</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;-arch x86_64&#34;</span>
+</span></span><span style="display:flex;"><span>git clone git://github.com/justinfx/PyOpenNI.git
+</span></span><span style="display:flex;"><span>mkdir PyOpenNI-build
+</span></span><span style="display:flex;"><span><span style="color:#007020">cd</span> PyOpenNI-build
+</span></span><span style="display:flex;"><span>cmake -D <span style="color:#bb60d5">PYTHON_INCLUDE_DIR</span><span style="color:#666">=</span>/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Headers ../PyOpenNI
+</span></span><span style="display:flex;"><span>make</span></span></code></pre></div>
 <p>copy the lib/openni.so module to the python2.7 site-packages</p>
 <h4 id="span-styletext-decoration-underlineexamplesspan"><span style="text-decoration: underline;">Examples</span></h4>
 <p>Once you have everything installed, you can try out the examples that are included both in the NITE source location that you downloaded and also in the PyOpenNI source location:</p>

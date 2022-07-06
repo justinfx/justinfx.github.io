@@ -84,7 +84,7 @@ if (!doNotTrack) {
       
         <li><a href="/about/">About </a></li>
       
-        <li><a href="https://stackoverflow.com/cv/justinisrael">Developer Resume </a></li>
+        <li><a href="https://www.linkedin.com/in/justinisrael/">Developer Resume </a></li>
       
         <li><a href="/vfx-resume/">VFX Resume </a></li>
       
@@ -103,7 +103,7 @@ if (!doNotTrack) {
       <a class="social-icon" href="https://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
 
     <p class="footnote"> <br/>
-    &copy; 2021 Justin Israel. All rights reserved.</p>
+    &copy; 2022 Justin Israel. All rights reserved.</p>
     
   </div>
 </div>
@@ -133,73 +133,73 @@ Here is my Python 2.7.2 test script using timeit for each encode and decode step
 </div>
 <br>
 Dependencies:
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install tabulate simplejson python-cjson ujson yajl msgpack-python
-</code></pre></div><p>Test:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007020;font-weight:bold">from</span> <span style="color:#0e84b5;font-weight:bold">timeit</span> <span style="color:#007020;font-weight:bold">import</span> timeit
-<span style="color:#007020;font-weight:bold">from</span> <span style="color:#0e84b5;font-weight:bold">tabulate</span> <span style="color:#007020;font-weight:bold">import</span> tabulate
-
-setup <span style="color:#666">=</span> <span style="color:#4070a0">&#39;&#39;&#39;
-</span><span style="color:#4070a0">  d = {
-</span><span style="color:#4070a0">    &#39;words&#39;: &#34;&#34;&#34;
-</span><span style="color:#4070a0">      Lorem ipsum dolor sit amet, consectetur adipiscing
-</span><span style="color:#4070a0">      elit. Mauris adipiscing adipiscing placerat.
-</span><span style="color:#4070a0">      Vestibulum augue augue,
-</span><span style="color:#4070a0">      pellentesque quis sollicitudin id, adipiscing.
-</span><span style="color:#4070a0">      &#34;&#34;&#34;,
-</span><span style="color:#4070a0">    &#39;list&#39;: range(100),
-</span><span style="color:#4070a0">    &#39;dict&#39;: dict((str(i),&#39;a&#39;) for i in xrange(100)),
-</span><span style="color:#4070a0">    &#39;int&#39;: 100,
-</span><span style="color:#4070a0">    &#39;float&#39;: 100.123456
-</span><span style="color:#4070a0">  }
-</span><span style="color:#4070a0">&#39;&#39;&#39;</span>
-
-setup_pickle    <span style="color:#666">=</span> <span style="color:#4070a0">&#39;</span><span style="color:#70a0d0;font-style:italic">%s</span><span style="color:#4070a0"> ; import cPickle ; src = cPickle.dumps(d)&#39;</span> <span style="color:#666">%</span> setup
-setup_pickle2   <span style="color:#666">=</span> <span style="color:#4070a0">&#39;</span><span style="color:#70a0d0;font-style:italic">%s</span><span style="color:#4070a0"> ; import cPickle ; src = cPickle.dumps(d, 2)&#39;</span> <span style="color:#666">%</span> setup
-setup_json      <span style="color:#666">=</span> <span style="color:#4070a0">&#39;</span><span style="color:#70a0d0;font-style:italic">%s</span><span style="color:#4070a0"> ; import json; src = json.dumps(d)&#39;</span> <span style="color:#666">%</span> setup
-setup_msgpack   <span style="color:#666">=</span> <span style="color:#4070a0">&#39;</span><span style="color:#70a0d0;font-style:italic">%s</span><span style="color:#4070a0"> ; src = msgpack.dumps(d)&#39;</span> <span style="color:#666">%</span> setup
-
-tests <span style="color:#666">=</span> [
-  <span style="color:#60a0b0;font-style:italic"># (title, setup, enc_test, dec_test)</span>
-  (<span style="color:#4070a0">&#39;pickle (ascii)&#39;</span>, <span style="color:#4070a0">&#39;import pickle; </span><span style="color:#70a0d0;font-style:italic">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_pickle, <span style="color:#4070a0">&#39;pickle.dumps(d, 0)&#39;</span>, <span style="color:#4070a0">&#39;pickle.loads(src)&#39;</span>),
-  (<span style="color:#4070a0">&#39;pickle (binary)&#39;</span>, <span style="color:#4070a0">&#39;import pickle; </span><span style="color:#70a0d0;font-style:italic">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_pickle2, <span style="color:#4070a0">&#39;pickle.dumps(d, 2)&#39;</span>, <span style="color:#4070a0">&#39;pickle.loads(src)&#39;</span>),
-  (<span style="color:#4070a0">&#39;cPickle (ascii)&#39;</span>, <span style="color:#4070a0">&#39;import cPickle; </span><span style="color:#70a0d0;font-style:italic">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_pickle, <span style="color:#4070a0">&#39;cPickle.dumps(d, 0)&#39;</span>, <span style="color:#4070a0">&#39;cPickle.loads(src)&#39;</span>),
-  (<span style="color:#4070a0">&#39;cPickle (binary)&#39;</span>, <span style="color:#4070a0">&#39;import cPickle; </span><span style="color:#70a0d0;font-style:italic">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_pickle2, <span style="color:#4070a0">&#39;cPickle.dumps(d, 2)&#39;</span>, <span style="color:#4070a0">&#39;cPickle.loads(src)&#39;</span>),
-  (<span style="color:#4070a0">&#39;json&#39;</span>, <span style="color:#4070a0">&#39;import json; </span><span style="color:#70a0d0;font-style:italic">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_json, <span style="color:#4070a0">&#39;json.dumps(d)&#39;</span>, <span style="color:#4070a0">&#39;json.loads(src)&#39;</span>),
-  (<span style="color:#4070a0">&#39;simplejson-3.3.1&#39;</span>, <span style="color:#4070a0">&#39;import simplejson; </span><span style="color:#70a0d0;font-style:italic">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_json, <span style="color:#4070a0">&#39;simplejson.dumps(d)&#39;</span>, <span style="color:#4070a0">&#39;simplejson.loads(src)&#39;</span>),
-  (<span style="color:#4070a0">&#39;python-cjson-1.0.5&#39;</span>, <span style="color:#4070a0">&#39;import cjson; </span><span style="color:#70a0d0;font-style:italic">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_json, <span style="color:#4070a0">&#39;cjson.encode(d)&#39;</span>, <span style="color:#4070a0">&#39;cjson.decode(src)&#39;</span>),
-  (<span style="color:#4070a0">&#39;ujson-1.33&#39;</span>, <span style="color:#4070a0">&#39;import ujson; </span><span style="color:#70a0d0;font-style:italic">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_json, <span style="color:#4070a0">&#39;ujson.dumps(d)&#39;</span>, <span style="color:#4070a0">&#39;ujson.loads(src)&#39;</span>),
-  (<span style="color:#4070a0">&#39;yajl 0.3.5&#39;</span>, <span style="color:#4070a0">&#39;import yajl; </span><span style="color:#70a0d0;font-style:italic">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_json, <span style="color:#4070a0">&#39;yajl.dumps(d)&#39;</span>, <span style="color:#4070a0">&#39;yajl.loads(src)&#39;</span>),
-  (<span style="color:#4070a0">&#39;msgpack-python-0.3.0&#39;</span>, <span style="color:#4070a0">&#39;import msgpack; </span><span style="color:#70a0d0;font-style:italic">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_msgpack, <span style="color:#4070a0">&#39;msgpack.dumps(d)&#39;</span>, <span style="color:#4070a0">&#39;msgpack.loads(src)&#39;</span>),
-]
-
-loops <span style="color:#666">=</span> <span style="color:#40a070">15000</span>
-enc_table <span style="color:#666">=</span> []
-dec_table <span style="color:#666">=</span> []
-
-<span style="color:#007020">print</span> <span style="color:#4070a0">&#34;Running tests (</span><span style="color:#70a0d0;font-style:italic">%d</span><span style="color:#4070a0"> loops each)&#34;</span> <span style="color:#666">%</span> loops
-
-<span style="color:#007020;font-weight:bold">for</span> title, mod, enc, dec <span style="color:#007020;font-weight:bold">in</span> tests:
-    <span style="color:#007020">print</span> title
-
-    <span style="color:#007020">print</span> <span style="color:#4070a0">&#34;  [Encode]&#34;</span>, enc 
-    result <span style="color:#666">=</span> timeit(enc, mod, number<span style="color:#666">=</span>loops)
-    enc_table<span style="color:#666">.</span>append([title, result])
-
-    <span style="color:#007020">print</span> <span style="color:#4070a0">&#34;  [Decode]&#34;</span>, dec 
-    result <span style="color:#666">=</span> timeit(dec, mod, number<span style="color:#666">=</span>loops)
-    dec_table<span style="color:#666">.</span>append([title, result])
-
-enc_table<span style="color:#666">.</span>sort(key<span style="color:#666">=</span><span style="color:#007020;font-weight:bold">lambda</span> x: x[<span style="color:#40a070">1</span>])
-enc_table<span style="color:#666">.</span>insert(<span style="color:#40a070">0</span>, [<span style="color:#4070a0">&#39;Package&#39;</span>, <span style="color:#4070a0">&#39;Seconds&#39;</span>])
-
-dec_table<span style="color:#666">.</span>sort(key<span style="color:#666">=</span><span style="color:#007020;font-weight:bold">lambda</span> x: x[<span style="color:#40a070">1</span>])
-dec_table<span style="color:#666">.</span>insert(<span style="color:#40a070">0</span>, [<span style="color:#4070a0">&#39;Package&#39;</span>, <span style="color:#4070a0">&#39;Seconds&#39;</span>])
-
-<span style="color:#007020">print</span> <span style="color:#4070a0">&#34;</span><span style="color:#4070a0;font-weight:bold">\n</span><span style="color:#4070a0">Encoding Test (</span><span style="color:#70a0d0;font-style:italic">%d</span><span style="color:#4070a0"> loops)&#34;</span> <span style="color:#666">%</span> loops
-<span style="color:#007020">print</span> tabulate(enc_table, headers<span style="color:#666">=</span><span style="color:#4070a0">&#34;firstrow&#34;</span>)
-
-<span style="color:#007020">print</span> <span style="color:#4070a0">&#34;</span><span style="color:#4070a0;font-weight:bold">\n</span><span style="color:#4070a0">Decoding Test (</span><span style="color:#70a0d0;font-style:italic">%d</span><span style="color:#4070a0"> loops)&#34;</span> <span style="color:#666">%</span> loops
-<span style="color:#007020">print</span> tabulate(dec_table, headers<span style="color:#666">=</span><span style="color:#4070a0">&#34;firstrow&#34;</span>)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install tabulate simplejson python-cjson ujson yajl msgpack-python
+</span></span></code></pre></div><p>Test:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">from</span> <span style="color:#0e84b5;font-weight:bold">timeit</span> <span style="color:#007020;font-weight:bold">import</span> timeit
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">from</span> <span style="color:#0e84b5;font-weight:bold">tabulate</span> <span style="color:#007020;font-weight:bold">import</span> tabulate
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>setup <span style="color:#666">=</span> <span style="color:#4070a0">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0">  d = {
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0">    &#39;words&#39;: &#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0">      Lorem ipsum dolor sit amet, consectetur adipiscing
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0">      elit. Mauris adipiscing adipiscing placerat.
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0">      Vestibulum augue augue,
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0">      pellentesque quis sollicitudin id, adipiscing.
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0">      &#34;&#34;&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0">    &#39;list&#39;: range(100),
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0">    &#39;dict&#39;: dict((str(i),&#39;a&#39;) for i in xrange(100)),
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0">    &#39;int&#39;: 100,
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0">    &#39;float&#39;: 100.123456
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0">  }
+</span></span></span><span style="display:flex;"><span><span style="color:#4070a0">&#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>setup_pickle    <span style="color:#666">=</span> <span style="color:#4070a0">&#39;</span><span style="color:#70a0d0">%s</span><span style="color:#4070a0"> ; import cPickle ; src = cPickle.dumps(d)&#39;</span> <span style="color:#666">%</span> setup
+</span></span><span style="display:flex;"><span>setup_pickle2   <span style="color:#666">=</span> <span style="color:#4070a0">&#39;</span><span style="color:#70a0d0">%s</span><span style="color:#4070a0"> ; import cPickle ; src = cPickle.dumps(d, 2)&#39;</span> <span style="color:#666">%</span> setup
+</span></span><span style="display:flex;"><span>setup_json      <span style="color:#666">=</span> <span style="color:#4070a0">&#39;</span><span style="color:#70a0d0">%s</span><span style="color:#4070a0"> ; import json; src = json.dumps(d)&#39;</span> <span style="color:#666">%</span> setup
+</span></span><span style="display:flex;"><span>setup_msgpack   <span style="color:#666">=</span> <span style="color:#4070a0">&#39;</span><span style="color:#70a0d0">%s</span><span style="color:#4070a0"> ; src = msgpack.dumps(d)&#39;</span> <span style="color:#666">%</span> setup
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tests <span style="color:#666">=</span> [
+</span></span><span style="display:flex;"><span>  <span style="color:#60a0b0;font-style:italic"># (title, setup, enc_test, dec_test)</span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#4070a0">&#39;pickle (ascii)&#39;</span>, <span style="color:#4070a0">&#39;import pickle; </span><span style="color:#70a0d0">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_pickle, <span style="color:#4070a0">&#39;pickle.dumps(d, 0)&#39;</span>, <span style="color:#4070a0">&#39;pickle.loads(src)&#39;</span>),
+</span></span><span style="display:flex;"><span>  (<span style="color:#4070a0">&#39;pickle (binary)&#39;</span>, <span style="color:#4070a0">&#39;import pickle; </span><span style="color:#70a0d0">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_pickle2, <span style="color:#4070a0">&#39;pickle.dumps(d, 2)&#39;</span>, <span style="color:#4070a0">&#39;pickle.loads(src)&#39;</span>),
+</span></span><span style="display:flex;"><span>  (<span style="color:#4070a0">&#39;cPickle (ascii)&#39;</span>, <span style="color:#4070a0">&#39;import cPickle; </span><span style="color:#70a0d0">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_pickle, <span style="color:#4070a0">&#39;cPickle.dumps(d, 0)&#39;</span>, <span style="color:#4070a0">&#39;cPickle.loads(src)&#39;</span>),
+</span></span><span style="display:flex;"><span>  (<span style="color:#4070a0">&#39;cPickle (binary)&#39;</span>, <span style="color:#4070a0">&#39;import cPickle; </span><span style="color:#70a0d0">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_pickle2, <span style="color:#4070a0">&#39;cPickle.dumps(d, 2)&#39;</span>, <span style="color:#4070a0">&#39;cPickle.loads(src)&#39;</span>),
+</span></span><span style="display:flex;"><span>  (<span style="color:#4070a0">&#39;json&#39;</span>, <span style="color:#4070a0">&#39;import json; </span><span style="color:#70a0d0">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_json, <span style="color:#4070a0">&#39;json.dumps(d)&#39;</span>, <span style="color:#4070a0">&#39;json.loads(src)&#39;</span>),
+</span></span><span style="display:flex;"><span>  (<span style="color:#4070a0">&#39;simplejson-3.3.1&#39;</span>, <span style="color:#4070a0">&#39;import simplejson; </span><span style="color:#70a0d0">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_json, <span style="color:#4070a0">&#39;simplejson.dumps(d)&#39;</span>, <span style="color:#4070a0">&#39;simplejson.loads(src)&#39;</span>),
+</span></span><span style="display:flex;"><span>  (<span style="color:#4070a0">&#39;python-cjson-1.0.5&#39;</span>, <span style="color:#4070a0">&#39;import cjson; </span><span style="color:#70a0d0">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_json, <span style="color:#4070a0">&#39;cjson.encode(d)&#39;</span>, <span style="color:#4070a0">&#39;cjson.decode(src)&#39;</span>),
+</span></span><span style="display:flex;"><span>  (<span style="color:#4070a0">&#39;ujson-1.33&#39;</span>, <span style="color:#4070a0">&#39;import ujson; </span><span style="color:#70a0d0">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_json, <span style="color:#4070a0">&#39;ujson.dumps(d)&#39;</span>, <span style="color:#4070a0">&#39;ujson.loads(src)&#39;</span>),
+</span></span><span style="display:flex;"><span>  (<span style="color:#4070a0">&#39;yajl 0.3.5&#39;</span>, <span style="color:#4070a0">&#39;import yajl; </span><span style="color:#70a0d0">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_json, <span style="color:#4070a0">&#39;yajl.dumps(d)&#39;</span>, <span style="color:#4070a0">&#39;yajl.loads(src)&#39;</span>),
+</span></span><span style="display:flex;"><span>  (<span style="color:#4070a0">&#39;msgpack-python-0.3.0&#39;</span>, <span style="color:#4070a0">&#39;import msgpack; </span><span style="color:#70a0d0">%s</span><span style="color:#4070a0">&#39;</span> <span style="color:#666">%</span> setup_msgpack, <span style="color:#4070a0">&#39;msgpack.dumps(d)&#39;</span>, <span style="color:#4070a0">&#39;msgpack.loads(src)&#39;</span>),
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>loops <span style="color:#666">=</span> <span style="color:#40a070">15000</span>
+</span></span><span style="display:flex;"><span>enc_table <span style="color:#666">=</span> []
+</span></span><span style="display:flex;"><span>dec_table <span style="color:#666">=</span> []
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020">print</span> <span style="color:#4070a0">&#34;Running tests (</span><span style="color:#70a0d0">%d</span><span style="color:#4070a0"> loops each)&#34;</span> <span style="color:#666">%</span> loops
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">for</span> title, mod, enc, dec <span style="color:#007020;font-weight:bold">in</span> tests:
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">print</span> title
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">print</span> <span style="color:#4070a0">&#34;  [Encode]&#34;</span>, enc 
+</span></span><span style="display:flex;"><span>    result <span style="color:#666">=</span> timeit(enc, mod, number<span style="color:#666">=</span>loops)
+</span></span><span style="display:flex;"><span>    enc_table<span style="color:#666">.</span>append([title, result])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#007020">print</span> <span style="color:#4070a0">&#34;  [Decode]&#34;</span>, dec 
+</span></span><span style="display:flex;"><span>    result <span style="color:#666">=</span> timeit(dec, mod, number<span style="color:#666">=</span>loops)
+</span></span><span style="display:flex;"><span>    dec_table<span style="color:#666">.</span>append([title, result])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>enc_table<span style="color:#666">.</span>sort(key<span style="color:#666">=</span><span style="color:#007020;font-weight:bold">lambda</span> x: x[<span style="color:#40a070">1</span>])
+</span></span><span style="display:flex;"><span>enc_table<span style="color:#666">.</span>insert(<span style="color:#40a070">0</span>, [<span style="color:#4070a0">&#39;Package&#39;</span>, <span style="color:#4070a0">&#39;Seconds&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dec_table<span style="color:#666">.</span>sort(key<span style="color:#666">=</span><span style="color:#007020;font-weight:bold">lambda</span> x: x[<span style="color:#40a070">1</span>])
+</span></span><span style="display:flex;"><span>dec_table<span style="color:#666">.</span>insert(<span style="color:#40a070">0</span>, [<span style="color:#4070a0">&#39;Package&#39;</span>, <span style="color:#4070a0">&#39;Seconds&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020">print</span> <span style="color:#4070a0">&#34;</span><span style="color:#4070a0;font-weight:bold">\n</span><span style="color:#4070a0">Encoding Test (</span><span style="color:#70a0d0">%d</span><span style="color:#4070a0"> loops)&#34;</span> <span style="color:#666">%</span> loops
+</span></span><span style="display:flex;"><span><span style="color:#007020">print</span> tabulate(enc_table, headers<span style="color:#666">=</span><span style="color:#4070a0">&#34;firstrow&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020">print</span> <span style="color:#4070a0">&#34;</span><span style="color:#4070a0;font-weight:bold">\n</span><span style="color:#4070a0">Decoding Test (</span><span style="color:#70a0d0">%d</span><span style="color:#4070a0"> loops)&#34;</span> <span style="color:#666">%</span> loops
+</span></span><span style="display:flex;"><span><span style="color:#007020">print</span> tabulate(dec_table, headers<span style="color:#666">=</span><span style="color:#4070a0">&#34;firstrow&#34;</span>)</span></span></code></pre></div>
 <p>OUTPUT:</p>
 <pre><code>Running tests (15000 loops each)
 pickle (ascii)

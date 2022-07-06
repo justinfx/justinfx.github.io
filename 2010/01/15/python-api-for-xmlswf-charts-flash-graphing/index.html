@@ -84,7 +84,7 @@ if (!doNotTrack) {
       
         <li><a href="/about/">About </a></li>
       
-        <li><a href="https://stackoverflow.com/cv/justinisrael">Developer Resume </a></li>
+        <li><a href="https://www.linkedin.com/in/justinisrael/">Developer Resume </a></li>
       
         <li><a href="/vfx-resume/">VFX Resume </a></li>
       
@@ -103,7 +103,7 @@ if (!doNotTrack) {
       <a class="social-icon" href="https://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
 
     <p class="footnote"> <br/>
-    &copy; 2021 Justin Israel. All rights reserved.</p>
+    &copy; 2022 Justin Israel. All rights reserved.</p>
     
   </div>
 </div>
@@ -121,33 +121,33 @@ if (!doNotTrack) {
 <p>So, the thing is… I wanted to use Django for the site. I decided to write a python module that wraps around the API for SWF charts, so that the XML could easily be generated for me after just setting all my parameters. Thought I might post this here for any python fans wanting nice looking graphs in their site.</p>
 <p>Really, this doesn’t just apply to django. You could just call out from anything to python code that will generate your XML for you.</p>
 <p>Example:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">chart <span style="color:#666">=</span> SwfChart()
-
-<span style="color:#60a0b0;font-style:italic"># the data</span>
-chart<span style="color:#666">.</span>addRow( <span style="color:#4070a0">&#39;Person A&#39;</span>, <span style="color:#40a070">1</span>, <span style="color:#40a070">10</span>, <span style="color:#40a070">5.5</span> )
-chart<span style="color:#666">.</span>addRow( <span style="color:#4070a0">&#39;Person B&#39;</span>, <span style="color:#40a070">6</span>, <span style="color:#40a070">4.45</span>, <span style="color:#40a070">8</span> )
-chart<span style="color:#666">.</span>addColumnLabel( <span style="color:#4070a0">&#39;Day1&#39;</span>, <span style="color:#4070a0">&#39;Day2&#39;</span>, <span style="color:#4070a0">&#39;Day3&#39;</span> )
-
-<span style="color:#60a0b0;font-style:italic"># Extra graph settings</span>
-chart<span style="color:#666">.</span>addFilter(<span style="color:#4070a0">&#39;shadow&#39;</span>, <span style="color:#4070a0">&#39;low&#39;</span>, distance<span style="color:#666">=</span><span style="color:#40a070">2</span>, angle<span style="color:#666">=</span><span style="color:#40a070">45</span>, alpha<span style="color:#666">=</span><span style="color:#40a070">35</span>, blurX<span style="color:#666">=</span><span style="color:#40a070">5</span>, blurY<span style="color:#666">=</span><span style="color:#40a070">5</span>)
-chart<span style="color:#666">.</span>addFilter(<span style="color:#4070a0">&#39;shadow&#39;</span>, <span style="color:#4070a0">&#39;high&#39;</span>, distance<span style="color:#666">=</span><span style="color:#40a070">3</span>, angle<span style="color:#666">=</span><span style="color:#40a070">45</span>, alpha<span style="color:#666">=</span><span style="color:#40a070">35</span>, blurX<span style="color:#666">=</span><span style="color:#40a070">10</span>, blurY<span style="color:#666">=</span><span style="color:#40a070">10</span>)
-chart<span style="color:#666">.</span>addFilter(<span style="color:#4070a0">&#39;bevel&#39;</span>, <span style="color:#4070a0">&#39;bevel1&#39;</span>, strength<span style="color:#666">=</span><span style="color:#40a070">10</span>, quality<span style="color:#666">=</span><span style="color:#40a070">3</span>, distance<span style="color:#666">=</span><span style="color:#40a070">2</span>)
-chart<span style="color:#666">.</span>setChartBorder(top<span style="color:#666">=</span><span style="color:#40a070">1</span>, bottom<span style="color:#666">=</span><span style="color:#40a070">2</span>, left<span style="color:#666">=</span><span style="color:#40a070">0</span>, right<span style="color:#666">=</span><span style="color:#40a070">0</span>, color<span style="color:#666">=</span><span style="color:#4070a0">&#39;000000&#39;</span>)
-chart<span style="color:#666">.</span>setChartLabel(color<span style="color:#666">=</span><span style="color:#4070a0">&#39;000000&#39;</span>, alpha<span style="color:#666">=</span><span style="color:#40a070">80</span>, size<span style="color:#666">=</span><span style="color:#40a070">8</span>, position<span style="color:#666">=</span><span style="color:#4070a0">&#39;outside&#39;</span>, hide_zero<span style="color:#666">=</span><span style="color:#007020;font-weight:bold">True</span>)
-chart<span style="color:#666">.</span>setChartTransition(<span style="color:#007020">type</span><span style="color:#666">=</span><span style="color:#4070a0">&#39;scale&#39;</span>, delay<span style="color:#666">=</span><span style="color:#40a070">.5</span>, duration<span style="color:#666">=</span><span style="color:#40a070">.5</span>, order<span style="color:#666">=</span><span style="color:#4070a0">&#39;series&#39;</span>)
-chart<span style="color:#666">.</span>setChartRect(shadow<span style="color:#666">=</span><span style="color:#4070a0">&#39;high&#39;</span>)
-chart<span style="color:#666">.</span>setLegend(size<span style="color:#666">=</span><span style="color:#40a070">12</span>, alpha<span style="color:#666">=</span><span style="color:#40a070">90</span>, fill_alpha<span style="color:#666">=</span><span style="color:#40a070">30</span>)
-chart<span style="color:#666">.</span>setAxisTicks(category_ticks<span style="color:#666">=</span><span style="color:#007020;font-weight:bold">True</span>, value_ticks<span style="color:#666">=</span><span style="color:#007020;font-weight:bold">True</span>, minor_count<span style="color:#666">=</span><span style="color:#40a070">3</span>)
-chart<span style="color:#666">.</span>setContextMenu(about<span style="color:#666">=</span><span style="color:#007020;font-weight:bold">False</span>)
-
-<span style="color:#60a0b0;font-style:italic"># if you have the licensed version</span>
-chart<span style="color:#666">.</span>setLicense(<span style="color:#4070a0">&#39;license string&#39;</span>)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>chart <span style="color:#666">=</span> SwfChart()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"># the data</span>
+</span></span><span style="display:flex;"><span>chart<span style="color:#666">.</span>addRow( <span style="color:#4070a0">&#39;Person A&#39;</span>, <span style="color:#40a070">1</span>, <span style="color:#40a070">10</span>, <span style="color:#40a070">5.5</span> )
+</span></span><span style="display:flex;"><span>chart<span style="color:#666">.</span>addRow( <span style="color:#4070a0">&#39;Person B&#39;</span>, <span style="color:#40a070">6</span>, <span style="color:#40a070">4.45</span>, <span style="color:#40a070">8</span> )
+</span></span><span style="display:flex;"><span>chart<span style="color:#666">.</span>addColumnLabel( <span style="color:#4070a0">&#39;Day1&#39;</span>, <span style="color:#4070a0">&#39;Day2&#39;</span>, <span style="color:#4070a0">&#39;Day3&#39;</span> )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"># Extra graph settings</span>
+</span></span><span style="display:flex;"><span>chart<span style="color:#666">.</span>addFilter(<span style="color:#4070a0">&#39;shadow&#39;</span>, <span style="color:#4070a0">&#39;low&#39;</span>, distance<span style="color:#666">=</span><span style="color:#40a070">2</span>, angle<span style="color:#666">=</span><span style="color:#40a070">45</span>, alpha<span style="color:#666">=</span><span style="color:#40a070">35</span>, blurX<span style="color:#666">=</span><span style="color:#40a070">5</span>, blurY<span style="color:#666">=</span><span style="color:#40a070">5</span>)
+</span></span><span style="display:flex;"><span>chart<span style="color:#666">.</span>addFilter(<span style="color:#4070a0">&#39;shadow&#39;</span>, <span style="color:#4070a0">&#39;high&#39;</span>, distance<span style="color:#666">=</span><span style="color:#40a070">3</span>, angle<span style="color:#666">=</span><span style="color:#40a070">45</span>, alpha<span style="color:#666">=</span><span style="color:#40a070">35</span>, blurX<span style="color:#666">=</span><span style="color:#40a070">10</span>, blurY<span style="color:#666">=</span><span style="color:#40a070">10</span>)
+</span></span><span style="display:flex;"><span>chart<span style="color:#666">.</span>addFilter(<span style="color:#4070a0">&#39;bevel&#39;</span>, <span style="color:#4070a0">&#39;bevel1&#39;</span>, strength<span style="color:#666">=</span><span style="color:#40a070">10</span>, quality<span style="color:#666">=</span><span style="color:#40a070">3</span>, distance<span style="color:#666">=</span><span style="color:#40a070">2</span>)
+</span></span><span style="display:flex;"><span>chart<span style="color:#666">.</span>setChartBorder(top<span style="color:#666">=</span><span style="color:#40a070">1</span>, bottom<span style="color:#666">=</span><span style="color:#40a070">2</span>, left<span style="color:#666">=</span><span style="color:#40a070">0</span>, right<span style="color:#666">=</span><span style="color:#40a070">0</span>, color<span style="color:#666">=</span><span style="color:#4070a0">&#39;000000&#39;</span>)
+</span></span><span style="display:flex;"><span>chart<span style="color:#666">.</span>setChartLabel(color<span style="color:#666">=</span><span style="color:#4070a0">&#39;000000&#39;</span>, alpha<span style="color:#666">=</span><span style="color:#40a070">80</span>, size<span style="color:#666">=</span><span style="color:#40a070">8</span>, position<span style="color:#666">=</span><span style="color:#4070a0">&#39;outside&#39;</span>, hide_zero<span style="color:#666">=</span><span style="color:#007020;font-weight:bold">True</span>)
+</span></span><span style="display:flex;"><span>chart<span style="color:#666">.</span>setChartTransition(<span style="color:#007020">type</span><span style="color:#666">=</span><span style="color:#4070a0">&#39;scale&#39;</span>, delay<span style="color:#666">=</span><span style="color:#40a070">.5</span>, duration<span style="color:#666">=</span><span style="color:#40a070">.5</span>, order<span style="color:#666">=</span><span style="color:#4070a0">&#39;series&#39;</span>)
+</span></span><span style="display:flex;"><span>chart<span style="color:#666">.</span>setChartRect(shadow<span style="color:#666">=</span><span style="color:#4070a0">&#39;high&#39;</span>)
+</span></span><span style="display:flex;"><span>chart<span style="color:#666">.</span>setLegend(size<span style="color:#666">=</span><span style="color:#40a070">12</span>, alpha<span style="color:#666">=</span><span style="color:#40a070">90</span>, fill_alpha<span style="color:#666">=</span><span style="color:#40a070">30</span>)
+</span></span><span style="display:flex;"><span>chart<span style="color:#666">.</span>setAxisTicks(category_ticks<span style="color:#666">=</span><span style="color:#007020;font-weight:bold">True</span>, value_ticks<span style="color:#666">=</span><span style="color:#007020;font-weight:bold">True</span>, minor_count<span style="color:#666">=</span><span style="color:#40a070">3</span>)
+</span></span><span style="display:flex;"><span>chart<span style="color:#666">.</span>setContextMenu(about<span style="color:#666">=</span><span style="color:#007020;font-weight:bold">False</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"># if you have the licensed version</span>
+</span></span><span style="display:flex;"><span>chart<span style="color:#666">.</span>setLicense(<span style="color:#4070a0">&#39;license string&#39;</span>)</span></span></code></pre></div>
 <p>Now at this point, the object can be treated like a string to get the xml, or just call getXML() :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007020">print</span> chart
-
-<span style="color:#007020">print</span> chart<span style="color:#666">.</span>getXML()   <span style="color:#60a0b0;font-style:italic"># same thing</span>
-
-xml <span style="color:#666">=</span> <span style="color:#007020">str</span>(chart)   <span style="color:#60a0b0;font-style:italic"># or assign the XML string somewhere</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#007020">print</span> chart
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007020">print</span> chart<span style="color:#666">.</span>getXML()   <span style="color:#60a0b0;font-style:italic"># same thing</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>xml <span style="color:#666">=</span> <span style="color:#007020">str</span>(chart)   <span style="color:#60a0b0;font-style:italic"># or assign the XML string somewhere</span></span></span></code></pre></div>
 <p>You can download the swfcharts.py module and use it freely. If you find it helpful, post a comment or shoot me an email.</p>
 <h4 id="download-swfchartspyuploads201001swfchartspy_zip">Download <a href="/uploads/2010/01/swfcharts.py_.zip">swfcharts.py</a></h4>
 <p>Pydoc located here for convenience:<span style="color: #ffcc00;"><br /> <a href='/uploads/2010/01/swfcharts.html'>swfcharts python documentation</a></span></p>

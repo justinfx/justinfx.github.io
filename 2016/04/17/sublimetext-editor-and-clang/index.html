@@ -84,7 +84,7 @@ if (!doNotTrack) {
       
         <li><a href="/about/">About </a></li>
       
-        <li><a href="https://stackoverflow.com/cv/justinisrael">Developer Resume </a></li>
+        <li><a href="https://www.linkedin.com/in/justinisrael/">Developer Resume </a></li>
       
         <li><a href="/vfx-resume/">VFX Resume </a></li>
       
@@ -103,7 +103,7 @@ if (!doNotTrack) {
       <a class="social-icon" href="https://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
 
     <p class="footnote"> <br/>
-    &copy; 2021 Justin Israel. All rights reserved.</p>
+    &copy; 2022 Justin Israel. All rights reserved.</p>
     
   </div>
 </div>
@@ -116,11 +116,11 @@ if (!doNotTrack) {
 
     
     <p>My code editor of choice has been <a href="https://www.sublimetext.com">SublimeText</a> for a while now. It is blazing fast for searching and doing matching, replacements, and refactoring. I also love that it is very lightweight, so that I can use it as my default shell <code>$EDITOR</code>, and also have an alias <code>st</code> which can easily open files and folders in the current or new Sublime window:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#60a0b0;font-style:italic"># Add directory to current sublime</span>
-$ st -a /path/to/src
-<span style="color:#60a0b0;font-style:italic"># Open a new sublime window, with the current directory</span>
-$ st -n .
-</code></pre></div><p>Sublime is cross-platform, which means I can have the same development environment across Linux and OSX. It also has an amazing python-based plugin framework, which is enriched by the plugin manager and plugin community, <a href="https://packagecontrol.io/">PackageControl</a>. While it is not a full-fledged IDE, because of the availability of so many plugin options, you can get it pretty close to being like an IDE for a number of different languages. Currently I use it for Python, Go, Markdown editing, and C++. This post outlines some simple steps for configuration a SublimeText3 project for use with C++.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"># Add directory to current sublime</span>
+</span></span><span style="display:flex;"><span>$ st -a /path/to/src
+</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"># Open a new sublime window, with the current directory</span>
+</span></span><span style="display:flex;"><span>$ st -n .
+</span></span></code></pre></div><p>Sublime is cross-platform, which means I can have the same development environment across Linux and OSX. It also has an amazing python-based plugin framework, which is enriched by the plugin manager and plugin community, <a href="https://packagecontrol.io/">PackageControl</a>. While it is not a full-fledged IDE, because of the availability of so many plugin options, you can get it pretty close to being like an IDE for a number of different languages. Currently I use it for Python, Go, Markdown editing, and C++. This post outlines some simple steps for configuration a SublimeText3 project for use with C++.</p>
 <p>Before we get into the specifics of C++ configuration, let me first give a quick overview of my SublimeText3 setup, across all of my language&hellip;</p>
 <ul>
 <li><a href="https://packagecontrol.io/packages/Anaconda">Anaconda</a> - Python language Auto-complete, Goto Definition, and Documentation</li>
@@ -146,70 +146,70 @@ $ st -n .
 <p>There aren&rsquo;t any plugin settings to adjust, but you will want to set up either general clang settings, or project-specific clang settings. General settings may be include paths related to finding system libraries, however in my case I only set up project specific settings.</p>
 <p><code>Project -&gt; Edit Project</code></p>
 <p>If you don&rsquo;t already have a <code>settings</code> key, create one, and then under that create a <code>cc_include_options</code> list of flags to pass to clang. Example:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4070a0">&#34;settings&#34;</span><span style="">:</span> {
-	<span style="color:#062873;font-weight:bold">&#34;cc_include_options&#34;</span>: [
-		<span style="color:#4070a0">&#34;-I/path/to/some/library/include&#34;</span>
-	]
-}
-</code></pre></div><p>The setting is called &ldquo;cc_include_options&rdquo;, but it is a bit misleading. Really it seems to just be any compiler flags you want to pass to clang. I have put <code>-D</code> macro defines, as well as being able to disable warnings, etc, etc.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4070a0">&#34;settings&#34;</span><span style="">:</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#062873;font-weight:bold">&#34;cc_include_options&#34;</span>: [
+</span></span><span style="display:flex;"><span>		<span style="color:#4070a0">&#34;-I/path/to/some/library/include&#34;</span>
+</span></span><span style="display:flex;"><span>	]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The setting is called &ldquo;cc_include_options&rdquo;, but it is a bit misleading. Really it seems to just be any compiler flags you want to pass to clang. I have put <code>-D</code> macro defines, as well as being able to disable warnings, etc, etc.</p>
 <p>Once you have your basic includes entered for your given project, you should review your key mappings. There is only one I cared about:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-    <span style="color:#062873;font-weight:bold">&#34;command&#34;</span>: <span style="color:#4070a0">&#34;clang_goto_def&#34;</span>, <span style="color:#062873;font-weight:bold">&#34;keys&#34;</span>: [<span style="color:#4070a0">&#34;super+.&#34;</span>, <span style="color:#4070a0">&#34;super+g&#34;</span>],
-    <span style="color:#062873;font-weight:bold">&#34;context&#34;</span>: [{<span style="color:#062873;font-weight:bold">&#34;key&#34;</span>: <span style="color:#4070a0">&#34;selector&#34;</span>, <span style="color:#062873;font-weight:bold">&#34;operator&#34;</span>: <span style="color:#4070a0">&#34;equal&#34;</span>, <span style="color:#062873;font-weight:bold">&#34;operand&#34;</span>: <span style="color:#4070a0">&#34;source.c++&#34;</span>} ]
-}
-</code></pre></div><p>Adjust the &ldquo;keys&rdquo; sequence as needed. This gives you the ability to jump to definitions from a given symbol.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#062873;font-weight:bold">&#34;command&#34;</span>: <span style="color:#4070a0">&#34;clang_goto_def&#34;</span>, <span style="color:#062873;font-weight:bold">&#34;keys&#34;</span>: [<span style="color:#4070a0">&#34;super+.&#34;</span>, <span style="color:#4070a0">&#34;super+g&#34;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#062873;font-weight:bold">&#34;context&#34;</span>: [{<span style="color:#062873;font-weight:bold">&#34;key&#34;</span>: <span style="color:#4070a0">&#34;selector&#34;</span>, <span style="color:#062873;font-weight:bold">&#34;operator&#34;</span>: <span style="color:#4070a0">&#34;equal&#34;</span>, <span style="color:#062873;font-weight:bold">&#34;operand&#34;</span>: <span style="color:#4070a0">&#34;source.c++&#34;</span>} ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Adjust the &ldquo;keys&rdquo; sequence as needed. This gives you the ability to jump to definitions from a given symbol.</p>
 <p>At this point, you should have code completion, and the ability to navigate through C++ symbols. You will know your code completion is working if the completion popup has more than just names, and actually has type information on the right side.</p>
 <h2 id="a-nameswitch-file-deluxeswitch-file-deluxea"><a name="switch-file-deluxe">Switch File Deluxe</a></h2>
 <p>This is a pretty sweet and simple plugin that lets you switch between headers and source files. Before Sublime, I had been using Qt Creator for C++ Qt projects, and this functionality was built-in and mapped to the F4 key.</p>
 <p>Install <a href="https://packagecontrol.io/packages/Switch%20File%20Deluxe">Switch File Deluxe</a></p>
 <p>Once installed, all I had to do was map a key sequence:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{ 
-    <span style="color:#062873;font-weight:bold">&#34;command&#34;</span>: <span style="color:#4070a0">&#34;switch_file_deluxe&#34;</span>, <span style="color:#062873;font-weight:bold">&#34;keys&#34;</span>: [<span style="color:#4070a0">&#34;f4&#34;</span>], 
-    <span style="color:#062873;font-weight:bold">&#34;args&#34;</span>: {
-        <span style="color:#062873;font-weight:bold">&#34;extensions&#34;</span>: [
-            <span style="color:#4070a0">&#34;.cpp&#34;</span>, <span style="color:#4070a0">&#34;.cxx&#34;</span>, <span style="color:#4070a0">&#34;.cc&#34;</span>, <span style="color:#4070a0">&#34;.c&#34;</span>, <span style="color:#4070a0">&#34;Qt.cpp&#34;</span>, <span style="color:#4070a0">&#34;Qt.h&#34;</span>, 
-            <span style="color:#4070a0">&#34;.hpp&#34;</span>, <span style="color:#4070a0">&#34;.hxx&#34;</span>, <span style="color:#4070a0">&#34;.h&#34;</span>, <span style="color:#4070a0">&#34;_p.h&#34;</span>, <span style="color:#4070a0">&#34;_p_p.h&#34;</span>, <span style="color:#4070a0">&#34;.ipp&#34;</span>, 
-            <span style="color:#4070a0">&#34;.inl&#34;</span>, <span style="color:#4070a0">&#34;.m&#34;</span>, <span style="color:#4070a0">&#34;.mm&#34;</span>
-        ]
-    } 
-}
-</code></pre></div><p>From any C++ header or source file, when you hit F4 you will switch to the corresponding header or source. If the matching file is ambiguous, you should be presented with a choice of files. Once you select the file, future uses of the key will immediately switch between the previously selected files.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{ 
+</span></span><span style="display:flex;"><span>    <span style="color:#062873;font-weight:bold">&#34;command&#34;</span>: <span style="color:#4070a0">&#34;switch_file_deluxe&#34;</span>, <span style="color:#062873;font-weight:bold">&#34;keys&#34;</span>: [<span style="color:#4070a0">&#34;f4&#34;</span>], 
+</span></span><span style="display:flex;"><span>    <span style="color:#062873;font-weight:bold">&#34;args&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#062873;font-weight:bold">&#34;extensions&#34;</span>: [
+</span></span><span style="display:flex;"><span>            <span style="color:#4070a0">&#34;.cpp&#34;</span>, <span style="color:#4070a0">&#34;.cxx&#34;</span>, <span style="color:#4070a0">&#34;.cc&#34;</span>, <span style="color:#4070a0">&#34;.c&#34;</span>, <span style="color:#4070a0">&#34;Qt.cpp&#34;</span>, <span style="color:#4070a0">&#34;Qt.h&#34;</span>, 
+</span></span><span style="display:flex;"><span>            <span style="color:#4070a0">&#34;.hpp&#34;</span>, <span style="color:#4070a0">&#34;.hxx&#34;</span>, <span style="color:#4070a0">&#34;.h&#34;</span>, <span style="color:#4070a0">&#34;_p.h&#34;</span>, <span style="color:#4070a0">&#34;_p_p.h&#34;</span>, <span style="color:#4070a0">&#34;.ipp&#34;</span>, 
+</span></span><span style="display:flex;"><span>            <span style="color:#4070a0">&#34;.inl&#34;</span>, <span style="color:#4070a0">&#34;.m&#34;</span>, <span style="color:#4070a0">&#34;.mm&#34;</span>
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>    } 
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>From any C++ header or source file, when you hit F4 you will switch to the corresponding header or source. If the matching file is ambiguous, you should be presented with a choice of files. Once you select the file, future uses of the key will immediately switch between the previously selected files.</p>
 <h2 id="a-nameuncrustifyuncrustifya"><a name="uncrustify">Uncrustify</a></h2>
 <p>If you prefer your C++ source code to follow a particular style, then you can use the &ldquo;uncrustify&rdquo; tool to apply beautification based on a configuration file of rules.</p>
 <p>First I installed uncrustify via homebrew:  <code>brew install uncrustify</code></p>
 <p>Then, install <a href="https://packagecontrol.io/packages/Uncrustify">Uncrustify</a></p>
 <p>If your uncrustify binary is in a non-standard location, you can set the user settings for the plugin with <code>uncrustify_executable</code>. For setting up projects to match configs, I actually used the <code>uncrustify_config_by_filter</code> setting to set up a list of patterns:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-	<span style="color:#062873;font-weight:bold">&#34;uncrustify_filtering_rule&#34;</span>: <span style="color:#40a070">1</span>,
-	<span style="color:#062873;font-weight:bold">&#34;uncrustify_config_by_filter&#34;</span>: [
-		{<span style="color:#062873;font-weight:bold">&#34;/path/to/some/*/project&#34;</span>: <span style="color:#4070a0">&#34;/path/to/project/uncrustify.cfg&#34;</span>}
-	]	
-}
-
-<span style="">It</span> <span style="">helps</span> <span style="">to</span> <span style="">store</span> <span style="">your</span> <span style="">uncrustify.cfg</span> <span style="">within</span> <span style="">your</span> <span style="">project</span> <span style="">repo.</span> <span style="">Also,</span> <span style="">there</span> <span style="">is</span> <span style="">a</span> <span style="">tool</span> <span style="">I</span> <span style="">used</span> <span style="">for</span> <span style="">visually</span> <span style="">editing</span> <span style="">the</span> <span style="">rules</span> <span style="">for</span> <span style="">setting</span> <span style="">up</span> <span style="">an</span> <span style="">uncrustify</span> <span style="">config:</span> [<span style="">universalindent</span>]<span style="">(http://universalindent.sourceforge.net/).</span>
-</code></pre></div><h2 id="build-system">Build System</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#062873;font-weight:bold">&#34;uncrustify_filtering_rule&#34;</span>: <span style="color:#40a070">1</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#062873;font-weight:bold">&#34;uncrustify_config_by_filter&#34;</span>: [
+</span></span><span style="display:flex;"><span>		{<span style="color:#062873;font-weight:bold">&#34;/path/to/some/*/project&#34;</span>: <span style="color:#4070a0">&#34;/path/to/project/uncrustify.cfg&#34;</span>}
+</span></span><span style="display:flex;"><span>	]	
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="">It</span> <span style="">helps</span> <span style="">to</span> <span style="">store</span> <span style="">your</span> <span style="">uncrustify.cfg</span> <span style="">within</span> <span style="">your</span> <span style="">project</span> <span style="">repo.</span> <span style="">Also,</span> <span style="">there</span> <span style="">is</span> <span style="">a</span> <span style="">tool</span> <span style="">I</span> <span style="">used</span> <span style="">for</span> <span style="">visually</span> <span style="">editing</span> <span style="">the</span> <span style="">rules</span> <span style="">for</span> <span style="">setting</span> <span style="">up</span> <span style="">an</span> <span style="">uncrustify</span> <span style="">config:</span> [<span style="">universalindent</span>]<span style="">(http:</span><span style="color:#60a0b0;font-style:italic">//universalindent.sourceforge.net/).
+</span></span></span></code></pre></div><h2 id="build-system">Build System</h2>
 <p>On a per-project basis, you can set up your build commands. Going into <code>Project -&gt; Edit Project</code>, I added something like the following to work with my particular build system for the project:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#062873;font-weight:bold">&#34;build_systems&#34;</span>: [
-    {
-      <span style="color:#062873;font-weight:bold">&#34;file_regex&#34;</span>: <span style="color:#4070a0">&#34;(\\S*?):(\\d+):(\\d+): (error.*)&#34;</span>,
-      <span style="color:#062873;font-weight:bold">&#34;name&#34;</span>: <span style="color:#4070a0">&#34;Default &#39;Project&#39; Build&#34;</span>,
-      <span style="color:#062873;font-weight:bold">&#34;shell&#34;</span>: <span style="color:#007020;font-weight:bold">true</span>,
-      <span style="color:#062873;font-weight:bold">&#34;shell_cmd&#34;</span>: <span style="color:#4070a0">&#34;./\\$USER/scripts/build_cmd arg1 arg2&#34;</span>,
-      <span style="color:#062873;font-weight:bold">&#34;variants&#34;</span>: [
-        {
-          <span style="color:#062873;font-weight:bold">&#34;cmd&#34;</span>: [
-            <span style="color:#4070a0">&#34;./\\$USER/scripts/build_cmd arg3 arg4&#34;</span>
-          ],
-          <span style="color:#062873;font-weight:bold">&#34;name&#34;</span>: <span style="color:#4070a0">&#34;&#39;Project&#39; Build Debug&#34;</span>,
-          <span style="color:#062873;font-weight:bold">&#34;shell&#34;</span>: <span style="color:#007020;font-weight:bold">true</span>
-        }
-      ],
-      <span style="color:#062873;font-weight:bold">&#34;working_dir&#34;</span>: <span style="color:#4070a0">&#34;/path/to/project/root&#34;</span>
-    }
-  ]
-}
-</code></pre></div><p><code>file_regex</code> is a pattern specifying how to capture the filename, line number, column number, and error message from the output of the build command. This is useful to adapt to any kind of build system and have Sublime give you context about the errors in your view.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#062873;font-weight:bold">&#34;build_systems&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#062873;font-weight:bold">&#34;file_regex&#34;</span>: <span style="color:#4070a0">&#34;(\\S*?):(\\d+):(\\d+): (error.*)&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#062873;font-weight:bold">&#34;name&#34;</span>: <span style="color:#4070a0">&#34;Default &#39;Project&#39; Build&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#062873;font-weight:bold">&#34;shell&#34;</span>: <span style="color:#007020;font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#062873;font-weight:bold">&#34;shell_cmd&#34;</span>: <span style="color:#4070a0">&#34;./\\$USER/scripts/build_cmd arg1 arg2&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#062873;font-weight:bold">&#34;variants&#34;</span>: [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>          <span style="color:#062873;font-weight:bold">&#34;cmd&#34;</span>: [
+</span></span><span style="display:flex;"><span>            <span style="color:#4070a0">&#34;./\\$USER/scripts/build_cmd arg3 arg4&#34;</span>
+</span></span><span style="display:flex;"><span>          ],
+</span></span><span style="display:flex;"><span>          <span style="color:#062873;font-weight:bold">&#34;name&#34;</span>: <span style="color:#4070a0">&#34;&#39;Project&#39; Build Debug&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#062873;font-weight:bold">&#34;shell&#34;</span>: <span style="color:#007020;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      ],
+</span></span><span style="display:flex;"><span>      <span style="color:#062873;font-weight:bold">&#34;working_dir&#34;</span>: <span style="color:#4070a0">&#34;/path/to/project/root&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><code>file_regex</code> is a pattern specifying how to capture the filename, line number, column number, and error message from the output of the build command. This is useful to adapt to any kind of build system and have Sublime give you context about the errors in your view.</p>
 <p>You specify the default build command, and then optionally a number of variants for the build system, such as debug builds or different options. Once this is entered you can now set your build system selection and use your build hotkey.</p>
 <h2 id="wrapping-up">Wrapping up</h2>
 <p>I don&rsquo;t do much debugging from within my editor (I am primarily an Editor+Terminal kind of developer), so I didn&rsquo;t go as far as to investigate Sublime options for debugging. But with a pretty minimal amount of configuration, I have a pretty lightweight and capable editor for working on C++ projects. And it is the same editor I use for working on Python and Go projects.</p>
