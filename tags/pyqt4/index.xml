@@ -7,22 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Wed, 22 Mar 2017 22:39:43 +1300</lastBuildDate><atom:link href="http://justinfx.com/tags/pyqt4/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Mar 2017 22:39:43 +1300</lastBuildDate>
+    <atom:link href="http://justinfx.com/tags/pyqt4/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python Video Tutorials Released Free</title>
       <link>http://justinfx.com/2017/03/22/python-tutorials-released-free/</link>
       <pubDate>Wed, 22 Mar 2017 22:39:43 +1300</pubDate>
-      
       <guid>http://justinfx.com/2017/03/22/python-tutorials-released-free/</guid>
       <description>&lt;p&gt;In 2011 and 2012 I had released 3 commercial Python training tutorials, using Maya as a target platform.
 Now enjoy them free of charge!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Tutorial: PyQt4 UI Development for Maya</title>
       <link>http://justinfx.com/2012/10/12/pyqt4-for-maya/</link>
       <pubDate>Fri, 12 Oct 2012 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2012/10/12/pyqt4-for-maya/</guid>
       <description>&lt;h2 id=&#34;img-classalignnone-size-full-wp-image-525-titlepyqt4-for-maya-srcuploads2012101350054625_masterjpeg-alt-width800-height450-httpwwwcmivfxcomtutorialsview498pyqt4uidevelopmentformaya&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.com/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h1 id=&#34;pyqt4-ui-development-for-maya&#34;&gt;PyQt4 UI Development for Maya&lt;/h1&gt;
@@ -32,36 +30,29 @@ Now enjoy them free of charge!&lt;/p&gt;</description>
 This tutorial is about learning PyQt4 python bindings for the Qt Framework, and how to introduce new UI elements to Maya as a platform.
 &lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>Installing PyQt4 for Maya 2012&#43; (osx)</title>
       <link>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
       <pubDate>Thu, 10 Nov 2011 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
       <description>This is a follow up post to my previous one on Installing PyQt4 for Maya 2011
 Recently while putting together my next video tutorial for Python for Maya, I came to a section where I wanted to demo PyQt4 in Maya2012. But I was concerned that viewers would have to go through the complicated steps of building PyQt4. I noticed that other people have made available precompiled PyQt installers for windows (here) but I could not find any for OSX or linux.</description>
     </item>
-    
     <item>
       <title>AtomSplitter v1.2 update</title>
       <link>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</link>
       <pubDate>Tue, 11 May 2010 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2010/05/11/atomsplitter-v1-2-update/</guid>
       <description>&lt;p&gt;AtomSplitter (chanToFbx) has been updated to v1.2, available through cmivfx.com&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>PyQt4: phonon… and on… and on</title>
       <link>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</link>
       <pubDate>Fri, 19 Mar 2010 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</guid>
       <description>“App’ing up” PyQt… ugh.
 One of biggest problems with PyQt is distributing it in a stand-alone package. Even worse… wanting to make your Qt plugins still function (Phonon, jpeg, etc). At work I constantly had this battle, along with my co-worker Tory. She actually has a long-standing issue with this, and had to resort to workarounds or half fixes. Here is Tory’s original post regarding the issue .
 I would see an error similar to this when trying to package up and run an app using the Phonon module.</description>
     </item>
-    
   </channel>
 </rss>

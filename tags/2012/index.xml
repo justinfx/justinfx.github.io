@@ -7,16 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Thu, 10 Nov 2011 00:00:00 +0000</lastBuildDate><atom:link href="http://justinfx.com/tags/2012/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Nov 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://justinfx.com/tags/2012/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Installing PyQt4 for Maya 2012&#43; (osx)</title>
       <link>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
       <pubDate>Thu, 10 Nov 2011 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
       <description>This is a follow up post to my previous one on Installing PyQt4 for Maya 2011
 Recently while putting together my next video tutorial for Python for Maya, I came to a section where I wanted to demo PyQt4 in Maya2012. But I was concerned that viewers would have to go through the complicated steps of building PyQt4. I noticed that other people have made available precompiled PyQt installers for windows (here) but I could not find any for OSX or linux.</description>
     </item>
-    
   </channel>
 </rss>

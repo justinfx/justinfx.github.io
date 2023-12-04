@@ -7,17 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Fri, 15 Jan 2010 00:00:00 +0000</lastBuildDate><atom:link href="http://justinfx.com/tags/swfchart/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Jan 2010 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://justinfx.com/tags/swfchart/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python API for XML/SWF Charts (Flash Graphing)</title>
       <link>http://justinfx.com/2010/01/15/python-api-for-xmlswf-charts-flash-graphing/</link>
       <pubDate>Fri, 15 Jan 2010 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2010/01/15/python-api-for-xmlswf-charts-flash-graphing/</guid>
       <description>I had a project where I was designing a statistics reporting site, to track production stats. I wanted to have really nice graphs that pulled from the database and were somewhat live and interactive. XML/SWF Charts is this awesome flash-based app that lets you embed graphs in your pages which receive their data from XML. There are tons of graph types and ways to customize the look.
 http://www.maani.us/xml_charts/index.php
 So, the thing is… I wanted to use Django for the site.</description>
     </item>
-    
   </channel>
 </rss>

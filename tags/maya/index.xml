@@ -7,22 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Wed, 22 Mar 2017 22:39:43 +1300</lastBuildDate><atom:link href="http://justinfx.com/tags/maya/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Mar 2017 22:39:43 +1300</lastBuildDate>
+    <atom:link href="http://justinfx.com/tags/maya/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python Video Tutorials Released Free</title>
       <link>http://justinfx.com/2017/03/22/python-tutorials-released-free/</link>
       <pubDate>Wed, 22 Mar 2017 22:39:43 +1300</pubDate>
-      
       <guid>http://justinfx.com/2017/03/22/python-tutorials-released-free/</guid>
       <description>&lt;p&gt;In 2011 and 2012 I had released 3 commercial Python training tutorials, using Maya as a target platform.
 Now enjoy them free of charge!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Tutorial: PyQt4 UI Development for Maya</title>
       <link>http://justinfx.com/2012/10/12/pyqt4-for-maya/</link>
       <pubDate>Fri, 12 Oct 2012 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2012/10/12/pyqt4-for-maya/</guid>
       <description>&lt;h2 id=&#34;img-classalignnone-size-full-wp-image-525-titlepyqt4-for-maya-srcuploads2012101350054625_masterjpeg-alt-width800-height450-httpwwwcmivfxcomtutorialsview498pyqt4uidevelopmentformaya&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.com/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h1 id=&#34;pyqt4-ui-development-for-maya&#34;&gt;PyQt4 UI Development for Maya&lt;/h1&gt;
@@ -32,44 +30,36 @@ Now enjoy them free of charge!&lt;/p&gt;</description>
 This tutorial is about learning PyQt4 python bindings for the Qt Framework, and how to introduce new UI elements to Maya as a platform.
 &lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>Mixing PyQt4 widgets and Maya UI objects</title>
       <link>http://justinfx.com/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</link>
       <pubDate>Mon, 21 Nov 2011 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</guid>
       <description>&lt;p&gt;A question came up in the &lt;a href=&#34;http://groups.google.com/group/python_inside_maya&#34;&gt;Maya-Python mailing list&lt;/a&gt; that I thought was a really good topic, and should be reposted.&lt;/p&gt;
 &lt;p&gt;Someone asked how you can create maya UI objects and embed them within your main PyQt application. Specifically he wanted to create a modelPanel and embed it so that he would have a camera view within his own PyQt window.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Python for Maya Artists – Volume 2</title>
       <link>http://justinfx.com/2011/11/15/python-for-maya-artists-volume-2/</link>
       <pubDate>Tue, 15 Nov 2011 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2011/11/15/python-for-maya-artists-volume-2/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;&lt;img class=&#34;alignnone&#34; src=&#34;http://justinfx.com/uploads/2011/11/maya_python_vol2.jpg&#34; alt=&#34;&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Second video in the python for maya series, just released through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;!&lt;/p&gt;
 &lt;h3 id=&#34;python-for-maya--volume-2httpscmivfxcomstore328-python-for-maya-vol-02&#34;&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;Python For Maya – Volume 2&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;If you watched the first video, you now have a good grasp on Python. Sweet. Let’s plow through some more involved concepts like python juggernauts!&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Installing PyQt4 for Maya 2012&#43; (osx)</title>
       <link>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
       <pubDate>Thu, 10 Nov 2011 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
       <description>This is a follow up post to my previous one on Installing PyQt4 for Maya 2011
 Recently while putting together my next video tutorial for Python for Maya, I came to a section where I wanted to demo PyQt4 in Maya2012. But I was concerned that viewers would have to go through the complicated steps of building PyQt4. I noticed that other people have made available precompiled PyQt installers for windows (here) but I could not find any for OSX or linux.</description>
     </item>
-    
     <item>
       <title>Intro to Python for Maya Artists – Tutorial</title>
       <link>http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/</link>
       <pubDate>Sat, 08 Oct 2011 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://cmivfx.com/python-introduction-vol-01---maya&#34;&gt;&lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;http://justinfx.com/uploads/2011/10/1318089294_Python_Background_master.jpg&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Just released my first online video tutorial, through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;&lt;/p&gt;
@@ -77,26 +67,21 @@ Recently while putting together my next video tutorial for Python for Maya, I ca
 &lt;p&gt;&lt;em&gt;Amazing at Animation? Master of Modeling? Conquistador of Character Rigging?&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;But how is your Python?&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Installing PyQt for maya 2011 (OSX)</title>
       <link>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</link>
       <pubDate>Sat, 08 Jan 2011 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</guid>
       <description>Update: I am now hosting a built package for Maya2011: MyQt4.7.4-maya2011-x64-osx-10.6.pkg And for Maya 2012+, see: Installing pyqt4 for maya2012
 Personally, when trying to run PyQt from within Maya 2009 / 2010 using the pumpThread method, I never had much luck. The best I ever got was the ability to bring up a dialog but not without locking up the UI, even though the pumpThread tool is meant to address that.</description>
     </item>
-    
     <item>
       <title>Maya, and self-intersecting nurbsCurves</title>
       <link>http://justinfx.com/2010/08/09/maya-and-self-intersecting-nurbscurves/</link>
       <pubDate>Mon, 09 Aug 2010 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2010/08/09/maya-and-self-intersecting-nurbscurves/</guid>
       <description>This is a story about my journey in solving a problem at work involving curves. The solution seemed really simple at first, but because of a stupid Maya issue, this turned into me having to rewrite the tool 3 times before I discovered a surprising solution.
 The Problem: Because we rely heavily on the process of importing Illustrator .ai files into Maya as nurbsCurves, we constantly have to deal with curves that intersect themselves.</description>
     </item>
-    
   </channel>
 </rss>

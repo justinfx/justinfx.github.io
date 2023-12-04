@@ -7,49 +7,41 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Wed, 22 Mar 2017 22:39:43 +1300</lastBuildDate><atom:link href="http://justinfx.com/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Mar 2017 22:39:43 +1300</lastBuildDate>
+    <atom:link href="http://justinfx.com/categories/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python Video Tutorials Released Free</title>
       <link>http://justinfx.com/2017/03/22/python-tutorials-released-free/</link>
       <pubDate>Wed, 22 Mar 2017 22:39:43 +1300</pubDate>
-      
       <guid>http://justinfx.com/2017/03/22/python-tutorials-released-free/</guid>
       <description>&lt;p&gt;In 2011 and 2012 I had released 3 commercial Python training tutorials, using Maya as a target platform.
 Now enjoy them free of charge!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>C&#43;&#43; Bindings For A Go Library</title>
       <link>http://justinfx.com/2016/05/14/cpp-bindings-for-go/</link>
       <pubDate>Sat, 14 May 2016 03:53:48 +0000</pubDate>
-      
       <guid>http://justinfx.com/2016/05/14/cpp-bindings-for-go/</guid>
       <description>&lt;p&gt;This is an overview describing my approach to creating C++ bindings around a Go library.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>SublimeText Editor and Clang (C&#43;&#43;)</title>
       <link>http://justinfx.com/2016/04/17/sublimetext-editor-and-clang/</link>
       <pubDate>Sun, 17 Apr 2016 15:22:33 +1200</pubDate>
-      
       <guid>http://justinfx.com/2016/04/17/sublimetext-editor-and-clang/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Comparing performance of Qt smart pointer options</title>
       <link>http://justinfx.com/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</link>
       <pubDate>Sun, 07 Jun 2015 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2015/06/07/comparing-performance-of-qt-smart-pointer-options/</guid>
       <description>&lt;p&gt;There are a number of sources of information on the usage and behavioral differences of the many “smart pointer” options offered by Qt. But one thing I couldn’t find enough information on were the performance characteristics.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Tutorial: PyQt4 UI Development for Maya</title>
       <link>http://justinfx.com/2012/10/12/pyqt4-for-maya/</link>
       <pubDate>Fri, 12 Oct 2012 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2012/10/12/pyqt4-for-maya/</guid>
       <description>&lt;h2 id=&#34;img-classalignnone-size-full-wp-image-525-titlepyqt4-for-maya-srcuploads2012101350054625_masterjpeg-alt-width800-height450-httpwwwcmivfxcomtutorialsview498pyqt4uidevelopmentformaya&#34;&gt;&lt;a href=&#34;http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-525&#34; title=&#34;PyQt4 for Maya&#34; src=&#34;http://justinfx.com/uploads/2012/10/1350054625_Master.jpeg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;450&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h1 id=&#34;pyqt4-ui-development-for-maya&#34;&gt;PyQt4 UI Development for Maya&lt;/h1&gt;
@@ -59,30 +51,24 @@ Now enjoy them free of charge!&lt;/p&gt;</description>
 This tutorial is about learning PyQt4 python bindings for the Qt Framework, and how to introduce new UI elements to Maya as a platform.
 &lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>Python 2.7.2 serializer speed comparisons</title>
       <link>http://justinfx.com/2012/07/25/python-2-7-3-serializer-speed-comparisons/</link>
       <pubDate>Wed, 25 Jul 2012 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2012/07/25/python-2-7-3-serializer-speed-comparisons/</guid>
       <description>&lt;p&gt;In a recent python project where I was sending multiple messages per second of data over a basic socket, I had initially just grabbed the cPickle module to get the prototype proof-of-concept functioning properly. cPickle is awesome for easily serializing more complex python objects like custom classes, even though in my case I am only sending basic types.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Getting started with XBOX 360 Kinect on OSX</title>
       <link>http://justinfx.com/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</link>
       <pubDate>Thu, 21 Jun 2012 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/</guid>
       <description>A recent project of mine involves research and development with an XBOX 360 Kinect Sensor. Being a python guy, I started searching for python bindings to some OSX-supported framework. When you just get started looking into this area it can be a little confusing. There are a number of layers to the software stack to enable one to accomplish anything meaningful. This is just a short and general blog post outlining the basics of what I have discovered thus far, to help anyone else that might also be getting started.</description>
     </item>
-    
     <item>
       <title>Write My Code For Me</title>
       <link>http://justinfx.com/2012/04/14/write-my-code-for-me/</link>
       <pubDate>Sat, 14 Apr 2012 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2012/04/14/write-my-code-for-me/</guid>
       <description>Permalink – writemycode.net
 In the spirit of a very similar blog post, I decided to expand upon a specific area of that article…
@@ -90,44 +76,36 @@ Consider a question like this:
 I want to do this. Create 10000 files, (filename can be just combination of time and random number). File size should be 4k. And I want to time this. say how many seconds it will take.
 How can I do this on bash?</description>
     </item>
-    
     <item>
       <title>Mixing PyQt4 widgets and Maya UI objects</title>
       <link>http://justinfx.com/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</link>
       <pubDate>Mon, 21 Nov 2011 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2011/11/20/mixing-pyqt4-widgets-and-maya-ui-objects/</guid>
       <description>&lt;p&gt;A question came up in the &lt;a href=&#34;http://groups.google.com/group/python_inside_maya&#34;&gt;Maya-Python mailing list&lt;/a&gt; that I thought was a really good topic, and should be reposted.&lt;/p&gt;
 &lt;p&gt;Someone asked how you can create maya UI objects and embed them within your main PyQt application. Specifically he wanted to create a modelPanel and embed it so that he would have a camera view within his own PyQt window.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Python for Maya Artists – Volume 2</title>
       <link>http://justinfx.com/2011/11/15/python-for-maya-artists-volume-2/</link>
       <pubDate>Tue, 15 Nov 2011 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2011/11/15/python-for-maya-artists-volume-2/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;&lt;img class=&#34;alignnone&#34; src=&#34;http://justinfx.com/uploads/2011/11/maya_python_vol2.jpg&#34; alt=&#34;&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Second video in the python for maya series, just released through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;!&lt;/p&gt;
 &lt;h3 id=&#34;python-for-maya--volume-2httpscmivfxcomstore328-python-for-maya-vol-02&#34;&gt;&lt;a href=&#34;https://cmivfx.com/store/328-python-for-maya-vol-02&#34;&gt;Python For Maya – Volume 2&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;If you watched the first video, you now have a good grasp on Python. Sweet. Let’s plow through some more involved concepts like python juggernauts!&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Installing PyQt4 for Maya 2012&#43; (osx)</title>
       <link>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</link>
       <pubDate>Thu, 10 Nov 2011 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2011/11/09/installing-pyqt4-for-maya-2012-osx/</guid>
       <description>This is a follow up post to my previous one on Installing PyQt4 for Maya 2011
 Recently while putting together my next video tutorial for Python for Maya, I came to a section where I wanted to demo PyQt4 in Maya2012. But I was concerned that viewers would have to go through the complicated steps of building PyQt4. I noticed that other people have made available precompiled PyQt installers for windows (here) but I could not find any for OSX or linux.</description>
     </item>
-    
     <item>
       <title>Intro to Python for Maya Artists – Tutorial</title>
       <link>http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/</link>
       <pubDate>Sat, 08 Oct 2011 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2011/10/08/intro-to-python-for-maya-artists-tutorial/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://cmivfx.com/python-introduction-vol-01---maya&#34;&gt;&lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;http://justinfx.com/uploads/2011/10/1318089294_Python_Background_master.jpg&#34; width=&#34;60%&#34; height=&#34;60%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Just released my first online video tutorial, through &lt;a href=&#34;http://www.cmivfx.com&#34;&gt;cmiVFX&lt;/a&gt;&lt;/p&gt;
@@ -135,90 +113,73 @@ Recently while putting together my next video tutorial for Python for Maya, I ca
 &lt;p&gt;&lt;em&gt;Amazing at Animation? Master of Modeling? Conquistador of Character Rigging?&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;But how is your Python?&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Go language for python programmers</title>
       <link>http://justinfx.com/2011/07/28/go-language-for-python-programmers/</link>
       <pubDate>Thu, 28 Jul 2011 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2011/07/28/go-language-for-python-programmers/</guid>
       <description>&lt;h3 id=&#34;heading&#34;&gt;&lt;/h3&gt;
 &lt;h3 id=&#34;img-classalignleft-srchttpsbloggolangorggophergopherpng-alt-width116-height142-httpgolangorg-preface&#34;&gt;&lt;a href=&#34;http://golang.org&#34;&gt;&lt;img class=&#34;alignleft&#34; src=&#34;https://blog.golang.org/gopher/gopher.png&#34; alt=&#34;&#34; width=&#34;116&#34; height=&#34;142&#34; /&gt;&lt;/a&gt; Preface&lt;/h3&gt;
 &lt;p&gt;I’ve been programming in python for over 5 years now, and I love the language a lot. I would look for any opportunity to accomplish my coding tasks using python, as opposed to learning new languages. PyQt4 for user interfaces, Django for web design, etc… And when python just isn’t an option, I have done my share of php, javascript, objective-c and so on.&lt;/p&gt;
 &lt;p&gt;Recently I started thinking that I should probably expand my programming knowledge a bit to make myself more marketable.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Installing PyQt for maya 2011 (OSX)</title>
       <link>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</link>
       <pubDate>Sat, 08 Jan 2011 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2011/01/07/installing-pyqt-for-maya-2011-osx/</guid>
       <description>Update: I am now hosting a built package for Maya2011: MyQt4.7.4-maya2011-x64-osx-10.6.pkg And for Maya 2012+, see: Installing pyqt4 for maya2012
 Personally, when trying to run PyQt from within Maya 2009 / 2010 using the pumpThread method, I never had much luck. The best I ever got was the ability to bring up a dialog but not without locking up the UI, even though the pumpThread tool is meant to address that.</description>
     </item>
-    
     <item>
       <title>AtomSplitter source code released</title>
       <link>http://justinfx.com/2010/10/08/atomsplitter-source-code-released/</link>
       <pubDate>Fri, 08 Oct 2010 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2010/10/08/atomsplitter-source-code-released/</guid>
       <description>&lt;p&gt;We finally decided to release the source code for AtomSplitter, since we were getting some feedback that the application builds weren’t 100% working on every possible system.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Maya, and self-intersecting nurbsCurves</title>
       <link>http://justinfx.com/2010/08/09/maya-and-self-intersecting-nurbscurves/</link>
       <pubDate>Mon, 09 Aug 2010 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2010/08/09/maya-and-self-intersecting-nurbscurves/</guid>
       <description>This is a story about my journey in solving a problem at work involving curves. The solution seemed really simple at first, but because of a stupid Maya issue, this turned into me having to rewrite the tool 3 times before I discovered a surprising solution.
 The Problem: Because we rely heavily on the process of importing Illustrator .ai files into Maya as nurbsCurves, we constantly have to deal with curves that intersect themselves.</description>
     </item>
-    
     <item>
       <title>PyQt4: phonon… and on… and on</title>
       <link>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</link>
       <pubDate>Fri, 19 Mar 2010 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2010/03/18/pyqt4-phonon-and-on-and-on/</guid>
       <description>“App’ing up” PyQt… ugh.
 One of biggest problems with PyQt is distributing it in a stand-alone package. Even worse… wanting to make your Qt plugins still function (Phonon, jpeg, etc). At work I constantly had this battle, along with my co-worker Tory. She actually has a long-standing issue with this, and had to resort to workarounds or half fixes. Here is Tory’s original post regarding the issue .
 I would see an error similar to this when trying to package up and run an app using the Phonon module.</description>
     </item>
-    
     <item>
       <title>SouthPark: A crazy little interface. The TaskMonster.</title>
       <link>http://justinfx.com/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</link>
       <pubDate>Tue, 16 Mar 2010 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2010/03/16/southpark-a-crazy-little-interface-the-taskmonster/</guid>
       <description>I get to do a lot of interesting applications at SouthPark. This one in particular was the most challenging use of PyQt that I have experienced to date.
 The backstory….
 The art department wanted a tool to help them track assigned tasks, the progress, and to share media and notes associated with the tasks. Furthermore, they wanted to be able to skin the interface with custom graphics to make it their own.</description>
     </item>
-    
     <item>
       <title>PyQt: Overloading/Ignoring events on widgets</title>
       <link>http://justinfx.com/2010/03/10/pyqt-ignoring-events-on-widgets/</link>
       <pubDate>Wed, 10 Mar 2010 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2010/03/10/pyqt-ignoring-events-on-widgets/</guid>
       <description>You know when you have all these widgets laid out in your class, and you are hooking up all the connections, and you say “Aw dammit I have to subclass QLabel now just so make it ignore blahEvent”? You end up with all these little widget subclasses, where all they are doing is ignoring an event.
 I noticed I was doing this a few times, in more than one of my classes, and finally got annoyed for the last time.</description>
     </item>
-    
     <item>
       <title>Python API for XML/SWF Charts (Flash Graphing)</title>
       <link>http://justinfx.com/2010/01/15/python-api-for-xmlswf-charts-flash-graphing/</link>
       <pubDate>Fri, 15 Jan 2010 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2010/01/15/python-api-for-xmlswf-charts-flash-graphing/</guid>
       <description>I had a project where I was designing a statistics reporting site, to track production stats. I wanted to have really nice graphs that pulled from the database and were somewhat live and interactive. XML/SWF Charts is this awesome flash-based app that lets you embed graphs in your pages which receive their data from XML. There are tons of graph types and ways to customize the look.
 http://www.maani.us/xml_charts/index.php
 So, the thing is… I wanted to use Django for the site.</description>
     </item>
-    
   </channel>
 </rss>

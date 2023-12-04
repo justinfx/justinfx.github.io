@@ -7,15 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Tue, 12 Jan 2010 00:00:00 +0000</lastBuildDate><atom:link href="http://justinfx.com/tags/failure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Jan 2010 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://justinfx.com/tags/failure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Failed… hard</title>
       <link>http://justinfx.com/2010/01/11/failed-hard/</link>
       <pubDate>Tue, 12 Jan 2010 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/2010/01/11/failed-hard/</guid>
       <description>&lt;p&gt;I never thought I had known such a real sense of failure until today, when a system diagnostic became intent on showing me just how hard of a failure we will be experiencing together.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

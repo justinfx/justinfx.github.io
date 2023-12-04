@@ -7,57 +7,48 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Justin Israel</copyright>
-    <lastBuildDate>Wed, 09 May 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://justinfx.com/page/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 May 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://justinfx.com/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Developer Resume</title>
       <link>http://justinfx.com/developer-resume/</link>
       <pubDate>Wed, 09 May 2012 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/developer-resume/</guid>
       <description>linkedin.com/in/justinisrael/</description>
     </item>
-    
     <item>
       <title>VFX Resume</title>
       <link>http://justinfx.com/vfx-resume/</link>
       <pubDate>Wed, 07 Apr 2010 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/vfx-resume/</guid>
       <description>Direct Link: PDF</description>
     </item>
-    
     <item>
       <title>Short Films</title>
       <link>http://justinfx.com/short-films/</link>
       <pubDate>Fri, 26 Mar 2010 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/short-films/</guid>
       <description>These are a collection of short films I have made over the years…
 Out of Touch (2006) Synopsis:
 John is a social recluse who has devised a series of patterns to avoid contact with people. These patterns ensure John can live like a machine, without thought or question. That is… until the slightest unpredictable event throws his entire pattern out of balance. Only through this forced circumstance can John face his greatest fear… his own mind.</description>
     </item>
-    
     <item>
       <title>Visual FX Demo</title>
       <link>http://justinfx.com/visual-fx-demo/</link>
       <pubDate>Sun, 22 Nov 2009 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/visual-fx-demo/</guid>
       <description>Justin Israel
 Visual Effects Demo Reel 2008
 Shot Breakdown: PDF</description>
     </item>
-    
     <item>
       <title>About</title>
       <link>http://justinfx.com/about/</link>
       <pubDate>Thu, 12 Nov 2009 00:00:00 +0000</pubDate>
-      
       <guid>http://justinfx.com/about/</guid>
       <description>Justin Israel
 justinisrael@gmail.com
 Justin is a California-born and New Zealand based software developer / pipeline engineer who graduated from Cal State Long Beach (CSULB) with a B.A. degree in Film and Video production. He started his Visual FX career at Stan Winston Digital as a digital artist and then developed strong pipeline/programming skills at Sony Pictures Imageworks while working on Spiderman 3, I Am Legend, and The Watchmen. He has also spent 4+ years as a Senior Pipeline Developer on the award winning television series South Park, designing tools for Maya, Nuke, and general pipeline.</description>
     </item>
-    
   </channel>
 </rss>
