@@ -1,18 +1,1 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-      <title>JustinFX.com</title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://justinfx.com/categories/</link>
-    <language>en-us</language>
-    <author>Justin Israel</author>
-    <copyright>2026 Justin Israel</copyright>
-    <updated>2006-01-02 15:04:05 &#43;0000 UTC</updated>
-    
-    
-    
-    
-    
-    
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on JustinFX.com</title><link>http://justinfx.com/categories/</link><description>Recent content in Categories on JustinFX.com</description><generator>Hugo</generator><language>en-us</language><copyright>Justin Israel. All rights reserved.</copyright><lastBuildDate>Thu, 05 Jul 2018 14:19:25 +1200</lastBuildDate><atom:link href="http://justinfx.com/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>FX</title><link>http://justinfx.com/categories/fx/</link><pubDate>Thu, 05 Jul 2018 14:19:25 +1200</pubDate><guid>http://justinfx.com/categories/fx/</guid><description/></item><item><title>Code</title><link>http://justinfx.com/categories/code/</link><pubDate>Wed, 22 Mar 2017 22:39:43 +1300</pubDate><guid>http://justinfx.com/categories/code/</guid><description/></item><item><title>Random Stuff</title><link>http://justinfx.com/categories/random-stuff/</link><pubDate>Wed, 19 Dec 2012 00:00:00 +0000</pubDate><guid>http://justinfx.com/categories/random-stuff/</guid><description/></item></channel></rss>

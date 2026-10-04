@@ -1,250 +1,65 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-<head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-  
-
-  <title> SublimeText Editor and Clang (C&#43;&#43;)  &middot; JustinFX.com </title>
-
-  
-  <link rel="stylesheet" href="http://justinfx.com//css/poole.css">
-  <link rel="stylesheet" href="http://justinfx.com//css/syntax.css">
-  <link rel="stylesheet" href="http://justinfx.com//css/hyde.css">
-  <link rel="stylesheet" href="http://justinfx.com//css/font.pt-sans.css">
-  <link rel="stylesheet" href="http://justinfx.com//css/font.source-sans-pro.css">
-  <link rel="stylesheet" href="http://justinfx.com//css/fluidbox.min.css">
-
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
-
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-
-  
-  <link href='' rel="alternate" type="application/rss+xml" title="JustinFX.com" />
-
-  
-  <script src="http://justinfx.com//js/jquery.min.js"></script>
-  <script src="http://justinfx.com//js/jquery.ba-throttle-debounce.min.js"></script>
-  <script src="http://justinfx.com//js/imagesloaded.pkgd.min.js"></script>
-  <script src="http://justinfx.com//js/jquery.fluidbox.min.js"></script>
-
-  
-  
-
-
-  <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
-  <script>
-    WebFont.load({
-      google: {
-        families: ['Source Sans Pro']
-      }
-    });
-
-    $(function () {
-      $('a').fluidbox();
-    })
-  </script>
-
-
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0FB13KEJ8V"></script>
-      <script>
-        var doNotTrack = false;
-        if ( true ) {
-          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
-          var doNotTrack = (dnt == "1" || dnt == "yes");
-        }
-        if (!doNotTrack) {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-0FB13KEJ8V');
-        }
-      </script>
-
-</head>
-
-<body>
-
-  <div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <h1><a href="http://justinfx.com/">JustinFX.com</a></h1>
-      <p class="lead">
-       Coding, FX, And Just Random Stuff 
-      </p>
-    </div>
-
-
-
-    <ul class="sidebar-nav">
-      <li><a href="http://justinfx.com//blog">Posts</a></li>
+<!doctype html><html lang=en-us dir=ltr class=scroll-smooth data-default-appearance=light data-auto-appearance=true><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=theme-color content="#FFFFFF"><title>SublimeText Editor and Clang (C++) &#183; JustinFX.com</title><meta name=title content="SublimeText Editor and Clang (C++) &#183; JustinFX.com"><script type=text/javascript src=http://justinfx.com/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="></script><link type=text/css rel=stylesheet href=http://justinfx.com/css/main.bundle.min.c3059fc32f590ab2c3be7aa5270782891f8d0d745a055565bf608015f8c09775.css integrity="sha256-wwWfwy9ZCrLDvnqlJweCiR+NDXRaBVVlv2CAFfjAl3U="><script defer type=text/javascript id=script-bundle src=http://justinfx.com/js/main.bundle.min.262eb3f1955172e5b9527c1b44eac810ff0aab29d1e042952899c863c5c8a6a7.js integrity="sha256-Ji6z8ZVRcuW5UnwbROrIEP8KqynR4EKVKJnIY8XIpqc=" data-copy=Copy data-copied=Copied></script><meta name=description content="
       
-        <li><a href="/about/">About </a></li>
+        
       
-        <li><a href="https://www.linkedin.com/in/justinisrael/">Developer Resume </a></li>
-      
-        <li><a href="/vfx-resume/">VFX Resume </a></li>
-      
-        <li><a href="/visual-fx-demo/">Visual FX Demo </a></li>
-      
-        <li><a href="/short-films/">Short Films </a></li>
-      
-    </ul>
-      <a class="social-icon" href="mailto:justinisrael@gmail.com"><i class="fa fa-envelope-o"></i></a>&nbsp;&nbsp;
-      <a class="social-icon" href="https://www.youtube.com/c/JustinIsrael"><i class="fa fa-youtube-play"></i></a>&nbsp;&nbsp;
-      
-      <a class="social-icon" href="https://www.linkedin.com/in/justinisrael/"><i class="fa fa-linkedin-square"></i></a>&nbsp;&nbsp;
-      <a class="social-icon" href="https://github.com/justinfx"><i class="fa fa-github-square"></i></a>&nbsp;&nbsp;
-      <a class="social-icon" href="https://stackoverflow.com/users/496445/jdi"><i class="fa fa-stack-overflow"></i></a>&nbsp;&nbsp;
-      <a class="social-icon" href="https://www.facebook.com/justinisrael"><i class="fa fa-facebook-square"></i></a>&nbsp;&nbsp;
-      <a class="social-icon" href="https://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
-
-    <p class="footnote"> <br/>
-    &copy; 2026 Justin Israel. All rights reserved.</p>
-    
-  </div>
-</div>
-
-
-  <div class="content container">
-    <div class="post">
-    <h1 class="post-title">SublimeText Editor and Clang (C&#43;&#43;)</h1>
-    <span class="post-date">Apr 17, 2016</span>
-
-    
-    <p>My code editor of choice has been <a href="https://www.sublimetext.com">SublimeText</a> for a while now. It is blazing fast for searching and doing matching, replacements, and refactoring. I also love that it is very lightweight, so that I can use it as my default shell <code>$EDITOR</code>, and also have an alias <code>st</code> which can easily open files and folders in the current or new Sublime window:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"># Add directory to current sublime</span>
-</span></span><span style="display:flex;"><span>$ st -a /path/to/src
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic"># Open a new sublime window, with the current directory</span>
-</span></span><span style="display:flex;"><span>$ st -n .
-</span></span></code></pre></div><p>Sublime is cross-platform, which means I can have the same development environment across Linux and OSX. It also has an amazing python-based plugin framework, which is enriched by the plugin manager and plugin community, <a href="https://packagecontrol.io/">PackageControl</a>. While it is not a full-fledged IDE, because of the availability of so many plugin options, you can get it pretty close to being like an IDE for a number of different languages. Currently I use it for Python, Go, Markdown editing, and C++. This post outlines some simple steps for configuration a SublimeText3 project for use with C++.</p>
-<p>Before we get into the specifics of C++ configuration, let me first give a quick overview of my SublimeText3 setup, across all of my language&hellip;</p>
-<ul>
-<li><a href="https://packagecontrol.io/packages/Anaconda">Anaconda</a> - Python language Auto-complete, Goto Definition, and Documentation</li>
-<li><a href="https://packagecontrol.io/packages/Cython%2B">Cython+</a> - Cython language Syntax support</li>
-<li><a href="https://packagecontrol.io/packages/GoOracle">GoOracle</a> - Go language support for using &ldquo;Oracle&rdquo; tool</li>
-<li><a href="https://packagecontrol.io/packages/GoSublime">GoSublime</a> - IDE-like support for Go language</li>
-<li><a href="https://packagecontrol.io/packages/Markdown%20Preview">Markdown Preview</a> - Markdown highlighting and previewing</li>
-<li><a href="https://packagecontrol.io/packages/MayaSublime">MayaSublime</a> - Written by myself; Send Python/MEL code into Maya</li>
-<li><a href="https://packagecontrol.io/packages/Pretty%20JSON">PrettyJSON</a> - Reformatting and validating JSON</li>
-<li><a href="https://packagecontrol.io/packages/SideBarEnhancements">SideBarEnhancements</a> - Amp up the side bar and context menu</li>
-<li><a href="https://packagecontrol.io/packages/ThriftSyntax">ThriftSyntax</a> - Syntax highlighting for <a href="https://thrift.apache.org/">Apache Thrift</a> spec files</li>
-</ul>
-<p>And the ones we will be looking at today, for C++ support:</p>
-<ul>
-<li><a href="#clang-complete">Clang-Complete</a></li>
-<li><a href="#switch-file-deluxe">Switch File Deluxe</a></li>
-<li><a href="#uncrustify">Uncrustify</a></li>
-</ul>
-<p>These steps were performed on an OSX laptop, so you will need to look at the specific README files for Linux/Windows details. I also assume you have installed Package Control, which makes it trivial to install plugins.</p>
-<h2 id="clang-complete"><a name="clang-complete">Clang-Complete</a></h2>
-<p>OSX already comes with the clang compiler, and this plugin for SublimeText3 allows your source to be compiled on the fly and have diagnostic details made available.</p>
-<p>Install <a href="https://packagecontrol.io/packages/Clang-Complete">Clang-Complete</a></p>
-<p>There aren&rsquo;t any plugin settings to adjust, but you will want to set up either general clang settings, or project-specific clang settings. General settings may be include paths related to finding system libraries, however in my case I only set up project specific settings.</p>
-<p><code>Project -&gt; Edit Project</code></p>
-<p>If you don&rsquo;t already have a <code>settings</code> key, create one, and then under that create a <code>cc_include_options</code> list of flags to pass to clang. Example:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4070a0">&#34;settings&#34;</span><span style="">:</span> {
-</span></span><span style="display:flex;"><span>	<span style="color:#062873;font-weight:bold">&#34;cc_include_options&#34;</span>: [
-</span></span><span style="display:flex;"><span>		<span style="color:#4070a0">&#34;-I/path/to/some/library/include&#34;</span>
-</span></span><span style="display:flex;"><span>	]
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>The setting is called &ldquo;cc_include_options&rdquo;, but it is a bit misleading. Really it seems to just be any compiler flags you want to pass to clang. I have put <code>-D</code> macro defines, as well as being able to disable warnings, etc, etc.</p>
-<p>Once you have your basic includes entered for your given project, you should review your key mappings. There is only one I cared about:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#062873;font-weight:bold">&#34;command&#34;</span>: <span style="color:#4070a0">&#34;clang_goto_def&#34;</span>, <span style="color:#062873;font-weight:bold">&#34;keys&#34;</span>: [<span style="color:#4070a0">&#34;super+.&#34;</span>, <span style="color:#4070a0">&#34;super+g&#34;</span>],
-</span></span><span style="display:flex;"><span>    <span style="color:#062873;font-weight:bold">&#34;context&#34;</span>: [{<span style="color:#062873;font-weight:bold">&#34;key&#34;</span>: <span style="color:#4070a0">&#34;selector&#34;</span>, <span style="color:#062873;font-weight:bold">&#34;operator&#34;</span>: <span style="color:#4070a0">&#34;equal&#34;</span>, <span style="color:#062873;font-weight:bold">&#34;operand&#34;</span>: <span style="color:#4070a0">&#34;source.c++&#34;</span>} ]
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>Adjust the &ldquo;keys&rdquo; sequence as needed. This gives you the ability to jump to definitions from a given symbol.</p>
-<p>At this point, you should have code completion, and the ability to navigate through C++ symbols. You will know your code completion is working if the completion popup has more than just names, and actually has type information on the right side.</p>
-<h2 id="switch-file-deluxe"><a name="switch-file-deluxe">Switch File Deluxe</a></h2>
-<p>This is a pretty sweet and simple plugin that lets you switch between headers and source files. Before Sublime, I had been using Qt Creator for C++ Qt projects, and this functionality was built-in and mapped to the F4 key.</p>
-<p>Install <a href="https://packagecontrol.io/packages/Switch%20File%20Deluxe">Switch File Deluxe</a></p>
-<p>Once installed, all I had to do was map a key sequence:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{ 
-</span></span><span style="display:flex;"><span>    <span style="color:#062873;font-weight:bold">&#34;command&#34;</span>: <span style="color:#4070a0">&#34;switch_file_deluxe&#34;</span>, <span style="color:#062873;font-weight:bold">&#34;keys&#34;</span>: [<span style="color:#4070a0">&#34;f4&#34;</span>], 
-</span></span><span style="display:flex;"><span>    <span style="color:#062873;font-weight:bold">&#34;args&#34;</span>: {
-</span></span><span style="display:flex;"><span>        <span style="color:#062873;font-weight:bold">&#34;extensions&#34;</span>: [
-</span></span><span style="display:flex;"><span>            <span style="color:#4070a0">&#34;.cpp&#34;</span>, <span style="color:#4070a0">&#34;.cxx&#34;</span>, <span style="color:#4070a0">&#34;.cc&#34;</span>, <span style="color:#4070a0">&#34;.c&#34;</span>, <span style="color:#4070a0">&#34;Qt.cpp&#34;</span>, <span style="color:#4070a0">&#34;Qt.h&#34;</span>, 
-</span></span><span style="display:flex;"><span>            <span style="color:#4070a0">&#34;.hpp&#34;</span>, <span style="color:#4070a0">&#34;.hxx&#34;</span>, <span style="color:#4070a0">&#34;.h&#34;</span>, <span style="color:#4070a0">&#34;_p.h&#34;</span>, <span style="color:#4070a0">&#34;_p_p.h&#34;</span>, <span style="color:#4070a0">&#34;.ipp&#34;</span>, 
-</span></span><span style="display:flex;"><span>            <span style="color:#4070a0">&#34;.inl&#34;</span>, <span style="color:#4070a0">&#34;.m&#34;</span>, <span style="color:#4070a0">&#34;.mm&#34;</span>
-</span></span><span style="display:flex;"><span>        ]
-</span></span><span style="display:flex;"><span>    } 
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>From any C++ header or source file, when you hit F4 you will switch to the corresponding header or source. If the matching file is ambiguous, you should be presented with a choice of files. Once you select the file, future uses of the key will immediately switch between the previously selected files.</p>
-<h2 id="uncrustify"><a name="uncrustify">Uncrustify</a></h2>
-<p>If you prefer your C++ source code to follow a particular style, then you can use the &ldquo;uncrustify&rdquo; tool to apply beautification based on a configuration file of rules.</p>
-<p>First I installed uncrustify via homebrew:  <code>brew install uncrustify</code></p>
-<p>Then, install <a href="https://packagecontrol.io/packages/Uncrustify">Uncrustify</a></p>
-<p>If your uncrustify binary is in a non-standard location, you can set the user settings for the plugin with <code>uncrustify_executable</code>. For setting up projects to match configs, I actually used the <code>uncrustify_config_by_filter</code> setting to set up a list of patterns:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>	<span style="color:#062873;font-weight:bold">&#34;uncrustify_filtering_rule&#34;</span>: <span style="color:#40a070">1</span>,
-</span></span><span style="display:flex;"><span>	<span style="color:#062873;font-weight:bold">&#34;uncrustify_config_by_filter&#34;</span>: [
-</span></span><span style="display:flex;"><span>		{<span style="color:#062873;font-weight:bold">&#34;/path/to/some/*/project&#34;</span>: <span style="color:#4070a0">&#34;/path/to/project/uncrustify.cfg&#34;</span>}
-</span></span><span style="display:flex;"><span>	]	
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="">It</span> <span style="">helps</span> <span style="">to</span> <span style="">store</span> <span style="">your</span> <span style="">uncrustify.cfg</span> <span style="">within</span> <span style="">your</span> <span style="">project</span> <span style="">repo.</span> <span style="">Also,</span> <span style="">there</span> <span style="">is</span> <span style="">a</span> <span style="">tool</span> <span style="">I</span> <span style="">used</span> <span style="">for</span> <span style="">visually</span> <span style="">editing</span> <span style="">the</span> <span style="">rules</span> <span style="">for</span> <span style="">setting</span> <span style="">up</span> <span style="">an</span> <span style="">uncrustify</span> <span style="">config:</span> [<span style="">universalindent</span>]<span style="">(http:</span><span style="color:#60a0b0;font-style:italic">//universalindent.sourceforge.net/).
-</span></span></span></code></pre></div><h2 id="build-system">Build System</h2>
-<p>On a per-project basis, you can set up your build commands. Going into <code>Project -&gt; Edit Project</code>, I added something like the following to work with my particular build system for the project:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>  <span style="color:#062873;font-weight:bold">&#34;build_systems&#34;</span>: [
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>      <span style="color:#062873;font-weight:bold">&#34;file_regex&#34;</span>: <span style="color:#4070a0">&#34;(\\S*?):(\\d+):(\\d+): (error.*)&#34;</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#062873;font-weight:bold">&#34;name&#34;</span>: <span style="color:#4070a0">&#34;Default &#39;Project&#39; Build&#34;</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#062873;font-weight:bold">&#34;shell&#34;</span>: <span style="color:#007020;font-weight:bold">true</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#062873;font-weight:bold">&#34;shell_cmd&#34;</span>: <span style="color:#4070a0">&#34;./\\$USER/scripts/build_cmd arg1 arg2&#34;</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#062873;font-weight:bold">&#34;variants&#34;</span>: [
-</span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>          <span style="color:#062873;font-weight:bold">&#34;cmd&#34;</span>: [
-</span></span><span style="display:flex;"><span>            <span style="color:#4070a0">&#34;./\\$USER/scripts/build_cmd arg3 arg4&#34;</span>
-</span></span><span style="display:flex;"><span>          ],
-</span></span><span style="display:flex;"><span>          <span style="color:#062873;font-weight:bold">&#34;name&#34;</span>: <span style="color:#4070a0">&#34;&#39;Project&#39; Build Debug&#34;</span>,
-</span></span><span style="display:flex;"><span>          <span style="color:#062873;font-weight:bold">&#34;shell&#34;</span>: <span style="color:#007020;font-weight:bold">true</span>
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>      ],
-</span></span><span style="display:flex;"><span>      <span style="color:#062873;font-weight:bold">&#34;working_dir&#34;</span>: <span style="color:#4070a0">&#34;/path/to/project/root&#34;</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  ]
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><code>file_regex</code> is a pattern specifying how to capture the filename, line number, column number, and error message from the output of the build command. This is useful to adapt to any kind of build system and have Sublime give you context about the errors in your view.</p>
-<p>You specify the default build command, and then optionally a number of variants for the build system, such as debug builds or different options. Once this is entered you can now set your build system selection and use your build hotkey.</p>
-<h2 id="wrapping-up">Wrapping up</h2>
-<p>I don&rsquo;t do much debugging from within my editor (I am primarily an Editor+Terminal kind of developer), so I didn&rsquo;t go as far as to investigate Sublime options for debugging. But with a pretty minimal amount of configuration, I have a pretty lightweight and capable editor for working on C++ projects. And it is the same editor I use for working on Python and Go projects.</p>
-<p>Got any other recommendations for making SublimeText an even more capable solution for C++ projects? Let me know!</p>
-    
-
-     
-	
-    <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    if (window.location.hostname == "localhost") 
-        return;
-
-    var disqus_shortname = 'justinfx';
-    var disqus_title = 'SublimeText Editor and Clang (C\u002b\u002b)';
-    
-    var disqus_identifier = 'http:\/\/justinfx.com\/2016\/04\/17\/sublimetext-editor-and-clang\/';
-    var disqus_url = 'http:\/\/justinfx.com\/2016\/04\/17\/sublimetext-editor-and-clang\/';
-    
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the comments powered by <a href="http://disqus.com/?ref_noscript">Disqus.</a></noscript>
-</div>
-</div> 
-
-</body>w
-</html>
+    "><link rel=canonical href=http://justinfx.com/2016/04/17/sublimetext-editor-and-clang/><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><meta property="og:url" content="http://justinfx.com/2016/04/17/sublimetext-editor-and-clang/"><meta property="og:site_name" content="JustinFX.com"><meta property="og:title" content="SublimeText Editor and Clang (C++)"><meta property="og:description" content="Coding, FX, And Just Random Stuff"><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="blog"><meta property="article:published_time" content="2016-04-17T15:22:33+12:00"><meta property="article:modified_time" content="2016-04-17T15:22:33+12:00"><meta property="article:tag" content="C++"><meta property="article:tag" content="Sublimetext"><meta name=twitter:card content="summary"><meta name=twitter:title content="SublimeText Editor and Clang (C++)"><meta name=twitter:description content="Coding, FX, And Just Random Stuff"><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","articleSection":"Blogs","name":"SublimeText Editor and Clang (C\u002b\u002b)","headline":"SublimeText Editor and Clang (C\u002b\u002b)","inLanguage":"en-us","url":"http:\/\/justinfx.com\/2016\/04\/17\/sublimetext-editor-and-clang\/","author":{"@type":"Person","name":"Justin Israel"},"copyrightYear":"2016","dateCreated":"2016-04-17T15:22:33\u002b12:00","datePublished":"2016-04-17T15:22:33\u002b12:00","dateModified":"2016-04-17T15:22:33\u002b12:00","keywords":["c++","sublimetext"],"mainEntityOfPage":"true","wordCount":"1092"}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://justinfx.com/","name":"Justin Fx.com","position":1},{"@type":"ListItem","item":"http://justinfx.com/blog/","name":"Blogs","position":2},{"@type":"ListItem","item":"http://justinfx.com/categories/code/","name":"Code","position":3},{"@type":"ListItem","name":"Sublime Text Editor and Clang ( C )","position":4}]}</script><meta name=author content="Justin Israel"><link href=mailto:justinisrael@gmail.com rel=me><link href=https://github.com/justinfx rel=me><link href=https://www.linkedin.com/in/justinisrael/ rel=me><link href=https://stackoverflow.com/users/496445/jdi rel=me><link href=https://www.youtube.com/c/JustinIsrael rel=me><link href=https://www.facebook.com/justinisrael rel=me><link href=https://vimeo.com/justinisrael rel=me><script async src="https://www.googletagmanager.com/gtag/js?id=G-0FB13KEJ8V"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-0FB13KEJ8V")}</script></head><body class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"><div id=the-top class="absolute flex self-center"><a class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600" href=#main-content><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span>Skip to main content</a></div><header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden"><nav class="flex items-start justify-between sm:items-center"><div class="z-40 flex flex-row items-center"><a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" rel=me href=/>JustinFX.com</a></div><label id=menu-button for=menu-controller class="block sm:hidden"><input type=checkbox id=menu-controller class=hidden><div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"><span class="icon relative inline-block px-1 align-text-bottom"><svg viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416c17.7.0 32 14.33 32 32 0 17.7-14.3 32-32 32H32C14.33 128 0 113.7.0 96zM0 256c0-17.7 14.33-32 32-32H416c17.7.0 32 14.3 32 32s-14.3 32-32 32H32c-17.67.0-32-14.3-32-32zM416 448H32c-17.67.0-32-14.3-32-32s14.33-32 32-32H416c17.7.0 32 14.3 32 32s-14.3 32-32 32z"/></svg></span></div><div id=menu-wrapper class="invisible fixed inset-0 z-30 m-auto h-full w-full cursor-default overflow-auto bg-neutral-100/50 opacity-0 backdrop-blur-sm transition-opacity dark:bg-neutral-900/50"><ul class="mx-auto flex w-full max-w-7xl list-none flex-col overflow-visible px-6 py-6 text-end sm:px-14 sm:py-10 sm:pt-10 md:px-24 lg:px-32"><li class=mb-1><span class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"><span class="icon relative inline-block px-1 align-text-bottom"><svg viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75.0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75.0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75.0-45.25s32.75-12.5 45.25.0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25.0s12.5 32.75.0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></span></li><li class="group mb-1"><a href=/blog/ title=Blogs onclick=close_menu()><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">Posts</span></a></li><li class="group mb-1"><a href=/about/ title=About onclick=close_menu()><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">About</span></a></li><li class="group mb-1"><a href=https://www.linkedin.com/in/justinisrael/ title onclick=close_menu() rel="noopener noreferrer" target=_blank><span class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"><span class="icon relative inline-block px-1 align-text-bottom"><svg viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5.0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6.0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3.0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2.0 38.5 17.3 38.5 38.5.0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6.0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2.0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></span><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">Experience</span></a></li><li class="group mb-1"><a href=/vfx-resume/ title="VFX Resume" onclick=close_menu()><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">VFX Resume</span></a></li><li class="group mb-1"><a href=/visual-fx-demo/ title="Visual FX Demo" onclick=close_menu()><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">Visual FX Demo</span></a></li><li class="group mb-1"><a href=/short-films/ title="Short Films" onclick=close_menu()><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">Short Films</span></a></li></ul></div></label><ul class="hidden list-none flex-row text-end sm:flex"><li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0"><a href=/blog/ title=Blogs><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">Posts</span></a></li><li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0"><a href=/about/ title=About><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">About</span></a></li><li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0"><a href=https://www.linkedin.com/in/justinisrael/ title rel="noopener noreferrer" target=_blank><span class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"><span class="icon relative inline-block px-1 align-text-bottom"><svg viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5.0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6.0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3.0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2.0 38.5 17.3 38.5 38.5.0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6.0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2.0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></span><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">Experience</span></a></li><li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0"><a href=/vfx-resume/ title="VFX Resume"><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">VFX Resume</span></a></li><li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0"><a href=/visual-fx-demo/ title="Visual FX Demo"><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">Visual FX Demo</span></a></li><li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0"><a href=/short-films/ title="Short Films"><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">Short Films</span></a></li></ul></nav></header><div class="relative flex grow flex-col"><main id=main-content class=grow><article><header class=max-w-prose><h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">SublimeText Editor and Clang (C++)</h1><div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden"><div class="flex flex-row flex-wrap items-center"><time datetime="2016-04-17 15:22:33 +1200 NZST">Apr 17, 2016</time></div><div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400"><a href=http://justinfx.com/categories/code/ class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400">Code</a>
+<a href=http://justinfx.com/tags/c++/ class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400">C++</a>
+<a href=http://justinfx.com/tags/sublimetext/ class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400">Sublimetext</a></div></div></header><section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row"><div class="min-h-0 min-w-0 max-w-prose grow"><p>My code editor of choice has been <a href=https://www.sublimetext.com target=_blank rel=noreferrer>SublimeText</a> for a while now. It is blazing fast for searching and doing matching, replacements, and refactoring. I also love that it is very lightweight, so that I can use it as my default shell <code>$EDITOR</code>, and also have an alias <code>st</code> which can easily open files and folders in the current or new Sublime window:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=c1># Add directory to current sublime</span>
+</span></span><span class=line><span class=cl>$ st -a /path/to/src
+</span></span><span class=line><span class=cl><span class=c1># Open a new sublime window, with the current directory</span>
+</span></span><span class=line><span class=cl>$ st -n .
+</span></span></code></pre></div><p>Sublime is cross-platform, which means I can have the same development environment across Linux and OSX. It also has an amazing python-based plugin framework, which is enriched by the plugin manager and plugin community, <a href=https://packagecontrol.io/ target=_blank rel=noreferrer>PackageControl</a>. While it is not a full-fledged IDE, because of the availability of so many plugin options, you can get it pretty close to being like an IDE for a number of different languages. Currently I use it for Python, Go, Markdown editing, and C++. This post outlines some simple steps for configuration a SublimeText3 project for use with C++.</p><p>Before we get into the specifics of C++ configuration, let me first give a quick overview of my SublimeText3 setup, across all of my language&mldr;</p><ul><li><a href=https://packagecontrol.io/packages/Anaconda target=_blank rel=noreferrer>Anaconda</a> - Python language Auto-complete, Goto Definition, and Documentation</li><li><a href=https://packagecontrol.io/packages/Cython%2B target=_blank rel=noreferrer>Cython+</a> - Cython language Syntax support</li><li><a href=https://packagecontrol.io/packages/GoOracle target=_blank rel=noreferrer>GoOracle</a> - Go language support for using &ldquo;Oracle&rdquo; tool</li><li><a href=https://packagecontrol.io/packages/GoSublime target=_blank rel=noreferrer>GoSublime</a> - IDE-like support for Go language</li><li><a href=https://packagecontrol.io/packages/Markdown%20Preview target=_blank rel=noreferrer>Markdown Preview</a> - Markdown highlighting and previewing</li><li><a href=https://packagecontrol.io/packages/MayaSublime target=_blank rel=noreferrer>MayaSublime</a> - Written by myself; Send Python/MEL code into Maya</li><li><a href=https://packagecontrol.io/packages/Pretty%20JSON target=_blank rel=noreferrer>PrettyJSON</a> - Reformatting and validating JSON</li><li><a href=https://packagecontrol.io/packages/SideBarEnhancements target=_blank rel=noreferrer>SideBarEnhancements</a> - Amp up the side bar and context menu</li><li><a href=https://packagecontrol.io/packages/ThriftSyntax target=_blank rel=noreferrer>ThriftSyntax</a> - Syntax highlighting for <a href=https://thrift.apache.org/ target=_blank rel=noreferrer>Apache Thrift</a> spec files</li></ul><p>And the ones we will be looking at today, for C++ support:</p><ul><li><a href=#clang-complete>Clang-Complete</a></li><li><a href=#switch-file-deluxe>Switch File Deluxe</a></li><li><a href=#uncrustify>Uncrustify</a></li></ul><p>These steps were performed on an OSX laptop, so you will need to look at the specific README files for Linux/Windows details. I also assume you have installed Package Control, which makes it trivial to install plugins.</p><h2 id=clang-complete class="relative group"><a name=clang-complete>Clang-Complete</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#clang-complete aria-label=Anchor>#</a></span></h2><p>OSX already comes with the clang compiler, and this plugin for SublimeText3 allows your source to be compiled on the fly and have diagnostic details made available.</p><p>Install <a href=https://packagecontrol.io/packages/Clang-Complete target=_blank rel=noreferrer>Clang-Complete</a></p><p>There aren&rsquo;t any plugin settings to adjust, but you will want to set up either general clang settings, or project-specific clang settings. General settings may be include paths related to finding system libraries, however in my case I only set up project specific settings.</p><p><code>Project -> Edit Project</code></p><p>If you don&rsquo;t already have a <code>settings</code> key, create one, and then under that create a <code>cc_include_options</code> list of flags to pass to clang. Example:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=s2>&#34;settings&#34;</span><span class=err>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=nt>&#34;cc_include_options&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>		<span class=s2>&#34;-I/path/to/some/library/include&#34;</span>
+</span></span><span class=line><span class=cl>	<span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>The setting is called &ldquo;cc_include_options&rdquo;, but it is a bit misleading. Really it seems to just be any compiler flags you want to pass to clang. I have put <code>-D</code> macro defines, as well as being able to disable warnings, etc, etc.</p><p>Once you have your basic includes entered for your given project, you should review your key mappings. There is only one I cared about:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;command&#34;</span><span class=p>:</span> <span class=s2>&#34;clang_goto_def&#34;</span><span class=p>,</span> <span class=nt>&#34;keys&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;super+.&#34;</span><span class=p>,</span> <span class=s2>&#34;super+g&#34;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;context&#34;</span><span class=p>:</span> <span class=p>[{</span><span class=nt>&#34;key&#34;</span><span class=p>:</span> <span class=s2>&#34;selector&#34;</span><span class=p>,</span> <span class=nt>&#34;operator&#34;</span><span class=p>:</span> <span class=s2>&#34;equal&#34;</span><span class=p>,</span> <span class=nt>&#34;operand&#34;</span><span class=p>:</span> <span class=s2>&#34;source.c++&#34;</span><span class=p>}</span> <span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>Adjust the &ldquo;keys&rdquo; sequence as needed. This gives you the ability to jump to definitions from a given symbol.</p><p>At this point, you should have code completion, and the ability to navigate through C++ symbols. You will know your code completion is working if the completion popup has more than just names, and actually has type information on the right side.</p><h2 id=switch-file-deluxe class="relative group"><a name=switch-file-deluxe>Switch File Deluxe</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#switch-file-deluxe aria-label=Anchor>#</a></span></h2><p>This is a pretty sweet and simple plugin that lets you switch between headers and source files. Before Sublime, I had been using Qt Creator for C++ Qt projects, and this functionality was built-in and mapped to the F4 key.</p><p>Install <a href=https://packagecontrol.io/packages/Switch%20File%20Deluxe target=_blank rel=noreferrer>Switch File Deluxe</a></p><p>Once installed, all I had to do was map a key sequence:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span> 
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;command&#34;</span><span class=p>:</span> <span class=s2>&#34;switch_file_deluxe&#34;</span><span class=p>,</span> <span class=nt>&#34;keys&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;f4&#34;</span><span class=p>],</span> 
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;args&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nt>&#34;extensions&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;.cpp&#34;</span><span class=p>,</span> <span class=s2>&#34;.cxx&#34;</span><span class=p>,</span> <span class=s2>&#34;.cc&#34;</span><span class=p>,</span> <span class=s2>&#34;.c&#34;</span><span class=p>,</span> <span class=s2>&#34;Qt.cpp&#34;</span><span class=p>,</span> <span class=s2>&#34;Qt.h&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;.hpp&#34;</span><span class=p>,</span> <span class=s2>&#34;.hxx&#34;</span><span class=p>,</span> <span class=s2>&#34;.h&#34;</span><span class=p>,</span> <span class=s2>&#34;_p.h&#34;</span><span class=p>,</span> <span class=s2>&#34;_p_p.h&#34;</span><span class=p>,</span> <span class=s2>&#34;.ipp&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;.inl&#34;</span><span class=p>,</span> <span class=s2>&#34;.m&#34;</span><span class=p>,</span> <span class=s2>&#34;.mm&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span> 
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>From any C++ header or source file, when you hit F4 you will switch to the corresponding header or source. If the matching file is ambiguous, you should be presented with a choice of files. Once you select the file, future uses of the key will immediately switch between the previously selected files.</p><h2 id=uncrustify class="relative group"><a name=uncrustify>Uncrustify</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#uncrustify aria-label=Anchor>#</a></span></h2><p>If you prefer your C++ source code to follow a particular style, then you can use the &ldquo;uncrustify&rdquo; tool to apply beautification based on a configuration file of rules.</p><p>First I installed uncrustify via homebrew: <code>brew install uncrustify</code></p><p>Then, install <a href=https://packagecontrol.io/packages/Uncrustify target=_blank rel=noreferrer>Uncrustify</a></p><p>If your uncrustify binary is in a non-standard location, you can set the user settings for the plugin with <code>uncrustify_executable</code>. For setting up projects to match configs, I actually used the <code>uncrustify_config_by_filter</code> setting to set up a list of patterns:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=nt>&#34;uncrustify_filtering_rule&#34;</span><span class=p>:</span> <span class=mi>1</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>	<span class=nt>&#34;uncrustify_config_by_filter&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>		<span class=p>{</span><span class=nt>&#34;/path/to/some/*/project&#34;</span><span class=p>:</span> <span class=s2>&#34;/path/to/project/uncrustify.cfg&#34;</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>	<span class=p>]</span>	
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=err>It</span> <span class=err>helps</span> <span class=err>to</span> <span class=err>store</span> <span class=err>your</span> <span class=err>uncrustify.cfg</span> <span class=err>within</span> <span class=err>your</span> <span class=err>project</span> <span class=err>repo.</span> <span class=err>Also,</span> <span class=err>there</span> <span class=err>is</span> <span class=err>a</span> <span class=err>tool</span> <span class=err>I</span> <span class=err>used</span> <span class=err>for</span> <span class=err>visually</span> <span class=err>editing</span> <span class=err>the</span> <span class=err>rules</span> <span class=err>for</span> <span class=err>setting</span> <span class=err>up</span> <span class=err>an</span> <span class=err>uncrustify</span> <span class=err>config:</span> <span class=p>[</span><span class=err>universalindent</span><span class=p>]</span><span class=err>(http:</span><span class=c1>//universalindent.sourceforge.net/).
+</span></span></span></code></pre></div><h2 id=build-system class="relative group">Build System <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#build-system aria-label=Anchor>#</a></span></h2><p>On a per-project basis, you can set up your build commands. Going into <code>Project -> Edit Project</code>, I added something like the following to work with my particular build system for the project:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;build_systems&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;file_regex&#34;</span><span class=p>:</span> <span class=s2>&#34;(\\S*?):(\\d+):(\\d+): (error.*)&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Default &#39;Project&#39; Build&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;shell&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;shell_cmd&#34;</span><span class=p>:</span> <span class=s2>&#34;./\\$USER/scripts/build_cmd arg1 arg2&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;variants&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>          <span class=nt>&#34;cmd&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;./\\$USER/scripts/build_cmd arg3 arg4&#34;</span>
+</span></span><span class=line><span class=cl>          <span class=p>],</span>
+</span></span><span class=line><span class=cl>          <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;&#39;Project&#39; Build Debug&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>          <span class=nt>&#34;shell&#34;</span><span class=p>:</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>      <span class=p>],</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;working_dir&#34;</span><span class=p>:</span> <span class=s2>&#34;/path/to/project/root&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p><code>file_regex</code> is a pattern specifying how to capture the filename, line number, column number, and error message from the output of the build command. This is useful to adapt to any kind of build system and have Sublime give you context about the errors in your view.</p><p>You specify the default build command, and then optionally a number of variants for the build system, such as debug builds or different options. Once this is entered you can now set your build system selection and use your build hotkey.</p><h2 id=wrapping-up class="relative group">Wrapping up <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#wrapping-up aria-label=Anchor>#</a></span></h2><p>I don&rsquo;t do much debugging from within my editor (I am primarily an Editor+Terminal kind of developer), so I didn&rsquo;t go as far as to investigate Sublime options for debugging. But with a pretty minimal amount of configuration, I have a pretty lightweight and capable editor for working on C++ projects. And it is the same editor I use for working on Python and Go projects.</p><p>Got any other recommendations for making SublimeText an even more capable solution for C++ projects? Let me know!</p></div></section><footer class="max-w-prose pt-8 print:hidden"><div class=pt-8><hr class="border-dotted border-neutral-300 dark:border-neutral-600"><div class="flex justify-between pt-3"><span><a class="group flex" href=http://justinfx.com/2015/11/08/switching-from-wordpress-to-hugo/><span class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"><span class="ltr:inline rtl:hidden">&larr;</span><span class="ltr:hidden rtl:inline">&rarr;</span></span>
+<span class="flex flex-col"><span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500">Switching from Wordpress to Hugo</span>
+<span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400"><time datetime="2015-11-08 09:32:37 +1300 NZDT">Nov 8, 2015</time>
+</span></span></a></span><span><a class="group flex text-right" href=http://justinfx.com/2016/05/14/cpp-bindings-for-go/><span class="flex flex-col"><span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500">C++ Bindings For A Go Library</span>
+<span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400"><time datetime="2016-05-14 03:53:48 +0000 +0000">May 14, 2016</time>
+</span></span><span class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"><span class="ltr:inline rtl:hidden">&rarr;</span><span class="ltr:hidden rtl:inline">&larr;</span></span></a></span></div></div><div class=pt-3><hr class="border-dotted border-neutral-300 dark:border-neutral-600"><div class=pt-3><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var t="justinfx",n="SublimeText Editor and Clang (C++)",s="http://justinfx.com/2016/04/17/sublimetext-editor-and-clang/",o="http://justinfx.com/2016/04/17/sublimetext-editor-and-clang/",e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script><noscript>Please enable JavaScript to view the comments powered by <a href=http://disqus.com/?ref_noscript>Disqus.</a></noscript></div></div></footer></article></main><div class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12" id=to-top hidden=true><a href=#the-top class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400" aria-label="Scroll to top" title="Scroll to top">&uarr;</a></div><footer class="py-10 print:hidden"><div class="flex items-center justify-between"><div><p class="text-sm text-neutral-500 dark:text-neutral-400">Justin Israel. All rights reserved.</p></div><div class="flex flex-row items-center"><div class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"><button id=appearance-switcher-0 type=button aria-label="appearance switcher"><div class="flex h-12 w-12 items-center justify-center dark:hidden" title="Switch to dark appearance"><span class="icon relative inline-block px-1 align-text-bottom"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M32 256C32 132.2 132.3 32 255.8 32c11.36.0 29.7 1.668 40.9 3.746 9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3 9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480 132.1 480 32 379.6 32 256z"/></svg></span></div><div class="hidden h-12 w-12 items-center justify-center dark:flex" title="Switch to light appearance"><span class="icon relative inline-block px-1 align-text-bottom"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02.0-95.1 42.98-95.1 95.1s41.2 96.9 95.1 96.9 95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347l-63.2-91.9 63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89 164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6 12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256 2.74 347.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7 19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109 109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69.0-127.1-57.31-127.1-127.1.0-70.69 57.31-127.1 127.1-127.1S383.1 186.2 383.1 256c0 70.7-56.4 127.1-127.1 127.1z"/></svg></span></div></button></div></div></div></footer></div></body></html>

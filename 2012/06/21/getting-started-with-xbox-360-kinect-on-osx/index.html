@@ -1,251 +1,29 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-<head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-  
-
-  <title> Getting started with XBOX 360 Kinect on OSX  &middot; JustinFX.com </title>
-
-  
-  <link rel="stylesheet" href="http://justinfx.com//css/poole.css">
-  <link rel="stylesheet" href="http://justinfx.com//css/syntax.css">
-  <link rel="stylesheet" href="http://justinfx.com//css/hyde.css">
-  <link rel="stylesheet" href="http://justinfx.com//css/font.pt-sans.css">
-  <link rel="stylesheet" href="http://justinfx.com//css/font.source-sans-pro.css">
-  <link rel="stylesheet" href="http://justinfx.com//css/fluidbox.min.css">
-
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
-
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-
-  
-  <link href='' rel="alternate" type="application/rss+xml" title="JustinFX.com" />
-
-  
-  <script src="http://justinfx.com//js/jquery.min.js"></script>
-  <script src="http://justinfx.com//js/jquery.ba-throttle-debounce.min.js"></script>
-  <script src="http://justinfx.com//js/imagesloaded.pkgd.min.js"></script>
-  <script src="http://justinfx.com//js/jquery.fluidbox.min.js"></script>
-
-  
-  
-
-
-  <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
-  <script>
-    WebFont.load({
-      google: {
-        families: ['Source Sans Pro']
-      }
-    });
-
-    $(function () {
-      $('a').fluidbox();
-    })
-  </script>
-
-
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0FB13KEJ8V"></script>
-      <script>
-        var doNotTrack = false;
-        if ( true ) {
-          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
-          var doNotTrack = (dnt == "1" || dnt == "yes");
-        }
-        if (!doNotTrack) {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-0FB13KEJ8V');
-        }
-      </script>
-
-</head>
-
-<body>
-
-  <div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <h1><a href="http://justinfx.com/">JustinFX.com</a></h1>
-      <p class="lead">
-       Coding, FX, And Just Random Stuff 
-      </p>
-    </div>
-
-
-
-    <ul class="sidebar-nav">
-      <li><a href="http://justinfx.com//blog">Posts</a></li>
+<!doctype html><html lang=en-us dir=ltr class=scroll-smooth data-default-appearance=light data-auto-appearance=true><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=theme-color content="#FFFFFF"><title>Getting started with XBOX 360 Kinect on OSX &#183; JustinFX.com</title><meta name=title content="Getting started with XBOX 360 Kinect on OSX &#183; JustinFX.com"><script type=text/javascript src=http://justinfx.com/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="></script><link type=text/css rel=stylesheet href=http://justinfx.com/css/main.bundle.min.c3059fc32f590ab2c3be7aa5270782891f8d0d745a055565bf608015f8c09775.css integrity="sha256-wwWfwy9ZCrLDvnqlJweCiR+NDXRaBVVlv2CAFfjAl3U="><script defer type=text/javascript id=script-bundle src=http://justinfx.com/js/main.bundle.min.262eb3f1955172e5b9527c1b44eac810ff0aab29d1e042952899c863c5c8a6a7.js integrity="sha256-Ji6z8ZVRcuW5UnwbROrIEP8KqynR4EKVKJnIY8XIpqc=" data-copy=Copy data-copied=Copied></script><meta name=description content="
       
-        <li><a href="/about/">About </a></li>
+        A recent project of mine involves research and development with an XBOX 360 Kinect Sensor. Being a python guy, I started searching for python bindings to some OSX-supported framework. When you just get started looking into this area it can be a little confusing. There are a number of layers to the software stack to enable one to accomplish anything meaningful. This is just a short and general blog post outlining the basics of what I have discovered thus far, to help anyone else that might also be getting started.
       
-        <li><a href="https://www.linkedin.com/in/justinisrael/">Developer Resume </a></li>
-      
-        <li><a href="/vfx-resume/">VFX Resume </a></li>
-      
-        <li><a href="/visual-fx-demo/">Visual FX Demo </a></li>
-      
-        <li><a href="/short-films/">Short Films </a></li>
-      
-    </ul>
-      <a class="social-icon" href="mailto:justinisrael@gmail.com"><i class="fa fa-envelope-o"></i></a>&nbsp;&nbsp;
-      <a class="social-icon" href="https://www.youtube.com/c/JustinIsrael"><i class="fa fa-youtube-play"></i></a>&nbsp;&nbsp;
-      
-      <a class="social-icon" href="https://www.linkedin.com/in/justinisrael/"><i class="fa fa-linkedin-square"></i></a>&nbsp;&nbsp;
-      <a class="social-icon" href="https://github.com/justinfx"><i class="fa fa-github-square"></i></a>&nbsp;&nbsp;
-      <a class="social-icon" href="https://stackoverflow.com/users/496445/jdi"><i class="fa fa-stack-overflow"></i></a>&nbsp;&nbsp;
-      <a class="social-icon" href="https://www.facebook.com/justinisrael"><i class="fa fa-facebook-square"></i></a>&nbsp;&nbsp;
-      <a class="social-icon" href="https://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
-
-    <p class="footnote"> <br/>
-    &copy; 2026 Justin Israel. All rights reserved.</p>
-    
-  </div>
-</div>
-
-
-  <div class="content container">
-    <div class="post">
-    <h1 class="post-title">Getting started with XBOX 360 Kinect on OSX</h1>
-    <span class="post-date">Jun 21, 2012</span>
-
-    
-    <p>A recent project of mine involves research and development with an XBOX 360 Kinect Sensor. Being a python guy, I started searching for python bindings to some OSX-supported framework. When you just get started looking into this area it can be a little confusing. There are a number of layers to the software stack to enable one to accomplish anything meaningful. This is just a short and general blog post outlining the basics of what I have discovered thus far, to help anyone else that might also be getting started.</p>
-<p>At the lowest level, you need a driver. Something that can talk to the USB device that is the Kinect sensor. When you purchase the XBOX Kinect for Windows version of the sensor, and you are going to be developing on windows, much of this whole stack is provided to you by way of the Kinect SDK. But for the open source folks with the standard XBOX 360 sensor, you need to piece together your own solution.</p>
-<p>Two drivers that I have discovered thus far:</p>
-<ul>
-<li><a href="http://openkinect.org/wiki/Main_Page">OpenKinect</a></li>
-<li><a href="https://github.com/avin2/SensorKinect">PrimeSense Sensor</a></li>
-</ul>
-<p>I had started OpenKinect (libfreenect) because it comes with a <a href="https://github.com/OpenKinect/libfreenect/tree/master/wrappers/python">python wrapper</a> included. There were a few dependencies (I will talk about specific build steps in just a moment), but once I got this installed I was able to fire up the included  glview app and see both depth and rgb data streaming in from my sensor. The role of these drivers is to provide simply the basic streams. That is, the depth, rgb, audio, and a few other sensor data streams. If your goal is to start tracking players, seeing skeletons, and registering gestures, the drivers are not enough. You would be required to make your own solution from this raw data at this phase in the game.</p>
-<p>You would now want to look into middleware that can take the raw data and provide to you an API with higher level information. This would include finding users in the scene for you, tracking their body features, and giving you various events to watch for as the data streams.</p>
-<p>Being that my goal was to have python bindings, I found my options to be much more limited than if I were going to be developing in C++. Wrappers have to exist for the framework you want. This is where my research really started ramping up. I spent a few days dealing wtih compiling issues, as well as having an actual bad power adapter that had to be exchanged. But all said and done, here is what I have settled on thus far…</p>
-<ol>
-<li>Driver: <a href="https://github.com/avin2/SensorKinect">PrimeSense Sensor</a></li>
-<li><a href="https://github.com/OpenNI/OpenNI">OpenNI Framework</a></li>
-<li>A recent project of mine involves research and development with an XBOX 360 Kinect Sensor. Being a python guy, I started searching for python bindings to some OSX-supported framework. When you just get started looking into this area it can be a little confusing. There are a number of layers to the software stack to enable one to accomplish anything meaningful. This is just a short and general blog post outlining the basics of what I have discovered thus far, to help anyone else that might also be getting started.</li>
-</ol>
-<p>At the lowest level, you need a driver. Something that can talk to the USB device that is the Kinect sensor. When you purchase the XBOX Kinect for Windows version of the sensor, and you are going to be developing on windows, much of this whole stack is provided to you by way of the Kinect SDK. But for the open source folks with the standard XBOX 360 sensor, you need to piece together your own solution.</p>
-<p>Two drivers that I have discovered thus far:</p>
-<ul>
-<li><a href="http://openkinect.org/wiki/Main_Page">OpenKinect</a></li>
-<li><a href="https://github.com/avin2/SensorKinect">PrimeSense Sensor</a></li>
-</ul>
-<p>I had started OpenKinect (libfreenect) because it comes with a <a href="https://github.com/OpenKinect/libfreenect/tree/master/wrappers/python">python wrapper</a> included. There were a few dependencies (I will talk about specific build steps in just a moment), but once I got this installed I was able to fire up the included  glview app and see both depth and rgb data streaming in from my sensor. The role of these drivers is to provide simply the basic streams. That is, the depth, rgb, audio, and a few other sensor data streams. If your goal is to start tracking players, seeing skeletons, and registering gestures, the drivers are not enough. You would be required to make your own solution from this raw data at this phase in the game.</p>
-<p>You would now want to look into middleware that can take the raw data and provide to you an API with higher level information. This would include finding users in the scene for you, tracking their body features, and giving you various events to watch for as the data streams.</p>
-<p>Being that my goal was to have python bindings, I found my options to be much more limited than if I were going to be developing in C++. Wrappers have to exist for the framework you want. This is where my research really started ramping up. I spent a few days dealing wtih compiling issues, as well as having an actual bad power adapter that had to be exchanged. But all said and done, here is what I have settled on thus far…</p>
-<ol>
-<li>Driver: <a href="https://github.com/avin2/SensorKinect">PrimeSense Sensor</a></li>
-<li><a href="https://github.com/OpenNI/OpenNI">OpenNI Framework</a></li>
-<li><a href="http://www.openni.org/Downloads/OpenNIModules.aspx">OpenNI Modules</a> for OpenNI</li>
-<li><a href="https://github.com/jmendeth/PyOpenNI">PyOpenNI</a> python bindings</li>
-</ol>
-<h4 id="install-details"><span style="text-decoration: underline;">Install Details</span></h4>
-<h5 id="install-homebrew-package-manager"><strong>Install homebrew (package manager)</strong></h5>
-<p><a href="http://mxcl.github.com/homebrew/">http://mxcl.github.com/homebrew/</a></p>
-<h5 id="install-build-tools"><strong>Install build tools</strong></h5>
-<pre>brew install cmake
-brew install boost</pre>
-<h5 id="install-python27"><strong>Install python2.7</strong></h5>
-<pre>brew install python --framework</pre>
-<h5 id="suggestion-virtualenv-environment"><strong>Suggestion: virtualenv Environment</strong></h5>
-<p>This is not a requirement. But I recommend using virtualenv to set up an environment that specifically uses python2.7 so that you don’t have to fight with mixed dependencies and versions.</p>
-<p>Create a virtualenv called “kinect”</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install virtualenv
-</span></span><span style="display:flex;"><span>virtualenv --no-site-packages -p python2.7 kinect
-</span></span><span style="display:flex;"><span><span style="color:#007020">cd</span> kinect
-</span></span><span style="display:flex;"><span><span style="color:#007020">source</span> bin/activate</span></span></code></pre></div>
-<h5 id="install-libusb-patched-version"><strong>Install libusb (patched version)</strong></h5>
-<p>There is a special patched version of the libusb library, in the form of a homebrew formula.</p>
-<pre class="lang:default decode:true">git clone https://github.com/OpenKinect/libfreenect.git</pre>
-<p>Now copy platform/osx/homebrew/libusb-freenect.rb -&gt; /usr/local/Library/Formula/</p>
-<pre tabindex="0"><code>brew install libusb-freenect
-</code></pre><h5 id="install-sensorkinect-drivers"><strong>Install SensorKinect drivers</strong></h5>
-<pre tabindex="0"><code>git clone https://github.com/avin2/SensorKinect.git
-</code></pre><p>Then uncompress Bin/SensorKinect093-Bin-MacOSX-v*tar.bz2</p>
-<pre tabindex="0"><code>sudo ./install.sh
-</code></pre><h5 id="install-openni-framework"><strong>Install OpenNI framework</strong></h5>
-<ol>
-<li>Go here: <a href="http://www.openni.org/Downloads/OpenNIModules.aspx">http://www.openni.org/Downloads/OpenNIModules.aspx</a></li>
-<li>Download Unstable Binary for MacOSX</li>
-<li><code>sudo ./install.sh</code></li>
-</ol>
-<h5 id="install-nite-middleware-for-openni"><strong>Install NITE middleware (for OpenNI)</strong></h5>
-<ol>
-<li>Go here: <a href="http://www.openni.org/Downloads/OpenNIModules.aspx">http://www.openni.org/Downloads/OpenNIModules.aspx</a></li>
-<li>Download Unstable MIDDLEWARE of NITE for OSX</li>
-<li><code>sudo ./install.sh</code></li>
-</ol>
-<h5 id="install-pyopenni"><strong>Install PyOpenNI</strong></h5>
-<p>Be aware that on OSX, PyOpenNI requires a framework build of python 2.7+ and that you must build it for x86_64 specifically. Also, I was having major problems with cmake properly finding the python includes location. I had to suggest a fix, so <a href="https://github.com/jmendeth/PyOpenNI/issues/16#issuecomment-6515678">please see here for the necessary corrections</a>. I have referenced a patched fork of the repository below.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#007020">export</span> <span style="color:#bb60d5">CPPFLAGS</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;-arch x86_64&#34;</span>
-</span></span><span style="display:flex;"><span>git clone git://github.com/justinfx/PyOpenNI.git
-</span></span><span style="display:flex;"><span>mkdir PyOpenNI-build
-</span></span><span style="display:flex;"><span><span style="color:#007020">cd</span> PyOpenNI-build
-</span></span><span style="display:flex;"><span>cmake -D <span style="color:#bb60d5">PYTHON_INCLUDE_DIR</span><span style="color:#666">=</span>/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Headers ../PyOpenNI
-</span></span><span style="display:flex;"><span>make</span></span></code></pre></div>
-<p>copy the lib/openni.so module to the python2.7 site-packages</p>
-<h4 id="examples"><span style="text-decoration: underline;">Examples</span></h4>
-<p>Once you have everything installed, you can try out the examples that are included both in the NITE source location that you downloaded and also in the PyOpenNI source location:</p>
-<ol>
-<li>NITE/Samples</li>
-<li>PyOpenNI/examples</li>
-</ol>
-<div>
-  I also tried out ofxKinect (<a href="https://github.com/ofTheo/ofxKinect">github.com/ofTheo/ofxKinect</a>) on the side, which is an addon for  <a href="http://www.openframeworks.cc/">OpenFrameworks</a>. This is kind of a separate path than the OpenNI stack. I would say its more like an advanced offering of libfreenect. Using the included example, I recorded a 3D point cloud that is built on the fly from the RGB and depth data:
-</div>
-<div>
-</div>
-<p> </p>
-<div class="embed video-player">
-	<iframe class="youtube-player" 
-			type="text/html" 
-			width="640" height="385" 
-			src="http://www.youtube.com/embed/vICLgxnZ1Bs" 
-			allowfullscreen 
-			frameborder="0">
-	</iframe>
-</div>
-
-
-<p> </p>
-
-    
-
-     
-	
-    <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    if (window.location.hostname == "localhost") 
-        return;
-
-    var disqus_shortname = 'justinfx';
-    var disqus_title = 'Getting started with XBOX 360 Kinect on OSX';
-    
-    var disqus_identifier = 'http:\/\/justinfx.com\/2012\/06\/21\/getting-started-with-xbox-360-kinect-on-osx\/';
-    var disqus_url = 'http:\/\/justinfx.com\/2012\/06\/21\/getting-started-with-xbox-360-kinect-on-osx\/';
-    
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the comments powered by <a href="http://disqus.com/?ref_noscript">Disqus.</a></noscript>
-</div>
-</div> 
-
-</body>w
-</html>
+    "><link rel=canonical href=http://justinfx.com/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><meta property="og:url" content="http://justinfx.com/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/"><meta property="og:site_name" content="JustinFX.com"><meta property="og:title" content="Getting started with XBOX 360 Kinect on OSX"><meta property="og:description" content="A recent project of mine involves research and development with an XBOX 360 Kinect Sensor. Being a python guy, I started searching for python bindings to some OSX-supported framework. When you just get started looking into this area it can be a little confusing. There are a number of layers to the software stack to enable one to accomplish anything meaningful. This is just a short and general blog post outlining the basics of what I have discovered thus far, to help anyone else that might also be getting started."><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="blog"><meta property="article:published_time" content="2012-06-21T00:00:00+00:00"><meta property="article:modified_time" content="2012-06-21T00:00:00+00:00"><meta property="article:tag" content="3d"><meta property="article:tag" content="Kinect"><meta property="article:tag" content="Osx"><meta property="article:tag" content="Python"><meta name=twitter:card content="summary"><meta name=twitter:title content="Getting started with XBOX 360 Kinect on OSX"><meta name=twitter:description content="A recent project of mine involves research and development with an XBOX 360 Kinect Sensor. Being a python guy, I started searching for python bindings to some OSX-supported framework. When you just get started looking into this area it can be a little confusing. There are a number of layers to the software stack to enable one to accomplish anything meaningful. This is just a short and general blog post outlining the basics of what I have discovered thus far, to help anyone else that might also be getting started."><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","articleSection":"Blogs","name":"Getting started with XBOX 360 Kinect on OSX","headline":"Getting started with XBOX 360 Kinect on OSX","abstract":"\u003cp\u003eA recent project of mine involves research and development with an XBOX 360 Kinect Sensor. Being a python guy, I started searching for python bindings to some OSX-supported framework. When you just get started looking into this area it can be a little confusing. There are a number of layers to the software stack to enable one to accomplish anything meaningful. This is just a short and general blog post outlining the basics of what I have discovered thus far, to help anyone else that might also be getting started.\u003c\/p\u003e","inLanguage":"en-us","url":"http:\/\/justinfx.com\/2012\/06\/21\/getting-started-with-xbox-360-kinect-on-osx\/","author":{"@type":"Person","name":"Justin Israel"},"copyrightYear":"2012","dateCreated":"2012-06-21T00:00:00\u002b00:00","datePublished":"2012-06-21T00:00:00\u002b00:00","dateModified":"2012-06-21T00:00:00\u002b00:00","keywords":["3d","kinect","osx","python"],"mainEntityOfPage":"true","wordCount":"1202"}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://justinfx.com/","name":"Justin Fx.com","position":1},{"@type":"ListItem","item":"http://justinfx.com/blog/","name":"Blogs","position":2},{"@type":"ListItem","item":"http://justinfx.com/categories/code/","name":"Code","position":3},{"@type":"ListItem","name":"Getting Started With Xbox 360 Kinect on Osx","position":4}]}</script><meta name=author content="Justin Israel"><link href=mailto:justinisrael@gmail.com rel=me><link href=https://github.com/justinfx rel=me><link href=https://www.linkedin.com/in/justinisrael/ rel=me><link href=https://stackoverflow.com/users/496445/jdi rel=me><link href=https://www.youtube.com/c/JustinIsrael rel=me><link href=https://www.facebook.com/justinisrael rel=me><link href=https://vimeo.com/justinisrael rel=me><script async src="https://www.googletagmanager.com/gtag/js?id=G-0FB13KEJ8V"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-0FB13KEJ8V")}</script></head><body class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"><div id=the-top class="absolute flex self-center"><a class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600" href=#main-content><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span>Skip to main content</a></div><header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden"><nav class="flex items-start justify-between sm:items-center"><div class="z-40 flex flex-row items-center"><a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" rel=me href=/>JustinFX.com</a></div><label id=menu-button for=menu-controller class="block sm:hidden"><input type=checkbox id=menu-controller class=hidden><div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"><span class="icon relative inline-block px-1 align-text-bottom"><svg viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416c17.7.0 32 14.33 32 32 0 17.7-14.3 32-32 32H32C14.33 128 0 113.7.0 96zM0 256c0-17.7 14.33-32 32-32H416c17.7.0 32 14.3 32 32s-14.3 32-32 32H32c-17.67.0-32-14.3-32-32zM416 448H32c-17.67.0-32-14.3-32-32s14.33-32 32-32H416c17.7.0 32 14.3 32 32s-14.3 32-32 32z"/></svg></span></div><div id=menu-wrapper class="invisible fixed inset-0 z-30 m-auto h-full w-full cursor-default overflow-auto bg-neutral-100/50 opacity-0 backdrop-blur-sm transition-opacity dark:bg-neutral-900/50"><ul class="mx-auto flex w-full max-w-7xl list-none flex-col overflow-visible px-6 py-6 text-end sm:px-14 sm:py-10 sm:pt-10 md:px-24 lg:px-32"><li class=mb-1><span class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"><span class="icon relative inline-block px-1 align-text-bottom"><svg viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75.0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75.0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75.0-45.25s32.75-12.5 45.25.0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25.0s12.5 32.75.0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></span></li><li class="group mb-1"><a href=/blog/ title=Blogs onclick=close_menu()><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">Posts</span></a></li><li class="group mb-1"><a href=/about/ title=About onclick=close_menu()><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">About</span></a></li><li class="group mb-1"><a href=https://www.linkedin.com/in/justinisrael/ title onclick=close_menu() rel="noopener noreferrer" target=_blank><span class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"><span class="icon relative inline-block px-1 align-text-bottom"><svg viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5.0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6.0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3.0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2.0 38.5 17.3 38.5 38.5.0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6.0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2.0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></span><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">Experience</span></a></li><li class="group mb-1"><a href=/vfx-resume/ title="VFX Resume" onclick=close_menu()><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">VFX Resume</span></a></li><li class="group mb-1"><a href=/visual-fx-demo/ title="Visual FX Demo" onclick=close_menu()><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">Visual FX Demo</span></a></li><li class="group mb-1"><a href=/short-films/ title="Short Films" onclick=close_menu()><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">Short Films</span></a></li></ul></div></label><ul class="hidden list-none flex-row text-end sm:flex"><li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0"><a href=/blog/ title=Blogs><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">Posts</span></a></li><li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0"><a href=/about/ title=About><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">About</span></a></li><li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0"><a href=https://www.linkedin.com/in/justinisrael/ title rel="noopener noreferrer" target=_blank><span class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"><span class="icon relative inline-block px-1 align-text-bottom"><svg viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5.0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6.0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3.0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2.0 38.5 17.3 38.5 38.5.0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6.0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2.0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></span><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">Experience</span></a></li><li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0"><a href=/vfx-resume/ title="VFX Resume"><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">VFX Resume</span></a></li><li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0"><a href=/visual-fx-demo/ title="Visual FX Demo"><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">Visual FX Demo</span></a></li><li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0"><a href=/short-films/ title="Short Films"><span class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2">Short Films</span></a></li></ul></nav></header><div class="relative flex grow flex-col"><main id=main-content class=grow><article><header class=max-w-prose><h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">Getting started with XBOX 360 Kinect on OSX</h1><div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden"><div class="flex flex-row flex-wrap items-center"><time datetime="2012-06-21 00:00:00 +0000 UTC">Jun 21, 2012</time></div><div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400"><a href=http://justinfx.com/categories/code/ class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400">Code</a>
+<a href=http://justinfx.com/categories/fx/ class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400">FX</a>
+<a href=http://justinfx.com/tags/3d/ class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400">3d</a>
+<a href=http://justinfx.com/tags/kinect/ class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400">Kinect</a>
+<a href=http://justinfx.com/tags/osx/ class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400">Osx</a>
+<a href=http://justinfx.com/tags/python/ class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400">Python</a></div></div></header><section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row"><div class="min-h-0 min-w-0 max-w-prose grow"><p>A recent project of mine involves research and development with an XBOX 360 Kinect Sensor. Being a python guy, I started searching for python bindings to some OSX-supported framework. When you just get started looking into this area it can be a little confusing. There are a number of layers to the software stack to enable one to accomplish anything meaningful. This is just a short and general blog post outlining the basics of what I have discovered thus far, to help anyone else that might also be getting started.</p><p>At the lowest level, you need a driver. Something that can talk to the USB device that is the Kinect sensor. When you purchase the XBOX Kinect for Windows version of the sensor, and you are going to be developing on windows, much of this whole stack is provided to you by way of the Kinect SDK. But for the open source folks with the standard XBOX 360 sensor, you need to piece together your own solution.</p><p>Two drivers that I have discovered thus far:</p><ul><li><a href=http://openkinect.org/wiki/Main_Page target=_blank rel=noreferrer>OpenKinect</a></li><li><a href=https://github.com/avin2/SensorKinect target=_blank rel=noreferrer>PrimeSense Sensor</a></li></ul><p>I had started OpenKinect (libfreenect) because it comes with a <a href=https://github.com/OpenKinect/libfreenect/tree/master/wrappers/python target=_blank rel=noreferrer>python wrapper</a> included. There were a few dependencies (I will talk about specific build steps in just a moment), but once I got this installed I was able to fire up the included  glview app and see both depth and rgb data streaming in from my sensor. The role of these drivers is to provide simply the basic streams. That is, the depth, rgb, audio, and a few other sensor data streams. If your goal is to start tracking players, seeing skeletons, and registering gestures, the drivers are not enough. You would be required to make your own solution from this raw data at this phase in the game.</p><p>You would now want to look into middleware that can take the raw data and provide to you an API with higher level information. This would include finding users in the scene for you, tracking their body features, and giving you various events to watch for as the data streams.</p><p>Being that my goal was to have python bindings, I found my options to be much more limited than if I were going to be developing in C++. Wrappers have to exist for the framework you want. This is where my research really started ramping up. I spent a few days dealing wtih compiling issues, as well as having an actual bad power adapter that had to be exchanged. But all said and done, here is what I have settled on thus far…</p><ol><li>Driver: <a href=https://github.com/avin2/SensorKinect target=_blank rel=noreferrer>PrimeSense Sensor</a></li><li><a href=https://github.com/OpenNI/OpenNI target=_blank rel=noreferrer>OpenNI Framework</a></li><li>A recent project of mine involves research and development with an XBOX 360 Kinect Sensor. Being a python guy, I started searching for python bindings to some OSX-supported framework. When you just get started looking into this area it can be a little confusing. There are a number of layers to the software stack to enable one to accomplish anything meaningful. This is just a short and general blog post outlining the basics of what I have discovered thus far, to help anyone else that might also be getting started.</li></ol><p>At the lowest level, you need a driver. Something that can talk to the USB device that is the Kinect sensor. When you purchase the XBOX Kinect for Windows version of the sensor, and you are going to be developing on windows, much of this whole stack is provided to you by way of the Kinect SDK. But for the open source folks with the standard XBOX 360 sensor, you need to piece together your own solution.</p><p>Two drivers that I have discovered thus far:</p><ul><li><a href=http://openkinect.org/wiki/Main_Page target=_blank rel=noreferrer>OpenKinect</a></li><li><a href=https://github.com/avin2/SensorKinect target=_blank rel=noreferrer>PrimeSense Sensor</a></li></ul><p>I had started OpenKinect (libfreenect) because it comes with a <a href=https://github.com/OpenKinect/libfreenect/tree/master/wrappers/python target=_blank rel=noreferrer>python wrapper</a> included. There were a few dependencies (I will talk about specific build steps in just a moment), but once I got this installed I was able to fire up the included  glview app and see both depth and rgb data streaming in from my sensor. The role of these drivers is to provide simply the basic streams. That is, the depth, rgb, audio, and a few other sensor data streams. If your goal is to start tracking players, seeing skeletons, and registering gestures, the drivers are not enough. You would be required to make your own solution from this raw data at this phase in the game.</p><p>You would now want to look into middleware that can take the raw data and provide to you an API with higher level information. This would include finding users in the scene for you, tracking their body features, and giving you various events to watch for as the data streams.</p><p>Being that my goal was to have python bindings, I found my options to be much more limited than if I were going to be developing in C++. Wrappers have to exist for the framework you want. This is where my research really started ramping up. I spent a few days dealing wtih compiling issues, as well as having an actual bad power adapter that had to be exchanged. But all said and done, here is what I have settled on thus far…</p><ol><li>Driver: <a href=https://github.com/avin2/SensorKinect target=_blank rel=noreferrer>PrimeSense Sensor</a></li><li><a href=https://github.com/OpenNI/OpenNI target=_blank rel=noreferrer>OpenNI Framework</a></li><li><a href=http://www.openni.org/Downloads/OpenNIModules.aspx target=_blank rel=noreferrer>OpenNI Modules</a> for OpenNI</li><li><a href=https://github.com/jmendeth/PyOpenNI target=_blank rel=noreferrer>PyOpenNI</a> python bindings</li></ol><h4 id=install-details class="relative group"><span style=text-decoration:underline>Install Details</span> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#install-details aria-label=Anchor>#</a></span></h4><h5 id=install-homebrew-package-manager class="relative group"><strong>Install homebrew (package manager)</strong> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#install-homebrew-package-manager aria-label=Anchor>#</a></span></h5><p><a href=http://mxcl.github.com/homebrew/ target=_blank rel=noreferrer>http://mxcl.github.com/homebrew/</a></p><h5 id=install-build-tools class="relative group"><strong>Install build tools</strong> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#install-build-tools aria-label=Anchor>#</a></span></h5><pre>brew install cmake
+brew install boost</pre><h5 id=install-python27 class="relative group"><strong>Install python2.7</strong> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#install-python27 aria-label=Anchor>#</a></span></h5><pre>brew install python --framework</pre><h5 id=suggestion-virtualenv-environment class="relative group"><strong>Suggestion: virtualenv Environment</strong> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#suggestion-virtualenv-environment aria-label=Anchor>#</a></span></h5><p>This is not a requirement. But I recommend using virtualenv to set up an environment that specifically uses python2.7 so that you don’t have to fight with mixed dependencies and versions.</p><p>Create a virtualenv called “kinect”</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pip install virtualenv
+</span></span><span class=line><span class=cl>virtualenv --no-site-packages -p python2.7 kinect
+</span></span><span class=line><span class=cl><span class=nb>cd</span> kinect
+</span></span><span class=line><span class=cl><span class=nb>source</span> bin/activate</span></span></code></pre></div><h5 id=install-libusb-patched-version class="relative group"><strong>Install libusb (patched version)</strong> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#install-libusb-patched-version aria-label=Anchor>#</a></span></h5><p>There is a special patched version of the libusb library, in the form of a homebrew formula.</p><pre class="lang:default decode:true">git clone https://github.com/OpenKinect/libfreenect.git</pre><p>Now copy platform/osx/homebrew/libusb-freenect.rb -> /usr/local/Library/Formula/</p><pre tabindex=0><code>brew install libusb-freenect
+</code></pre><h5 id=install-sensorkinect-drivers class="relative group"><strong>Install SensorKinect drivers</strong> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#install-sensorkinect-drivers aria-label=Anchor>#</a></span></h5><pre tabindex=0><code>git clone https://github.com/avin2/SensorKinect.git
+</code></pre><p>Then uncompress Bin/SensorKinect093-Bin-MacOSX-v*tar.bz2</p><pre tabindex=0><code>sudo ./install.sh
+</code></pre><h5 id=install-openni-framework class="relative group"><strong>Install OpenNI framework</strong> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#install-openni-framework aria-label=Anchor>#</a></span></h5><ol><li>Go here: <a href=http://www.openni.org/Downloads/OpenNIModules.aspx target=_blank rel=noreferrer>http://www.openni.org/Downloads/OpenNIModules.aspx</a></li><li>Download Unstable Binary for MacOSX</li><li><code>sudo ./install.sh</code></li></ol><h5 id=install-nite-middleware-for-openni class="relative group"><strong>Install NITE middleware (for OpenNI)</strong> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#install-nite-middleware-for-openni aria-label=Anchor>#</a></span></h5><ol><li>Go here: <a href=http://www.openni.org/Downloads/OpenNIModules.aspx target=_blank rel=noreferrer>http://www.openni.org/Downloads/OpenNIModules.aspx</a></li><li>Download Unstable MIDDLEWARE of NITE for OSX</li><li><code>sudo ./install.sh</code></li></ol><h5 id=install-pyopenni class="relative group"><strong>Install PyOpenNI</strong> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#install-pyopenni aria-label=Anchor>#</a></span></h5><p>Be aware that on OSX, PyOpenNI requires a framework build of python 2.7+ and that you must build it for x86_64 specifically. Also, I was having major problems with cmake properly finding the python includes location. I had to suggest a fix, so <a href=https://github.com/jmendeth/PyOpenNI/issues/16#issuecomment-6515678 target=_blank rel=noreferrer>please see here for the necessary corrections</a>. I have referenced a patched fork of the repository below.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>export</span> <span class=nv>CPPFLAGS</span><span class=o>=</span><span class=s2>&#34;-arch x86_64&#34;</span>
+</span></span><span class=line><span class=cl>git clone git://github.com/justinfx/PyOpenNI.git
+</span></span><span class=line><span class=cl>mkdir PyOpenNI-build
+</span></span><span class=line><span class=cl><span class=nb>cd</span> PyOpenNI-build
+</span></span><span class=line><span class=cl>cmake -D <span class=nv>PYTHON_INCLUDE_DIR</span><span class=o>=</span>/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Headers ../PyOpenNI
+</span></span><span class=line><span class=cl>make</span></span></code></pre></div><p>copy the lib/openni.so module to the python2.7 site-packages</p><h4 id=examples class="relative group"><span style=text-decoration:underline>Examples</span> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#examples aria-label=Anchor>#</a></span></h4><p>Once you have everything installed, you can try out the examples that are included both in the NITE source location that you downloaded and also in the PyOpenNI source location:</p><ol><li>NITE/Samples</li><li>PyOpenNI/examples</li></ol><div>I also tried out ofxKinect (<a href=https://github.com/ofTheo/ofxKinect>github.com/ofTheo/ofxKinect</a>) on the side, which is an addon for  <a href=http://www.openframeworks.cc/>OpenFrameworks</a>. This is kind of a separate path than the OpenNI stack. I would say its more like an advanced offering of libfreenect. Using the included example, I recorded a 3D point cloud that is built on the fly from the RGB and depth data:</div><div></div><p> </p><div class="embed video-player"><iframe class=youtube-player type=text/html width=640 height=385 src=https://www.youtube.com/embed/vICLgxnZ1Bs allowfullscreen frameborder=0></iframe></div><p> </p></div></section><footer class="max-w-prose pt-8 print:hidden"><div class=pt-8><hr class="border-dotted border-neutral-300 dark:border-neutral-600"><div class="flex justify-between pt-3"><span><a class="group flex" href=http://justinfx.com/2012/04/14/write-my-code-for-me/><span class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"><span class="ltr:inline rtl:hidden">&larr;</span><span class="ltr:hidden rtl:inline">&rarr;</span></span>
+<span class="flex flex-col"><span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500">Write My Code For Me</span>
+<span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400"><time datetime="2012-04-14 00:00:00 +0000 UTC">Apr 14, 2012</time>
+</span></span></a></span><span><a class="group flex text-right" href=http://justinfx.com/2012/07/25/python-2-7-3-serializer-speed-comparisons/><span class="flex flex-col"><span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500">Python 2.7.2 serializer speed comparisons</span>
+<span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400"><time datetime="2012-07-25 00:00:00 +0000 +0000">Jul 25, 2012</time>
+</span></span><span class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"><span class="ltr:inline rtl:hidden">&rarr;</span><span class="ltr:hidden rtl:inline">&larr;</span></span></a></span></div></div><div class=pt-3><hr class="border-dotted border-neutral-300 dark:border-neutral-600"><div class=pt-3><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var t="justinfx",n="Getting started with XBOX 360 Kinect on OSX",s="http://justinfx.com/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/",o="http://justinfx.com/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/",e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)})()</script><noscript>Please enable JavaScript to view the comments powered by <a href=http://disqus.com/?ref_noscript>Disqus.</a></noscript></div></div></footer></article></main><div class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12" id=to-top hidden=true><a href=#the-top class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400" aria-label="Scroll to top" title="Scroll to top">&uarr;</a></div><footer class="py-10 print:hidden"><div class="flex items-center justify-between"><div><p class="text-sm text-neutral-500 dark:text-neutral-400">Justin Israel. All rights reserved.</p></div><div class="flex flex-row items-center"><div class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"><button id=appearance-switcher-0 type=button aria-label="appearance switcher"><div class="flex h-12 w-12 items-center justify-center dark:hidden" title="Switch to dark appearance"><span class="icon relative inline-block px-1 align-text-bottom"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M32 256C32 132.2 132.3 32 255.8 32c11.36.0 29.7 1.668 40.9 3.746 9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3 9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480 132.1 480 32 379.6 32 256z"/></svg></span></div><div class="hidden h-12 w-12 items-center justify-center dark:flex" title="Switch to light appearance"><span class="icon relative inline-block px-1 align-text-bottom"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02.0-95.1 42.98-95.1 95.1s41.2 96.9 95.1 96.9 95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347l-63.2-91.9 63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89 164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6 12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256 2.74 347.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7 19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109 109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69.0-127.1-57.31-127.1-127.1.0-70.69 57.31-127.1 127.1-127.1S383.1 186.2 383.1 256c0 70.7-56.4 127.1-127.1 127.1z"/></svg></span></div></button></div></div></div></footer></div></body></html>
