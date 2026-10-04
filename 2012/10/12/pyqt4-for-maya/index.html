@@ -12,12 +12,12 @@
   <title> Tutorial: PyQt4 UI Development for Maya  &middot; JustinFX.com </title>
 
   
-  <link rel="stylesheet" href="http://justinfx.com/css/poole.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/syntax.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/hyde.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/font.pt-sans.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/font.source-sans-pro.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/fluidbox.min.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/poole.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/syntax.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/hyde.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/font.pt-sans.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/font.source-sans-pro.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/fluidbox.min.css">
 
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
 
@@ -29,10 +29,10 @@
   <link href='' rel="alternate" type="application/rss+xml" title="JustinFX.com" />
 
   
-  <script src="http://justinfx.com/js/jquery.min.js"></script>
-  <script src="http://justinfx.com/js/jquery.ba-throttle-debounce.min.js"></script>
-  <script src="http://justinfx.com/js/imagesloaded.pkgd.min.js"></script>
-  <script src="http://justinfx.com/js/jquery.fluidbox.min.js"></script>
+  <script src="http://justinfx.com//js/jquery.min.js"></script>
+  <script src="http://justinfx.com//js/jquery.ba-throttle-debounce.min.js"></script>
+  <script src="http://justinfx.com//js/imagesloaded.pkgd.min.js"></script>
+  <script src="http://justinfx.com//js/jquery.fluidbox.min.js"></script>
 
   
   
@@ -52,17 +52,20 @@
   </script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0FB13KEJ8V"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-0FB13KEJ8V', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0FB13KEJ8V"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0FB13KEJ8V');
+        }
+      </script>
 
 </head>
 
@@ -71,7 +74,7 @@ if (!doNotTrack) {
   <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <h1><a href="http://justinfx.com">JustinFX.com</a></h1>
+      <h1><a href="http://justinfx.com/">JustinFX.com</a></h1>
       <p class="lead">
        Coding, FX, And Just Random Stuff 
       </p>
@@ -80,7 +83,7 @@ if (!doNotTrack) {
 
 
     <ul class="sidebar-nav">
-      <li><a href="http://justinfx.com/blog">Posts</a></li>
+      <li><a href="http://justinfx.com//blog">Posts</a></li>
       
         <li><a href="/about/">About </a></li>
       
@@ -103,7 +106,7 @@ if (!doNotTrack) {
       <a class="social-icon" href="https://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
 
     <p class="footnote"> <br/>
-    &copy; 2023 Justin Israel. All rights reserved.</p>
+    &copy; 2026 Justin Israel. All rights reserved.</p>
     
   </div>
 </div>
@@ -115,7 +118,7 @@ if (!doNotTrack) {
     <span class="post-date">Oct 12, 2012</span>
 
     
-    <h2 id="img-classalignnone-size-full-wp-image-525-titlepyqt4-for-maya-srcuploads2012101350054625_masterjpeg-alt-width800-height450-httpwwwcmivfxcomtutorialsview498pyqt4uidevelopmentformaya"><a href="http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya"><img class="alignnone size-full wp-image-525" title="PyQt4 for Maya" src="/uploads/2012/10/1350054625_Master.jpeg" alt="" width="800" height="450" /></a></h2>
+    <h2><a href="http://www.cmivfx.com/tutorials/view/498/PyQt4+UI+Development+for+Maya"><img class="alignnone size-full wp-image-525" title="PyQt4 for Maya" src="/uploads/2012/10/1350054625_Master.jpeg" alt="" width="800" height="450" /></a></h2>
 <h1 id="pyqt4-ui-development-for-maya">PyQt4 UI Development for Maya</h1>
 <p>Just released my 3rd python-based online training video through <a href="https://cmivfx.com/store/498-pyqt4+ui+development+for+maya">cmiVFX.com</a></p>
 <h2 id="introduction"><strong>Introduction</strong></h2>
@@ -239,7 +242,7 @@ A button can be a button, and a slider might look alright in its stock form, but
 • Painting By … Paint events: For even more control, we can tell a widget exactly how to draw itself on the screen. We will look at two different examples of how to use custom painting.
 </div>
 <p> </p>
-<h3 id="span-stylecolor-ff6600previous-cmivfx-tutorialsspan"><span style="color: #ff6600;">Previous cmiVFX tutorials:</span></h3>
+<h3 id="previous-cmivfx-tutorials"><span style="color: #ff6600;">Previous cmiVFX tutorials:</span></h3>
 <ul>
 <li><a href="https://cmivfx.com/store/320-python+introduction+vol+01+-+maya">Intro to Python for Maya – Vol 1</a></li>
 <li><a href="https://cmivfx.com/store/328-python-for-maya-vol-02">Python for Maya  – Vol 2</a></li>

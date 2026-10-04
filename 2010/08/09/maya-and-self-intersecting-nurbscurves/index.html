@@ -12,12 +12,12 @@
   <title> Maya, and self-intersecting nurbsCurves  &middot; JustinFX.com </title>
 
   
-  <link rel="stylesheet" href="http://justinfx.com/css/poole.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/syntax.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/hyde.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/font.pt-sans.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/font.source-sans-pro.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/fluidbox.min.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/poole.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/syntax.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/hyde.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/font.pt-sans.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/font.source-sans-pro.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/fluidbox.min.css">
 
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
 
@@ -29,10 +29,10 @@
   <link href='' rel="alternate" type="application/rss+xml" title="JustinFX.com" />
 
   
-  <script src="http://justinfx.com/js/jquery.min.js"></script>
-  <script src="http://justinfx.com/js/jquery.ba-throttle-debounce.min.js"></script>
-  <script src="http://justinfx.com/js/imagesloaded.pkgd.min.js"></script>
-  <script src="http://justinfx.com/js/jquery.fluidbox.min.js"></script>
+  <script src="http://justinfx.com//js/jquery.min.js"></script>
+  <script src="http://justinfx.com//js/jquery.ba-throttle-debounce.min.js"></script>
+  <script src="http://justinfx.com//js/imagesloaded.pkgd.min.js"></script>
+  <script src="http://justinfx.com//js/jquery.fluidbox.min.js"></script>
 
   
   
@@ -52,17 +52,20 @@
   </script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0FB13KEJ8V"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-0FB13KEJ8V', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0FB13KEJ8V"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0FB13KEJ8V');
+        }
+      </script>
 
 </head>
 
@@ -71,7 +74,7 @@ if (!doNotTrack) {
   <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <h1><a href="http://justinfx.com">JustinFX.com</a></h1>
+      <h1><a href="http://justinfx.com/">JustinFX.com</a></h1>
       <p class="lead">
        Coding, FX, And Just Random Stuff 
       </p>
@@ -80,7 +83,7 @@ if (!doNotTrack) {
 
 
     <ul class="sidebar-nav">
-      <li><a href="http://justinfx.com/blog">Posts</a></li>
+      <li><a href="http://justinfx.com//blog">Posts</a></li>
       
         <li><a href="/about/">About </a></li>
       
@@ -103,7 +106,7 @@ if (!doNotTrack) {
       <a class="social-icon" href="https://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
 
     <p class="footnote"> <br/>
-    &copy; 2023 Justin Israel. All rights reserved.</p>
+    &copy; 2026 Justin Israel. All rights reserved.</p>
     
   </div>
 </div>
@@ -128,7 +131,7 @@ if (!doNotTrack) {
 <h4 id="getting-started-i-hate-you-maya">Getting started. I hate you, Maya:</h4>
 <p>The obvious place for me to start was to use the existing <em>curveIntersect</em> command. This command will tell you if two curves intersect, and at what points. Although it requires that you tell it 2 individual curves to test, I figured I could just split the single curve into parts (using detach curve), and pair off all the parts to test them. And here is where I ran into something that just pissed me off. While it works great to tell you where the intersection is… when it DOESN’T find an intersection, it prints a “Warning: Could not find curve-curve intersection” line. Printing to the script editor in maya is SUPER expensive as I have found. Everything slows down. This was the initial reason I decided not to use this method. I later found out the RIGHT hack way to deal with this is to wrap the entire process in scriptEditorInfo commands to suppress warnings being printed to the Script Editor and re-enable after. This method does prevent the amazing slowness, but still has the unacceptable flood of warnings once suppression is turned back off again. So even with this fix, I still found this approach to be too slow. For a single complex curve object that might have, say, 500 spans… that would be 124750 unique combinations that would have to be tested with the <em>curveIntersect</em> command. In a test of just looping that many times and calling this command, the process took 54 seconds! No way could this work, with a scene that could easily have 2000+ nurbsCurves!</p>
 <p>Great. Now I get to investigate my own intersection detection from scratch.</p>
-<h4 id="span-stylefont-weight-normalstrongapproach-2-8211-brute-forcestrongspan"><span style="font-weight: normal;"><strong>Approach #2 – Brute Force</strong></span></h4>
+<h4 id="approach-2-8211-brute-force"><span style="font-weight: normal;"><strong>Approach #2 – Brute Force</strong></span></h4>
 <p>I’m a film school graduate… not a computer science major. Never thought I would have to use the kind of math I TRIED to implement for a first solution. Solving the cubic function of every curve segment to find the intersections? Meh. Too hard.</p>
 <p>Next I thought of an idea to take a curve and sample N-amount of points from start to end parameter. So lets say 1000 samples. I would get 1000 points on the curve, then compare each point to the other non-neighboring points to see if they are within a distance tolerance of each other. If they are, I consider this a point in the curve where it looped and self-intersected. This method did work. It was still not super fast, but no where NEAR as slow as using the intersect command. I built in some dynamic scaling of the sampling and tolerance to accommodate for curves of different size and complexity.  Even though I had to test 499500 point combinations per nurbsCurve for the 1000 point samples, this was only math and not a repeat call to <em>curveIntersect</em>. Ultimately, I was still not where I needed to be in terms of usability. A complex curve could still be a few seconds to test. Still too slow.</p>
 <h4 id="approach-25-8211-brute-force-mixed-with-a-fast-little-pre-check"><strong>Approach #2.5 – Brute Force mixed with a fast little pre-check</strong></h4>

@@ -272,6 +272,9 @@
     <loc>http://justinfx.com/tags/swfchart/</loc>
     <lastmod>2010-01-15T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://justinfx.com/tags/xml/swf-charts/</loc>
+    <lastmod>2010-01-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://justinfx.com/2010/01/11/failed-hard/</loc>
     <lastmod>2010-01-12T00:00:00+00:00</lastmod>
   </url><url>
@@ -289,7 +292,5 @@
   </url><url>
     <loc>http://justinfx.com/about/</loc>
     <lastmod>2009-11-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://justinfx.com/tags/xml/swf-charts/</loc>
   </url>
 </urlset>

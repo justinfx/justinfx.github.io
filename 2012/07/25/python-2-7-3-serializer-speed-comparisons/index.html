@@ -12,12 +12,12 @@
   <title> Python 2.7.2 serializer speed comparisons  &middot; JustinFX.com </title>
 
   
-  <link rel="stylesheet" href="http://justinfx.com/css/poole.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/syntax.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/hyde.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/font.pt-sans.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/font.source-sans-pro.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/fluidbox.min.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/poole.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/syntax.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/hyde.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/font.pt-sans.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/font.source-sans-pro.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/fluidbox.min.css">
 
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
 
@@ -29,10 +29,10 @@
   <link href='' rel="alternate" type="application/rss+xml" title="JustinFX.com" />
 
   
-  <script src="http://justinfx.com/js/jquery.min.js"></script>
-  <script src="http://justinfx.com/js/jquery.ba-throttle-debounce.min.js"></script>
-  <script src="http://justinfx.com/js/imagesloaded.pkgd.min.js"></script>
-  <script src="http://justinfx.com/js/jquery.fluidbox.min.js"></script>
+  <script src="http://justinfx.com//js/jquery.min.js"></script>
+  <script src="http://justinfx.com//js/jquery.ba-throttle-debounce.min.js"></script>
+  <script src="http://justinfx.com//js/imagesloaded.pkgd.min.js"></script>
+  <script src="http://justinfx.com//js/jquery.fluidbox.min.js"></script>
 
   
   
@@ -52,17 +52,20 @@
   </script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0FB13KEJ8V"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-0FB13KEJ8V', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0FB13KEJ8V"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0FB13KEJ8V');
+        }
+      </script>
 
 </head>
 
@@ -71,7 +74,7 @@ if (!doNotTrack) {
   <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <h1><a href="http://justinfx.com">JustinFX.com</a></h1>
+      <h1><a href="http://justinfx.com/">JustinFX.com</a></h1>
       <p class="lead">
        Coding, FX, And Just Random Stuff 
       </p>
@@ -80,7 +83,7 @@ if (!doNotTrack) {
 
 
     <ul class="sidebar-nav">
-      <li><a href="http://justinfx.com/blog">Posts</a></li>
+      <li><a href="http://justinfx.com//blog">Posts</a></li>
       
         <li><a href="/about/">About </a></li>
       
@@ -103,7 +106,7 @@ if (!doNotTrack) {
       <a class="social-icon" href="https://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
 
     <p class="footnote"> <br/>
-    &copy; 2023 Justin Israel. All rights reserved.</p>
+    &copy; 2026 Justin Israel. All rights reserved.</p>
     
   </div>
 </div>
@@ -133,9 +136,9 @@ Here is my Python 2.7.2 test script using timeit for each encode and decode step
 </div>
 <br>
 Dependencies:
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install tabulate simplejson python-cjson ujson yajl msgpack-python
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install tabulate simplejson python-cjson ujson yajl msgpack-python
 </span></span></code></pre></div><p>Test:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">from</span> <span style="color:#0e84b5;font-weight:bold">timeit</span> <span style="color:#007020;font-weight:bold">import</span> timeit
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">from</span> <span style="color:#0e84b5;font-weight:bold">timeit</span> <span style="color:#007020;font-weight:bold">import</span> timeit
 </span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">from</span> <span style="color:#0e84b5;font-weight:bold">tabulate</span> <span style="color:#007020;font-weight:bold">import</span> tabulate
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>setup <span style="color:#666">=</span> <span style="color:#4070a0">&#39;&#39;&#39;
@@ -259,7 +262,8 @@ simplejson-3.3.1       0.780531
 cPickle (ascii)        1.38561
 json                   1.65921
 pickle (binary)        5.20554
-pickle (ascii)        17.8767</code></pre>
+pickle (ascii)        17.8767
+</code></pre>
     
 
      

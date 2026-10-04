@@ -12,12 +12,12 @@
   <title> Getting started with XBOX 360 Kinect on OSX  &middot; JustinFX.com </title>
 
   
-  <link rel="stylesheet" href="http://justinfx.com/css/poole.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/syntax.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/hyde.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/font.pt-sans.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/font.source-sans-pro.css">
-  <link rel="stylesheet" href="http://justinfx.com/css/fluidbox.min.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/poole.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/syntax.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/hyde.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/font.pt-sans.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/font.source-sans-pro.css">
+  <link rel="stylesheet" href="http://justinfx.com//css/fluidbox.min.css">
 
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
 
@@ -29,10 +29,10 @@
   <link href='' rel="alternate" type="application/rss+xml" title="JustinFX.com" />
 
   
-  <script src="http://justinfx.com/js/jquery.min.js"></script>
-  <script src="http://justinfx.com/js/jquery.ba-throttle-debounce.min.js"></script>
-  <script src="http://justinfx.com/js/imagesloaded.pkgd.min.js"></script>
-  <script src="http://justinfx.com/js/jquery.fluidbox.min.js"></script>
+  <script src="http://justinfx.com//js/jquery.min.js"></script>
+  <script src="http://justinfx.com//js/jquery.ba-throttle-debounce.min.js"></script>
+  <script src="http://justinfx.com//js/imagesloaded.pkgd.min.js"></script>
+  <script src="http://justinfx.com//js/jquery.fluidbox.min.js"></script>
 
   
   
@@ -52,17 +52,20 @@
   </script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0FB13KEJ8V"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-0FB13KEJ8V', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0FB13KEJ8V"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0FB13KEJ8V');
+        }
+      </script>
 
 </head>
 
@@ -71,7 +74,7 @@ if (!doNotTrack) {
   <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <h1><a href="http://justinfx.com">JustinFX.com</a></h1>
+      <h1><a href="http://justinfx.com/">JustinFX.com</a></h1>
       <p class="lead">
        Coding, FX, And Just Random Stuff 
       </p>
@@ -80,7 +83,7 @@ if (!doNotTrack) {
 
 
     <ul class="sidebar-nav">
-      <li><a href="http://justinfx.com/blog">Posts</a></li>
+      <li><a href="http://justinfx.com//blog">Posts</a></li>
       
         <li><a href="/about/">About </a></li>
       
@@ -103,7 +106,7 @@ if (!doNotTrack) {
       <a class="social-icon" href="https://vimeo.com/justinisrael"><i class="fa fa-vimeo-square"></i></a>
 
     <p class="footnote"> <br/>
-    &copy; 2023 Justin Israel. All rights reserved.</p>
+    &copy; 2026 Justin Israel. All rights reserved.</p>
     
   </div>
 </div>
@@ -145,7 +148,7 @@ if (!doNotTrack) {
 <li><a href="http://www.openni.org/Downloads/OpenNIModules.aspx">OpenNI Modules</a> for OpenNI</li>
 <li><a href="https://github.com/jmendeth/PyOpenNI">PyOpenNI</a> python bindings</li>
 </ol>
-<h4 id="span-styletext-decoration-underlineinstall-detailsspan"><span style="text-decoration: underline;">Install Details</span></h4>
+<h4 id="install-details"><span style="text-decoration: underline;">Install Details</span></h4>
 <h5 id="install-homebrew-package-manager"><strong>Install homebrew (package manager)</strong></h5>
 <p><a href="http://mxcl.github.com/homebrew/">http://mxcl.github.com/homebrew/</a></p>
 <h5 id="install-build-tools"><strong>Install build tools</strong></h5>
@@ -156,7 +159,7 @@ brew install boost</pre>
 <h5 id="suggestion-virtualenv-environment"><strong>Suggestion: virtualenv Environment</strong></h5>
 <p>This is not a requirement. But I recommend using virtualenv to set up an environment that specifically uses python2.7 so that you don’t have to fight with mixed dependencies and versions.</p>
 <p>Create a virtualenv called “kinect”</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install virtualenv
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install virtualenv
 </span></span><span style="display:flex;"><span>virtualenv --no-site-packages -p python2.7 kinect
 </span></span><span style="display:flex;"><span><span style="color:#007020">cd</span> kinect
 </span></span><span style="display:flex;"><span><span style="color:#007020">source</span> bin/activate</span></span></code></pre></div>
@@ -183,14 +186,14 @@ brew install boost</pre>
 </ol>
 <h5 id="install-pyopenni"><strong>Install PyOpenNI</strong></h5>
 <p>Be aware that on OSX, PyOpenNI requires a framework build of python 2.7+ and that you must build it for x86_64 specifically. Also, I was having major problems with cmake properly finding the python includes location. I had to suggest a fix, so <a href="https://github.com/jmendeth/PyOpenNI/issues/16#issuecomment-6515678">please see here for the necessary corrections</a>. I have referenced a patched fork of the repository below.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#007020">export</span> <span style="color:#bb60d5">CPPFLAGS</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;-arch x86_64&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#007020">export</span> <span style="color:#bb60d5">CPPFLAGS</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;-arch x86_64&#34;</span>
 </span></span><span style="display:flex;"><span>git clone git://github.com/justinfx/PyOpenNI.git
 </span></span><span style="display:flex;"><span>mkdir PyOpenNI-build
 </span></span><span style="display:flex;"><span><span style="color:#007020">cd</span> PyOpenNI-build
 </span></span><span style="display:flex;"><span>cmake -D <span style="color:#bb60d5">PYTHON_INCLUDE_DIR</span><span style="color:#666">=</span>/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Headers ../PyOpenNI
 </span></span><span style="display:flex;"><span>make</span></span></code></pre></div>
 <p>copy the lib/openni.so module to the python2.7 site-packages</p>
-<h4 id="span-styletext-decoration-underlineexamplesspan"><span style="text-decoration: underline;">Examples</span></h4>
+<h4 id="examples"><span style="text-decoration: underline;">Examples</span></h4>
 <p>Once you have everything installed, you can try out the examples that are included both in the NITE source location that you downloaded and also in the PyOpenNI source location:</p>
 <ol>
 <li>NITE/Samples</li>
